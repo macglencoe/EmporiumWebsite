@@ -104,6 +104,7 @@ const Catalog = (props) => {
 
                 <div className='divider'></div>
 
+
                 <div className='builder-container'>
                   <span className='builder-text'>Tradition, Quality, and Authenticity</span>
                   <span className='call-to-action'>Explore King Street Emporium's new online catalog</span>
@@ -179,20 +180,28 @@ const Catalog = (props) => {
                 <div className='divider'></div>
 
                 <div className='shop-suggestions-container'>
-                  <h1 style={{fontSize: '3em', textTransform: 'uppercase'}}>Shop by</h1>
+                  <h1 style={{fontSize: '3em', textTransform: 'uppercase'}}>Search By</h1>
                   <div className='shop-suggestions' >
+                    <Link href="/cigars/brands">
                     <div className='shop-suggestions-card'>
                       <span>Brand</span>
                     </div>
+                    </Link>
+                    <Link href="/cigars/strengths">
                     <div className='shop-suggestions-card'>
                       <span>Strength</span>
                     </div>
+                    </Link>
+                    <Link href="/cigars/wrappers">
                     <div className='shop-suggestions-card'>
                       <span>Wrapper</span>
                     </div>
+                    </Link>
+                    <Link href="/cigars/sizes">
                     <div className='shop-suggestions-card'>
                       <span>Size</span>
                     </div>
+                    </Link>
                     
                   </div>
                 </div>
@@ -344,6 +353,7 @@ const Catalog = (props) => {
           .shop-suggestions-card > span {
             font-size: 20px;
             font-weight: 700;
+            text-transform: uppercase;
           }
 
           .welcome-container-b {
