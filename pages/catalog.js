@@ -500,11 +500,58 @@ const Catalog = (props) => {
                 </div>
               </div>
             </div>
-            <div class="fb-page" 
-data-href="https://www.facebook.com/facebook"
-data-width="380" 
-data-hide-cover="false"
-data-show-facepile="false"></div>
+            <div className="catalog-updates">
+              <h1>
+                <span>Updates</span>
+                <br></br>
+              </h1>
+              <div className="updateCard">
+                <div className="catalog-update-header-container1">
+                  <h1 className="catalog-text266">
+                    <span>La Aroma de Cuba Event</span>
+                    <br></br>
+                  </h1>
+                  <span className="catalog-text269">
+                    Thursday, April 4, 2019 at 2 PM – 6 PM
+                  </span>
+                </div>
+              </div>
+              <div className="catalog-update-card2 updateCard">
+                <div className="catalog-update-header-container2">
+                  <h1 className="catalog-text270">
+                    <span>Padron Cigar Tasting Event</span>
+                    <br></br>
+                  </h1>
+                  <span className="catalog-text273">
+                    Friday, May 10, 2019 at 5 PM – 9 PM
+                  </span>
+                </div>
+              </div>
+              <div className="catalog-update-card3 updateCard">
+                <div className="catalog-update-header-container3">
+                  <h1 className="catalog-text274">
+                    <span>Rocky Patel Summer Bash</span>
+                    <br></br>
+                  </h1>
+                  <span className="catalog-text277">
+                    <span>Saturday, June 15, 2019 at 1 PM – 5 PM</span>
+                    <br></br>
+                  </span>
+                </div>
+              </div>
+              <div className="catalog-update-card4 updateCard">
+                <div className="catalog-update-header-container4">
+                  <h1 className="catalog-text280">
+                    <span>Arturo Fuente Cigar Celebration</span>
+                    <br></br>
+                  </h1>
+                  <span className="catalog-text283">
+                    <span>Wednesday, July 24, 2019 at 3 PM – 7 PM</span>
+                    <br></br>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
