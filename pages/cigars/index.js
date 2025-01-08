@@ -14,55 +14,28 @@ import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 const Catalog = (props) => {
 
   const [sortOption, setSortOption] = useState('Cigar Name');
-  const [filters, setFilters] = useState({
-    'Cigar Brand': '',
-    'Wrapper': '',
-    'Strength_Profile': '',
-    'Size': '',
-  })
 
   // Set filters based on query parameters
   const router = useRouter();
 
-  
-  /* useEffect(() => {
-    if (router.query['Cigar Brand']) {
-      console.log(router.query['Cigar Brand']);
-      setFilters({ ...filters, 'Cigar Brand': router.query['Cigar Brand'] });
-    }
-    if (router.query['Wrapper']) {
-      setFilters({ ...filters, 'Wrapper': router.query['Wrapper'] });
-    }
-    if (router.query['Strength_Profile']) {
-      setFilters({ ...filters, 'Strength_Profile': router.query['Strength_Profile'] });
-    }
-    if (router.query['Size']) {
-      setFilters({ ...filters, 'Size': router.query['Size'] });
-    }
-  }); */
+
 
   useEffect(() => {
-    const query = router.query;
-    const newFilters = {};
-    if (query['Cigar Brand']) {
-      newFilters['Cigar Brand'] = query['Cigar Brand'];
-    } else newFilters['Cigar Brand'] = '';
-    if (query['Wrapper']) {
-      newFilters['Wrapper'] = query['Wrapper'];
-    } else newFilters['Wrapper'] = '';
-    if (query['Strength_Profile']) {
-      newFilters['Strength_Profile'] = query['Strength_Profile'];
-    } else newFilters['Strength_Profile'] = '';
-    if (query['Size']) {
-      newFilters['Size'] = query['Size'];
-    } else newFilters['Size'] = '';
-    setFilters(newFilters);
-    
-  }, [router.query, filters]);
-
-
-
-
+    if (router.isReady) {
+      if (!router.query['Cigar Brand']) {
+        router.query['Cigar Brand'] = '';
+      }
+      if (!router.query['Wrapper']) {
+        router.query['Wrapper'] = '';
+      }
+      if (!router.query['Strength_Profile']) {
+        router.query['Strength_Profile'] = '';
+      }
+      if (!router.query['Size']) {
+        router.query['Size'] = '';
+      }
+    }
+  }, [router.isReady]);
 
   const [searchQuery, setSearchQuery] = useState('');
   const handleSearchChange = (event) => {
@@ -74,27 +47,44 @@ const Catalog = (props) => {
     setSortOption(event.target.value);
   };
   const handleFilterChange = (event) => {
-    setFilters({ ...filters, [event.target.name]: event.target.value });
-    const query = {...router.query, ...filters};
     router.replace({
       pathname: '/cigars',
-      query
-    })
-    
-    
+      query: {
+        ...router.query,
+        [event.target.name]: event.target.value
+      }
+    });
   };
 
+  
+
   const filteredItems = [...Data].filter((item) => {
-    //console.log(item);
+    console.log(router.query);
+    if (router.isReady) {
+      if (!router.query['Cigar Brand']) {
+        router.query['Cigar Brand'] = '';
+      }
+      if (!router.query['Wrapper']) {
+        router.query['Wrapper'] = '';
+      }
+      if (!router.query['Strength_Profile']) {
+        router.query['Strength_Profile'] = '';
+      }
+      if (!router.query['Size']) {
+        router.query['Size'] = '';
+      }
+    
     return (
-      (filters['Cigar Brand'] === '' || item['Cigar Brand'].toLowerCase() == (filters['Cigar Brand'].toLowerCase())) &&
-      (filters['Wrapper'] === '' || item['Wrapper'].toLowerCase().includes(filters['Wrapper'].toLowerCase())) &&
-      (filters['Strength_Profile'] === '' || item['Strength_Profile'].toLowerCase() == filters['Strength_Profile'].toLowerCase()) &&
-      (filters['Size'] === '' || item['Sizes'].includes(filters['Size']))
+      (router.query['Cigar Brand'] === '' || item['Cigar Brand'].toLowerCase() == (router.query['Cigar Brand'].toLowerCase())) &&
+      (router.query['Wrapper'] === '' || item['Wrapper'].toLowerCase().includes(router.query['Wrapper'].toLowerCase())) &&
+      (router.query['Strength_Profile'] === '' || item['Strength_Profile'].toLowerCase() == router.query['Strength_Profile'].toLowerCase()) &&
+      (router.query['Size'] === '' || item['Sizes'].includes(router.query['Size']))
     )
+    }
   })
 
   const searchedItems = filteredItems.filter((item) => {
+    
     return (
       String(item['Cigar Brand']).toLowerCase().includes(searchQuery) ||
       String(item['Cigar Name']).toLowerCase().includes(searchQuery) ||
@@ -377,7 +367,7 @@ const Catalog = (props) => {
 
                   </div>
                   <div className="filter-bubble-container">
-                    {Object.entries(filters).map(([filterKey, filterValue]) => (
+                    {Object.entries(router.query).map(([filterKey, filterValue]) => (
                       filterValue !== '' && (
                         <div className="filter-bubble" key={filterKey}>
                           <span className="filter-bubble-name">{filterKey}: {filterValue}</span>
