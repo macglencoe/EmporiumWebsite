@@ -1,8 +1,8 @@
-import React, { Fragment, use, useState, useEffect} from 'react'
+import React, { Fragment, use, useState, useEffect } from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 import Link from 'next/link'
-import Data from "../../public/data/consolidated_cigars.json"
+//import Data from "../../public/data/consolidated_cigars.json"
 
 import Footer32 from '../../components/footer32'
 import Contact from '../../components/contact'
@@ -10,6 +10,15 @@ import Directory from '../../components/directory'
 import Ksman from '../../components/ksman'
 import { useRouter } from 'next/router'
 import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
+
+export const getStaticProps = async () => {
+  const data = await import('../../public/data/consolidated_cigars.json');
+  return {
+    props: {
+      data: data.default
+    },
+  };
+};
 
 const Catalog = (props) => {
 
@@ -56,10 +65,9 @@ const Catalog = (props) => {
     });
   };
 
-  
 
-  const filteredItems = [...Data].filter((item) => {
-    console.log(router.query);
+
+  const filteredItems = [...props.data].filter((item) => {
     if (router.isReady) {
       if (!router.query['Cigar Brand']) {
         router.query['Cigar Brand'] = '';
@@ -73,18 +81,18 @@ const Catalog = (props) => {
       if (!router.query['Size']) {
         router.query['Size'] = '';
       }
-    
-    return (
-      (router.query['Cigar Brand'] === '' || item['Cigar Brand'].toLowerCase() == (router.query['Cigar Brand'].toLowerCase())) &&
-      (router.query['Wrapper'] === '' || item['Wrapper'].toLowerCase().includes(router.query['Wrapper'].toLowerCase())) &&
-      (router.query['Strength_Profile'] === '' || item['Strength_Profile'].toLowerCase() == router.query['Strength_Profile'].toLowerCase()) &&
-      (router.query['Size'] === '' || item['Sizes'].includes(router.query['Size']))
-    )
+
+      return (
+        (router.query['Cigar Brand'] === '' || item['Cigar Brand'].toLowerCase() == (router.query['Cigar Brand'].toLowerCase())) &&
+        (router.query['Wrapper'] === '' || item['Wrapper'].toLowerCase().includes(router.query['Wrapper'].toLowerCase())) &&
+        (router.query['Strength_Profile'] === '' || item['Strength_Profile'].toLowerCase() == router.query['Strength_Profile'].toLowerCase()) &&
+        (router.query['Size'] === '' || item['Sizes'].includes(router.query['Size']))
+      )
     }
   })
 
   const searchedItems = filteredItems.filter((item) => {
-    
+
     return (
       String(item['Cigar Brand']).toLowerCase().includes(searchQuery) ||
       String(item['Cigar Name']).toLowerCase().includes(searchQuery) ||
@@ -103,10 +111,10 @@ const Catalog = (props) => {
   })
 
   // All unique brands for filtering
-  const uniqueBrands = [...new Set(Data.map(item => item['Cigar Brand'].trim()))];
+  const uniqueBrands = [...new Set((props.data).map(item => item['Cigar Brand'].trim()))];
 
   // All unique sizes for filtering
-  const uniqueSizes = Array.from(new Set(Data.flatMap(item => item['Sizes'])));
+  const uniqueSizes = Array.from(new Set((props.data).flatMap(item => item['Sizes'])));
 
 
 
@@ -126,34 +134,43 @@ const Catalog = (props) => {
         <Script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></Script>
 
         <div className="catalog-container11 container">
-          <div className="catalog-container12 sidebar">
-            <Ksman></Ksman> 
-            <div className="catalog-container14">
-              <div className="catalog-new-arrivals1">
-                <div className="catalog-container15">
-                  <span className="catalog-text100">
-                    <span>New Arrivals</span>
-                    <br></br>
-                  </span>
-                </div>
-                <div className="catalog-container16">
-                  <div className="catalog-container17">
-                    <span className="catalog-text103">El Primero Reserva</span>
-                  </div>
-                  <div className="catalog-container18">
-                    <span className="catalog-text104">Tobacco Ember</span>
-                  </div>
-                  <div className="catalog-container19">
-                    <span className="catalog-text105">
-                      <span>Don Solitario</span>
-                      <br></br>
-                    </span>
-                  </div>
-                  <div className="catalog-container20">
-                    <span className="catalog-text108">La Noche Oscura</span>
-                  </div>
+          <div className="catalog-container73 sidebar">
+            <div className="catalog-container74">
+              <span className="catalog-text235">The King Street Emporium</span>
+              <button
+                id="closer"
+                type="button"
+                className="catalog-button7 button"
+              >
+                Button
+              </button>
+            </div>
+            <Ksman></Ksman>
+            <Contact></Contact>
+            <div className="catalog-container94">
+              <div className="catalog-container95">
+                <div className="directoryCard">
+                  <span className="catalog-text259">Cigar Catalogue</span>
                 </div>
               </div>
+              <div className="catalog-container97">
+                <div className="directoryCard catalog-container98">
+                  <span className="catalog-text260">Pipes &amp; Tobacco</span>
+                </div>
+              </div>
+              <div className="catalog-container99">
+                <div className="directoryCard">
+                  <span className="catalog-text261">Coffee &amp; Tea</span>
+                </div>
+              </div>
+              <div className="catalog-container101">
+                <div className="directoryCard">
+                  <span className="catalog-text262">Accessories</span>
+                </div>
+              </div>
+            </div>
+            <div className="fb-container">
+              <div tabIndex={1} class="fb-page" data-href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" data-tabs="timeline" data-width="280" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/">King Street Coffee &amp; Tobacco Emporium</a></blockquote></div>
             </div>
           </div>
           <div className="catalog-content1 collapsed">
@@ -382,14 +399,15 @@ const Catalog = (props) => {
                     {
                       sortedItems.map((item) => (
                         item['Cigar Name'] &&
+                        <Link href={`/cigars/${item.slug}`}><a>
                         <div className="catalog-catalog-card2 catalogCard">
-                          <Link href={`/cigars/${item.slug}`}>
-                            <div className="CatalogCardImage"></div>
-                          </Link>
+
+                          <div className="CatalogCardImage"></div>
+
                           <div className="catalog-container47 CatalogCardName">
-                            <Link href={`/cigars/${item.slug}`}>
-                              <span className="card-name-text">{item['Cigar Brand'] + ' ' + item['Cigar Name']}</span>
-                            </Link>
+
+                            <span className="card-name-text">{item['Cigar Brand'] + ' ' + item['Cigar Name']}</span>
+
                           </div>
                           {item.Wrapper &&
                             <div className="CatalogCardField">
@@ -414,22 +432,24 @@ const Catalog = (props) => {
                               </span>
                             </div>}
                           <div className="catalog-container50">
-                            <Link href={`/cigars/${item.slug}`}>
-                              <a>
-                                <button
-                                  type="button"
-                                  className="catalog-button2 button"
-                                >
-                                  {
-                                    item.Sizes.length > 1 ?
-                                      item.Sizes.length + " Sizes Available" :
-                                      item.Sizes[0]
-                                  }
-                                </button>
-                              </a>
-                            </Link>
+
+                            <button
+                              type="button"
+                              className="catalog-button2 button"
+                            >
+                              {
+                                item.Sizes.length > 1 ?
+                                  item.Sizes.length + " Sizes Available" :
+                                  item.Sizes[0]
+                              }
+                            </button>
+
                           </div>
+                          
+                          
                         </div>
+                        </a></Link>
+                        
                       ))
                     }
 
@@ -508,44 +528,7 @@ const Catalog = (props) => {
               ></Footer32>
             </div>
           </div>
-          <div className="catalog-container73 sidebar">
-            <div className="catalog-container74">
-              <span className="catalog-text235">The King Street Emporium</span>
-              <button
-                id="closer"
-                type="button"
-                className="catalog-button7 button"
-              >
-                Button
-              </button>
-            </div>
-            <Contact></Contact>
-            <div className="catalog-container94">
-              <div className="catalog-container95">
-                <div className="directoryCard">
-                  <span className="catalog-text259">Cigar Catalogue</span>
-                </div>
-              </div>
-              <div className="catalog-container97">
-                <div className="directoryCard catalog-container98">
-                  <span className="catalog-text260">Pipes &amp; Tobacco</span>
-                </div>
-              </div>
-              <div className="catalog-container99">
-                <div className="directoryCard">
-                  <span className="catalog-text261">Coffee &amp; Tea</span>
-                </div>
-              </div>
-              <div className="catalog-container101">
-                <div className="directoryCard">
-                  <span className="catalog-text262">Accessories</span>
-                </div>
-              </div>
-            </div>
-            <div className="fb-container">
-              <div class="fb-page" data-href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" data-tabs="timeline" data-width="280" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/">King Street Coffee &amp; Tobacco Emporium</a></blockquote></div>
-            </div>
-          </div>
+
         </div>
       </div>
       <style jsx>
@@ -604,7 +587,7 @@ const Catalog = (props) => {
             text-transform: uppercase;
           }
 
-          .card-name-text:hover {
+          .card-name-text:hover:focus {
             text-decoration: underline;
           }
 
@@ -1404,7 +1387,7 @@ const Catalog = (props) => {
             box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.25);
           }
 
-          .catalog-button2:hover {
+          .catalog-button2:hover, catalog-button2:focus {
             box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
           }
 
@@ -2302,3 +2285,4 @@ const Catalog = (props) => {
 }
 
 export default Catalog
+

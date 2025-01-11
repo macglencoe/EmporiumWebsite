@@ -14,7 +14,7 @@ const Ksman = () => {
 
     return (
         <>
-        <div className="cigar-page-container13">
+        <div className="cigar-page-container13" tabIndex={0}>
             <Link href="/">
                 <img
                     alt="image"

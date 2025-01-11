@@ -6,43 +6,62 @@ import PropTypes from 'prop-types'
 
 const Directory = (props) => {
     return (
-        <div className="catalog-container1 directory">
+        <nav className="catalog-container1 directory">
+            <ul className='directory'>
             <img
                 alt="image"
                 src="/ksmanvector.svg"
                 className="background-image"
             />
-            <Link href="/cigars">
-            <div className="container2">
-                <div className="directoryCard">
-                    <span className="catalog-text112">Cigar Catalogue</span>
+            <li>
+            <Link href="/cigars"><a>
+                <div className="container2">
+                    <div className="directoryCard">
+                        <span className="catalog-text112">Cigar Catalogue</span>
+                    </div>
                 </div>
-            </div>
+            </a>
             </Link>
+            </li>
+
+            <li>
             <Link href="/pipes">
-            <div className="container2">
-                <div className="directoryCard">
-                    <span className="catalog-text113">Pipes &amp; Tobacco</span>
-                </div>
-            </div>
+                <a>
+                    <div className="container2">
+                        <div className="directoryCard">
+                            <span className="catalog-text113">Pipes &amp; Tobacco</span>
+                        </div>
+                    </div>
+                </a>
             </Link>
+            </li>
+            <li>
             <Link href="/coffee">
-            <div className="container2">
-                <div className="directoryCard">
-                    <span className="catalog-text114">Coffee &amp; Tea</span>
-                </div>
-            </div>
+                <a>
+                    <div className="container2">
+                        <div className="directoryCard">
+                            <span className="catalog-text114">Coffee &amp; Tea</span>
+                        </div>
+                    </div>
+                </a>
             </Link>
+            </li>
+            <li>
             <Link href="/accessories">
-            <div className="container2">
-                <div className="directoryCard">
-                    <span className="catalog-text115">Accessories</span>
-                </div>
-            </div>
+                <a>
+                    <div className="container2">
+                        <div className="directoryCard">
+                            <span className="catalog-text115">Accessories</span>
+                        </div>
+                    </div>
+                </a>
             </Link>
-        
-        <style jsx>
-            {`
+            </li>
+</ul>
+            <style jsx>
+                {`
+                .directory ul {
+                list-style-type: none;}
             
             .container1 {
                 position: relative;
@@ -100,7 +119,7 @@ const Directory = (props) => {
             
             `}
             </style>
-        </div>
+        </nav>
     )
 }
 

@@ -127,7 +127,7 @@ const Contact = (props) => {
                                 ></path>
                             </svg>
                         </div>
-                        <div className="location-container" onClick={handleLocationClick}>
+                        <div className="location-container" onClick={handleLocationClick} tabIndex={0}>
                             <span className="catalog-text236" >
                                 <span>320 W King Street</span>
                                 <br></br>
@@ -165,7 +165,7 @@ const Contact = (props) => {
                             </span>
                         </div>
                     </div>
-                    <div className="phone-container">
+                    <div className="phone-container" onClick={handlePhoneClick} tabIndex={0}>
                         <div className="catalog-container91">
                             <svg
                                 width="24"
@@ -181,7 +181,7 @@ const Contact = (props) => {
                         </div>
                         <span className="catalog-text257">(304) 264-9130</span>
                     </div>
-                    <div className="email-container" onClick={handleEmailClick}>
+                    <div className="email-container" onClick={handleEmailClick} tabIndex={0}>
                         <div className="catalog-container93">
                             <svg
                                 width="24"

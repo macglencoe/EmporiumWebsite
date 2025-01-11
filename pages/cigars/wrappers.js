@@ -25,8 +25,8 @@ const Wrappers = (props) => {
     <>
       <div className="catalog-container10">
         <Head>
-          <title>Cigar Catalog</title>
-          <meta property="og:title" content="Cigar Catalog" />
+          <title>Cigar Wrappers</title>
+          <meta property="og:title" content="Cigar Wrappers" />
           <Script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></Script>
           <Script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></Script>
           <Link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet">Chosen</Link>
@@ -36,34 +36,43 @@ const Wrappers = (props) => {
         <Script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></Script>
 
         <div className="catalog-container11 container">
-          <div className="catalog-container12 sidebar">
-            <Ksman></Ksman> 
-            <div className="catalog-container14">
-              <div className="catalog-new-arrivals1">
-                <div className="catalog-container15">
-                  <span className="catalog-text100">
-                    <span>New Arrivals</span>
-                    <br></br>
-                  </span>
-                </div>
-                <div className="catalog-container16">
-                  <div className="catalog-container17">
-                    <span className="catalog-text103">El Primero Reserva</span>
-                  </div>
-                  <div className="catalog-container18">
-                    <span className="catalog-text104">Tobacco Ember</span>
-                  </div>
-                  <div className="catalog-container19">
-                    <span className="catalog-text105">
-                      <span>Don Solitario</span>
-                      <br></br>
-                    </span>
-                  </div>
-                  <div className="catalog-container20">
-                    <span className="catalog-text108">La Noche Oscura</span>
-                  </div>
+        <div className="catalog-container73 sidebar">
+            <div className="catalog-container74">
+              <span className="catalog-text235">The King Street Emporium</span>
+              <button
+                id="closer"
+                type="button"
+                className="catalog-button7 button"
+              >
+                Button
+              </button>
+            </div>
+            <Ksman></Ksman>
+            <Contact></Contact>
+            <div className="catalog-container94">
+              <div className="catalog-container95">
+                <div className="directoryCard">
+                  <span className="catalog-text259">Cigar Catalogue</span>
                 </div>
               </div>
+              <div className="catalog-container97">
+                <div className="directoryCard catalog-container98">
+                  <span className="catalog-text260">Pipes &amp; Tobacco</span>
+                </div>
+              </div>
+              <div className="catalog-container99">
+                <div className="directoryCard">
+                  <span className="catalog-text261">Coffee &amp; Tea</span>
+                </div>
+              </div>
+              <div className="catalog-container101">
+                <div className="directoryCard">
+                  <span className="catalog-text262">Accessories</span>
+                </div>
+              </div>
+            </div>
+            <div className="fb-container">
+              <div class="fb-page" data-href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" data-tabs="timeline" data-width="280" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/">King Street Coffee &amp; Tobacco Emporium</a></blockquote></div>
             </div>
           </div>
           <div className="catalog-content1 collapsed">
@@ -104,7 +113,7 @@ const Wrappers = (props) => {
                   const showLetter = index === 0 || firstLetter !== prevFirstLetter;
                   
                   return (
-                    <div key={index} className='brand-container'>
+                    <div key={index} className='brand-container' tabIndex={0}>
                       {showLetter && <span style={{ fontWeight: 'bold', fontSize: '20px'}}>{firstLetter}</span>}
                       
                       <div className='brand-label-container' onClick={() => router.push({
@@ -191,44 +200,7 @@ const Wrappers = (props) => {
               ></Footer32>
             </div>
           </div>
-          <div className="catalog-container73 sidebar">
-            <div className="catalog-container74">
-              <span className="catalog-text235">The King Street Emporium</span>
-              <button
-                id="closer"
-                type="button"
-                className="catalog-button7 button"
-              >
-                Button
-              </button>
-            </div>
-            <Contact></Contact>
-            <div className="catalog-container94">
-              <div className="catalog-container95">
-                <div className="directoryCard">
-                  <span className="catalog-text259">Cigar Catalogue</span>
-                </div>
-              </div>
-              <div className="catalog-container97">
-                <div className="directoryCard catalog-container98">
-                  <span className="catalog-text260">Pipes &amp; Tobacco</span>
-                </div>
-              </div>
-              <div className="catalog-container99">
-                <div className="directoryCard">
-                  <span className="catalog-text261">Coffee &amp; Tea</span>
-                </div>
-              </div>
-              <div className="catalog-container101">
-                <div className="directoryCard">
-                  <span className="catalog-text262">Accessories</span>
-                </div>
-              </div>
-            </div>
-            <div className="fb-container">
-              <div class="fb-page" data-href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" data-tabs="timeline" data-width="280" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/">King Street Coffee &amp; Tobacco Emporium</a></blockquote></div>
-            </div>
-          </div>
+          
         </div>
       </div>
       <style jsx>

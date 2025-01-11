@@ -1,0 +1,8 @@
+- [-] Interactive controls are keyboard focusable
+- [-] Interactive elements indicate their purpose and state
+- [-] The page has a logical tab order
+-- [] Facebook embed captures tabs
+- [-] Visual order on the page follows DOM order
+- [] User focus is not accidentally trapped in a region
+- [] The user's focus is directed to new content added to the page
+- [] HTML5 landmark elements are used to improve navigation

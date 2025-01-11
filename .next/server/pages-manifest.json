@@ -2,10 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/cigars/brands": "pages/cigars/brands.js",
-  "/": "pages/index.js",
-  "/cigars/wrappers": "pages/cigars/wrappers.js",
-  "/cigars/strengths": "pages/cigars/strengths.js",
-  "/cigars/sizes": "pages/cigars/sizes.js",
-  "/cigars": "pages/cigars.js"
+  "/": "pages/index.js"
 }

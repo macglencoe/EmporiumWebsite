@@ -47,6 +47,7 @@ class CustomDocument extends Document {
             rel="stylesheet"
             href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
           ></link>
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main></Main>

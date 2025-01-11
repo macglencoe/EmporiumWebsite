@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import { useRouter } from 'next/router';
 import Data from '../../public/data/consolidated_cigars.json';
+import cigarSizes from '../../public/data/cigarsizes.json';
 
 import Head from 'next/head'
 
@@ -10,10 +11,26 @@ import Directory from '../../components/directory';
 import Ksman from '../../components/ksman'
 import Link from 'next/link';
 
-const CigarPage = () => {
-  const router = useRouter();
-  const { slug } = router.query;
-  const cigar = Data.find((cigar) => cigar.slug === slug);
+export const getStaticPaths = async () => {
+  const cigars = await import('../../public/data/consolidated_cigars.json');
+  const data = await cigars.default;
+  const paths = data.map((cigar) => ({
+    params: {slug: cigar.slug},
+  }));
+  return {paths, fallback: false};
+}
+
+export const getStaticProps = async ({params}) => {
+  const cigarsData = await import ('../../public/data/consolidated_cigars.json');
+  const data = await cigarsData.default;
+  const cigar = data.find((cigar) => cigar.slug === params.slug);
+  
+  return {props: {cigar}};
+} 
+
+const CigarPage = (props) => {
+  //const cigar = Data.find((cigar) => cigar.slug === slug);
+  const cigar = props.cigar;
 
   if (!cigar) {
     return <div>Cigar not found</div>;
@@ -86,36 +103,13 @@ const CigarPage = () => {
           />
         </Head>
         <div className="cigar-page-container11 container">
-          <div className="cigar-page-container12 sidebar">
+        <div className="catalog-container73 sidebar">
+            
             <Ksman></Ksman>
-            <div className="cigar-page-container14">
-              <div className="cigar-page-new-arrivals1">
-                <div className="cigar-page-container15">
-                  <span className="cigar-page-text100">
-                    <span>New Arrivals</span>
-                    <br></br>
-                  </span>
-                </div>
-                <div className="cigar-page-container16">
-                  <div className="cigar-page-container17">
-                    <span className="cigar-page-text103">
-                      El Primero Reserva
-                    </span>
-                  </div>
-                  <div className="cigar-page-container18">
-                    <span className="cigar-page-text104">Tobacco Ember</span>
-                  </div>
-                  <div className="cigar-page-container19">
-                    <span className="cigar-page-text105">
-                      <span>Don Solitario</span>
-                      <br></br>
-                    </span>
-                  </div>
-                  <div className="cigar-page-container20">
-                    <span className="cigar-page-text108">La Noche Oscura</span>
-                  </div>
-                </div>
-              </div>
+            <Contact></Contact>
+            
+            <div className="fb-container">
+              <div class="fb-page" data-href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" data-tabs="timeline" data-width="280" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/">King Street Coffee &amp; Tobacco Emporium</a></blockquote></div>
             </div>
           </div>
           <div className="cigar-page-content collapsed">
@@ -146,11 +140,13 @@ const CigarPage = () => {
                     {cigar.Sizes.map((size) => (
                       <div key={size} className="cigar-page-size-container">
                         <div className='cigar-size-cigar'>
-                          <span className="cigar-page-size">{size}</span>
+                          <span className="cigar-page-size">{size} </span>
+                          {cigarSizes[size] && <span className="cigar-page-size" style={{opacity: '70%'}}>{cigarSizes[size].join(' x ')}</span>}
                         </div>
                         <div className='cigar-size-cigar-end'></div>
                       </div>
                     ))}
+                    * Size Estimate
                   </div>
                   <div className='cigar-page-divider'></div>
                   {cigar['Flavor_Profile'] && (
@@ -204,6 +200,7 @@ const CigarPage = () => {
                   </div>
                 </div>
               </div>
+              <p style={{width: '100%', textAlign: 'center'}}>Disclaimer: Availability is subject to change. Please call during open hours to confirm availability. No online sales</p>
               <div className="cigar-page-container43">
                 <div className="cigar-page-divider"></div>
                 {cigar['Description'] && (
@@ -285,101 +282,20 @@ const CigarPage = () => {
               ></Footer32>
             </div>
           </div>
-          <div className="cigar-page-container51 sidebar">
-            <div className="cigar-page-container52">
-              <span className="cigar-page-text170">
-                The King Street Emporium
-              </span>
-              <button
-                id="closer"
-                type="button"
-                className="cigar-page-button button"
-              >
-                Button
-              </button>
-            </div>
-          <Contact></Contact>
-            <div className="cigar-page-container72">
-              <div className="cigar-page-container73">
-                <div className="directoryCard">
-                  <span className="cigar-page-text194">Cigar Catalogue</span>
-                </div>
-              </div>
-              <div className="cigar-page-container75">
-                <div className="directoryCard cigar-page-container76">
-                  <span className="cigar-page-text195">
-                    Pipes &amp; Tobacco
-                  </span>
-                </div>
-              </div>
-              <div className="cigar-page-container77">
-                <div className="directoryCard">
-                  <span className="cigar-page-text196">Coffee &amp; Tea</span>
-                </div>
-              </div>
-              <div className="cigar-page-container79">
-                <div className="directoryCard">
-                  <span className="cigar-page-text197">Accessories</span>
-                </div>
-              </div>
-            </div>
-            <div className="cigar-page-updates">
-              <h1>
-                <span>Updates</span>
-                <br></br>
-              </h1>
-              <div className="updateCard">
-                <div className="cigar-page-update-header-container1">
-                  <h1 className="cigar-page-text201">
-                    <span>La Aroma de Cuba Event</span>
-                    <br></br>
-                  </h1>
-                  <span className="cigar-page-text204">
-                    Thursday, April 4, 2019 at 2 PM – 6 PM
-                  </span>
-                </div>
-              </div>
-              <div className="cigar-page-update-card2 updateCard">
-                <div className="cigar-page-update-header-container2">
-                  <h1 className="cigar-page-text205">
-                    <span>Padron Cigar Tasting Event</span>
-                    <br></br>
-                  </h1>
-                  <span className="cigar-page-text208">
-                    Friday, May 10, 2019 at 5 PM – 9 PM
-                  </span>
-                </div>
-              </div>
-              <div className="cigar-page-update-card3 updateCard">
-                <div className="cigar-page-update-header-container3">
-                  <h1 className="cigar-page-text209">
-                    <span>Rocky Patel Summer Bash</span>
-                    <br></br>
-                  </h1>
-                  <span className="cigar-page-text212">
-                    <span>Saturday, June 15, 2019 at 1 PM – 5 PM</span>
-                    <br></br>
-                  </span>
-                </div>
-              </div>
-              <div className="cigar-page-update-card4 updateCard">
-                <div className="cigar-page-update-header-container4">
-                  <h1 className="cigar-page-text215">
-                    <span>Arturo Fuente Cigar Celebration</span>
-                    <br></br>
-                  </h1>
-                  <span className="cigar-page-text218">
-                    <span>Wednesday, July 24, 2019 at 3 PM – 7 PM</span>
-                    <br></br>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
       <style jsx>
         {`
+
+          .fb-container {
+            background-color: var(--dl-color-theme-secondary2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+          }
           .call-or-visit-container {
             display: flex;
             flex-direction: column;
@@ -1878,3 +1794,4 @@ const CigarPage = () => {
 };
 
 export default CigarPage;
+
