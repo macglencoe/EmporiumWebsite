@@ -8,6 +8,7 @@ import Footer32 from '../components/footer32'
 import Contact from '../components/contact'
 import Directory from '../components/directory'
 import Ksman from '../components/ksman'
+import Layout from '../components/layout'
 
 const Catalog = (props) => {
 
@@ -48,81 +49,8 @@ const Catalog = (props) => {
 
   return (
     <>
-      <div className="catalog-container10">
-        <Head>
-          <title>King Street Emporium</title>
-          <meta property="og:title" content="King Street Emporium" />
-          <Script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></Script>
-          <Script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></Script>
-          <link rel="icon" href="/public/favicon.ico" sizes="any" />
-        </Head>
-
-        <div id="fb-root"></div>
-        <Script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></Script>
-
-        <div className="catalog-container11 container">
-          <div className="catalog-container73 sidebar">
-            <div className="catalog-container74">
-              <span className="catalog-text235">The King Street Emporium</span>
-              <button
-                id="closer"
-                type="button"
-                className="catalog-button7 button"
-              >
-                Button
-              </button>
-            </div>
-            <Ksman></Ksman>
-            
-            <Contact></Contact>
-            <div className="catalog-container94">
-              <div className="catalog-container95">
-                <div className="directoryCard">
-                  <span className="catalog-text259">Cigar Catalogue</span>
-                </div>
-              </div>
-              <div className="catalog-container97">
-                <div className="directoryCard catalog-container98">
-                  <span className="catalog-text260">Pipes &amp; Tobacco</span>
-                </div>
-              </div>
-              <div className="catalog-container99">
-                <div className="directoryCard">
-                  <span className="catalog-text261">Coffee &amp; Tea</span>
-                </div>
-              </div>
-              <div className="catalog-container101">
-                <div className="directoryCard">
-                  <span className="catalog-text262">Accessories</span>
-                </div>
-              </div>
-            </div>
-            <div className="fb-container">
-              <div className="fb-page" data-href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" data-tabs="timeline" data-width="280" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/">King Street Coffee &amp; Tobacco Emporium. If you can see this, the embed did not load. Click here to see facebook page.</a></blockquote></div>
-            </div>
-          </div>
-          <div className="catalog-content1 collapsed">
-            <header className="catalog-title">
-              <h1 className="catalog-text109">
-                <span>The King Street Emporium</span>
-                <br></br>
-              </h1>
-            </header>
-            <div className="catalog-container21">
-              <Directory></Directory>
-              <div className="catalog-container31">
-
-                <div className='divider'></div>
-
-
-                <div className='builder-container'>
-                  <span className='builder-text'>Tradition, Quality, and Authenticity</span>
-                  <span className='call-to-action'>Explore King Street Emporium's new online catalog</span>
-                </div>
-
-                <div className='divider'></div>
-
-                <div className='welcome-container-b' >
+      <Layout>
+      <div className='welcome-container-b' >
                   <div className='welcome-container'>
                     <div style={{
                       borderBottom: '3px solid var(--dl-color-theme-secondary2)',
@@ -276,82 +204,8 @@ const Catalog = (props) => {
                     </div>
                 </div>
 
-              </div>
-              <div className="catalog-new-arrivals2">
-                <div className="catalog-container67">
-                  <span className="catalog-text218">
-                    <span>New Arrivals</span>
-                    <br></br>
-                  </span>
-                </div>
-                <div className="catalog-container68">
-                  <div className="catalog-container69">
-                    <span className="catalog-text221">El Primero Reserva</span>
-                  </div>
-                  <div className="catalog-container70">
-                    <span className="catalog-text222">Tobacco Ember</span>
-                  </div>
-                  <div className="catalog-container71">
-                    <span className="catalog-text223">
-                      <span>Don Solitario</span>
-                      <br></br>
-                    </span>
-                  </div>
-                  <div className="catalog-container72">
-                    <span className="catalog-text226">La Noche Oscura</span>
-                  </div>
-                </div>
-              </div>
-              <Footer32
-                link1={
-                  <Fragment>
-                    <span className="catalog-text227">About Us</span>
-                  </Fragment>
-                }
-                link2={
-                  <Fragment>
-                    <span className="catalog-text228">Shop</span>
-                  </Fragment>
-                }
-                link3={
-                  <Fragment>
-                    <span className="catalog-text229">Events</span>
-                  </Fragment>
-                }
-                link4={
-                  <Fragment>
-                    <span className="catalog-text230">Contact Us</span>
-                  </Fragment>
-                }
-                link5={
-                  <Fragment>
-                    <span className="catalog-text231">Visit Us</span>
-                  </Fragment>
-                }
-                termsLink={
-                  <Fragment>
-                    <span className="catalog-text232">
-                      Terms and Conditions
-                    </span>
-                  </Fragment>
-                }
-                cookiesLink={
-                  <Fragment>
-                    <span className="catalog-text233">Cookies Policy</span>
-                  </Fragment>
-                }
-                privacyLink={
-                  <Fragment>
-                    <span className="catalog-text234">Privacy Policy</span>
-                  </Fragment>
-                }
-                rootClassName="footer32root-class-name1"
-              ></Footer32>
-            </div>
-          </div>
-
-        </div>
-      </div >
+      </Layout>
+      
       <style jsx>
         {`
           .staff-image {

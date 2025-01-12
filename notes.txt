@@ -16,6 +16,10 @@ make a ted ai voice model that reads out all the cigar descriptions
 -- Need an SSL Certificate. might come with the hosting site.
 
 
+- Footer
+
+- About page
+
 # SEO optimization
     - https://stackoverflow.com/questions/28192075/how-google-crawls-dynamic-pages
     > While you don't need to create separate pages for each product, creating friendly

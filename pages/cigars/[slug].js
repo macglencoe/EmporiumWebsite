@@ -10,6 +10,7 @@ import Contact from '../../components/contact'
 import Directory from '../../components/directory';
 import Ksman from '../../components/ksman'
 import Link from 'next/link';
+import Layout from '../../components/layout';
 
 export const getStaticPaths = async () => {
   const cigars = await import('../../public/data/consolidated_cigars.json');
@@ -94,34 +95,8 @@ const CigarPage = (props) => {
 
   return (
     <>
-      <div className="cigar-page-container10">
-        <Head>
-          <title>{cigar['Cigar Brand'] + ' ' + cigar['Cigar Name']}</title>
-          <meta
-            property="og:title"
-            content={cigar['Cigar Brand'] + ' ' + cigar['Cigar Name']}
-          />
-        </Head>
-        <div className="cigar-page-container11 container">
-        <div className="catalog-container73 sidebar">
-            
-            <Ksman></Ksman>
-            <Contact></Contact>
-            
-            <div className="fb-container">
-              <div class="fb-page" data-href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" data-tabs="timeline" data-width="280" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/">King Street Coffee &amp; Tobacco Emporium</a></blockquote></div>
-            </div>
-          </div>
-          <div className="cigar-page-content collapsed">
-            <div className="cigar-page-title">
-              <h1 className="cigar-page-text109">
-                <span>The King Street Emporium</span>
-                <br></br>
-              </h1>
-            </div>
-            <div className="cigar-page-container21">
-              <Directory></Directory>
-              <div className="cigar-page-container31">
+      <Layout>
+      <div className="cigar-page-container31">
                 <span className="cigar-page-text116">Cigar Information</span>
                 <div className="cigar-page-container32"></div>
               </div>
@@ -235,56 +210,8 @@ const CigarPage = (props) => {
                   </div>
                 </div>
               </div>
-              <Footer32
-                link1={
-                  <Fragment>
-                    <span className="cigar-page-text162">About Us</span>
-                  </Fragment>
-                }
-                link2={
-                  <Fragment>
-                    <span className="cigar-page-text163">Shop</span>
-                  </Fragment>
-                }
-                link3={
-                  <Fragment>
-                    <span className="cigar-page-text164">Events</span>
-                  </Fragment>
-                }
-                link4={
-                  <Fragment>
-                    <span className="cigar-page-text165">Contact Us</span>
-                  </Fragment>
-                }
-                link5={
-                  <Fragment>
-                    <span className="cigar-page-text166">Visit Us</span>
-                  </Fragment>
-                }
-                termsLink={
-                  <Fragment>
-                    <span className="cigar-page-text167">
-                      Terms and Conditions
-                    </span>
-                  </Fragment>
-                }
-                cookiesLink={
-                  <Fragment>
-                    <span className="cigar-page-text168">Cookies Policy</span>
-                  </Fragment>
-                }
-                privacyLink={
-                  <Fragment>
-                    <span className="cigar-page-text169">Privacy Policy</span>
-                  </Fragment>
-                }
-                rootClassName="footer32root-class-name2"
-              ></Footer32>
-            </div>
-          </div>
-          
-        </div>
-      </div>
+      </Layout>
+      
       <style jsx>
         {`
 
