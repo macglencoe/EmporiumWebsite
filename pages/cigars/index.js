@@ -11,6 +11,9 @@ import Ksman from '../../components/ksman'
 import { useRouter } from 'next/router'
 import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 import Layout from '../../components/layout'
+import CatalogCard from '../../components/catalogCard'
+import Catalog from '../../components/catalog'
+
 
 export const getStaticProps = async () => {
   const data = await import('../../public/data/consolidated_cigars.json');
@@ -21,95 +24,10 @@ export const getStaticProps = async () => {
   };
 };
 
-const Catalog = (props) => {
+const CigarCatalog = (props) => {
 
-  const [sortOption, setSortOption] = useState('Cigar Name');
+  
 
-  // Set filters based on query parameters
-  const router = useRouter();
-
-
-
-  useEffect(() => {
-    if (router.isReady) {
-      if (!router.query['Cigar Brand']) {
-        router.query['Cigar Brand'] = '';
-      }
-      if (!router.query['Wrapper']) {
-        router.query['Wrapper'] = '';
-      }
-      if (!router.query['Strength_Profile']) {
-        router.query['Strength_Profile'] = '';
-      }
-      if (!router.query['Size']) {
-        router.query['Size'] = '';
-      }
-    }
-  }, [router.isReady]);
-
-  const [searchQuery, setSearchQuery] = useState('');
-  const handleSearchChange = (event) => {
-    setSearchQuery(event.target.value);
-  };
-
-
-  const handleSortChange = (event) => {
-    setSortOption(event.target.value);
-  };
-  const handleFilterChange = (event) => {
-    router.replace({
-      pathname: '/cigars',
-      query: {
-        ...router.query,
-        [event.target.name]: event.target.value
-      }
-    });
-  };
-
-
-
-  const filteredItems = [...props.data].filter((item) => {
-    if (router.isReady) {
-      if (!router.query['Cigar Brand']) {
-        router.query['Cigar Brand'] = '';
-      }
-      if (!router.query['Wrapper']) {
-        router.query['Wrapper'] = '';
-      }
-      if (!router.query['Strength_Profile']) {
-        router.query['Strength_Profile'] = '';
-      }
-      if (!router.query['Size']) {
-        router.query['Size'] = '';
-      }
-
-      return (
-        (router.query['Cigar Brand'] === '' || item['Cigar Brand'].toLowerCase() == (router.query['Cigar Brand'].toLowerCase())) &&
-        (router.query['Wrapper'] === '' || item['Wrapper'].toLowerCase().includes(router.query['Wrapper'].toLowerCase())) &&
-        (router.query['Strength_Profile'] === '' || item['Strength_Profile'].toLowerCase() == router.query['Strength_Profile'].toLowerCase()) &&
-        (router.query['Size'] === '' || item['Sizes'].includes(router.query['Size']))
-      )
-    }
-  })
-
-  const searchedItems = filteredItems.filter((item) => {
-
-    return (
-      String(item['Cigar Brand']).toLowerCase().includes(searchQuery) ||
-      String(item['Cigar Name']).toLowerCase().includes(searchQuery) ||
-      String(item['Wrapper']).toLowerCase().includes(searchQuery) ||
-      String(item['Strength_Profile']).toLowerCase().includes(searchQuery)
-    );
-  });
-
-  const sortedItems = [...searchedItems].sort((a, b) => {
-    switch (sortOption) {
-      case 'Cigar Name':
-        return a.name - b.name;
-      case 'Sizes':
-        return b.Sizes.length - a.Sizes.length;
-    }
-  })
 
   // All unique brands for filtering
   const uniqueBrands = [...new Set((props.data).map(item => item['Cigar Brand'].trim()))];
@@ -123,282 +41,74 @@ const Catalog = (props) => {
   return (
     <>
       <Layout>
-      <div className="catalog-container31">
-      <div data-thq="accordion" className="catalog-accordion1">
-                  <details
-                    open
-                    data-thq="accordion-trigger"
-                    className="catalog-trigger1"
-                  >
-                    <summary
-                      data-thq="accordion-summary"
-                      className="catalog-summary1"
-                    >
-                      <span>Refine</span>
-                      <div
-                        data-thq="accordion-icon"
-                        className="catalog-icon-container1"
-                      >
-                        <svg width="32" height="32" viewBox="0 0 24 24">
-                          <path d="m12 14l-4-4h8z" fill="currentColor"></path>
-                        </svg>
-                      </div>
-                    </summary>
-                  </details>
-                  <div data-thq="accordion-content">
-                    <div className="catalog-container32">
-                      <div data-thq="accordion" className="catalog-accordion2">
-                        <details
-                          name="brand"
-                          data-thq="accordion-trigger"
-                          className="catalog-trigger2"
-                        >
-                          <summary
-                            data-thq="accordion-summary"
-                            className="catalog-summary2"
-                          >
-                            <span>
-                              <span>Brand</span>
-                              <br></br>
-                            </span>
-                            <div
-                              data-thq="accordion-icon"
-                              className="catalog-icon-container2"
-                            >
-                              <svg width="32" height="32" viewBox="0 0 24 24">
-                                <path
-                                  d="m12 14l-4-4h8z"
-                                  fill="currentColor"
-                                ></path>
-                              </svg>
-                            </div>
-                          </summary>
-                        </details>
-                        <div
-                          data-thq="accordion-content"
-                          className="catalog-content3"
-                        >
-                          <select name='Cigar Brand' onChange={handleFilterChange} multiple>
-                            <option value="">All Brands</option>
-                            {uniqueBrands.map(brand => (
-                              <option key={brand} value={brand}>{brand}</option>
-                            ))}
-                          </select>
-                        </div>
-                      </div>
-                      <div data-thq="accordion" className="catalog-accordion3">
-                        <details
-                          name="wrapper"
-                          data-thq="accordion-trigger"
-                          className="catalog-trigger3"
-                        >
-                          <summary
-                            data-thq="accordion-summary"
-                            className="catalog-summary3"
-                          >
-                            <span>
-                              <span>Wrapper</span>
-                              <br></br>
-                            </span>
-                            <div
-                              data-thq="accordion-icon"
-                              className="catalog-icon-container3"
-                            >
-                              <svg width="32" height="32" viewBox="0 0 24 24">
-                                <path
-                                  d="m12 14l-4-4h8z"
-                                  fill="currentColor"
-                                ></path>
-                              </svg>
-                            </div>
-                          </summary>
-                        </details>
-                        <div
-                          data-thq="accordion-content"
-                          className="catalog-content4"
-                        >
-                          <select name="Wrapper" onChange={handleFilterChange} multiple>
-                            <option></option>
-                            <option>Maduro</option>
-                            <option>Natural</option>
-                            <option>Oscuro</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div data-thq="accordion" className="catalog-accordion4">
-                        <details
-                          name="wrapper"
-                          data-thq="accordion-trigger"
-                          className="catalog-trigger4"
-                        >
-                          <summary
-                            data-thq="accordion-summary"
-                            className="catalog-summary4"
-                          >
-                            <span>
-                              <span>Strength</span>
-                              <br></br>
-                            </span>
-                            <div
-                              data-thq="accordion-icon"
-                              className="catalog-icon-container4"
-                            >
-                              <svg width="32" height="32" viewBox="0 0 24 24">
-                                <path
-                                  d="m12 14l-4-4h8z"
-                                  fill="currentColor"
-                                ></path>
-                              </svg>
-                            </div>
-                          </summary>
-                        </details>
-                        <div
-                          data-thq="accordion-content"
-                          className="catalog-content5"
-                        >
-                          <select name="Strength_Profile" onChange={handleFilterChange} multiple>
-                            <option></option>
-                            <option>Full</option>
-                            <option>Medium</option>
-                            <option>Medium-Full</option>
-                            <option>Mild</option>
-                            <option>Mild-Medium</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div data-thq="accordion" className="catalog-accordion5">
-                        <details
-                          name="size"
-                          open
-                          data-thq="accordion-trigger"
-                          className="catalog-trigger5"
-                        >
-                          <summary
-                            data-thq="accordion-summary"
-                            className="catalog-summary5"
-                          >
-                            <span>
-                              <span>Size</span>
-                              <br></br>
-                            </span>
-                            <div
-                              data-thq="accordion-icon"
-                              className="catalog-icon-container5"
-                            >
-                              <svg width="32" height="32" viewBox="0 0 24 24">
-                                <path
-                                  d="m12 14l-4-4h8z"
-                                  fill="currentColor"
-                                ></path>
-                              </svg>
-                            </div>
-                          </summary>
-                        </details>
-                        <div
-                          data-thq="accordion-content"
-                          className="catalog-content3"
-                        >
-                          <select name="Size" onChange={handleFilterChange} multiple>
-                            <option value="">All Sizes</option>
-                            {uniqueSizes.map(size => (
-                              <option key={size} value={size}>{size}</option>
-                            ))}
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="catalog-container38">
-                  <div className="catalog-container39">
-                    <span className="catalog-sorty-by">Sort By:</span>
-                    <select id="sort" value={sortOption} onChange={handleSortChange} className="catalog-select">
-                      <option value="Cigar Name">Name</option>
-                      <option value="Sizes">Size Options</option>
-                    </select>
-                    <input
-                      type="search"
-                      value={searchQuery}
-                      onChange={handleSearchChange}
-                      placeholder="Search..."
-                    />
+        <Catalog
+          data={props.data}
+          filters={[
+            {
+              name: "Cigar Brand",
+              label: "Brand",
+              values: uniqueBrands,
+              defaultValue: "All Brands",
+            },
+            {
+              name: "Wrapper",
+              label: "Wrapper",
+              values: ["Maduro", "Natural", "Oscuro"],
+              defaultValue: "Any Wrapper",
+            },
+            {
+              name: "Strength_Profile",
+              label: "Strength",
+              values: ["Mild", "Mild-Medium", "Medium", "Medium-Full", "Full"],
+              defaultValue: "Any Strength",
+            },
+            {
+              name: "Size",
+              label: "Size",
+              values: uniqueSizes,
+              defaultValue: "Any Size",
+              flatmap: "Sizes",
+            }
 
-                  </div>
-                  <div className="filter-bubble-container">
-                    {Object.entries(router.query).map(([filterKey, filterValue]) => (
-                      filterValue !== '' && (
-                        <div className="filter-bubble" key={filterKey}>
-                          <span className="filter-bubble-name">{filterKey}: {filterValue}</span>
-                          <button onClick={() => handleFilterChange({ target: { name: filterKey, value: '' } })} className='filter-bubble-button'>
-                            <span className="filter-bubble-x">x</span>
-                          </button>
-                        </div>
-                      )
-                    ))}
-                  </div>
-                  <div className="catalog-container40">
-                    {
-                      sortedItems.map((item) => (
-                        item['Cigar Name'] &&
-                        <Link href={`/cigars/${item.slug}`}><a>
-                        <div className="catalog-catalog-card2 catalogCard">
+          ]}
+          sortOptions={[
+            {
+              value: "Cigar Name",
+              label: "Name",
+            },
+            {
+              value: "Sizes",
+              label: "Size Options",
+              quantity: true,
+            }
+          ]}
+          defaultSort="Cigar Name"
 
-                          <div className="CatalogCardImage"></div>
+          cardSettings={{
+            title: (item) => {
+              return (item['Cigar Brand'] + ' ' + item['Cigar Name'])
+            },
+            data: (item) => {
+              return (
+                [item['Wrapper'] && ['Wrapper', item['Wrapper']],
+                item['Strength_Profile'] && ['Strength', item['Strength_Profile']]]
+              )
+            },
+            href: (item) => {
+              return ('/cigars/' + item.slug)
+            },
+            buttonText: (item) => {
+              return (
+                item.Sizes.length > 1 ?
+                  item.Sizes.length + ' Sizes Available' :
+                  item.Sizes[0])
+            }
+          }}
 
-                          <div className="catalog-container47 CatalogCardName">
-
-                            <span className="card-name-text">{item['Cigar Brand'] + ' ' + item['Cigar Name']}</span>
-
-                          </div>
-                          {item.Wrapper &&
-                            <div className="CatalogCardField">
-                              <span className="catalog-text174">
-                                Wrapper:
-                                <br></br>
-                              </span>
-                              <span className="catalog-text177">
-                                {item.Wrapper}
-                                <br></br>
-                              </span>
-                            </div>}
-                          {item.Strength_Profile &&
-                            <div className="catalog-container49 CatalogCardField">
-                              <span className="catalog-text180">
-                                Strength:
-                                <br></br>
-                              </span>
-                              <span className="catalog-text181">
-                                {item.Strength_Profile}
-                                <br></br>
-                              </span>
-                            </div>}
-                          <div className="catalog-container50">
-
-                            <button
-                              type="button"
-                              className="catalog-button2 button"
-                            >
-                              {
-                                item.Sizes.length > 1 ?
-                                  item.Sizes.length + " Sizes Available" :
-                                  item.Sizes[0]
-                              }
-                            </button>
-
-                          </div>
-                          
-                          
-                        </div>
-                        </a></Link>
-                        
-                      ))
-                    }
-
-                  </div>
-                </div>
-              </div>
+        />
+        
       </Layout>
-      
+
       <style jsx>
         {`
 
@@ -2152,5 +1862,5 @@ const Catalog = (props) => {
   )
 }
 
-export default Catalog
+export default CigarCatalog
 

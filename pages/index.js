@@ -50,164 +50,172 @@ const Catalog = (props) => {
   return (
     <>
       <Layout>
-      <div className='welcome-container-b' >
-                  <div className='welcome-container'>
-                    <div style={{
-                      borderBottom: '3px solid var(--dl-color-theme-secondary2)',
-                      width: '100%',
-                      height: '100%',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      padding: '10px'
-                    }}>
-                      <p className="welcome-text">Nestled in the heart of our community, King Street Coffee & Tobacco has been a local staple for [X years/decades]. Founded on a love for rich, bold flavors and timeless craftsmanship, our shop continues to honor the traditions of fine coffee and premium tobacco.(AI GENERATED PLACEHOLDER )</p>
-                    </div>
-                    <div className="divider"></div>
-                    <div style={{
-                      display: 'flex',
-                      position: 'relative',
-                      maxHeight: '200px',
-                      width: '100%',
+        <div className="mobile-home-contact">
+        <Contact ></Contact>
+        </div>
+      
+        <div className='welcome-container-b' >
+          <div className='welcome-container'>
+            
+            <div style={{
+              borderBottom: '3px solid var(--dl-color-theme-secondary2)',
+              width: '100%',
+              height: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '10px'
+            }}>
+              <p className="welcome-text">Nestled in the heart of our community, King Street Coffee & Tobacco has been a local staple for [X years/decades]. Founded on a love for rich, bold flavors and timeless craftsmanship, our shop continues to honor the traditions of fine coffee and premium tobacco.(AI GENERATED PLACEHOLDER )</p>
+            </div>
+            <div className="divider"></div>
+            <div style={{
+              display: 'flex',
+              position: 'relative',
+              maxHeight: '200px',
+              width: '100%',
 
-                    }}>
-                      <img id="kschairs-background" alt="image" src="/kschairs.jpg" style={{
-                        width: 'auto',
-                        height: 'auto',
-                        maxHeight: '100vh',
-                        objectFit: 'cover',
-                        opacity: '0.5',
-                        width: '100%',
-                      }} />
-                      <div style={{
-                        borderTop: '3px solid var(--dl-color-theme-secondary2)',
-                        width: '100%',
-                        height: '100%',
+            }}>
+              <img id="kschairs-background" alt="image" src="/kschairs.jpg" style={{
+                width: 'auto',
+                height: 'auto',
+                maxHeight: '100vh',
+                objectFit: 'cover',
+                opacity: '0.5',
+                width: '100%',
+              }} />
+              <div style={{
+                borderTop: '3px solid var(--dl-color-theme-secondary2)',
+                width: '100%',
+                height: '100%',
 
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        flexDirection: 'column',
-                        gap: '1em',
-                        padding: '10px',
-                        position: 'absolute',
-                      }}>
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection: 'column',
+                gap: '1em',
+                padding: '10px',
+                position: 'absolute',
+              }}>
 
-                        <h1>Swing by, have a seat!</h1>
-                        <button className="our-store-button" onClick={handleLocationClick} style={{
-                          backgroundColor: 'var(--dl-color-theme-secondary2)',
-                          color: 'var(--dl-color-theme-primary1)',
-                          padding: '10px',
-                          borderRadius: '10px',
-                          fontWeight: 'bold',
-                          fontSize: '1.2em'
-                        }}>Visit Our Store</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div id='kschairs-container'>
-                    <img alt="image" src="/ks-storefront.jpg" style={{
-                      width: '100%',
-                      height: 'auto',
-                      objectFit: 'cover'
+                <h1>Swing by, have a seat!</h1>
+                <button className="our-store-button" onClick={handleLocationClick} style={{
+                  backgroundColor: 'var(--dl-color-theme-secondary2)',
+                  color: 'var(--dl-color-theme-primary1)',
+                  padding: '10px',
+                  borderRadius: '10px',
+                  fontWeight: 'bold',
+                  fontSize: '1.2em'
+                }}>Visit Our Store</button>
+              </div>
+            </div>
+          </div>
+          <div id='kschairs-container'>
+            <img alt="image" src="/ks-storefront.jpg" style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'cover'
 
-                    }} />
-                  </div>
+            }} />
+          </div>
+        </div>
+
+        <div className='divider'></div>
+
+        <div className='shop-suggestions-container'>
+          <h1 style={{ fontSize: '3em', textTransform: 'uppercase' }}>Search By</h1>
+          <div className='shop-suggestions' >
+            <Link href="/cigars/brands">
+              <a>
+                <div className='shop-suggestions-card'>
+                  <span>Brand</span>
                 </div>
-
-                <div className='divider'></div>
-
-                <div className='shop-suggestions-container'>
-                  <h1 style={{ fontSize: '3em', textTransform: 'uppercase' }}>Search By</h1>
-                  <div className='shop-suggestions' >
-                    <Link href="/cigars/brands">
-                    <a>
-                      <div className='shop-suggestions-card'>
-                        <span>Brand</span>
-                      </div>
-                    </a>  
-                    </Link>
-                    <Link href="/cigars/strengths">
-                    <a>
-                      <div className='shop-suggestions-card'>
-                        <span>Strength</span>
-                      </div>
-                    </a>
-                    </Link>
-                    <Link href="/cigars/wrappers">
-                    <a>
-                      <div className='shop-suggestions-card'>
-                        <span>Wrapper</span>
-                      </div>
-                    </a>  
-                    </Link>
-                    <Link href="/cigars/sizes">
-                    <a>
-                      <div className='shop-suggestions-card'>
-                        <span>Size</span>
-                      </div>
-                    </a>
-                    </Link>
-
-                  </div>
+              </a>
+            </Link>
+            <Link href="/cigars/strengths">
+              <a>
+                <div className='shop-suggestions-card'>
+                  <span>Strength</span>
                 </div>
-
-                <div className='divider'></div>
-                <div style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '20px'
-                }}>
-                  <h1>We are proud to carry your favorite brands</h1>
-                  <div className='brand-logo-container'>
-                    <Link href="/cigars?Cigar+Brand=Arturo+Fuente."><a><img alt="Arturo Fuente" src='/af-logo.webp' /></a></Link>
-                    <Link href="/cigars?Cigar+Brand=J.C.+Newman"><a><img alt="J.C. Newman" src='/jcn-logo.png' /></a></Link>
-                    <Link href="/pipes?Pipe+Brand=Savinelli"><a><img alt="Savinelli" src='/savinelli-logo.webp' /></a></Link>
-                    <Link href="/pipes?Pipe+Brand=Peterson"><a><img alt="Peterson" src='/peterson-logo.png' /></a></Link>
-                    <Link href="/tobacco?Brand=Cornell%26Diehl"><a><img alt="Cornell & Diehl" src='/cd-logo.jpg' /></a></Link>
-                  </div>
+              </a>
+            </Link>
+            <Link href="/cigars/wrappers">
+              <a>
+                <div className='shop-suggestions-card'>
+                  <span>Wrapper</span>
                 </div>
-
-                <div className='divider'></div>
-                <div style={{
-                  display: 'flex', 
-                  flexDirection: 'column', 
-                  alignItems: 'center', 
-                  justifyContent: 'center', 
-                  padding: '20px',
-                  width: '100%'
-                  }}>
-                    <h1>Meet our staff</h1>
-                    <div className='staff-container' style={{
-                      flexDirection: 'row'
-                    }}>
-                      <div className='staff-image'>
-                        <img alt="Eddie" src='/edtrout.jpg' />
-                      </div>
-                      <div className='staff-info'>
-                        <h2>Eddie fishh man</h2>
-                        <p>He's the man, Eddie Ed Ed</p>
-                      </div>
-                    </div>
-                    <div className='staff-container' style={{
-                      flexDirection: 'row-reverse'
-                    }}>
-                      <div className='staff-image'>
-                        <img alt="Teddie" src='/tedmcdonald.jpg' />
-                      </div>
-                      <div className='staff-info'>
-                        <h2>Teddie Kilometer</h2>
-                        <p>Here to help, Teddie Ted Ted</p>
-                      </div>
-                    </div>
+              </a>
+            </Link>
+            <Link href="/cigars/sizes">
+              <a>
+                <div className='shop-suggestions-card'>
+                  <span>Size</span>
                 </div>
+              </a>
+            </Link>
+
+          </div>
+        </div>
+
+        <div className='divider'></div>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '20px'
+        }}>
+          <h1>We are proud to carry your favorite brands</h1>
+          <div className='brand-logo-container'>
+            <Link href="/cigars?Cigar+Brand=Arturo+Fuente."><a><img alt="Arturo Fuente" src='/af-logo.webp' /></a></Link>
+            <Link href="/cigars?Cigar+Brand=J.C.+Newman"><a><img alt="J.C. Newman" src='/jcn-logo.png' /></a></Link>
+            <Link href="/pipes?Pipe+Brand=Savinelli"><a><img alt="Savinelli" src='/savinelli-logo.webp' /></a></Link>
+            <Link href="/pipes?Pipe+Brand=Peterson"><a><img alt="Peterson" src='/peterson-logo.png' /></a></Link>
+            <Link href="/tobacco?Brand=Cornell%26Diehl"><a><img alt="Cornell & Diehl" src='/cd-logo.jpg' /></a></Link>
+          </div>
+        </div>
+
+        <div className='divider'></div>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '20px',
+          width: '100%'
+        }}>
+          <h1>Meet our staff</h1>
+          <div className='staff-container' style={{
+            flexDirection: 'row'
+          }}>
+            <div className='staff-image'>
+              <img alt="Eddie" src='/edtrout.jpg' />
+            </div>
+            <div className='staff-info'>
+              <h2>Eddie fishh man</h2>
+              <p>He's the man, Eddie Ed Ed</p>
+            </div>
+          </div>
+          <div className='staff-container' style={{
+            flexDirection: 'row-reverse'
+          }}>
+            <div className='staff-image'>
+              <img alt="Teddie" src='/tedmcdonald.jpg' />
+            </div>
+            <div className='staff-info'>
+              <h2>Teddie Kilometer</h2>
+              <p>Here to help, Teddie Ted Ted</p>
+            </div>
+          </div>
+        </div>
 
       </Layout>
-      
+
       <style jsx>
         {`
+          .mobile-home-contact {
+            display: none;
+          }
           .staff-image {
             width: 200px;
             background-image: var(--dl-gradient-gradients-secondary2gradient);
@@ -577,7 +585,6 @@ const Catalog = (props) => {
           }
           .catalog-content1 {
             flex: 1;
-            width: 100%;
             height: 100%;
             position: relative;
             align-self: flex-start;
@@ -1994,6 +2001,7 @@ const Catalog = (props) => {
             }
           }
           @media (max-width: 767px) {
+            
             .catalog-container12 {
               display: none;
             }
@@ -2013,7 +2021,32 @@ const Catalog = (props) => {
               height: auto;
             }
           }
+          @media (max-width: 680px) {
+            .mobile-home-contact {
+              display: flex;
+              width: 100%;
+            }
+            .brand-logo-container img {
+              width: 130px;
+            }
+            .brand-logo-container {
+              padding: 0;
+            }
+            .staff-container {
+              padding: 0;
+            }
+            .staff-container h2 {
+              font-size: 1.25em;
+            }
+            .staff-container p {
+              font-size: 1em;
+            }
+            .staff-image {
+              height: 150px;
+            }
+        }
           @media (max-width: 479px) {
+            
             .catalog-container11 {
               display: block;
               position: relative;
@@ -2021,7 +2054,7 @@ const Catalog = (props) => {
             .catalog-content1 {
               top: 0px;
               left: 0px;
-              width: 271px;
+              
               height: 100%;
               margin: 0px;
               display: none;

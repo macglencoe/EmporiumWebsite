@@ -10,7 +10,10 @@ import Directory from '../components/directory'
 import Ksman from '../components/ksman'
 
 const Layout = (props) => {
-
+  const [isActive, setIsActive] = useState(true);
+  const handleButtonClick = () => {
+    setIsActive((prev)=>!prev)
+  }
 
   return (
     <>
@@ -27,52 +30,31 @@ const Layout = (props) => {
         <Script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></Script>
 
         <div className="catalog-container11 container">
-          <div className="catalog-container73 sidebar">
-            <div className="catalog-container74">
-              <span className="catalog-text235">The King Street Emporium</span>
-              <button
-                id="closer"
-                type="button"
-                className="catalog-button7 button"
-              >
-                Button
-              </button>
-            </div>
+          <div className={`catalog-container73 sidebar${isActive ? ' collapsed' : ''}`}>
+            {console.log(isActive)}
+            
             <Ksman></Ksman>
             
             <Contact></Contact>
-            <div className="catalog-container94">
-              <div className="catalog-container95">
-                <div className="directoryCard">
-                  <span className="catalog-text259">Cigar Catalogue</span>
-                </div>
-              </div>
-              <div className="catalog-container97">
-                <div className="directoryCard catalog-container98">
-                  <span className="catalog-text260">Pipes &amp; Tobacco</span>
-                </div>
-              </div>
-              <div className="catalog-container99">
-                <div className="directoryCard">
-                  <span className="catalog-text261">Coffee &amp; Tea</span>
-                </div>
-              </div>
-              <div className="catalog-container101">
-                <div className="directoryCard">
-                  <span className="catalog-text262">Accessories</span>
-                </div>
-              </div>
-            </div>
+            
             <div className="fb-container">
               <div className="fb-page" data-href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" data-tabs="timeline" data-width="280" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/">King Street Coffee &amp; Tobacco Emporium. If you can see this, the embed did not load. Click here to see facebook page.</a></blockquote></div>
             </div>
           </div>
-          <div className="catalog-content1 collapsed">
+          <div className="catalog-content1">
             <header className="catalog-title">
               <h1 className="catalog-text109">
                 <span>The King Street Emporium</span>
                 <br></br>
               </h1>
+              <button
+                id="closer"
+                type="button"
+                className="catalog-button7 button"
+                onClick={handleButtonClick}
+              >
+                Button
+              </button>
             </header>
             <div className="catalog-container21">
               <Directory></Directory>
@@ -81,31 +63,7 @@ const Layout = (props) => {
                 {props.children}
 
               </div>
-              <div className="catalog-new-arrivals2">
-                <div className="catalog-container67">
-                  <span className="catalog-text218">
-                    <span>New Arrivals</span>
-                    <br></br>
-                  </span>
-                </div>
-                <div className="catalog-container68">
-                  <div className="catalog-container69">
-                    <span className="catalog-text221">El Primero Reserva</span>
-                  </div>
-                  <div className="catalog-container70">
-                    <span className="catalog-text222">Tobacco Ember</span>
-                  </div>
-                  <div className="catalog-container71">
-                    <span className="catalog-text223">
-                      <span>Don Solitario</span>
-                      <br></br>
-                    </span>
-                  </div>
-                  <div className="catalog-container72">
-                    <span className="catalog-text226">La Noche Oscura</span>
-                  </div>
-                </div>
-              </div>
+              
               <Footer32
                 link1={
                   <Fragment>
@@ -158,6 +116,32 @@ const Layout = (props) => {
       </div >
       <style jsx>
         {`
+          .sidebar {
+                gap: 3px;
+                flex: 0 0 auto;
+                width: 300px;
+                border: 2px dashed rgba(120, 120, 120, 0.4);
+                height: 100%;
+                display: flex;
+                align-items: flex-start;
+                border-color: var(--dl-color-theme-secondary1);
+                border-width: 0px;
+                flex-direction: column;
+                background-color: var(--dl-color-theme-secondary1);
+                }
+          .catalog-button7 {
+              float: right;
+              min-width: 30px;
+              aspect-ratio: 1/1;
+              display: block;
+              padding: 0px;
+              font-size: 1px;
+              font-style: normal;
+              font-weight: 300;
+              border-width: 0px;
+              border-radius: 50%;
+              background-color: var(--dl-color-theme-primary2);
+            }
 
           .about-container {
             padding: 10px;
@@ -532,8 +516,8 @@ const Layout = (props) => {
           }
           .catalog-content1 {
             flex: 1;
-            width: 100%;
             height: 100%;
+            width: 100%;
             position: relative;
             align-self: flex-start;
           }
@@ -544,8 +528,9 @@ const Layout = (props) => {
             display: flex;
             padding: var(--dl-space-space-unit);
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             background-color: var(--dl-color-theme-secondary1);
+            gap: 10px
           }
           .catalog-text109 {
             fill: var(--dl-color-theme-primary2);
@@ -1580,9 +1565,7 @@ const Layout = (props) => {
             align-items: flex-start;
             justify-content: center;
           }
-          .catalog-button7 {
-            display: none;
-          }
+          
           .catalog-contact {
             flex: initial;
             width: 100%;
@@ -1805,6 +1788,8 @@ const Layout = (props) => {
             color: var(--dl-color-theme-primary1);
           }
           @media (max-width: 1600px) {
+
+            
             .catalog-container13 {
               width: 100%;
             }
@@ -1968,112 +1953,30 @@ const Layout = (props) => {
               height: auto;
             }
           }
-          @media (max-width: 479px) {
-            .catalog-container11 {
-              display: block;
-              position: relative;
+            
+          @media (max-width: 680px) {
+            .staff-image {
+              height: 20px;
             }
             .catalog-content1 {
-              top: 0px;
-              left: 0px;
-              width: 271px;
-              height: 100%;
-              margin: 0px;
-              display: none;
-              z-index: 100;
-              overflow: auto;
-              position: absolute;
-              background-color: var(--dl-color-theme-primary1);
+                transition: margin-left .5s;
+                
             }
-            .catalog-title {
-              display: none;
-              flex-direction: column;
+            .sidebar, collapsed {
+                position: fixed;
+                z-index: 1;
+                transition: transform .5s;
             }
-            .catalog-container23 {
-              float: left;
-              flex-direction: row;
+            
+            .collapsed {
+                transform: translateX(-300px);
             }
-            .catalog-container25 {
-              float: left;
-              flex-direction: row;
-            }
-            .catalog-container27 {
-              float: left;
-              flex-direction: row;
-            }
-            .catalog-container29 {
-              float: left;
-              flex-direction: row;
-            }
-            .catalog-container73 {
-              width: 100%;
-              overflow: auto;
-              margin-right: var(--dl-space-space-halfunit);
-            }
-            .catalog-container74 {
-              height: 75px;
-              display: flex;
-              padding: var(--dl-space-space-unit);
-              align-items: center;
-              justify-content: space-between;
-            }
-            .catalog-text235 {
-              fill: var(--dl-color-theme-primary2);
-              color: var(--dl-color-theme-primary2);
-              font-size: 25px;
-              font-style: normal;
-              font-weight: 700;
-            }
-            .catalog-button7 {
-              float: right;
-              width: 30px;
-              height: 30px;
-              display: block;
-              padding: 0px;
-              font-size: 1px;
-              font-style: normal;
-              font-weight: 300;
-              border-width: 0px;
-              border-radius: 50%;
-              background-color: var(--dl-color-theme-primary2);
-            }
-            .catalog-container94 {
-              display: grid;
-              background-color: var(--dl-color-theme-primary1);
-              grid-template-columns: 50% 50%;
-            }
-            .catalog-container95 {
-              float: left;
-              width: 100%;
-              flex-direction: row;
-            }
-            .catalog-text259 {
-              font-size: 20px;
-            }
-            .catalog-container97 {
-              float: left;
-              flex-direction: row;
-            }
-            .catalog-text260 {
-              font-size: 20px;
-            }
-            .catalog-container99 {
-              float: left;
-              flex-direction: row;
-            }
-            .catalog-text261 {
-              font-size: 20px;
-            }
-            .catalog-container101 {
-              float: left;
-              flex-direction: row;
-            }
-            .catalog-text262 {
-              font-size: 20px;
-            }
-            .catalog-updates {
-              height: 100%;
-            }
+            
+
+          }
+
+          @media (max-width: 479px) {
+            
           }
         `}
       </style>

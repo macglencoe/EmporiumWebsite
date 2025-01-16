@@ -489,19 +489,7 @@
   display: flex;
   align-items: flex-start;
 }
-.sidebar {
-  gap: 3px;
-  flex: 0 0 auto;
-  width: 300px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  border-color: var(--dl-color-theme-secondary1);
-  border-width: 0px;
-  flex-direction: column;
-  background-color: var(--dl-color-theme-secondary1);
-}
+
 .directoryCard {
   flex: 0 0 auto;
   width: 100%;
@@ -537,9 +525,7 @@
   justify-content: flex-start;
   background-color: var(--dl-color-theme-secondary1);
 }
-.collapsed {
-  width: 0;
-}
+
 .directory {
   width: 100%;
   height: auto;
@@ -669,6 +655,11 @@
     width: 100%;
   }
 }
+@media(max-width: 680px) {
+  .catalogCard {
+    min-width: 160px;
+  }
+}
 @media(max-width: 479px) {
   .thq-section-padding {
     padding: var(--dl-space-space-oneandhalfunits);
@@ -704,7 +695,5 @@
   .thq-grid-auto-300 {
     grid-template-columns: 1fr;
   }
-  .directory {
-    display: none;
-  }
+  
 }
