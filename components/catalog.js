@@ -6,6 +6,7 @@ import React, { Fragment, use, useState, useEffect } from 'react'
 
 import { useRouter } from 'next/router'
 import CatalogCard from './catalogCard'
+import PageTitle1 from './pagetitle1';
 
 
 export const getStaticProps = async () => {
@@ -191,6 +192,7 @@ const Catalog = (props) => {
     
     return (
         <>
+        <PageTitle1>Cigar Catalog</PageTitle1>
             <div className="catalog-container31">
                 <div data-thq="accordion" className="catalog-accordion1">
                     <details

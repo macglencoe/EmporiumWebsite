@@ -2,7 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/cigars": "pages/cigars.js",
-  "/cigars/[slug]": "pages/cigars/[slug].js"
+  "/cigars/[slug]": "pages/cigars/[slug].js",
+  "/": "pages/index.js"
 }

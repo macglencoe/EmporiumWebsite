@@ -30,11 +30,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/cigars": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/cigars.js"
-    ],
     "/cigars/[slug]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
