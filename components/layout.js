@@ -43,10 +43,14 @@ const Layout = (props) => {
           </div>
           <div className="catalog-content1">
             <header className="catalog-title">
-              <h1 className="catalog-text109">
-                <span>The King Street Emporium</span>
-                <br></br>
-              </h1>
+              <Link href="/">
+                <a>
+                  <h1 className="catalog-text109">
+                    <span>The King Street Emporium</span>
+                    <br></br>
+                  </h1>
+                </a>
+              </Link>
               <button
                 id="closer"
                 type="button"

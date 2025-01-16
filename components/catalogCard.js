@@ -31,10 +31,10 @@ const CatalogCardField = (props) => {
         }
         @media (max-width: 680px) {
             .catalog-text174 {
-                font-size: 15px;
+                font-size: 18px;
             }
             .catalog-text177 {
-                font-size: 15px;
+                font-size: 18px;
             }
         }
         
@@ -47,45 +47,53 @@ const CatalogCardField = (props) => {
 
 
 const CatalogCard = (props) => {
-    
+
     return (
         <>
             <Link href={props.href}><a className="catalog-card-parent">
                 <div className="catalog-catalog-card catalogCard">
 
-                    <div className="CatalogCardImage"></div>
+                    <div className="card-head">
+                        <div className="CatalogCardImage"></div>
+    
+                        <div className="catalog-container47 CatalogCardName">
+    
+                            <span className="card-name-text">{props.title}</span>
+    
+                        </div>
+                    </div>
+                    <div className="card-content">
 
-                    <div className="catalog-container47 CatalogCardName">
+                        {props.data &&
+                            props.data.map((field) => {
+                                return (
+                                    <CatalogCardField
+                                        label={field[0]}
+                                        value={field[1]}
+                                    />)
+                            })}
 
-                        <span className="card-name-text">{props.title}</span>
+
+                        <div className="catalog-container50">
+                            {props.buttonText &&
+                                <button type="button" className="catalog-button2 button">
+                                    {props.buttonText}
+                                </button>}
+                        </div>
+
 
                     </div>
-
-                    { props.data &&
-                        props.data.map((field) => {
-                            return (
-                            <CatalogCardField
-                                label={field[0]}
-                                value={field[1]}
-                            />)
-                        }) }
-                    
-
-                    <div className="catalog-container50">
-                        { props.buttonText &&
-                            <button type="button" className="catalog-button2 button">
-                                {props.buttonText}
-                            </button>}
-                    </div>
-
-
                 </div>
             </a></Link>
             <style jsx>
                 {
                     `
+        .card-head {
+                    justify-items: center;
+        }
         .catalog-catalog-card {
             justify-content: space-between;
+            display: flex;
         }
         .catalog-container47 {
             align-self: center;
@@ -122,18 +130,33 @@ const CatalogCard = (props) => {
             background-color: var(--dl-color-theme-secondary2);
             box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.25);
           }
+        .card-content {
+            width: 100%;
+        }
         @media (max-width: 680px) {
             .catalog-catalog-card {
-                max-width: 50px;
+                max-width: 100%;
+                flex-direction: row;
+                
             }
             .CatalogCardImage {
                 width: 100px;
             }
             .card-name-text {
-                font-size: 20px;
+                font-size: 18px;
             }
             .catalog-button2 {
                 font-size: 15px;
+            }
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                padding-right: 10px;
+                width: 100%;
+            }
+            .card-head {
+                width: auto;
             }
         }
                     `

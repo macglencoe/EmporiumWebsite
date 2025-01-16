@@ -354,12 +354,13 @@ const Catalog = (props) => {
         .filter-bubble-container {
             flex: 1;
             width: 100%;
-            height: 100px;
+            height: auto;
             display: flex;
             align-items: center;
             background-color: var(--dl-color-theme-secondary2);
             padding: 10px;
             gap: 5px;
+            flex-wrap: wrap;
           }
         .filter-bubble {
             border-radius: 8px;
@@ -419,7 +420,7 @@ const Catalog = (props) => {
         }
         @media (max-width: 680px) {
             .catalog-container40 {
-                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                grid-template-columns: 1;
             }
         }
                 `
