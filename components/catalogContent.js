@@ -46,6 +46,7 @@ const CatalogContent = (props) => {
                         props.cardSettings.title(item) !== ' ' &&
                         <CatalogCard
 
+                            image={props.cardSettings.image? props.cardSettings.image(item): null}
                             title={props.cardSettings.title(item)}
 
                             data={props.cardSettings.data(item)}

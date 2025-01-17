@@ -54,7 +54,12 @@ const CatalogCard = (props) => {
                 <div className="catalog-catalog-card catalogCard">
 
                     <div className="card-head">
-                        <div className="CatalogCardImage"></div>
+                        <div className="CatalogCardImage">
+                            {props.image && (
+                                <img  src={props.image} alt={props.title} onError={(e) => { e.target.style.display = "none" }} />
+                            )}
+                            
+                        </div>
     
                         <div className="catalog-container47 CatalogCardName">
     
@@ -88,6 +93,22 @@ const CatalogCard = (props) => {
             <style jsx>
                 {
                     `
+        .CatalogCardImage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .CatalogCardImage {
+            width: var(--dl-size-size-xlarge);
+            height: auto;
+            margin: var(--dl-space-space-unit);
+            display: flex;
+            align-self: center;
+            align-items: flex-start;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            background-image: var(--dl-gradient-gradients-secondary2gradient);
+            }
         .card-head {
                     justify-items: center;
         }

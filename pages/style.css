@@ -550,16 +550,7 @@
 .catalogCard:hover {
   transform: scale(1.05);
 }
-.CatalogCardImage {
-  width: var(--dl-size-size-xlarge);
-  height: auto;
-  margin: var(--dl-space-space-unit);
-  display: flex;
-  align-self: center;
-  align-items: flex-start;
-  aspect-ratio: 1/1;
-  background-image: var(--dl-gradient-gradients-secondary2gradient);
-}
+
 .CatalogCardNam {
   gap: var(--dl-space-space-twounits);
   flex: 0 0 auto;

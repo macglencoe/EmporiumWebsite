@@ -96,6 +96,7 @@ const CigarCatalog = (props) => {
           defaultSort="Cigar Name"
 
           cardSettings={{
+            image: (item) => {return ('/cigars-img/'+item.slug+'/img.png')},
             title: (item) => {
               return (item['Cigar Brand'] + ' ' + item['Cigar Name'])
             },

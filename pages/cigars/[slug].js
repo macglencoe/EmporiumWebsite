@@ -105,11 +105,20 @@ const CigarPage = (props) => {
 
           <div className="cigar-page-image-and-size-container">
             <div className="cigar-page-container34">
-              <img
-                alt="image"
-                src="/oliva-serie-v-1500h.png"
-                className="cigar-page-image4"
-              />
+              {cigar.slug ? (
+                <img
+                  alt="image"
+                  src={`/cigars-img/${cigar.slug}/img.png`}
+                  className="cigar-page-image4"
+                  onError={(e) => {
+                    const brand = encodeURIComponent(cigar["Cigar Brand"]);
+                    const name = encodeURIComponent(cigar["Cigar Name"]);
+                    e.currentTarget.outerHTML = `<span>No image available</span><a href="https://www.google.com/search?tbm=isch&q=${brand}+${name}" target="_blank" rel="noopener noreferrer">Search Google for images of this cigar</a>`;
+                  }}
+                />
+              ) : (
+                <span>No image available</span>
+              )}
             </div>
             <div className='cigar-page-available-sizes-container'>
               <span className="cigar-page-available-sizes">Sizes</span>
@@ -117,7 +126,7 @@ const CigarPage = (props) => {
                 <div key={size} className="cigar-page-size-container">
                   <div className='cigar-size-cigar'>
                     <span className="cigar-page-size">{size} </span>
-                    {cigarSizes[size] && <span className="cigar-page-size" style={{ opacity: '70%' }}>{cigarSizes[size].join(' x ')}</span>}
+                    {cigarSizes[size] && <span className="cigar-page-size" style={{ opacity: '70%' }}>{cigarSizes[size].join(' x ')} *</span>}
                   </div>
                   <div className='cigar-size-cigar-end'></div>
                 </div>
@@ -640,7 +649,14 @@ const CigarPage = (props) => {
             border-width: 1px;
             border-radius: var(--dl-radius-radius-radius4);
             background-image: var(--dl-gradient-gradients-secondary2gradient);
+            max-width: 240px;
+            display:flex;
+            flex-direction: column;
           }
+          .cigar-page-container34 a {
+            font-size: 20px;
+            text-decoration: underline;
+            }
           .cigar-page-image4 {
             width: 200px;
             object-fit: cover;
