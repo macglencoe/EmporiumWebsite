@@ -27,7 +27,7 @@ export const getStaticProps = async () => {
 const CigarCatalog = (props) => {
 
   
-
+  const router = useRouter();
 
   // All unique brands for filtering
   const uniqueBrands = [...new Set((props.data).map(item => item['Cigar Brand'].trim()))];
@@ -35,8 +35,19 @@ const CigarCatalog = (props) => {
   // All unique sizes for filtering
   const uniqueSizes = Array.from(new Set((props.data).flatMap(item => item['Sizes'])));
 
+  const pageSize = 10;
+  const totalPages = Math.ceil(props.data.length / pageSize);
+  const [currentPage, setCurrentPage] = useState(1);
 
+  useEffect(() => {
+    if (router.query.page) {
+      setCurrentPage(parseInt(router.query.page));
+    }
+  }, [router.query.page]);
 
+  const currentPageData = props.data.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+
+  // ^^ This all needs to go to Catalog.js :(
 
   return (
     <>
@@ -106,11 +117,26 @@ const CigarCatalog = (props) => {
           }}
 
         />
+
+        
         
       </Layout>
 
       <style jsx>
         {`
+          .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+          }
+          .pagination button {
+            font-size: 20px;
+            cursor: pointer;
+          }
+          .pagination button:hover {
+            text-decoration: underline;
+          }
 
           .fb-container {
             background-color: var(--dl-color-theme-secondary2);

@@ -6,6 +6,7 @@ import React, { Fragment, use, useState, useEffect } from 'react'
 
 import { useRouter } from 'next/router'
 import CatalogCard from './catalogCard'
+import CatalogContent from './catalogContent';
 import PageTitle1 from './pagetitle1';
 
 
@@ -140,7 +141,8 @@ const Catalog = (props) => {
             pathname: router.pathname,
             query: {
                 ...router.query,
-                [event.target.name]: event.target.value
+                [event.target.name]: event.target.value,
+                page: 1
             }
         });
     };
@@ -253,7 +255,7 @@ const Catalog = (props) => {
                     </div>
                     <div className="filter-bubble-container">
                         {Object.entries(router.query).map(([filterKey, filterValue]) => (
-                            filterValue !== '' && (
+                            filterValue !== '' && filterKey !== 'page' && (
                                 <div className="filter-bubble" key={filterKey}>
                                     <span className="filter-bubble-name">{filterKey}: {filterValue}</span>
                                     <button onClick={() => handleFilterChange({ target: { name: filterKey, value: '' } })} className='filter-bubble-button'>
@@ -263,22 +265,11 @@ const Catalog = (props) => {
                             )
                         ))}
                     </div>
-                    <div className="catalog-container40">
-                        {
-                            sortedItems.map((item) => (
-                                props.cardSettings.title(item) !== ' ' &&
-                                <CatalogCard
+                    <CatalogContent
+                        data={sortedItems}
+                        cardSettings={props.cardSettings}
 
-                                    title={props.cardSettings.title(item)}
-
-                                    data={props.cardSettings.data(item)}
-                                    href={props.cardSettings.href(item)}
-
-                                    buttonText={props.cardSettings.buttonText(item)}
-                                />
-                            ))
-                        }
-                    </div>
+                    ></CatalogContent>
                 </div>
             </div>
             <style jsx>
