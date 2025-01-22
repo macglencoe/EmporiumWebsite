@@ -31,7 +31,6 @@ const Layout = (props) => {
 
         <div className="catalog-container11 container">
           <div className={`catalog-container73 sidebar${isActive ? ' collapsed' : ''}`}>
-            {console.log(isActive)}
             
             <Ksman></Ksman>
             

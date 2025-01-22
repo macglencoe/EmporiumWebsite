@@ -35,10 +35,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/cigars.js"
     ],
-    "/cigars/[slug]": [
+    "/pipes": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/cigars/[slug].js"
+      "static/chunks/pages/pipes.js"
+    ],
+    "/pipes/[slug]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/pipes/[slug].js"
     ]
   },
   "ampFirstPages": []

@@ -51,7 +51,7 @@ const PipeCatalog = (props) => {
                         )
                     },
                     href: (item) => {
-                        return('/pipes')
+                        return('/pipes/'+item.slug)
                     },
                     buttonText: (item) => {return("See More")}
 
