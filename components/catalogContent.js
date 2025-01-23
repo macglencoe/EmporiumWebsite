@@ -53,6 +53,7 @@ const CatalogContent = (props) => {
                             href={props.cardSettings.href(item)}
 
                             buttonText={props.cardSettings.buttonText(item)}
+                            barcode={props.cardSettings.barcode(item)}
                         />
                     ))
                 }

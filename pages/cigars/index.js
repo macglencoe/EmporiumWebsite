@@ -26,7 +26,7 @@ export const getStaticProps = async () => {
 
 const CigarCatalog = (props) => {
 
-  
+
   const router = useRouter();
 
   // All unique brands for filtering
@@ -96,14 +96,19 @@ const CigarCatalog = (props) => {
           defaultSort="Cigar Name"
 
           cardSettings={{
-            image: (item) => {return ('/cigars-img/'+item.slug+'/img.png')},
+            image: (item) => { return ('/cigars-img/' + item.slug + '/img.png') },
             title: (item) => {
               return (item['Cigar Brand'] + ' ' + item['Cigar Name'])
             },
             data: (item) => {
               return (
-                [item['Wrapper'] && ['Wrapper', item['Wrapper']],
-                item['Strength_Profile'] && ['Strength', item['Strength_Profile']]]
+                [
+                  item['Wrapper'] && ['Wrapper', item['Wrapper']],
+                  item['Strength_Profile'] && ['Strength', item['Strength_Profile']],
+                  router.query['Display Price'] === 'true' &&
+                  item['Price'] &&
+                  ['Price', item['Price']]
+                ]
               )
             },
             href: (item) => {
@@ -114,13 +119,18 @@ const CigarCatalog = (props) => {
                 item.Sizes.length > 1 ?
                   item.Sizes.length + ' Sizes Available' :
                   item.Sizes[0])
+            },
+            barcode: (item) => {
+              if (router.query['Display Barcode'] === 'true') {
+                return (item['Barcode'])
+              }
             }
           }}
 
         />
 
-        
-        
+
+
       </Layout>
 
       <style jsx>

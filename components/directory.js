@@ -1,10 +1,12 @@
 import React, { Fragment } from 'react'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import PropTypes from 'prop-types'
 
 const Directory = (props) => {
+    const router = useRouter();
     return (
         <nav className="catalog-container1 directory">
             <ul className='directory'>
@@ -14,7 +16,7 @@ const Directory = (props) => {
                 className="background-image"
             />
             <li>
-            <Link href="/cigars"><a>
+            <Link href={router.query["Display Price"] == "true" || router.query["Display Barcode"] == "true" ? "/cigars?Display+Price=true&Display+Barcode=true" : "/cigars"}><a>
                 <div className="container2">
                     <div className="directoryCard">
                         <span className="catalog-text112">Cigar Catalogue</span>

@@ -1,3 +1,4 @@
+import JsBarcode from "jsbarcode"
 import Link from "next/link"
 
 const CatalogCardField = (props) => {
@@ -56,27 +57,46 @@ const CatalogCard = (props) => {
                     <div className="card-head">
                         <div className="CatalogCardImage">
                             {props.image && (
-                                <img  src={props.image} alt={props.title} onError={(e) => { e.target.style.display = "none" }} />
+                                <img src={props.image} alt={props.title} onError={(e) => { e.target.style.display = "none" }} />
                             )}
-                            
+
                         </div>
-    
+
                         <div className="catalog-container47 CatalogCardName">
-    
+
                             <span className="card-name-text">{props.title}</span>
-    
+
                         </div>
                     </div>
                     <div className="card-content">
 
                         {props.data &&
                             props.data.map((field) => {
+                                if (field[1] == null) {
+                                    return null
+                                }
                                 return (
                                     <CatalogCardField
                                         label={field[0]}
                                         value={field[1]}
                                     />)
                             })}
+
+                        {props.barcode && (
+                            <div style={{display: "flex", justifyContent: "center"}}>
+                            <canvas ref={(canvas) => {
+                                if (canvas) {
+                                    JsBarcode(canvas, props.barcode, {
+                                        format: "CODE128",
+                                        width: 2,
+                                        height: 30,
+                                        fontSize: 18,
+                                    });
+                                }
+                            }}/>
+                            </div>
+                        )}
+
 
 
                         <div className="catalog-container50">
