@@ -6,4 +6,4 @@ Allow: /
 Host: https://kingstreetemporium.com
 
 # Sitemaps
-Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: https://kingstreetemporium.com/sitemap.xml

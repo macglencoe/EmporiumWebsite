@@ -12,7 +12,7 @@ const SearchBy = (props) => {
     let data = Data
 
 
-    const uniqueBrands = [];
+    let uniqueBrands = [];
     if (props.flatmap) {
         uniqueBrands = [
             ...new Set(Data.flatMap(item => item[props.flatmap].map(size => size.trim())))
