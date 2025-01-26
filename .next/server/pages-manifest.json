@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/cigars": "pages/cigars.js",
-  "/": "pages/index.js",
-  "/404": "pages/404.js"
+  "/404": "pages/404.js",
+  "/pipes/[slug]": "pages/pipes/[slug].js",
+  "/cigars": "pages/cigars.js"
 }
