@@ -12,8 +12,27 @@ import Ksman from '../components/ksman'
 const Layout = (props) => {
   const [isActive, setIsActive] = useState(true);
   const handleButtonClick = () => {
-    setIsActive((prev)=>!prev)
+    setIsActive((prev) => !prev)
   }
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://connect.facebook.net/en_US/sdk.js';
+    script.async = true;
+    script.defer = true;
+    script.crossOrigin = 'anonymous';
+    script.nonce = 'YOUR_NONCE_HERE';
+    document.body.appendChild(script);
+
+    /* window.fbAsyncInit = function() {
+      FB.init({
+        xfbml: true,
+        version: 'v13.0',
+      });
+      console.log('Facebook SDK initialized');
+    }; */
+    
+  }, []);
 
   return (
     <>
@@ -28,17 +47,16 @@ const Layout = (props) => {
 
         <div id="fb-root"></div>
         <Script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></Script>
+        
 
         <div className="catalog-container11 container">
           <div className={`catalog-container73 sidebar${isActive ? ' collapsed' : ''}`}>
-            
+
             <Ksman></Ksman>
-            
+
             <Contact></Contact>
-            
-            <div className="fb-container">
-              <div className="fb-page" data-href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" data-tabs="timeline" data-width="280" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/p/King-Street-Coffee-Tobacco-Emporium-100063496593967/">King Street Coffee &amp; Tobacco Emporium. If you can see this, the embed did not load. Click here to see facebook page.</a></blockquote></div>
-            </div>
+
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FKing-Street-Coffee-Tobacco-Emporium-100063496593967%2F&tabs=timeline&width=300&height=1000&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="1000" style={{border:"none"}} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
           </div>
           <div className="catalog-content1">
             <header className="catalog-title">
@@ -66,7 +84,7 @@ const Layout = (props) => {
                 {props.children}
 
               </div>
-              
+
               <Footer32
                 link1={
                   <Fragment>
@@ -1558,7 +1576,7 @@ const Layout = (props) => {
             display: inline-block;
           }
           .catalog-container73 {
-            height: 100%;
+            height: 1500px;
           }
           .catalog-container74 {
             flex: 1;

@@ -372,7 +372,14 @@ const Catalog = (props) => {
           }
         .catalog-container39 input {
             font-size: 20px;
+            background-color: var(--dl-color-theme-primary2);
 
+        }
+        .catalog-container39 select {
+            background-color: var(--dl-color-theme-primary2);
+        }
+        .catalog-container39 span {
+            color: var(--dl-color-theme-primary2);
         }
        
         .catalog-sorty-by {
