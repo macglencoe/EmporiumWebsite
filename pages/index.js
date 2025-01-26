@@ -66,7 +66,14 @@ const Catalog = (props) => {
               justifyContent: 'center',
               padding: '10px'
             }}>
-              <p className="welcome-text">Nestled in the heart of our community, King Street Coffee & Tobacco has been a local staple for [X years/decades]. Founded on a love for rich, bold flavors and timeless craftsmanship, our shop continues to honor the traditions of fine coffee and premium tobacco.(AI GENERATED PLACEHOLDER )</p>
+              <p className="welcome-text">
+                Welcome to the Eastern Panhandle's premier cigar lounge—
+                your perfect third space! For over 30 years, we've been serving
+                Martinsburg, WV, with a friendly, laid-back spot to relax, chat, 
+                and unwind. Whether you're into fine cigars or premium briar pipes, 
+                we’re here to share our expertise and help you find your perfect match. 
+                Come see why we’re a favorite for pipe and cigar enthusiasts alike!
+              </p>
             </div>
             <div className="divider"></div>
             <div style={{

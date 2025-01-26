@@ -31,3 +31,22 @@ make a ted ai voice model that reads out all the cigar descriptions
     > term success is your aim.
 
     - Once site is launched, submit sitemaps via webmaster. Do additional testing with Lighthouse.
+
+
+- List legacy brands
+
+## Welcome message
+
+- Eastern Panhandle's only premier cigar louge
+
+- Friendly atmosphere with conversation, for relaxing and unwinding
+
+- Serving martinsburg wv for over 30 year
+
+- offering tobacco expertise and consultation
+
+- catering to pipe nerds, selling restored estate pipes
+// Don't mention that we restore pipes as a service
+- premium pipe retailer and curator, briar tobacco pipes
+
+- 
