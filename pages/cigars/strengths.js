@@ -28,7 +28,9 @@ const Strengths = (props) => {
       <Layout>
         <SearchBy 
         title="Search by Strength"
-        field="Strength_Profile"/>
+        field="Strength_Profile"
+        data={Data}
+        catalogPath="/cigars"/>
       </Layout>
     </>
 

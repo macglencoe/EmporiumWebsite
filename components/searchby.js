@@ -1,7 +1,8 @@
 import { use } from "react";
 import { useRouter } from "next/router";
+import PageTitle1 from "./pagetitle1";
 
-import Data from "../public/data/consolidated_cigars.json"
+//import Data from "../public/data/consolidated_cigars.json"
 
 
 
@@ -9,17 +10,35 @@ const SearchBy = (props) => {
 
     const router = useRouter();
 
-    let data = Data
+    if (props.data === undefined) {
+        return (
+            <div>
+                <PageTitle1>Data not found</PageTitle1>
+                <br></br>
+                <p>This likely means that the data property in the SearchBy component is unset.</p>
+                <br></br>
+                <h3>Properties:</h3>
+                <pre>{JSON.stringify(props, null, 2)}</pre>
+            </div>
+        )
+    }
+
+    let data = props.data
+
+    
 
 
     let uniqueBrands = [];
     if (props.flatmap) {
         uniqueBrands = [
-            ...new Set(Data.flatMap(item => item[props.flatmap].map(size => size.trim())))
+            ...new Set(data.flatMap(item => item[props.flatmap].map(size => size.trim())))
         ].sort((a, b) => a.localeCompare(b))
     } else {
+        console.log([...new Set(data.map(item => item[props.field]))])
         uniqueBrands = [...new Set(data.map(item => item[props.field].trim()))].sort((a, b) => a.localeCompare(b));
     }
+
+
 
 
 
@@ -58,7 +77,7 @@ const SearchBy = (props) => {
                             {showLetter && <span style={{ fontWeight: 'bold', fontSize: '20px' }}>{firstLetter}</span>}
 
                             <div className='brand-label-container' onClick={() => router.push({
-                                pathname: '/cigars',
+                                pathname: props.catalogPath,
                                 query: { [props.field]: brand },
                             })}>
                                 <span>{brand}</span>

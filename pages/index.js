@@ -9,6 +9,7 @@ import Contact from '../components/contact'
 import Directory from '../components/directory'
 import Ksman from '../components/ksman'
 import Layout from '../components/layout'
+import ShopSuggestions from '../components/shopSuggestions'
 
 const Catalog = (props) => {
 
@@ -129,40 +130,39 @@ const Catalog = (props) => {
 
         <div className='divider'></div>
 
-        <div className='shop-suggestions-container'>
-          <h1 style={{ fontSize: '3em', textTransform: 'uppercase' }}>Search By</h1>
-          <div className='shop-suggestions' >
-            <Link href="/cigars/brands">
-              <a>
-                <div className='shop-suggestions-card'>
-                  <span>Brand</span>
-                </div>
-              </a>
-            </Link>
-            <Link href="/cigars/strengths">
-              <a>
-                <div className='shop-suggestions-card'>
-                  <span>Strength</span>
-                </div>
-              </a>
-            </Link>
-            <Link href="/cigars/wrappers">
-              <a>
-                <div className='shop-suggestions-card'>
-                  <span>Wrapper</span>
-                </div>
-              </a>
-            </Link>
-            <Link href="/cigars/sizes">
-              <a>
-                <div className='shop-suggestions-card'>
-                  <span>Size</span>
-                </div>
-              </a>
-            </Link>
+        <ShopSuggestions
+        title="Cigars"
+        items={[
+          {href: "/cigars/brands", label: "Brand"},
+          {href: "/cigars/strengths", label: "Strength"},
+          {href: "/cigars/wrappers", label: "Wrapper"},
+          {href: "/cigars/sizes", label: "Size"},
+        ]}
+        />
 
-          </div>
-        </div>
+        <div className='divider'></div>
+
+        <ShopSuggestions
+        title="Pipes"
+        items={[
+          {href: "/pipes/brands", label: "Brand"},
+          {href: "/pipes/types", label: "Type"},
+          {href: "/pipes/materials", label: "Material"},
+        ]}
+        />
+
+        <div className='divider'></div>
+
+        <ShopSuggestions
+          title="Coffee & Tea"
+          items={[
+            {href: "/caffeine/brands", label: "Brand"},
+            {href: "/caffeine/roasts", label: "Roast"},
+            {href: "/caffeine/origin", label: "Origin"},
+          ]}
+        />
+
+        
 
         <div className='divider'></div>
         <div style={{

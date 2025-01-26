@@ -49,7 +49,9 @@ const PipePage = (props) => {
                     <ProductInfoFields
                         fields={[
                             {name: "Brand", value: pipe['Pipe Brand']},
+                            {name: "Type", value: pipe['type']},
                             {name: "Material", value: pipe['Material']},
+
                         ]}
                     />
                     

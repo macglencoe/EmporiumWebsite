@@ -21,7 +21,9 @@ const Sizes = (props) => {
         <SearchBy 
         title="Search by Size" 
         flatmap="Sizes"
-        field="Size"/>
+        field="Size"
+        data={Data}
+        catalogPath="/cigars"/>
       </Layout>
     </>
 

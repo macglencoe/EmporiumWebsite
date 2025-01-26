@@ -16,6 +16,8 @@ const PipeCatalog = (props) => {
 
     const uniqueMaterials = [...new Set(props.data.map(item => item['Material'].trim()))];
 
+    const uniqueTypes = [...new Set(props.data.map(item => item['type'].trim()))];
+
     return (
         <>
         <Layout>
@@ -34,6 +36,12 @@ const PipeCatalog = (props) => {
                         label: "Material",
                         values: uniqueMaterials,
                         defaultValue: "All Materials"
+                    },
+                    {
+                        name: "type",
+                        label: "Type",
+                        values: uniqueTypes,
+                        defaultValue: "All Types"
                     }
                 ]}
                 sortOptions={[
@@ -47,7 +55,8 @@ const PipeCatalog = (props) => {
                     },
                     data: (item) => {
                         return (
-                            [item['Material'] && ['Material', item['Material']]]
+                            [item['Material'] && ['Material', item['Material']],
+                            item['type'] && ['Type', item['type']]]
                         )
                     },
                     href: (item) => {

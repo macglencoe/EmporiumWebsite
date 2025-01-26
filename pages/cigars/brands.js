@@ -20,7 +20,9 @@ const Brands = (props) => {
             <Layout>
                 <SearchBy 
                 title="Our Brands" 
-                field="Cigar Brand"/>
+                field="Cigar Brand"
+                data={Data}
+                catalogPath="/cigars"/>
             </Layout>
         </>
     )
