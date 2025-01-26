@@ -859,6 +859,7 @@ const CigarCatalog = (props) => {
           }
           .catalog-catalog-card1 {
             justify-content: space-between;
+            height: 100%;
           }
           .catalog-container41 {
             align-self: center;
