@@ -94,6 +94,12 @@ const CigarCatalog = (props) => {
             }
           ]}
           defaultSort="Cigar Name"
+          auxiliarySearchBars={[
+            router.query['Display Barcode'] === 'true' && {
+              label: "Barcode",
+              query: "Barcode",
+            }
+          ]}
 
           cardSettings={{
             image: (item) => { return ('/cigars-img/' + item.slug + '/img.png') },

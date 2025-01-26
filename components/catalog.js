@@ -110,6 +110,7 @@ const Catalog = (props) => {
 
     const [sortOption, setSortOption] = useState(props.defaultSort);
 
+
     // Set filters based on query parameters
     const router = useRouter();
 
@@ -130,12 +131,29 @@ const Catalog = (props) => {
         setSearchQuery(event.target.value);
     };
 
+    const [auxSearchQueries, setAuxSearchQueries] = useState([]);
+
+    const handleAuxSearchChange = (event) => {
+        if (props.auxiliarySearchBars) {
+            const updatedQueries = [...auxSearchQueries];
+            props.auxiliarySearchBars.forEach(searchBar => {
+                const index = updatedQueries.findIndex(query => query.name === searchBar.query);
+                if (index >= 0) {
+                    updatedQueries[index].value = event.target.value;
+                } else {
+                    updatedQueries.push({ name: searchBar.query, value: event.target.value });
+                }
+            });
+            setAuxSearchQueries(updatedQueries);
+        }
+    }
+
 
     const handleSortChange = (event) => {
         setSortOption(event.target.value);
     };
-    
-    
+
+
     const handleFilterChange = (event) => {
         router.replace({
             pathname: router.pathname,
@@ -149,7 +167,7 @@ const Catalog = (props) => {
 
 
 
-    
+
     const filteredItems = [...props.data].filter((item) => {
         if (router.isReady) {
             props.filters.map(filter => {
@@ -159,18 +177,18 @@ const Catalog = (props) => {
             });
 
             return (
-              props.filters.every(filter =>
-                router.query[filter.name] === '' ||
-                (filter.flatmap
-                  ? item[filter.flatmap].includes(router.query[filter.name])
-                  : item[filter.name].toLowerCase() == (router.query[filter.name].toLowerCase()))
-              )
+                props.filters.every(filter =>
+                    router.query[filter.name] === '' ||
+                    (filter.flatmap
+                        ? item[filter.flatmap].includes(router.query[filter.name])
+                        : item[filter.name].toLowerCase() == (router.query[filter.name].toLowerCase()))
+                )
             )
         }
     })
 
 
-    
+
     const searchedItems = filteredItems.filter((item) => {
 
         return Object.values(item).some(value =>
@@ -178,23 +196,36 @@ const Catalog = (props) => {
         );
     });
 
-
-    const sortedItems = [...searchedItems].sort((a, b) => {
-        
-        const sortOptionProp = props.sortOptions.find(option => option.value === sortOption);
-
-        
-        if (sortOptionProp.quantity) {
-            console.log(sortOption);
-            return b[sortOption].length - a[sortOption].length
-        } else
-        return a[sortOption] - b[sortOption];
+    const auxSearchedItems = searchedItems.filter((item) => {
+        if (props.auxiliarySearchBars) {
+            return auxSearchQueries.every(query =>
+                query.value === '' || String(item[query.name]).toLowerCase() === query.value.toLowerCase()
+            );
+        } else return searchedItems
     })
 
-    
+    // Testing for unique barcodes
+    if (true) {
+        const uniqueBarcodes = auxSearchedItems.filter((item, index, self) => self.findIndex((t) => t.Barcode === item.Barcode) === index);
+        console.log('Unique Barcodes: ', uniqueBarcodes.map(item => item.Barcode));
+    }
+
+
+    const sortedItems = [...auxSearchedItems].sort((a, b) => {
+
+        const sortOptionProp = props.sortOptions.find(option => option.value === sortOption);
+
+
+        if (sortOptionProp.quantity) {
+            return b[sortOption].length - a[sortOption].length
+        } else
+            return a[sortOption] - b[sortOption];
+    })
+
+
     return (
         <>
-        <PageTitle1>Cigar Catalog</PageTitle1>
+            <PageTitle1>Cigar Catalog</PageTitle1>
             <div className="catalog-container31">
                 <div data-thq="accordion" className="catalog-accordion1">
                     <details
@@ -239,7 +270,7 @@ const Catalog = (props) => {
                     <div className="catalog-container39">
                         <span className="catalog-sorty-by">Sort By:</span>
                         <select id="sort" value={sortOption} onChange={handleSortChange} className="catalog-select">
-                            
+
                             {
                                 props.sortOptions.map((option) => (
                                     <option key={option.value} value={option.value}>{option.label}</option>
@@ -252,6 +283,20 @@ const Catalog = (props) => {
                             onChange={handleSearchChange}
                             placeholder="Search..."
                         />
+                        {
+                            props.auxiliarySearchBars && props.auxiliarySearchBars.length > 0 && props.auxiliarySearchBars[0] !== false &&
+                            props.auxiliarySearchBars.map((auxSearch) => (
+                                <input
+                                    type="search"
+                                    name={auxSearch.query}
+                                    value={auxSearchQueries[auxSearch.name]}
+                                    onChange={handleAuxSearchChange}
+                                    placeholder={auxSearch.label + '...'}
+                                />
+                            ))
+                        }
+
+
                     </div>
                     <div className="filter-bubble-container">
                         {Object.entries(router.query).map(([filterKey, filterValue]) => (
@@ -320,18 +365,25 @@ const Catalog = (props) => {
             display: flex;
             align-items: center;
             background-color: var(--dl-color-theme-secondary2);
+            gap: 10px;
+            padding: 10px;
+            flex-wrap: wrap;
+            border-bottom: 3 px solid var(--dl-color-theme-primary1);
           }
+        .catalog-container39 input {
+            font-size: 20px;
+
+        }
+       
         .catalog-sorty-by {
             fill: var(--dl-color-theme-neutral-light);
             color: var(--dl-color-theme-neutral-light);
-            padding: var(--dl-space-space-unit);
             font-size: 25px;
             font-style: normal;
             font-weight: 600;
             text-transform: uppercase;
           }
         .catalog-select {
-            margin: var(--dl-space-space-unit);
             font-size: 25px;
             align-self: center;
             padding-left: var(--dl-space-space-halfunit);
