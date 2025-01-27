@@ -65,6 +65,8 @@ const PipeCatalog = (props) => {
                     buttonText: (item) => {return("See More")}
 
                 }}
+
+                
             
             />
         </Layout>

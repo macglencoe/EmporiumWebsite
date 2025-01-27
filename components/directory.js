@@ -31,7 +31,7 @@ const Directory = (props) => {
                 <a>
                     <div className="container2">
                         <div className="directoryCard">
-                            <span className="catalog-text113">Pipes &amp; Tobacco</span>
+                            <span className="catalog-text113">Pipe Catalogue</span>
                         </div>
                     </div>
                 </a>
@@ -48,12 +48,23 @@ const Directory = (props) => {
                 </a>
             </Link>
             </li>
-            <li>
+            {/* <li>
             <Link href="/accessories">
                 <a>
                     <div className="container2">
                         <div className="directoryCard">
                             <span className="catalog-text115">Accessories</span>
+                        </div>
+                    </div>
+                </a>
+            </Link>
+            </li> */}
+            <li>
+            <Link href="/tobacco">
+                <a>
+                    <div className="container2">
+                        <div className="directoryCard">
+                            <span className="catalog-text115">Pipe Tobacco</span>
                         </div>
                     </div>
                 </a>

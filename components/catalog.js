@@ -176,6 +176,9 @@ const Catalog = (props) => {
                 }
             });
 
+            console.log(router.query)
+            console.log(props.filters)
+
             return (
                 props.filters.every(filter =>
                     router.query[filter.name] === '' ||
