@@ -30,12 +30,16 @@ const SearchBy = (props) => {
 
     let uniqueBrands = [];
     if (props.flatmap) {
+        
         uniqueBrands = [
-            ...new Set(data.flatMap(item => item[props.flatmap].map(size => size.trim())))
+            ...new Set(data.flatMap(item => item[props.flatmap] ? item[props.flatmap].map(size => size.trim()) : []))
         ].sort((a, b) => a.localeCompare(b))
     } else {
-        console.log([...new Set(data.map(item => item[props.field]))])
-        uniqueBrands = [...new Set(data.map(item => item[props.field].trim()))].sort((a, b) => a.localeCompare(b));
+        
+        uniqueBrands = [...new Set(data.map(item =>
+            item[props.field] ? item[props.field].trim() : null
+            ))].filter(brand => brand !== null).sort((a, b) => a.localeCompare(b));
+        
     }
 
 

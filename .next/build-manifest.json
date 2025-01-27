@@ -30,20 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/pipes": [
+    "/caffeine/origins": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/pipes.js"
-    ],
-    "/pipes/materials": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/pipes/materials.js"
-    ],
-    "/pipes/types": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/pipes/types.js"
+      "static/chunks/pages/caffeine/origins.js"
     ]
   },
   "ampFirstPages": []

@@ -69,10 +69,11 @@ const CatalogCard = (props) => {
                         </div>
                     </div>
                     <div className="card-content">
-
+                        
                         {props.data &&
                             props.data.map((field) => {
-                                if (field[1] == null) {
+                                
+                                if (field == null || field[1] == null) {
                                     return null
                                 }
                                 return (

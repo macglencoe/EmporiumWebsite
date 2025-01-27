@@ -180,8 +180,8 @@ const Catalog = (props) => {
                 props.filters.every(filter =>
                     router.query[filter.name] === '' ||
                     (filter.flatmap
-                        ? item[filter.flatmap].includes(router.query[filter.name])
-                        : item[filter.name].toLowerCase() == (router.query[filter.name].toLowerCase()))
+                        ? item[filter.flatmap] !== null && item[filter.flatmap].includes(router.query[filter.name])
+                        : item[filter.name] !== null && item[filter.name].toLowerCase() == (router.query[filter.name].toLowerCase()))
                 )
             )
         }

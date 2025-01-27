@@ -38,7 +38,7 @@ const Directory = (props) => {
             </Link>
             </li>
             <li>
-            <Link href="/coffee">
+            <Link href="/caffeine">
                 <a>
                     <div className="container2">
                         <div className="directoryCard">

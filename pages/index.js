@@ -156,9 +156,8 @@ const Catalog = (props) => {
         <ShopSuggestions
           title="Coffee & Tea"
           items={[
-            {href: "/caffeine/brands", label: "Brand"},
             {href: "/caffeine/roasts", label: "Roast"},
-            {href: "/caffeine/origin", label: "Origin"},
+            {href: "/caffeine/origins", label: "Origin"},
           ]}
         />
 
