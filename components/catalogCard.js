@@ -63,8 +63,8 @@ const CatalogCard = (props) => {
                         </div>
 
                         <div className="catalog-container47 CatalogCardName">
-
-                            <span className="card-name-text">{props.title}</span>
+                            
+                            <span className="card-name-text"><i>{props.secondaryTitle}</i> <b>{props.name} {props.title}</b></span>
 
                         </div>
                     </div>
@@ -146,9 +146,14 @@ const CatalogCard = (props) => {
             font-size: 30px;
             font-style: normal;
             text-align: center;
-            font-weight: 800;
             text-transform: uppercase;
           }
+        card-name-text b {
+            font-weight: 800;
+        }
+        card-name-text i {
+            font-weight: 200;
+        }
         .catalog-container50 {
             gap: var(--dl-space-space-twounits);
             flex: 0 0 auto;

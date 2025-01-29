@@ -222,7 +222,7 @@ const Catalog = (props) => {
         if (sortOptionProp.quantity) {
             return b[sortOption].length - a[sortOption].length
         } else
-            return a[sortOption] - b[sortOption];
+            return String(a[sortOption]).localeCompare(String(b[sortOption]));
     })
 
 

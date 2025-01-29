@@ -82,17 +82,27 @@ const CigarCatalog = (props) => {
             }
 
           ]}
-          sortOptions={[
-            {
-              value: "Cigar Name",
-              label: "Name",
-            },
-            {
-              value: "Sizes",
-              label: "Size Options",
-              quantity: true,
-            }
-          ]}
+          sortOptions={
+            [
+              {
+                value: "Cigar Name",
+                label: "Name",
+              },
+              {
+                value: "Sizes",
+                label: "Size Options",
+                quantity: true,
+              },
+              {
+                value: "Cigar Brand",
+                label: "Brand"
+              },
+              router.query['Display Price'] === 'true' && {
+                value: "Price",
+                label: "Price",
+              },
+            ].filter(Boolean)
+          }
           defaultSort="Cigar Name"
           auxiliarySearchBars={[
             router.query['Display Barcode'] === 'true' && {
@@ -103,8 +113,16 @@ const CigarCatalog = (props) => {
 
           cardSettings={{
             image: (item) => { return ('/cigars-img/' + item.slug + '/img.png') },
+
             title: (item) => {
-              return (item['Cigar Brand'] + ' ' + item['Cigar Name'])
+              return (
+                item['Cigar Name']
+              )
+            },
+            secondaryTitle: (item) => {
+              return (
+                item['Cigar Brand']
+              )
             },
             data: (item) => {
               return (

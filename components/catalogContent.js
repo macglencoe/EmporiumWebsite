@@ -43,10 +43,11 @@ const CatalogContent = (props) => {
             <div className="catalog-container40">
                 {
                     currentPageData.map((item) => (
-                        props.cardSettings.title(item) !== ' ' &&
+                        props.cardSettings.title(item) !== '' &&
                         <CatalogCard
 
                             image={props.cardSettings.image? props.cardSettings.image(item): null}
+                            secondaryTitle={props.cardSettings.secondaryTitle? props.cardSettings.secondaryTitle(item) : null}
                             title={props.cardSettings.title(item)}
 
                             data={props.cardSettings.data(item)}
