@@ -2,34 +2,10 @@ import React, { Fragment } from 'react'
 
 import PropTypes from 'prop-types'
 import Link from 'next/link'
+import { handleLocationClick } from '../utils/location'
 
 const Footer32 = (props) => {
-  // Location
-
-  let address = "320 W King Street";
-  let city = "Martinsburg";
-  let state = "West Virginia";
-
-  const handleLocationClick = () => {
-    const encodedAddress = encodeURIComponent(`${address}, ${city}, ${state}`);
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-    let mapUrl;
-    if (isMobile) {
-      // Use platform-specific maps app links
-      if (navigator.userAgent.match(/Android/i)) {
-        mapUrl = `geo:0,0?q=${encodedAddress}`; // Android
-      } else if (navigator.userAgent.match(/(iPhone|iPad|iPod)/i)) {
-        mapUrl = `http://maps.apple.com/?q=${encodedAddress}`; // iOS
-      } else {
-        mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`
-      }
-    } else {
-      mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
-    }
-
-    window.open(mapUrl, '_blank', 'noopener,noreferrer');
-  };
+  
   return (
     <>
       <footer

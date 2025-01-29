@@ -12,6 +12,8 @@ import Ksman from '/components/ksman'
 import Link from 'next/link';
 import Layout from '/components/layout';
 import PageTitle1 from '/components/pagetitle1';
+import { handleLocationClick } from '../utils/location';
+import { handlePhoneClick } from '../utils/phone';
 
 
 export const ProductImage = (props) => {
@@ -310,57 +312,9 @@ export const ProductInfoFields = (props) => {
 }
 
 export const ProductCallOrVisitButtons = (props) => {
-    // Phone
+    
 
-    let phoneNumber = "3042649130"
-
-    const handlePhoneClick = () => {
-        const telUrl = `tel:${phoneNumber.replace(/\D/g, '')}`; // Remove non-digits
-        window.location.href = telUrl; // Use window.location.href for direct call
-    };
-
-    useEffect(() => {
-        // Add cursor pointer for better UX
-        const element = document.querySelector('.call-button');
-        if (element) {
-            element.style.cursor = 'pointer';
-        }
-    }, []);
-
-    // Location
-
-    let address = "320 W King Street";
-    let city = "Martinsburg";
-    let state = "West Virginia";
-
-    const handleLocationClick = () => {
-        const encodedAddress = encodeURIComponent(`${address}, ${city}, ${state}`);
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-        let mapUrl;
-        if (isMobile) {
-            // Use platform-specific maps app links
-            if (navigator.userAgent.match(/Android/i)) {
-                mapUrl = `geo:0,0?q=${encodedAddress}`; // Android
-            } else if (navigator.userAgent.match(/(iPhone|iPad|iPod)/i)) {
-                mapUrl = `http://maps.apple.com/?q=${encodedAddress}`; // iOS
-            } else {
-                mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`
-            }
-        } else {
-            mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
-        }
-
-        window.open(mapUrl, '_blank', 'noopener,noreferrer');
-    };
-
-    useEffect(() => {
-        // Add cursor pointer for better UX
-        const element = document.querySelector('.visit-button');
-        if (element) {
-            element.style.cursor = 'pointer';
-        }
-    }, []);
+    
     return (
         <>
             <div className='call-or-visit-container'>
@@ -386,6 +340,7 @@ export const ProductCallOrVisitButtons = (props) => {
              -moz-transition: all .2s ease-in;
             -o-transition: all .2s ease-in;
             -webkit-transition: all .2s ease-in;
+            cursor: pointer;
             
           }
           

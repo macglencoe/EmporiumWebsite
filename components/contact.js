@@ -2,8 +2,9 @@ import React, { Fragment } from 'react'
 import {useState, useEffect} from 'react'
 
 import PropTypes from 'prop-types'
-
-
+import { handleLocationClick } from '../utils/location'
+import { handlePhoneClick } from '../utils/phone'
+import { handleEmailClick } from '../utils/email'
 
 const Contact = (props) => {
 
@@ -38,74 +39,9 @@ const Contact = (props) => {
         return `${hours}:${minutes} ${ampm}`
     }
 
-    // Location
-
-    let address = "320 W King Street";
-    let city = "Martinsburg";
-    let state = "West Virginia";
-
-    const handleLocationClick = () => {
-        const encodedAddress = encodeURIComponent(`${address}, ${city}, ${state}`);
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-        let mapUrl;
-        if (isMobile) {
-            // Use platform-specific maps app links
-            if (navigator.userAgent.match(/Android/i)) {
-                mapUrl = `geo:0,0?q=${encodedAddress}`; // Android
-            } else if (navigator.userAgent.match(/(iPhone|iPad|iPod)/i)) {
-                mapUrl = `http://maps.apple.com/?q=${encodedAddress}`; // iOS
-            } else {
-                mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`
-            }
-        } else {
-            mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
-        }
-
-        window.open(mapUrl, '_blank', 'noopener,noreferrer');
-    };
-
-    useEffect(() => {
-        // Add cursor pointer for better UX
-        const element = document.querySelector('.location-container');
-        if (element) {
-            element.style.cursor = 'pointer';
-        }
-    }, []);
-
-    // Phone
-
-    let phoneNumber = "3042649130"
-
-    const handlePhoneClick = () => {
-        const telUrl = `tel:${phoneNumber.replace(/\D/g, '')}`; // Remove non-digits
-        window.location.href = telUrl; // Use window.location.href for direct call
-      };
     
-      useEffect(() => {
-        // Add cursor pointer for better UX
-        const element = document.querySelector('.phone-container');
-        if (element) {
-          element.style.cursor = 'pointer';
-        }
-      }, []);
 
-      // Email
-
-      let emailAddress = "kingstreetemporium@gmail.com"
-
-      const handleEmailClick = () => {
-        const mailtoUrl = `mailto:${emailAddress}`;
-        window.location.href = mailtoUrl;
-      };
-    
-      useEffect(() => {
-        // Add cursor pointer for better UX
-        const element = document.querySelector('.email-container');
-        if (element) {
-          element.style.cursor = 'pointer';
-        }
-      }, []);
+      
 
 
 
@@ -259,6 +195,7 @@ const Contact = (props) => {
     padding-right: var(--dl-space-space-halfunit);
     padding-bottom: var(--dl-space-space-halfunit);
     justify-content: flex-end;
+    cursor: pointer;
 }
 .catalog-text236 {
     fill: var(--dl-color-theme-primary2);
@@ -401,6 +338,7 @@ const Contact = (props) => {
     border-width: px;
     border-radius: var(--dl-radius-radius-radius8);
     background-color: var(--dl-color-theme-secondary1);
+    cursor: pointer;
 }
 .catalog-container91 {
     flex: 0 0 auto;
@@ -440,6 +378,7 @@ const Contact = (props) => {
     border-width: px;
     border-radius: var(--dl-radius-radius-radius8);
     background-color: var(--dl-color-theme-secondary1);
+    cursor: pointer;
 }
 .catalog-container93 {
     flex: 0 0 auto;
