@@ -25,14 +25,16 @@ const Ksman = () => {
         </div>
         <style jsx>{`
         .cigar-page-container13 {
-            flex: 0 0 auto;
-            width: 99%;
+            flex: 1 0 auto;
             display: flex;
             align-items: flex-start;
-            background-color: var(--dl-color-theme-secondary2);
+            background-color: var(--dl-color-theme-secondary1);
+            align-items: center;
         }
         .cigar-page-image1 {
-            width: 100%;
+            width: 90px;
+            padding: 0.5em;
+            aspect-ratio: 1;
             object-fit: cover;
           }
         `}</style>

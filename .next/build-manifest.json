@@ -30,15 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/tobacco": [
+    "/cigars": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/tobacco.js"
-    ],
-    "/tobacco/brands": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/tobacco/brands.js"
+      "static/chunks/pages/cigars.js"
     ]
   },
   "ampFirstPages": []

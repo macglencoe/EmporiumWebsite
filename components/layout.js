@@ -8,8 +8,13 @@ import Footer32 from '../components/footer32'
 import Contact from '../components/contact'
 import Directory from '../components/directory'
 import Ksman from '../components/ksman'
+import { Router, useRouter } from 'next/router'
 
 const Layout = (props) => {
+  const router = useRouter();
+
+  const isHome = router.pathname === "/";
+  
   const [isActive, setIsActive] = useState(true);
   const handleButtonClick = () => {
     setIsActive((prev) => !prev)
@@ -31,59 +36,60 @@ const Layout = (props) => {
       });
       console.log('Facebook SDK initialized');
     }; */
-    
+
   }, []);
 
   return (
     <>
-      <div className="catalog-container10">
-        <Head>
-          <title>King Street Emporium</title>
-          <meta property="og:title" content="King Street Emporium" />
-          <Script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></Script>
-          <Script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></Script>
-          <link rel="icon" href="/public/favicon.ico" sizes="any" />
-        </Head>
 
-        <div id="fb-root"></div>
-        <Script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></Script>
-        
+      <Head>
+        <title>King Street Emporium</title>
+        <meta property="og:title" content="King Street Emporium" />
+        <link rel="icon" href="/public/favicon.ico" sizes="any" />
+      </Head>
+      <div id="fb-root"></div>
+      <Script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></Script>
+
+      <div className="catalog-container10">
+        <header className='layout-header'>
+          <div className='header-title'>
+            <button
+              id="closer"
+              type="button"
+              className="catalog-button7 button"
+              onClick={handleButtonClick}
+            >
+              Button
+            </button>
+            <div className='ksman'><Ksman className="ksman"></Ksman></div>
+
+            <div className='layout-title-container'>
+              <Link href="/">
+                <a>
+                  <h1 className="catalog-text109">The King Street Emporium</h1>
+                </a>
+              </Link>
+            </div>
+          </div>
+
+          <Directory></Directory>
+        </header>
+
 
         <div className="catalog-container11 container">
           <div className={`catalog-container73 sidebar${isActive ? ' collapsed' : ''}`}>
 
-            <Ksman></Ksman>
+            <div className='contact-container'>
+              <Contact></Contact>
+            </div>
 
-            <Contact></Contact>
-
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FKing-Street-Coffee-Tobacco-Emporium-100063496593967%2F&tabs=timeline&width=300&height=1000&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="1000" style={{border:"none"}} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FKing-Street-Coffee-Tobacco-Emporium-100063496593967%2F&tabs=timeline&width=300&height=1000&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="1000" style={{ border: "none" }} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
           </div>
           <div className="catalog-content1">
-            <header className="catalog-title">
-              <Link href="/">
-                <a>
-                  <h1 className="catalog-text109">
-                    <span>The King Street Emporium</span>
-                    <br></br>
-                  </h1>
-                </a>
-              </Link>
-              <button
-                id="closer"
-                type="button"
-                className="catalog-button7 button"
-                onClick={handleButtonClick}
-              >
-                Button
-              </button>
-            </header>
-            <div className="catalog-container21">
-              <Directory></Directory>
-              <div className="catalog-container31">
-
-                {props.children}
-
-              </div>
+            
+            {props.children}
+              
+              
 
               <Footer32
                 link1={
@@ -131,29 +137,66 @@ const Layout = (props) => {
                 rootClassName="footer32root-class-name1"
               ></Footer32>
             </div>
-          </div>
+          
 
         </div>
       </div >
       <style jsx>
         {`
+
+        .layout-header {
+          position: sticky;
+          top: 0;
+          width: 100%;
+          z-index: 2;
+          border-bottom: 3px solid var(--dl-color-theme-secondary2);
+        }
+
+        .header-title {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          background-color: var(--dl-color-theme-secondary1);
+          height: 100%;
+          align-items: center;
+          padding-left: 1em;
+          gap: 1em;
+        }
+        
+        .layout-title-container {
+          display: flex;
+          flex-direction: row;
+          padding: 1em;
+          width: 100%;
+          background-color: var(--dl-color-theme-secondary1);
+          justify-content: space-between;
+          align-items: center;
+        }
+        
+        .layout-title-container h1 {
+          fill: var(--dl-color-theme-primary2);
+          color: var(--dl-color-theme-primary2);
+          align-self: center;
+          text-align: center;
+        }
+        
+        
   .sidebar {
         gap: 3px;
-        flex: 0 0 auto;
+        flex: 0 0 300px;
         width: 300px;
         border: 2px dashed rgba(120, 120, 120, 0.4);
-        height: 100%;
         display: flex;
-        align-items: flex-start;
         border-color: var(--dl-color-theme-secondary1);
         border-width: 0px;
         flex-direction: column;
-        background-color: var(--dl-color-theme-secondary1);
+        background-color: var(--dl-color-theme-secondary2);
         }
   .catalog-button7 {
       float: right;
-      min-width: 30px;
-      aspect-ratio: 1/1;
+      width: 30px;
+      height: 30px;
+      aspect-ratio: 1;
       display: block;
       padding: 0px;
       font-size: 1px;
@@ -162,6 +205,7 @@ const Layout = (props) => {
       border-width: 0px;
       border-radius: 50%;
       background-color: var(--dl-color-theme-primary2);
+      display: none;
     }
 
           
@@ -172,23 +216,19 @@ const Layout = (props) => {
     min-height: 100vh;
     align-items: center;
     flex-direction: column;
+    background-color: var(--dl-color-theme-primary1);
   }
   .catalog-container11 {
-    top: 0px;
-    flex: 1;
-    left: 0px;
-    height: 100%;
-    overflow: scroll;
-    position: absolute;
+    /* position: absolute; */
     background-color: var(--dl-color-theme-primary1);
   }
      
   .catalog-content1 {
-    flex: 1;
-    height: 100%;
+    flex: 2;
     width: 100%;
     position: relative;
     align-self: flex-start;
+  
   }
   .catalog-title {
     flex: 0 0 auto;
@@ -201,12 +241,7 @@ const Layout = (props) => {
     background-color: var(--dl-color-theme-secondary1);
     gap: 10px
   }
-  .catalog-text109 {
-    fill: var(--dl-color-theme-primary2);
-    color: var(--dl-color-theme-primary2);
-    align-self: center;
-    text-align: center;
-  }
+  
   .catalog-container21 {
     flex: 0 0 auto;
     width: 100%;
@@ -253,7 +288,7 @@ const Layout = (props) => {
     display: inline-block;
   }
   .catalog-container73 {
-    height: 1500px;
+    flex: 0 0 auto;
   }
        
   @media (max-width: 1200px) {
@@ -281,15 +316,36 @@ const Layout = (props) => {
         transition: margin-left .5s;
         
     }
+        .layout-title-container {
+          white-space: normal;
+        }
+        
+        
     .sidebar, collapsed {
-        position: fixed;
+        position: absolute;
         z-index: 1;
         transition: transform .5s;
+    }
+    
+    .contact-container {
+        display: none;
     }
     
     .collapsed {
         transform: translateX(-300px);
     }
+    
+    .catalog-button7 {
+          display: block;
+    }
+    
+    .header-title .ksman {
+          display: none;
+    }
+    
+    .layout-title-container h1 {
+    
+          font-size: 1.5em;}
             
 
           }
