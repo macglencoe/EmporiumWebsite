@@ -539,7 +539,6 @@
   display: flex;
   max-width: 400px;
   min-width: 300px;
-  align-items: flex-start;
   padding-top: var(--dl-space-space-halfunit);
   flex-direction: column;
   padding-bottom: var(--dl-space-space-unit);
