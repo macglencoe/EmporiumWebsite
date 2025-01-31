@@ -228,6 +228,11 @@ const Layout = (props) => {
     width: 100%;
     position: relative;
     align-self: flex-start;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    padding-top: 5px;
   
   }
   .catalog-title {

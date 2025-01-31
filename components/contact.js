@@ -312,6 +312,7 @@ const Contact = (props) => {
     rgba(232, 168, 21, 0) 0%,
     rgb(232, 168, 21) 98%
     );
+    padding: 5px;
 }
 .catalog-text253 {
     color: var(--dl-color-theme-primary2);

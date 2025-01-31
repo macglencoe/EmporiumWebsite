@@ -288,7 +288,7 @@ const Catalog = (props) => {
         .welcome-container-b {
           display: flex;
           flex-direction: row;
-          align-items: start;
+          align-items: stretch;
         }
           
         #kschairs-container {
@@ -299,9 +299,8 @@ const Catalog = (props) => {
           border: 3px solid var(--dl-color-theme-secondary2);
           border-right: 5px solid var(--dl-color-theme-secondary2);
           border-top-right-radius: 10px;
-          height: 100%; 
           min-width: 300px;
-          max-width: 400px
+          max-width: 400px;
         }
          
 
