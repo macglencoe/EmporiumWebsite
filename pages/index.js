@@ -154,7 +154,7 @@ const Catalog = (props) => {
             <Link href="/cigars?Cigar+Brand=J.C.+Newman"><a><img alt="J.C. Newman" src='/jcn-logo.png' /></a></Link>
             <Link href="/pipes?Pipe+Brand=Savinelli"><a><img alt="Savinelli" src='/savinelli-logo.webp' /></a></Link>
             <Link href="/pipes?Pipe+Brand=Peterson"><a><img alt="Peterson" src='/peterson-logo.png' /></a></Link>
-            <Link href="/tobacco?Brand=Cornell%26Diehl"><a><img alt="Cornell & Diehl" src='/cd-logo.jpg' /></a></Link>
+            <Link href="/tobacco?Tobacco+Brand=Cornell+%26+Diehl"><a><img alt="Cornell & Diehl" src='/cd-logo.jpg' /></a></Link>
           </div>
         </div>
 

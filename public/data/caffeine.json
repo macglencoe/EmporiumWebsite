@@ -1,0 +1,149 @@
+[
+    {
+        "Product Name": "Italian Espresso Roast",
+        "Roast": "Dark",
+        "Origin": "Honduras",
+        "slug": "italian-espresso-roast",
+        "Description": "These high-grown Central American beans (and some robusta) provide a rich, hearty flavor, analogous to a good burgundy. Pungent acidity and a robust, full body.",
+        "Type": "Coffee"
+    },
+    {
+        "Product Name": "Sumatra Mandheling",
+        "Roast": "Medium",
+        "Origin": "Indonesia",
+        "slug": "sumatra-mandheling",
+        "Type": "Coffee"
+    },
+    {
+        "Product Name": "Blue Ridge Blend",
+        "slug": "blue-ridge-blend",
+        "Type": "Tea"
+    },
+    {
+        "Product Name": "Copper Canyon Blend",
+        "Roast": "Extra-Dark",
+        "Origin": "Mexico",
+        "slug": "copper-canyon-blend",
+        "Description": "Deep, dark and dramatically bold as vast as Mexico's Copper Canyon. An intense journey for the adventurous palate.",
+        "Type": "Coffee"
+    },
+    {
+        "Product Name": "Kona Blend",
+        "Roast": "Medium",
+        "Origin": "Hawaii",
+        "slug": "kona-blend",
+        "Description": "A blend of Kona Prime and fine South American beans -- rich tasting and smooth, medium-bodied with well-balanced flavor and acidity.",
+        "Type": "Coffee"
+    },
+    {
+        "Product Name": "Ethiopian Harrar",
+        "Roast": "Light",
+        "Origin": "Ethiopia",
+        "slug": "ethiopian-harrar",
+        "Type": "Coffee"
+    },
+    {
+        "Product Name": "Columbian Supremo",
+        "Roast": "Light",
+        "Origin": "Colombia",
+        "slug": "columbian-supremo",
+        "Description": "A rich cup that displays a medium to full body, mid-range acidity, an intense flavor with citrus nuances and a clean, lingering finish.",
+        "Type": "Coffee"
+    },
+    {
+        "Product Name": "Noveau French Roast",
+        "Roast": "Dark",
+        "Origin": "France",
+        "slug": "noveau-french-roast",
+        "Description": "A darker French roast, bold with a medium to full body. Slow roasted and smooth with lingering smoky notes",
+        "Type": "Coffee"
+    },
+    {
+        "Product Name": "Espresso Roast",
+        "Roast": "Extra-Dark",
+        "slug": "espresso-roast",
+        "Type": "Coffee"
+    },
+    {
+        "Product Name": "Tanzania Kilimanjaro",
+        "Roast": "Light",
+        "Origin": "Tanzania",
+        "slug": "tanzania-kilimanjaro",
+        "Type": "Coffee"
+    },
+    {
+        "Product Name": "Kenya AA",
+        "Roast": "Light",
+        "Origin": "Kenya",
+        "slug": "kenya-aa",
+        "Description": "The highest grade of coffee grown in Kenya . . . displays a soft aroma, earthy and floral or fruity notes, medium body, a wine-like acidity and a bittersweet finish.",
+        "Type": "Coffee"
+    },
+    {
+        "Product Name": "Hazelnut",
+        "slug": "hazelnut",
+        "Type": "Tea"
+    },
+    {
+        "Product Name": "SW. Decaf Creme de Noisette",
+        "slug": "sw-decaf-creme-de-noisette",
+        "Type": "Tea"
+    },
+    {
+        "Product Name": "Assam",
+        "Origin": "India",
+        "slug": "assam",
+        "Type": "Tea"
+    },
+    {
+        "Product Name": "Chinese Restaurant",
+        "Origin": "China",
+        "slug": "chinese-restaurant",
+        "Type": "Tea"
+    },
+    {
+        "Product Name": "Lapsang Souchong",
+        "Origin": "China",
+        "slug": "lapsang-souchong",
+        "Type": "Tea"
+    },
+    {
+        "Product Name": "English Breakfast",
+        "Origin": "India",
+        "slug": "english-breakfast",
+        "Type": "Tea"
+    },
+    {
+        "Product Name": "Earl Grey",
+        "Origin": "China",
+        "slug": "earl-grey",
+        "Type": "Tea"
+    },
+    {
+        "Product Name": "Gun Powder",
+        "Origin": "China",
+        "slug": "gun-powder",
+        "Type": "Tea"
+    },
+    {
+        "Product Name": "Earl Grey Decaf",
+        "Origin": "China",
+        "slug": "earl-grey-decaf",
+        "Type": "Tea"
+    },
+    {
+        "Product Name": "Apricot",
+        "slug": "apricot",
+        "Type": "Tea"
+    },
+    {
+        "Product Name": "Black Currant",
+        "slug": "black-currant",
+        "Type": "Tea"
+    },
+    {
+        "Product Name": "Orange Spice",
+        "slug": "orange-spice",
+        "Type": "Tea"
+    }
+]

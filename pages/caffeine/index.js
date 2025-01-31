@@ -2,7 +2,7 @@ import Layout from '../../components/layout';
 import Catalog from '../../components/catalog';
 
 export const getStaticProps = async () => {
-    const data = await import('../../public/data/caffeine-example.json');
+    const data = await import('../../public/data/caffeine.json');
     return {
         props: {
             data: data.default
@@ -13,13 +13,17 @@ export const getStaticProps = async () => {
 const CaffeineCatalog = (props) => {
 
     
-    const uniqueRoasts = [...new Set(props.data.map(
-        item => item['Roast'] && item['Roast'].trim()
-    ))];
+    const uniqueRoasts = [...new Set(props.data
+        .map(item => item['Roast'])
+        .filter(roast => roast != null)
+        .map(roast => roast.trim())
+    )];
 
-    const uniqueOrigins = [...new Set(props.data.map(
-        item => item['Origin'] && item['Origin'].trim()
-    ))];
+    const uniqueOrigins = [...new Set(props.data
+        .map(item => item['Origin'])
+        .filter(origin => origin != null)
+        .map(origin => origin.trim())
+    )];
 
     return (
         <>
@@ -53,7 +57,9 @@ const CaffeineCatalog = (props) => {
 
                     data: (item) => {
                         return (
-                            [item['Roast'] && ['Roast', item['Roast']],
+                            [
+                            item['Type'] && ['Type', item['Type']],
+                            item['Roast'] && ['Roast', item['Roast']],
                             item['Origin'] && ['Origin', item['Origin']]]
                         )
                     },

@@ -2,7 +2,7 @@ import Layout from '../../components/layout';
 import Catalog from '../../components/catalog';
 
 export const getStaticProps = async () => {
-    const data = await import('../../public/data/tobacco-example.json');
+    const data = await import('../../public/data/tobacco.json');
     return {
         props: {
             data: data.default
@@ -39,7 +39,8 @@ const TobaccoCatalog = (props) => {
                     },
                     data: (item) => {
                         return (
-                            [item['Flavor Profile'] && ['Flavor', item['Flavor Profile']],
+                            [item['Family'] && ['Family', item['Family']],
+                            item['Cut'] && ['Cut', item['Cut']],
                             item['Tobacco Brand'] && ['Brand', item['Tobacco Brand']]]
                         )
                     },
