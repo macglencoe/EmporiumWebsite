@@ -69,6 +69,9 @@ const Layout = (props) => {
                   <h1 className="catalog-text109">The King Street Emporium</h1>
                 </a>
               </Link>
+              <Fragment>
+                {props.headerChildren}
+              </Fragment>
             </div>
           </div>
 
@@ -78,6 +81,10 @@ const Layout = (props) => {
 
         <div className="catalog-container11 container">
           <div className={`catalog-container73 sidebar${isActive ? ' collapsed' : ''}`}>
+
+            <Fragment>
+              {props.sidebarChildren}
+            </Fragment>
 
             <div className='contact-container'>
               <Contact></Contact>
@@ -171,6 +178,7 @@ const Layout = (props) => {
           background-color: var(--dl-color-theme-secondary1);
           justify-content: space-between;
           align-items: center;
+          flex-wrap: wrap;
         }
         
         .layout-title-container h1 {

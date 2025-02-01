@@ -38,8 +38,7 @@ const CatalogContent = (props) => {
                 )
                 )}
             </div>
-            <h3>Results per page: {pageSize}</h3>
-            <h3>Total results: {props.data.length}</h3>
+            
             <div className="catalog-container40">
                 {
                     currentPageData.map((item) => (
@@ -79,6 +78,7 @@ const CatalogContent = (props) => {
             
             <style jsx>
                 {`
+        
         .pagination {
             display: flex;
             justify-content: center;

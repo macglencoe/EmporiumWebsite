@@ -27,7 +27,6 @@ const CaffeineCatalog = (props) => {
 
     return (
         <>
-        <Layout>
             <Catalog
                 data={props.data}
 
@@ -71,7 +70,6 @@ const CaffeineCatalog = (props) => {
                 }}
             
             />
-        </Layout>
         </>
     )
 }

@@ -20,7 +20,6 @@ const PipeCatalog = (props) => {
 
     return (
         <>
-        <Layout>
             <Catalog
                 data={props.data}
 
@@ -69,7 +68,6 @@ const PipeCatalog = (props) => {
                 
             
             />
-        </Layout>
         </>
     )
 }

@@ -16,7 +16,6 @@ const TobaccoCatalog = (props) => {
 
     return (
         <>
-        <Layout>
             <Catalog
                 data={props.data}
 
@@ -54,7 +53,6 @@ const TobaccoCatalog = (props) => {
                 
             
             />
-        </Layout>
         </>
     )
 }
