@@ -1,5 +1,6 @@
 import Layout from '../../components/layout';
 import Catalog from '../../components/catalog';
+import Notice from '../../components/notice';
 
 export const getStaticProps = async () => {
     const data = await import('../../public/data/pipes.json');
@@ -35,6 +36,12 @@ const PipeCatalog = (props) => {
         <>
             <Catalog
                 data={props.data}
+
+                notices={
+                    <Notice>
+                        This catalog is not up-to-date. We will update it as soon as possible.
+                    </Notice>
+                }
 
                 filters={[
                     {

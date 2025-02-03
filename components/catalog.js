@@ -201,6 +201,7 @@ const Catalog = (props) => {
                 }
             >
                 <PageTitle1>Cigar Catalog</PageTitle1>
+                {props.notices}
                 <div className="catalog-container31">
                     <div data-thq="accordion" className="catalog-accordion1">
                         <details
