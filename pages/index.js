@@ -138,6 +138,15 @@ const Catalog = (props) => {
           ]}
         />
 
+        <ShopSuggestions
+          title="Pipe Tobacco"
+          items={[
+            {href: "/tobacco/brands", label: "Brand"},
+            {href: "/tobacco/cuts", label: "Cut"},
+            {href: "/tobacco/families", label: "Family"},
+          ]}
+          />
+
         
 
         <div className='divider'></div>

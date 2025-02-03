@@ -12,7 +12,23 @@ export const getStaticProps = async () => {
 
 const TobaccoCatalog = (props) => {
 
-    const uniqueBrands = [...new Set(props.data.map(item => item['Tobacco Brand'].trim()))];
+    const uniqueBrands = [...new Set(props.data
+        .map(item => item['Tobacco Brand'])
+        .filter(origin => origin != null)
+        .map(origin => origin.trim())
+    )];
+
+    const uniqueCuts = [...new Set(props.data
+        .map(item => item['Cut'])
+        .filter(origin => origin != null)
+        .map(origin => origin.trim())
+    )];
+
+    const uniqueFamilies = [...new Set(props.data
+        .map(item => item['Family'])
+        .filter(origin => origin != null)
+        .map(origin => origin.trim())
+    )];
 
     return (
         <>
@@ -25,6 +41,18 @@ const TobaccoCatalog = (props) => {
                         label: "Brand",
                         values: uniqueBrands,
                         defaultValue: "All Brands"
+                    },
+                    {
+                        name: "Cut",
+                        label: "Cut",
+                        values: uniqueCuts,
+                        defaultValue: "All Cuts"
+                    },
+                    {
+                        name: "Family",
+                        label: "Family",
+                        values: uniqueFamilies,
+                        defaultValue: "All Families"
                     }
                 ]}
                 sortOptions={[

@@ -2,7 +2,7 @@ import React, { Fragment, use, useState, useEffect } from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 import Link from 'next/link'
-import Data from "../../public/data/tobacco-example.json"
+import Data from "../../public/data/tobacco.json"
 
 import Footer32 from '../../components/footer32'
 import Contact from '../../components/contact'
