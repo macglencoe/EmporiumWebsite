@@ -2,7 +2,7 @@ import Layout from '../../components/layout';
 import Catalog from '../../components/catalog';
 
 export const getStaticProps = async () => {
-    const data = await import('../../public/data/pipe-example.json');
+    const data = await import('../../public/data/pipes.json');
     return {
         props: {
             data: data.default
@@ -12,11 +12,24 @@ export const getStaticProps = async () => {
 
 const PipeCatalog = (props) => {
 
-    const uniqueBrands = [...new Set(props.data.map(item => item['Pipe Brand'].trim()))];
+    
+    const uniqueBrands = [...new Set(props.data
+        .map(item => item['Pipe Brand'])
+        .filter(origin => origin != null)
+        .map(origin => origin.trim())
+    )];
 
-    const uniqueMaterials = [...new Set(props.data.map(item => item['Material'].trim()))];
+    const uniqueMaterials = [...new Set(props.data
+        .map(item => item['Material'])
+        .filter(origin => origin != null)
+        .map(origin => origin.trim())
+    )];
 
-    const uniqueTypes = [...new Set(props.data.map(item => item['type'].trim()))];
+    const uniqueTypes = [...new Set(props.data
+        .map(item => item['Type'])
+        .filter(origin => origin != null)
+        .map(origin => origin.trim())
+    )];
 
     return (
         <>
@@ -50,12 +63,15 @@ const PipeCatalog = (props) => {
 
                 cardSettings={{
                     title: (item) => {
-                        return (item['Pipe Brand']+' '+item['Pipe Name'])
+                        return (item['Pipe Name'])
+                    },
+                    secondaryTitle: (item) => {
+                        return(item['Pipe Brand'])
                     },
                     data: (item) => {
                         return (
                             [item['Material'] && ['Material', item['Material']],
-                            item['type'] && ['Type', item['type']]]
+                            item['Type'] && ['Type', item['Type']]]
                         )
                     },
                     href: (item) => {
