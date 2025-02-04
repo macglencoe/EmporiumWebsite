@@ -35,6 +35,8 @@ const TobaccoCatalog = (props) => {
             <Catalog
                 data={props.data}
 
+                title="Tobacco"
+
                 filters={[
                     {
                         name:"Tobacco Brand",

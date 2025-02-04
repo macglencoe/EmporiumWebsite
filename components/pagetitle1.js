@@ -3,20 +3,31 @@
 const PageTitle1 = (props) => {
     return (
         <>
-            <div className="cigar-page-container31">
-                <span className="cigar-page-text116">{props.children}</span>
-                <div className="cigar-page-container32"></div>
+            <div className="page-title-container">
+              <div className="cigar-page-container31">
+                  <span className="cigar-page-text116">{props.children}</span>
+                  <div className="cigar-page-container32"></div>
+              </div>
+              {props.subtitle && <span>{props.subtitle}</span>}
             </div>
             <style jsx>
             {`
+        .page-title-container {
+          background-color: var(--dl-color-theme-secondary2);
+          padding: var(--dl-space-space-unit);
+          display: flex;
+          flex-direction: column;
+          gap: 0.7em;
+        }
+        .page-title-container > span {
+          color: var(--dl-color-theme-primary1);
+          font-weight: 600;
+        }
         .cigar-page-container31 {
             gap: var(--dl-space-space-unit);
             width: 100%;
-            height: 64px;
             display: flex;
-            padding: var(--dl-space-space-unit);
             align-items: center;
-            background-color: var(--dl-color-theme-secondary2);
           }
         .cigar-page-text116 {
             fill: var(--dl-color-theme-primary1);

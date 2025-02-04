@@ -30,6 +30,9 @@ const CaffeineCatalog = (props) => {
             <Catalog
                 data={props.data}
 
+                title="Coffee & Tea"
+                subtitle="We have a wide selection of coffee and loose-leaf tea, available for purchase in-store"
+
                 filters={[
                     {
                         name:"Roast",

@@ -18,6 +18,7 @@ const Layout = (props) => {
   const [isActive, setIsActive] = useState(true);
   const handleButtonClick = () => {
     setIsActive((prev) => !prev)
+    window.scrollTo(0, 0);
   }
 
   useEffect(() => {

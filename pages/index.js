@@ -49,8 +49,8 @@ const Catalog = (props) => {
                 and the perfect third space! For over 30 years, we've been serving
                 Martinsburg, WV, with a friendly, laid-back spot to relax, chat, 
                 and unwind. Whether you're into fine cigars or premium briar pipes, 
-                we’re here to share our expertise and help you find your perfect match. 
-                Come see why we’re a favorite for pipe and cigar enthusiasts alike!
+                we're here to share our expertise and help you find your perfect match. 
+                Come see why we're a favorite for pipe and cigar enthusiasts alike!
               </p>
             </div>
             <div className="divider"></div>
@@ -127,6 +127,14 @@ const Catalog = (props) => {
           {href: "/pipes/materials", label: "Material"},
         ]}
         />
+        <ShopSuggestions
+          title="Pipe Tobacco"
+          items={[
+            {href: "/tobacco/brands", label: "Brand"},
+            {href: "/tobacco/cuts", label: "Cut"},
+            {href: "/tobacco/families", label: "Family"},
+          ]}
+          />
 
         <div className='divider'></div>
 
@@ -138,14 +146,6 @@ const Catalog = (props) => {
           ]}
         />
 
-        <ShopSuggestions
-          title="Pipe Tobacco"
-          items={[
-            {href: "/tobacco/brands", label: "Brand"},
-            {href: "/tobacco/cuts", label: "Cut"},
-            {href: "/tobacco/families", label: "Family"},
-          ]}
-          />
 
         
 

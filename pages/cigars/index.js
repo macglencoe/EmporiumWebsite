@@ -61,6 +61,10 @@ const CigarCatalog = (props) => {
 
       <Catalog
         data={props.data}
+
+        title="Cigar Catalog"
+        subtitle="Our selection of cigars from a wide array of premium brands, available for purchase in-store."
+
         filters={[
           {
             name: "Cigar Brand",

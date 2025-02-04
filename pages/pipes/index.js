@@ -37,6 +37,8 @@ const PipeCatalog = (props) => {
             <Catalog
                 data={props.data}
 
+                title="Tobacco Pipes"
+
                 notices={
                     <Notice>
                         This catalog is not up-to-date. We will update it as soon as possible.
