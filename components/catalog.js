@@ -151,8 +151,17 @@ const Catalog = (props) => {
                 sidebarChildren={
 
                     <>
+                        <div className="catalog-container39">
+                            <span className="catalog-sorty-by">Sort By:</span>
+                            <select id="sort" value={sortOption} onChange={handleSortChange} className="catalog-select">
 
-
+                                {
+                                    props.sortOptions.map((option) => (
+                                        <option key={option.value} value={option.value}>{option.label}</option>
+                                    ))
+                                }
+                            </select>
+                        </div>
                         {
                             props.auxiliarySearchBars && props.auxiliarySearchBars.length > 0 && props.auxiliarySearchBars[0] !== false &&
                             props.auxiliarySearchBars.map((auxSearch) => (
@@ -200,7 +209,9 @@ const Catalog = (props) => {
                     </>
                 }
             >
-                <PageTitle1>Cigar Catalog</PageTitle1>
+                <PageTitle1 subtitle={props.subtitle}>
+                    {props.title ?? "Catalog"}
+                </PageTitle1>
                 {props.notices}
                 <div className="catalog-container31">
                     <div data-thq="accordion" className="catalog-accordion1">
@@ -228,58 +239,22 @@ const Catalog = (props) => {
                     </div>
                     <div className="catalog-container38">
 
-                        <div className="catalog-container39">
-                            <span className="catalog-sorty-by">Sort By:</span>
-                            <select id="sort" value={sortOption} onChange={handleSortChange} className="catalog-select">
-
-                                {
-                                    props.sortOptions.map((option) => (
-                                        <option key={option.value} value={option.value}>{option.label}</option>
-                                    ))
-                                }
-                            </select>
-
-
-
-
-                        </div>
-                        <div className="filter-bubble-container">
-                            {Object.entries(router.query).map(([filterKey, filterValue]) => (
-                                filterValue !== '' && filterKey !== 'page' && (
-                                    <div className="filter-bubble" key={filterKey}>
-                                        <span className="filter-bubble-name">{filterKey}: {filterValue}</span>
-                                        <button onClick={() => handleFilterChange({ target: { name: filterKey, value: '' } })} className='filter-bubble-button'>
-                                            <span className="filter-bubble-x">x</span>
-                                        </button>
-                                    </div>
-                                )
-                            ))}
-                        </div>
-                        {console.log(router.query)}
-                        {console.log((router.query.search != '' ||
-                            Object.keys(router.query).some(key => key !== 'page' && key !== 'search' && router.query[key] !== '')
-                        )
-                        )}
-                        {(
-                            Object.keys(router.query).some(key => key !== 'page' && router.query[key] !== '')
-                        ) &&
-                            <div className="result-info-container">
-
-                                <span>
-                                    <span>Your search for </span>
-                                    <span>
-                                        "{
-                                            Object.keys(router.query)
-                                                .filter(key => key !== 'page' && router.query[key] !== '')
-                                                .map(key => router.query[key])
-                                                .join(' ')
-                                        }"
-                                    </span>
-                                    <span> returned <b>{sortedItems.length}</b> results</span>
-                                </span>
-
+                        { Object.keys(router.query).some(key=> key !== 'page' && router.query[key] !== '') &&
+                            <div className="filter-bubble-container">
+                                {Object.entries(router.query).map(([filterKey, filterValue]) => (
+                                    filterValue !== '' && filterKey !== 'page' && (
+                                        <div className="filter-bubble" key={filterKey}>
+                                            <span className="filter-bubble-name">{filterKey}: {filterValue}</span>
+                                            <button onClick={() => handleFilterChange({ target: { name: filterKey, value: '' } })} className='filter-bubble-button'>
+                                                <span className="filter-bubble-x">x</span>
+                                            </button>
+                                        </div>
+                                    )
+                                ))}
+                                <span>Returned <b style={{ color: 'var(--dl-color-theme-primary1)' }}>{sortedItems.length}</b> results</span>
                             </div>
                         }
+                        
 
                         <CatalogContent
                             data={sortedItems}
@@ -380,9 +355,7 @@ const Catalog = (props) => {
             flex-direction: column;
           }
         .catalog-container39 {
-            flex: 1;
             width: 100%;
-            height: 100px;
             display: flex;
             align-items: center;
             background-color: var(--dl-color-theme-secondary2);
@@ -396,9 +369,7 @@ const Catalog = (props) => {
             background-color: var(--dl-color-theme-primary2);
 
         }
-        .catalog-container39 select {
-            background-color: var(--dl-color-theme-primary2);
-        }
+        
         .catalog-container39 span {
             color: var(--dl-color-theme-primary2);
         }
@@ -406,16 +377,17 @@ const Catalog = (props) => {
         .catalog-sorty-by {
             fill: var(--dl-color-theme-neutral-light);
             color: var(--dl-color-theme-neutral-light);
-            font-size: 25px;
+            font-size: 1em;
             font-style: normal;
             font-weight: 600;
             text-transform: uppercase;
           }
         .catalog-select {
-            font-size: 25px;
+            font-size: 1em;
             align-self: center;
             padding-left: var(--dl-space-space-halfunit);
             padding-right: var(--dl-space-space-halfunit);
+            background-color: var(--dl-color-theme-primary1);
           }
         .catalog-container40 {
             gap: var(--dl-space-space-unit);
@@ -435,6 +407,11 @@ const Catalog = (props) => {
             gap: 5px;
             flex-wrap: wrap;
           }
+        .filter-bubble-container > span {
+            color: var(--dl-color-theme-primary2);
+            padding: 10px;
+            font-weight: 700;
+        }
         .filter-bubble {
             border-radius: 8px;
             padding: 5px;
@@ -449,6 +426,7 @@ const Catalog = (props) => {
           }
           .filter-bubble-button {
             background-color: var(--dl-color-theme-secondary2);
+            cursor: pointer;
           }
           .filter-bubble-x {
             font-size: 20px;
