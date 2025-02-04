@@ -1,12 +1,22 @@
-
+import { useState } from "react";
 
 const Notice = (props) => {
+
+    const [isOpen, setIsOpen] = useState(true);
+
+    if (!isOpen) {
+        return null;
+    }
 
     return (
         <>
             <div className="notice">
                 <div className="ex-container"><h1>!</h1></div>
                 <div className="text-container">
+                    <div>
+                        <h2>{props.header ?? "Notice"}</h2>
+                        <button onClick={() => setIsOpen(false)}>X</button>
+                    </div>
                     <p>{props.children}</p>
                 </div>
             </div>
@@ -14,44 +24,63 @@ const Notice = (props) => {
                 {`
                 .notice {
                     display: flex;
-                    align-items: center;
                     height: auto;
-                    gap: 20px;
+                    padding-right: 1vmin;
                     text-align: center;
                     background-image: var(--notice-gradient);
-                    align-items: stretch;
-                    border-radius: 20px 10px 10px 20px;
-                    filter: drop-shadow(30px 0px 5px rgba(0, 0, 0, 0.25));
+                    border-radius: 10px;
+                    filter: drop-shadow(5px 0px 10px rgba(0, 0, 0, 0.25));
                     margin: 5px;
+                    align-content: stretch;
+                    width: fit-content;
                 }
                 .notice p {
-                    font-size: 1.3em;
+                    font-size: 1.2rem;
+                    padding-right: 1vmin;
+                }
+                .notice h2 {
+                    font-size: 1.3rem;
+                }
+                .notice button {
+                    color: var(--dl-color-theme-secondary2);
                     font-weight: bold;
+                    cursor: pointer;
+                    font-size: 1.2rem;
                 }
+                .notice button:hover {
+                    color: var(--dl-color-theme-primary2);
+                }
+                
                 .text-container {
-                    margin: 20px 0;
-                    width: 100%;
+                    margin: 10px 0;
                     display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    text-align: left;
+                    gap: 0.5vmin;
                 }
+                .text-container div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
                 
                 
-                .text-container p {
-                    z-index: 1;
-                }
+                
+                
+                
                 
                 .ex-container {
                     padding: 5px;
-                    border-radius: 10px 50% 50% 10px;
-                    background-color: var(--dl-color-theme-primary2);
                     display: flex;
-                    height: auto;
                     align-items: center;
                     justify-content: center;
-                    width: 3rem;
+                    min-width: 50px;
 
                 }
                 .ex-container * {
-                    color: var(--dl-color-theme-secondary2);
+                    color: var(--dl-color-theme-primary1);
                 }
                 `}
             </style>
