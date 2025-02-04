@@ -473,6 +473,9 @@ const Catalog = (props) => {
             .catalog-container40 {
                 grid-template-columns: 1;
             }
+            #header-search input {
+                width: 100%;
+            }
         }
                 `
                 }

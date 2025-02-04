@@ -21,7 +21,9 @@ const About = (props) => {
                 <div className='content-container'>
                     <h2>This website is a work in progress</h2>
                     <p>It may be prone to errors, as any brand new website is.</p>
-                    <h4>Report an issue</h4>
+                    <h4>Submit an issue on Github:</h4>
+                    <a href="https://github.com/macglencoe/EmporiumWebsite/issues/new">GitHub</a>
+                    <h4>Report an issue via email:</h4>
                     <p>Developer: <a href="mailto:mcpaul1694@gmail.com">mcpaul1694@gmail.com</a></p>
                     <p style={{paddingLeft: "10px"}}>If you find an issue, please send me an email ^ and tell me what went wrong. I'd be happy to fix it.</p>
                     

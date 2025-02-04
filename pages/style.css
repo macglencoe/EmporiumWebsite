@@ -10,7 +10,7 @@
   --dl-color-theme-accent1: #FFFFFF;
   --dl-color-theme-accent2: #F5D1B0;
   --dl-radius-radius-round: 50%;
-  --dl-color-theme-primary1: #e8a815ff;
+  --dl-color-theme-primary1: #e8a915;
   --dl-color-theme-primary2: #fffedaff;
   --dl-space-space-halfunit: 8px;
   --dl-space-space-sixunits: 96px;
@@ -564,16 +564,7 @@
   justify-content: center;
 }
 
-.CatalogCardField {
-  flex: 0 0 auto;
-  width: 100%;
-  height: auto;
-  display: flex;
-  padding: var(--dl-space-space-unit);
-  align-self: center;
-  align-items: flex-start;
-  justify-content: space-between;
-}
+
 .Content {
   font-size: 16px;
   font-family: Inter;

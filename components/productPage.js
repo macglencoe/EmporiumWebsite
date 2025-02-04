@@ -200,6 +200,11 @@ export const ProductSizeChart = (props) => {
             border-bottom-right-radius: 50%;
             border-top-right-radius: 50%;
           }
+        @media (max-width: 680px) {
+            .cigar-page-size {
+              font-size: 13px;
+            }
+        }
                 `}
             </style>
         </>
@@ -250,7 +255,7 @@ export const ProductTitle = (props) => {
           }
         @media (max-width: 680px) {
             span {
-                font-size: 30px;
+                font-size: 20px;
             }
         }
             `}
@@ -304,6 +309,17 @@ export const ProductInfoFields = (props) => {
           .field-value {
             font-size: 25px;
             text-transform: uppercase;
+          }
+          @media (max-width: 680px) {
+              .field-name {
+                  font-size: 20px;
+              }
+              .field-value {
+                  font-size: 15px;
+              }
+              .cigar-info-container {
+                  grid-template-columns: auto;
+              }
           }
             `}
             </style>

@@ -17,6 +17,16 @@ const CatalogCardField = (props) => {
             <style jsx>
                 {
                     `
+                    .CatalogCardField {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: var(--dl-space-space-unit);
+  align-self: center;
+  align-items: flex-start;
+  justify-content: space-between;
+}
         .catalog-text174 {
             font-size: 20px;
             font-style: normal;
@@ -36,6 +46,10 @@ const CatalogCardField = (props) => {
             }
             .catalog-text177 {
                 font-size: 18px;
+            }
+            .CatalogCardField {
+                padding-left: 0px;
+                padding-right: 0px;
             }
         }
         
@@ -63,16 +77,16 @@ const CatalogCard = (props) => {
                         </div>
 
                         <div className="catalog-container47 CatalogCardName">
-                            
+
                             <span className="card-name-text"><i>{props.secondaryTitle}</i> <b>{props.name} {props.title}</b></span>
 
                         </div>
                     </div>
                     <div className="card-content">
-                        
+
                         {props.data &&
                             props.data.map((field) => {
-                                
+
                                 if (field == null || field[1] == null) {
                                     return null
                                 }
@@ -84,17 +98,17 @@ const CatalogCard = (props) => {
                             })}
 
                         {props.barcode && (
-                            <div style={{display: "flex", justifyContent: "center"}}>
-                            <canvas ref={(canvas) => {
-                                if (canvas) {
-                                    JsBarcode(canvas, props.barcode, {
-                                        format: "CODE128",
-                                        width: 2,
-                                        height: 30,
-                                        fontSize: 18,
-                                    });
-                                }
-                            }}/>
+                            <div style={{ display: "flex", justifyContent: "center" }}>
+                                <canvas ref={(canvas) => {
+                                    if (canvas) {
+                                        JsBarcode(canvas, props.barcode, {
+                                            format: "CODE128",
+                                            width: 2,
+                                            height: 30,
+                                            fontSize: 18,
+                                        });
+                                    }
+                                }} />
                             </div>
                         )}
 
