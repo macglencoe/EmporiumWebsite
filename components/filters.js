@@ -60,7 +60,7 @@ const CatalogFilter = (props) => {
   width:100%;
 }
         .catalog-accordion2 {
-            width: 170px;
+            width: 100%;
             display: flex;
             max-height: 230px;
             flex-direction: column;
@@ -109,7 +109,7 @@ const Filters = (props) => {
 
     return (
         <>
-            <div data-thq="accordion-content">
+            <div data-thq="accordion-content" className="filters-containers">
                 <div className="catalog-container32">
 
                     {props.filters &&
@@ -128,9 +128,13 @@ const Filters = (props) => {
             </div>
             <style jsx>
                 {`
+.filters-containers {
+    width: 100%;
+    display: flex;
+}
 .catalog-container32 {
             gap: 8px;
-            width: auto;
+            width: 100%;
             height: auto;
             display: flex;
             padding: var(--dl-space-space-halfunit);

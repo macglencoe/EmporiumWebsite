@@ -26,10 +26,15 @@ export const getStaticProps = async () => {
 const Catalog = (props) => {
 
     const [sortOption, setSortOption] = useState(props.defaultSort);
-
+    const [filtersOpen, setFiltersOpen] = useState(false);
 
     // Set filters based on query parameters
     const router = useRouter();
+
+    const handleOpenFilters = (event) => {
+        setFiltersOpen((prev) => !prev)
+        console.log(filtersOpen);
+    }
 
 
     const handleFilterChange = (event) => {
@@ -152,15 +157,15 @@ const Catalog = (props) => {
 
                     <>
                         <div className="catalog-container39">
-                            <span className="catalog-sorty-by">Sort By:</span>
-                            <select id="sort" value={sortOption} onChange={handleSortChange} className="catalog-select">
-
-                                {
-                                    props.sortOptions.map((option) => (
-                                        <option key={option.value} value={option.value}>{option.label}</option>
-                                    ))
-                                }
-                            </select>
+                        <span className="catalog-sorty-by">Sort By:</span>
+                                <select id="sort" value={sortOption} onChange={handleSortChange} className="catalog-select">
+    
+                                    {
+                                        props.sortOptions.map((option) => (
+                                            <option key={option.value} value={option.value}>{option.label}</option>
+                                        ))
+                                    }
+                                </select>
                         </div>
                         {
                             props.auxiliarySearchBars && props.auxiliarySearchBars.length > 0 && props.auxiliarySearchBars[0] !== false &&
@@ -239,7 +244,44 @@ const Catalog = (props) => {
                     </div>
                     <div className="catalog-container38">
 
-                        { Object.keys(router.query).some(key=> key !== 'page' && router.query[key] !== '') &&
+                        <div className="filter-header-container">
+                            <span onClick={handleOpenFilters}>Filter & Sort</span>
+                            <div onClick={handleOpenFilters}></div>
+                            <button
+                                onClick={handleOpenFilters}
+                                style={{
+                                    transform: filtersOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                                    transition: 'transform 0.2s ease-in-out',
+                                }}
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-328 225-583h510L480-328Z" /></svg>
+                            </button>
+                        </div>
+                        <div className="filter-sort-container"
+                            style={{
+                                width: '100%',
+                                transform: filtersOpen ? 'scaleY(1)' : 'scaleY(0)',
+                                transition: 'transform 0.2s ease-in-out',
+                                height: filtersOpen ? 'auto' : '0',
+                                transformOrigin: 'top',
+                                flexDirection: 'column',
+                            }}>
+                            <div className='sort-container'>
+                                <span className="catalog-sorty-by">Sort By:</span>
+                                <select id="sort" value={sortOption} onChange={handleSortChange} className="catalog-select">
+    
+                                    {
+                                        props.sortOptions.map((option) => (
+                                            <option key={option.value} value={option.value}>{option.label}</option>
+                                        ))
+                                    }
+                                </select>
+                            </div>
+                            <Filters filters={props.filters} />
+                        </div>
+
+
+                        {Object.keys(router.query).some(key => key !== 'page' && router.query[key] !== '') &&
                             <div className="filter-bubble-container">
                                 {Object.entries(router.query).map(([filterKey, filterValue]) => (
                                     filterValue !== '' && filterKey !== 'page' && (
@@ -254,7 +296,7 @@ const Catalog = (props) => {
                                 <span>Returned <b style={{ color: 'var(--dl-color-theme-primary1)' }}>{sortedItems.length}</b> results</span>
                             </div>
                         }
-                        
+
 
                         <CatalogContent
                             data={sortedItems}
@@ -267,6 +309,41 @@ const Catalog = (props) => {
             <style jsx>
                 {
                     `
+
+        .sort-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background-color: var(--dl-color-theme-secondary2);
+        }
+        .filter-header-container {
+            display: none;
+            flex-direction: row;
+            background-color: var(--dl-color-theme-secondary2);
+            width: 100%;
+            padding: 10px;
+            gap: 10px;
+            align-items: center;
+        }
+        .filter-header-container span {
+            color: var(--dl-color-theme-primary1);
+            font-weight: 600;
+        }
+        .filter-header-container div {
+            flex-grow: 1;
+            height: 6px;
+            border-top: 2px solid var(--dl-color-theme-primary2);
+            border-bottom: 2px solid var(--dl-color-theme-primary2);
+        }
+        filter-sort-container {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+            width: 1000px;
+        }
         .search-button {
             background-color: var(--dl-color-theme-primary2);
         }
@@ -475,6 +552,12 @@ const Catalog = (props) => {
             }
             #header-search input {
                 width: 100%;
+            }
+            .filter-header-container {
+                display: flex;
+            }
+            .filter-sort-container {
+                display: flex;
             }
         }
                 `

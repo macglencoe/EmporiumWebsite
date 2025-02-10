@@ -43,25 +43,14 @@ const Layout = (props) => {
   return (
     <>
 
-      <Head>
-        <title>King Street Emporium</title>
-        <meta property="og:title" content="King Street Emporium" />
-        <link rel="icon" href="/public/favicon.ico" sizes="any" />
-      </Head>
+      
       <div id="fb-root"></div>
       <Script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></Script>
 
       <div className="catalog-container10">
         <header className='layout-header'>
           <div className='header-title'>
-            <button
-              id="closer"
-              type="button"
-              className="catalog-button7 button"
-              onClick={handleButtonClick}
-            >
-              Button
-            </button>
+            
             <div className='ksman'><Ksman className="ksman"></Ksman></div>
 
             <div className='layout-title-container'>
@@ -335,10 +324,11 @@ const Layout = (props) => {
         }
         
         
-    .sidebar, collapsed {
+    .sidebar{
         position: absolute;
         z-index: 1;
         transition: transform .5s;
+        display: none;
     }
     
     .contact-container {
@@ -353,9 +343,7 @@ const Layout = (props) => {
           display: block;
     }
     
-    .header-title .ksman {
-          display: none;
-    }
+    
     
     .layout-title-container h1 {
     

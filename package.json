@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "postbuild": "next-sitemap",
-    "start": "next start",
+    "start": "next start --port 25565",
     "export": "next export"
   },
   "author": "TeleportHQ",

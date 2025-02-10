@@ -14,8 +14,8 @@ import { handleLocationClick } from '../utils/location'
 
 const Catalog = (props) => {
 
-  
-  
+  const isMobile = window.innerWidth < 680;
+
 
   useEffect(() => {
     // Add cursor pointer for better UX
@@ -27,14 +27,16 @@ const Catalog = (props) => {
 
   return (
     <>
+      <div id="fb-root"></div>
+      <Script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></Script>
       <Layout>
         <div className="mobile-home-contact">
-        <Contact ></Contact>
+          <Contact ></Contact>
         </div>
-      
+
         <div className='welcome-container-b' >
           <div className='welcome-container'>
-            
+
             <div style={{
               borderBottom: '3px solid var(--dl-color-theme-secondary2)',
               width: '100%',
@@ -47,9 +49,9 @@ const Catalog = (props) => {
               <p className="welcome-text">
                 Welcome to the Eastern Panhandle's only premier cigar lounge,
                 and the perfect third space! For over 30 years, we've been serving
-                Martinsburg, WV, with a friendly, laid-back spot to relax, chat, 
-                and unwind. Whether you're into fine cigars or premium briar pipes, 
-                we're here to share our expertise and help you find your perfect match. 
+                Martinsburg, WV, with a friendly, laid-back spot to relax, chat,
+                and unwind. Whether you're into fine cigars or premium briar pipes,
+                we're here to share our expertise and help you find your perfect match.
                 Come see why we're a favorite for pipe and cigar enthusiasts alike!
               </p>
             </div>
@@ -105,49 +107,61 @@ const Catalog = (props) => {
           </div>
         </div>
 
+        
+          <div className='divider'></div>
+        
+          <div className='facebook-container' >
+            <div>
+              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FKing-Street-Coffee-Tobacco-Emporium-100063496593967%2F&tabs=timeline&width=200&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="200" height="500" style={{ border: "none", overflow: "hidden" }} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+          </div>
+        
+
         <div className='divider'></div>
 
+        { }
+
         <ShopSuggestions
-        title="Cigars"
-        items={[
-          {href: "/cigars/brands", label: "Brand"},
-          {href: "/cigars/strengths", label: "Strength"},
-          {href: "/cigars/wrappers", label: "Wrapper"},
-          {href: "/cigars/sizes", label: "Size"},
-        ]}
+          title="Cigars"
+          items={[
+            { href: "/cigars/brands", label: "Brand" },
+            { href: "/cigars/strengths", label: "Strength" },
+            { href: "/cigars/wrappers", label: "Wrapper" },
+            { href: "/cigars/sizes", label: "Size" },
+          ]}
         />
 
         <div className='divider'></div>
 
         <ShopSuggestions
-        title="Pipes"
-        items={[
-          {href: "/pipes/brands", label: "Brand"},
-          {href: "/pipes/types", label: "Type"},
-          {href: "/pipes/materials", label: "Material"},
-        ]}
+          title="Pipes"
+          items={[
+            { href: "/pipes/brands", label: "Brand" },
+            { href: "/pipes/types", label: "Type" },
+            { href: "/pipes/materials", label: "Material" },
+          ]}
         />
         <ShopSuggestions
           title="Pipe Tobacco"
           items={[
-            {href: "/tobacco/brands", label: "Brand"},
-            {href: "/tobacco/cuts", label: "Cut"},
-            {href: "/tobacco/families", label: "Family"},
+            { href: "/tobacco/brands", label: "Brand" },
+            { href: "/tobacco/cuts", label: "Cut" },
+            { href: "/tobacco/families", label: "Family" },
           ]}
-          />
+        />
 
         <div className='divider'></div>
 
         <ShopSuggestions
           title="Coffee & Tea"
           items={[
-            {href: "/caffeine/roasts", label: "Roast"},
-            {href: "/caffeine/origins", label: "Origin"},
+            { href: "/caffeine/roasts", label: "Roast" },
+            { href: "/caffeine/origins", label: "Origin" },
           ]}
         />
 
 
-        
+
 
         <div className='divider'></div>
         <div style={{
@@ -205,6 +219,17 @@ const Catalog = (props) => {
 
       <style jsx>
         {`
+
+        .facebook-container {
+          justify-content: center;
+          align-items: center;
+          display: none;
+        }
+        .facebook-container div {
+          padding: 10px;
+          border-left: 10px double var(--dl-color-theme-secondary2);
+          border-right: 10px double var(--dl-color-theme-secondary2);
+        }
         .mobile-home-contact {
           display: none;
         }
@@ -383,6 +408,9 @@ const Catalog = (props) => {
           }
           .staff-image {
             height: 150px;
+          }
+          .facebook-container {
+            display: flex;
           }
       }
          
