@@ -10,40 +10,41 @@ const Directory = (props) => {
     return (
         <nav className="catalog-container1 directory">
             <ul className='directory'>
-            <li>
-            <Link href={router.query["Display Price"] == "true" || router.query["Display Barcode"] == "true" ? "/cigars?Display+Price=true&Display+Barcode=true" : "/cigars"}><a>
-                <div className="container2">
-                    <div className="directoryCard">
-                        <span className="catalog-text112">Cigars</span>
-                    </div>
-                </div>
-            </a>
-            </Link>
-            </li>
+                <li>
+                    <Link href={router.query["Display Price"] == "true" || router.query["Display Barcode"] == "true" ? "/cigars?Display+Price=true&Display+Barcode=true" : "/cigars"}>
+                        <a tabIndex={0}>
+                            <div className="container2">
+                                <div className="directoryCard">
+                                    <span className="catalog-text112">Cigars</span>
+                                </div>
+                            </div>
+                        </a>
+                    </Link>
+                </li>
 
-            <li>
-            <Link href="/pipes">
-                <a>
-                    <div className="container2">
-                        <div className="directoryCard">
-                            <span className="catalog-text113">Pipes</span>
-                        </div>
-                    </div>
-                </a>
-            </Link>
-            </li>
-            <li>
-            <Link href="/caffeine">
-                <a>
-                    <div className="container2">
-                        <div className="directoryCard">
-                            <span className="catalog-text114">Coffee &amp; Tea</span>
-                        </div>
-                    </div>
-                </a>
-            </Link>
-            </li>
-            {/* <li>
+                <li>
+                    <Link href="/pipes">
+                        <a tabIndex={0}>
+                            <div className="container2">
+                                <div className="directoryCard">
+                                    <span className="catalog-text113">Pipes</span>
+                                </div>
+                            </div>
+                        </a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/caffeine">
+                        <a tabIndex={0}>
+                            <div className="container2">
+                                <div className="directoryCard">
+                                    <span className="catalog-text114">Coffee &amp; Tea</span>
+                                </div>
+                            </div>
+                        </a>
+                    </Link>
+                </li>
+                {/* <li>
             <Link href="/accessories">
                 <a>
                     <div className="container2">
@@ -54,18 +55,18 @@ const Directory = (props) => {
                 </a>
             </Link>
             </li> */}
-            <li>
-            <Link href="/tobacco">
-                <a>
-                    <div className="container2">
-                        <div className="directoryCard">
-                            <span className="catalog-text115">Tobacco</span>
-                        </div>
-                    </div>
-                </a>
-            </Link>
-            </li>
-</ul>
+                <li>
+                    <Link href="/tobacco">
+                        <a tabIndex={0}>
+                            <div className="container2">
+                                <div className="directoryCard">
+                                    <span className="catalog-text115">Tobacco</span>
+                                </div>
+                            </div>
+                        </a>
+                    </Link>
+                </li>
+            </ul>
             <style jsx>
                 {`
                 .directory ul {

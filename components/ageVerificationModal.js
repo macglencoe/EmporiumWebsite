@@ -2,6 +2,18 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 
+/**
+ * AgeVerificationModal is a React component that displays a modal
+ * to confirm if the user is over 21 years old. It prevents scrolling
+ * on the body when the modal is open and restores it when closed.
+ * 
+ * Props:
+ * - onConfirm: A function to be called when the user confirms their age.
+ * 
+ * Accessibility:
+ * - The modal uses semantic HTML elements and aria attributes to improve accessibility.
+ */
+
 const AgeVerificationModal = ({ onConfirm }) => {
   useEffect(() => {
     // Prevent scrolling when the modal is open
@@ -17,9 +29,9 @@ const AgeVerificationModal = ({ onConfirm }) => {
           <title>Age Verification</title>
         </Head>
         <div className='overlay'>
-          <div className='content'>
+          <div className='content' aria-label="Age Verification Modal">
             <p>Are you over 21 years old?</p>
-            <button onClick={onConfirm}>Yes</button>
+            <button onClick={onConfirm} aria-label="Confirm Age">Yes</button>
           </div>
         </div>
         <style jsx>

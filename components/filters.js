@@ -24,8 +24,14 @@ const CatalogFilter = (props) => {
         <>
 
             <div className="select-wrap">
-                <label>{props.label}</label>
-                <select name={props.name} onChange={handleFilterChange} value={selectedFilter}>
+                <label for={props.name+" filter"}>{props.label}</label>
+                <select 
+                    id={props.name+" filter"}
+                    name={props.name} 
+                    onChange={handleFilterChange} 
+                    value={selectedFilter}
+                    tabIndex={props.inactive ? -1 : 0}
+                >
                     <option value="">{props.defaultValue}</option>
                     {props.values.map(brand => (
                         <option key={brand} value={brand}>{brand}</option>
@@ -120,6 +126,7 @@ const Filters = (props) => {
                                 values={filter.values}
                                 defaultValue={filter.defaultValue}
                                 handleFilterChange={handleFilterChange}
+                                inactive={props.inactive}
                             />
                         ))
                     }

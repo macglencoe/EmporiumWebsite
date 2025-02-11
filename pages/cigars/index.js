@@ -58,7 +58,9 @@ const CigarCatalog = (props) => {
 
   return (
     <>
-
+      <Head>
+        <title>Cigar Catalog</title>
+      </Head>
       <Catalog
         data={props.data}
 

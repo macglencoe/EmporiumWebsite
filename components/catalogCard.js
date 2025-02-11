@@ -61,11 +61,25 @@ const CatalogCardField = (props) => {
 }
 
 
+/**
+ * CatalogCard component for displaying an individual item in a catalog.
+ * 
+ * @param {Object} props - The properties passed to the component.
+ * @param {string} props.href - The URL to navigate to when the card is clicked.
+ * @param {string} props.image - The image URL for the card.
+ * @param {string} props.title - The main title text for the card.
+ * @param {string} props.secondaryTitle - The secondary title text for the card.
+ * @param {string} props.name - The name associated with the card's content.
+ * @param {Array} props.data - An array of arrays, where each sub-array contains a label and a value to display as card fields.
+ * @param {string} props.barcode - The barcode to generate and display on the card.
+ * @param {string} props.buttonText - The text to display on the card's button.
+ */
+
 const CatalogCard = (props) => {
 
     return (
         <>
-            <Link href={props.href}><a className="catalog-card-parent">
+            <Link href={props.href}><a className="catalog-card-parent" tabIndex={0}>
                 <div className="catalog-catalog-card catalogCard">
 
                     <div className="card-head">
@@ -116,7 +130,7 @@ const CatalogCard = (props) => {
 
                         <div className="catalog-container50">
                             {props.buttonText &&
-                                <button type="button" className="catalog-button2 button">
+                                <button type="button" className="catalog-button2 button" tabIndex={-1}>
                                     {props.buttonText}
                                 </button>}
                         </div>

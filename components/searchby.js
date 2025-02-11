@@ -1,6 +1,7 @@
 import { use } from "react";
 import { useRouter } from "next/router";
 import PageTitle1 from "./pagetitle1";
+import Link from "next/link";
 
 //import Data from "../public/data/consolidated_cigars.json"
 
@@ -42,6 +43,8 @@ const SearchBy = (props) => {
         
     }
 
+    
+
 
 
 
@@ -77,15 +80,14 @@ const SearchBy = (props) => {
                     const showLetter = index === 0 || firstLetter !== prevFirstLetter;
 
                     return (
-                        <div key={index} className='brand-container' tabIndex={0}>
+                        <div key={index} className='brand-container'>
                             {showLetter && <span style={{ fontWeight: 'bold', fontSize: '20px' }}>{firstLetter}</span>}
 
-                            <div className='brand-label-container' onClick={() => router.push({
-                                pathname: props.catalogPath,
-                                query: { [props.field]: brand },
-                            })}>
-                                <span>{brand}</span>
-                            </div>
+                            <Link href={`/${props.catalogPath}?${props.field}=${brand}`}>
+                                <a className='brand-label-container' tabIndex={0}>
+                                    <span>{brand}</span>
+                                </a>
+                            </Link>
                         </div>
                     );
                 })}

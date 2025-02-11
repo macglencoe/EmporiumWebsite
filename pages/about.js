@@ -13,6 +13,9 @@ import Layout from '../components/layout'
 const About = (props) => {
     return (
         <>
+        <Head>
+            <title>About</title>
+        </Head>
             <Layout>
                 <div className="title-container">
                     <h1 className="title">About</h1>

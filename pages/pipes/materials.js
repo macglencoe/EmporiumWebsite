@@ -17,6 +17,9 @@ const PipeMaterials = (props) => {
 
     return (
         <>
+        <Head>
+            <title>Pipes by Material</title>
+        </Head>
             <Layout>
                 <SearchBy 
                 title="Search by Material" 

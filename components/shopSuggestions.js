@@ -4,7 +4,7 @@ import Link from "next/link"
 const ShopSuggestions = (props) => {
     return (
         <>
-            <div className='shop-suggestions-container'>
+            <region className='shop-suggestions-container'>
                 <div style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -24,8 +24,8 @@ const ShopSuggestions = (props) => {
                 <div className='shop-suggestions' >
                     {
                         props.items.map((item, index) => (
-                            <Link href={item.href} key={index}>
-                                <a>
+                            <Link href={item.href} key={index} >
+                                <a tabIndex={0} aria-label={'Search' + props.title + 'By' + item.label}>
                                     <div className="shop-suggestions-card">
                                         <span>{item.label}</span>
                                     </div>
@@ -34,7 +34,7 @@ const ShopSuggestions = (props) => {
                         ))
                     }
                 </div>
-            </div>
+            </region>
             <style jsx>
                 {`
                 .shop-suggestions-container {

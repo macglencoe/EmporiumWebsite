@@ -17,6 +17,9 @@ const Brands = (props) => {
 
     return (
         <>
+        <Head>
+            <title>Our Brands</title>
+        </Head>
             <Layout>
                 <SearchBy 
                 title="Our Brands" 

@@ -45,6 +45,9 @@ const CigarPage = (props) => {
 
   return (
     <>
+      <Head>
+        <title>{cigar['Cigar Brand']} {cigar['Cigar Name']}</title>
+      </Head>
       <Layout>
         <PageTitle1>Cigar Information</PageTitle1>
         <ProductPage

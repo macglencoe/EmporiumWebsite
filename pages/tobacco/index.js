@@ -1,5 +1,6 @@
 import Layout from '../../components/layout';
 import Catalog from '../../components/catalog';
+import Head from 'next/head';
 
 export const getStaticProps = async () => {
     const data = await import('../../public/data/tobacco.json');
@@ -32,6 +33,9 @@ const TobaccoCatalog = (props) => {
 
     return (
         <>
+        <Head>
+            <title>Tobacco Catalog</title>
+        </Head>
             <Catalog
                 data={props.data}
 

@@ -23,6 +23,28 @@ export const getStaticProps = async () => {
 
 
 
+/**
+ * Catalog component for displaying a catalog of items with sorting, filtering,
+ * and searching functionalities. It utilizes a layout with sidebar options for
+ * filtering and sorting items, as well as a header for searching. The component
+ * manages various states such as sort options, search inputs, and filters to 
+ * dynamically render a list of catalog items based on user input.
+ *
+ * @param {Object} props - The properties passed to the component.
+ * @param {Array} props.data - The data to be displayed in the catalog.
+ * @param {Array} props.filters - The filters available for refining the catalog.
+ * @param {Array} props.sortOptions - The options available for sorting the catalog.
+ * @param {Array} props.auxiliarySearchBars - Auxiliary search bars for additional searches.
+ * @param {Object} props.cardSettings - Settings for rendering catalog cards.
+ * @param {string} props.subtitle - Subtitle for the catalog page.
+ * @param {string} props.title - Title for the catalog page.
+ * @param {Array} props.notices - Notices to be displayed on the catalog page.
+ * @param {string} props.defaultSort - The default sort option.
+ * 
+ * Accessibility: 
+ * - The component uses semantic HTML elements and aria attributes to improve accessibility.
+ */
+
 const Catalog = (props) => {
 
     const [sortOption, setSortOption] = useState(props.defaultSort);
@@ -157,15 +179,15 @@ const Catalog = (props) => {
 
                     <>
                         <div className="catalog-container39">
-                        <span className="catalog-sorty-by">Sort By:</span>
-                                <select id="sort" value={sortOption} onChange={handleSortChange} className="catalog-select">
-    
-                                    {
-                                        props.sortOptions.map((option) => (
-                                            <option key={option.value} value={option.value}>{option.label}</option>
-                                        ))
-                                    }
-                                </select>
+                            <label for="sort" className="catalog-sorty-by">Sort By:</label>
+                            <select id="sort" value={sortOption} onChange={handleSortChange} className="catalog-select">
+
+                                {
+                                    props.sortOptions.map((option) => (
+                                        <option key={option.value} value={option.value}>{option.label}</option>
+                                    ))
+                                }
+                            </select>
                         </div>
                         {
                             props.auxiliarySearchBars && props.auxiliarySearchBars.length > 0 && props.auxiliarySearchBars[0] !== false &&
@@ -203,7 +225,7 @@ const Catalog = (props) => {
                                     onChange={(e) => setSearchInput(e.target.value)}
                                     placeholder="Search..."
                                 />
-                                <button type="submit" className='search-button'>
+                                <button aria-label='Search' type="submit" className='search-button'>
                                     <svg xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960" width="32px" fill="var(--dl-color-theme-secondary1)">
                                         <path d="M790.67-89.33 525-354.33q-29 21.95-68.14 34.64Q417.72-307 372-307q-116.11 0-196.89-80.83-80.78-80.84-80.78-195.5 0-114.67 80.84-195.5Q256-859.67 371-859.67q115 0 195.5 80.84Q647-698 647-583.23q0 45.23-12.33 83.4-12.34 38.16-35.67 70.16L865.67-164l-75 74.67Zm-419.1-322.34q71.93 0 121.35-50 49.41-50 49.41-121.66 0-71.67-49.51-121.67-49.52-50-121.25-50-72.29 0-122.43 50T199-583.33q0 71.66 50.04 121.66t122.53 50Z" />
                                     </svg>
@@ -219,67 +241,65 @@ const Catalog = (props) => {
                 </PageTitle1>
                 {props.notices}
                 <div className="catalog-container31">
-                    <div data-thq="accordion" className="catalog-accordion1">
-                        <details
-                            open
-                            data-thq="accordion-trigger"
-                            className="catalog-trigger1"
-                        >
-                            <summary
-                                data-thq="accordion-summary"
-                                className="catalog-summary1"
-                            >
-                                <span>Refine</span>
-                                <div
-                                    data-thq="accordion-icon"
-                                    className="catalog-icon-container1"
-                                >
-                                    <svg width="32" height="32" viewBox="0 0 24 24">
-                                        <path d="m12 14l-4-4h8z" fill="currentColor"></path>
-                                    </svg>
-                                </div>
-                            </summary>
-                        </details>
 
-                    </div>
                     <div className="catalog-container38">
+                        {window.innerWidth <= 680 && (
 
-                        <div className="filter-header-container">
-                            <span onClick={handleOpenFilters}>Filter & Sort</span>
-                            <div onClick={handleOpenFilters}></div>
-                            <button
-                                onClick={handleOpenFilters}
-                                style={{
-                                    transform: filtersOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                                    transition: 'transform 0.2s ease-in-out',
-                                }}
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-328 225-583h510L480-328Z" /></svg>
-                            </button>
-                        </div>
-                        <div className="filter-sort-container"
-                            style={{
-                                width: '100%',
-                                transform: filtersOpen ? 'scaleY(1)' : 'scaleY(0)',
-                                transition: 'transform 0.2s ease-in-out',
-                                height: filtersOpen ? 'auto' : '0',
-                                transformOrigin: 'top',
-                                flexDirection: 'column',
-                            }}>
-                            <div className='sort-container'>
-                                <span className="catalog-sorty-by">Sort By:</span>
-                                <select id="sort" value={sortOption} onChange={handleSortChange} className="catalog-select">
-    
-                                    {
-                                        props.sortOptions.map((option) => (
-                                            <option key={option.value} value={option.value}>{option.label}</option>
-                                        ))
-                                    }
-                                </select>
+
+                            <div className="filter-header-container">
+                                <span onClick={handleOpenFilters}>Filter & Sort</span>
+                                <div onClick={handleOpenFilters}></div>
+                                <button
+                                    name='Toggle Filters'
+                                    aria-label='Toggle Filters'
+                                    onClick={handleOpenFilters}
+                                    style={{
+                                        transform: filtersOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                                        transition: 'transform 0.2s ease-in-out',
+                                    }}
+                                    aria-expanded={filtersOpen}
+                                    aria-controls="filter-sort-container"
+                                    tabIndex={window.innerWidth >= 680 ? -1 : 0}
+
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-328 225-583h510L480-328Z" /></svg>
+                                </button>
                             </div>
-                            <Filters filters={props.filters} />
-                        </div>
+                        )}
+                        {window.innerWidth <= 680 && (
 
+                            <div className="filter-sort-container"
+                                style={{
+                                    width: '100%',
+                                    transform: filtersOpen ? 'scaleY(1)' : 'scaleY(0)',
+                                    transition: 'transform 0.2s ease-in-out',
+                                    height: filtersOpen ? 'auto' : '0',
+                                    transformOrigin: 'top',
+                                    flexDirection: 'column',
+                                }}>
+                                <div className='sort-container'>
+                                    <label for="sort" className="catalog-sorty-by">Sort By:</label>
+                                    <select
+                                        id="sort"
+                                        value={sortOption}
+                                        onChange={handleSortChange}
+                                        className="catalog-select"
+                                        tabIndex={window.innerWidth >= 680 ? -1 : 0}
+                                    >
+
+                                        {
+                                            props.sortOptions.map((option) => (
+                                                <option
+                                                    key={option.value}
+                                                    value={option.value}
+                                                >{option.label}</option>
+                                            ))
+                                        }
+                                    </select>
+                                </div>
+                                <Filters filters={props.filters} inactive={window.innerWidth >= 680} />
+                            </div>
+                        )}
 
                         {Object.keys(router.query).some(key => key !== 'page' && router.query[key] !== '') &&
                             <div className="filter-bubble-container">
@@ -287,7 +307,10 @@ const Catalog = (props) => {
                                     filterValue !== '' && filterKey !== 'page' && (
                                         <div className="filter-bubble" key={filterKey}>
                                             <span className="filter-bubble-name">{filterKey}: {filterValue}</span>
-                                            <button onClick={() => handleFilterChange({ target: { name: filterKey, value: '' } })} className='filter-bubble-button'>
+                                            <button onClick={() => handleFilterChange({ target: { name: filterKey, value: '' } })}
+                                                className='filter-bubble-button'
+                                                aria-label={'Clear ' + filterValue + 'Filter for ' + filterKey}
+                                            >
                                                 <span className="filter-bubble-x">x</span>
                                             </button>
                                         </div>

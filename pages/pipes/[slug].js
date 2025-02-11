@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Layout from '../../components/layout';
 import PageTitle1 from '../../components/pagetitle1';
 import ProductPage from '../../components/productPage';
@@ -8,7 +9,7 @@ import { ProductInfoFields, ProductCallOrVisitButtons } from '../../components/p
 import { Disclaimer } from '../../components/productPage';
 
 export const getStaticPaths = async () => {
-    const pipes = await import('../../public/data/pipe-example.json');
+    const pipes = await import('../../public/data/pipes.json');
     const data = await pipes.default;
     const paths = data.map((pipe) => ({
       params: { slug: pipe.slug },
@@ -17,7 +18,7 @@ export const getStaticPaths = async () => {
   }
   
   export const getStaticProps = async ({ params }) => {
-    const pipesData = await import('../../public/data/pipe-example.json');
+    const pipesData = await import('../../public/data/pipes.json');
     const data = await pipesData.default;
     const pipe = data.find((pipe) => pipe.slug === params.slug);
   
@@ -33,6 +34,9 @@ const PipePage = (props) => {
 
     return (
         <>
+        <Head>
+            <title>{pipe['Pipe Brand']} {pipe['Pipe Name']}</title>
+        </Head>
         <Layout>
             <PageTitle1>Pipe Information</PageTitle1>
             <ProductPage>

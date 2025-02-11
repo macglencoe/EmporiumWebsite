@@ -14,7 +14,7 @@ const Layout = (props) => {
   const router = useRouter();
 
   const isHome = router.pathname === "/";
-  
+
   const [isActive, setIsActive] = useState(true);
   const handleButtonClick = () => {
     setIsActive((prev) => !prev)
@@ -43,18 +43,18 @@ const Layout = (props) => {
   return (
     <>
 
-      
+
       <div id="fb-root"></div>
       <Script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></Script>
 
       <div className="catalog-container10">
         <header className='layout-header'>
-          <div className='header-title'>
-            
+          <div className='header-title' role='banner'>
+
             <div className='ksman'><Ksman className="ksman"></Ksman></div>
 
             <div className='layout-title-container'>
-              <Link href="/">
+              <Link href="/" aria-label='Go to homepage'>
                 <a>
                   <h1 className="catalog-text109">The King Street Emporium</h1>
                 </a>
@@ -80,67 +80,56 @@ const Layout = (props) => {
               <Contact></Contact>
             </div>
 
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FKing-Street-Coffee-Tobacco-Emporium-100063496593967%2F&tabs=timeline&width=300&height=1000&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="300" height="1000" style={{ border: "none" }} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <a href='#fb-skip' tabIndex={0} className='skip-fb'>
+              Skip Facebook Embed
+            </a>
+
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FKing-Street-Coffee-Tobacco-Emporium-100063496593967%2F&tabs=timeline&width=300&height=1000&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="300" height="1000" style={{ border: "none" }} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" id='fb-embed'></iframe>
+            <div id='fb-skip'></div>
           </div>
-          <div className="catalog-content1">
-            
+          <main className="catalog-content1" id='content'>
+
             {props.children}
-              
-              
 
-              <Footer32
-                link1={
-                  <Fragment>
-                    <span className="catalog-text227">About Us</span>
-                  </Fragment>
-                }
-                link2={
-                  <Fragment>
-                    <span className="catalog-text228">Shop</span>
-                  </Fragment>
-                }
-                link3={
-                  <Fragment>
-                    <span className="catalog-text229">Events</span>
-                  </Fragment>
-                }
-                link4={
-                  <Fragment>
-                    <span className="catalog-text230">Contact Us</span>
-                  </Fragment>
-                }
-                link5={
-                  <Fragment>
-                    <span className="catalog-text231">Visit Us</span>
-                  </Fragment>
-                }
-                termsLink={
-                  <Fragment>
-                    <span className="catalog-text232">
-                      Terms and Conditions
-                    </span>
-                  </Fragment>
-                }
-                cookiesLink={
-                  <Fragment>
-                    <span className="catalog-text233">Cookies Policy</span>
-                  </Fragment>
-                }
-                privacyLink={
-                  <Fragment>
-                    <span className="catalog-text234">Privacy Policy</span>
-                  </Fragment>
-                }
-                rootClassName="footer32root-class-name1"
-              ></Footer32>
-            </div>
-          
 
-        </div>
-      </div >
+
+            <Footer32
+              link1={
+                <Fragment>
+                  <span className="catalog-text227">About Us</span>
+                </Fragment>
+              }
+              link4={
+                <Fragment>
+                  <span className="catalog-text230">Contact Us</span>
+                </Fragment>
+              }
+              link5={
+                <Fragment>
+                  <span className="catalog-text231">Visit Us</span>
+                </Fragment>
+              }
+              rootClassName="footer32root-class-name1"
+            ></Footer32>
+        </main>
+
+
+      </div>
+    </div >
       <style jsx>
         {`
-
+        .skip-fb {
+          color: var(--dl-color-theme-primary2);
+          text-transform: uppercase;
+          text-align: center;
+          align-content: center;
+          height: 2em;
+          width: fit-content;
+          padding: 0 1em;
+          background-color: var(--dl-color-theme-secondary1);
+          border-top-right-radius: 1em;
+          font-size: 0.6em;
+        }
         .layout-header {
           position: sticky;
           top: 0;

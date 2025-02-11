@@ -17,6 +17,9 @@ const Roasts = (props) => {
 
     return (
         <>
+        <Head>
+            <title>Coffee by Roast</title>
+        </Head>
             <Layout>
                 <SearchBy 
                 title="Search Coffee by Roast" 

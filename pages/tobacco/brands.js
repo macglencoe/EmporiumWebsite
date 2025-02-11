@@ -17,6 +17,9 @@ const TobaccoBrands = (props) => {
 
     return (
         <>
+        <Head>
+            <title>Tobacco by Brand</title>
+        </Head>
             <Layout>
                 <SearchBy 
                 title="Search Pipe Tobacco by Brand" 

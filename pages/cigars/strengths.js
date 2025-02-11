@@ -25,6 +25,9 @@ const Strengths = (props) => {
 
   return (
     <>
+    <Head>
+      <title>Cigars by Strength</title>
+    </Head>
       <Layout>
         <SearchBy 
         title="Search by Strength"

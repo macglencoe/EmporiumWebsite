@@ -17,6 +17,9 @@ const Sizes = (props) => {
 
   return (
     <>
+    <Head>
+      <title>Cigars by Size</title>
+    </Head>
       <Layout>
         <SearchBy 
         title="Search by Size" 

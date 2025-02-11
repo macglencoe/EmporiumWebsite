@@ -28,7 +28,11 @@ const Catalog = (props) => {
   return (
     <>
       <div id="fb-root"></div>
+      <Head>
+        <title>The King Street Emporium - Home</title>
+      </Head>
       <Script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></Script>
+
       <Layout>
         <div className="mobile-home-contact">
           <Contact ></Contact>
@@ -107,15 +111,15 @@ const Catalog = (props) => {
           </div>
         </div>
 
-        
-          <div className='divider'></div>
-        
-          <div className='facebook-container' >
-            <div>
-              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FKing-Street-Coffee-Tobacco-Emporium-100063496593967%2F&tabs=timeline&width=200&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="200" height="500" style={{ border: "none", overflow: "hidden" }} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-            </div>
+
+        <div className='divider'></div>
+
+        <div className='facebook-container' >
+          <div>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FKing-Street-Coffee-Tobacco-Emporium-100063496593967%2F&tabs=timeline&width=200&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="200" height="500" style={{ border: "none", overflow: "hidden" }} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
           </div>
-        
+        </div>
+
 
         <div className='divider'></div>
 
@@ -164,7 +168,7 @@ const Catalog = (props) => {
 
 
         <div className='divider'></div>
-        <div style={{
+        <nav style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -172,14 +176,24 @@ const Catalog = (props) => {
           padding: '20px'
         }}>
           <h1>We are proud to carry your favorite brands</h1>
-          <div className='brand-logo-container'>
-            <Link href="/cigars?Cigar+Brand=Arturo+Fuente."><a><img alt="Arturo Fuente" src='/af-logo.webp' /></a></Link>
-            <Link href="/cigars?Cigar+Brand=J.C.+Newman"><a><img alt="J.C. Newman" src='/jcn-logo.png' /></a></Link>
-            <Link href="/pipes?Pipe+Brand=Savinelli"><a><img alt="Savinelli" src='/savinelli-logo.webp' /></a></Link>
-            <Link href="/pipes?Pipe+Brand=Peterson"><a><img alt="Peterson" src='/peterson-logo.png' /></a></Link>
-            <Link href="/tobacco?Tobacco+Brand=Cornell+%26+Diehl"><a><img alt="Cornell & Diehl" src='/cd-logo.jpg' /></a></Link>
-          </div>
-        </div>
+          <ul className='brand-logo-container'>
+            <Link href="/cigars?Cigar+Brand=Arturo+Fuente.">
+              <a tabIndex={0} aria-label='Arturo Fuente'>
+                <img alt="Arturo Fuente" src='/af-logo.webp' /></a></Link>
+            <Link href="/cigars?Cigar+Brand=J.C.+Newman">
+              <a tabIndex={0} aria-label='J.C. Newman'>
+                <img alt="J.C. Newman" src='/jcn-logo.png' /></a></Link>
+            <Link href="/pipes?Pipe+Brand=Savinelli">
+              <a tabIndex={0} aria-label='Savinelli'>
+                <img alt="Savinelli" src='/savinelli-logo.webp' /></a></Link>
+            <Link href="/pipes?Pipe+Brand=Peterson">
+              <a tabIndex={0} aria-label='Peterson'>
+                <img alt="Peterson" src='/peterson-logo.png' /></a></Link>
+            <Link href="/tobacco?Tobacco+Brand=Cornell+%26+Diehl">
+              <a tabIndex={0} aria-label='Cornell & Diehl'>
+                <img alt="Cornell & Diehl" src='/cd-logo.jpg' /></a></Link>
+          </ul>
+        </nav>
 
         <div className='divider'></div>
         <div style={{

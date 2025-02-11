@@ -17,10 +17,13 @@ const PipeTypes = (props) => {
 
     return (
         <>
+        <Head>
+            <title>Pipes by Type</title>
+        </Head>
             <Layout>
                 <SearchBy 
                 title="Search by Type" 
-                field="type"
+                field="Type"
                 data={Data}
                 catalogPath="/pipes"
                 />

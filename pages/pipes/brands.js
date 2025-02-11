@@ -17,6 +17,9 @@ const PipeBrands = (props) => {
 
     return (
         <>
+        <Head>
+            <title>Our Pipe Brands</title>
+        </Head>
             <Layout>
                 <SearchBy 
                 title="Our Pipe Brands" 

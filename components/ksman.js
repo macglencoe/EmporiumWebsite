@@ -15,12 +15,12 @@ const Ksman = () => {
     return (
         <>
         <div className="cigar-page-container13" tabIndex={0}>
-            <Link href="/">
-                <img
-                    alt="image"
-                    src="/ksmantransparentbw-1500h.png"
-                    className="cigar-page-image1"
-                />
+            <Link href="/" aria-label='Go to homepage'>
+                    <img
+                        alt="image"
+                        src="/ksmantransparentbw-1500h.png"
+                        className="cigar-page-image1"
+                    />
             </Link>
         </div>
         <style jsx>{`

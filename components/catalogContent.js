@@ -2,6 +2,22 @@ import CatalogCard from "./catalogCard";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
+/**
+ * A component for displaying a list of items in a catalog, with pagination.
+ *
+ * @param {Object} props - The properties passed to the component.
+ * @param {Array} props.data - The data to be displayed in the catalog.
+ * @param {Object} props.cardSettings - Settings for rendering catalog cards.
+ * @param {string} [props.cardSettings.title] - A function to generate the title of the card.
+ * @param {string} [props.cardSettings.secondaryTitle] - A function to generate the secondary title of the card.
+ * @param {string} [props.cardSettings.image] - A function to generate the image URL for the card.
+ * @param {string} [props.cardSettings.buttonText] - A function to generate the button text for the card.
+ * @param {string} [props.cardSettings.href] - A function to generate the link URL for the card.
+ * @param {string} [props.cardSettings.barcode] - A function to generate the barcode for the card.
+ * @param {Array} [props.cardSettings.data] - The data to be displayed on the card.
+ * @param {string} [props.cardSettings.data.title] - The title of the data.
+ * @param {string} [props.cardSettings.data.value] - The value of the data.
+ */
 const CatalogContent = (props) => {
     const router = useRouter();
     const pageSize = 20;
@@ -19,63 +35,71 @@ const CatalogContent = (props) => {
     const handlePageChange = (page) => {
         setCurrentPage(page);
         router.push({ query: { ...router.query, page } }, undefined, { shallow: true });
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
     }
     return (
-        <div className="catalog-content-container">
-            
-            <div className='pagination'>
-            <h3>Page:</h3>
+        <section className="catalog-content-container">
+
+            <nav className='pagination'>
+                <span><b>Page:</b></span>
                 {Array.from({ length: totalPages }, (_, i) => (
                     <a>
                         <button
                             key={i + 1}
+                            id={`page-${i + 1}`}
                             className={i + 1 === currentPage ? 'page-active' : ''}
                             onClick={() => handlePageChange(i + 1)}
+                            aria-label={`Page ${i + 1}`}
+                            aria-current={i + 1 === currentPage ? 'page' : undefined}
                         >
                             {i + 1}
                         </button>
                     </a>
                 )
                 )}
-            </div>
-            
+            </nav>
+
             <div className="catalog-container40">
                 {
                     currentPageData.map((item) => (
                         props.cardSettings.title(item) !== '' &&
                         <CatalogCard
 
-                            image={props.cardSettings.image? props.cardSettings.image(item): null}
-                            secondaryTitle={props.cardSettings.secondaryTitle? props.cardSettings.secondaryTitle(item) : null}
+                            image={props.cardSettings.image ? props.cardSettings.image(item) : null}
+                            secondaryTitle={props.cardSettings.secondaryTitle ? props.cardSettings.secondaryTitle(item) : null}
                             title={props.cardSettings.title(item)}
 
                             data={props.cardSettings.data(item)}
                             href={props.cardSettings.href(item)}
 
                             buttonText={props.cardSettings.buttonText(item)}
-                            barcode={props.cardSettings.barcode? props.cardSettings.barcode(item) : null}
+                            barcode={props.cardSettings.barcode ? props.cardSettings.barcode(item) : null}
                         />
                     ))
                 }
             </div>
 
-            <div className='pagination'>
-                <h3>Page:</h3>
+            <nav className='pagination'>
+                <span><b>Page:</b></span>
                 {Array.from({ length: totalPages }, (_, i) => (
                     <a>
                         <button
                             key={i + 1}
                             className={i + 1 === currentPage ? 'page-active' : ''}
                             onClick={() => handlePageChange(i + 1)}
+                            aria-label={`Page ${i + 1}`}
+                            aria-current={i + 1 === currentPage ? 'page' : undefined}
                         >
                             {i + 1}
                         </button>
                     </a>
                 )
                 )}
-                
-            </div>
-            
+            </nav>
+
             <style jsx>
                 {`
         
@@ -99,6 +123,9 @@ const CatalogContent = (props) => {
             text-decoration: underline;
             font-weight: 900;
         }
+        .pagination button:focus {
+            background-color: var(--dl-color-theme-primary2);
+        }
         .catalog-content-container {
             width: 100%;
         }
@@ -116,7 +143,7 @@ const CatalogContent = (props) => {
         }
                 `}
             </style>
-        </div>
+        </section>
     )
 }
 
