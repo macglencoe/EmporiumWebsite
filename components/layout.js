@@ -52,6 +52,10 @@ const Layout = (props) => {
           <div className='header-title' role='banner'>
 
             <div className='ksman'><Ksman className="ksman"></Ksman></div>
+            <a href='#content' aria-label='Skip to content' tabIndex={0} className='sr-skip' id='header-content-skip'>
+              <div>Skip to Content</div>
+            </a>
+
 
             <div className='layout-title-container'>
               <Link href="/" aria-label='Go to homepage'>
@@ -80,8 +84,8 @@ const Layout = (props) => {
               <Contact></Contact>
             </div>
 
-            <a href='#fb-skip' tabIndex={0} className='skip-fb'>
-              Skip Facebook Embed
+            <a href='#fb-skip' tabIndex={0} className='sr-skip' id='sidebar-fb-skip'>
+              <div>Skip Facebook Embed</div>
             </a>
 
             <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FKing-Street-Coffee-Tobacco-Emporium-100063496593967%2F&tabs=timeline&width=300&height=1000&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="300" height="1000" style={{ border: "none" }} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" id='fb-embed'></iframe>
@@ -118,18 +122,27 @@ const Layout = (props) => {
     </div >
       <style jsx>
         {`
-        .skip-fb {
-          color: var(--dl-color-theme-primary2);
-          text-transform: uppercase;
-          text-align: center;
-          align-content: center;
-          height: 2em;
-          width: fit-content;
-          padding: 0 1em;
-          background-color: var(--dl-color-theme-secondary1);
-          border-top-right-radius: 1em;
-          font-size: 0.6em;
+        
+        .sr-skip {
+          position: absolute;
+          left: 50%;
+          height: 30px;
+          transition: transform 0.3s;
+          transform: translateY(-1000%);
         }
+        .sr-skip div {
+          color: black;
+          background-color: white;
+          display: flex;
+          padding: 1em;
+          font-weight: 700;
+        }
+
+        .sr-skip:focus {
+          transform: translateY(0);
+          display: block;
+        }
+
         .layout-header {
           position: sticky;
           top: 0;
