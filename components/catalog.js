@@ -122,16 +122,17 @@ const Catalog = (props) => {
                     router.query[filter.name] = '';
                 }
             });
-
-
-            return (
-                props.filters.every(filter =>
-                    router.query[filter.name] == '' ||
-                    (filter.flatmap
-                        ? item[filter.flatmap] != null && item[filter.flatmap].includes(router.query[filter.name])
-                        : item[filter.name] != null && item[filter.name].toLowerCase() == (router.query[filter.name].toLowerCase()))
+            console.log(props.filters);
+            
+                return (
+                    props.filters.every(filter =>
+                        router.query[filter.name] == '' ||
+                        (Array.isArray(item[filter.name])
+                            ? item[filter.name] != null && item[filter.name].includes(router.query[filter.name])
+                            : item[filter.name] != null && item[filter.name].toLowerCase() == (router.query[filter.name].toLowerCase()))
+                    )
                 )
-            )
+            
         }
     })
 

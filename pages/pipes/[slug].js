@@ -29,7 +29,7 @@ const PipePage = (props) => {
 
     const pipe = props.pipe;
     if(!pipe) {
-        return <div>Pipe not found</div>;
+        return <Layout><PageTitle1>Pipe not found</PageTitle1></Layout>;
     }
 
     return (

@@ -149,7 +149,7 @@ const Catalog = (props) => {
           title="Pipe Tobacco"
           items={[
             { href: "/tobacco/brands", label: "Brand" },
-            { href: "/tobacco/cuts", label: "Cut" },
+            { href: "/tobacco/components", label: "Component" },
             { href: "/tobacco/families", label: "Family" },
           ]}
         />

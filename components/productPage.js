@@ -15,7 +15,51 @@ import PageTitle1 from '/components/pagetitle1';
 import { handleLocationClick } from '../utils/location';
 import { handlePhoneClick } from '../utils/phone';
 
-
+export const StringBubbleList = (props) => {
+    return (
+        <>
+            <div className='main-container'>
+                <h2>{props.title}</h2>
+                <div className='bbl-container'>
+    
+                    {props.data.map(item =>
+                        <span key={item}>{item}</span>
+                    )}
+                </div>
+            </div>
+            <style jsx>
+                {`
+                .main-container {
+                    padding: 0.5em;
+                    border-left: 5px solid var(--dl-color-theme-secondary2);
+                    border-bottom: 3px solid var(--dl-color-theme-secondary2);
+                    border-bottom-left-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5em;
+                    max-width: min-content;
+                }
+                .bbl-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    gap: 0.5em;
+                }
+                .bbl-container span {
+                    background-color: var(--dl-color-theme-secondary2);
+                    color: var(--dl-color-theme-primary2);
+                    padding: 0.5em;
+                    border-radius: 0.3em;
+                    font-weight: 600;
+                }
+                h2 {
+                    text-transform: uppercase;
+                }
+                `}
+            </style>
+        </>
+    )
+}
 export const ProductImage = (props) => {
     return (
         <>
@@ -102,7 +146,7 @@ export const ProductSideContent = (props) => {
 export const ProductBasicInfo = (props) => {
     return (
         <>
-            { props.value &&
+            {props.value &&
                 <div className='cigar-flavor-container'>
                     <span className="cigar-flavor-label">{props.label}</span>
                     <span className="cigar-flavor">{props.value}</span>
@@ -328,9 +372,9 @@ export const ProductInfoFields = (props) => {
 }
 
 export const ProductCallOrVisitButtons = (props) => {
-    
 
-    
+
+
     return (
         <>
             <div className='call-or-visit-container'>
@@ -396,7 +440,7 @@ export const Divider = (props) => {
 export const Disclaimer = (props) => {
     return (
         <>
-        <p style={{ width: '100%', textAlign: 'center' }}>Disclaimer: Availability is subject to change. Please call during open hours to confirm availability. No online sales</p>
+            <p style={{ width: '100%', textAlign: 'center' }}>Disclaimer: Availability is subject to change. Please call during open hours to confirm availability. No online sales</p>
         </>
     )
 }
@@ -407,9 +451,9 @@ const ProductPage = (props) => {
             <div className='content-dashboard-container'>
                 {props.children}
             </div>
-            <Divider/>
-            {props.description && 
-            <p>{props.description}</p>}
+            <Divider />
+            {props.description &&
+                <p>{props.description}</p>}
             <style jsx>
                 {`
         .content-dashboard-container {

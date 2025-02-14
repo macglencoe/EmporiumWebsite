@@ -87,11 +87,10 @@ const CigarCatalog = (props) => {
             defaultValue: "Any Strength",
           },
           {
-            name: "Size",
+            name: "Sizes",
             label: "Size",
             values: uniqueSizes,
             defaultValue: "Any Size",
-            flatmap: "Sizes",
           }
 
         ]}

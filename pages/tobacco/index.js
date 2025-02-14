@@ -19,11 +19,13 @@ const TobaccoCatalog = (props) => {
         .map(origin => origin.trim())
     )];
 
-    const uniqueCuts = [...new Set(props.data
-        .map(item => item['Cut'])
+
+    const uniqueComponents = [...new Set((props.data)
+        .flatMap(item => item['Components'])
         .filter(origin => origin != null)
         .map(origin => origin.trim())
     )];
+
 
     const uniqueFamilies = [...new Set(props.data
         .map(item => item['Family'])
@@ -49,10 +51,10 @@ const TobaccoCatalog = (props) => {
                         defaultValue: "All Brands"
                     },
                     {
-                        name: "Cut",
-                        label: "Cut",
-                        values: uniqueCuts,
-                        defaultValue: "All Cuts"
+                        name: "Components",
+                        label: "Components",
+                        values: uniqueComponents,
+                        defaultValue: "Any Components",
                     },
                     {
                         name: "Family",
@@ -80,7 +82,13 @@ const TobaccoCatalog = (props) => {
                     href: (item) => {
                         return('/tobacco/'+item.slug)
                     },
-                    buttonText: (item) => {return("See More")}
+                    buttonText: (item) => {
+                        return(
+                            item["Components"] && item["Components"].length > 1 ?
+                                item["Components"].length + ' Components' :
+                                item["Components"]
+                        )
+                    }
 
                 }}
 

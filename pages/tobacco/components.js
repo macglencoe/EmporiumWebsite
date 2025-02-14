@@ -4,17 +4,18 @@ import Layout from '../../components/layout'
 import SearchBy from '../../components/searchby'
 import Head from 'next/head'
 
-const TobaccoCuts = (props) => {
+const TobaccoComponents = (props) => {
 
     return (
         <>
         <Head>
-            <title>Tobacco by Cut</title>
+            <title>Tobacco by Component</title>
         </Head>
             <Layout>
                 <SearchBy 
-                title="Search Pipe Tobacco by Cut" 
-                field="Cut"
+                title="Search Pipe Tobacco by Component"
+                flatmap="Components"
+                field="Components"
                 data={Data}
                 catalogPath="/tobacco"
                 />
@@ -23,4 +24,4 @@ const TobaccoCuts = (props) => {
     )
 }
 
-export default TobaccoCuts
+export default TobaccoComponents
