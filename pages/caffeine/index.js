@@ -1,6 +1,7 @@
 import Layout from '../../components/layout';
 import Catalog from '../../components/catalog';
 import Head from 'next/head';
+import PageTitle1 from '../../components/pagetitle1';
 
 export const getStaticProps = async () => {
     const data = await import('../../public/data/caffeine.json');
@@ -31,7 +32,115 @@ const CaffeineCatalog = (props) => {
         <Head>
             <title>Coffee & Tea Catalog</title>
         </Head>
-            <Catalog
+        <Layout>
+            <PageTitle1>Coffee & Tea</PageTitle1>
+
+            <div className='content-container'>
+                <section id='coffee'>
+                    <h2>Coffee</h2>
+                    <div>
+                        <p>Our coffee is available to be enjoyed fresh in-store or for purchase, whole or ground.</p>
+                    </div>
+                    <h3>Our collection:</h3>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Roast</th>
+                        </tr>
+                        {props.data
+                            .filter(item => item['Type'] === 'Coffee')
+                            .map(item => 
+                        <tr id={item['slug']}>
+                            <td>{item['Product Name']}</td>
+                            <td>{item['Roast']}</td>
+                        </tr>
+                        )}
+                    </table>
+                </section>
+                <section id='tea'>
+                    <h2>Tea</h2>
+                    <div><p>Enjoy our tea made fresh in-store, or take some home, available by weight.</p></div>
+                    <h3>Our collection:</h3>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Origin</th>
+                        </tr>
+                        {props.data
+                            .filter(item => item['Type'] === 'Tea')
+                            .map(item =>
+                        <tr id={item['slug']}>
+                            <td>{item['Product Name']}</td>
+                            <td>{item['Origin']}</td>
+                        </tr>
+                            )}
+                    </table>
+                </section>
+            </div>
+
+        </Layout>
+        <style jsx>
+                {`
+                .content-container {
+                    padding: 1em;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+                }
+                section {
+                    padding: 1em;
+                    background-color: var(--dl-color-theme-primary2);
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+                }
+                section > div img {
+                    width: 20vmax;
+                    border-right: solid 3px var(--dl-color-theme-secondary2);
+                    padding: 1em;
+                }
+
+                section > div {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1em;
+                    align-items: center;
+                    max-width: 850px;
+
+                }
+                section p {
+                    font-size: 1.2em;
+                }
+                section th {
+                    font-size: 1.2em;
+                    font-variant: small-caps;
+                    text-align: left;
+                    border-bottom: solid 3px var(--dl-color-theme-secondary2);
+                }
+                section table {
+                    border-spacing: 3px 1em
+                }
+                section td {
+                    font-size: 1.2em;
+                    font-weight: bold;
+                    border-bottom: dashed 1px var(--dl-color-theme-primary1);
+                }
+                @media (max-width: 680px) {
+                    section p{
+                        font-size: 1em;
+                    }
+                    section > div img {
+                        width: 15em;
+                        border-right: none;
+                        border-bottom: solid 3px var(--dl-color-theme-secondary2);
+                    }
+                    section div {
+                        flex-direction: column;
+                    }
+                `}
+            </style>
+            {/* <Catalog
                 data={props.data}
 
                 title="Coffee & Tea"
@@ -76,7 +185,7 @@ const CaffeineCatalog = (props) => {
 
                 }}
             
-            />
+            /> */}
         </>
     )
 }
