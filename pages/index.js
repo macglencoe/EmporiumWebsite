@@ -134,17 +134,7 @@ const Catalog = (props) => {
             { href: "/cigars/sizes", label: "Size" },
           ]}
         />
-
         <div className='divider'></div>
-
-        <ShopSuggestions
-          title="Pipes"
-          items={[
-            { href: "/pipes/brands", label: "Brand" },
-            { href: "/pipes/types", label: "Type" },
-            { href: "/pipes/materials", label: "Material" },
-          ]}
-        />
         <ShopSuggestions
           title="Pipe Tobacco"
           items={[
@@ -154,15 +144,6 @@ const Catalog = (props) => {
           ]}
         />
 
-        <div className='divider'></div>
-
-        <ShopSuggestions
-          title="Coffee & Tea"
-          items={[
-            { href: "/caffeine/roasts", label: "Roast" },
-            { href: "/caffeine/origins", label: "Origin" },
-          ]}
-        />
 
 
 
@@ -183,10 +164,10 @@ const Catalog = (props) => {
             <Link href="/cigars?Cigar+Brand=J.C.+Newman">
               <a tabIndex={0} aria-label='J.C. Newman'>
                 <img alt="J.C. Newman" src='/jcn-logo.png' /></a></Link>
-            <Link href="/pipes?Pipe+Brand=Savinelli">
+            <Link href="/pipes#savinelli">
               <a tabIndex={0} aria-label='Savinelli'>
                 <img alt="Savinelli" src='/savinelli-logo.webp' /></a></Link>
-            <Link href="/pipes?Pipe+Brand=Peterson">
+            <Link href="/pipes#peterson">
               <a tabIndex={0} aria-label='Peterson'>
                 <img alt="Peterson" src='/peterson-logo.png' /></a></Link>
             <Link href="/tobacco?Tobacco+Brand=Cornell+%26+Diehl">
@@ -202,32 +183,41 @@ const Catalog = (props) => {
           alignItems: 'center',
           justifyContent: 'center',
           padding: '20px',
-          width: '100%'
+          width: '100%',
+          gap: '2em'
         }}>
-          <h1>Meet our staff</h1>
-          <div className='staff-container' style={{
-            flexDirection: 'row'
+          <h1 style={{
+            fontSize: '2.5em'
+          }}>Meet our staff</h1>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            width: '100%',
+            justifyContent: 'center',
+            gap: '2em'
+
           }}>
-            <div className='staff-image'>
-              <img alt="Eddie" src='/edtrout.jpg' />
+            <div className='staff-container' >
+              <div className='staff-image'>
+                <img alt="Edward Trout" src='/edtrout.jpg' />
+              </div>
+              <div className='staff-info'>
+                <h2>Edward Trout</h2>
+                <p>Sole Proprietor</p>
+              </div>
             </div>
-            <div className='staff-info'>
-              <h2>Eddie fishh man</h2>
-              <p>He's the man, Eddie Ed Ed</p>
+            <div className='staff-container'>
+              <div className='staff-image'>
+                <img alt="Teddie" src='/tedmcdonald.jpg' />
+              </div>
+              <div className='staff-info'>
+                <h2>Ted McDonald</h2>
+                <p>Tobacconist</p>
+              </div>
             </div>
           </div>
-          <div className='staff-container' style={{
-            flexDirection: 'row-reverse'
-          }}>
-            <div className='staff-image'>
-              <img alt="Teddie" src='/tedmcdonald.jpg' />
-            </div>
-            <div className='staff-info'>
-              <h2>Teddie Kilometer</h2>
-              <p>Here to help, Teddie Ted Ted</p>
-            </div>
           </div>
-        </div>
 
       </Layout>
 
@@ -248,7 +238,7 @@ const Catalog = (props) => {
           display: none;
         }
         .staff-image {
-          width: 200px;
+          height: 250px;
           background-image: var(--dl-gradient-gradients-secondary2gradient);
           aspect-ratio: 1;
           display: flex;
@@ -266,18 +256,23 @@ const Catalog = (props) => {
 
         .staff-container {
           display: flex;
+          flex-direction: column;
           gap: 1em;
           padding: 10px;
-          width: 100%;
+          align-items: center;
+          background-color: var(--dl-color-theme-primary2);
+          border-radius: 15px;
         }
         
 
         .staff-container h2 {
-          font-size: 2.5em;
+          font-size: 2.1em;
+          text-align: center;
         }
 
         .staff-container p {
           font-size: 1.5em;
+          text-align: center;
         }
 
         .brand-logo-container {
@@ -293,7 +288,12 @@ const Catalog = (props) => {
         }
         .brand-logo-container img {
           width: 300px;
+          transition: transform 0.3s ease;
         }
+        .brand-logo-container img:hover {
+          transform: translate(-4px, -4px);
+        }
+        
         .shop-suggestions-container {
           display: flex;
           flex-direction: column;
@@ -412,7 +412,6 @@ const Catalog = (props) => {
             padding: 0;
           }
           .staff-container {
-            padding: 0;
           }
           .staff-container h2 {
             font-size: 1.25em;
