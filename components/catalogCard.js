@@ -27,12 +27,14 @@ const CatalogCardField = (props) => {
   align-self: center;
   align-items: flex-start;
   justify-content: space-between;
+  border-bottom: 1px dashed var(--dl-color-theme-primary1);
 }
         .catalog-text174 {
             font-size: 20px;
             font-style: normal;
             text-align: left;
             font-weight: 600;
+            align-self: center;
         }
         .catalog-text177 {
             font-size: 25px;
@@ -43,14 +45,16 @@ const CatalogCardField = (props) => {
         }
         @media (max-width: 680px) {
             .catalog-text174 {
-                font-size: 18px;
+                font-size: 1em;
             }
             .catalog-text177 {
-                font-size: 18px;
+                font-size: 1em;
+                text-align: left;
             }
             .CatalogCardField {
                 padding-left: 0px;
                 padding-right: 0px;
+                flex-wrap: wrap;
 
             }
         }
@@ -180,6 +184,7 @@ const CatalogCard = (props) => {
                     justify-items: center;
                     height: 100%;
                     align-content: center;
+                    border-bottom: 3px solid var(--dl-color-theme-secondary2);
         }
         .catalog-catalog-card {
             justify-content: space-between;
@@ -215,16 +220,14 @@ const CatalogCard = (props) => {
             justify-content: center;
           }
         .catalog-button2 {
-            fill: var(--dl-color-theme-neutral-light);
-            color: var(--dl-color-theme-neutral-light);
+            color: var(--dl-color-theme-secondary2);
             font-size: 25px;
-            align-self: flex-end;
             font-style: normal;
             font-weight: 700;
-            border-width: 0px;
             text-transform: uppercase;
-            background-color: var(--dl-color-theme-secondary2);
-            box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.25);
+            background-color: transparent;
+            border: 2px solid var(--dl-color-theme-primary1);
+            margin: 0.5em 0;
           }
         .card-content {
             width: 100%;
@@ -240,7 +243,9 @@ const CatalogCard = (props) => {
                 width: 100px;
             }
             .card-name-text {
-                font-size: 18px;
+                font-size: 1em;
+                border-right: 3px solid var(--dl-color-theme-secondary2);
+                padding-right: 4px;
             }
             .catalog-button2 {
                 font-size: 15px;
@@ -251,6 +256,10 @@ const CatalogCard = (props) => {
                 height: 100%;
                 padding-right: 10px;
                 width: 100%;
+            }
+            .card-head {
+                padding: 0 1em;
+                border-bottom: none;
             }
             
         }
