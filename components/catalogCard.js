@@ -1,5 +1,6 @@
 import JsBarcode from "jsbarcode"
 import Link from "next/link"
+import { useEffect, useState } from "react"
 
 const CatalogCardField = (props) => {
     return (
@@ -76,21 +77,37 @@ const CatalogCardField = (props) => {
  */
 
 const CatalogCard = (props) => {
+    
+    const [imageExists, setImageExists] = useState(false);
 
+    useEffect(() => {
+        const checkImageExists = async () => {
+            try {
+                const response = await fetch(props.image, { method: 'HEAD' });
+                setImageExists(response.ok);
+              } catch (error) {
+                console.error(error);
+              }
+        };
+        checkImageExists();
+    }, [props.image]);
+    
     return (
         <>
             <Link href={props.href}><a className="catalog-card-parent" tabIndex={0}>
                 <div className="catalog-catalog-card catalogCard">
 
                     <div className="card-head">
+                       
+                        
+                       { imageExists &&
                         <div className="CatalogCardImage">
-                            {props.image && (
-                                <img src={props.image} alt={props.title} onError={(e) => { e.target.style.display = "none" }} />
-                            )}
+                            <img src={props.image} alt={"Cigar Image "+props.title} />
+                        </div>}
 
-                        </div>
-
-                        <div className="catalog-container47 CatalogCardName">
+                        <div className="catalog-container47 CatalogCardName" style={{
+                            padding: imageExists ? "0" : "2em 0"
+                        }}>
 
                             <span className="card-name-text"><i>{props.secondaryTitle}</i> <b>{props.name} {props.title}</b></span>
 
@@ -160,6 +177,8 @@ const CatalogCard = (props) => {
             }
         .card-head {
                     justify-items: center;
+                    height: 100%;
+                    align-content: center;
         }
         .catalog-catalog-card {
             justify-content: space-between;
@@ -167,7 +186,8 @@ const CatalogCard = (props) => {
         }
         .catalog-container47 {
             align-self: center;
-            display: flex
+            display: flex;
+            align-content: center;
           }
         .card-name-text {
             transition: text-decoration 0.3s ease-in-out;
