@@ -51,6 +51,7 @@ const CatalogCardField = (props) => {
             .CatalogCardField {
                 padding-left: 0px;
                 padding-right: 0px;
+
             }
         }
         
@@ -232,6 +233,7 @@ const CatalogCard = (props) => {
             .catalog-catalog-card {
                 max-width: 100%;
                 flex-direction: row;
+                gap: 1em;
                 
             }
             .CatalogCardImage {
@@ -250,9 +252,7 @@ const CatalogCard = (props) => {
                 padding-right: 10px;
                 width: 100%;
             }
-            .card-head {
-                width: auto;
-            }
+            
         }
                     `
                 }
