@@ -16,24 +16,6 @@ export const getStaticProps = async () => {
 const PipeCatalog = (props) => {
 
     
-    const uniqueBrands = [...new Set(props.data
-        .map(item => item['Pipe Brand'])
-        .filter(origin => origin != null)
-        .map(origin => origin.trim())
-    )];
-
-    const uniqueMaterials = [...new Set(props.data
-        .map(item => item['Material'])
-        .filter(origin => origin != null)
-        .map(origin => origin.trim())
-    )];
-
-    const uniqueTypes = [...new Set(props.data
-        .map(item => item['Type'])
-        .filter(origin => origin != null)
-        .map(origin => origin.trim())
-    )];
-
     return (
         <>
             <Head>
@@ -64,8 +46,10 @@ const PipeCatalog = (props) => {
                         <h2>Corn Cob Pipes</h2>
                         <div>
                             <a href='/corn-cob-pipes.png'>
-                                <img alt='Corn Cob Pipes Display Case' aria-label='Corn Cob Pipes'
-                                src='/corn-cob-pipes.png'></img>
+                                <div className='photo'>
+                                    <img alt='Corn Cob Pipes Display Case' aria-label='Corn Cob Pipes'
+                                    src='/corn-cob-pipes.png' className='image'></img>
+                                </div>
                             </a>
                             <p>Come check out our selection of Missouri Meerschaum Corn Cob pipes in various shapes and sizes!</p>
                         </div>
@@ -74,8 +58,10 @@ const PipeCatalog = (props) => {
                         <h2>Estate Pipes</h2>
                         <div>
                             <a href='/estate-pipes.png'>
-                                <img alt='Estate Pipes Display Case' aria-label='Estate Pipes'
-                                src='/estate-pipes.png'></img>
+                                <div className='photo'>
+                                    <img alt='Estate Pipes Display Case' aria-label='Estate Pipes'
+                                    src='/estate-pipes.png'></img>
+                                </div>
                             </a>
                             <p>We have a large collection of restored estate pipes. Come find your perfect match!</p>
                         </div>
@@ -160,8 +146,41 @@ const PipeCatalog = (props) => {
                 }
                 section > div img {
                     width: 20vmax;
-                    border-right: solid 3px var(--dl-color-theme-secondary2);
-                    padding: 1em;
+                }
+                section > div a {
+                    display: flex;
+                    flex-direction: row;
+                }
+                section > div a::after {
+                    content: "";
+                    display: block;
+                    padding-left: 1em;
+                    border-right: 3px solid var(--dl-color-theme-secondary2);
+                    
+                }
+                .photo {
+                    width: 100%;
+                    height: 100%;
+                    border: outset 5px var(--dl-color-theme-secondary2);
+                    border-radius: 10px;
+                    transition: transform 0.3s;
+                    display: flex;
+                }
+                .photo:hover {
+                    transform: scale(1.05);
+                }
+                .photo:hover::before {
+                    content: "Click to enlarge";
+                    position: absolute;
+                    top: -1px;
+                    left: -1px;
+                    background-color: var(--dl-color-theme-secondary2);
+                    color: white;
+                    font-weight: 500;
+                    padding: 5px 10px;
+                    border-radius: 0 0 10px 0;
+                    font-size: 14px;
+                    pointer-events: none;
                 }
                 section > div {
                     display: flex;
@@ -180,11 +199,32 @@ const PipeCatalog = (props) => {
                     }
                     section > div img {
                         width: 15em;
+                    }
+
+                    section > div a {
+                        flex-direction: column;
+                    }
+
+                    section > div a::after {
                         border-right: none;
                         border-bottom: solid 3px var(--dl-color-theme-secondary2);
+                        padding-left: 0;
+                        padding-top: 0.5em;
                     }
                     section div {
                         flex-direction: column;
+                    }
+                    .photo::after {
+                        content: "Click to enlarge";
+                        position: relative;
+                        
+                        background-color: var(--dl-color-theme-secondary2);
+                        color: white;
+                        font-weight: 500;
+                        padding: 5px 10px;
+                        
+                        font-size: 14px;
+                        pointer-events: none;
                     }
                 `}
             </style>

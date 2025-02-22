@@ -41,23 +41,17 @@ const Catalog = (props) => {
         <div className='welcome-container-b' >
           <div className='welcome-container'>
 
-            <div style={{
-              borderBottom: '3px solid var(--dl-color-theme-secondary2)',
-              width: '100%',
-              height: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: '10px'
-            }}>
-              <p className="welcome-text">
-                Welcome to the Eastern Panhandle's only premier cigar lounge,
-                and the perfect third space! For over 30 years, we've been serving
-                Martinsburg, WV, with a friendly, laid-back spot to relax, chat,
-                and unwind. Whether you're into fine cigars or premium briar pipes,
-                we're here to share our expertise and help you find your perfect match.
-                Come see why we're a favorite for pipe and cigar enthusiasts alike!
+            <div className='welcome-text-container'>
+              <h1>The Eastern Panhandle's only cigar lounge</h1>
+              <p>
+                The King Street Emporium is the <b>perfect third space!</b> For over 30 years, we've been serving Martinsburg, WV, with a <b>friendly, laid-back spot</b> to <b>relax, chat, and unwind</b>
               </p>
+              <p>
+                Whether you're looking for <b>fine cigars</b>, <b>pipes</b>, a nice cup of <b>coffee</b>, or some good <b>conversation</b>, <b>we're here to share our expertise</b>!
+              </p>
+              
+
+              
             </div>
             <div className="divider"></div>
             <div style={{
@@ -331,6 +325,30 @@ const Catalog = (props) => {
           font-size: 20px;
           font-weight: 700;
           text-transform: uppercase;
+        }
+
+        .welcome-text-container {
+          border-bottom: 3px solid var(--dl-color-theme-secondary2);
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 10px;
+          gap: 1em; 
+        }
+
+        .welcome-text-container h1 {
+          font-size: 1.5em;
+          font-weight: bold;
+        }
+
+        .welcome-text-container b {
+          font-size: 1.2em;
+        }
+
+        .welcome-text-container p {
+          font-size: 1.2em;
         }
 
         .welcome-container-b {

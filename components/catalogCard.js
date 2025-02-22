@@ -102,7 +102,7 @@ const CatalogCard = (props) => {
             <Link href={props.href}><a className="catalog-card-parent" tabIndex={0}>
                 <div className="catalog-catalog-card catalogCard">
 
-                    <div className="card-head">
+                    <div className={"card-head"+(imageExists ? "" : " no-image")}>
                        
                         
                        { imageExists &&
@@ -186,6 +186,9 @@ const CatalogCard = (props) => {
                     align-content: center;
                     border-bottom: 3px solid var(--dl-color-theme-secondary2);
         }
+        .card-head.no-image {
+            height: 160px;
+        }
         .catalog-catalog-card {
             justify-content: space-between;
             display: flex;
@@ -237,6 +240,8 @@ const CatalogCard = (props) => {
                 max-width: 100%;
                 flex-direction: row;
                 gap: 1em;
+                display: grid;
+                grid-template-columns: 3fr 4fr;
                 
             }
             .CatalogCardImage {
@@ -244,7 +249,6 @@ const CatalogCard = (props) => {
             }
             .card-name-text {
                 font-size: 1em;
-                border-right: 3px solid var(--dl-color-theme-secondary2);
                 padding-right: 4px;
             }
             .catalog-button2 {
@@ -255,11 +259,18 @@ const CatalogCard = (props) => {
                 flex-direction: column;
                 height: 100%;
                 padding-right: 10px;
-                width: 100%;
+
             }
             .card-head {
                 padding: 0 1em;
                 border-bottom: none;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                border-right: 3px solid var(--dl-color-theme-secondary2);
+            }
+            .card-head.no-image {
+                height: auto;
             }
             
         }
