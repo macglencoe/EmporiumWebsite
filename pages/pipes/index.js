@@ -169,7 +169,20 @@ const PipeCatalog = (props) => {
                 .photo:hover {
                     transform: scale(1.05);
                 }
-                .photo:hover::before {
+                
+                section > div {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1em;
+                    align-items: center;
+                    max-width: 850px;
+
+                }
+                section p {
+                    font-size: 1.2em;
+                }
+                @media (min-width: 681px) {
+                    .photo:hover::before {
                     content: "Click to enlarge";
                     position: absolute;
                     top: -1px;
@@ -182,16 +195,6 @@ const PipeCatalog = (props) => {
                     font-size: 14px;
                     pointer-events: none;
                 }
-                section > div {
-                    display: flex;
-                    flex-direction: row;
-                    gap: 1em;
-                    align-items: center;
-                    max-width: 850px;
-
-                }
-                section p {
-                    font-size: 1.2em;
                 }
                 @media (max-width: 680px) {
                     section p{
