@@ -1,6 +1,7 @@
 # King Street Emporium Website
 This project is a website for the cigar lounge, The King Street Emporium, in Martinsburg, WV. Its purpose is to provide basic information about the store, as well as the products.
 
+[![wakatime](https://wakatime.com/badge/user/f2f0ec8a-184f-40d7-89ff-dcb3f8dd8e21/project/15c4a501-6e1a-462a-b755-3d8625578979.svg)](https://wakatime.com/badge/user/f2f0ec8a-184f-40d7-89ff-dcb3f8dd8e21/project/15c4a501-6e1a-462a-b755-3d8625578979)
 ## Features
 - **Dynamic Catalogs**:
 	- Includes catalogs for cigars, pipes, tobacco, coffee, tea, and accessories.
