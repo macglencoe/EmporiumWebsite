@@ -83,7 +83,7 @@ const SearchBy = (props) => {
                         <div key={index} className='brand-container'>
                             {showLetter && <span style={{ fontWeight: 'bold', fontSize: '20px' }}>{firstLetter}</span>}
 
-                            <Link href={`/${props.catalogPath}?${props.field}=${brand}`}>
+                            <Link href={`/${props.catalogPath}?${props.field}=${encodeURIComponent(brand)}`}>
                                 <a className='brand-label-container' tabIndex={0}>
                                     <span>{brand}</span>
                                 </a>
