@@ -15,31 +15,45 @@ export const getStaticProps = async () => {
 
 const PipeCatalog = (props) => {
 
-    
+
     return (
         <>
             <Head>
                 <title>Tobacco Pipe Catalog</title>
             </Head>
             <Layout>
-                    <PageTitle1 subtitle="We have a large selection of premium tobacco pipes, available for purchase in-store">
-                        Tobacco Pipes</PageTitle1>
+                <PageTitle1 subtitle="We have a large selection of premium tobacco pipes, available for purchase in-store">
+                    Tobacco Pipes</PageTitle1>
                 <div className='content-container'>
                     <section className='section-container'>
                         <h2>Premium Brands</h2>
                         <div id='savinelli'>
                             <a href='/savinelli-logo.webp'>
                                 <img alt='Savinelli Logo' aria-label='Savinelli'
-                                src='/savinelli-logo.webp'></img>
+                                    src='/savinelli-logo.webp'></img>
                             </a>
-                            <p>Celebrated for their expert craftsmanship and timeless elegance, we offer a curated selection of premium Savinelli tobacco pipes</p>
+                            <p>Founded in 1876 by Achille Savinelli Sr., Savinelli is a family-owned company known for its quality pipes. Achille Jr. established the factory in 1948, helping cement Italy’s place in the pipe-making industry. Now led by great-grandson Giancarlo, the original Milan shop still operates. Producing around 100,000 pipes annually, Savinelli is known for its 6mm balsa filter, a mix of vulcanite and acrylic stems, and a variety of machine-made and handcrafted designs.</p>
                         </div>
                         <div id='peterson'>
                             <a href='/peterson-logo.png'>
                                 <img alt='Peterson Logo' aria-label='Peterson'
-                                src='/peterson-logo.png'></img>
+                                    src='/peterson-logo.png'></img>
                             </a>
-                            <p>Renowned for their distinctive style and exceptional craftsmanship, we present a curated selection of premium Peterson tobacco pipes.</p>
+                            <p>Peterson, the world’s longest-running pipe maker, is known for its iconic designs. Featured in media for over a century, their pipes are beloved by many, including Mark Twain, who famously favored the System pipe. This lasting recognition comes from the brand’s key innovation: the practical and influential System Pipe.</p>
+                        </div>
+                        <div id='molina'>
+                            <a href='/molina-logo.png'>
+                                <img alt='Molina Logo' aria-label='Molina'
+                                    src='/molina-logo.png'></img>
+                            </a>
+                            <p>Molina, meaning "mill" in Italian, is a fitting name for this esteemed pipe manufacturer with deep-rooted connections to the historic Rossi factory. Whether you're a novice pipe smoker or a seasoned aficionado, Molina pipes deliver craftsmanship and variety to suit every preference.</p>
+                        </div>
+                        <div id='rossi'>
+                            <a href='/rossi-logo.png'>
+                                <img alt='Rossi Logo' aria-label='Rossi'
+                                    src='/rossi-logo.png'></img>
+                            </a>
+                            <p>Ferdinando Rossi helped establish briar pipe production in Italy alongside his contemporary, Achille Savinelli. Though competitors, they shared a close friendship. Nearly a century later, Savinelli took over the Rossi brand, aiming to revive it with quality, affordable Italian pipes through <i>Rossi by Savinelli</i>.</p>
                         </div>
                     </section>
                     <section id='corn-cob-pipes'>
@@ -48,7 +62,7 @@ const PipeCatalog = (props) => {
                             <a href='/corn-cob-pipes.png'>
                                 <div className='photo'>
                                     <img alt='Corn Cob Pipes Display Case' aria-label='Corn Cob Pipes'
-                                    src='/corn-cob-pipes.png' className='image'></img>
+                                        src='/corn-cob-pipes.png' className='image'></img>
                                 </div>
                             </a>
                             <p>Come check out our selection of Missouri Meerschaum Corn Cob pipes in various shapes and sizes!</p>
@@ -60,7 +74,7 @@ const PipeCatalog = (props) => {
                             <a href='/estate-pipes.png'>
                                 <div className='photo'>
                                     <img alt='Estate Pipes Display Case' aria-label='Estate Pipes'
-                                    src='/estate-pipes.png'></img>
+                                        src='/estate-pipes.png'></img>
                                 </div>
                             </a>
                             <p>We have a large collection of restored estate pipes. Come find your perfect match!</p>
@@ -175,11 +189,11 @@ const PipeCatalog = (props) => {
                     flex-direction: row;
                     gap: 1em;
                     align-items: center;
-                    max-width: 850px;
 
                 }
                 section p {
-                    font-size: 1.2em;
+                    text-indent: 1em;
+                    line-height: 1.5em;
                 }
                 @media (min-width: 681px) {
                     .photo:hover::before {
