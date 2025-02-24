@@ -68,16 +68,34 @@ const ShopSuggestions = (props) => {
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: all 0.3s ease-out;
         }
         .shop-suggestions-card > span {
           font-size: 20px;
           font-weight: 700;
           text-transform: uppercase;
+          transition: all 0.3s ease-out;
+            color: var(--dl-color-theme-secondary2);
+        }
+        a:hover .shop-suggestions-card,
+        a:focus .shop-suggestions-card{
+            outline: none;
+          transform: translateY(-10px);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+        }
+        a:hover .shop-suggestions-card > span,
+        a:focus .shop-suggestions-card > span {
+          color: var(--dl-color-theme-secondary1);
         }
         @media (max-width: 1200px) {
           .shop-suggestions {
             flex-direction: column;
             }
+        }
+        @media (max-width: 680px) {
+          .shop-suggestions-card > span {
+            color: var(--dl-color-theme-secondary1);
+          }
         }
                 `}
             </style>

@@ -84,14 +84,7 @@ const Catalog = (props) => {
               }}>
 
                 <h1>Swing by, have a seat!</h1>
-                <button className="our-store-button" onClick={handleLocationClick} style={{
-                  backgroundColor: 'var(--dl-color-theme-secondary2)',
-                  color: 'var(--dl-color-theme-primary1)',
-                  padding: '10px',
-                  borderRadius: '10px',
-                  fontWeight: 'bold',
-                  fontSize: '1.2em'
-                }}>Visit Our Store</button>
+                <button className="our-store-button" onClick={handleLocationClick}>Visit Our Store</button>
               </div>
             </div>
           </div>
@@ -217,7 +210,19 @@ const Catalog = (props) => {
 
       <style jsx>
         {`
-
+        .our-store-button:hover {
+          background-color: var(--dl-color-theme-primary2);
+        }
+        .our-store-button {
+          background-color: var(--dl-color-theme-secondary2);
+          color: var(--dl-color-theme-primary1);
+          padding: 10px;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: 0.3s;
+          font-weight: bold;
+          font-size: 1.2em;
+        }
         .facebook-container {
           justify-content: center;
           align-items: center;

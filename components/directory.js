@@ -5,44 +5,91 @@ import { useRouter } from 'next/router'
 
 import PropTypes from 'prop-types'
 
+const DirectoryItem = (props) => {
+    const router = useRouter();
+    return (
+        <>
+            <Link href={props.href}>
+                <a tabIndex={0} className={router.pathname == props.href ? "active-page" : ""}>
+                    <div>
+                        <span>{props.children}</span>
+                        <div className='background-gradient'></div>
+                    </div>
+                </a>
+            </Link>
+            <style jsx>
+                {`
+                a span {
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 700;
+                    color: var(--dl-color-theme-primary2);
+                    white-space: nowrap;
+                    transition: 0.3s;
+                    position: relative;
+                    z-index: 1;
+                }
+                a > div {
+                    position: relative;
+                    display: flex;
+                    padding: 0.5em;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    overflow: hidden;
+                }
+                a .background-gradient {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    transform: translateY(100%);
+                    background-image: var(--directory-gradient);
+                    transition: 0.3s ease-in;
+                }
+                a {
+                    width: 100%;
+                }
+                a:hover span, a:focus span {
+                    text-decoration: var(--dl-color-theme-primary1) underline;
+                }
+                a:hover .background-gradient, a:focus .background-gradient {
+                    transform: translateY(0);
+                }
+                a.active-page span {
+                    
+                        color: var(--dl-color-theme-primary1);
+                    
+                    
+                }
+                @media(max-width: 680px) {
+                    a span {
+                        font-size: 16px;
+                    }
+                }
+
+                
+                
+
+                `}
+            </style>
+        </>
+    )
+}
+
 const Directory = (props) => {
     const router = useRouter();
     return (
         <nav className="catalog-container1 directory">
-            <ul className='directory'>
+            <ul>
                 <li>
-                    <Link href={router.query["Display Price"] == "true" || router.query["Display Barcode"] == "true" ? "/cigars?Display+Price=true&Display+Barcode=true" : "/cigars"}>
-                        <a tabIndex={0}>
-                            <div className="container2">
-                                <div className="directoryCard">
-                                    <span className="catalog-text112">Cigars</span>
-                                </div>
-                            </div>
-                        </a>
-                    </Link>
+                    <DirectoryItem href={router.query["Display Price"] == "true" || router.query["Display Barcode"] == "true" ? "/cigars?Display+Price=true&Display+Barcode=true" : "/cigars"}>Cigars</DirectoryItem>
                 </li>
 
                 <li>
-                    <Link href="/pipes">
-                        <a tabIndex={0}>
-                            <div className="container2">
-                                <div className="directoryCard">
-                                    <span className="catalog-text113">Pipes</span>
-                                </div>
-                            </div>
-                        </a>
-                    </Link>
+                    <DirectoryItem href="/pipes">Pipes</DirectoryItem>
                 </li>
                 <li>
-                    <Link href="/caffeine">
-                        <a tabIndex={0}>
-                            <div className="container2">
-                                <div className="directoryCard">
-                                    <span className="catalog-text114">Coffee &amp; Tea</span>
-                                </div>
-                            </div>
-                        </a>
-                    </Link>
+                    <DirectoryItem href="/caffeine">Coffee & Tea</DirectoryItem>
                 </li>
                 {/* <li>
             <Link href="/accessories">
@@ -56,28 +103,39 @@ const Directory = (props) => {
             </Link>
             </li> */}
                 <li>
-                    <Link href="/tobacco">
-                        <a tabIndex={0}>
-                            <div className="container2">
-                                <div className="directoryCard">
-                                    <span className="catalog-text115">Tobacco</span>
-                                </div>
-                            </div>
-                        </a>
-                    </Link>
+                    <DirectoryItem href="/tobacco">Tobacco</DirectoryItem>
                 </li>
+                {
+                    window.innerWidth >= 680 &&
+                    <li>
+                        <DirectoryItem href="/about">About</DirectoryItem>
+                    </li>
+                }
             </ul>
             <style jsx>
                 {`
                 .directory ul {
-                list-style-type: none;}
+                list-style-type: none;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                background-color: var(--dl-color-theme-secondary1);
+                padding: 0 1em;
+                }
+                .directory li {
+                flex: 1;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                }
+                
+                
             
             .container1 {
                 position: relative;
-            }
-            .directory {
-                background-color: var(--dl-color-theme-primary1);
-
             }
             .background-image {
                 top: 0px;

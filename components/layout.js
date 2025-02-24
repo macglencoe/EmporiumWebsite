@@ -148,7 +148,7 @@ const Layout = (props) => {
           top: 0;
           width: 100%;
           z-index: 2;
-          border-bottom: 3px solid var(--dl-color-theme-secondary2);
+          border-bottom: 6px solid var(--dl-color-theme-secondary2);
         }
 
         .header-title {
@@ -160,6 +160,10 @@ const Layout = (props) => {
           align-items: center;
           padding-left: 1em;
           gap: 1em;
+          border-bottom: 6px double var(--dl-color-theme-primary1);
+        }
+        .header-title h1 {
+          font-variant: small-caps;
         }
         
         .layout-title-container {

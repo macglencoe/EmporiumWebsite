@@ -149,6 +149,15 @@ const Contact = (props) => {
     flex-direction: column;
     background-color: var(--dl-color-theme-secondary2);
     }
+.location-container:hover span {
+    text-decoration: underline;
+}
+.phone-container:hover span {
+    text-decoration: underline;
+}
+.email-container:hover span {
+    text-decoration: underline;
+}
 .catalog-container75 {
     gap: var(--dl-space-space-halfunit);
     flex: 0 0 auto;
