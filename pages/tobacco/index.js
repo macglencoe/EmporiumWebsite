@@ -88,6 +88,12 @@ const TobaccoCatalog = (props) => {
                                 item["Components"].length + ' Components' :
                                 item["Components"]
                         )
+                    },
+
+                    description: (item) => {
+                        return (
+                            item['description']
+                        )
                     }
 
                 }}

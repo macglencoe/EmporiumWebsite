@@ -21,7 +21,7 @@ export const StringBubbleList = (props) => {
             <div className='main-container'>
                 <h2>{props.title}</h2>
                 <div className='bbl-container'>
-    
+
                     {props.data.map(item =>
                         <span key={item}>{item}</span>
                     )}
@@ -453,7 +453,11 @@ const ProductPage = (props) => {
             </div>
             <Divider />
             {props.description &&
-                <p>{props.description}</p>}
+                <div className='description-container' aria-label='product description'>
+                    <div aria-hidden><span>i</span></div>
+                    <p>{props.description}</p>
+                </div>}
+
             <style jsx>
                 {`
         .content-dashboard-container {
@@ -464,6 +468,43 @@ const ProductPage = (props) => {
             padding: var(--dl-space-space-unit);
             align-items: flex-start;
           }
+        .description-container {
+            padding: 5px;
+            margin: 10px;
+            background-color: var(--dl-color-theme-primary2);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .description-container > p {
+            margin: 10px;
+            font-size: 1.2em;
+            line-height: 2em;
+            text-indent: 2em;
+          }
+        .description-container > div:first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2em;
+            background-color: var(--dl-color-theme-secondary2);
+            height: 2em;
+            border-bottom-right-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .description-container > div:first-child > span {
+            color: var(--dl-color-theme-primary1);
+            font-family: monospace;
+            font-weight: bold;
+        }
+        @media (max-width: 680px) {
+            .description-container > p {
+                font-size: 1em;
+                line-height: 1.8em;
+              }
+        }
         `}
             </style>
         </>

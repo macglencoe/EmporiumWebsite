@@ -43,6 +43,7 @@ const CigarPage = (props) => {
     return <div>Cigar not found</div>;
   }
 
+
   return (
     <>
       <Head>
@@ -51,7 +52,7 @@ const CigarPage = (props) => {
       <Layout>
         <PageTitle1>Cigar Information</PageTitle1>
         <ProductPage
-          description={cigar.Description}
+          description={cigar.description}
         >
           <ProductSideContent>
             <ProductImage

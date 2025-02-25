@@ -66,6 +66,84 @@ const CatalogCardField = (props) => {
     )
 }
 
+const CatalogCardDescription = (props) => {
+    return (
+        <>
+            <div>
+                <div></div>
+                <p>{props.children}</p>
+            </div>
+            <a><p>... see more</p></a>
+        <style jsx>
+            {`
+            div {
+                display: block;
+                line-clamp: 2;
+
+                width: 100%;
+                height: 4em;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                position: relative;
+                animation: height 0.5s ease-in-out;
+            }
+            div > p {
+                margin: 0 20px;
+                margin-bottom: 0.5em;
+                color: var(--dl-color-theme-secondary2);
+                line-height: 1.5em;
+            }
+            div > div {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--dl-color-theme-primary2) 90%);
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                transition: bottom 0.3s ease-in-out;
+            }
+            div:hover {
+                height: auto;
+                line-clamp: none;
+            }
+            div:hover > div {
+                bottom: -100%;
+            }
+            a {
+                display: none;
+            }
+            @media (max-width: 680px) {
+                div {
+                    line-clamp: 2;
+                    height: 2.4em;
+                }
+                div > p {
+                    margin: 0 2px;
+                    text-align: center;
+                    font-size: 0.8em;
+                }
+                div > div {
+                    display: none;
+                }
+                a {
+                    display: block;
+                }
+                a p{
+                    width: 100%;
+                    text-align: center;
+                    align-items: flex-start;
+                    margin-bottom: 1em;
+                    color: var(--dl-color-theme-primary1);
+                    font-size: 0.8em;
+                }
+            }
+
+
+            `}
+        </style>
+        </>
+    )
+}
 
 /**
  * CatalogCard component for displaying an individual item in a catalog.
@@ -117,6 +195,8 @@ const CatalogCard = (props) => {
                             <span className="card-name-text"><i>{props.secondaryTitle}</i> <b>{props.name} {props.title}</b></span>
 
                         </div>
+                        {props.description &&
+                        <div className="description-container"><CatalogCardDescription>{props.description}</CatalogCardDescription></div>}
                     </div>
                     <div className="card-content">
 
@@ -157,6 +237,8 @@ const CatalogCard = (props) => {
                                 </button>}
                         </div>
 
+                        
+
 
                     </div>
                 </div>
@@ -164,6 +246,10 @@ const CatalogCard = (props) => {
             <style jsx>
                 {
                     `
+        
+        card-head:not(.no-image) > .description-container {
+            display: none;
+        }
         .CatalogCardImage img {
             width: 100%;
             height: 100%;
@@ -181,17 +267,31 @@ const CatalogCard = (props) => {
             background-image: var(--dl-gradient-gradients-secondary2gradient);
             }
         .card-head {
-                    justify-items: center;
-                    height: 100%;
-                    align-content: center;
-                    border-bottom: 3px solid var(--dl-color-theme-secondary2);
+            justify-items: center;
+            justify-content: center;
+            height: 100%;
+            align-content: center;
+            background-color: var(--dl-color-theme-primary2);
+            background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 00.00%,var(--dl-color-theme-primary1) 300.00%);
+        }
+        .card-head.no-image:hover {
+            height: auto;
         }
         .card-head.no-image {
             height: 160px;
+            animation: height 0.5s ease-in-out;
+        }
+        .card-content {
+            width: 100%;
+            background-color: var(--dl-color-theme-primary2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 1;
         }
         .catalog-catalog-card {
-            justify-content: space-between;
-            display: flex;
+            display: grid;
+            grid-template-rows: auto 1fr;
         }
         .catalog-container47 {
             align-self: center;
@@ -232,14 +332,12 @@ const CatalogCard = (props) => {
             border: 2px solid var(--dl-color-theme-primary1);
             margin: 0.5em 0;
           }
-        .card-content {
-            width: 100%;
-        }
+        
         @media (max-width: 680px) {
             .catalog-catalog-card {
                 max-width: 100%;
                 flex-direction: row;
-                gap: 1em;
+                column-gap: 1em;
                 display: grid;
                 grid-template-columns: 3fr 4fr;
                 
@@ -259,15 +357,16 @@ const CatalogCard = (props) => {
                 flex-direction: column;
                 height: 100%;
                 padding-right: 10px;
+                box-shadow: none;
 
             }
             .card-head {
-                padding: 0 1em;
+                padding: 0 8px;
                 border-bottom: none;
                 height: auto;
                 display: flex;
                 flex-direction: column;
-                border-right: 3px solid var(--dl-color-theme-secondary2);
+                border-right: 3px solid var(--dl-color-theme-secondary2);d
             }
             .card-head.no-image {
                 height: auto;

@@ -45,7 +45,9 @@ const TobaccoPage = (props) => {
             </Head>
             <Layout>
                 <PageTitle1>Tobacco Information</PageTitle1>
-                <ProductPage>
+                <ProductPage
+                    description = {tobacco.description}
+                >
                     <ProductSideContent>
                         {tobacco.Components &&
                             <StringBubbleList

@@ -7,7 +7,8 @@
     {
         "Tobacco Name":"Greg's Mix",
         "Tobacco Brand":"King Street Emporium",
-        "slug":"gregs-mix"
+        "slug":"gregs-mix",
+        "description":"This is blended for the all day smoker. Smooth, cool smoth with a well balanced sweetness."
     },
     {
         "Tobacco Name": "Founding Fathers",
@@ -19,7 +20,7 @@
         ],
         "Family": "Aromatic",
         "slug": "founding-fathers",
-        "Description": "A delightful Aromatic infused with the flavor of an exotic fruit originally from the middle East that was a particular favorite in the 18th Century and found growing on the grounds of Mount Vernon, Monticello, and around the homes of other Founding Fathers."
+        "description": "A delightful Aromatic infused with the flavor of an exotic fruit originally from the middle East that was a particular favorite in the 18th Century and found growing on the grounds of Mount Vernon, Monticello, and around the homes of other Founding Fathers."
     },
     {
         "Tobacco Name": "Nutty Irishman",
@@ -31,7 +32,7 @@
         ],
         "Family": "Aromatic",
         "slug": "nutty-irishman",
-        "Description": "C&D's Nutty Irishman is a unique blend, combining the heavenly hazelnut flavor of Frangelico and honeyed, aromatic spice of Irish Mist, in a delightfully satisfying manner."
+        "description": "C&D's Nutty Irishman is a unique blend, combining the heavenly hazelnut flavor of Frangelico and honeyed, aromatic spice of Irish Mist, in a delightfully satisfying manner."
     },
     {
         "Tobacco Name": "Autumn Evening",
@@ -41,7 +42,7 @@
         ],
         "Family": "Aromatic",
         "slug": "autumn-evening",
-        "Description": "Cornell & Diehl's proprietary Red Virginia Cavendish is lightly cased with a delicate maple flavor for one unique, and widely popular Aromatic blend. The smoker will appreciate the taste of fine Virginias while those around will flock to the warm, inviting fragrance."
+        "description": "Cornell & Diehl's proprietary Red Virginia Cavendish is lightly cased with a delicate maple flavor for one unique, and widely popular Aromatic blend. The smoker will appreciate the taste of fine Virginias while those around will flock to the warm, inviting fragrance."
     },
     {
         "Tobacco Name": "Bayou Morning",
@@ -52,7 +53,7 @@
         ],
         "Family": "Virginia",
         "slug": "bayou-morning",
-        "Description": "A Perique lover's delight, Bayou Morning is a bold mixture of Red and Bright Virginias and 25% Perique. While not for the faint of heart, it remains one of our most popular blends."
+        "description": "A Perique lover's delight, Bayou Morning is a bold mixture of Red and Bright Virginias and 25% Perique. While not for the faint of heart, it remains one of our most popular blends."
     },
     {
         "Tobacco Name": "Bayou Night",
@@ -66,7 +67,7 @@
         ],
         "Family": "Scottish",
         "slug": "bayou-night",
-        "Description": "A Scottish type blend of Latakia, Perique, Virginias, Turkish, and Burleys that boasts a heavier Perique component than normally found in a classic Scottish blend. A full smoke that is surprisingly cool on the palate."
+        "description": "A Scottish type blend of Latakia, Perique, Virginias, Turkish, and Burleys that boasts a heavier Perique component than normally found in a classic Scottish blend. A full smoke that is surprisingly cool on the palate."
     },
     {
         "Tobacco Name": "Sleepy Creek",
@@ -76,7 +77,8 @@
             "Black Cavendish"
         ],
         "Family":"American Aromatic",
-        "slug": "sleepy-creek"
+        "slug": "sleepy-creek",
+        "description":"A mild base of Cavendish with an even amount of cherry and vanilla flavoring."
     },
     {
         "Tobacco Name": "Trout Stream",
@@ -88,13 +90,15 @@
         "Tobacco Name": "Vanilla Creme",
         "Tobacco Brand": "King Street Emporium",
         "Family":"American Aromatic",
-        "slug": "vanilla-creme"
+        "slug": "vanilla-creme",
+        "description":"A softened vanilla offering of mild Cavendish."
     },
     {
         "Tobacco Name": "Ol' Trapper",
         "Tobacco Brand": "King Street Emporium",
-        "Family": "Golden Cavendish",
-        "slug": "ol-trapper"
+        "Family": "Golden Virginia",
+        "slug": "ol-trapper",
+        "description":"Bright Golden Virginia … ribbon cut with a subtle aromatic fragrance."
     },
     {
         "Tobacco Name": "Mountaineer",
@@ -105,7 +109,8 @@
             "Burley",
             "Virginia"
         ],
-        "slug": "mountaineer"
+        "slug": "mountaineer",
+        "description":"Blended with just the right proportion of Golden Virginia and Burleys, the basic blend of Toasted Cavendish tobaccos takes on a zesty dimension. This is another mixture that gets better as you smoke it all day long."
     },
     {
         "Tobacco Name": "Boswell's Best",
@@ -116,7 +121,8 @@
             "Virginia",
             "Black Vanilla Cavendish"
         ],
-        "slug": "boswells-best"
+        "slug": "boswells-best",
+        "description": "What can we say? Our pipe maker’s favorite blend."
     },
     {
         "Tobacco Name": "Black Cordial",
@@ -126,7 +132,8 @@
             "Cavendish",
             "Black Cavendish"
         ],
-        "slug": "black-cordial"
+        "slug": "black-cordial",
+        "description": "A new generation of pipe tobacco. A blend of four new and unusual black fire-cured grades with added highlights of Sweet Virginia. Dramatically new and different in taste and appearance."
     },
     {
         "Tobacco Name": "Butter Rum",
@@ -138,7 +145,8 @@
         "Tobacco Name": "Cherry Vanilla",
         "Tobacco Brand": "King Street Emporium",
         "Family":"American Aromatic",
-        "slug": "cherry-vanilla"
+        "slug": "cherry-vanilla",
+        "description":"Vanilla flavored Cavendish with a smooth cherry aroma."
     },
     {
         "Tobacco Name": "221 B. Baker's St.",
@@ -150,13 +158,15 @@
             "Latakia",
             "Virginia"
         ],
-        "slug": "221-b-bakers-st"
+        "slug": "221-b-bakers-st",
+        "description": "Toasted Cavendish laced with Latakia, then blended with White Burley and Golden Virginia to produce a sweet, fuller bodied smoke, yet cool and slow burning."
     },
     {
         "Tobacco Name": "Cherry Run",
         "Tobacco Brand": "King Street Emporium",
         "Family":"American Aromatic",
-        "slug": "cherry-run"
+        "slug": "cherry-run",
+        "description": "Smooth, mild home blend beefed up with rich cherry."
     },
     {
         "Tobacco Name": "Neapolitan",
@@ -174,19 +184,22 @@
         "Tobacco Name": "David Hobbs",
         "Tobacco Brand": "King Street Emporium",
         "Family":"English",
-        "slug": "david-hobbs"
+        "slug": "david-hobbs",
+        "description":"The traditional English blend. Distinct, royal, noble. An admirable skilled blend of pure tobaccos. Any smoker whose first love is for the finest quality mixed together without adulteration will fall in love with this one. Named after the famous race car driver."
     },
     {
         "Tobacco Name": "Vanilla Fudge",
         "Tobacco Brand": "King Street Emporium",
         "Family":"American Aromatic",
-        "slug": "vanilla-fudge"
+        "slug": "vanilla-fudge",
+        "description":"The best chocolate flavored Cavendish with a hint of vanilla."
     },
     {
         "Tobacco Name": "Smoker's Choice",
         "Tobacco Brand": "King Street Emporium",
         "Family":"Black Cavendish",
-        "slug": "smokers-choice"
+        "slug": "smokers-choice",
+        "description":"A black tobacco of unmatched mildness, slow burning with rich aroma."
     },
     {
         "Tobacco Name": "Latakia",
@@ -213,6 +226,7 @@
             "Virginia"
         ],
         "Family": "American Aromatic",
-        "slug": "almost-heaven"
+        "slug": "almost-heaven",
+        "description": "Our most popular blend-smooth burning Golden Leaf Cavendish mixed with fire cured blends and our special ingredient to produce a flavorful, mild, pleasant aroma."
     }
 ]
