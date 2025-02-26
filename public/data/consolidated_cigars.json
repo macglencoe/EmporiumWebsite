@@ -4511,24 +4511,7 @@
     "Future Inventory": "",
     "Future Inventory 1": "",
     "Sizes": [
-      "Rothschild"
-    ],
-    "slug": "hoyo-de-monterrey-hoyo-rojo"
-  },
-  {
-    "Barcode": 689674000000,
-    "In_Stock": "TRUE",
-    "Cigar Brand": "Hoyo De Monterrey",
-    "Cigar Name": "Hoyo Rojo",
-    "Price": "$\t7.95",
-    "Wrapper": "Honduran Sungrown",
-    "Binder": "Nicaraguan",
-    "Filler": "Dominican Nicaraguan, Honduran",
-    "Flavor_Profile": "Cinnamon, Marshmallow, Seared Meat",
-    "Strength_Profile": "Medium",
-    "Future Inventory": "",
-    "Future Inventory 1": "",
-    "Sizes": [
+      "Rothschild",
       "Toro"
     ],
     "slug": "hoyo-de-monterrey-hoyo-rojo"
@@ -6498,24 +6481,6 @@
     "Barcode": 814539000000,
     "In_Stock": "TRUE",
     "Cigar Brand": "Oliva",
-    "Cigar Name": "Gilberto oliva Reserva Blanc",
-    "Price": "$\t8.90",
-    "Wrapper": "Ecuador Connecticut",
-    "Binder": "Nicaraguan Habano",
-    "Filler": "Nicaraguan",
-    "Flavor_Profile": "Cedar, Earth, Baking spices, Cocoa powder",
-    "Strength_Profile": "Mild-Medium",
-    "Future Inventory": "",
-    "Future Inventory 1": "",
-    "Sizes": [
-      "Toro"
-    ],
-    "slug": "oliva-gilberto-oliva-reserva-blanc"
-  },
-  {
-    "Barcode": 814539000000,
-    "In_Stock": "TRUE",
-    "Cigar Brand": "Oliva",
     "Cigar Name": "Gilberto Oliva Reserva Blanc",
     "Price": "$\t7.75",
     "Wrapper": "Ecuador Connecticut",
@@ -6526,7 +6491,9 @@
     "Future Inventory": "",
     "Future Inventory 1": "",
     "Sizes": [
-      "Robusto"
+      "Robusto",
+      "Toro"
+
     ],
     "slug": "oliva-gilberto-oliva-reserva-blanc"
   },
