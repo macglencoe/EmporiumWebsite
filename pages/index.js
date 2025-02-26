@@ -44,10 +44,10 @@ const Catalog = (props) => {
             <div className='welcome-text-container'>
               <h1>The Eastern Panhandle's only cigar lounge</h1>
               <p>
-                The King Street Emporium is the <b>perfect third space!</b> For over 30 years, we've been serving Martinsburg, WV, with a <b>friendly, laid-back spot</b> to <b>relax, chat, and unwind</b>
+                The King Street Emporium is the <b>perfect third space!</b> For over 30 years, we've been serving Martinsburg, WV, with a <b>friendly, laid-back spot</b> to relax, chat, and unwind
               </p>
               <p>
-                Whether you're looking for <b>fine cigars</b>, <b>pipes</b>, a nice cup of <b>coffee</b>, or some good <b>conversation</b>, <b>we're here to share our expertise</b>!
+                Whether you're looking for fine cigars, pipes, a nice cup of coffee, or some good conversation, <b>we're here to share our expertise</b>!
               </p>
               
 
@@ -69,7 +69,7 @@ const Catalog = (props) => {
                 opacity: '0.5',
                 width: '100%',
               }} />
-              <div style={{
+              <div className='kschairs' style={{
                 borderTop: '3px solid var(--dl-color-theme-secondary2)',
                 width: '100%',
                 height: '100%',
@@ -143,7 +143,7 @@ const Catalog = (props) => {
           justifyContent: 'center',
           padding: '20px'
         }}>
-          <h1>We are proud to carry your favorite brands</h1>
+          <h1 style={{ fontSize: '2em' }}>We are proud to carry your favorite brands</h1>
           <ul className='brand-logo-container'>
             <Link href="/cigars?Cigar+Brand=Arturo+Fuente.">
               <a tabIndex={0} aria-label='Arturo Fuente'>
@@ -173,7 +173,7 @@ const Catalog = (props) => {
           width: '100%',
           gap: '2em'
         }}>
-          <h1 style={{
+          <h1 id='staff' style={{
             fontSize: '2.5em'
           }}>Meet our staff</h1>
           <div style={{
@@ -187,7 +187,7 @@ const Catalog = (props) => {
           }}>
             <div className='staff-container' >
               <div className='staff-image'>
-                <img alt="Edward Trout" src='/edtrout.jpg' />
+                <img alt="Edward Trout"src='/edtrout.jpg' />
               </div>
               <div className='staff-info'>
                 <h2>Edward Trout</h2>
@@ -267,6 +267,7 @@ const Catalog = (props) => {
         .staff-container h2 {
           font-size: 2.1em;
           text-align: center;
+          font-style: italic;
         }
 
         .staff-container p {
@@ -347,10 +348,11 @@ const Catalog = (props) => {
           font-size: 1.5em;
           font-weight: bold;
         }
-
-        .welcome-text-container b {
-          font-size: 1.2em;
+        .kschairs h1 {
+          filter: drop-shadow(0px 0px 10px  var(--dl-color-theme-primary1));
         }
+
+        
 
         .welcome-text-container p {
           font-size: 1.2em;

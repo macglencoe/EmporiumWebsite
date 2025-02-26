@@ -37,6 +37,40 @@
   --directory-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 0.00%,var(--dl-color-theme-secondary2) 100.00%);
  
 }
+
+@font-face {
+  font-family:"Playfair";
+  src: url(../public/fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family:"Playfair";
+  src: url(../public/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+  font-style: italic;
+}
+
+
+html {
+  font-family: "Playfair";
+  font-weight: bold;
+}
+
+p {
+  font-family: "Inter";
+}
+
+button {
+  font-family: 'Inter';
+}
+
+select {
+  font-family: 'Inter';
+}
+
+label {
+  font-family: 'Inter';
+}
+
 .button {
   color: var(--dl-color-theme-neutral-dark);
   display: inline-block;

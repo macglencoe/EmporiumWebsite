@@ -333,6 +333,7 @@ const CatalogCard = (props) => {
             background-color: transparent;
             border: 2px solid var(--dl-color-theme-primary1);
             margin: 0.5em 0;
+            font-family: 'Playfair';
           }
         
         @media (max-width: 680px) {

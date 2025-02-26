@@ -2,41 +2,48 @@ import Link from "next/link"
 
 
 const ShopSuggestions = (props) => {
-    return (
-        <>
-            <region className='shop-suggestions-container'>
-                <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'start',
-                    flexWrap: 'wrap',
-                    flexDirection: 'row'
-                }}>
-                    <h1 style={{ 
-                        fontSize: '2.5em', 
-                        textTransform: 'uppercase' 
-                        
-                        }}>Search&nbsp;</h1>
-                    <h1 style={{ fontSize: '3em', textTransform: 'uppercase', fontWeight: '900'}}>{props.title}</h1>
-                    <h1 style={{ fontSize: '2.5em', textTransform: 'uppercase' }}>&nbsp;By:</h1>
-                </div>
+  return (
+    <>
+      <region className='shop-suggestions-container'>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'start',
+          flexWrap: 'wrap',
+          flexDirection: 'row'
+        }}>
+          <h1>Search&nbsp;
+          <b>{props.title}</b>
+          &nbsp;by:</h1>
+        </div>
 
-                <div className='shop-suggestions' >
-                    {
-                        props.items.map((item, index) => (
-                            <Link href={item.href} key={index} >
-                                <a tabIndex={0} aria-label={'Search' + props.title + 'By' + item.label}>
-                                    <div className="shop-suggestions-card">
-                                        <span>{item.label}</span>
-                                    </div>
-                                </a>
-                            </Link>
-                        ))
-                    }
-                </div>
-            </region>
-            <style jsx>
-                {`
+        <div className='shop-suggestions' >
+          {
+            props.items.map((item, index) => (
+              <Link href={item.href} key={index} >
+                <a tabIndex={0} aria-label={'Search' + props.title + 'By' + item.label}>
+                  <button className="shop-suggestions-card">
+                    <span>{item.label}</span>
+                  </button>
+                </a>
+              </Link>
+            ))
+          }
+        </div>
+      </region>
+      <style jsx>
+        {`
+
+        h1 {
+          font-size: 2em;
+          font-weight: normal;
+          font-style: italic;
+        }
+        h1 b {
+          font-variant: small-caps;
+          font-weight: bold;
+          color: var(--dl-color-theme-secondary1);
+        }
                 .shop-suggestions-container {
           display: flex;
           flex-direction: column;
@@ -98,9 +105,9 @@ const ShopSuggestions = (props) => {
           }
         }
                 `}
-            </style>
-        </>
-    )
+      </style>
+    </>
+  )
 }
 
 export default ShopSuggestions

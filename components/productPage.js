@@ -354,6 +354,7 @@ export const ProductSizeChart = (props) => {
           .cigar-page-size {
             font-size: 18px;
             font-weight: 500;
+            font-family: 'Inter';
             color: var(--dl-color-theme-primary2);
           }
 

@@ -103,6 +103,7 @@ const PageTitle1 = (props) => {
           font-weight: 600;
           font-size: 1em;
           margin-top: 10px;
+          font-family: 'Inter';
         }
         .page-title-container > div:first-child {
             gap: var(--dl-space-space-unit);

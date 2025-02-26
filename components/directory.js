@@ -23,6 +23,7 @@ const DirectoryItem = (props) => {
                     font-size: 24px;
                     font-style: normal;
                     font-weight: 700;
+                    font-style: italic;
                     color: var(--dl-color-theme-primary2);
                     white-space: nowrap;
                     transition: 0.3s;

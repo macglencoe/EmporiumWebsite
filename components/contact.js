@@ -73,6 +73,7 @@ a {
     font-style: normal;
     text-align: left;
     font-weight: 500;
+    font-family: 'Inter';
     font-size: 1.2em;
     width: 100%;
     height: 100%;
@@ -171,6 +172,9 @@ const Hours = (props) => {
             </div>
             <style jsx>
                 {`
+                span {
+                    font-family: 'Inter';
+                }
 .catalog-hours {
     gap: var(--dl-space-space-halfunit);
     flex: 0 0 auto;
@@ -268,6 +272,8 @@ const Hours = (props) => {
     color: var(--dl-color-theme-primary2);
     font-style: normal;
     font-weight: 700;
+    font-family: 'Playfair';
+    font-style: italic;
 }
 .catalog-text254 {
     fill: var(--dl-color-theme-primary2);
@@ -286,7 +292,6 @@ const Hours = (props) => {
 
 const Contact = (props) => {
 
-    // Hours 
 
 
     const [currentTime, setCurrentTime] = useState(new Date());
@@ -334,10 +339,10 @@ const Contact = (props) => {
                         onClick={handleLocationClick}
                         text-style={{
                             textAlign: 'right',
-                            fontSize: '0.96em'
+                            fontSize: '0.96em',
                         }}
                         iconSize="24"
-                    >320 W King Street
+                    >320 W King Street<br></br>
                         Martinsburg, West Virginia</ContactLink>
                         <Hours
                             openingTime={10}
@@ -352,7 +357,8 @@ const Contact = (props) => {
                         ></path>}
                         onClick={handlePhoneClick}
                         text-style={{
-                            textAlign: 'left'
+                            textAlign: 'left',
+                            fontFamily: 'Inter',
                         }}
                     >
                         (304) 264-9130
