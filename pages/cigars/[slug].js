@@ -12,9 +12,9 @@ import Ksman from '../../components/ksman'
 import Link from 'next/link';
 import Layout from '../../components/layout';
 import PageTitle1 from '../../components/pagetitle1';
-import ProductPage from '../../components/productPage';
-import {ProductImage, ProductSideContent} from '../../components/productPage';
-import {ProductSizeChart, ProductBasicInfo} from '../../components/productPage';
+import ProductPage, { Navigation, StringBubbleList } from '../../components/productPage';
+import { ProductImage, ProductSideContent } from '../../components/productPage';
+import { ProductSizeChart, ProductBasicInfo } from '../../components/productPage';
 import { ProductMainContent, ProductTitle } from '../../components/productPage';
 import { ProductInfoFields, ProductCallOrVisitButtons } from '../../components/productPage';
 import { Disclaimer } from '../../components/productPage';
@@ -31,13 +31,16 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const cigarsData = await import('../../public/data/consolidated_cigars.json');
   const data = await cigarsData.default;
-  const cigar = data.find((cigar) => cigar.slug === params.slug);
+  const cigarIndex = data.findIndex((cigar) => cigar.slug === params.slug);
+  const cigar = data[cigarIndex];
 
-  return { props: { cigar } };
+  const prevCigar = cigarIndex > 0 ? data[cigarIndex - 1] : null;
+  const nextCigar = cigarIndex + 1 < data.length ? data[cigarIndex + 1] : null;
+  return { props: { cigar, next: nextCigar, prev: prevCigar } };
 }
 
 const CigarPage = (props) => {
-  
+
   const cigar = props.cigar;
   if (!cigar) {
     return <div>Cigar not found</div>;
@@ -50,7 +53,13 @@ const CigarPage = (props) => {
         <title>{cigar['Cigar Brand']} {cigar['Cigar Name']}</title>
       </Head>
       <Layout>
-        <PageTitle1>Cigar Information</PageTitle1>
+        <PageTitle1
+          subtitle={cigar['Cigar Name']}
+          next={props.next}
+          prev={props.prev}
+          href="/cigars"
+          nameField="Cigar Name"
+        >Cigar Information</PageTitle1>
         <ProductPage
           description={cigar.description}
         >
@@ -58,33 +67,35 @@ const CigarPage = (props) => {
             <ProductImage
               hasImage={true}
               src={`/cigars-img/${cigar.slug}/img.png`}
-              fallbackSearch={encodeURIComponent(cigar['Cigar Brand']+' '+cigar['Cigar Name'])}
+              fallbackSearch={encodeURIComponent(cigar['Cigar Brand'] + ' ' + cigar['Cigar Name'])}
             />
             <ProductSizeChart
-              sizes = {cigar.Sizes}
-              allCigarSizes = {cigarSizes}
+              sizes={cigar.Sizes}
+              allCigarSizes={cigarSizes}
             />
-            <ProductBasicInfo
-              label = "Flavor"
-              value = {cigar['Flavor_Profile']}
-            />
+            {cigar['Flavor_Profile'] && <StringBubbleList title="Flavor"
+              data={cigar['Flavor_Profile'].split(', ')}
+            >
+
+            </StringBubbleList>
+            }
           </ProductSideContent>
           <ProductMainContent>
-            <ProductTitle>{cigar['Cigar Brand']} {cigar['Cigar Name']}</ProductTitle>
             <ProductInfoFields
-              fields = {[
-                {name: "Brand", value: cigar['Cigar Brand']},
-                {name: "Wrapper", value: cigar['Wrapper']},
-                {name: "Binder", value: cigar['Binder']},
-                {name: "Filler", value: cigar['Filler']},
-                {name: "Strength", value: cigar['Strength_Profile']},
+              fields={[
+                { name: "Brand", value: cigar['Cigar Brand'] },
+                { name: "Wrapper", value: cigar['Wrapper'] },
+                { name: "Binder", value: cigar['Binder'] },
+                { name: "Filler", value: cigar['Filler'] },
+                { name: "Strength", value: cigar['Strength_Profile'] },
               ]}
             />
-            <ProductCallOrVisitButtons/>
-            
+            <ProductCallOrVisitButtons />
+
           </ProductMainContent>
         </ProductPage>
-        <Disclaimer/>
+        
+        <Disclaimer />
       </Layout>
     </>
   );

@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Layout from "../../components/layout"
 import PageTitle1 from "../../components/pagetitle1";
-import ProductPage, { StringBubbleList } from '../../components/productPage';
+import ProductPage, { Navigation, StringBubbleList } from '../../components/productPage';
 import { ProductImage, ProductSideContent } from '../../components/productPage';
 import { ProductSizeChart, ProductBasicInfo } from '../../components/productPage';
 import { ProductMainContent, ProductTitle } from '../../components/productPage';
@@ -21,10 +21,17 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
     const tobaccoData = await import('../../public/data/tobacco.json');
     const data = await tobaccoData.default;
-    const tobacco = data.find((tobacco) => tobacco.slug === params.slug);
+    const tobaccoIndex = data.findIndex((tobacco) => tobacco.slug === params.slug);
+    const tobacco = data[tobaccoIndex];
+
+    const prevTobacco = tobaccoIndex > 0 ? data[tobaccoIndex - 1] : null;
+    const nextTobacco = tobaccoIndex + 1 < data.length ? data[tobaccoIndex + 1] : null;
+    console.warn(tobaccoIndex)
     return {
         props: {
-            tobacco
+            tobacco,
+            prev: prevTobacco,
+            next: nextTobacco
         },
     };
 }
@@ -44,7 +51,13 @@ const TobaccoPage = (props) => {
                 <title>{tobacco['Tobacco Name']}</title>
             </Head>
             <Layout>
-                <PageTitle1>Tobacco Information</PageTitle1>
+                <PageTitle1
+                    subtitle={tobacco['Tobacco Name']}
+                    href="/tobacco"
+                    prev={props.prev}
+                    next={props.next}
+                    nameField="Tobacco Name"
+                >Tobacco Information</PageTitle1>
                 <ProductPage
                     description = {tobacco.description}
                 >

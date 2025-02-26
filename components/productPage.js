@@ -37,7 +37,6 @@ export const StringBubbleList = (props) => {
                     display: flex;
                     flex-direction: column;
                     gap: 0.5em;
-                    max-width: min-content;
                 }
                 .bbl-container {
                     display: flex;
@@ -61,27 +60,37 @@ export const StringBubbleList = (props) => {
     )
 }
 export const ProductImage = (props) => {
+    const router = useRouter();
+    const [imageExists, setImageExists] = useState(false);
+
+    useEffect(() => {
+        const checkImageExists = async () => {
+            try {
+                const response = await fetch(props.src, { method: 'HEAD' });
+                setImageExists(response.ok);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+        checkImageExists();
+    }, [router.asPath]);
     return (
         <>
-            <div>
-                {props.hasImage ? (
+            <div className={imageExists ? "" : "no-image"}>
+                {props.hasImage && imageExists ? (
                     <img
                         alt="image"
                         src={props.src}
-                        className="cigar-page-image4"
-                        onError={(e) => {
-                            e.currentTarget.outerHTML = `<span>No image available</span><a href="https://www.google.com/search?tbm=isch&q=${props.fallbackSearch}" target="_blank" rel="noopener noreferrer">Search Google for images of this product</a>`;
-                        }}
                     />
                 ) : (
-                    <span>No image available</span>
+                    <span>No image available.<br></br><a href={"https://www.google.com/search?tbm=isch&q=" + props.fallbackSearch} target="_blank" rel="noopener noreferrer">Click to earch Google for images of this product</a></span>
                 )}
             </div>
             <style jsx>
                 {`
         div {
             flex: 0 0 auto;
-            width: auto;
+            width: min-content;
             display: flex;
             padding: var(--dl-space-space-unit);
             justify-content: center;
@@ -93,13 +102,26 @@ export const ProductImage = (props) => {
             display:flex;
             flex-direction: column;
           }
+        div.no-image {
+            align-items: center;
+            text-align: center;
+            width: auto;
+        }
+        div.no-image span {
+            color: var(--dl-color-theme-secondary1);
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+        div.no-image a {
+            font-weight: bold;
+        }
         div a {
-            font-size: 20px;
             text-decoration: underline;
             }
         img {
             width: 200px;
         }
+        
         @media (max-width: 680px) {
             div {
               padding: 5px;
@@ -136,6 +158,102 @@ export const ProductSideContent = (props) => {
                     flex-direction: column;
                     gap: 8px;
                     height: 100%;
+                    width: min-content;
+                    align-items: stretch;
+                }
+                `}
+            </style>
+        </>
+    )
+}
+
+export const Navigation = (props) => {
+    return (
+        <>
+            <nav>
+                <ul>
+                    {props.prev && props.prev[props.nameField] &&
+                        <li>
+                            <Link href={".." + props.href + "/" + props.prev.slug} >
+                                <a className="prev" aria-label='Previous' tabIndex={0}>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="33px" viewBox="0 -960 960 960" width="33px" fill="#e8eaed"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" /></svg>
+                                        <span>{props.prev[props.nameField]}</span>
+                                    </div>
+                                </a>
+                            </Link>
+                        </li>
+                    }
+                    
+                    { props.next && props.next[props.nameField] &&
+                        <li>
+                        <Link href={".." + props.href + "/" + props.next.slug} >
+                            <a className="next" aria-label='Next' tabIndex={0}>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        height="33px"
+                                        viewBox="0 -960 960 960"
+                                        width="33px"
+                                    ><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" /></svg>
+                                    <span>{props.next[props.nameField]}</span>
+
+                                </div>
+                            </a>
+                        </Link>
+                    </li>}
+                </ul>
+            </nav>
+
+
+            <style jsx>
+                {`
+                nav {
+                    width: 100%;
+                    justify-content: center;
+                    gap: 20px;
+                    padding: 20px 0px;
+                }
+                ul {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: stretch;
+                    justify-content: center;
+                    gap: 20px;
+                    list-style-type: none;
+                }
+                a div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 10px;
+                    padding: 10px;
+                    background-color: var(--dl-color-theme-primary2);
+                    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0.00%,var(--dl-color-theme-primary1) 200.00%);
+                    border-radius: 10px;
+                    width: 100px;
+                    height: 100%;
+                    transition: all 0.3s ease-out;
+                }
+                a div span {
+                    text-align: center;
+                    width: min-content;
+                }
+                a div svg {
+                    fill: var(--dl-color-theme-secondary1);
+                    transition: transform 0.1s ease-out;
+                }
+                a.next:hover div, a.next:focus div {
+                    box-shadow: -5px 0px 5px -2px rgba(0, 0, 0, 0.5);
+                    transform:perspective(600px) rotate3d(0, 1, 0, 30deg);
+                }
+                a.prev:hover div, a.prev:focus div {
+                    box-shadow: 5px 0px 5px -2px rgba(0, 0, 0, 0.5);
+                    transform:perspective(600px) rotate3d(0, 1, 0, -30deg);
+                }
+                a:hover span, a:focus span {
+                    text-decoration: underline;
                 }
                 `}
             </style>
@@ -230,6 +348,7 @@ export const ProductSizeChart = (props) => {
         .cigar-size-cigar {
             padding: 5px;
             background: var(--dl-color-theme-secondary2);
+            min-width: max-content;
           }
 
           .cigar-page-size {
@@ -401,6 +520,7 @@ export const ProductCallOrVisitButtons = (props) => {
             -o-transition: all .2s ease-in;
             -webkit-transition: all .2s ease-in;
             cursor: pointer;
+            white-space: nowrap;
             
           }
           
@@ -412,6 +532,12 @@ export const ProductCallOrVisitButtons = (props) => {
             color: var(--dl-color-theme-primary1);
             font-weight: bold;
             font-size: 20px;
+          }
+          
+          @media (max-width: 680px) {
+            .call-or-visit-container > button > span {
+              font-size: 15px;
+            }
           }
                 `}
             </style>

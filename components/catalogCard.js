@@ -276,7 +276,9 @@ const CatalogCard = (props) => {
         }
         .card-head.no-image:hover {
             height: auto;
+            min-height: 160px;
         }
+        
         .card-head.no-image {
             height: 160px;
             animation: height 0.5s ease-in-out;
@@ -366,7 +368,7 @@ const CatalogCard = (props) => {
                 height: auto;
                 display: flex;
                 flex-direction: column;
-                border-right: 3px solid var(--dl-color-theme-secondary2);d
+                border-right: 6px double var(--dl-color-theme-secondary2);
             }
             .card-head.no-image {
                 height: auto;
