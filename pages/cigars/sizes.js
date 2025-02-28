@@ -22,7 +22,8 @@ const Sizes = (props) => {
     </Head>
       <Layout>
         <SearchBy 
-        title="Search by Size" 
+        title="Search by Size"
+        method="flatmap"
         flatmap="Sizes"
         field="Sizes"
         data={Data}

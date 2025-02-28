@@ -14,7 +14,7 @@ const TobaccoComponents = (props) => {
             <Layout>
                 <SearchBy 
                 title="Search Pipe Tobacco by Component"
-                flatmap="Components"
+                method="list"
                 field="Components"
                 data={Data}
                 catalogPath="/tobacco"

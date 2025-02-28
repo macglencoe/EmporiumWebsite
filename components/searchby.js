@@ -26,24 +26,28 @@ const SearchBy = (props) => {
 
     let data = props.data
 
-    
+
 
 
     let uniqueBrands = [];
-    if (props.flatmap) {
-        
+    if (props.method == "flatmap" && props.flatmap) {
+
         uniqueBrands = [
-            ...new Set(data.flatMap(item => item[props.flatmap] ? item[props.flatmap].map(size => size.trim()) : []))
+            ...new Set(data.flatMap(item => item[props.flatmap] ? item[props.flatmap].map(size => size.Size.trim()) : []))
+        ].sort((a, b) => a.localeCompare(b));
+    } else if (props.method == "list") {
+        uniqueBrands = [
+            ...new Set(data.flatMap(item => item[props.field] ? item[props.field].map(size => size.trim()) : []))
         ].sort((a, b) => a.localeCompare(b))
     } else {
-        
+
         uniqueBrands = [...new Set(data.map(item =>
             item[props.field] ? item[props.field].trim() : null
-            ))].filter(brand => brand !== null).sort((a, b) => a.localeCompare(b));
-        
+        ))].filter(brand => brand !== null).sort((a, b) => a.localeCompare(b));
+
     }
 
-    
+
 
 
 
@@ -94,7 +98,7 @@ const SearchBy = (props) => {
             </div>
 
 
-        
+
             <style jsx>{`
                 .brand-container {
             display: flex;

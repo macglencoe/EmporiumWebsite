@@ -40,7 +40,7 @@ const CigarCatalog = (props) => {
   const uniqueStrengths = [...new Set((props.data).map(item => item['Strength_Profile'].trim()))];
 
   // All unique sizes for filtering
-  const uniqueSizes = Array.from(new Set((props.data).flatMap(item => item['Sizes'])));
+  const uniqueSizes = [...new Set(props.data.flatMap(obj => obj.Sizes.map(size => size.Size)))].sort((a, b) => a.localeCompare(b));
 
   const pageSize = 10;
   const totalPages = Math.ceil(props.data.length / pageSize);
@@ -154,7 +154,7 @@ const CigarCatalog = (props) => {
             return (
               item.Sizes.length > 1 ?
                 item.Sizes.length + ' Sizes Available' :
-                item.Sizes[0])
+                item.Sizes[0].Size)
           },
           barcode: (item) => {
             if (router.query['Display Barcode'] === 'true') {
