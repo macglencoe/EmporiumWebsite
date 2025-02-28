@@ -130,16 +130,18 @@ const Catalog = (props) => {
                 }
             });
             console.log(props.filters);
-            
-                return (
-                    props.filters.every(filter =>
-                        router.query[filter.name] == '' ||
-                        (Array.isArray(item[filter.name])
+
+            return (
+                props.filters.every(filter =>
+                    router.query[filter.name] == '' ||
+                    (Array.isArray(item[filter.name])
+                        ? typeof item[filter.name][0] === 'string'
                             ? item[filter.name] != null && item[filter.name].includes(router.query[filter.name])
-                            : item[filter.name] != null && item[filter.name].toLowerCase() == (router.query[filter.name].toLowerCase()))
-                    )
+                            : item[filter.name] != null && item[filter.name].some(obj => Object.values(obj).some(val => String(val).toLowerCase().includes(router.query[filter.name].toLowerCase())))
+                        : item[filter.name] != null && item[filter.name].toLowerCase() == (router.query[filter.name].toLowerCase()))
                 )
-            
+            )
+
         }
     })
 
