@@ -27,5 +27,26 @@ export default function MyApp({
   }
 
 
-  return <Component {...pageProps} />;
+  return <>
+    <div>
+      <h1>Fair Use Disclaimer</h1>
+      <p>This is a testing build and is not being used for commercial purposes.</p>
+    </div>
+    <Component {...pageProps} />
+    <style jsx>
+      {`
+      div {
+        background-color: var(--dl-color-theme-secondary1);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        border-bottom: 6px double var(--dl-color-theme-primary1);
+      }
+      h1, p {
+        color: var(--dl-color-theme-primary2);
+      }
+      `}
+    </style>
+  </>;
 }
