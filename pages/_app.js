@@ -22,9 +22,9 @@ export default function MyApp({
     setIsAgeVerified(true);
   };
 
-  if (!isAgeVerified) {
+  /* if (!isAgeVerified) {
     return <AgeVerificationModal onConfirm={handleAgeVerification} />;
-  }
+  } */
 
 
   return <Component {...pageProps} />;
