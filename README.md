@@ -24,7 +24,7 @@ The site is hosted at www.kingstreetemporium.com, through [Vercel](https://www.v
 - This website is made with the [Next.js](https://nextjs.org) React framework, mostly for the routing, although many of its features come in handy.
 - For the time being, the data is static, and updated periodically. This is the best option for the needs of this website.
 
-## <\\> Code Showcase </>
+## <> Code Showcase </>
 
 [`directory.js`](components/directory.js)
 
