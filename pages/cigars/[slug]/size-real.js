@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Layout from "../../../components/layout"
 import PageTitle1 from "../../../components/pagetitle1"
 import cigarSizes from '../../../public/data/cigarsizes.json';
@@ -24,13 +24,19 @@ const SizeReal = (props) => {
 
     const [scale, setScale] = useState(1);
 
+    const [dpr, setDPR] = useState(0);
+
+    useEffect(() => {
+        setDPR(window.devicePixelRatio);
+    })
+
     return (
         <>
             <Layout>
                 <PageTitle1 subtitle="This chart shows a representation of cigar sizes at a customizable scale">Cigar Scale</PageTitle1>
                 <h1>{props.cigar['Cigar Brand'] + ' ' + props.cigar['Cigar Name']}</h1>
                 <p>This chart may be inaccurate</p>
-                <p>Pixel Ratio: {window.devicePixelRatio}</p>
+                <p>Pixel Ratio: {dpr}</p>
                 <br></br>
                 <div className="scale-control-container">
                     <input type="range" min="0.5" max="1.5" step="0.1" id="cigarScale" style={{
