@@ -13,8 +13,10 @@ import ShopSuggestions from '../components/shopSuggestions'
 import { handleLocationClick } from '../utils/location'
 
 const Catalog = (props) => {
-
-  const isMobile = window.innerWidth < 680;
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    isMobile = window.innerWidth < 680;
+  })
 
 
   useEffect(() => {
