@@ -82,6 +82,14 @@ const Directory = (props) => {
     return (
         <nav className="catalog-container1 directory">
             <ul>
+                {
+                    props.backHref &&
+                    <li>
+                        <a href={props.backHref}>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="2.5em" viewBox="0 -960 960 960" width="2.5em" ><path d="M560-208 288-480l272-272 88 88-184 184 184 184-88 88Z" /></svg>
+                        </a>
+                    </li>
+                }
                 <li>
                     <DirectoryItem href={router.query["Display Price"] == "true" || router.query["Display Barcode"] == "true" ? "/cigars?Display+Price=true&Display+Barcode=true" : "/cigars"}>Cigars</DirectoryItem>
                 </li>
@@ -131,6 +139,15 @@ const Directory = (props) => {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                }
+                .directory li a {
+                    padding: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .directory li a svg {
+                    fill: var(--dl-color-theme-primary1);
                 }
                 
                 
