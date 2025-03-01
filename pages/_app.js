@@ -3,29 +3,21 @@ import { useState, useEffect } from "react";
 import AgeVerificationModal from "../components/ageVerificationModal";
 
 import React from "react";
-export default function MyApp({
-  Component: Component,
-  pageProps: pageProps
-}) {
-  const [isAgeVerified, setIsAgeVerified] = useState(false);
+
+export default function MyApp({ Component, pageProps }) {
+  const [isAgeVerified, setIsAgeVerified] = useState(null); // Start as null to prevent SSR issues
 
   useEffect(() => {
-    const ageVerified = localStorage.getItem("ageVerified");
-    if (ageVerified) {
-      setIsAgeVerified(true);
+    if (typeof window !== "undefined") {
+      const ageVerified = localStorage.getItem("ageVerified");
+      setIsAgeVerified(ageVerified === "true");
     }
   }, []);
 
-  const handleAgeVerification = () => {
-    // Set age verification status in local storage
-    localStorage.setItem('ageVerified', 'true');
-    setIsAgeVerified(true);
-  };
-
-  /* if (!isAgeVerified) {
-    return <AgeVerificationModal onConfirm={handleAgeVerification} />;
-  } */
-
+  if (isAgeVerified === null) {
+    return null; // Prevent rendering on SSR until state is determined
+  }
 
   return <Component {...pageProps} />;
 }
+
