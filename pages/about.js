@@ -26,7 +26,7 @@ const About = (props) => {
                     We are located in Martinsburg, WV, conveniently nestled in the Shenandoah Valley of the Blue Ridge Mountains off of Interstate 81.
                     </p>
                     <p>
-                        Regular updates about closings, events, offers, any more can be found on our <a href='https://www.facebook.com/people/King-Street-Coffee-Tobacco-Emporium/100063496593967/?ref=embed_page'>Facebook page</a>.
+                        Regular updates about closings, events, offers, and more can be found on our <a href='https://www.facebook.com/people/King-Street-Coffee-Tobacco-Emporium/100063496593967/?ref=embed_page'>Facebook page</a>.
                     </p>
                 </section>
                 <section>
