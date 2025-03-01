@@ -9,7 +9,6 @@ import Contact from '../components/contact'
 import Directory from '../components/directory'
 import Ksman from '../components/ksman'
 import { Router, useRouter } from 'next/router'
-import { Analytics } from "@vercel/analytics/react"
 
 const Layout = (props) => {
   const router = useRouter();
@@ -93,7 +92,7 @@ const Layout = (props) => {
             <div id='fb-skip'></div>
           </div>
           <main className="catalog-content1" id='content'>
-            <Analytics />
+
             {props.children}
 
 
