@@ -148,7 +148,7 @@ const CigarCatalog = (props) => {
             )
           },
           href: (item) => {
-            return ('/cigars/' + item.slug + "?from=" + encodeURIComponent(router.asPath))
+            return ('/cigars/' + item.slug)
           },
           buttonText: (item) => {
             return (
