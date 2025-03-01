@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { Analytics } from "@vercel/analytics/react"
 class CustomDocument extends Document {
   render() {
     return (
