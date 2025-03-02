@@ -1,3 +1,5 @@
+import { track } from "@vercel/analytics";
+
 /**
  * Opens a link to the King Street Emporium location in the user's preferred maps app.
  * This function is used in the Contact and Product Call/Visit Buttons components.
@@ -24,6 +26,8 @@ export const handleLocationClick = () => {
     } else {
         mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
     }
+
+    track("Location");
 
     window.open(mapUrl, '_blank', 'noopener,noreferrer');
 };

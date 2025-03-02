@@ -7,5 +7,8 @@
 export const handlePhoneClick = () => {
     let phoneNumber = "3042649130"
     const telUrl = `tel:${phoneNumber.replace(/\D/g, '')}`; // Remove non-digits
+
+    track("Phone");
+
     window.location.href = telUrl; // Use window.location.href for direct call
 };
