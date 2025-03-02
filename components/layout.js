@@ -70,7 +70,7 @@ const Layout = (props) => {
             </div>
           </div>
 
-          <Directory backHref = {props.backHref}></Directory>
+          <Directory></Directory>
         </header>
 
 

@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import Router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import Data from '../../public/data/consolidated_cigars.json';
 import cigarSizes from '../../public/data/cigarsizes.json';
 
@@ -40,7 +40,7 @@ export const getStaticProps = async ({ params }) => {
 }
 
 const CigarPage = (props) => {
-  const router = useRouter();
+
   const cigar = props.cigar;
   if (!cigar) {
     return <div>Cigar not found</div>;
@@ -52,9 +52,7 @@ const CigarPage = (props) => {
       <Head>
         <title>{cigar['Cigar Brand']} {cigar['Cigar Name']}</title>
       </Head>
-      <Layout
-        backHref={router.query['from']}
-      >
+      <Layout>
         <PageTitle1
           subtitle={cigar['Cigar Name']}
           next={props.next}
