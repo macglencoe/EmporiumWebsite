@@ -17,7 +17,7 @@
     {
         "Product Name": "Blue Ridge Blend",
         "slug": "blue-ridge-blend",
-        "Type": "Tea"
+        "Type": "Coffee"
     },
     {
         "Product Name": "Copper Canyon Blend",
@@ -82,12 +82,12 @@
     {
         "Product Name": "Hazelnut",
         "slug": "hazelnut",
-        "Type": "Tea"
+        "Type": "Coffee"
     },
     {
         "Product Name": "SW. Decaf Creme de Noisette",
         "slug": "sw-decaf-creme-de-noisette",
-        "Type": "Tea"
+        "Type": "Coffee"
     },
     {
         "Product Name": "Assam",

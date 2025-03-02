@@ -50,6 +50,7 @@ const Catalog = (props) => {
 
     const [sortOption, setSortOption] = useState(props.defaultSort);
     const [filtersOpen, setFiltersOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
     // Set filters based on query parameters
     const router = useRouter();
@@ -74,7 +75,9 @@ const Catalog = (props) => {
             value: event.target.value});
     };
 
-
+    useEffect(() => {
+        setIsMobile(window.innerWidth < 680);
+    })
 
     useEffect(() => {
         if (router.isReady) {
@@ -250,7 +253,7 @@ const Catalog = (props) => {
                 <div className="catalog-container31">
 
                     <div className="catalog-container38">
-                        {window.innerWidth <= 680 && (
+                        {isMobile && (
 
 
                             <div className="filter-header-container">
@@ -266,14 +269,14 @@ const Catalog = (props) => {
                                     }}
                                     aria-expanded={filtersOpen}
                                     aria-controls="filter-sort-container"
-                                    tabIndex={window.innerWidth >= 680 ? -1 : 0}
+                                    tabIndex={!isMobile ? -1 : 0}
 
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-328 225-583h510L480-328Z" /></svg>
                                 </button>
                             </div>
                         )}
-                        {window.innerWidth <= 680 && (
+                        {isMobile && (
 
                             <div className="filter-sort-container"
                                 style={{
@@ -291,7 +294,7 @@ const Catalog = (props) => {
                                         value={sortOption}
                                         onChange={handleSortChange}
                                         className="catalog-select"
-                                        tabIndex={window.innerWidth >= 680 ? -1 : 0}
+                                        tabIndex={!isMobile ? -1 : 0}
                                     >
 
                                         {

@@ -6,6 +6,8 @@ import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 
 const DirectoryItem = (props) => {
+    
+
     const router = useRouter();
     return (
         <>
@@ -78,6 +80,12 @@ const DirectoryItem = (props) => {
 }
 
 const Directory = (props) => {
+
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        setIsMobile(window.innerWidth < 680);
+    })
+
     const router = useRouter();
     return (
         <nav className="catalog-container1 directory">
@@ -115,7 +123,7 @@ const Directory = (props) => {
                     <DirectoryItem href="/tobacco">Tobacco</DirectoryItem>
                 </li>
                 {
-                    window.innerWidth >= 680 &&
+                    !isMobile &&
                     <li>
                         <DirectoryItem href="/about">About</DirectoryItem>
                     </li>

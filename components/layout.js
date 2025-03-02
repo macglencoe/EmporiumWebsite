@@ -9,7 +9,7 @@ import Contact from '../components/contact'
 import Directory from '../components/directory'
 import Ksman from '../components/ksman'
 import { Router, useRouter } from 'next/router'
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react'
 
 const Layout = (props) => {
   const router = useRouter();
@@ -222,6 +222,8 @@ const Layout = (props) => {
     align-items: center;
     flex-direction: column;
     background-color: var(--dl-color-theme-primary1);
+
+    
   }
   .catalog-container11 {
     /* position: absolute; */
