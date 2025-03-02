@@ -88,9 +88,16 @@ const Footer32 = (props) => {
 
           </div>
         </div>
+        <div className='license'>
+        <p><a property="dct:title" rel="cc:attributionURL" href="https://kingstreetemporium.com">King Street Emporium Website</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/macglencoe">Liam McDonald</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style={{display:"inline-flex"}}>Creative Commons Attribution-NonCommercial 4.0 International<img style={{height:"22px",marginLeft:"3px",verticalAlign:"text-bottom"}} src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""></img><img style={{height:"22px",marginLeft:"3px",verticalAlign:"text-bottom"}} src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></img><img style={{height:"22px",marginLeft:"3px",verticalAlign:"text-bottom"}} src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></img></a></p>
+        </div>
       </footer>
       <style jsx>
         {`
+
+          div.license a {
+            text-decoration: underline;
+          }
           .footer32-footer4 {
             gap: 80px;
             width: 100%;
