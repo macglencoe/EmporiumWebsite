@@ -222,6 +222,8 @@ const Layout = (props) => {
     align-items: center;
     flex-direction: column;
     background-color: var(--dl-color-theme-primary1);
+
+    
   }
   .catalog-container11 {
     /* position: absolute; */

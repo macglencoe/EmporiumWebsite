@@ -14,16 +14,16 @@ import PageTitle1 from '../components/pagetitle1'
 const About = (props) => {
     return (
         <>
-        <Head>
-            <title>About</title>
-        </Head>
+            <Head>
+                <title>About</title>
+            </Head>
             <Layout>
                 <PageTitle1>About</PageTitle1>
                 <section>
                     <h2>Our store</h2>
                     <p>The King Street Coffee & Tobacco Emporium opened its doors for business in 1993. Owned and operated by life long resident of Martinsburg, WV, Edward Trout makes his customers feel at home. With an Old World feel, the Emporium offers premium cigars, pipe tobaccos, coffee beans, loose and bag teas. Enjoy a cappuccino or piping hot cup of fresh brewed coffee and relax with your premium cigar – the regulars are sure to provide conversation and always make you feel welcome.</p>
                     <p>
-                    We are located in Martinsburg, WV, conveniently nestled in the Shenandoah Valley of the Blue Ridge Mountains off of Interstate 81.
+                        We are located in Martinsburg, WV, conveniently nestled in the Shenandoah Valley of the Blue Ridge Mountains off of Interstate 81.
                     </p>
                     <p>
                         Regular updates about closings, events, offers, and more can be found on our <a href='https://www.facebook.com/people/King-Street-Coffee-Tobacco-Emporium/100063496593967/?ref=embed_page'>Facebook page</a>.
@@ -105,7 +105,7 @@ const About = (props) => {
                     <h4>Report an issue via email:</h4>
                     <p>Developer: <a href="mailto:mcpaul1694@gmail.com">mcpaul1694@gmail.com</a></p>
                     <p>Storefront: <a href='mailto:kingstreetemporium@gmail.com'>kingstreetemporium@gmail.com</a></p>
-                    
+
 
                 </section>
             </Layout>
@@ -211,6 +211,7 @@ section ul.tech-stack li div {
     align-content: space-between;
     align-items: center;
     padding: 15px 5px;
+
 }
 
 section ul.tech-stack li:not(:last-child) div:hover, section ul.tech-stack li:not(:last-child) div:focus-within
@@ -218,6 +219,56 @@ section ul.tech-stack li:not(:last-child) div:hover, section ul.tech-stack li:no
     transform:  rotateX(45deg) rotateZ(-45deg) translate3d(0px, 50%, 0px);
 }
 
+section ul.tech-stack li:not(:first-child):not(:last-child) div {
+    view-timeline-name: --teck-stack-scatter-middle;
+    view-timeline-axis: block;
+    animation: ease tech-stack-scatter-middle both;
+    animation-timeline: --teck-stack-scatter-middle;
+    animation-range: cover 30% cover 50%
+}
+
+section ul.tech-stack li:first-child div {
+    view-timeline-name: --teck-stack-scatter;
+    view-timeline-axis: block;
+    animation: ease tech-stack-scatter both;
+    animation-timeline: --teck-stack-scatter;
+    animation-range: cover 30% cover 50%;
+}
+
+section ul.tech-stack li:last-child div  {
+    view-timeline-name: --teck-stack-scatter-top;
+    view-timeline-axis: block;
+    animation: ease tech-stack-scatter-top both;
+    animation-timeline: --teck-stack-scatter-top;
+    animation-range: cover 30% cover 50%;
+}
+
+@keyframes tech-stack-scatter {
+    from {
+        transform: rotateX(45deg) rotateZ(-45deg);
+    }
+    to {
+        transform:  rotateX(45deg) rotateZ(-45deg) translate3d(0px, 50%, 0px);
+    }
+}
+
+@keyframes tech-stack-scatter-middle {
+    from {
+        transform: rotateX(45deg) rotateZ(-45deg);
+    }
+    to {
+        transform:  rotateX(45deg) rotateZ(-45deg) translate3d(-50%, -20%, 0px);
+    }
+}
+
+@keyframes tech-stack-scatter-top {
+    from {
+        transform: rotateX(45deg) rotateZ(-45deg);
+    }
+    to {
+        transform:  rotateX(45deg) rotateZ(-45deg) translate3d(20%, 10%, 0px);
+    }
+}
 
 
 section ul.tech-stack li div a {
@@ -284,7 +335,7 @@ section table.tech-stack a {
     background-color: var(--dl-color-theme-primary1);
 }
                 `
-                }</style>
+            }</style>
         </>
     )
 }
