@@ -73,3 +73,4 @@ a.active-page span {
 }
 ```
 
+King Street Emporium Website © 2025 by Liam McDonald is licensed under Creative Commons Attribution-NonCommercial 4.0 International 
