@@ -74,8 +74,8 @@ const CatalogCardDescription = (props) => {
                 <p>{props.children}</p>
             </div>
             <a><p>... see more</p></a>
-        <style jsx>
-            {`
+            <style jsx>
+                {`
             div {
                 display: block;
                 line-clamp: 2;
@@ -140,7 +140,7 @@ const CatalogCardDescription = (props) => {
 
 
             `}
-        </style>
+            </style>
         </>
     )
 }
@@ -160,7 +160,7 @@ const CatalogCardDescription = (props) => {
  */
 
 const CatalogCard = (props) => {
-    
+
     const [imageExists, setImageExists] = useState(false);
 
     useEffect(() => {
@@ -168,35 +168,34 @@ const CatalogCard = (props) => {
             try {
                 const response = await fetch(props.image, { method: 'HEAD' });
                 setImageExists(response.ok);
-              } catch (error) {
+            } catch (error) {
                 console.error(error);
-              }
+            }
         };
         checkImageExists();
     }, [props.image]);
-    
+
     return (
         <>
             <Link href={props.href}><a className="catalog-card-parent" tabIndex={0}>
                 <div className="catalog-catalog-card catalogCard">
 
-                    <div className={"card-head"+(imageExists ? "" : " no-image")}>
-                       
-                        
-                       { imageExists &&
-                        <div className="CatalogCardImage">
-                            <img src={props.image} alt={"Cigar Image "+props.title} />
-                        </div>}
+                    <div className={"card-head" + (imageExists ? "" : " no-image")}>
+
+
+                        {imageExists &&
+                            <div className="CatalogCardImage">
+                                <img src={props.image} alt={"Cigar Image " + props.title} />
+                            </div>}
 
                         <div className="catalog-container47 CatalogCardName" style={{
                             padding: imageExists ? "0" : "2em 0"
                         }}>
 
                             <span className="card-name-text"><i>{props.secondaryTitle}</i> <b>{props.name} {props.title}</b></span>
-
                         </div>
                         {props.description &&
-                        <div className="description-container"><CatalogCardDescription>{props.description}</CatalogCardDescription></div>}
+                            <div className="description-container"><CatalogCardDescription>{props.description}</CatalogCardDescription></div>}
                     </div>
                     <div className="card-content">
 
@@ -230,14 +229,29 @@ const CatalogCard = (props) => {
 
 
 
-                        <div className="catalog-container50">
-                            {props.buttonText &&
-                                <button type="button" className="catalog-button2 button" tabIndex={-1}>
-                                    {props.buttonText}
-                                </button>}
-                        </div>
+                        { !props.list &&
+                            <div className="catalog-container50">
+                                {props.buttonText &&
+                                    <button type="button" className="catalog-button2 button" tabIndex={-1}>
+                                        {props.buttonText}
+                                    </button>}
+                            </div>
+                        }
 
-                        
+                        {
+                            props.list &&
+                            <ul className="card-list">
+                                {
+                                    props.list.map((item) => {
+                                        return (
+                                            <li>{item}</li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        }
+
+
 
 
                     </div>

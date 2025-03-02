@@ -79,6 +79,8 @@ const CatalogContent = (props) => {
                             barcode={props.cardSettings.barcode ? props.cardSettings.barcode(item) : null}
 
                             description={props.cardSettings.description ? props.cardSettings.description(item) : null}
+
+                            list = {props.cardSettings.list ? props.cardSettings.list(item) : null}
                         />
                     ))
                 }

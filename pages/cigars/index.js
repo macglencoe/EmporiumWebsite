@@ -140,10 +140,7 @@ const CigarCatalog = (props) => {
             return (
               [
                 item['Wrapper'] && ['Wrapper', item['Wrapper']],
-                item['Strength_Profile'] && ['Strength', item['Strength_Profile']],
-                router.query['Display Price'] === 'true' &&
-                item['Price'] &&
-                ['Price', item['Price']]
+                item['Strength_Profile'] && ['Strength', item['Strength_Profile']]
               ]
             )
           },
@@ -156,11 +153,63 @@ const CigarCatalog = (props) => {
                 item.Sizes.length + ' Sizes Available' :
                 item.Sizes[0].Size)
           },
-          barcode: (item) => {
-            if (router.query['Display Barcode'] === 'true') {
-              return (item['Barcode'])
+          
+
+          list: (item) => {
+            if (router.query['Display Price'] === 'true') {
+              return (
+                item.Sizes.map(size => {
+                  return (
+                    <>
+                      <li className='card-size'>
+                        <div>
+                          <span>{size.Size}</span>
+                          <span>{size.Price}</span>
+                        </div>
+                        {size.Barcode && <canvas ref={(canvas) => {
+                          if (canvas) {
+                            JsBarcode(canvas, size.Barcode, {
+                              format: "CODE128",
+                              width: 2,
+                              height: 20,
+                              fontSize: 12,
+                              background: "transparent"
+                            });
+                          }
+                        }} />}
+                      </li>
+                      <style jsx>
+                        {`
+                        li.card-size {
+                          padding: 10px;
+                          background-image: linear-gradient(10deg, rgba(0, 0, 0, 0) 00.00%,var(--dl-color-theme-primary1) 300.00%);
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: center;
+                          gap: 10px;
+                          list-style-type: none;
+                        }
+                        li.card-size > div {
+                          display: flex;
+                          justify-content: space-between;
+                          gap: 10px;
+                        }
+                        li.card-size span {
+                          font-family: Inter;
+                        }
+                        li.card-size span:last-child {
+                          font-weight: 900;
+                        }
+                        `}
+                      </style>
+                    </>
+                  )
+                })
+              )
             }
           }
+
+        
         }}
 
       />
