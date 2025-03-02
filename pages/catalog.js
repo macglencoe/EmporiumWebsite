@@ -7,6 +7,7 @@ import Data from "../public/data/consolidated_cigars.json"
 import Footer32 from '../components/footer32'
 import Contact from '../components/contact'
 import Directory from '../components/directory'
+import { track } from '@vercel/analytics'
 
 const Catalog = (props) => {
 
@@ -29,6 +30,10 @@ const Catalog = (props) => {
   };
   const handleFilterChange = (event) => {
     setFilters({ ...filters, [event.target.name]: event.target.value })
+    track("Used Filters", {
+      filter: event.target.name,
+      value: event.target.value
+    })
   };
 
   const filteredItems = [...Data].filter((item) => {
