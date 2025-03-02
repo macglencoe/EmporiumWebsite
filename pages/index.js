@@ -166,6 +166,46 @@ const Catalog = (props) => {
         </nav>
 
         <div className='divider'></div>
+
+        <section className='podcast'>
+          <h1 id='podcast'>The Stick Figures</h1>
+          <b>Our very own podcast</b>
+          <p>What does a former 1%er biker, a modern farmer/ tobacconist, redneck battle rapper, and a submarine vet have in common? Nothing except that they are all brothers of the leaf. Tune in with the Stick Figures to hear about cigars, tobacco and life on this comedy cigar podcast.</p>
+          <iframe  src="https://open.spotify.com/embed/show/0xpAdXeTXnnh30J0HEVmoz?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+          <div className='podcast-links'>
+            <b>Find us on:</b>
+            <ul>
+              <li>
+                <Link href={'https://open.spotify.com/show/0xpAdXeTXnnh30J0HEVmoz'}><a>
+                  <img alt='Spotify' src='https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png'></img>
+                </a></Link>
+              </li>
+              <li>
+                <Link href={'https://jacobjpyle.podbean.com/'}><a>
+                <img src="//pbcdn1.podbean.com/fs1/site/images/badges/b600_1.png" alt="App download" data-categories="essential"></img>
+                </a></Link>
+              </li>
+              <li>
+                <Link href={'https://www.iheart.com/podcast/1323-the-stick-figures-podcast-260145382/'}><a>
+                  <img alt='I Heart Radio' src='https://upload.wikimedia.org/wikipedia/commons/8/8f/IHeartRadio_logo.svg'></img>
+                </a></Link>
+              </li>
+              <li>
+                <Link href={'https://www.facebook.com/people/The-Stick-Figures-Podcast/61563815072152/?_rdr'}><a>
+                  <img alt='Facebook' src='/Facebook_Logo_Primary.png'></img>
+                </a></Link>
+              </li>
+            </ul>
+            
+          </div>
+        </section>
+
+        <div className='divider'></div>
+
+
+
+
         <div style={{
           display: 'flex',
           flexDirection: 'column',
@@ -212,6 +252,64 @@ const Catalog = (props) => {
 
       <style jsx>
         {`
+
+        section.podcast {
+          background-color: var(--dl-color-theme-primary2);
+          padding: 10px;
+          border: solid var(--dl-color-theme-secondary2);
+          border-width: 3px 0px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 1em;
+        }
+
+        section.podcast h1 {
+          text-align: center;
+          font-size: 2em;
+        }
+
+        section.podcast b {
+          color: var(--dl-color-theme-secondary2);
+          font-family: Inter;
+        }
+
+        section.podcast p {
+          color: var(--dl-color-theme-secondary2);
+          text-indent: 2em;
+          padding: 10px;
+        }
+
+        div.podcast-links {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+
+        div.podcast-links ul {
+          list-style: none;
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        div.podcast-links li {
+        }
+
+        div.podcast-links a {
+          display: flex;
+          border-radius: 10px;
+          margin: 6px;
+
+        }
+
+        div.podcast-links a img {
+          height: 40px;
+        }
+
+        
+
         .our-store-button:hover {
           background-color: var(--dl-color-theme-primary2);
         }
