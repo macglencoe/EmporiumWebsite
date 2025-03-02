@@ -1,3 +1,5 @@
+import { track } from "@vercel/analytics";
+
 /**
  * Initiates a phone dial to the specified phone number.
  * This function formats the phone number to remove non-digit characters 
