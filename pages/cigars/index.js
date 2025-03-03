@@ -173,7 +173,14 @@ const CigarCatalog = (props) => {
                               width: 2,
                               height: 20,
                               fontSize: 12,
-                              background: "transparent"
+                              background: "transparent",
+                              lineColor: router.query['search'] 
+                                ? router.query['search'] == size.Barcode 
+                                  ? "#48c401" 
+                                  : String(size.Barcode).includes(router.query['search']) 
+                                    ? "#c4ad01" 
+                                    : "#000"
+                                : "#000"
                             });
                           }
                         }} />}

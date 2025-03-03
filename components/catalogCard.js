@@ -221,6 +221,8 @@ const CatalogCard = (props) => {
                                             width: 2,
                                             height: 30,
                                             fontSize: 18,
+                                            background: "#ffffff",
+                                            lineColor: "#0aa",
                                         });
                                     }
                                 }} />
