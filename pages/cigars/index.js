@@ -109,7 +109,7 @@ const CigarCatalog = (props) => {
               value: "Cigar Brand",
               label: "Brand"
             },
-            router.query['Display Price'] === 'true' && {
+            true && {
               value: "Price",
               label: "Price",
             },
@@ -156,7 +156,7 @@ const CigarCatalog = (props) => {
           
 
           list: (item) => {
-            if (router.query['Display Price'] === 'true') {
+            if (true) {
               return (
                 item.Sizes.map(size => {
                   return (
