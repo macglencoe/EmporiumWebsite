@@ -1,6 +1,5 @@
 import "./style.css";
 import { useState, useEffect } from "react";
-import AgeVerificationModal from "../components/ageVerificationModal";
 
 import React from "react";
 
