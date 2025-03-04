@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Layout from "../../components/layout"
 import PageTitle1 from "../../components/pagetitle1";
-import ProductPage, { Navigation, StringBubbleList } from '../../components/productPage';
+import ProductPage, { Navigation, ShareButton, StringBubbleList } from '../../components/productPage';
 import { ProductImage, ProductSideContent } from '../../components/productPage';
 import { ProductSizeChart, ProductBasicInfo } from '../../components/productPage';
 import { ProductMainContent, ProductTitle } from '../../components/productPage';
@@ -64,10 +64,10 @@ const TobaccoPage = (props) => {
                     <ProductSideContent>
                         {tobacco.Components &&
                             <StringBubbleList
-                                title="Components: "
-                                data={tobacco.Components}
+                            title="Components: "
+                            data={tobacco.Components}
                             />}
-                        <ProductCallOrVisitButtons />
+                            <ProductCallOrVisitButtons />
                     </ProductSideContent>
                     <ProductMainContent>
                         <ProductTitle>{tobacco["Tobacco Name"]}</ProductTitle>
@@ -77,8 +77,14 @@ const TobaccoPage = (props) => {
                                 {name: "Family", value: tobacco['Family']}
                             ]}
                         />
+                    <ShareButton
+                        title={tobacco["Tobacco Name"]}
+                        description={"Check out this pipe tobacco from King Street Emporium!"}
+                        image={tobacco.image}
+                    />
                     </ProductMainContent>
                 </ProductPage>
+
             </Layout>
         </>
     )
