@@ -12,7 +12,7 @@ import Ksman from '../../components/ksman'
 import Link from 'next/link';
 import Layout from '../../components/layout';
 import PageTitle1 from '../../components/pagetitle1';
-import ProductPage, { Navigation, StringBubbleList } from '../../components/productPage';
+import ProductPage, { Navigation, ShareButton, StringBubbleList } from '../../components/productPage';
 import { ProductImage, ProductSideContent } from '../../components/productPage';
 import { ProductSizeChart, ProductBasicInfo } from '../../components/productPage';
 import { ProductMainContent, ProductTitle } from '../../components/productPage';
@@ -91,6 +91,11 @@ const CigarPage = (props) => {
               ]}
             />
             <ProductCallOrVisitButtons />
+            <ShareButton
+              title={cigar['Cigar Brand'] + ' ' + cigar['Cigar Name']}
+              text="Check out this cigar on King Street Emporium's online catalog!"
+              
+            />
 
           </ProductMainContent>
         </ProductPage>
