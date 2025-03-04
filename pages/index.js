@@ -51,9 +51,9 @@ const Catalog = (props) => {
               <p>
                 Whether you're looking for fine cigars, pipes, a nice cup of coffee, or some good conversation, <b>we're here to share our expertise</b>!
               </p>
-              
 
-              
+
+
             </div>
             <div className="divider"></div>
             <div style={{
@@ -171,7 +171,7 @@ const Catalog = (props) => {
           <h1 id='podcast'>The Stick Figures</h1>
           <b>Our very own podcast</b>
           <p>What does a former 1%er biker, a modern farmer/ tobacconist, redneck battle rapper, and a submarine vet have in common? Nothing except that they are all brothers of the leaf. Tune in with the Stick Figures to hear about cigars, tobacco and life on this comedy cigar podcast.</p>
-          <iframe  src="https://open.spotify.com/embed/show/0xpAdXeTXnnh30J0HEVmoz?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe src="https://open.spotify.com/embed/show/0xpAdXeTXnnh30J0HEVmoz?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
           <div className='podcast-links'>
             <b>Find us on:</b>
@@ -183,7 +183,7 @@ const Catalog = (props) => {
               </li>
               <li>
                 <Link href={'https://jacobjpyle.podbean.com/'}><a>
-                <img src="//pbcdn1.podbean.com/fs1/site/images/badges/b600_1.png" alt="App download" data-categories="essential"></img>
+                  <img src="//pbcdn1.podbean.com/fs1/site/images/badges/b600_1.png" alt="App download" data-categories="essential"></img>
                 </a></Link>
               </li>
               <li>
@@ -197,7 +197,7 @@ const Catalog = (props) => {
                 </a></Link>
               </li>
             </ul>
-            
+
           </div>
         </section>
 
@@ -206,7 +206,7 @@ const Catalog = (props) => {
 
 
 
-        <div style={{
+        <section style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -229,7 +229,7 @@ const Catalog = (props) => {
           }}>
             <div className='staff-container' >
               <div className='staff-image'>
-                <img alt="Edward Trout"src='/edtrout.jpg' />
+                <img alt="Edward Trout" src='/edtrout.jpg' />
               </div>
               <div className='staff-info'>
                 <h2>Edward Trout</h2>
@@ -246,12 +246,81 @@ const Catalog = (props) => {
               </div>
             </div>
           </div>
-          </div>
+        </section>
+
+        
 
       </Layout>
 
       <style jsx>
         {`
+
+
+        section#testimonials h2 {
+          text-align: center;
+          font-size: 2em;
+          padding: 1em;
+        }
+
+        section#testimonials blockquote::before {
+          content: '“';
+          font-size: 7em;
+          position: absolute;
+          top: 0.3em;
+          left: -0.1em;
+          opacity: 0.2;
+          font-style: normal;
+        }
+        section#testimonials blockquote::after {
+          content: '”';
+          font-size: 7em;
+          position: absolute;
+          bottom: -0.1em;
+          right: -0.1em;
+          opacity: 0.2;
+          font-style: normal;
+        }
+
+        section#testimonials blockquote {
+          font-size: 1.2em;
+          text-align: center;
+          padding: 1em;
+          padding-bottom: 5px;
+          line-height: 2em;
+          position: relative;
+          text-align: justify;
+          font-style: italic;
+        }
+
+        section#testimonials li {
+          padding: 20px;
+          display: flex;
+          flex-direction: column-reverse;
+        }
+
+        section#testimonials h3 {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          gap: 2px;
+          width: max-content;
+          align-self: center;
+
+
+          font-size: 1.3em;
+          font-weight: 100;
+        }
+
+        
+
+        section#testimonials h3 p {
+          font-size: 0.7em;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: var(--dl-color-theme-secondary2);
+          border-top: 1px solid black;
+          padding-top: 3px;
+        }
 
         section.podcast {
           background-color: var(--dl-color-theme-primary2);
@@ -526,6 +595,10 @@ const Catalog = (props) => {
           
          
         @media (max-width: 680px) {
+
+          section#testimonials blockquote {
+            line-height: 1.5em;
+          }
           .mobile-home-contact {
             display: flex;
             width: 100%;
