@@ -436,6 +436,10 @@ export const ProductInfoFields = (props) => {
                     (field.value &&
                         <div key={field.name} className='field-container'>
                             <span className='field-name'>{field.name}</span>
+                            {
+                                field.markout !== field.value &&
+                                <strike className='field-markout'>{field.markout}</strike>
+                            }
                             <span className='field-value'>{field.value}</span>
                         </div>
                     )

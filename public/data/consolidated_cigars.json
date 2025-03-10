@@ -4893,28 +4893,16 @@
       "Strength_Profile": "Medium",
       "Sizes": [
           {
-              "Size": "Rothschild",
-              "Barcode": 689674155294,
-              "In_Stock": "TRUE",
-              "Price": "$\t6.35"
-          }
-      ],
-      "slug": "hoyo-de-monterrey-hoyo-rojo"
-  },
-  {
-      "Cigar Brand": "Hoyo De Monterrey",
-      "Cigar Name": "Hoyo Rojo",
-      "Wrapper": "Honduran Sungrown",
-      "Binder": "Nicaraguan",
-      "Filler": "Dominican Nicaraguan, Honduran",
-      "Flavor_Profile": "Cinnamon, Marshmallow, Seared Meat",
-      "Strength_Profile": "Medium",
-      "Sizes": [
-          {
               "Size": "Toro",
               "Barcode": 689674155324,
               "In_Stock": "TRUE",
               "Price": "$\t7.95"
+          },
+          {
+              "Size": "Rothschild",
+              "Barcode": 689674155294,
+              "In_Stock": "TRUE",
+              "Price": "$\t6.35"
           }
       ],
       "slug": "hoyo-de-monterrey-hoyo-rojo"
@@ -7157,39 +7145,27 @@
       ],
       "slug": "oliva-gilberto-oliva-reserva-red"
   },
-  {
-      "Cigar Brand": "Oliva",
-      "Cigar Name": "Gilberto oliva Reserva Blanc",
-      "Wrapper": "Ecuador Connecticut",
-      "Binder": "Nicaraguan Habano",
-      "Filler": "Nicaraguan",
-      "Flavor_Profile": "Cedar, Earth, Baking spices, Cocoa powder",
-      "Strength_Profile": "Mild-Medium",
-      "Sizes": [
-          {
-              "Size": "Toro",
-              "Barcode": 814539015059,
-              "In_Stock": "TRUE",
-              "Price": "$\t8.90"
-          }
-      ],
-      "slug": "oliva-gilberto-oliva-reserva-blanc"
-  },
-  {
-      "Cigar Brand": "Oliva",
-      "Cigar Name": "Gilberto Oliva Reserva Blanc",
-      "Wrapper": "Ecuador Connecticut",
-      "Binder": "Nicaraguan Habano",
-      "Filler": "Nicaraguan",
-      "Flavor_Profile": "Cedar, Earth, Baking spices, Cocoa powder",
-      "Strength_Profile": "Mild-Medium",
-      "Sizes": [
-          {
-              "Size": "Robusto",
-              "Barcode": 814539015035,
-              "In_Stock": "TRUE",
-              "Price": "$\t7.75"
-          }
+{
+    "Cigar Brand": "Oliva",
+    "Cigar Name": "Gilberto Oliva Reserva Blanc",
+    "Wrapper": "Ecuador Connecticut",
+    "Binder": "Nicaraguan Habano",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Cedar, Earth, Baking spices, Cocoa powder",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+        {
+            "Size": "Robusto",
+            "Barcode": 814539015035,
+            "In_Stock": "TRUE",
+            "Price": "$\t7.75"
+        },
+        {
+            "Size": "Toro",
+            "Barcode": 814539015059,
+            "In_Stock": "TRUE",
+            "Price": "$\t8.90"
+        }
       ],
       "slug": "oliva-gilberto-oliva-reserva-blanc"
   },

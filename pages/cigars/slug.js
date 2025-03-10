@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { Fragment, useState, useEffect, use } from 'react'
 import { useRouter } from 'next/router';
 import Data from '../../public/data/consolidated_cigars.json';
 import cigarSizes from '../../public/data/cigarsizes.json';
@@ -39,13 +39,26 @@ export const getStaticProps = async ({ params }) => {
   return { props: { cigar, next: nextCigar, prev: prevCigar } };
 }
 
-const CigarPage = (props) => {
 
+
+const CigarPage = (props) => {
+  const router = useRouter();
   const cigar = props.cigar;
   if (!cigar) {
     return <div>Cigar not found</div>;
   }
 
+  const [cigarLocalData, setCigarLocalData] = useState(cigar);
+
+  const revertToOriginal = () => {
+    setCigarLocalData(cigar);
+  };
+
+  const pullTempData = () => {
+    const tempData = JSON.parse(localStorage.getItem('tempData_cigars'));
+    const firstCigarWithSameSlug = tempData.find((cigar) => cigar.slug === cigarLocalData.slug);
+    setCigarLocalData(firstCigarWithSameSlug);
+  }
 
   return (
     <>
@@ -53,24 +66,36 @@ const CigarPage = (props) => {
         <title>{cigar['Cigar Brand']} {cigar['Cigar Name']}</title>
       </Head>
       <Layout>
+        <div>
+          <button onClick={revertToOriginal}>Revert to Original</button>
+          <button onClick={pullTempData}>Pull Temp Data</button>
+        </div>
+        <div>
+          <label htmlFor='cigarName'>Cigar Name</label>
+          <input id='cigarName' type="text"
+            onChange={(event) => { setCigarLocalData({ ...cigarLocalData, 'Cigar Name': event.target.value }) }}
+            value={cigarLocalData? cigarLocalData['Cigar Name'] : "Data not found"}
+          />
+          
+        </div>
         <PageTitle1
-          subtitle={cigar['Cigar Name']}
+          subtitle={cigarLocalData? cigarLocalData['Cigar Name'] : "Data not found"}
           next={props.next}
           prev={props.prev}
           href="/cigars"
           nameField="Cigar Name"
         >Cigar Information</PageTitle1>
         <ProductPage
-          description={cigar.description}
+          description={cigarLocalData.description}
         >
           <ProductSideContent>
             <ProductImage
               hasImage={true}
-              src={`/cigars-img/${cigar.slug}/img.png`}
+              src={`/cigars-img/${cigarLocalData.slug}/img.png`}
               fallbackSearch={encodeURIComponent(cigar['Cigar Brand'] + ' ' + cigar['Cigar Name'])}
             />
             <ProductSizeChart
-              sizes={cigar.Sizes.map(size => size.Size)}
+              sizes={cigarLocalData.Sizes.map(size => size.Size)}
               allCigarSizes={cigarSizes}
             />
             {cigar['Flavor_Profile'] && <StringBubbleList title="Flavor"
@@ -83,11 +108,11 @@ const CigarPage = (props) => {
           <ProductMainContent>
             <ProductInfoFields
               fields={[
-                { name: "Brand", value: cigar['Cigar Brand'] },
-                { name: "Wrapper", value: cigar['Wrapper'] },
-                { name: "Binder", value: cigar['Binder'] },
-                { name: "Filler", value: cigar['Filler'] },
-                { name: "Strength", value: cigar['Strength_Profile'] },
+                { name: "Brand", value: cigarLocalData['Cigar Brand'] },
+                { name: "Wrapper", value: cigarLocalData['Wrapper'] },
+                { name: "Binder", value: cigarLocalData['Binder'] },
+                { name: "Filler", value: cigarLocalData['Filler'] },
+                { name: "Strength", value: cigarLocalData['Strength_Profile'] },
               ]}
             />
             <ProductCallOrVisitButtons />

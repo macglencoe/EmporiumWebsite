@@ -27,23 +27,37 @@ export const getStaticProps = async () => {
 
 const CigarCatalog = (props) => {
 
+  //CMS
+
+  const revertTempData = () => {
+    localStorage.setItem('tempData_cigars', JSON.stringify(props.data));
+  }
+
+  const [tempData, setTempData] = useState(props.data);
+
+  const pullTempData = () => {
+    setTempData(JSON.parse(localStorage.getItem('tempData_cigars')));
+  }
+
+  
+
 
   const router = useRouter();
 
   // All unique brands for filtering
-  const uniqueBrands = [...new Set((props.data).map(item => item['Cigar Brand'].trim()))];
+  const uniqueBrands = [...new Set((tempData).map(item => item['Cigar Brand'].trim()))];
 
   // All unique wrappers for filtering
-  const uniqueWrappers = [...new Set((props.data).map(item => item['Wrapper'].trim()))];
+  const uniqueWrappers = [...new Set((tempData).map(item => item['Wrapper'].trim()))];
 
   // All unique strengths for filtering
-  const uniqueStrengths = [...new Set((props.data).map(item => item['Strength_Profile'].trim()))];
+  const uniqueStrengths = [...new Set((tempData).map(item => item['Strength_Profile'].trim()))];
 
   // All unique sizes for filtering
-  const uniqueSizes = [...new Set(props.data.flatMap(obj => obj.Sizes.map(size => size.Size)))].sort((a, b) => a.localeCompare(b));
+  const uniqueSizes = [...new Set(tempData.flatMap(obj => obj.Sizes.map(size => size.Size)))].sort((a, b) => a.localeCompare(b));
 
   const pageSize = 10;
-  const totalPages = Math.ceil(props.data.length / pageSize);
+  const totalPages = Math.ceil(tempData.length / pageSize);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
@@ -52,7 +66,7 @@ const CigarCatalog = (props) => {
     }
   }, [router.query.page]);
 
-  const currentPageData = props.data.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+  const currentPageData = tempData.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
   // ^^ This all needs to go to Catalog.js :(
 
@@ -61,8 +75,12 @@ const CigarCatalog = (props) => {
       <Head>
         <title>Cigar Catalog</title>
       </Head>
+      <div>
+        <button onClick={pullTempData}>Pull Local Data</button>
+        <button onClick={revertTempData}>Revert Local Data</button>
+      </div>
       <Catalog
-        data={props.data}
+        data={tempData}
 
         title="Cigar Catalog"
         subtitle="Our selection of cigars from a wide array of premium brands, available for purchase in-store."
@@ -170,7 +188,7 @@ const CigarCatalog = (props) => {
                           if (canvas) {
                             JsBarcode(canvas, size.Barcode, {
                               format: "CODE128",
-                              width: 2,
+                              width: 1.5,
                               height: 20,
                               fontSize: 12,
                               background: "transparent",
