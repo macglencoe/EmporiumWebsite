@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Layout from '../../../components/layout';
+import setLocalData from '../../../utils/setLocalData';
 
 
 export const getStaticPaths = async () => {
@@ -49,6 +50,7 @@ const EditCigarPage = (props) => {
     }
 
     useEffect(() => {
+        setLocalData(props.allCigars);
         if (typeof window !== 'undefined') {
             pullTempData();
             setAllCigarsLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));

@@ -14,6 +14,7 @@ import Layout from '../../components/layout'
 import CatalogCard from '../../components/catalogCard'
 import Catalog from '../../components/catalog'
 import Filters from '../../components/filters'
+import setLocalData from '../../utils/setLocalData'
 
 
 export const getStaticProps = async () => {
@@ -39,7 +40,9 @@ const CigarCatalog = (props) => {
     setTempData(JSON.parse(localStorage.getItem('tempData_cigars')));
   }
 
-  
+  useEffect(() => {
+    setLocalData(props.data);
+  }, []);
 
 
   const router = useRouter();
@@ -75,10 +78,6 @@ const CigarCatalog = (props) => {
       <Head>
         <title>Cigar Catalog</title>
       </Head>
-      <div>
-        <button onClick={pullTempData}>Pull Local Data</button>
-        <button onClick={revertTempData}>Revert Local Data</button>
-      </div>
       <Catalog
         data={tempData}
 

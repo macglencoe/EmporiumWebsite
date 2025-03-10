@@ -18,6 +18,7 @@ import { ProductSizeChart, ProductBasicInfo } from '../../../components/productP
 import { ProductMainContent, ProductTitle } from '../../../components/productPage';
 import { ProductInfoFields, ProductCallOrVisitButtons } from '../../../components/productPage';
 import { Disclaimer } from '../../../components/productPage';
+import setLocalData from '../../../utils/setLocalData';
 
 export const getStaticPaths = async () => {
   const cigars = await import('../../../public/data/consolidated_cigars.json');
@@ -36,7 +37,7 @@ export const getStaticProps = async ({ params }) => {
 
   const prevCigar = cigarIndex > 0 ? data[cigarIndex - 1] : null;
   const nextCigar = cigarIndex + 1 < data.length ? data[cigarIndex + 1] : null;
-  return { props: { cigar, next: nextCigar, prev: prevCigar } };
+  return { props: { cigar, next: nextCigar, prev: prevCigar, allCigars: data } };
 }
 
 
@@ -61,9 +62,12 @@ const CigarPage = (props) => {
   }
 
   useEffect(() => {
+
+    setLocalData(props.allCigars);
     if (typeof window !== 'undefined') {
       pullTempData();
     }
+
   }, []);
 
   return (
@@ -72,20 +76,11 @@ const CigarPage = (props) => {
         <title>{cigar['Cigar Brand']} {cigar['Cigar Name']}</title>
       </Head>
       <Layout>
-        <div>
-          <button onClick={revertToOriginal}>Revert to Original</button>
-          <button onClick={pullTempData}>Pull Temp Data</button>
-        </div>
-        <div>
-          <label htmlFor='cigarName'>Cigar Name</label>
-          <input id='cigarName' type="text"
-            onChange={(event) => { setCigarLocalData({ ...cigarLocalData, 'Cigar Name': event.target.value }) }}
-            value={cigarLocalData? cigarLocalData['Cigar Name'] : "Data not found"}
-          />
-          
+        <div className='toolbar'>
+          <a href='./edit'>Edit</a>
         </div>
         <PageTitle1
-          subtitle={cigarLocalData? cigarLocalData['Cigar Name'] : "Data not found"}
+          subtitle={cigarLocalData ? cigarLocalData['Cigar Name'] : "Data not found"}
           next={props.next}
           prev={props.prev}
           href="/cigars"
@@ -125,9 +120,29 @@ const CigarPage = (props) => {
 
           </ProductMainContent>
         </ProductPage>
-        
+
         <Disclaimer />
       </Layout>
+      <style jsx>
+        {`
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 10px;
+}
+.toolbar a {
+  font-family: Inter;
+  font-weight: 500;
+  background-color: var(--dl-color-theme-secondary2);
+  color: var(--dl-color-theme-primary1);
+  padding: 10px;
+}
+.toolbar a:hover {
+  color: var(--dl-color-theme-primary2);
+}
+        `}
+      </style>
     </>
   );
 };
