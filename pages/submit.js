@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import PageTitle1 from '../components/pagetitle1';
 import { Fragment } from 'react/cjs/react.production.min';
 
