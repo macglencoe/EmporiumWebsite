@@ -62,7 +62,7 @@ export const SubmitPage = (props) => {
                         {localData.map((cigar, index) => {
                             const originalCigar = props.data.find((originalCigar) => originalCigar.slug === cigar.slug);
                             if (!originalCigar || JSON.stringify(originalCigar) !== JSON.stringify(cigar)) {
-                                const originalCigarLines = JSON.stringify(originalCigar, null, 2).split('\n');
+                                const originalCigarLines = originalCigar ? JSON.stringify(originalCigar, null, 2).split('\n') : [''];
     
                                 const updatedCigar = { ...cigar };
                                 if (updatedCigar['new-slug']) {

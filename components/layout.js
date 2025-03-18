@@ -10,6 +10,7 @@ import Directory from '../components/directory'
 import Ksman from '../components/ksman'
 import { Router, useRouter } from 'next/router'
 import { Analytics } from '@vercel/analytics/react'
+import Toolbar from './toolbar'
 
 const Layout = (props) => {
   const router = useRouter();
@@ -67,6 +68,18 @@ const Layout = (props) => {
               <Fragment>
                 {props.headerChildren}
               </Fragment>
+      <Toolbar
+        links={[
+          { href: '/submit', label: 'Submit all Changes',
+            icon: <path xmlns="http://www.w3.org/2000/svg" d="M480-257q-76 0-135-45.5T266-417H46v-126h220q20-69 79-114.5T480-703q76 0 135 45.5T694-543h220v126H694q-20 69-79 114.5T480-257Zm.41-126Q521-383 549-411.41t28-69Q577-521 548.79-549q-28.2-28-68.5-28-40.29 0-68.79 28.21-28.5 28.2-28.5 68.5 0 40.29 28.41 68.79 28.41 28.5 69 28.5Z"/>
+          },
+          {
+            href: '/cigars/add', label: 'Add New Cigar',
+            icon: <path xmlns="http://www.w3.org/2000/svg" d="M417-417H166v-126h251v-251h126v251h251v126H543v251H417v-251Z"/>
+          }
+        ]}
+        style={{ backgroundColor: 'var(--dl-color-theme-secondary1)' }}
+      />
             </div>
           </div>
 
