@@ -19,6 +19,57 @@ const EditNewCigarPage = (props) => {
     const [allCigarData, setAllCigarData] = useState(props.data);
 
     const cigarFields = {
+        'Cigar Brand': {
+            required: true,
+            type: 'string',
+            message: 'Cigar brand is required'
+        },
+        'Cigar Name': {
+            required: true,
+            type: 'string',
+            message: 'Cigar name is required'
+        },
+        'Wrapper': {
+            type: 'string'
+        },
+        'Binder': {
+            type: 'string'
+        },
+        'Filler': {
+            type: 'string'
+        },
+        "Flavor_Profile": {
+            type: 'string'
+        },
+        "Strength_Profile": {
+            type: 'string'
+        },
+        "Sizes": {
+            type: 'array',
+            fields: {
+                "Size": {
+                    type: 'string'
+                },
+                "Barcode": {
+                    type: 'string'
+                },
+                "In_Stock": {
+                    type: 'string'
+                },
+                "Price": {
+                    type: 'string'
+                }
+            }
+        }
+    }
+    const sizeFields = {
+        "Size": "",
+        "Barcode": "",
+        "In_Stock": "",
+        "Price": ""
+    }
+
+    const originalData = {
         'Cigar Brand': "",
         'Cigar Name': "",
         'Wrapper': "",
@@ -27,13 +78,6 @@ const EditNewCigarPage = (props) => {
         "Flavor_Profile": "",
         "Strength_Profile": "",
         "Sizes": [{}]
-        // 'slug': "", // slug is generated from the cigar name, added afterwards
-    }
-    const sizeFields = {
-        "Size": "",
-        "Barcode": "",
-        "In_Stock": "",
-        "Price": ""
     }
 
     useEffect(() => {
@@ -186,7 +230,7 @@ const EditNewCigarPage = (props) => {
                     pullTempData={pullTempData}
                     pullAllTempData={pullAllTempData}
                     dataFields={cigarFields}
-                    dataOriginal={cigarFields}
+                    dataOriginal={originalData}
                     onMetadataChange={(e) => {
                         setCigarLocalData({ ...cigarLocalData, [e.target.name]: e.target.value });
                     }}

@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 
 const InputField = (props) => {
     return (
@@ -11,16 +11,20 @@ const InputField = (props) => {
                 <div>
                     {props.onRevert && props.original && <button onClick={(e) => {
                         props.onRevert(e);
+                        if (props.setErrors) {
+                            props.setErrors({ ...props.errors, [props.name]: false });
+                        }
                     }}
                     >Revert
                     </button>}
                     {props.original && <strike>{props.original ?? ""}</strike>}
+                    {props.error && <span className="error">{props.error}</span>}
                     <textarea
                         rows={props.rows ?? 1}
                         cols="20"
                         type="text"
                         value={props.value}
-
+                        name={props.name}
                         onChange={(e) => {
                             props.onChange(e);
                         }}
@@ -97,6 +101,16 @@ const InputField = (props) => {
     overflow-wrap: break-word;
 }
 
+.inputField > div span.error {
+    background-color: var(--dl-color-theme-primary2);
+    color: red;
+    font-size: 0.8em;
+    font-family: Inter;
+    padding: 0.5em;
+    grid-column: 1 / -1;
+    grid-row: 3;
+}
+
 div.size-tools {
     display: flex;
     flex-direction: row-reverse;
@@ -139,6 +153,10 @@ const CrudForm = (props) => {
     const router = useRouter();
 
     const [localData, setLocalData] = useState();
+    const [errors, setErrors] = useState({});
+
+
+    
 
 
     useEffect(() => {
@@ -147,6 +165,40 @@ const CrudForm = (props) => {
             setLocalData(props.pullTempData());
         }
     }, []);
+
+    useEffect(() => {
+        const tempErrors = {};
+        if (props.dataFields && localData) {
+            Object.entries(localData).forEach(([key, value]) => {
+                const error = validateField(key, value, props.dataFields[key]);
+                tempErrors = ({ ...tempErrors, [key]: error });
+            })
+        }
+        setErrors(tempErrors);
+    }, [localData]);
+
+    const validateField = (key, value, field) => {
+        if (field)
+        {
+            if (field.type == "number") {
+                if (!isNaN(parseInt(value))) {
+                    return field.message;
+                } else return false;
+            }
+            if (field.required) {
+                if (!value || value.length === 0 || value === "null" || value === "") {
+                    return field.message;
+                } else return false;
+            }
+        }
+        return false;
+    }
+
+    const handleValidation = (e, field) => {
+        const { name, value } = e.target;
+        const error = validateField(name, value, field);
+        setErrors({ ...errors, [name]: error });
+    }
 
 
 
@@ -159,18 +211,23 @@ const CrudForm = (props) => {
                         localData &&
                         props.dataFields &&
                         Object.keys(props.dataFields).map((key, index) => {
-                            if (typeof props.dataFields[key] == "string") {
+                            if (props.dataFields[key]["type"] == "string") {
                                 return (
                                     <InputField
                                         label={key}
+                                        name={key}
                                         value={localData[key]}
                                         original={props.dataOriginal[key]}
                                         onChange={(e) => {
                                             setLocalData({ ...localData, [key]: e.target.value });
+                                            handleValidation(e, props.dataFields[key]);
                                         }}
                                         onRevert={(e) => {
                                             setLocalData({ ...localData, [key]: props.dataOriginal[key] });
+                                            handleValidation(e, props.dataFields[key]);
                                         }}
+                                        setErrors={setErrors}
+                                        error={errors[key]}
                                     ></InputField>
                                 )
                             }
@@ -197,6 +254,7 @@ const CrudForm = (props) => {
                                                                     return (
                                                                         <InputField
                                                                             label={fieldKey}
+                                                                            name={fieldKey}
                                                                             value={localData[key][sizeIndex][fieldKey]}
                                                                             original={props.dataOriginal[key][sizeIndex]?.[fieldKey]}
                                                                             onChange={(e) => {
@@ -279,11 +337,23 @@ const CrudForm = (props) => {
                                 </>
                         }
                     </div>
+                    {Object.values(errors).some(error => error !== false) &&
+                        <>
+                            <h2>Errors</h2>
+                            <b style={{ color: "red" }}>Please fix errors before submitting:</b>
+                        </>
+                    }
+                    {Object.entries(errors).map(([key, value]) => {
+                        if (value !== false) {
+                            return <p key={key}>{key} - {value}</p>;
+                        }
+                    })}
                     <div className="tools">
                         <button id="submit"
                             onClick={(e) => {
                                 props.onSubmit(localData);
                             }}
+                            disabled={Object.values(errors).some(error => error !== false)}
                         >Submit</button>
                         <button id="revert"
                             onClick={(e) => {
@@ -420,6 +490,12 @@ div.tools button {
 
 div.tools button:hover {
     color: var(--dl-color-theme-primary2);
+}
+
+div.tools button:disabled {
+    color: var(--dl-color-theme-primary1);
+    opacity: 0.5;
+    cursor: default;
 }
 
 section {

@@ -23,6 +23,51 @@ const AddCigarPage = (props) => {
         "Price": ""
     }
     const cigarFields = {
+        'Cigar Brand': {
+            required: true,
+            type: 'string',
+            message: 'Cigar brand is required'
+        },
+        'Cigar Name': {
+            required: true,
+            type: 'string',
+            message: 'Cigar name is required'
+        },
+        'Wrapper': {
+            type: 'string'
+        },
+        'Binder': {
+            type: 'string'
+        },
+        'Filler': {
+            type: 'string'
+        },
+        "Flavor_Profile": {
+            type: 'string'
+        },
+        "Strength_Profile": {
+            type: 'string'
+        },
+        "Sizes": {
+            type: 'array',
+            fields: {
+                "Size": {
+                    type: 'string'
+                },
+                "Barcode": {
+                    type: 'string'
+                },
+                "In_Stock": {
+                    type: 'string'
+                },
+                "Price": {
+                    type: 'string'
+                }
+            }
+        }
+    }
+
+    const originalData = {
         'Cigar Brand': "",
         'Cigar Name': "",
         'Wrapper': "",
@@ -31,8 +76,6 @@ const AddCigarPage = (props) => {
         "Flavor_Profile": "",
         "Strength_Profile": "",
         "Sizes": [{}],
-
-        // 'slug': "", // slug is generated from the cigar name, added afterwards
     }
 
     useEffect(() => {
@@ -102,10 +145,10 @@ const AddCigarPage = (props) => {
         <>
             <Layout>
                 <CrudForm
-                    pullTempData={() => cigarFields}
+                    pullTempData={() => originalData}
                     pullAllTempData={() => allCigarsLocalData}
                     dataFields={cigarFields}
-                    dataOriginal={cigarFields}
+                    dataOriginal={originalData}
                     arrayFields={{
                         "Sizes": sizeFields
                     }}

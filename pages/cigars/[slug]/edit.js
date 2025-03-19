@@ -3,6 +3,7 @@ import Layout from '../../../components/layout';
 import setLocalData from '../../../utils/setLocalData';
 import { useRouter } from 'next/router';
 import CrudForm from '../../../components/crudForm';
+import { type } from 'jquery';
 
 
 export const getStaticPaths = async () => {
@@ -33,7 +34,7 @@ const EditCigarPage = (props) => {
     const [cigarLocalData, setCigarLocalData] = useState(props.cigar);
     const [allCigarsLocalData, setAllCigarsLocalData] = useState(props.allCigars);
 
-    const cigarFields = {
+    /* const cigarFields = {
         'Cigar Brand': "",
         'Cigar Name': "",
         'Wrapper': "",
@@ -43,6 +44,51 @@ const EditCigarPage = (props) => {
         "Strength_Profile": "",
         "Sizes": [{}]
         // 'slug': "", // slug is generated from the cigar name, added afterwards
+    } */
+
+    const cigarFields = {
+        'Cigar Brand': {
+            required: true,
+            type: 'string',
+            message: 'Cigar brand is required'
+        },
+        'Cigar Name': {
+            required: true,
+            type: 'string',
+            message: 'Cigar name is required'
+        },
+        'Wrapper': {
+            type: 'string'
+        },
+        'Binder': {
+            type: 'string'
+        },
+        'Filler': {
+            type: 'string'
+        },
+        "Flavor_Profile": {
+            type: 'string'
+        },
+        "Strength_Profile": {
+            type: 'string'
+        },
+        "Sizes": {
+            type: 'array',
+            fields: {
+                "Size": {
+                    type: 'string'
+                },
+                "Barcode": {
+                    type: 'string'
+                },
+                "In_Stock": {
+                    type: 'string'
+                },
+                "Price": {
+                    type: 'string'
+                }
+            }
+        }
     }
 
     const sizeFields = {
@@ -173,7 +219,7 @@ const EditCigarPage = (props) => {
                         setCigarLocalData({ ...cigarLocalData, [e.target.name]: props.cigar[e.target.name] })
                     }}
                     arrayFields={{
-                        'Sizes': sizeFields
+                        "Sizes": sizeFields
                     }}
                     generateSlug={generateSlug}
                     isSlugUnique={isSlugUnique}
