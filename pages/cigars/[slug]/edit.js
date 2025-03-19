@@ -53,9 +53,7 @@ const EditCigarPage = (props) => {
     }
 
     useEffect(() => {
-        // --- May need deprecated soon --- //
         setLocalData(props.allCigars);
-        // ----------------------------- //
         if (typeof window !== 'undefined') {
             pullTempData();
             setAllCigarsLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
@@ -69,9 +67,8 @@ const EditCigarPage = (props) => {
      */
     const pullTempData = () => {
         const tempData = JSON.parse(localStorage.getItem('tempData_cigars'));
-        const firstCigarWithSameSlug = tempData.find((cigar) => props.cigar.slug === cigar.slug);
+        const firstCigarWithSameSlug = tempData.find((cigar) => cigar.slug === cigarLocalData.slug);
         setCigarLocalData(firstCigarWithSameSlug);
-        return firstCigarWithSameSlug;
     }
 
 
