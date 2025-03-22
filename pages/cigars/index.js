@@ -225,6 +225,7 @@ const CigarCatalog = (props) => {
                         li.card-size > div {
                           display: flex;
                           justify-content: space-between;
+                          flex-wrap: wrap;
                           gap: 10px;
                         }
                         li.card-size span {
@@ -232,6 +233,9 @@ const CigarCatalog = (props) => {
                         }
                         li.card-size span:last-child {
                           font-weight: 900;
+                        }
+                        li.card-size canvas {
+                          width: 100%;
                         }
                         `}
                       </style>

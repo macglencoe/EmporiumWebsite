@@ -246,7 +246,7 @@ const CatalogCard = (props) => {
                                 {
                                     props.list.map((item) => {
                                         return (
-                                            <li>{item}</li>
+                                            <>{item}</>
                                         )
                                     })
                                 }
