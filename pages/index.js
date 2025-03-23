@@ -18,6 +18,11 @@ const Catalog = (props) => {
     isMobile = window.innerWidth < 680;
   })
 
+  const [commits, setCommits] = useState([]);
+  const [updatePage, setUpdatePage] = useState(1);
+  const [updateBranch, setUpdateBranch] = useState("main");
+
+
 
   useEffect(() => {
     // Add cursor pointer for better UX
@@ -25,7 +30,25 @@ const Catalog = (props) => {
     if (element) {
       element.style.cursor = 'pointer';
     }
+
+    fetch('/api/getCommits?branch='+updateBranch).then(response => response.json()).then(data => setCommits(data));
   }, []);
+
+  const getIssueNumbers = () => {
+    const issueNumbers = [];
+    if (commits.length > 0) {
+      commits.forEach(commit => {
+        const matches = commit.message?.match(/#(\d+)/g);
+        if (matches) {
+          matches.forEach(match => {
+            const issueNumber = match.slice(1); // Remove the '#' character
+            issueNumbers.push(issueNumber);
+          });
+        }
+      });
+    }
+    return issueNumbers;
+  }
 
   const adminConsoleVersion = process.env.ADMIN_CONSOLE_VERSION ?? "1.0";
 
@@ -46,14 +69,80 @@ const Catalog = (props) => {
             <h1>Admin Console</h1>
             <b>Dashboard</b>
             <p>Version: <b>{adminConsoleVersion}</b></p>
-            {console.log(process.env)}
           </header>
-          <div className='vercel-container'>
-            
-            <h2>Hosting Dashboard</h2>
-            <p>This website is hosted with <b>Vercel</b>.<br></br> Click here to manage the site, view analytics, and more:</p>
-            <button onClick={() => window.open('https://vercel.com/king-street-emporium/emporium-website/deployments', '_blank')}><img src='https://upload.wikimedia.org/wikipedia/commons/5/5e/Vercel_logo_black.svg' alt='Vercel'></img></button>
+          <div className='widgets'>
+            <div className='vercel-container'>
+
+              <h2>Hosting Dashboard</h2>
+              <p>This website is hosted with <b>Vercel</b>.<br></br> Click here to manage the site, view analytics, and more:</p>
+              <div><button onClick={() => window.open('https://vercel.com/king-street-emporium/emporium-website/deployments', '_blank')}><img src='https://upload.wikimedia.org/wikipedia/commons/5/5e/Vercel_logo_black.svg' alt='Vercel'></img></button></div>
+            </div>
+
+            <div className='github-commits'>
+              <div className='timeline-header'>
+                <h2>Recent Updates</h2>
+                <select onChange={(e) => {
+                  setCommits([]);
+                  setUpdateBranch(e.target.value);
+
+                  fetch(`/api/getCommits?branch=${e.target.value}`).then(response => response.json()).then(data => setCommits(data));
+
+
+                }}>
+                  <option value='main'>Public Site</option>
+                  <option value='cms'>Admin Console</option>
+                </select>
+
+
+                <div className='update-page'>
+                  <label for='update-page'>Page:</label>
+                  <input type='number' min='1' id='update-page' value={updatePage} onChange={(e) => {
+                    setUpdatePage(e.target.value);
+                    fetch(`/api/getCommits?branch=${updateBranch}&page=${e.target.value}`).then(response => response.json()).then(data => setCommits(data));
+                  }}></input>
+                </div>
+              </div>
+
+              {commits.length === 0 ? (
+                <p>Loading...</p>
+              ) : (
+                commits.map((commit) => (
+                  <div className='timeline-item'>
+                    <div className='timeline-badge' key={commit.id}>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="jsx-c75b57f7aa6fb9c9"><path xmlns="http://www.w3.org/2000/svg" d="M480-257q-76 0-135-45.5T266-417H46v-126h220q20-69 79-114.5T480-703q76 0 135 45.5T694-543h220v126H694q-20 69-79 114.5T480-257Zm.41-126Q521-383 549-411.41t28-69Q577-521 548.79-549q-28.2-28-68.5-28-40.29 0-68.79 28.21-28.5 28.2-28.5 68.5 0 40.29 28.41 68.79 28.41 28.5 69 28.5Z" class="jsx-a30a9aeeb1937205"></path></svg>
+                    </div>
+                    <div className='commit-body' key={commit.id}>
+                      {
+                        commit.commit.message?.match(/#(\d+)/g) && (
+                          <div className='commit-issues'>
+                            {commit.commit.message.match(/#(\d+)/g).map(issue => {
+                              const issueNumber = issue.slice(1); // Remove the '#' character
+                              return (
+                                <a
+                                  href={`https://github.com/macglencoe/EmporiumWebsite/issues/${issueNumber}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  key={issueNumber}
+                                >
+                                  Issue #{issueNumber}
+                                </a>
+                              );
+                            })}
+
+                          </div>
+                        )
+                      }
+                      <a href={commit.html_url} className='commit-message'>{commit.commit.message}</a>
+
+
+                      <p className='commit-date'>{commit.commit.author.date}</p>
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
           </div>
+
           <details className='accordion'>
             <summary>How to use</summary>
             <div>
@@ -333,6 +422,134 @@ const Catalog = (props) => {
       <style jsx>
         {`
 
+        .widgets {
+          display: flex;
+          flex-direction: row;
+          gap: 1em;
+          width: 100%;
+          flex-wrap: wrap;
+        }
+        .widgets > div {
+          flex: 1;
+        }
+
+        .widgets > div h2 {
+          color: var(--dl-color-theme-secondary2);
+        }
+
+        .update-page {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0.5em;
+        }
+        .update-page input {
+          width: 3em;
+          font-family: Inter;
+        }
+
+
+        .github-commits {
+          display: flex;
+          flex-direction: column;
+          background-color: var(--dl-color-theme-primary2);
+          border-radius: 10px;
+          padding: 0.5em;
+        }
+
+        .commit-issues a {
+          display: flex;
+          width: min-content;
+          white-space: nowrap;
+          font-family: Inter;
+          background-color: var(--dl-color-theme-primary1);
+          border-radius: 5px;
+          padding: 0.2em;
+        }
+
+        .commit-issues a:hover {
+          color: var(--dl-color-theme-primary2);
+        }
+
+        .commit-issues {
+          display: flex;
+          gap: 0.5em;
+          margin: 0.2em 0;
+        }
+
+        .timeline-header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .commit-body {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          padding: 0.5em 0;
+          padding-left: 1em;
+        }
+
+        .timeline-item {
+          display: flex;
+          position: relative;
+          margin-left: 1em;
+          align-items: center;
+        }
+
+        .timeline-item::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          background-color: var(--dl-color-theme-primary1);
+          z-index: 0;
+        }
+
+        .timeline-badge {
+          background-color: var(--dl-color-theme-primary1);
+          border-radius: 50%;
+          height: 32px;
+          width: 32px;
+          min-width: 32px;
+          display: flex;
+          margin-left: -15px;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          border: 3px solid var(--dl-color-theme-primary2);
+          z-index: 1;
+        }
+
+        .timeline-badge svg {
+          fill: var(--dl-color-theme-primary2);
+          height: 30px;
+          width: 30px;
+          rotate: 90deg;
+        }
+
+        .commit-date {
+          color: var(--dl-color-theme-secondary2);
+          font-family: Inter;
+          font-size: 0.8em;
+          font-weight: 500;
+          z-index: 1;
+        }
+
+        .commit-message {
+          font-family: Inter;
+          z-index: 1;
+        }
+        .commit-body a:hover {
+          text-decoration: underline;
+          text-decoration-color: var(--dl-color-theme-primary1);
+        }
+
+
+
         div.admin-console-dashboard {
           display: flex;
           flex-direction: column;
@@ -405,6 +622,15 @@ const Catalog = (props) => {
         div.vercel-container h2 {
           font-size: 1.5em;
           color: var(--dl-color-theme-secondary2);
+        }
+
+        div.vercel-container > div {
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
         }
 
         div.vercel-container button {
