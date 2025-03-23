@@ -142,7 +142,6 @@ button#remove-size:hover {
  * @param {object} props
  * @param {object} props.allCigars - All data of all cigars
  * @param {object} props.dataFields - The fields of a cigar that can be edited
- * @param {object} props.metaFields - The fields of a cigar that cannot be edited
  * @param {function} props.onSubmit - Called when the user submits the form
  * @param {function} props.generateSlug - Generates a slug based on the cigar's name and brand
  * @param {function} props.isSlugUnique - Checks if a slug is already in use

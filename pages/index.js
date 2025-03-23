@@ -11,6 +11,7 @@ import Ksman from '../components/ksman'
 import Layout from '../components/layout'
 import ShopSuggestions from '../components/shopSuggestions'
 import { handleLocationClick } from '../utils/location'
+import WikiLink from '../components/wikiLink'
 
 const Catalog = (props) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -141,6 +142,17 @@ const Catalog = (props) => {
                 ))
               )}
             </div>
+
+            <div className='wiki'>
+              <h2>Wiki</h2>
+              <p>For your curiosity about how the website works, and for documentation, many articles are available</p>
+              <h3>Featured Articles</h3>
+              <ul>
+                <li><WikiLink href='https://github.com/macglencoe/EmporiumWebsite/wiki/Data-Structure' description='Learn how JSON structures and organizes data on our website, from cigars and tobacco to coffee and tea. This guide explains JSON’s key components, including objects, lists, and data types, and how they’re used to power our catalog.'>Data Structure</WikiLink></li>
+                <li><WikiLink href='https://github.com/macglencoe/EmporiumWebsite/wiki/Data-Handling' description="This page explains how the website manages cigar data, including how it's stored, retrieved, and organized. Cigar details are saved in JSON files, while any changes made in the CMS are temporarily stored in the browser. It also covers 'slugs,' which are unique names used in URLs to identify each cigar. These slugs are automatically created from the cigar’s brand and name, ensuring no duplicates.">Data Handling</WikiLink></li>
+              </ul>
+            </div>
+
           </div>
 
           <details className='accordion'>
@@ -422,6 +434,23 @@ const Catalog = (props) => {
       <style jsx>
         {`
 
+        .wiki {
+          display: flex;
+          flex-direction: column;
+          gap: 0.7em;
+          width: 100%;
+          background-color: var(--dl-color-theme-primary2);
+          border-radius: 10px;
+          padding: 0.5em;
+        }
+        .wiki ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+          width: 100%;
+          list-style-type: none;
+        }
+
         .widgets {
           display: flex;
           flex-direction: row;
@@ -431,10 +460,12 @@ const Catalog = (props) => {
         }
         .widgets > div {
           flex: 1;
+          min-width: 375px;
         }
 
         .widgets > div h2 {
           color: var(--dl-color-theme-secondary2);
+          white-space: nowrap;
         }
 
         .update-page {
@@ -481,6 +512,7 @@ const Catalog = (props) => {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+          flex-wrap: wrap;
         }
 
         .commit-body {
