@@ -231,7 +231,8 @@ const Catalog = (props) => {
                         <div className='searchbar-container' id='header-search'>
                             <form onSubmit={(e) => {
                                 e.preventDefault();
-                                handleSearchChange({ target: { value: searchInput } });
+                                const trimmedValue = searchInput.replace(/^0+(?=\d)/, '');
+                                handleSearchChange({ target: { value: trimmedValue } });
                                 setSearchInput('');
                             }}
                                 className='searchbar'>
