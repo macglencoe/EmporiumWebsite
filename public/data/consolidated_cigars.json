@@ -12,7 +12,7 @@
                 "Size": "Toro",
                 "Barcode": 7427025678329,
                 "In_Stock": "TRUE",
-                "Price": "$\t15.65"
+                "Price": "$\t16.70"
             }
         ],
         "slug": "aganorsa-anniversario-corojo"
@@ -37,6 +37,24 @@
     },
     {
         "Cigar Brand": "Aganorsa",
+        "Cigar Name": "Cerberus",
+        "Wrapper": "Corojo from 2012",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Sweetness, Creaminess, Vanilla, Espresso, Malt",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 7427025678435,
+                "In_Stock": "TRUE",
+                "Price": "$\t11.65"
+            }
+        ],
+        "slug": "aganorsa-cerberus"
+    },
+    {
+        "Cigar Brand": "Aganorsa",
         "Cigar Name": "JFR Connecticut",
         "Wrapper": "Connecticut Shade",
         "Binder": "Nicaraguan",
@@ -48,10 +66,28 @@
                 "Size": "Robusto",
                 "Barcode": 7426824782381,
                 "In_Stock": "TRUE",
-                "Price": "$\t7.15"
+                "Price": "$\t7.40"
             }
         ],
         "slug": "aganorsa-jfr-connecticut"
+    },
+    {
+        "Cigar Brand": "Aganorsa",
+        "Cigar Name": "JFR Connecticut Jr.",
+        "Wrapper": "Connecticut Shade",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Sweet cedar, Florals, Buttered crackers, Cream, Honey",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 7427025680377,
+                "In_Stock": "TRUE",
+                "Price": "$\t6.60"
+            }
+        ],
+        "slug": "aganorsa-jfr-connecticut-jr"
     },
     {
         "Cigar Brand": "Aganorsa",
@@ -63,13 +99,31 @@
         "Strength_Profile": "Medium",
         "Sizes": [
             {
-                "Size": "Churchill",
+                "Size": "Super toro",
                 "Barcode": 7426824777318,
                 "In_Stock": "TRUE",
-                "Price": "$\t7.40"
+                "Price": "$\t8.50"
             }
         ],
         "slug": "aganorsa-jfr-corojo"
+    },
+    {
+        "Cigar Brand": "Aganorsa",
+        "Cigar Name": "JFR Hombre Limbre",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 7427025678152,
+                "In_Stock": "TRUE",
+                "Price": "$\t8.50"
+            }
+        ],
+        "slug": "aganorsa-jfr-hombre-limbre"
     },
     {
         "Cigar Brand": "Aganorsa",
@@ -81,10 +135,10 @@
         "Strength_Profile": "Medium-Full",
         "Sizes": [
             {
-                "Size": "Robusto",
+                "Size": "Corona",
                 "Barcode": 7426824782664,
                 "In_Stock": "TRUE",
-                "Price": "$\t6.35"
+                "Price": "$\t6.60"
             }
         ],
         "slug": "aganorsa-jfr-junior"
@@ -117,13 +171,73 @@
         "Strength_Profile": "Medium-Full",
         "Sizes": [
             {
-                "Size": "Churchill",
+                "Size": "Super toro",
                 "Barcode": 7426824777356,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.00"
+            }
+        ],
+        "slug": "aganorsa-jfr-maduro"
+    },
+    {
+        "Cigar Brand": "Aganorsa",
+        "Cigar Name": "JFR XT Corojo",
+        "Wrapper": "Corojo",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaragua",
+        "Flavor_Profile": "",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 7426824782817,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.50"
+            }
+        ],
+        "slug": "aganorsa-jfr-xt-corojo"
+    },
+    {
+        "Cigar Brand": "Aganorsa",
+        "Cigar Name": "JFR XT Maduro",
+        "Wrapper": "Maduro",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaragua",
+        "Flavor_Profile": "",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 7426824782787,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.50"
+            }
+        ],
+        "slug": "aganorsa-jfr-xt-maduro"
+    },
+    {
+        "Cigar Brand": "Aganorsa",
+        "Cigar Name": "New Cuba Superior",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 7427025680216,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.95"
+            },
+            {
+                "Size": "Toro",
+                "Barcode": 7427025680223,
                 "In_Stock": "TRUE",
                 "Price": "$\t8.50"
             }
         ],
-        "slug": "aganorsa-jfr-maduro"
+        "slug": "aganorsa-new-cuba-superior"
     },
     {
         "Cigar Brand": "Aganorsa",
@@ -210,7 +324,7 @@
                 "Size": "Toro",
                 "Barcode": 7429457791799,
                 "In_Stock": "TRUE",
-                "Price": "$\t11.15"
+                "Price": "$\t11.70"
             }
         ],
         "slug": "aj-fernandez-bella-artes"
@@ -228,7 +342,7 @@
                 "Size": "Toro",
                 "Barcode": 7429457990925,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.60"
+                "Price": "$\t11.20"
             }
         ],
         "slug": "aj-fernandez-bella-artes-rojita"
@@ -246,10 +360,34 @@
                 "Size": "Corona",
                 "Barcode": 7426824785146,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.00"
+                "Price": "$\t10.60"
             }
         ],
         "slug": "aj-fernandez-dias-de-gloria"
+    },
+    {
+        "Cigar Brand": "AJ Fernandez",
+        "Cigar Name": "Dias De Gloria Brazil",
+        "Wrapper": "Brazilian Matafina",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Pepper, Cedar, Savory, Sweetness",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 7426824785931,
+                "In_Stock": "TRUE",
+                "Price": "$\t15.35"
+            },
+            {
+                "Size": "Toro",
+                "Barcode": 7426824785948,
+                "In_Stock": "TRUE",
+                "Price": "$\t15.90"
+            }
+        ],
+        "slug": "aj-fernandez-dias-de-gloria-brazil"
     },
     {
         "Cigar Brand": "AJ Fernandez",
@@ -306,7 +444,7 @@
                 "Size": "Toro",
                 "Barcode": 7429457191131,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.00"
+                "Price": "$\t10.60"
             }
         ],
         "slug": "aj-fernandez-enclave-broadleaf"
@@ -330,7 +468,7 @@
                 "Size": "Toro",
                 "Barcode": 851350001465,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.00"
+                "Price": "$\t9.55"
             },
             {
                 "Size": "Churchill",
@@ -361,6 +499,48 @@
     },
     {
         "Cigar Brand": "AJ Fernandez",
+        "Cigar Name": "Last Call Habano",
+        "Wrapper": "Habano rosado",
+        "Binder": "Nicaragua",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Nuts, spice, woodsy",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 7426824785320,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.45"
+            },
+            {
+                "Size": "Rothschild",
+                "Barcode": 7426824785313,
+                "In_Stock": "TRUE",
+                "Price": "$\t6.80"
+            }
+        ],
+        "slug": "aj-fernandez-last-call-habano"
+    },
+    {
+        "Cigar Brand": "AJ Fernandez",
+        "Cigar Name": "Last Call Maduro",
+        "Wrapper": "Pennsylvania broadleaf",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Nuts, spice, woodsy",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Rothschild",
+                "Barcode": 7426824785368,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.25"
+            }
+        ],
+        "slug": "aj-fernandez-last-call-maduro"
+    },
+    {
+        "Cigar Brand": "AJ Fernandez",
         "Cigar Name": "New World Cameroon",
         "Wrapper": "Cameroon",
         "Binder": "Nicaraguan",
@@ -378,13 +558,13 @@
                 "Size": "Toro",
                 "Barcode": 7429457491477,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.00"
+                "Price": "$\t8.25"
             },
             {
                 "Size": "Toro",
                 "Barcode": 7429457491484,
                 "In_Stock": "TRUE",
-                "Price": "$\t7.40"
+                "Price": "$\t7.95"
             },
             {
                 "Size": "Corona",
@@ -438,7 +618,7 @@
                 "Size": "Corona",
                 "Barcode": 7426824785870,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.60"
+                "Price": "$\t11.15"
             }
         ],
         "slug": "aj-fernandez-new-world-dorado"
@@ -456,7 +636,7 @@
                 "Size": "Robusto",
                 "Barcode": 851350000994,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.50"
+                "Price": "$\t8.90"
             },
             {
                 "Size": "Toro",
@@ -468,7 +648,7 @@
                 "Size": "Toro",
                 "Barcode": 851350000932,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.75"
+                "Price": "$\t9.25"
             },
             {
                 "Size": "Toro",
@@ -504,7 +684,7 @@
                 "Size": "Gordo",
                 "Barcode": 7429457291299,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.60"
+                "Price": "$\t11.15"
             },
             {
                 "Size": "Corona",
@@ -528,7 +708,7 @@
                 "Size": "Robusto",
                 "Barcode": 7429457891871,
                 "In_Stock": "TRUE",
-                "Price": "$\t13.25"
+                "Price": "$\t13.70"
             }
         ],
         "slug": "aj-fernandez-ramon-allones"
@@ -536,17 +716,23 @@
     {
         "Cigar Brand": "AJ Fernandez",
         "Cigar Name": "San Lotano Bull",
-        "Wrapper": "Ecuadorian Sumatran",
+        "Wrapper": "Ecuador Sumatra",
         "Binder": "Nicaraguan",
         "Filler": "Nicaraguan",
         "Flavor_Profile": "Oak, Coffee, Leather, Spices",
         "Strength_Profile": "Medium-Full",
         "Sizes": [
             {
+                "Size": "Robusto",
+                "Barcode": 7429457191186,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.10"
+            },
+            {
                 "Size": "Toro",
                 "Barcode": 7429457191193,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.00"
+                "Price": "$\t10.60"
             }
         ],
         "slug": "aj-fernandez-san-lotano-bull"
@@ -612,7 +798,7 @@
                 "Size": "Robusto",
                 "Barcode": 851350003988,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.00"
+                "Price": "$\t9.50"
             },
             {
                 "Size": "Toro",
@@ -654,7 +840,7 @@
                 "Size": "Toro",
                 "Barcode": 815337018457,
                 "In_Stock": "TRUE",
-                "Price": "$\t12.25"
+                "Price": "$\t12.30"
             },
             {
                 "Size": "Robusto",
@@ -756,7 +942,43 @@
         "slug": "alec-bradley-project-40-maduro"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Alec Bradley",
+        "Cigar Name": "Safe Keeping",
+        "Wrapper": "Nicaraguan",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Pepper, Spice, Cocoa",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 689674157052,
+                "In_Stock": "TRUE",
+                "Price": "$\t13.00"
+            }
+        ],
+        "slug": "alec-bradley-safe-keeping"
+    },
+    {
+        "Cigar Brand": "Alec Bradley",
+        "Cigar Name": "American Sungrown",
+        "Wrapper": "Sungrown Habano",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Cedar, Black pepper, Nuts",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 815337012110,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.95"
+            }
+        ],
+        "slug": "alec-bradley-american-sungrown"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "8-5-8 Maduro",
         "Wrapper": "Connecticut Broadleaf",
         "Binder": "Dominican",
@@ -765,16 +987,16 @@
         "Strength_Profile": "Mild-Medium",
         "Sizes": [
             {
-                "Size": "Corona",
+                "Size": "Toro",
                 "Barcode": 843182100072,
                 "In_Stock": "TRUE",
-                "Price": "$\t7.80"
+                "Price": "$\t8.20"
             }
         ],
         "slug": "arturo-fuente-8-5-8-maduro"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "8-5-8 Natural",
         "Wrapper": "Cameroon",
         "Binder": "Dominican Republican",
@@ -783,16 +1005,124 @@
         "Strength_Profile": "Mild-Medium",
         "Sizes": [
             {
-                "Size": "Corona",
+                "Size": "Toro",
                 "Barcode": 843182100096,
                 "In_Stock": "TRUE",
-                "Price": "$\t7.80"
+                "Price": "$\t8.20"
             }
         ],
         "slug": "arturo-fuente-8-5-8-natural"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "8-5-8 Sungrown",
+        "Wrapper": "Ecuadorian Sungrown",
+        "Binder": "Dominican Republic",
+        "Filler": "Dominican Republic",
+        "Flavor_Profile": "",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 843182100249,
+                "In_Stock": "TRUE",
+                "Price": "$\t8.85"
+            }
+        ],
+        "slug": "arturo-fuente-8-5-8-sungrown"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Anejo #46",
+        "Wrapper": "Cognac Maduro",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Rich, Earthy, Wood, Spice",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": 843182102113,
+                "In_Stock": "TRUE",
+                "Price": "$\t12.20"
+            }
+        ],
+        "slug": "arturo-fuente-anejo-46"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Anejo #49",
+        "Wrapper": "Cognac Maduro",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Rich, Earthy, Wood, Spice",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Churchill",
+                "Barcode": 843182102151,
+                "In_Stock": "TRUE",
+                "Price": "$\t15.25"
+            }
+        ],
+        "slug": "arturo-fuente-anejo-49"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Anejo #50",
+        "Wrapper": "Cognac Maduro",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Rich, Earthy, Wood Spice",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 843182102175,
+                "In_Stock": "TRUE",
+                "Price": "$\t13.00"
+            }
+        ],
+        "slug": "arturo-fuente-anejo-50"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Anejo #60",
+        "Wrapper": "Cognac Maduro",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Rich, Earthy, Wood, Spice",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 843182102212,
+                "In_Stock": "TRUE",
+                "Price": "$\t14.75"
+            }
+        ],
+        "slug": "arturo-fuente-anejo-60"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Anejo 888",
+        "Wrapper": "Cognac Maduro",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Rich, Earthy, Wood, Spice",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Lancero",
+                "Barcode": 843182102236,
+                "In_Stock": "TRUE",
+                "Price": "$\t13.75"
+            }
+        ],
+        "slug": "arturo-fuente-anejo-888"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Breva Maduro",
         "Wrapper": "Connecticut Broadleaf Maduro",
         "Binder": "Dominican Republican",
@@ -804,13 +1134,13 @@
                 "Size": "Corona",
                 "Barcode": 843182100348,
                 "In_Stock": "TRUE",
-                "Price": "$\t3.50"
+                "Price": "$\t3.60"
             }
         ],
         "slug": "arturo-fuente-breva-maduro"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Breva Natural",
         "Wrapper": "Cameroon",
         "Binder": "Dominican Republican",
@@ -822,13 +1152,13 @@
                 "Size": "Corona",
                 "Barcode": 843182100362,
                 "In_Stock": "TRUE",
-                "Price": "$\t3.50"
+                "Price": "$\t3.60"
             }
         ],
         "slug": "arturo-fuente-breva-natural"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Casa Cuba Divine Inspiration",
         "Wrapper": "Ecuadorian Habana",
         "Binder": "Dominican",
@@ -840,13 +1170,13 @@
                 "Size": "Toro",
                 "Barcode": 843182120100,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.45"
+                "Price": "$\t10.50"
             }
         ],
         "slug": "arturo-fuente-casa-cuba-divine-inspiration"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Casa Cuba Doble Cinco",
         "Wrapper": "Ecuadorian Habana",
         "Binder": "Dominican",
@@ -858,13 +1188,13 @@
                 "Size": "Robusto",
                 "Barcode": 843182120131,
                 "In_Stock": "TRUE",
-                "Price": "$\t11.30"
+                "Price": "$\t12.85"
             }
         ],
         "slug": "arturo-fuente-casa-cuba-doble-cinco"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Casa Cuba Doble Dos",
         "Wrapper": "Ecuadorian Habana",
         "Binder": "Dominican",
@@ -882,7 +1212,25 @@
         "slug": "arturo-fuente-casa-cuba-doble-dos"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Cazadores",
+        "Wrapper": "Dominican Republic",
+        "Binder": "Dominican Republic",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Smooth and Full Flavored",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 843182100423,
+                "In_Stock": "TRUE",
+                "Price": "$\t5.60"
+            }
+        ],
+        "slug": "arturo-fuente-cazadores"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Chateau Fuente Maduro",
         "Wrapper": "Connecticut Broadleaf Maduro",
         "Binder": "Dominican Republican",
@@ -894,13 +1242,13 @@
                 "Size": "Robusto",
                 "Barcode": 843182100577,
                 "In_Stock": "TRUE",
-                "Price": "$\t7.65"
+                "Price": "$\t8.00"
             }
         ],
         "slug": "arturo-fuente-chateau-fuente-maduro"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Chateau Fuente Natural",
         "Wrapper": "Connecticut Shade",
         "Binder": "Dominican Republican",
@@ -912,13 +1260,13 @@
                 "Size": "Robusto",
                 "Barcode": 843182100607,
                 "In_Stock": "TRUE",
-                "Price": "$\t7.65"
+                "Price": "$\t8.00"
             }
         ],
         "slug": "arturo-fuente-chateau-fuente-natural"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Chateau Fuente Pyramids",
         "Wrapper": "Ecuadorian Shade",
         "Binder": "Dominican",
@@ -936,7 +1284,7 @@
         "slug": "arturo-fuente-chateau-fuente-pyramids"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Chateau Fuente Sungrown",
         "Wrapper": "Ecuadorian Sungrown",
         "Binder": "Dominican Republican",
@@ -948,13 +1296,13 @@
                 "Size": "Robusto",
                 "Barcode": 843182100690,
                 "In_Stock": "TRUE",
-                "Price": "$\t7.65"
+                "Price": "$\t8.00"
             }
         ],
         "slug": "arturo-fuente-chateau-fuente-sungrown"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Chateau Royal Salute Maduro",
         "Wrapper": "Connecticut Broadleaf Maduro",
         "Binder": "Dominican",
@@ -972,7 +1320,7 @@
         "slug": "arturo-fuente-chateau-royal-salute-maduro"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Churchill Maduro",
         "Wrapper": "Connecticut Broadleaf",
         "Binder": "Dominican",
@@ -990,25 +1338,7 @@
         "slug": "arturo-fuente-churchill-maduro"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Cazadores",
-        "Wrapper": "Dominican Republic",
-        "Binder": "Dominican Republic",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Smooth and Full Flavored",
-        "Strength_Profile": "Mild-Medium",
-        "Sizes": [
-            {
-                "Size": "Toro",
-                "Barcode": 843182100423,
-                "In_Stock": "TRUE",
-                "Price": "$\t5.45"
-            }
-        ],
-        "slug": "arturo-fuente-cazadores"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Conquistador",
         "Wrapper": "Dominican Republic",
         "Binder": "Dominican Republican",
@@ -1026,7 +1356,7 @@
         "slug": "arturo-fuente-conquistador"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Cuban Belicoso",
         "Wrapper": "Dominican Sungrown",
         "Binder": "Dominican Republican",
@@ -1044,7 +1374,7 @@
         "slug": "arturo-fuente-cuban-belicoso"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Curly Head Natural",
         "Wrapper": "Cameroon",
         "Binder": "Dominican",
@@ -1056,13 +1386,13 @@
                 "Size": "Robusto",
                 "Barcode": 843182101185,
                 "In_Stock": "TRUE",
-                "Price": "$\t3.60"
+                "Price": "$\t3.90"
             }
         ],
         "slug": "arturo-fuente-curly-head-natural"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Don Carlos",
         "Wrapper": "Cameroon",
         "Binder": "Dominican",
@@ -1074,19 +1404,55 @@
                 "Size": "Robusto",
                 "Barcode": 843182121916,
                 "In_Stock": "TRUE",
-                "Price": "$\t12.95"
+                "Price": "$\t13.45"
             },
             {
                 "Size": "Belicoso",
                 "Barcode": 843182121305,
                 "In_Stock": "TRUE",
-                "Price": "$\t13.75"
+                "Price": "$\t14.95"
             }
         ],
         "slug": "arturo-fuente-don-carlos"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Don Carlos Eye of the Bull",
+        "Wrapper": "Cameroon",
+        "Binder": "Undisclosed",
+        "Filler": "Undisclosed",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Gordito",
+                "Barcode": 843182122111,
+                "In_Stock": "TRUE",
+                "Price": "$\t13.65"
+            }
+        ],
+        "slug": "arturo-fuente-don-carlos-eye-of-the-bull"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Don Carlos Eye of the Shark",
+        "Wrapper": "Cameroon",
+        "Binder": "Undisclosed",
+        "Filler": "Undisclosed",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Pyramid",
+                "Barcode": 843182122074,
+                "In_Stock": "TRUE",
+                "Price": "$\t18.65"
+            }
+        ],
+        "slug": "arturo-fuente-don-carlos-eye-of-the-shark"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Don Carlos No.3",
         "Wrapper": "Cameroon",
         "Binder": "Dominican",
@@ -1095,16 +1461,34 @@
         "Strength_Profile": "Medium",
         "Sizes": [
             {
-                "Size": "Churchill",
+                "Size": "Corona",
                 "Barcode": 843182121688,
                 "In_Stock": "TRUE",
-                "Price": "$\t11.25"
+                "Price": "$\t12.25"
             }
         ],
         "slug": "arturo-fuente-don-carlos-no-3"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Don Carlos Personal Reserve",
+        "Wrapper": "Cameroon",
+        "Binder": "Undisclosed",
+        "Filler": "Undisclosed",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 843182121824,
+                "In_Stock": "FALSE",
+                "Price": "$\t20.10"
+            }
+        ],
+        "slug": "arturo-fuente-don-carlos-personal-reserve"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Double Chateau Maduro",
         "Wrapper": "Connecticut Broadleaf",
         "Binder": "Dominican",
@@ -1116,13 +1500,13 @@
                 "Size": "Toro",
                 "Barcode": 843182101307,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.10"
+                "Price": "$\t9.50"
             }
         ],
         "slug": "arturo-fuente-double-chateau-maduro"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Double Chateau Natural",
         "Wrapper": "Connecticut Shade",
         "Binder": "Dominican Republican",
@@ -1146,7 +1530,7 @@
         "slug": "arturo-fuente-double-chateau-natural"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Double Chateau Sungrown",
         "Wrapper": "Ecuadorian Sungrown",
         "Binder": "Dominican Republican",
@@ -1164,7 +1548,7 @@
         "slug": "arturo-fuente-double-chateau-sungrown"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Emperador",
         "Wrapper": "Dominican Republic",
         "Binder": "Dominican Republican",
@@ -1182,565 +1566,7 @@
         "slug": "arturo-fuente-emperador"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Fuente Curly Head Deluxe natural",
-        "Wrapper": "Cameroon",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Smooth, Hint of nuts, Aromatic",
-        "Strength_Profile": "Mild-Medium",
-        "Sizes": [
-            {
-                "Size": "Corona",
-                "Barcode": 843182101130,
-                "In_Stock": "TRUE",
-                "Price": "$\t4.30"
-            }
-        ],
-        "slug": "arturo-fuente-fuente-curly-head-deluxe-natural"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Fuente Curly Head Maduro Deluxe",
-        "Wrapper": "Connecticut Broadleaf Maduro",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Nutty core, Subtle spice",
-        "Strength_Profile": "Mild-Medium",
-        "Sizes": [
-            {
-                "Size": "Corona",
-                "Barcode": 843182101116,
-                "In_Stock": "TRUE",
-                "Price": "$\t4.30"
-            }
-        ],
-        "slug": "arturo-fuente-fuente-curly-head-maduro-deluxe"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Fuente King B Sungrown",
-        "Wrapper": "Ecuadorian Sungrown",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Light cedar, Fruity finish",
-        "Strength_Profile": "Medium",
-        "Sizes": [
-            {
-                "Size": "Belicoso",
-                "Barcode": 843182100508,
-                "In_Stock": "TRUE",
-                "Price": "$\t11.45"
-            }
-        ],
-        "slug": "arturo-fuente-fuente-king-b-sungrown"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Gran Reserva",
-        "Wrapper": "Cameroon",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Sweet and Spicy",
-        "Strength_Profile": "Mild",
-        "Sizes": [
-            {
-                "Size": "Churchill",
-                "Barcode": 843182100799,
-                "In_Stock": "TRUE",
-                "Price": "$\t8.60"
-            }
-        ],
-        "slug": "arturo-fuente-gran-reserva"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Gran Reserva Canones",
-        "Wrapper": "Connecticut Broadleaf",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Dark chocolate, Licorice notes, Almonds, Wood",
-        "Strength_Profile": "Mild-Medium",
-        "Sizes": [
-            {
-                "Size": "Toro Grande",
-                "Barcode": 843182100409,
-                "In_Stock": "TRUE",
-                "Price": "$\t10.00"
-            }
-        ],
-        "slug": "arturo-fuente-gran-reserva-canones"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Gran Reserva Cuban Corona Natural",
-        "Wrapper": "Cameroon",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Dark cocoa, Bit of leather",
-        "Strength_Profile": "Mild",
-        "Sizes": [
-            {
-                "Size": "Corona",
-                "Barcode": 843182101000,
-                "In_Stock": "TRUE",
-                "Price": "$\t7.20"
-            }
-        ],
-        "slug": "arturo-fuente-gran-reserva-cuban-corona-natural"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Gran Reserva Natural",
-        "Wrapper": "Cameroon",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Dark cocoa, Bit of leather",
-        "Strength_Profile": "Mild",
-        "Sizes": [
-            {
-                "Size": "Rothschild",
-                "Barcode": 843182102304,
-                "In_Stock": "TRUE",
-                "Price": "$\t7.10"
-            }
-        ],
-        "slug": "arturo-fuente-gran-reserva-natural"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Hemingway Best Seller Maduro",
-        "Wrapper": "Connecticut Broadleaf Maduro",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Sweet, Spicy, Walnut notes, Cocoa",
-        "Strength_Profile": "Medium",
-        "Sizes": [
-            {
-                "Size": "Perfecto",
-                "Barcode": 843182122319,
-                "In_Stock": "TRUE",
-                "Price": "$\t8.50"
-            }
-        ],
-        "slug": "arturo-fuente-hemingway-best-seller-maduro"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Hemingway Best Seller Natural",
-        "Wrapper": "Cameroon",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Spice, Wood, Leather, Cedar",
-        "Strength_Profile": "Medium-Full",
-        "Sizes": [
-            {
-                "Size": "Perfecto",
-                "Barcode": 843182122333,
-                "In_Stock": "TRUE",
-                "Price": "$\t8.80"
-            }
-        ],
-        "slug": "arturo-fuente-hemingway-best-seller-natural"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Hemingway Classic Natural",
-        "Wrapper": "Cameroon",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Spice, Wood, Leather, Cedar",
-        "Strength_Profile": "Medium-Full",
-        "Sizes": [
-            {
-                "Size": "Perfecto",
-                "Barcode": 843182122401,
-                "In_Stock": "TRUE",
-                "Price": "$\t11.70"
-            }
-        ],
-        "slug": "arturo-fuente-hemingway-classic-natural"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Hemingway Classic Sungrown",
-        "Wrapper": "Cameroon",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Spice, Wood, Leather, Cedar",
-        "Strength_Profile": "Medium-Full",
-        "Sizes": [
-            {
-                "Size": "Perfecto",
-                "Barcode": 843182122456,
-                "In_Stock": "TRUE",
-                "Price": "$\t11.70"
-            }
-        ],
-        "slug": "arturo-fuente-hemingway-classic-sungrown"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Hemingway Short Story Natural",
-        "Wrapper": "Cameroon",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Sweet, Spicy, Walnut notes, Cocoa",
-        "Strength_Profile": "Medium-Full",
-        "Sizes": [
-            {
-                "Size": "Perfecto",
-                "Barcode": 843182122548,
-                "In_Stock": "TRUE",
-                "Price": "$\t7.50"
-            }
-        ],
-        "slug": "arturo-fuente-hemingway-short-story-natural"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Hemingway Signature Maduro",
-        "Wrapper": "Connecticut Broadleaf Maduro",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Sweet, Spicy, Walnut notes, Cocoa",
-        "Strength_Profile": "Medium",
-        "Sizes": [
-            {
-                "Size": "Perfecto",
-                "Barcode": 843182122630,
-                "In_Stock": "TRUE",
-                "Price": "$\t10.40"
-            }
-        ],
-        "slug": "arturo-fuente-hemingway-signature-maduro"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Hemingway Signature Natural",
-        "Wrapper": "Cameroon",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Spice, Wood, Leather, Cedar",
-        "Strength_Profile": "Medium-Full",
-        "Sizes": [
-            {
-                "Size": "Perfecto",
-                "Barcode": 843182122654,
-                "In_Stock": "TRUE",
-                "Price": "$\t10.40"
-            }
-        ],
-        "slug": "arturo-fuente-hemingway-signature-natural"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Hemingway Signature Sungrown",
-        "Wrapper": "Cameroon",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Spice, Wood, Leather, Cedar",
-        "Strength_Profile": "Medium-Full",
-        "Sizes": [
-            {
-                "Size": "Perfecto",
-                "Barcode": "",
-                "In_Stock": "FALSE",
-                "Price": "$\t10.00"
-            }
-        ],
-        "slug": "arturo-fuente-hemingway-signature-sungrown"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Hemingway Sungrown Reserva Especial",
-        "Wrapper": "Ecuadorian Sungrown",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Spice, Sweetness, Leather, Wood",
-        "Strength_Profile": "",
-        "Sizes": [
-            {
-                "Size": "Toro",
-                "Barcode": 843182122708,
-                "In_Stock": "TRUE",
-                "Price": "$\t10.85"
-            }
-        ],
-        "slug": "arturo-fuente-hemingway-sungrown-reserva-especial"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Hemingway Work of Art Natural",
-        "Wrapper": "Cameroon",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Spice, Wood, Leather, Cedar",
-        "Strength_Profile": "Medium-Full",
-        "Sizes": [
-            {
-                "Size": "Perfecto",
-                "Barcode": 843182122760,
-                "In_Stock": "TRUE",
-                "Price": "$\t10.50"
-            }
-        ],
-        "slug": "arturo-fuente-hemingway-work-of-art-natural"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Petite Corona",
-        "Wrapper": "Cameroon",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "",
-        "Strength_Profile": "",
-        "Sizes": [
-            {
-                "Size": "Corona",
-                "Barcode": 843182102052,
-                "In_Stock": "FALSE",
-                "Price": "$\t6.45"
-            }
-        ],
-        "slug": "arturo-fuente-petite-corona"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Queen B Sungrown",
-        "Wrapper": "Ecuadorian Sungrown",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Light cedar, Fruity finish",
-        "Strength_Profile": "Mild-Medium",
-        "Sizes": [
-            {
-                "Size": "Torpedo",
-                "Barcode": 843182100645,
-                "In_Stock": "TRUE",
-                "Price": "$\t9.00"
-            }
-        ],
-        "slug": "arturo-fuente-queen-b-sungrown"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Rosado Sungrown Vitola 44",
-        "Wrapper": "Ecuadorian Sungrown Rosado",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Sweet cedar, Light leather, Light mineral",
-        "Strength_Profile": "Medium-Full",
-        "Sizes": [
-            {
-                "Size": "Robusto",
-                "Barcode": 843182123255,
-                "In_Stock": "TRUE",
-                "Price": "$\t9.45"
-            }
-        ],
-        "slug": "arturo-fuente-rosado-sungrown-vitola-44"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Rosado Sungrown Vitola 52",
-        "Wrapper": "Ecuadorian Sungrown Rosado",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Sweet cedar, Light leather, Light mineral",
-        "Strength_Profile": "Medium-Full",
-        "Sizes": [
-            {
-                "Size": "Robusto",
-                "Barcode": 843182123286,
-                "In_Stock": "TRUE",
-                "Price": "$\t9.25"
-            }
-        ],
-        "slug": "arturo-fuente-rosado-sungrown-vitola-52"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Rosado Sungrown Vitola 54",
-        "Wrapper": "Ecuadorian Sungrown Rosado",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Sweet cedar, Light leather, Light mineral",
-        "Strength_Profile": "Medium-Full",
-        "Sizes": [
-            {
-                "Size": "Toro",
-                "Barcode": 843182123316,
-                "In_Stock": "TRUE",
-                "Price": "$\t10.15"
-            }
-        ],
-        "slug": "arturo-fuente-rosado-sungrown-vitola-54"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Rosado Sungrown Vitola 56",
-        "Wrapper": "Ecuadorian Sungrown Rosado",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Sweet cedar, Light leather, Light mineral",
-        "Strength_Profile": "Medium-Full",
-        "Sizes": [
-            {
-                "Size": "Toro",
-                "Barcode": 843182123354,
-                "In_Stock": "TRUE",
-                "Price": "$\t9.90"
-            }
-        ],
-        "slug": "arturo-fuente-rosado-sungrown-vitola-56"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Royal salute natural",
-        "Wrapper": "Connecticut Shade",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Light cedar, Fruity finish",
-        "Strength_Profile": "Mild-Medium",
-        "Sizes": [
-            {
-                "Size": "Churchill",
-                "Barcode": 843182102342,
-                "In_Stock": "TRUE",
-                "Price": "$\t11.10"
-            }
-        ],
-        "slug": "arturo-fuente-royal-salute-natural"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Royal Salute Sungrown",
-        "Wrapper": "Ecuadorian Sungrown",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Light cedar, Fruity finish",
-        "Strength_Profile": "Mild-Medium",
-        "Sizes": [
-            {
-                "Size": "Churchill",
-                "Barcode": 843182102366,
-                "In_Stock": "TRUE",
-                "Price": "$\t11.10"
-            }
-        ],
-        "slug": "arturo-fuente-royal-salute-sungrown"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Sellecion Dor",
-        "Wrapper": "Natural Shade Grown",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Light Earth, Cream",
-        "Strength_Profile": "Medium",
-        "Sizes": [
-            {
-                "Size": "Churchill",
-                "Barcode": 843182100829,
-                "In_Stock": "TRUE",
-                "Price": "$\t8.60"
-            }
-        ],
-        "slug": "arturo-fuente-sellecion-dor"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Anejo #49",
-        "Wrapper": "Cognac Maduro",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Rich, Earthy, Wood, Spice",
-        "Strength_Profile": "Full",
-        "Sizes": [
-            {
-                "Size": "Churchill",
-                "Barcode": 843182102151,
-                "In_Stock": "TRUE",
-                "Price": "$\t15.25"
-            }
-        ],
-        "slug": "arturo-fuente-anejo-49"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Anejo 888",
-        "Wrapper": "Cognac Maduro",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Rich, Earthy, Wood, Spice",
-        "Strength_Profile": "Full",
-        "Sizes": [
-            {
-                "Size": "Lancero",
-                "Barcode": 843182102236,
-                "In_Stock": "TRUE",
-                "Price": "$\t13.75"
-            }
-        ],
-        "slug": "arturo-fuente-anejo-888"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Anejo #46",
-        "Wrapper": "Cognac Maduro",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Rich, Earthy, Wood, Spice",
-        "Strength_Profile": "Full",
-        "Sizes": [
-            {
-                "Size": "Corona",
-                "Barcode": 843182102113,
-                "In_Stock": "TRUE",
-                "Price": "$\t12.20"
-            }
-        ],
-        "slug": "arturo-fuente-anejo-46"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Anejo #60",
-        "Wrapper": "Cognac Maduro",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Rich, Earthy, Wood, Spice",
-        "Strength_Profile": "Full",
-        "Sizes": [
-            {
-                "Size": "Toro",
-                "Barcode": 843182102212,
-                "In_Stock": "TRUE",
-                "Price": "$\t14.75"
-            }
-        ],
-        "slug": "arturo-fuente-anejo-60"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
-        "Cigar Name": "Anejo #50",
-        "Wrapper": "Cognac Maduro",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "Rich, Earthy, Wood Spice",
-        "Strength_Profile": "Full",
-        "Sizes": [
-            {
-                "Size": "Robusto",
-                "Barcode": 843182102175,
-                "In_Stock": "TRUE",
-                "Price": "$\t13.00"
-            }
-        ],
-        "slug": "arturo-fuente-anejo-50"
-    },
-    {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Eye of The Bull",
         "Wrapper": "Cameroon",
         "Binder": "Dominican",
@@ -1758,7 +1584,475 @@
         "slug": "arturo-fuente-eye-of-the-bull"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Fuente Curly Head Deluxe natural",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Smooth, Hint of nuts, Aromatic",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": 843182101130,
+                "In_Stock": "TRUE",
+                "Price": "$\t4.30"
+            }
+        ],
+        "slug": "arturo-fuente-fuente-curly-head-deluxe-natural"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Fuente Curly Head Maduro Deluxe",
+        "Wrapper": "Connecticut Broadleaf Maduro",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Nutty core, Subtle spice",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": 843182101116,
+                "In_Stock": "TRUE",
+                "Price": "$\t4.30"
+            }
+        ],
+        "slug": "arturo-fuente-fuente-curly-head-maduro-deluxe"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Fuente King B Sungrown",
+        "Wrapper": "Ecuadorian Sungrown",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Light cedar, Fruity finish",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Belicoso",
+                "Barcode": 843182100508,
+                "In_Stock": "TRUE",
+                "Price": "$\t12.00"
+            }
+        ],
+        "slug": "arturo-fuente-fuente-king-b-sungrown"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Gran Reserva",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Sweet and Spicy",
+        "Strength_Profile": "Mild",
+        "Sizes": [
+            {
+                "Size": "Churchill",
+                "Barcode": 843182100799,
+                "In_Stock": "TRUE",
+                "Price": "$\t8.60"
+            }
+        ],
+        "slug": "arturo-fuente-gran-reserva"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Gran Reserva Canones",
+        "Wrapper": "Connecticut Broadleaf",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Dark chocolate, Licorice notes, Almonds, Wood",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Toro Grande",
+                "Barcode": 843182100409,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.00"
+            }
+        ],
+        "slug": "arturo-fuente-gran-reserva-canones"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Gran Reserva Cuban Corona Natural",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Dark cocoa, Bit of leather",
+        "Strength_Profile": "Mild",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": 843182101000,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.65"
+            }
+        ],
+        "slug": "arturo-fuente-gran-reserva-cuban-corona-natural"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Gran Reserva Natural",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Dark cocoa, Bit of leather",
+        "Strength_Profile": "Mild",
+        "Sizes": [
+            {
+                "Size": "Rothschild",
+                "Barcode": 843182102304,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.10"
+            }
+        ],
+        "slug": "arturo-fuente-gran-reserva-natural"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Hemingway Best Seller Maduro",
+        "Wrapper": "Connecticut Broadleaf Maduro",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Sweet, Spicy, Walnut notes, Cocoa",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Perfecto",
+                "Barcode": 843182122319,
+                "In_Stock": "TRUE",
+                "Price": "$\t8.50"
+            }
+        ],
+        "slug": "arturo-fuente-hemingway-best-seller-maduro"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Hemingway Best Seller Natural",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Spice, Wood, Leather, Cedar",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Perfecto",
+                "Barcode": 843182122333,
+                "In_Stock": "TRUE",
+                "Price": "$\t8.80"
+            }
+        ],
+        "slug": "arturo-fuente-hemingway-best-seller-natural"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Hemingway Classic Natural",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Spice, Wood, Leather, Cedar",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Perfecto",
+                "Barcode": 843182122401,
+                "In_Stock": "TRUE",
+                "Price": "$\t12.35"
+            }
+        ],
+        "slug": "arturo-fuente-hemingway-classic-natural"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Hemingway Classic Sungrown",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Spice, Wood, Leather, Cedar",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Perfecto",
+                "Barcode": 843182122456,
+                "In_Stock": "TRUE",
+                "Price": "$\t11.70"
+            }
+        ],
+        "slug": "arturo-fuente-hemingway-classic-sungrown"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Hemingway Short Story Natural",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Sweet, Spicy, Walnut notes, Cocoa",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Perfecto",
+                "Barcode": 843182122548,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.90"
+            }
+        ],
+        "slug": "arturo-fuente-hemingway-short-story-natural"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Hemingway Signature Maduro",
+        "Wrapper": "Connecticut Broadleaf Maduro",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Sweet, Spicy, Walnut notes, Cocoa",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Perfecto",
+                "Barcode": 843182122630,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.40"
+            }
+        ],
+        "slug": "arturo-fuente-hemingway-signature-maduro"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Hemingway Signature Natural",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Spice, Wood, Leather, Cedar",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Perfecto",
+                "Barcode": 843182122654,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.40"
+            }
+        ],
+        "slug": "arturo-fuente-hemingway-signature-natural"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Hemingway Signature Sungrown",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Spice, Wood, Leather, Cedar",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Perfecto",
+                "Barcode": "",
+                "In_Stock": "FALSE",
+                "Price": "$\t10.00"
+            }
+        ],
+        "slug": "arturo-fuente-hemingway-signature-sungrown"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Hemingway Sungrown Reserva Especial",
+        "Wrapper": "Ecuadorian Sungrown",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Spice, Sweetness, Leather, Wood",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 843182122708,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.85"
+            }
+        ],
+        "slug": "arturo-fuente-hemingway-sungrown-reserva-especial"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Hemingway Work of Art Natural",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Spice, Wood, Leather, Cedar",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Perfecto",
+                "Barcode": 843182122760,
+                "In_Stock": "TRUE",
+                "Price": "$\t12.00"
+            }
+        ],
+        "slug": "arturo-fuente-hemingway-work-of-art-natural"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Petite Corona",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": 843182102052,
+                "In_Stock": "FALSE",
+                "Price": "$\t6.45"
+            }
+        ],
+        "slug": "arturo-fuente-petite-corona"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Queen B Sungrown",
+        "Wrapper": "Ecuadorian Sungrown",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Light cedar, Fruity finish",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Torpedo",
+                "Barcode": 843182100645,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.45"
+            }
+        ],
+        "slug": "arturo-fuente-queen-b-sungrown"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Rosado Sungrown Vitola 44",
+        "Wrapper": "Ecuadorian Sungrown Rosado",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Sweet cedar, Light leather, Light mineral",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 843182123255,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.95"
+            }
+        ],
+        "slug": "arturo-fuente-rosado-sungrown-vitola-44"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Rosado Sungrown Vitola 52",
+        "Wrapper": "Ecuadorian Sungrown Rosado",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Sweet cedar, Light leather, Light mineral",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 843182123286,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.25"
+            }
+        ],
+        "slug": "arturo-fuente-rosado-sungrown-vitola-52"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Rosado Sungrown Vitola 54",
+        "Wrapper": "Ecuadorian Sungrown Rosado",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Sweet cedar, Light leather, Light mineral",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 843182123316,
+                "In_Stock": "TRUE",
+                "Price": "$\t11.00"
+            }
+        ],
+        "slug": "arturo-fuente-rosado-sungrown-vitola-54"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Rosado Sungrown Vitola 56",
+        "Wrapper": "Ecuadorian Sungrown Rosado",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Sweet cedar, Light leather, Light mineral",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 843182123354,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.90"
+            }
+        ],
+        "slug": "arturo-fuente-rosado-sungrown-vitola-56"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Royal salute natural",
+        "Wrapper": "Connecticut Shade",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Light cedar, Fruity finish",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Churchill",
+                "Barcode": 843182102342,
+                "In_Stock": "TRUE",
+                "Price": "$\t11.10"
+            }
+        ],
+        "slug": "arturo-fuente-royal-salute-natural"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Royal Salute Sungrown",
+        "Wrapper": "Ecuadorian Sungrown",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Light cedar, Fruity finish",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Churchill",
+                "Barcode": 843182102366,
+                "In_Stock": "TRUE",
+                "Price": "$\t11.60"
+            }
+        ],
+        "slug": "arturo-fuente-royal-salute-sungrown"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Sellecion Dor",
+        "Wrapper": "Natural Shade Grown",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Light Earth, Cream",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Churchill",
+                "Barcode": 843182100829,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.10"
+            }
+        ],
+        "slug": "arturo-fuente-sellecion-dor"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Short Story Maduro",
         "Wrapper": "Connecticut Broadleaf",
         "Binder": "Dominican",
@@ -1776,7 +2070,7 @@
         "slug": "arturo-fuente-short-story-maduro"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Signature Maduro",
         "Wrapper": "Connecticut Broadleaf",
         "Binder": "Dominican",
@@ -1794,7 +2088,7 @@
         "slug": "arturo-fuente-signature-maduro"
     },
     {
-        "Cigar Brand": "Arturo Fuente",
+        "Cigar Brand": "Arturo Fuente.",
         "Cigar Name": "Untold Story Maduro",
         "Wrapper": "Connecticut Broadleaf",
         "Binder": "Dominican",
@@ -1810,6 +2104,24 @@
             }
         ],
         "slug": "arturo-fuente-untold-story-maduro"
+    },
+    {
+        "Cigar Brand": "Arturo Fuente.",
+        "Cigar Name": "Exquisitos",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Sweet, nutty , smooth",
+        "Strength_Profile": "Mild",
+        "Sizes": [
+            {
+                "Size": "Panatella",
+                "Barcode": 843182101499,
+                "In_Stock": "TRUE",
+                "Price": "$\t3.25"
+            }
+        ],
+        "slug": "arturo-fuente-exquisitos"
     },
     {
         "Cigar Brand": "Ashton",
@@ -1830,13 +2142,13 @@
                 "Size": "Corona",
                 "Barcode": 819577011797,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.00"
+                "Price": "$\t12.50"
             },
             {
                 "Size": "Robusto",
                 "Barcode": 819577011858,
                 "In_Stock": "TRUE",
-                "Price": "$\t12.00"
+                "Price": "$\t12.65"
             },
             {
                 "Size": "Toro",
@@ -1860,7 +2172,7 @@
                 "Size": "Robusto",
                 "Barcode": 819577012176,
                 "In_Stock": "TRUE",
-                "Price": "$\t12.50"
+                "Price": "$\t13.80"
             }
         ],
         "slug": "ashton-ashton-maduro-no-10"
@@ -1878,7 +2190,7 @@
                 "Size": "Toro",
                 "Barcode": 819577011636,
                 "In_Stock": "TRUE",
-                "Price": "$\t17.40"
+                "Price": "$\t18.35"
             }
         ],
         "slug": "ashton-cabinet"
@@ -1914,12 +2226,12 @@
                 "Size": "Toro",
                 "Barcode": 819577012411,
                 "In_Stock": "TRUE",
-                "Price": "$\t15.00"
+                "Price": "$\t18.65"
             },
             {
                 "Size": "Robusto",
                 "Barcode": 819577012398,
-                "In_Stock": "TRUE",
+                "In_Stock": "FALSE",
                 "Price": "$\t13.65"
             }
         ],
@@ -1938,22 +2250,46 @@
                 "Size": "Robusto",
                 "Barcode": 819577012558,
                 "In_Stock": "TRUE",
-                "Price": "$\t15.30"
-            },
-            {
-                "Size": "Toro",
-                "Barcode": 819577012657,
-                "In_Stock": "TRUE",
-                "Price": "$\t17.00"
-            },
+                "Price": "$\t16.70"
+            }
+        ],
+        "slug": "ashton-vsg"
+    },
+    {
+        "Cigar Brand": "Ashton",
+        "Cigar Name": "VSG Pegasus",
+        "Wrapper": "Sumatran Sungrown",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Dark chocolate, Black cherry, Ground pepper",
+        "Strength_Profile": "Full",
+        "Sizes": [
             {
                 "Size": "Robusto",
                 "Barcode": 819577012534,
                 "In_Stock": "TRUE",
-                "Price": "$\t15.75"
+                "Price": "$\t19.85"
             }
         ],
-        "slug": "ashton-vsg"
+        "slug": "ashton-vsg-pegasus"
+    },
+    {
+        "Cigar Brand": "Ashton",
+        "Cigar Name": "VSG Wizard",
+        "Wrapper": "Sumatran Sungrown",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Dark chocolate, Black cherry, Ground pepper",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 819577012657,
+                "In_Stock": "TRUE",
+                "Price": "$\t17.10"
+            }
+        ],
+        "slug": "ashton-vsg-wizard"
     },
     {
         "Cigar Brand": "Avo",
@@ -1992,7 +2328,7 @@
                 "Size": "Toro",
                 "Barcode": 7623500446548,
                 "In_Stock": "TRUE",
-                "Price": "$\t12.95"
+                "Price": "$\t14.35"
             }
         ],
         "slug": "avo-uvezian-synchro"
@@ -2010,13 +2346,13 @@
                 "Size": "Robusto",
                 "Barcode": 7423825002067,
                 "In_Stock": "TRUE",
-                "Price": "$\t6.00"
+                "Price": "$\t6.30"
             },
             {
                 "Size": "Toro",
                 "Barcode": 7423825002043,
                 "In_Stock": "TRUE",
-                "Price": "$\t6.20"
+                "Price": "$\t6.50"
             }
         ],
         "slug": "baccarat-baccarat"
@@ -2044,6 +2380,54 @@
             }
         ],
         "slug": "bolivar-cofradia"
+    },
+    {
+        "Cigar Brand": "Bolivar",
+        "Cigar Name": "Cofredia Fino 2",
+        "Wrapper": "Ecuadorian Sumatran",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan, Honduran",
+        "Flavor_Profile": "Hearty earth and spice",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Belicoso",
+                "Barcode": 689674111443,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.25"
+            }
+        ],
+        "slug": "bolivar-cofredia-fino-2"
+    },
+    {
+        "Cigar Brand": "Bolivar",
+        "Cigar Name": "Cofredia Oscuro",
+        "Wrapper": "Connecticut Broadleaf",
+        "Binder": "Ecuadorian Sumatran",
+        "Filler": "Dominican, Honduran, Nicaraguan",
+        "Flavor_Profile": "Bold, spicy",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 689674155522,
+                "In_Stock": "TRUE",
+                "Price": "$\t6.40"
+            },
+            {
+                "Size": "Toro",
+                "Barcode": 689674155461,
+                "In_Stock": "TRUE",
+                "Price": "$\t8.40"
+            },
+            {
+                "Size": "Gordo",
+                "Barcode": 689674155492,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.75"
+            }
+        ],
+        "slug": "bolivar-cofredia-oscuro"
     },
     {
         "Cigar Brand": "Bolivar",
@@ -2122,9 +2506,9 @@
             },
             {
                 "Size": "Gordo",
-                "Barcode": 854185004946,
+                "Barcode": 855290006023,
                 "In_Stock": "TRUE",
-                "Price": "$\t12.60"
+                "Price": "$\t14.30"
             }
         ],
         "slug": "c-l-e-asylum-13"
@@ -2166,7 +2550,7 @@
                 "Size": "Gordo",
                 "Barcode": 7426824777271,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.00"
+                "Price": "$\t9.75"
             }
         ],
         "slug": "c-l-e-asylum-lunatic-maduro"
@@ -2200,9 +2584,9 @@
         "Sizes": [
             {
                 "Size": "Toro",
-                "Barcode": 857244005021,
+                "Barcode": 854185004984,
                 "In_Stock": "TRUE",
-                "Price": "$\t15.50"
+                "Price": "$\t14.90"
             }
         ],
         "slug": "c-l-e-cbt"
@@ -2217,7 +2601,7 @@
         "Strength_Profile": "Mild-Medium",
         "Sizes": [
             {
-                "Size": "Robusto",
+                "Size": "Toro",
                 "Barcode": 854185004489,
                 "In_Stock": "TRUE",
                 "Price": "$\t10.50"
@@ -2262,6 +2646,24 @@
         "slug": "c-l-e-schizo-maduro"
     },
     {
+        "Cigar Brand": "C.L.E.",
+        "Cigar Name": "The First 20",
+        "Wrapper": "Honduran Colorado",
+        "Binder": "Honduran",
+        "Filler": "Honduran",
+        "Flavor_Profile": "Espresso, Oak, Cinnamon",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 869327000304,
+                "In_Stock": "FALSE",
+                "Price": "$\t16.95"
+            }
+        ],
+        "slug": "c-l-e-the-first-20"
+    },
+    {
         "Cigar Brand": "Camacho",
         "Cigar Name": "Connecticut",
         "Wrapper": "Ecuadorian Connecticut",
@@ -2274,13 +2676,13 @@
                 "Size": "Toro",
                 "Barcode": 7623500175226,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.30"
+                "Price": "$\t10.30"
             },
             {
                 "Size": "Robusto",
                 "Barcode": 7623500175219,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.80"
+                "Price": "$\t9.80"
             }
         ],
         "slug": "camacho-connecticut"
@@ -2364,7 +2766,7 @@
                 "Size": "Toro",
                 "Barcode": 7623500430646,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.30"
+                "Price": "$\t9.80"
             }
         ],
         "slug": "camacho-nicaragua"
@@ -2382,7 +2784,7 @@
                 "Size": "Robusto",
                 "Barcode": 7623500175493,
                 "In_Stock": "TRUE",
-                "Price": "$\t11.35"
+                "Price": "$\t12.30"
             },
             {
                 "Size": "Toro",
@@ -2406,7 +2808,7 @@
                 "Size": "Toro",
                 "Barcode": 652125016116,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.40"
+                "Price": "$\t10.60"
             }
         ],
         "slug": "cao-americas"
@@ -2422,7 +2824,7 @@
         "Sizes": [
             {
                 "Size": "Robusto",
-                "Barcode": 652125006414,
+                "Barcode": 8720400475452,
                 "In_Stock": "TRUE",
                 "Price": "$\t10.45"
             },
@@ -2446,12 +2848,48 @@
         "Sizes": [
             {
                 "Size": "Toro",
-                "Barcode": 689674140597,
+                "Barcode": 689674140566,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.50"
+                "Price": "$\t10.70"
             }
         ],
         "slug": "cao-bx3"
+    },
+    {
+        "Cigar Brand": "CAO",
+        "Cigar Name": "Fasa Noche",
+        "Wrapper": "Us Broadleaf Maduro",
+        "Binder": "Cameroon",
+        "Filler": "Dominican, Nicaraguan",
+        "Flavor_Profile": "Espresso, Dark Chocolate, Chili Powder",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 689674154969,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.45"
+            }
+        ],
+        "slug": "cao-fasa-noche"
+    },
+    {
+        "Cigar Brand": "CAO",
+        "Cigar Name": "Fasa sol",
+        "Wrapper": "Honduran",
+        "Binder": "Cameroon",
+        "Filler": "Dominican Nicraguan",
+        "Flavor_Profile": "Toasted Marshmallow, Almond, cinnamon",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 689674155065,
+                "In_Stock": "FALSE",
+                "Price": "$\t7.45"
+            }
+        ],
+        "slug": "cao-fasa-sol"
     },
     {
         "Cigar Brand": "CAO",
@@ -2478,10 +2916,28 @@
                 "Size": "Toro",
                 "Barcode": 689674062882,
                 "In_Stock": "TRUE",
-                "Price": "$\t13.00"
+                "Price": "$\t14.30"
             }
         ],
         "slug": "cao-flathead"
+    },
+    {
+        "Cigar Brand": "CAO",
+        "Cigar Name": "Flathead Resonator",
+        "Wrapper": "Connecticut Broadleaf",
+        "Binder": "Connecticut Habano",
+        "Filler": "Dominican, Nicaraguan ligero",
+        "Flavor_Profile": "Big bold spice",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "8x60",
+                "Barcode": 689674154228,
+                "In_Stock": "TRUE",
+                "Price": "$\t13.65"
+            }
+        ],
+        "slug": "cao-flathead-resonator"
     },
     {
         "Cigar Brand": "CAO",
@@ -2496,7 +2952,7 @@
                 "Size": "Toro",
                 "Barcode": 652125011012,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.70"
+                "Price": "$\t10.45"
             }
         ],
         "slug": "cao-italia"
@@ -2556,6 +3012,48 @@
         "slug": "cao-mx2"
     },
     {
+        "Cigar Brand": "CAO",
+        "Cigar Name": "Pilon Anejo",
+        "Wrapper": "Sumatra",
+        "Binder": "Habano",
+        "Filler": "Dominican, Nicaraguan",
+        "Flavor_Profile": "Rich, Smooth, Touch of spice",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 689674133803,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.60"
+            },
+            {
+                "Size": "Gigante",
+                "Barcode": 689674133865,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.90"
+            }
+        ],
+        "slug": "cao-pilon-anejo"
+    },
+    {
+        "Cigar Brand": "CAO",
+        "Cigar Name": "Amazon Basin",
+        "Wrapper": "Ecuadorian Sumatran",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan, Amazonian, Columbian",
+        "Flavor_Profile": "Earth, Fruit",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 689674069997,
+                "In_Stock": "TRUE",
+                "Price": "$\t15.00"
+            }
+        ],
+        "slug": "cao-amazon-basin"
+    },
+    {
         "Cigar Brand": "Casa Fernandez",
         "Cigar Name": "New Cuba Corojo",
         "Wrapper": "Corojo",
@@ -2610,7 +3108,7 @@
                 "Size": "Toro",
                 "Barcode": 689674090786,
                 "In_Stock": "TRUE",
-                "Price": "$\t13.70"
+                "Price": "$\t15.80"
             }
         ],
         "slug": "cohiba-blue-dot"
@@ -2632,6 +3130,24 @@
             }
         ],
         "slug": "cohiba-red-dot"
+    },
+    {
+        "Cigar Brand": "Cohiba",
+        "Cigar Name": "Riviera",
+        "Wrapper": "Mexican San Andres",
+        "Binder": "Honduran",
+        "Filler": "Honduran , Nicaraguan",
+        "Flavor_Profile": "Dark Chocolate, Coffee, Leather",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Lancero",
+                "Barcode": 6896741562846,
+                "In_Stock": "TRUE",
+                "Price": "$\t15.90"
+            }
+        ],
+        "slug": "cohiba-riviera"
     },
     {
         "Cigar Brand": "Cuba Aliados",
@@ -2737,6 +3253,78 @@
     },
     {
         "Cigar Brand": "Diesel",
+        "Cigar Name": "Vintage",
+        "Wrapper": "Mexican San Andres",
+        "Binder": "Estelli Habano",
+        "Filler": "Jalapa Habano",
+        "Flavor_Profile": "Cocoa, Pepper, Leather, Hazelnut",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 689674150794,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.45"
+            }
+        ],
+        "slug": "diesel-vintage"
+    },
+    {
+        "Cigar Brand": "Diesel",
+        "Cigar Name": "Vintage Maduro",
+        "Wrapper": "San Andres Maduro",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Spice, Cedar, Cocoa, Pepper",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 689674150824,
+                "In_Stock": "TRUE",
+                "Price": "$\t8.50"
+            },
+            {
+                "Size": "Gigante",
+                "Barcode": 689674160670,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.50"
+            }
+        ],
+        "slug": "diesel-vintage-maduro"
+    },
+    {
+        "Cigar Brand": "Diesel",
+        "Cigar Name": "Vintage Natural",
+        "Wrapper": "Ecuador  sungrown",
+        "Binder": "Nicaraguan Habano",
+        "Filler": "Nicaraguan Jalapa",
+        "Flavor_Profile": "Rich and Satirfying",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Robutso",
+                "Barcode": 689674154662,
+                "In_Stock": "TRUE",
+                "Price": "$\t8.25"
+            },
+            {
+                "Size": "Gigante",
+                "Barcode": 689674160649,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.50"
+            },
+            {
+                "Size": "Toro",
+                "Barcode": 689674154693,
+                "In_Stock": "TRUE",
+                "Price": "$\t8.50"
+            }
+        ],
+        "slug": "diesel-vintage-natural"
+    },
+    {
+        "Cigar Brand": "Diesel",
         "Cigar Name": "Whiskey Row Bourbon",
         "Wrapper": "Ecuador Habano",
         "Binder": "Mexican San Andreas",
@@ -2770,6 +3358,24 @@
             }
         ],
         "slug": "diesel-whiskey-row-sherry"
+    },
+    {
+        "Cigar Brand": "Diesel",
+        "Cigar Name": "Worthy Fool",
+        "Wrapper": "Ecuadorian Sumatran",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Leather, Earth, Sweetness",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Perfecto",
+                "Barcode": 689674154785,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.60"
+            }
+        ],
+        "slug": "diesel-worthy-fool"
     },
     {
         "Cigar Brand": "Drew Estate",
@@ -2946,7 +3552,7 @@
                 "Size": "Robusto",
                 "Barcode": 876742005098,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.00"
+                "Price": "$\t9.50"
             }
         ],
         "slug": "drew-estate-deadwood-sweet-jane"
@@ -2964,13 +3570,13 @@
                 "Size": "Robusto",
                 "Barcode": 818578010907,
                 "In_Stock": "TRUE",
-                "Price": "$\t2.45"
+                "Price": "$\t2.80"
             },
             {
                 "Size": "Robusto",
                 "Barcode": 818578010860,
                 "In_Stock": "TRUE",
-                "Price": "$\t2.45"
+                "Price": "$\t2.80"
             }
         ],
         "slug": "drew-estate-factory-smoke"
@@ -2988,7 +3594,7 @@
                 "Size": "Toro",
                 "Barcode": 818578010891,
                 "In_Stock": "TRUE",
-                "Price": "$\t3.25"
+                "Price": "$\t3.60"
             }
         ],
         "slug": "drew-estate-factory-smoke-maduro"
@@ -3024,7 +3630,7 @@
                 "Size": "Robusto",
                 "Barcode": 846261001048,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.00"
+                "Price": "$\t9.50"
             }
         ],
         "slug": "drew-estate-java-latte"
@@ -3042,7 +3648,7 @@
                 "Size": "Corona",
                 "Barcode": 846261001147,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.00"
+                "Price": "$\t9.50"
             }
         ],
         "slug": "drew-estate-java-maduro"
@@ -3060,7 +3666,7 @@
                 "Size": "Corona",
                 "Barcode": 846261006869,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.00"
+                "Price": "$\t9.50"
             }
         ],
         "slug": "drew-estate-java-mint"
@@ -3132,7 +3738,7 @@
                 "Size": "Toro",
                 "Barcode": 876742001823,
                 "In_Stock": "TRUE",
-                "Price": "$\t6.60"
+                "Price": "$\t7.60"
             }
         ],
         "slug": "drew-estate-nica-rustica-broadleaf"
@@ -3150,7 +3756,7 @@
                 "Size": "Toro",
                 "Barcode": 876742000758,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.50"
+                "Price": "$\t10.50"
             },
             {
                 "Size": "Corona",
@@ -3162,7 +3768,7 @@
                 "Size": "Robusto",
                 "Barcode": 876742000741,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.00"
+                "Price": "$\t10.00"
             },
             {
                 "Size": "Belicoso",
@@ -3186,13 +3792,13 @@
                 "Size": "Robusto",
                 "Barcode": 876742000611,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.00"
+                "Price": "$\t10.00"
             },
             {
                 "Size": "Toro",
                 "Barcode": 876742000628,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.50"
+                "Price": "$\t10.50"
             }
         ],
         "slug": "drew-estate-tabak-negra"
@@ -3228,7 +3834,7 @@
                 "Size": "Toro",
                 "Barcode": 876742000215,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.70"
+                "Price": "$\t10.80"
             }
         ],
         "slug": "drew-estate-undercrown-maduro"
@@ -3343,6 +3949,30 @@
     },
     {
         "Cigar Brand": "E.P. Carrillo",
+        "Cigar Name": "Honduras",
+        "Wrapper": "Honduran",
+        "Binder": "Honduran",
+        "Filler": "Honduran , Nicaraguan",
+        "Flavor_Profile": "Dark Chocolate, Espresso, oak, Earth",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 811167022909,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.80"
+            },
+            {
+                "Size": "Toro",
+                "Barcode": 811167022923,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.60"
+            }
+        ],
+        "slug": "e-p-carrillo-honduras"
+    },
+    {
+        "Cigar Brand": "E.P. Carrillo",
         "Cigar Name": "La Historia",
         "Wrapper": "Mexican San Andres",
         "Binder": "Ecuadorian Sumatra",
@@ -3375,31 +4005,67 @@
         "Strength_Profile": "Mild-Medium",
         "Sizes": [
             {
+                "Size": "Gordo",
+                "Barcode": 811167020219,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.25"
+            }
+        ],
+        "slug": "e-p-carrillo-new-wave-connecticut"
+    },
+    {
+        "Cigar Brand": "E.P. Carrillo",
+        "Cigar Name": "New Wave Connecticut Brilliantes",
+        "Wrapper": "Ecuadorian Connecticut",
+        "Binder": "Nicaraguan",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Leather, Sweet tobacco",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
                 "Size": "Robusto",
                 "Barcode": 811167020189,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.00"
-            },
+                "Price": "$\t8.20"
+            }
+        ],
+        "slug": "e-p-carrillo-new-wave-connecticut-brilliantes"
+    },
+    {
+        "Cigar Brand": "E.P. Carrillo",
+        "Cigar Name": "New Wave Connecticut Divino",
+        "Wrapper": "Ecuadorian Connecticut",
+        "Binder": "Nicaraguan",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Leather, Sweet tobacco",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
             {
                 "Size": "Toro",
                 "Barcode": 811167020165,
                 "In_Stock": "TRUE",
-                "Price": "$\t7.75"
-            },
+                "Price": "$\t9.30"
+            }
+        ],
+        "slug": "e-p-carrillo-new-wave-connecticut-divino"
+    },
+    {
+        "Cigar Brand": "E.P. Carrillo",
+        "Cigar Name": "New Wave Connecticut Stella",
+        "Wrapper": "Ecuadorian Connecticut",
+        "Binder": "Nicaraguan",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Leather, Sweet tobacco",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
             {
                 "Size": "Corona",
                 "Barcode": 811167020172,
                 "In_Stock": "TRUE",
-                "Price": "$\t6.60"
-            },
-            {
-                "Size": "Gordo",
-                "Barcode": 811167020219,
-                "In_Stock": "TRUE",
-                "Price": "$\t10.50"
+                "Price": "$\t6.90"
             }
         ],
-        "slug": "e-p-carrillo-new-wave-connecticut"
+        "slug": "e-p-carrillo-new-wave-connecticut-stella"
     },
     {
         "Cigar Brand": "E.P. Carrillo",
@@ -3498,7 +4164,7 @@
                 "Size": "RobustoLarga",
                 "Barcode": 689674124672,
                 "In_Stock": "TRUE",
-                "Price": "$\t6.90"
+                "Price": "$\t7.20"
             },
             {
                 "Size": "Robusto",
@@ -3508,6 +4174,24 @@
             }
         ],
         "slug": "el-rey-del-mundo-oscuro"
+    },
+    {
+        "Cigar Brand": "El Rey Del Mundo",
+        "Cigar Name": "Churchill Shade",
+        "Wrapper": "Honduran Connecticut",
+        "Binder": "Honduran",
+        "Filler": "Honduran",
+        "Flavor_Profile": "Smooth, Nuttiness, Cream",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Churchill",
+                "Barcode": 689674159209,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.30"
+            }
+        ],
+        "slug": "el-rey-del-mundo-churchill-shade"
     },
     {
         "Cigar Brand": "Esteban Carrera",
@@ -3583,6 +4267,42 @@
     },
     {
         "Cigar Brand": "Esteban Carrera",
+        "Cigar Name": "Devils Hand",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 856713007924,
+                "In_Stock": "TRUE",
+                "Price": "$\t11.25"
+            }
+        ],
+        "slug": "esteban-carrera-devils-hand"
+    },
+    {
+        "Cigar Brand": "Esteban Carrera",
+        "Cigar Name": "Devils Hand Maduro",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 856713008488,
+                "In_Stock": "TRUE",
+                "Price": "$\t12.25"
+            }
+        ],
+        "slug": "esteban-carrera-devils-hand-maduro"
+    },
+    {
+        "Cigar Brand": "Esteban Carrera",
         "Cigar Name": "Esteban Carrera  Unforsaken",
         "Wrapper": "Ecuador Sumatra",
         "Binder": "Nicaraguan",
@@ -3591,10 +4311,10 @@
         "Strength_Profile": "Medium-Full",
         "Sizes": [
             {
-                "Size": "",
+                "Size": "Toro",
                 "Barcode": 856713007139,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.75"
+                "Price": "$\t12.50"
             }
         ],
         "slug": "esteban-carrera-esteban-carrera-unforsaken"
@@ -3652,6 +4372,96 @@
             }
         ],
         "slug": "esteban-carrera-habano"
+    },
+    {
+        "Cigar Brand": "Esteban Carrera",
+        "Cigar Name": "Hawaii breeze",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": 856713007788,
+                "In_Stock": "TRUE",
+                "Price": "$\t5.50"
+            }
+        ],
+        "slug": "esteban-carrera-hawaii-breeze"
+    },
+    {
+        "Cigar Brand": "Esteban Carrera",
+        "Cigar Name": "Soga",
+        "Wrapper": "Sumatran",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "Pepper, wood, coffee",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 856713008563,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.45"
+            }
+        ],
+        "slug": "esteban-carrera-soga"
+    },
+    {
+        "Cigar Brand": "Esteban Carrera",
+        "Cigar Name": "The Covenant",
+        "Wrapper": "Nicaraguan Habano oscuro",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Rich Chocolate, Chili Pepper, spice, Floral",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 856713005319,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.60"
+            }
+        ],
+        "slug": "esteban-carrera-the-covenant"
+    },
+    {
+        "Cigar Brand": "Esteban Carrera",
+        "Cigar Name": "The devils hand",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Gordo",
+                "Barcode": 856713007917,
+                "In_Stock": "TRUE",
+                "Price": "$\t12.90"
+            }
+        ],
+        "slug": "esteban-carrera-the-devils-hand"
+    },
+    {
+        "Cigar Brand": "Esteban Carrera",
+        "Cigar Name": "10 Anos",
+        "Wrapper": "San Andres",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Coffee, Cocoa",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 856713003711,
+                "In_Stock": "TRUE",
+                "Price": "$\t12.30"
+            }
+        ],
+        "slug": "esteban-carrera-10-anos"
     },
     {
         "Cigar Brand": "FLVR",
@@ -3745,6 +4555,42 @@
     },
     {
         "Cigar Brand": "Forged",
+        "Cigar Name": "Chillin Moose",
+        "Wrapper": "Habano rosado",
+        "Binder": "Ecuadorian Sumatran",
+        "Filler": "Dominican, Nicaraguan, Us Broadleaf, Mexican San Andres",
+        "Flavor_Profile": "Almond, Cedar, Spice, Earth",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 689674153979,
+                "In_Stock": "TRUE",
+                "Price": "$\t5.75"
+            }
+        ],
+        "slug": "forged-chillin-moose"
+    },
+    {
+        "Cigar Brand": "Forged",
+        "Cigar Name": "Johnny Tobacconaut",
+        "Wrapper": "Ecuadorian Connecticut",
+        "Binder": "Mexican",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Butter, Cinnamon, pepper",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 689674151142,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.50"
+            }
+        ],
+        "slug": "forged-johnny-tobacconaut"
+    },
+    {
+        "Cigar Brand": "Forged",
         "Cigar Name": "Los Statos Deluxe",
         "Wrapper": "Ecuadorian Sumatran",
         "Binder": "Nicaraguan",
@@ -3760,6 +4606,24 @@
             }
         ],
         "slug": "forged-los-statos-deluxe"
+    },
+    {
+        "Cigar Brand": "Forged",
+        "Cigar Name": "Los Statos Deluxe Connecticut",
+        "Wrapper": "Ecuadorian Connecticut Shade",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan, Pennsylvanian",
+        "Flavor_Profile": "",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 689674157618,
+                "In_Stock": "FALSE",
+                "Price": "$\t10.00"
+            }
+        ],
+        "slug": "forged-los-statos-deluxe-connecticut"
     },
     {
         "Cigar Brand": "Forged",
@@ -3782,17 +4646,17 @@
     {
         "Cigar Brand": "Foundation",
         "Cigar Name": "Charter Oak",
-        "Wrapper": "Ecuadorian Connecticut",
+        "Wrapper": "Ecuador Connecticut",
         "Binder": "Sumatran",
         "Filler": "Nicaraguan",
         "Flavor_Profile": "Creamy, Chocolate, Roasted Nuts",
         "Strength_Profile": "Mild-Medium",
         "Sizes": [
             {
-                "Size": "Robusto",
+                "Size": "Toro",
                 "Barcode": "",
                 "In_Stock": "TRUE",
-                "Price": "$\t6.50"
+                "Price": "$\t7.50"
             }
         ],
         "slug": "foundation-charter-oak"
@@ -3810,10 +4674,28 @@
                 "Size": "Gordo",
                 "Barcode": "",
                 "In_Stock": "TRUE",
-                "Price": "$\t7.35"
+                "Price": "$\t7.60"
             }
         ],
         "slug": "foundation-charter-oak-maduro"
+    },
+    {
+        "Cigar Brand": "Foundation",
+        "Cigar Name": "Charter Oak Rothschild",
+        "Wrapper": "Ecuadorian Connecticut",
+        "Binder": "Sumatran",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Creamy, Chocolate, Roasted Nuts",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": "",
+                "In_Stock": "TRUE",
+                "Price": "$\t6.50"
+            }
+        ],
+        "slug": "foundation-charter-oak-rothschild"
     },
     {
         "Cigar Brand": "Foundation",
@@ -3918,13 +4800,13 @@
                 "Size": "Toro",
                 "Barcode": 810138033913,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.50"
+                "Price": "$\t11.00"
             },
             {
                 "Size": "Robusto",
                 "Barcode": 810138033937,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.00"
+                "Price": "$\t10.50"
             }
         ],
         "slug": "gran-habano-blue-in-green"
@@ -3991,6 +4873,24 @@
     },
     {
         "Cigar Brand": "Gran Habano",
+        "Cigar Name": "G.A.R American Standard",
+        "Wrapper": "Nicaraguan",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Dark Chocolate, Black Pepper",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 810138034477,
+                "In_Stock": "TRUE",
+                "Price": "$\t6.90"
+            }
+        ],
+        "slug": "gran-habano-g-a-r-american-standard"
+    },
+    {
+        "Cigar Brand": "Gran Habano",
         "Cigar Name": "Persian King",
         "Wrapper": "Maduro",
         "Binder": "Nicaraguan",
@@ -4008,6 +4908,24 @@
         "slug": "gran-habano-persian-king"
     },
     {
+        "Cigar Brand": "Gran Habano",
+        "Cigar Name": "Corojo #7",
+        "Wrapper": "Corojo Jalapa",
+        "Binder": "Corojo",
+        "Filler": "Corojo,  Criollo",
+        "Flavor_Profile": "Dark Cocoa, Honey",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 810138034620,
+                "In_Stock": "TRUE",
+                "Price": "$\t15.70"
+            }
+        ],
+        "slug": "gran-habano-corojo-7"
+    },
+    {
         "Cigar Brand": "H. Upmann",
         "Cigar Name": "1844 Vintage Cameroon",
         "Wrapper": "Cameroon",
@@ -4020,7 +4938,7 @@
                 "Size": "Toro",
                 "Barcode": 71610516366,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.95"
+                "Price": "$\t10.00"
             }
         ],
         "slug": "h-upmann-1844-vintage-cameroon"
@@ -4062,6 +4980,114 @@
         "slug": "hoyo-de-monterrey-governor-sumatran"
     },
     {
+        "Cigar Brand": "Hoyo De Monterrey",
+        "Cigar Name": "Hoyo Oscuro",
+        "Wrapper": "Brazilian Matafina",
+        "Binder": "Nicaraguan",
+        "Filler": "Dominican Nicaraguan, Honduran",
+        "Flavor_Profile": "Cherry, Cayenne, Rye",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Rothschild",
+                "Barcode": 689674155164,
+                "In_Stock": "TRUE",
+                "Price": "$\t6.35"
+            },
+            {
+                "Size": "Toro",
+                "Barcode": 689674155195,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.95"
+            }
+        ],
+        "slug": "hoyo-de-monterrey-hoyo-oscuro"
+    },
+    {
+        "Cigar Brand": "Hoyo De Monterrey",
+        "Cigar Name": "Hoyo rojo",
+        "Wrapper": "Honduran Sungrown",
+        "Binder": "Nicaraguan",
+        "Filler": "Dominican Nicaraguan, Honduran",
+        "Flavor_Profile": "Cinnamon, Marshmallow, Seared Meat",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Rothschild",
+                "Barcode": 689674155294,
+                "In_Stock": "TRUE",
+                "Price": "$\t6.35"
+            }
+        ],
+        "slug": "hoyo-de-monterrey-hoyo-rojo"
+    },
+    {
+        "Cigar Brand": "Hoyo De Monterrey",
+        "Cigar Name": "Hoyo Rojo",
+        "Wrapper": "Honduran Sungrown",
+        "Binder": "Nicaraguan",
+        "Filler": "Dominican Nicaraguan, Honduran",
+        "Flavor_Profile": "Cinnamon, Marshmallow, Seared Meat",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 689674155324,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.95"
+            }
+        ],
+        "slug": "hoyo-de-monterrey-hoyo-rojo"
+    },
+    {
+        "Cigar Brand": "J.C. Newman",
+        "Cigar Name": "Angel Cuesta",
+        "Wrapper": "Ecuador Havana Rosado",
+        "Binder": "Undisclosed",
+        "Filler": "Undisclosed",
+        "Flavor_Profile": "Cinnamon, Oak, White Pepper, Musty Wood",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Double Robusto",
+                "Barcode": 76622028104,
+                "In_Stock": "TRUE",
+                "Price": "$\t20.95"
+            },
+            {
+                "Size": "Double Toro",
+                "Barcode": 76622028005,
+                "In_Stock": "TRUE",
+                "Price": "$\t19.85"
+            }
+        ],
+        "slug": "j-c-newman-angel-cuesta"
+    },
+    {
+        "Cigar Brand": "J.C. Newman",
+        "Cigar Name": "Black Diamond",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 76622098312,
+                "In_Stock": "TRUE",
+                "Price": "$\t19.95"
+            },
+            {
+                "Size": "Toro",
+                "Barcode": 76622098305,
+                "In_Stock": "TRUE",
+                "Price": "$\t23.10"
+            }
+        ],
+        "slug": "j-c-newman-black-diamond"
+    },
+    {
         "Cigar Brand": "J.C. Newman",
         "Cigar Name": "Brickhouse Double Connecticut",
         "Wrapper": "Connecticut Shade",
@@ -4074,16 +5100,34 @@
                 "Size": "Robusto",
                 "Barcode": 76622025318,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.10"
+                "Price": "$\t8.50"
             },
             {
                 "Size": "Toro",
                 "Barcode": 76622025219,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.45"
+                "Price": "$\t8.85"
             }
         ],
         "slug": "j-c-newman-brickhouse-double-connecticut"
+    },
+    {
+        "Cigar Brand": "J.C. Newman",
+        "Cigar Name": "Brick house conn mighty mighty",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Gordo",
+                "Barcode": 76622025417,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.70"
+            }
+        ],
+        "slug": "j-c-newman-brick-house-conn-mighty-mighty"
     },
     {
         "Cigar Brand": "J.C. Newman",
@@ -4098,22 +5142,34 @@
                 "Size": "Robusto",
                 "Barcode": 76622025356,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.05"
-            },
-            {
-                "Size": "Churchill",
-                "Barcode": 76622025455,
-                "In_Stock": "TRUE",
-                "Price": "$\t9.25"
+                "Price": "$\t8.50"
             },
             {
                 "Size": "Toro",
                 "Barcode": 76622025257,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.45"
+                "Price": "$\t8.90"
             }
         ],
         "slug": "j-c-newman-brickhouse-maduro"
+    },
+    {
+        "Cigar Brand": "J.C. Newman",
+        "Cigar Name": "Brickhouse Maduro Mighty Mighty",
+        "Wrapper": "Brazilian Maduro",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Spicy, Rich hints of sweetness",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Churchill",
+                "Barcode": 76622025455,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.70"
+            }
+        ],
+        "slug": "j-c-newman-brickhouse-maduro-mighty-mighty"
     },
     {
         "Cigar Brand": "J.C. Newman",
@@ -4137,18 +5193,6 @@
                 "Price": "$\t8.45"
             },
             {
-                "Size": "Toro",
-                "Barcode": 76622025103,
-                "In_Stock": "TRUE",
-                "Price": "$\t7.10"
-            },
-            {
-                "Size": "Churchill",
-                "Barcode": 76622025004,
-                "In_Stock": "TRUE",
-                "Price": "$\t9.00"
-            },
-            {
                 "Size": "Churchill",
                 "Barcode": 76622025400,
                 "In_Stock": "TRUE",
@@ -4159,7 +5203,61 @@
     },
     {
         "Cigar Brand": "J.C. Newman",
-        "Cigar Name": "Cuesta Rey",
+        "Cigar Name": "Brickhouse Sungrown Corona Larga",
+        "Wrapper": "Ecuadorian  Havana",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Earth, Cedar, Pepper, Coffee",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 76622025103,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.10"
+            }
+        ],
+        "slug": "j-c-newman-brickhouse-sungrown-corona-larga"
+    },
+    {
+        "Cigar Brand": "J.C. Newman",
+        "Cigar Name": "Brickhouse Sungrown Mighty Mighty",
+        "Wrapper": "Ecuadorian  Havana",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Earth, Cedar, Pepper, Coffee",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Gordo",
+                "Barcode": 76622025004,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.00"
+            }
+        ],
+        "slug": "j-c-newman-brickhouse-sungrown-mighty-mighty"
+    },
+    {
+        "Cigar Brand": "J.C. Newman",
+        "Cigar Name": "Cuesta Rey No.60",
+        "Wrapper": "Connecticut Shade",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Robust and satisfying flavors,  Smooth from start to finish.",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 76622097209,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.55"
+            }
+        ],
+        "slug": "j-c-newman-cuesta-rey-no-60"
+    },
+    {
+        "Cigar Brand": "J.C. Newman",
+        "Cigar Name": "Cuesta Rey No.7",
         "Wrapper": "Connecticut Shade",
         "Binder": "Dominican",
         "Filler": "Dominican",
@@ -4170,16 +5268,10 @@
                 "Size": "Robusto",
                 "Barcode": 76622097100,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.30"
-            },
-            {
-                "Size": "Toro",
-                "Barcode": 76622097209,
-                "In_Stock": "TRUE",
-                "Price": "$\t9.10"
+                "Price": "$\t8.75"
             }
         ],
-        "slug": "j-c-newman-cuesta-rey"
+        "slug": "j-c-newman-cuesta-rey-no-7"
     },
     {
         "Cigar Brand": "J.C. Newman",
@@ -4198,6 +5290,24 @@
             }
         ],
         "slug": "j-c-newman-cuesta-rey-sungrown"
+    },
+    {
+        "Cigar Brand": "J.C. Newman",
+        "Cigar Name": "Decision #550",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "",
+                "Barcode": "",
+                "In_Stock": "FALSE",
+                "Price": ""
+            }
+        ],
+        "slug": "j-c-newman-decision-550"
     },
     {
         "Cigar Brand": "J.C. Newman",
@@ -4230,7 +5340,7 @@
                 "Size": "Robusto",
                 "Barcode": 76622097414,
                 "In_Stock": "TRUE",
-                "Price": "$\t15.75"
+                "Price": "$\t16.55"
             }
         ],
         "slug": "j-c-newman-diamond-crown-4"
@@ -4246,9 +5356,9 @@
         "Sizes": [
             {
                 "Size": "Robusto",
-                "Barcode": "",
+                "Barcode": 76622097421,
                 "In_Stock": "TRUE",
-                "Price": "$\t14.50"
+                "Price": "$\t15.30"
             }
         ],
         "slug": "j-c-newman-diamond-crown-5"
@@ -4266,7 +5376,7 @@
                 "Size": "Robusto",
                 "Barcode": 76622097551,
                 "In_Stock": "TRUE",
-                "Price": "$\t14.60"
+                "Price": "$\t15.30"
             }
         ],
         "slug": "j-c-newman-diamond-crown-maduro-5"
@@ -4284,7 +5394,7 @@
                 "Size": "Toro",
                 "Barcode": 76622098046,
                 "In_Stock": "TRUE",
-                "Price": "$\t17.35"
+                "Price": "$\t18.20"
             }
         ],
         "slug": "j-c-newman-diamond-crown-maximus-4"
@@ -4302,10 +5412,46 @@
                 "Size": "Robusto",
                 "Barcode": 76622098053,
                 "In_Stock": "TRUE",
-                "Price": "$\t14.50"
+                "Price": "$\t15.40"
             }
         ],
         "slug": "j-c-newman-diamond-crown-maximus-5"
+    },
+    {
+        "Cigar Brand": "J.C. Newman",
+        "Cigar Name": "Don Jose Granada",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "",
+                "Barcode": "",
+                "In_Stock": "FALSE",
+                "Price": ""
+            }
+        ],
+        "slug": "j-c-newman-don-jose-granada"
+    },
+    {
+        "Cigar Brand": "J.C. Newman",
+        "Cigar Name": "Don Jose Grandee",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "",
+                "Barcode": "",
+                "In_Stock": "FALSE",
+                "Price": "$\t4.50"
+            }
+        ],
+        "slug": "j-c-newman-don-jose-grandee"
     },
     {
         "Cigar Brand": "J.C. Newman",
@@ -4350,7 +5496,7 @@
                 "Size": "Corona",
                 "Barcode": 76622022010,
                 "In_Stock": "TRUE",
-                "Price": "$\t1.70"
+                "Price": "$\t7,426,824,782,381.00"
             }
         ],
         "slug": "j-c-newman-factory-49"
@@ -4368,7 +5514,7 @@
                 "Size": "Corona",
                 "Barcode": 76622020115,
                 "In_Stock": "TRUE",
-                "Price": "$\t1.70"
+                "Price": "$\t1.75"
             }
         ],
         "slug": "j-c-newman-factory-49-sweet"
@@ -4386,7 +5532,7 @@
                 "Size": "Robusto",
                 "Barcode": 76622020009,
                 "In_Stock": "TRUE",
-                "Price": "$\t1.70"
+                "Price": "$\t1.75"
             }
         ],
         "slug": "j-c-newman-factory-59"
@@ -4404,7 +5550,7 @@
                 "Size": "Robusto",
                 "Barcode": 76622020061,
                 "In_Stock": "TRUE",
-                "Price": "$\t1.70"
+                "Price": "$\t1.75"
             }
         ],
         "slug": "j-c-newman-factory-59-sweet"
@@ -4422,7 +5568,7 @@
                 "Size": "Toro",
                 "Barcode": 76622022027,
                 "In_Stock": "TRUE",
-                "Price": "$\t2.00"
+                "Price": "$\t2.10"
             }
         ],
         "slug": "j-c-newman-factory-99"
@@ -4440,14 +5586,14 @@
                 "Size": "Toro",
                 "Barcode": 76622022065,
                 "In_Stock": "TRUE",
-                "Price": "$\t2.00"
+                "Price": "$\t2.10"
             }
         ],
         "slug": "j-c-newman-factory-99-sweet"
     },
     {
         "Cigar Brand": "J.C. Newman",
-        "Cigar Name": "House Handmade Maduro",
+        "Cigar Name": "House Handmade Maduro 5x56",
         "Wrapper": "Brazilian Maduro",
         "Binder": "Nicaraguan",
         "Filler": "Nicaraguan",
@@ -4458,26 +5604,50 @@
                 "Size": "Robusto",
                 "Barcode": 76622026056,
                 "In_Stock": "TRUE",
-                "Price": "$\t4.55"
-            },
+                "Price": "$\t4.95"
+            }
+        ],
+        "slug": "j-c-newman-house-handmade-maduro-5x56"
+    },
+    {
+        "Cigar Brand": "J.C. Newman",
+        "Cigar Name": "House Handmade Maduro 6x54",
+        "Wrapper": "Brazilian Maduro",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Salt & Pepper, Florals, Caramel",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
             {
                 "Size": "Toro",
                 "Barcode": 76622026155,
                 "In_Stock": "TRUE",
-                "Price": "$\t4.95"
-            },
+                "Price": "$\t5.35"
+            }
+        ],
+        "slug": "j-c-newman-house-handmade-maduro-6x54"
+    },
+    {
+        "Cigar Brand": "J.C. Newman",
+        "Cigar Name": "House Handmade Maduro 6x60",
+        "Wrapper": "Brazilian Maduro",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Salt & Pepper, Florals, Caramel",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
             {
                 "Size": "Toro",
                 "Barcode": 76622026551,
                 "In_Stock": "TRUE",
-                "Price": "$\t5.45"
+                "Price": "$\t5.90"
             }
         ],
-        "slug": "j-c-newman-house-handmade-maduro"
+        "slug": "j-c-newman-house-handmade-maduro-6x60"
     },
     {
         "Cigar Brand": "J.C. Newman",
-        "Cigar Name": "House Handmade Shade",
+        "Cigar Name": "House Handmade Shade 5x56",
         "Wrapper": "Ecuadorian  Habano",
         "Binder": "Nicaraguan",
         "Filler": "Nicaraguan",
@@ -4488,22 +5658,46 @@
                 "Size": "Robusto",
                 "Barcode": 76622826007,
                 "In_Stock": "TRUE",
-                "Price": "$\t4.55"
-            },
+                "Price": "$\t4.95"
+            }
+        ],
+        "slug": "j-c-newman-house-handmade-shade-5x56"
+    },
+    {
+        "Cigar Brand": "J.C. Newman",
+        "Cigar Name": "House Handmade Shade 6x54",
+        "Wrapper": "Ecuadorian Habano",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "",
+        "Strength_Profile": "Medium",
+        "Sizes": [
             {
                 "Size": "Toro",
                 "Barcode": 76622026100,
                 "In_Stock": "TRUE",
-                "Price": "$\t4.95"
-            },
+                "Price": "$\t5.35"
+            }
+        ],
+        "slug": "j-c-newman-house-handmade-shade-6x54"
+    },
+    {
+        "Cigar Brand": "J.C. Newman",
+        "Cigar Name": "House Handmade Shade 6x60",
+        "Wrapper": "Ecuadorian Habano",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "",
+        "Strength_Profile": "Medium",
+        "Sizes": [
             {
                 "Size": "Toro",
                 "Barcode": 76622026506,
                 "In_Stock": "TRUE",
-                "Price": "$\t5.45"
+                "Price": "$\t5.90"
             }
         ],
-        "slug": "j-c-newman-house-handmade-shade"
+        "slug": "j-c-newman-house-handmade-shade-6x60"
     },
     {
         "Cigar Brand": "J.C. Newman",
@@ -4518,7 +5712,13 @@
                 "Size": "Robusto",
                 "Barcode": 76622099807,
                 "In_Stock": "TRUE",
-                "Price": "$\t14.60"
+                "Price": "$\t15.40"
+            },
+            {
+                "Size": "Corona",
+                "Barcode": 76622099906,
+                "In_Stock": "TRUE",
+                "Price": "$\t13.15"
             },
             {
                 "Size": "Toro",
@@ -4542,7 +5742,7 @@
                 "Size": "Toro",
                 "Barcode": 76622160378,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.50"
+                "Price": "$\t8.90"
             }
         ],
         "slug": "j-c-newman-la-unica-600-connecticut"
@@ -4560,7 +5760,7 @@
                 "Size": "Robusto",
                 "Barcode": 76622065321,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.50"
+                "Price": "$\t8.90"
             }
         ],
         "slug": "j-c-newman-la-unica-600-maduro"
@@ -4578,76 +5778,40 @@
                 "Size": "Robusto",
                 "Barcode": 76622040335,
                 "In_Stock": "TRUE",
-                "Price": "$\t7.95"
+                "Price": "$\t8.40"
             }
         ],
         "slug": "j-c-newman-la-unica-connecticut"
     },
     {
         "Cigar Brand": "J.C. Newman",
-        "Cigar Name": "Quorum",
-        "Wrapper": "Ecuadorian Connecticut",
-        "Binder": "",
-        "Filler": "",
-        "Flavor_Profile": "",
+        "Cigar Name": "The American",
+        "Wrapper": "Florida Sungrown",
+        "Binder": "Connecticut Broadleaf",
+        "Filler": "Pennsylvania Type 41, Pennsylvania havana",
+        "Flavor_Profile": "Unique American Puro",
         "Strength_Profile": "Medium",
         "Sizes": [
             {
                 "Size": "Robusto",
-                "Barcode": 76622770201,
-                "In_Stock": "TRUE",
-                "Price": "$\t2.10"
+                "Barcode": 76622013032,
+                "In_Stock": "FALSE",
+                "Price": "$\t19.30"
             },
             {
                 "Size": "Toro",
-                "Barcode": 76622770300,
-                "In_Stock": "TRUE",
-                "Price": "$\t2.30"
-            }
-        ],
-        "slug": "j-c-newman-quorum"
-    },
-    {
-        "Cigar Brand": "J.C. Newman",
-        "Cigar Name": "Quorum Maduro",
-        "Wrapper": "Nicaraguan",
-        "Binder": "Nicaraguan",
-        "Filler": "Nicaraguan",
-        "Flavor_Profile": "",
-        "Strength_Profile": "Medium",
-        "Sizes": [
-            {
-                "Size": "Robusto",
-                "Barcode": 76622775206,
-                "In_Stock": "TRUE",
-                "Price": "$\t2.20"
-            }
-        ],
-        "slug": "j-c-newman-quorum-maduro"
-    },
-    {
-        "Cigar Brand": "J.C. Newman",
-        "Cigar Name": "Quorum Natural",
-        "Wrapper": "Connecticut",
-        "Binder": "Dominican",
-        "Filler": "Dominican",
-        "Flavor_Profile": "",
-        "Strength_Profile": "Mild-Medium",
-        "Sizes": [
-            {
-                "Size": "Robusto",
-                "Barcode": 76622771208,
-                "In_Stock": "TRUE",
-                "Price": "$\t2.10"
+                "Barcode": 76622013056,
+                "In_Stock": "FALSE",
+                "Price": "$\t20.95"
             },
             {
-                "Size": "Toro",
-                "Barcode": 76622771307,
-                "In_Stock": "TRUE",
-                "Price": "$\t2.30"
+                "Size": "Double Robusto",
+                "Barcode": 76622013254,
+                "In_Stock": "FALSE",
+                "Price": "$\t20.95"
             }
         ],
-        "slug": "j-c-newman-quorum-natural"
+        "slug": "j-c-newman-the-american"
     },
     {
         "Cigar Brand": "J.C. Newman",
@@ -4741,27 +5905,81 @@
                 "Barcode": 819577015092,
                 "In_Stock": "TRUE",
                 "Price": "$\t7.45"
-            },
+            }
+        ],
+        "slug": "la-aroma-de-cuba-connecticut"
+    },
+    {
+        "Cigar Brand": "La Aroma de Cuba",
+        "Cigar Name": "Connecticut Corona",
+        "Wrapper": "Ecuadorian Connecticut",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaragua",
+        "Flavor_Profile": "Coffee, Cedar, Almond",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": 819577015078,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.30"
+            }
+        ],
+        "slug": "la-aroma-de-cuba-connecticut-corona"
+    },
+    {
+        "Cigar Brand": "La Aroma de Cuba",
+        "Cigar Name": "Connecticut El Jefe",
+        "Wrapper": "Ecuadorian Connecticut",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Coffee, Cedar, Almond",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Double Gordo",
+                "Barcode": 819577014835,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.15"
+            }
+        ],
+        "slug": "la-aroma-de-cuba-connecticut-el-jefe"
+    },
+    {
+        "Cigar Brand": "La Aroma de Cuba",
+        "Cigar Name": "Connecticut Immensa",
+        "Wrapper": "Ecuadorian Connecticut",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Coffee, Cedar, Almond",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Gordo",
+                "Barcode": 819577014859,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.35"
+            }
+        ],
+        "slug": "la-aroma-de-cuba-connecticut-immensa"
+    },
+    {
+        "Cigar Brand": "La Aroma de Cuba",
+        "Cigar Name": "Connecticut Monarch",
+        "Wrapper": "Ecuadorian Connecticut",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Coffee, Cedar, Almond",
+        "Strength_Profile": "Medium",
+        "Sizes": [
             {
                 "Size": "Toro",
                 "Barcode": 819577014873,
                 "In_Stock": "TRUE",
                 "Price": "$\t8.70"
-            },
-            {
-                "Size": "Gordo",
-                "Barcode": 819577014859,
-                "In_Stock": "TRUE",
-                "Price": "$\t8.90"
-            },
-            {
-                "Size": "Double Gordo",
-                "Barcode": 819577014835,
-                "In_Stock": "TRUE",
-                "Price": "$\t10.00"
             }
         ],
-        "slug": "la-aroma-de-cuba-connecticut"
+        "slug": "la-aroma-de-cuba-connecticut-monarch"
     },
     {
         "Cigar Brand": "La Aroma de Cuba",
@@ -4774,9 +5992,9 @@
         "Sizes": [
             {
                 "Size": "Robusto",
-                "Barcode": "",
+                "Barcode": 819577014897,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.00"
+                "Price": "$\t8.60"
             }
         ],
         "slug": "la-aroma-de-cuba-connecticut-robusto"
@@ -4794,7 +6012,7 @@
                 "Size": "Robusto",
                 "Barcode": 819577010042,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.60"
+                "Price": "$\t10.50"
             }
         ],
         "slug": "la-aroma-de-cuba-edition-especial-no-2"
@@ -4812,7 +6030,7 @@
                 "Size": "Toro",
                 "Barcode": 819577010066,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.00"
+                "Price": "$\t10.70"
             }
         ],
         "slug": "la-aroma-de-cuba-edition-especial-no-3"
@@ -4848,40 +6066,88 @@
                 "Size": "Rothschild",
                 "Barcode": 819577015054,
                 "In_Stock": "TRUE",
-                "Price": "$\t7.30"
-            },
-            {
-                "Size": "Corona",
-                "Barcode": 819577010387,
-                "In_Stock": "TRUE",
-                "Price": "$\t7.30"
-            },
-            {
-                "Size": "Toro",
-                "Barcode": 819577010486,
-                "In_Stock": "TRUE",
-                "Price": "$\t8.70"
+                "Price": "$\t7.40"
             },
             {
                 "Size": "Robusto",
                 "Barcode": 819577010509,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.00"
-            },
+                "Price": "$\t8.60"
+            }
+        ],
+        "slug": "la-aroma-de-cuba-la-aroma-de-cuba"
+    },
+    {
+        "Cigar Brand": "La Aroma de Cuba",
+        "Cigar Name": "La Aroma De Cuba corona",
+        "Wrapper": "Connecticut Broadleaf",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Bold and complex.",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": 819577010387,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.30"
+            }
+        ],
+        "slug": "la-aroma-de-cuba-la-aroma-de-cuba-corona"
+    },
+    {
+        "Cigar Brand": "La Aroma de Cuba",
+        "Cigar Name": "La Aroma De Cuba el jefe",
+        "Wrapper": "Connecticut Broadleaf",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Bold and complex.",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
             {
                 "Size": "Churchill",
                 "Barcode": 819577010424,
                 "In_Stock": "TRUE",
                 "Price": "$\t10.00"
-            },
+            }
+        ],
+        "slug": "la-aroma-de-cuba-la-aroma-de-cuba-el-jefe"
+    },
+    {
+        "Cigar Brand": "La Aroma de Cuba",
+        "Cigar Name": "La Aroma De Cuba immensa",
+        "Wrapper": "Connecticut Broadleaf",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Bold and complex.",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
             {
                 "Size": "Immensa",
                 "Barcode": 819577010448,
                 "In_Stock": "TRUE",
+                "Price": "$\t9.35"
+            }
+        ],
+        "slug": "la-aroma-de-cuba-la-aroma-de-cuba-immensa"
+    },
+    {
+        "Cigar Brand": "La Aroma de Cuba",
+        "Cigar Name": "La Aroma De Cuba Monarch",
+        "Wrapper": "Connecticut Broadleaf",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Bold and complex.",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 819577010486,
+                "In_Stock": "TRUE",
                 "Price": "$\t8.90"
             }
         ],
-        "slug": "la-aroma-de-cuba-la-aroma-de-cuba"
+        "slug": "la-aroma-de-cuba-la-aroma-de-cuba-monarch"
     },
     {
         "Cigar Brand": "La Aroma de Cuba",
@@ -4981,6 +6247,60 @@
     },
     {
         "Cigar Brand": "La Flor Dominicana",
+        "Cigar Name": "Cameroon Cabinet #5",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican",
+        "Filler": "Dominican, Nicaraguan",
+        "Flavor_Profile": "Complex, Smooth, Nutty and Spicy",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": "",
+                "In_Stock": "TRUE",
+                "Price": "$\t11.40"
+            }
+        ],
+        "slug": "la-flor-dominicana-cameroon-cabinet-5"
+    },
+    {
+        "Cigar Brand": "La Flor Dominicana",
+        "Cigar Name": "Coronado  Double Corona",
+        "Wrapper": "Nicaraguan Habano",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Salt, Pepper, Rich Leather and Earth",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Churchill",
+                "Barcode": "",
+                "In_Stock": "TRUE",
+                "Price": "$\t12.00"
+            }
+        ],
+        "slug": "la-flor-dominicana-coronado-double-corona"
+    },
+    {
+        "Cigar Brand": "La Flor Dominicana",
+        "Cigar Name": "Coronado Toro",
+        "Wrapper": "Nicaraguan Habano",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Salt, Pepper, Rich Leather and Earth",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": "",
+                "In_Stock": "TRUE",
+                "Price": "$\t12.00"
+            }
+        ],
+        "slug": "la-flor-dominicana-coronado-toro"
+    },
+    {
+        "Cigar Brand": "La Flor Dominicana",
         "Cigar Name": "Dl Chisel Maduro",
         "Wrapper": "Habano Maduro",
         "Binder": "Dominican Ligero",
@@ -4999,6 +6319,42 @@
     },
     {
         "Cigar Brand": "La Flor Dominicana",
+        "Cigar Name": "Dl Chisel Natueo",
+        "Wrapper": "Ecuadorian Sumatran",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Earth, Toast, Raisin, Licorice",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": "",
+                "In_Stock": "TRUE",
+                "Price": "$\t11.85"
+            }
+        ],
+        "slug": "la-flor-dominicana-dl-chisel-natueo"
+    },
+    {
+        "Cigar Brand": "La Flor Dominicana",
+        "Cigar Name": "Dl Chiselito Maduro",
+        "Wrapper": "Habano Maduro",
+        "Binder": "Dominican Ligero",
+        "Filler": "Dominican ligero",
+        "Flavor_Profile": "Pepper, Earth, Leather, Complex, and Full Bodied",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": "",
+                "In_Stock": "TRUE",
+                "Price": "$\t9.85"
+            }
+        ],
+        "slug": "la-flor-dominicana-dl-chiselito-maduro"
+    },
+    {
+        "Cigar Brand": "La Flor Dominicana",
         "Cigar Name": "DL-600 Maduro",
         "Wrapper": "Habano Maduro",
         "Binder": "Dominican",
@@ -5010,7 +6366,7 @@
                 "Size": "Toro",
                 "Barcode": 7460644702440,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.45"
+                "Price": "$\t9.85"
             }
         ],
         "slug": "la-flor-dominicana-dl-600-maduro"
@@ -5062,9 +6418,9 @@
         "Sizes": [
             {
                 "Size": "Toro",
-                "Barcode": 7460644702396,
+                "Barcode": 7460644702303,
                 "In_Stock": "TRUE",
-                "Price": "$\t11.35"
+                "Price": "$\t11.90"
             }
         ],
         "slug": "la-flor-dominicana-double-ligero-dl-700"
@@ -5136,7 +6492,7 @@
                 "Size": "Robusto",
                 "Barcode": "",
                 "In_Stock": "TRUE",
-                "Price": "$\t7.65"
+                "Price": "$\t8.05"
             }
         ],
         "slug": "la-flor-dominicana-maceo-suave-natural-robusto"
@@ -5154,7 +6510,7 @@
                 "Size": "Toro",
                 "Barcode": "",
                 "In_Stock": "TRUE",
-                "Price": "$\t10.85"
+                "Price": "$\t11.35"
             }
         ],
         "slug": "la-flor-dominicana-maceo-suave-natural-toro"
@@ -5172,10 +6528,82 @@
                 "Size": "Toro",
                 "Barcode": "",
                 "In_Stock": "TRUE",
-                "Price": "$\t11.10"
+                "Price": "$\t11.60"
             }
         ],
         "slug": "la-flor-dominicana-reserva-especial"
+    },
+    {
+        "Cigar Brand": "La Flor Dominicana",
+        "Cigar Name": "DL 700 Maduro",
+        "Wrapper": "Habano Maduro",
+        "Binder": "Dominican Ligero",
+        "Filler": "Dominican Ligero",
+        "Flavor_Profile": "Pepper, Earth, Leather, Complex, and Full Bodied",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Gordo",
+                "Barcode": 7460644702396,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.15"
+            }
+        ],
+        "slug": "la-flor-dominicana-dl-700-maduro"
+    },
+    {
+        "Cigar Brand": "La Flor Dominicana",
+        "Cigar Name": "Andalusian Bull",
+        "Wrapper": "Ecuadorian Corojo",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Hickory, pepper, Caramel, Leather",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Figurado",
+                "Barcode": "",
+                "In_Stock": "TRUE",
+                "Price": "$\t19.95"
+            }
+        ],
+        "slug": "la-flor-dominicana-andalusian-bull"
+    },
+    {
+        "Cigar Brand": "La Gloria Cubana",
+        "Cigar Name": "Corona de Oro",
+        "Wrapper": "Ecuador Habano",
+        "Binder": "Corojo",
+        "Filler": "Brazilian, Nicaraguan, Dominican",
+        "Flavor_Profile": "Clean, refined",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 689674139768,
+                "In_Stock": "TRUE",
+                "Price": "$\t11.10"
+            }
+        ],
+        "slug": "la-gloria-cubana-corona-de-oro"
+    },
+    {
+        "Cigar Brand": "La Gloria Cubana",
+        "Cigar Name": "Gran Legado",
+        "Wrapper": "Connecticut Broadleaf",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan, Dominican",
+        "Flavor_Profile": "Sweet spice, Coffee, Leather, Cocoa",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Gigante",
+                "Barcode": 689674156239,
+                "In_Stock": "TRUE",
+                "Price": "$\t15.90"
+            }
+        ],
+        "slug": "la-gloria-cubana-gran-legado"
     },
     {
         "Cigar Brand": "La Gloria Cubana",
@@ -5190,16 +6618,34 @@
                 "Size": "Churchill Grande",
                 "Barcode": 689674046691,
                 "In_Stock": "TRUE",
-                "Price": "$\t12.40"
+                "Price": "$\t13.25"
             },
             {
                 "Size": "ToroGrande",
                 "Barcode": 689674046684,
                 "In_Stock": "TRUE",
-                "Price": "$\t13.25"
+                "Price": "$\t12.40"
             }
         ],
         "slug": "la-gloria-cubana-serie-r"
+    },
+    {
+        "Cigar Brand": "La Gloria Cubana",
+        "Cigar Name": "Serie R Maduro",
+        "Wrapper": "Mescan San Andres",
+        "Binder": "Nicaraguan",
+        "Filler": "Dominican, Nicaraguan",
+        "Flavor_Profile": "Rich, Spicy, Full Body",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Gordo",
+                "Barcode": 689674046707,
+                "In_Stock": "TRUE",
+                "Price": "$\t12.40"
+            }
+        ],
+        "slug": "la-gloria-cubana-serie-r-maduro"
     },
     {
         "Cigar Brand": "La Gloria Cubana",
@@ -5224,24 +6670,6 @@
             }
         ],
         "slug": "la-gloria-cubana-serie-r-spanish-press"
-    },
-    {
-        "Cigar Brand": "La Gloria Cubana",
-        "Cigar Name": "Serie R Maduro",
-        "Wrapper": "Mescan San Andres",
-        "Binder": "Nicaraguan",
-        "Filler": "Dominican, Nicaraguan",
-        "Flavor_Profile": "Rich, Spicy, Full Body",
-        "Strength_Profile": "Full",
-        "Sizes": [
-            {
-                "Size": "Gordo",
-                "Barcode": 689674046707,
-                "In_Stock": "TRUE",
-                "Price": "$\t12.40"
-            }
-        ],
-        "slug": "la-gloria-cubana-serie-r-maduro"
     },
     {
         "Cigar Brand": "La Gloria Cubana",
@@ -5334,6 +6762,42 @@
         "slug": "la-palina-maduro"
     },
     {
+        "Cigar Brand": "La Palina",
+        "Cigar Name": "Nicaraguan Connecticut",
+        "Wrapper": "Ecuadorian Oscuro",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Dark Chocolate, Leather, Oak",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 817094020414,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.50"
+            }
+        ],
+        "slug": "la-palina-nicaraguan-connecticut"
+    },
+    {
+        "Cigar Brand": "La Palina",
+        "Cigar Name": "Nicaraguan Oscuro",
+        "Wrapper": "Ecuadorian Connecticut",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Gordo",
+                "Barcode": 852527003770,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.00"
+            }
+        ],
+        "slug": "la-palina-nicaraguan-oscuro"
+    },
+    {
         "Cigar Brand": "Macanudo",
         "Cigar Name": "Bourbon",
         "Wrapper": "Ecuadorian Shade",
@@ -5350,6 +6814,30 @@
             }
         ],
         "slug": "macanudo-bourbon"
+    },
+    {
+        "Cigar Brand": "Macanudo",
+        "Cigar Name": "Brazilian Shade",
+        "Wrapper": "Brazilian Shade",
+        "Binder": "Mexican San Andrean",
+        "Filler": "Brazilian, Dominican, Nicaraguan",
+        "Flavor_Profile": "Creamy, Cocoa, Nuts, spice",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 689674115649,
+                "In_Stock": "FALSE",
+                "Price": "$\t11.65"
+            },
+            {
+                "Size": "Churchill",
+                "Barcode": 689674115717,
+                "In_Stock": "FALSE",
+                "Price": "$\t12.70"
+            }
+        ],
+        "slug": "macanudo-brazilian-shade"
     },
     {
         "Cigar Brand": "Macanudo",
@@ -5388,7 +6876,7 @@
                 "Size": "Toro",
                 "Barcode": 689674127727,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.30"
+                "Price": "$\t10.50"
             }
         ],
         "slug": "macanudo-espresso-and-cream"
@@ -5479,6 +6967,78 @@
     },
     {
         "Cigar Brand": "Macanudo",
+        "Cigar Name": "Inspirado White",
+        "Wrapper": "Ecuadorian Shade",
+        "Binder": "Indonesian",
+        "Filler": "Mexican, Nicaraguan",
+        "Flavor_Profile": "Earth, Slight spice, Soft creamy notes",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 689674092117,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.15"
+            },
+            {
+                "Size": "Toro",
+                "Barcode": 689674093541,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.55"
+            },
+            {
+                "Size": "Gordo",
+                "Barcode": 689674108122,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.50"
+            }
+        ],
+        "slug": "macanudo-inspirado-white"
+    },
+    {
+        "Cigar Brand": "Macanudo",
+        "Cigar Name": "Inspirado White Tube",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 689674096016,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.45"
+            }
+        ],
+        "slug": "macanudo-inspirado-white-tube"
+    },
+    {
+        "Cigar Brand": "Macanudo",
+        "Cigar Name": "Palladium",
+        "Wrapper": "Ecuadorian Connecticut Shade",
+        "Binder": "Habano connecticut",
+        "Filler": "Mexico, Nicaraguan, Dominican",
+        "Flavor_Profile": "Tercio Aging Process",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 689674112099,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.80"
+            },
+            {
+                "Size": "Churchill",
+                "Barcode": 689674112129,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.30"
+            }
+        ],
+        "slug": "macanudo-palladium"
+    },
+    {
+        "Cigar Brand": "Macanudo",
         "Cigar Name": "Vintage 2013 Maduro",
         "Wrapper": "Connecticut Broadleaf",
         "Binder": "Honduran OSA",
@@ -5551,6 +7111,12 @@
                 "Barcode": 71610930025,
                 "In_Stock": "TRUE",
                 "Price": "$\t13.30"
+            },
+            {
+                "Size": "Churchill",
+                "Barcode": 71610930032,
+                "In_Stock": "TRUE",
+                "Price": "$\t15.30"
             }
         ],
         "slug": "montecristo-white-label"
@@ -5568,7 +7134,7 @@
                 "Size": "RobustoGrande",
                 "Barcode": 814539011990,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.45"
+                "Price": "$\t9.85"
             }
         ],
         "slug": "nub-connecticut"
@@ -5586,7 +7152,7 @@
                 "Size": "RobustoGrande",
                 "Barcode": 814539012034,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.45"
+                "Price": "$\t9.85"
             }
         ],
         "slug": "nub-habano"
@@ -5604,7 +7170,7 @@
                 "Size": "RobustoGrande",
                 "Barcode": 814539012065,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.45"
+                "Price": "$\t9.85"
             }
         ],
         "slug": "nub-maduro"
@@ -5658,7 +7224,7 @@
                 "Size": "Gigante",
                 "Barcode": 689674095538,
                 "In_Stock": "TRUE",
-                "Price": "$\t3.00"
+                "Price": "$\t3.20"
             }
         ],
         "slug": "odyssey-maduro"
@@ -5712,7 +7278,7 @@
                 "Size": "Toro",
                 "Barcode": 689674104896,
                 "In_Stock": "TRUE",
-                "Price": "$\t2.35"
+                "Price": "$\t2.80"
             }
         ],
         "slug": "odyssey-sweet-tip"
@@ -5730,13 +7296,13 @@
                 "Size": "Robusto",
                 "Barcode": 814539011549,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.35"
+                "Price": "$\t9.55"
             },
             {
                 "Size": "Toro",
                 "Barcode": 814539011556,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.00"
+                "Price": "$\t10.75"
             }
         ],
         "slug": "oliva-connecticut-reserve"
@@ -5775,10 +7341,10 @@
         "Strength_Profile": "Mild-Medium",
         "Sizes": [
             {
-                "Size": "Robusto",
+                "Size": "Toro",
                 "Barcode": 814539015059,
                 "In_Stock": "TRUE",
-                "Price": "$\t7.90"
+                "Price": "$\t8.90"
             }
         ],
         "slug": "oliva-gilberto-oliva-reserva-blanc"
@@ -5793,10 +7359,10 @@
         "Strength_Profile": "Mild-Medium",
         "Sizes": [
             {
-                "Size": "Toro",
+                "Size": "Robusto",
                 "Barcode": 814539015035,
                 "In_Stock": "TRUE",
-                "Price": "$\t7.40"
+                "Price": "$\t7.75"
             }
         ],
         "slug": "oliva-gilberto-oliva-reserva-blanc"
@@ -5910,10 +7476,34 @@
                 "Size": "Double Toro",
                 "Barcode": 814539011457,
                 "In_Stock": "TRUE",
-                "Price": "$\t12.85"
+                "Price": "$\t14.75"
             }
         ],
         "slug": "oliva-serie-v"
+    },
+    {
+        "Cigar Brand": "Oliva",
+        "Cigar Name": "Serie V Maduro",
+        "Wrapper": "San Andres Maduro",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaragua",
+        "Flavor_Profile": "Cocoa, Espresso, Earth, Dark Tobacco",
+        "Strength_Profile": "Full",
+        "Sizes": [
+            {
+                "Size": "Double Robusto",
+                "Barcode": 814539015103,
+                "In_Stock": "TRUE",
+                "Price": "$\t12.50"
+            },
+            {
+                "Size": "Double Toro",
+                "Barcode": 814539015141,
+                "In_Stock": "TRUE",
+                "Price": "$\t13.80"
+            }
+        ],
+        "slug": "oliva-serie-v-maduro"
     },
     {
         "Cigar Brand": "Oliva",
@@ -5928,7 +7518,7 @@
                 "Size": "Toro",
                 "Barcode": "",
                 "In_Stock": "TRUE",
-                "Price": "$\t16.75"
+                "Price": "$\t17.80"
             }
         ],
         "slug": "oliva-serie-v-melanio-maduro"
@@ -5946,7 +7536,7 @@
                 "Size": "Robusto",
                 "Barcode": "",
                 "In_Stock": "TRUE",
-                "Price": "$\t13.10"
+                "Price": "$\t14.00"
             }
         ],
         "slug": "oliva-serie-v-melanio-robusto"
@@ -5964,7 +7554,7 @@
                 "Size": "Toro",
                 "Barcode": "",
                 "In_Stock": "TRUE",
-                "Price": "$\t15.60"
+                "Price": "$\t17.80"
             }
         ],
         "slug": "oliva-serie-v-melanio-toro"
@@ -6036,7 +7626,7 @@
                 "Size": "Toro",
                 "Barcode": "",
                 "In_Stock": "TRUE",
-                "Price": "$\t15.85"
+                "Price": "$\t16.60"
             }
         ],
         "slug": "padron-1964-maduro"
@@ -6054,7 +7644,7 @@
                 "Size": "Robusto",
                 "Barcode": "",
                 "In_Stock": "TRUE",
-                "Price": "$\t8.40"
+                "Price": "$\t8.95"
             }
         ],
         "slug": "padron-2000-maduro"
@@ -6072,7 +7662,7 @@
                 "Size": "Robusto",
                 "Barcode": "",
                 "In_Stock": "TRUE",
-                "Price": "$\t8.40"
+                "Price": "$\t8.95"
             }
         ],
         "slug": "padron-2000-natural"
@@ -6216,7 +7806,7 @@
                 "Size": "Toro",
                 "Barcode": 689674124887,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.00"
+                "Price": "$\t9.00"
             }
         ],
         "slug": "partagas-cortado"
@@ -6252,78 +7842,6 @@
         "slug": "partagas-valle-verde"
     },
     {
-        "Cigar Brand": "Perdomo",
-        "Cigar Name": "Habano Connecticut",
-        "Wrapper": "Ecuadorian Connecticut",
-        "Binder": "Nicaraguan",
-        "Filler": "Nicaraguan",
-        "Flavor_Profile": "",
-        "Strength_Profile": "Mild-Medium",
-        "Sizes": [
-            {
-                "Size": "Toro",
-                "Barcode": 816229018562,
-                "In_Stock": "FALSE",
-                "Price": "$\t9.35"
-            },
-            {
-                "Size": "Churchill",
-                "Barcode": 816229018586,
-                "In_Stock": "FALSE",
-                "Price": "$\t10.35"
-            }
-        ],
-        "slug": "perdomo-habano-connecticut"
-    },
-    {
-        "Cigar Brand": "Perdomo",
-        "Cigar Name": "Lot 23 Connecticut",
-        "Wrapper": "Connecticut Shade",
-        "Binder": "Nicaraguan",
-        "Filler": "Nicaraguan",
-        "Flavor_Profile": "Earth, Coffee bean",
-        "Strength_Profile": "Mild-Medium",
-        "Sizes": [
-            {
-                "Size": "Toro",
-                "Barcode": 816229012553,
-                "In_Stock": "TRUE",
-                "Price": "$\t8.00"
-            },
-            {
-                "Size": "Robusto",
-                "Barcode": 816229012492,
-                "In_Stock": "TRUE",
-                "Price": "$\t7.50"
-            },
-            {
-                "Size": "Churchill",
-                "Barcode": 816229012614,
-                "In_Stock": "TRUE",
-                "Price": "$\t8.50"
-            }
-        ],
-        "slug": "perdomo-lot-23-connecticut"
-    },
-    {
-        "Cigar Brand": "Perdomo",
-        "Cigar Name": "Lot 23 Maduro",
-        "Wrapper": "Connecticut Broadleaf",
-        "Binder": "Nicaraguan",
-        "Filler": "Nicaraguan",
-        "Flavor_Profile": "Chocolate, Peanut nuance, Creamy",
-        "Strength_Profile": "Medium",
-        "Sizes": [
-            {
-                "Size": "Robusto",
-                "Barcode": 816229012485,
-                "In_Stock": "TRUE",
-                "Price": "$\t7.50"
-            }
-        ],
-        "slug": "perdomo-lot-23-maduro"
-    },
-    {
         "Cigar Brand": "Perla Del Mar",
         "Cigar Name": "Corojo",
         "Wrapper": "Corojo",
@@ -6336,7 +7854,7 @@
                 "Size": "Toro",
                 "Barcode": 76622072305,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.45"
+                "Price": "$\t9.20"
             }
         ],
         "slug": "perla-del-mar-corojo"
@@ -6372,7 +7890,13 @@
                 "Size": "Toro",
                 "Barcode": 76622027039,
                 "In_Stock": "TRUE",
-                "Price": "$\t7.80"
+                "Price": "$\t9.20"
+            },
+            {
+                "Size": "Robusto",
+                "Barcode": 76622027022,
+                "In_Stock": "TRUE",
+                "Price": "$\t8.40"
             }
         ],
         "slug": "perla-del-mar-shade"
@@ -6390,22 +7914,58 @@
                 "Size": "Toro",
                 "Barcode": 76622027039,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.45"
+                "Price": "$\t9.20"
             },
             {
                 "Size": "Toro",
                 "Barcode": 76622027350,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.45"
+                "Price": "$\t9.20"
             },
             {
                 "Size": "Toro",
                 "Barcode": 76622072305,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.45"
+                "Price": "$\t9.20"
             }
         ],
         "slug": "perla-del-mar-toro"
+    },
+    {
+        "Cigar Brand": "Punch",
+        "Cigar Name": "After Dinner",
+        "Wrapper": "Ecuadorian Sumatran",
+        "Binder": "Connecticut",
+        "Filler": "Honduran, Nicaraguan, Dominican",
+        "Flavor_Profile": "Robust, Full Flavored",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Churchill",
+                "Barcode": 689674029212,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.95"
+            }
+        ],
+        "slug": "punch-after-dinner"
+    },
+    {
+        "Cigar Brand": "Punch",
+        "Cigar Name": "Dad Home Movie",
+        "Wrapper": "Ecuadorian  Habano",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 689674154570,
+                "In_Stock": "TRUE",
+                "Price": "$\t7.95"
+            }
+        ],
+        "slug": "punch-dad-home-movie"
     },
     {
         "Cigar Brand": "Punch",
@@ -6444,7 +8004,7 @@
                 "Size": "RobustoGrande",
                 "Barcode": 689674146223,
                 "In_Stock": "TRUE",
-                "Price": "$\t5.60"
+                "Price": "$\t5.85"
             }
         ],
         "slug": "punch-knuckle-buster"
@@ -6475,7 +8035,85 @@
     },
     {
         "Cigar Brand": "Punch",
-        "Cigar Name": "Punch",
+        "Cigar Name": "Knuckle Buster Shade",
+        "Wrapper": "Connecticut",
+        "Binder": "Mexican",
+        "Filler": "Dominican, Columbian, US, Nicaraguan",
+        "Flavor_Profile": "",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 689674154341,
+                "In_Stock": "TRUE",
+                "Price": "$\t5.70"
+            },
+            {
+                "Size": "Toro",
+                "Barcode": 689674154372,
+                "In_Stock": "TRUE",
+                "Price": "$\t6.45"
+            }
+        ],
+        "slug": "punch-knuckle-buster-shade"
+    },
+    {
+        "Cigar Brand": "Punch",
+        "Cigar Name": "Knuckle Buster Shade Stubby",
+        "Wrapper": "Connecticut",
+        "Binder": "Mexican",
+        "Filler": "Dominican, Columbian, US, Nicaraguan",
+        "Flavor_Profile": "",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Rothschild",
+                "Barcode": 689674154433,
+                "In_Stock": "TRUE",
+                "Price": "$\t5.85"
+            }
+        ],
+        "slug": "punch-knuckle-buster-shade-stubby"
+    },
+    {
+        "Cigar Brand": "Punch",
+        "Cigar Name": "Knuckle Buster Stubby Maduro",
+        "Wrapper": "Connecticut Broadleaf",
+        "Binder": "Indonesian",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Cocoa, pepper , nutty molaassas",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Rothschild",
+                "Barcode": 689674154297,
+                "In_Stock": "TRUE",
+                "Price": "$\t5.85"
+            }
+        ],
+        "slug": "punch-knuckle-buster-stubby-maduro"
+    },
+    {
+        "Cigar Brand": "Punch",
+        "Cigar Name": "Punch Champion",
+        "Wrapper": "Ecuadorian Sumatran",
+        "Binder": "Connecticut",
+        "Filler": "Honduran, Nicaraguan, Dominican",
+        "Flavor_Profile": "Robust, Full flavored",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Perfecto",
+                "Barcode": 689674029250,
+                "In_Stock": "TRUE",
+                "Price": "$\t8.25"
+            }
+        ],
+        "slug": "punch-punch-champion"
+    },
+    {
+        "Cigar Brand": "Punch",
+        "Cigar Name": "Punch Elite",
         "Wrapper": "Ecuadorian Sumatran",
         "Binder": "Connecticut",
         "Filler": "Honduran, Nicaraguan, Dominican",
@@ -6487,21 +8125,27 @@
                 "Barcode": 689674023678,
                 "In_Stock": "TRUE",
                 "Price": "$\t5.15"
-            },
-            {
-                "Size": "Rothschild",
-                "Barcode": 689674029441,
-                "In_Stock": "TRUE",
-                "Price": "$\t5.90"
-            },
-            {
-                "Size": "Perfecto",
-                "Barcode": 689674029250,
-                "In_Stock": "TRUE",
-                "Price": "$\t8.25"
             }
         ],
-        "slug": "punch-punch"
+        "slug": "punch-punch-elite"
+    },
+    {
+        "Cigar Brand": "Punch",
+        "Cigar Name": "Punch Elite Maduro",
+        "Wrapper": "Connecticut Broadleaf",
+        "Binder": "Connecticut",
+        "Filler": "Honduran, Nicaraguan, Dominican",
+        "Flavor_Profile": "",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": 689674029342,
+                "In_Stock": "TRUE",
+                "Price": "$\t5.15"
+            }
+        ],
+        "slug": "punch-punch-elite-maduro"
     },
     {
         "Cigar Brand": "Punch",
@@ -6523,7 +8167,25 @@
     },
     {
         "Cigar Brand": "Punch",
-        "Cigar Name": "Punch Maduro",
+        "Cigar Name": "Punch London Club",
+        "Wrapper": "Ecuadorian Sumatran",
+        "Binder": "Connecticut",
+        "Filler": "Honduran, Nicaraguan, Dominican",
+        "Flavor_Profile": "Robust, Full flavored",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": 689674029403,
+                "In_Stock": "TRUE",
+                "Price": "$\t4.70"
+            }
+        ],
+        "slug": "punch-punch-london-club"
+    },
+    {
+        "Cigar Brand": "Punch",
+        "Cigar Name": "Punch London Club Maduro",
         "Wrapper": "Connecticut Broadleaf",
         "Binder": "Connecticut",
         "Filler": "Honduran, Nicaraguan, Dominican",
@@ -6534,10 +8196,100 @@
                 "Size": "Petite Corona",
                 "Barcode": 689674029410,
                 "In_Stock": "TRUE",
-                "Price": "$\t4.00"
+                "Price": "$\t4.70"
             }
         ],
-        "slug": "punch-punch-maduro"
+        "slug": "punch-punch-london-club-maduro"
+    },
+    {
+        "Cigar Brand": "Punch",
+        "Cigar Name": "Rare Corojo",
+        "Wrapper": "Ecuadorian Sumatran",
+        "Binder": "Nicaraguan Broadleaf",
+        "Filler": "Dominican, Nicaraguan",
+        "Flavor_Profile": "Leather, Wood, Cherry",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Gordo",
+                "Barcode": 689674159360,
+                "In_Stock": "TRUE",
+                "Price": "$\t12.00"
+            }
+        ],
+        "slug": "punch-rare-corojo"
+    },
+    {
+        "Cigar Brand": "Quorum",
+        "Cigar Name": "Churchill Shade",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Churchill",
+                "Barcode": "",
+                "In_Stock": "FALSE",
+                "Price": ""
+            }
+        ],
+        "slug": "quorum-churchill-shade"
+    },
+    {
+        "Cigar Brand": "Quorum",
+        "Cigar Name": "Corona Maduro",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": "",
+                "In_Stock": "FALSE",
+                "Price": ""
+            }
+        ],
+        "slug": "quorum-corona-maduro"
+    },
+    {
+        "Cigar Brand": "Quorum",
+        "Cigar Name": "Corona Original",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": "",
+                "In_Stock": "FALSE",
+                "Price": ""
+            }
+        ],
+        "slug": "quorum-corona-original"
+    },
+    {
+        "Cigar Brand": "Quorum",
+        "Cigar Name": "Corona Shade",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": "",
+                "In_Stock": "FALSE",
+                "Price": ""
+            }
+        ],
+        "slug": "quorum-corona-shade"
     },
     {
         "Cigar Brand": "Quorum",
@@ -6552,7 +8304,7 @@
                 "Size": "Double Robusto",
                 "Barcode": 76622773004,
                 "In_Stock": "TRUE",
-                "Price": "$\t2.95"
+                "Price": "$\t3.20"
             },
             {
                 "Size": "Double Grande",
@@ -6574,6 +8326,72 @@
             }
         ],
         "slug": "quorum-havana-q"
+    },
+    {
+        "Cigar Brand": "Quorum",
+        "Cigar Name": "Quorum",
+        "Wrapper": "Ecuadorian Connecticut",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 76622770201,
+                "In_Stock": "TRUE",
+                "Price": "$\t2.10"
+            },
+            {
+                "Size": "Toro",
+                "Barcode": 76622770300,
+                "In_Stock": "TRUE",
+                "Price": "$\t2.30"
+            }
+        ],
+        "slug": "quorum-quorum"
+    },
+    {
+        "Cigar Brand": "Quorum",
+        "Cigar Name": "Quorum Maduro",
+        "Wrapper": "Nicaraguan",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 76622775206,
+                "In_Stock": "TRUE",
+                "Price": "$\t2.20"
+            }
+        ],
+        "slug": "quorum-quorum-maduro"
+    },
+    {
+        "Cigar Brand": "Quorum",
+        "Cigar Name": "Quorum Natural",
+        "Wrapper": "Connecticut",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "",
+        "Strength_Profile": "Mild-Medium",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 76622771208,
+                "In_Stock": "TRUE",
+                "Price": "$\t2.10"
+            },
+            {
+                "Size": "Toro",
+                "Barcode": 76622771307,
+                "In_Stock": "TRUE",
+                "Price": "$\t2.30"
+            }
+        ],
+        "slug": "quorum-quorum-natural"
     },
     {
         "Cigar Brand": "Rock-A-Feller",
@@ -6696,10 +8514,28 @@
                 "Size": "Toro",
                 "Barcode": 846261000782,
                 "In_Stock": "TRUE",
-                "Price": "$\t8.80"
+                "Price": "$\t9.00"
             }
         ],
         "slug": "rocky-patel-corojo-edge"
+    },
+    {
+        "Cigar Brand": "Rocky Patel",
+        "Cigar Name": "Java Red",
+        "Wrapper": "Maduro",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan",
+        "Flavor_Profile": "Cherry, Coffee, Cocoa",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": 846261014130,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.00"
+            }
+        ],
+        "slug": "rocky-patel-java-red"
     },
     {
         "Cigar Brand": "Rocky Patel",
@@ -6774,7 +8610,7 @@
                 "Size": "Toro",
                 "Barcode": 76452518523,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.50"
+                "Price": "$\t11.90"
             }
         ],
         "slug": "romeo-y-julieta-1875-reserva-real-nicaragua"
@@ -6834,7 +8670,7 @@
                 "Size": "Toro",
                 "Barcode": 819577011407,
                 "In_Stock": "TRUE",
-                "Price": "$\t10.35"
+                "Price": "$\t10.65"
             }
         ],
         "slug": "san-cristobal-quintessence-epicure"
@@ -6852,7 +8688,7 @@
                 "Size": "Toro",
                 "Barcode": 819577010936,
                 "In_Stock": "TRUE",
-                "Price": "$\t9.80"
+                "Price": "$\t10.60"
             }
         ],
         "slug": "san-cristobal-revelation-legend"
@@ -6880,6 +8716,30 @@
             }
         ],
         "slug": "sancho-panza-double-maduro"
+    },
+    {
+        "Cigar Brand": "Sancho Panza",
+        "Cigar Name": "Extra Chido",
+        "Wrapper": "Ecuadorian Sumatran Viso",
+        "Binder": "Nicaraguan",
+        "Filler": "Nicaraguan Tercio aged",
+        "Flavor_Profile": "Spicy and smooth",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 689674156345,
+                "In_Stock": "TRUE",
+                "Price": "$\t10.15"
+            },
+            {
+                "Size": "Robusto",
+                "Barcode": 689674156314,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.35"
+            }
+        ],
+        "slug": "sancho-panza-extra-chido"
     },
     {
         "Cigar Brand": "Sancho Panza",
@@ -7048,5 +8908,149 @@
             }
         ],
         "slug": "zino-zino"
+    },
+    {
+        "Cigar Brand": "La Galera",
+        "Cigar Name": "El Lector Connecticut",
+        "Wrapper": "Ecuadorian Connecticut Shade",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Toasted almonds, Espresso, Cocoa Floral",
+        "Strength_Profile": "Mild",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 636655226535,
+                "In_Stock": "TRUE",
+                "Price": "$\t8.30"
+            }
+        ],
+        "slug": "la-galera-el-lector-connecticut"
+    },
+    {
+        "Cigar Brand": "La Galera",
+        "Cigar Name": "El Lector Maduro",
+        "Wrapper": "San Andres Maduro",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Chocolate, Cedar, Spice",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "toro",
+                "Barcode": 636655226870,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.20"
+            }
+        ],
+        "slug": "la-galera-el-lector-maduro"
+    },
+    {
+        "Cigar Brand": "La Galera",
+        "Cigar Name": "Habano Tabaquero P",
+        "Wrapper": "Ecuadorian Habano",
+        "Binder": "Dominican Corojo",
+        "Filler": "Dominican Criollo, Pelo de Oro",
+        "Flavor_Profile": "Pepper, Earth, Wood, Fruit",
+        "Strength_Profile": "Medium",
+        "Sizes": [
+            {
+                "Size": "Churchill",
+                "Barcode": 636655226450,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.80"
+            }
+        ],
+        "slug": "la-galera-habano-tabaquero-p"
+    },
+    {
+        "Cigar Brand": "La Galera",
+        "Cigar Name": "Imperial Jade",
+        "Wrapper": "Cameroon",
+        "Binder": "Dominican Criollo",
+        "Filler": "Dominican Piloto Cubano",
+        "Flavor_Profile": "Herbal Tea, Chili Pepper, Cedar, Sweetness",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Robusto",
+                "Barcode": 670087877453,
+                "In_Stock": "TRUE",
+                "Price": "$\t9.00"
+            }
+        ],
+        "slug": "la-galera-imperial-jade"
+    },
+    {
+        "Cigar Brand": "La Galera",
+        "Cigar Name": "Rough Rider Connecticut",
+        "Wrapper": "Dominican Republic",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Infused",
+        "Strength_Profile": "Mild",
+        "Sizes": [
+            {
+                "Size": "Corona",
+                "Barcode": 636655228201,
+                "In_Stock": "TRUE",
+                "Price": "$\t3.45"
+            }
+        ],
+        "slug": "la-galera-rough-rider-connecticut"
+    },
+    {
+        "Cigar Brand": "Gurkha",
+        "Cigar Name": "Cellar Reserve",
+        "Wrapper": "Brazilian Maduro",
+        "Binder": "Dominican",
+        "Filler": "Dominican",
+        "Flavor_Profile": "Cedar, Raisin, leather, raisin, oak",
+        "Strength_Profile": "Medium-Full",
+        "Sizes": [
+            {
+                "Size": "Perfecto",
+                "Barcode": 879790005935,
+                "In_Stock": "TRUE",
+                "Price": "$\t13.90"
+            }
+        ],
+        "slug": "gurkha-cellar-reserve"
+    },
+    {
+        "Cigar Brand": "El Septimo",
+        "Cigar Name": "Toscana",
+        "Wrapper": "Ecuador Connecticut",
+        "Binder": "Ecuadorian Habano 2000",
+        "Filler": "Dominican, Nicaraguan, Ecuadorian, Brazilian",
+        "Flavor_Profile": "Blended to pair with Italian wines",
+        "Strength_Profile": "Mild",
+        "Sizes": [
+            {
+                "Size": "Toro",
+                "Barcode": 732388221431,
+                "In_Stock": "TRUE",
+                "Price": "$\t15.90"
+            }
+        ],
+        "slug": "el-septimo-toscana"
+    },
+    {
+        "Cigar Brand": "Random",
+        "Cigar Name": "Stick",
+        "Wrapper": "",
+        "Binder": "",
+        "Filler": "",
+        "Flavor_Profile": "",
+        "Strength_Profile": "",
+        "Sizes": [
+            {
+                "Size": "",
+                "Barcode": "",
+                "In_Stock": "FALSE",
+                "Price": ""
+            }
+        ],
+        "slug": "random-stick"
     }
 ]
