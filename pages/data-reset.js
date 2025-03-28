@@ -1,8 +1,10 @@
+import { Router, useRouter } from "next/router"
 import Layout from "../components/layout"
 import PageTitle1 from "../components/pagetitle1"
 
 
 export const DataReset = () => {
+    const router = useRouter();
     return (
         <>
             <Layout>
@@ -10,7 +12,10 @@ export const DataReset = () => {
                 <div>
                     <b>This is used to reset the data stored on the browser, to pull fresh data from the database</b>
                     <h2>Are you sure you want to reset the data?</h2>
-                    <button onClick={() => localStorage.removeItem("tempData_cigars")}>Reset Data</button>
+                    <button onClick={() => {
+                        localStorage.removeItem("tempData_cigars")
+                        router.push("/")
+                    }}>Reset Data</button>
                 </div>
             </Layout>
             <style jsx>
