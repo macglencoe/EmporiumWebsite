@@ -11,11 +11,14 @@ import Ksman from '../components/ksman'
 import { Router, useRouter } from 'next/router'
 import { Analytics } from '@vercel/analytics/react'
 import Toolbar from './toolbar'
+import setLocalData from '../utils/setLocalData'
 
 const Layout = (props) => {
   const router = useRouter();
 
   const isHome = router.pathname === "/";
+
+  
 
   const [isActive, setIsActive] = useState(true);
   const handleButtonClick = () => {

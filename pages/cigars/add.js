@@ -80,6 +80,9 @@ const AddCigarPage = (props) => {
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
+            if (!localStorage.getItem('tempData_cigars')) {
+                localStorage.setItem('tempData_cigars', JSON.stringify(props.data));
+            }
             setAllCigarsLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
         }
     }, []);

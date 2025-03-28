@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import PageTitle1 from '../components/pagetitle1';
 import { Fragment } from 'react/cjs/react.production.min';
 
+
 async function commitToGit(commitData, branch) {
     // this function takes the data from the CMS form and commits it to github
     // we need to remove the new-slug field that is added by the CMS form
@@ -45,7 +46,11 @@ export const SubmitPage = (props) => {
     const [localData, setLocalData] = useState(props.data);
 
     useEffect(() => {
+
         if (typeof window !== 'undefined') {
+            if (!localStorage.getItem('tempData_cigars')) {
+                localStorage.setItem('tempData_cigars', JSON.stringify(props.data));
+            }
             setLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
         }
     }, []);
