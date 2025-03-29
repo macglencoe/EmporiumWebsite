@@ -18,7 +18,7 @@ const Layout = (props) => {
 
   const isHome = router.pathname === "/";
 
-  
+
 
   const [isActive, setIsActive] = useState(true);
   const handleButtonClick = () => {
@@ -71,30 +71,34 @@ const Layout = (props) => {
               <Fragment>
                 {props.headerChildren}
               </Fragment>
-      <Toolbar
-        links={[
-          { href: '/submit', label: 'Submit all Changes',
-            icon: <path xmlns="http://www.w3.org/2000/svg" d="M480-257q-76 0-135-45.5T266-417H46v-126h220q20-69 79-114.5T480-703q76 0 135 45.5T694-543h220v126H694q-20 69-79 114.5T480-257Zm.41-126Q521-383 549-411.41t28-69Q577-521 548.79-549q-28.2-28-68.5-28-40.29 0-68.79 28.21-28.5 28.2-28.5 68.5 0 40.29 28.41 68.79 28.41 28.5 69 28.5Z"/>
-          },
-          {
-            href: '/cigars/add', label: 'Add New Cigar',
-            icon: <path xmlns="http://www.w3.org/2000/svg" d="M417-417H166v-126h251v-251h126v251h251v126H543v251H417v-251Z"/>
-          },
-          {
-            href: '/cigars/barcodeSearch', label: 'Barcode Search',
-            icon: <path xmlns="http://www.w3.org/2000/svg" d="M40-120v-188h66.67v121.33H228V-120H40Zm691.33 0v-66.67h121.34V-308h66.66v188h-188Zm-576-114v-492.67h80V-234h-80ZM276-234v-492.67h41.33V-234H276Zm121.33 0v-492.67h82V-234h-82Zm123.34 0v-492.67h120.66V-234H520.67Zm162 0v-492.67H724V-234h-41.33Zm82 0v-492.67h38.66V-234h-38.66ZM40-652v-188h188v66.67H106.67V-652H40Zm812.67 0v-121.33H731.33V-840h188v188h-66.66Z"/>
-          },
-          {
-            href: '/data-reset', label: 'Reset Data',
-            icon: <path xmlns="http://www.w3.org/2000/svg" d="M212-239q-43-48-67.5-110T120-480q0-150 105-255t255-105v-80l200 150-200 150v-80q-91 0-155.5 64.5T260-480q0 46 17.5 86t47.5 70l-113 85ZM480-40 280-190l200-150v80q91 0 155.5-64.5T700-480q0-46-17.5-86T635-636l113-85q43 48 67.5 110T840-480q0 150-105 255T480-120v80Z"/>
-          }
-        ]}
-        style={{ backgroundColor: 'var(--dl-color-theme-secondary1)' }}
-      />
+              
             </div>
           </div>
 
+
           <Directory></Directory>
+          <Toolbar
+                type = 'header'
+                links={[
+                  {
+                    href: '/submit', label: 'Submit all Changes',
+                    icon: <path xmlns="http://www.w3.org/2000/svg" d="M480-257q-76 0-135-45.5T266-417H46v-126h220q20-69 79-114.5T480-703q76 0 135 45.5T694-543h220v126H694q-20 69-79 114.5T480-257Zm.41-126Q521-383 549-411.41t28-69Q577-521 548.79-549q-28.2-28-68.5-28-40.29 0-68.79 28.21-28.5 28.2-28.5 68.5 0 40.29 28.41 68.79 28.41 28.5 69 28.5Z" />
+                  },
+                  {
+                    href: '/cigars/add', label: 'Add New Cigar',
+                    icon: <path xmlns="http://www.w3.org/2000/svg" d="M417-417H166v-126h251v-251h126v251h251v126H543v251H417v-251Z" />
+                  },
+                  {
+                    href: '/cigars/barcodeSearch', label: 'Barcode Search',
+                    icon: <path xmlns="http://www.w3.org/2000/svg" d="M40-120v-188h66.67v121.33H228V-120H40Zm691.33 0v-66.67h121.34V-308h66.66v188h-188Zm-576-114v-492.67h80V-234h-80ZM276-234v-492.67h41.33V-234H276Zm121.33 0v-492.67h82V-234h-82Zm123.34 0v-492.67h120.66V-234H520.67Zm162 0v-492.67H724V-234h-41.33Zm82 0v-492.67h38.66V-234h-38.66ZM40-652v-188h188v66.67H106.67V-652H40Zm812.67 0v-121.33H731.33V-840h188v188h-66.66Z" />
+                  },
+                  {
+                    href: '/data-reset', label: 'Reset Data',
+                    icon: <path xmlns="http://www.w3.org/2000/svg" d="M212-239q-43-48-67.5-110T120-480q0-150 105-255t255-105v-80l200 150-200 150v-80q-91 0-155.5 64.5T260-480q0 46 17.5 86t47.5 70l-113 85ZM480-40 280-190l200-150v80q91 0 155.5-64.5T700-480q0-46-17.5-86T635-636l113-85q43 48 67.5 110T840-480q0 150-105 255T480-120v80Z" />
+                  }
+                ]}
+                style={{ backgroundColor: 'var(--dl-color-theme-secondary1)' }}
+              />
         </header>
 
 
@@ -117,7 +121,7 @@ const Layout = (props) => {
             <div id='fb-skip'></div>
           </div>
           <main className="catalog-content1" id='content'>
-            <Analytics/>
+            <Analytics />
             {props.children}
 
 
@@ -140,11 +144,11 @@ const Layout = (props) => {
               }
               rootClassName="footer32root-class-name1"
             ></Footer32>
-        </main>
+          </main>
 
 
-      </div>
-    </div >
+        </div>
+      </div >
       <style jsx>
         {`
         

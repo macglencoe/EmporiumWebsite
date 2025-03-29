@@ -35,6 +35,10 @@
   --dl-gradient-gradients-secondary3gradient: linear-gradient(315deg, rgba(0, 0, 0, 0) 0.00%,rgba(104, 84, 65, 0.92) 100.00%);
   --notice-gradient: linear-gradient(90deg, var(--dl-color-theme-secondary2) -10.00%, var(--dl-color-theme-primary1) 30.00%);
   --directory-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 0.00%,var(--dl-color-theme-secondary2) 100.00%);
+
+  --positive : #3ead49;
+  --negative : #ee5b1b;
+  --neutral : #e6e915;
  
 }
 
