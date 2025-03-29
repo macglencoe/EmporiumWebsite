@@ -3,3 +3,4 @@ out/
 public/sitemap-0.xml
 
 .vercel
+.env.local
