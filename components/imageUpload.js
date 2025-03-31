@@ -14,6 +14,9 @@ export const ImageUpload = (props) => {
         const formData = new FormData();
         formData.append('file', selectedFile);
 
+        const fileSizeInKB = (selectedFile.size / 1024).toFixed(2);
+        props.onImageUpload(fileSizeInKB);
+
         const response = await fetch('/api/uploadImage', {
             method: 'POST',
             body: formData,
@@ -23,13 +26,13 @@ export const ImageUpload = (props) => {
 
         if (response.ok) {
             console.log('Image uploaded successfully:', data.url);
-            props.onImageUpload(data.url);
+            props.onImageUploadSuccess(data.url);
         } else {
             console.error("Upload failed:", data.message);
             setError(data.message);
         }
 
-        
+
     }
 
     return (

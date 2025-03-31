@@ -156,6 +156,8 @@ const CrudForm = (props) => {
     const [errors, setErrors] = useState({});
 
     const [imageURL, setImageURL] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [fileSize, setFileSize] = useState(0);
 
 
     
@@ -202,11 +204,17 @@ const CrudForm = (props) => {
         setErrors({ ...errors, [name]: error });
     }
 
-    const onImageUpload = (url) => {
+    const onImageUploadSuccess = (url) => {
+        setLoading(false);
         setLocalData({ ...localData, image: url });
         if (props.onSubmitSingle) {
             props.onSubmitSingle( localData.slug, { image: url });
         }
+    }
+
+    const onImageUpload = (fileSizeInKb = null) => {
+        setLoading(true);
+        setFileSize(fileSizeInKb);
     }
 
 
@@ -325,7 +333,14 @@ const CrudForm = (props) => {
                         <h2>Image Upload</h2>
                         <ImageUpload
                             onImageUpload={onImageUpload}
+                            onImageUploadSuccess={onImageUploadSuccess}
                         ></ImageUpload>
+                        {loading && 
+                            <>
+                            <p>Loading...</p>
+                            {fileSize && <p>File size: {fileSize} KB</p>}
+                            </>
+                        }
                         { localData && localData.image && <div className="url">
                             <img src={localData.image} alt="Cigar Image" />
                             <p>URL: {localData.image}</p>
