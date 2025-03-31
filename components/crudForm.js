@@ -364,7 +364,7 @@ const CrudForm = (props) => {
                     <div className="image-upload-container">
                         <h2>Image Upload</h2>
                         <ImageUpload
-                            fileName = {localData.slug}
+                            fileName = {localData ? localData.slug : "cigar"}
                             onImageUpload={onImageUpload}
                             onImageUploadSuccess={onImageUploadSuccess}
                         ></ImageUpload>
