@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { Fragment, useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router';
 import Data from '../public/data/consolidated_cigars.json';
 import cigarSizes from '../public/data/cigarsizes.json';
@@ -61,23 +61,11 @@ export const StringBubbleList = (props) => {
 }
 export const ProductImage = (props) => {
     const router = useRouter();
-    const [imageExists, setImageExists] = useState(false);
-
-    useEffect(() => {
-        const checkImageExists = async () => {
-            try {
-                const response = await fetch(props.src, { method: 'HEAD' });
-                setImageExists(response.ok);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-        checkImageExists();
-    }, [router.asPath]);
+    
     return (
         <>
-            <div className={imageExists ? "" : "no-image"}>
-                {props.hasImage && imageExists ? (
+            <div className={props.src ? "" : "no-image"}>
+                {props.src ? (
                     <img
                         alt="image"
                         src={props.src}
@@ -184,23 +172,23 @@ export const Navigation = (props) => {
                             </Link>
                         </li>
                     }
-                    
-                    { props.next && props.next[props.nameField] &&
-                        <li>
-                        <Link href={".." + props.href + "/" + props.next.slug} >
-                            <a className="next" aria-label='Next' tabIndex={0}>
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        height="33px"
-                                        viewBox="0 -960 960 960"
-                                        width="33px"
-                                    ><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" /></svg>
-                                    <span>{props.next[props.nameField]}</span>
 
-                                </div>
-                            </a>
-                        </Link>
-                    </li>}
+                    {props.next && props.next[props.nameField] &&
+                        <li>
+                            <Link href={".." + props.href + "/" + props.next.slug} >
+                                <a className="next" aria-label='Next' tabIndex={0}>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            height="33px"
+                                            viewBox="0 -960 960 960"
+                                            width="33px"
+                                        ><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" /></svg>
+                                        <span>{props.next[props.nameField]}</span>
+
+                                    </div>
+                                </a>
+                            </Link>
+                        </li>}
                 </ul>
             </nav>
 

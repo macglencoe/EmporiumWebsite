@@ -70,6 +70,7 @@ const CigarPage = (props) => {
     }
 
   }, []);
+  console.log(cigarLocalData);
 
   return (
     <>
@@ -104,8 +105,7 @@ const CigarPage = (props) => {
         >
           <ProductSideContent>
             <ProductImage
-              hasImage={true}
-              src={`/cigars-img/${cigarLocalData.slug}/img.png`}
+              src={cigarLocalData.image}
               fallbackSearch={encodeURIComponent(cigar['Cigar Brand'] + ' ' + cigar['Cigar Name'])}
             />
             <ProductSizeChart

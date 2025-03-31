@@ -145,7 +145,7 @@ const CigarCatalog = (props) => {
         ]}
 
         cardSettings={{
-          image: (item) => { return ('/cigars-img/' + item.slug + '/img.png') },
+          image: (item) => { return (item.image) },
 
           title: (item) => {
             return (
