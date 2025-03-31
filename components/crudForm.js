@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { use, useEffect, useState } from "react";
+import ImageUpload from "./imageUpload";
 
 const InputField = (props) => {
     return (
@@ -154,6 +155,8 @@ const CrudForm = (props) => {
     const [localData, setLocalData] = useState();
     const [errors, setErrors] = useState({});
 
+    const [imageURL, setImageURL] = useState(null);
+
 
     
 
@@ -197,6 +200,13 @@ const CrudForm = (props) => {
         const { name, value } = e.target;
         const error = validateField(name, value, field);
         setErrors({ ...errors, [name]: error });
+    }
+
+    const onImageUpload = (url) => {
+        setLocalData({ ...localData, image: url });
+        if (props.onSubmitSingle) {
+            props.onSubmitSingle( localData.slug, { image: url });
+        }
     }
 
 
@@ -310,6 +320,19 @@ const CrudForm = (props) => {
                             }
                         })
                     }
+
+                    <div className="image-upload-container">
+                        <h2>Image Upload</h2>
+                        <ImageUpload
+                            onImageUpload={onImageUpload}
+                        ></ImageUpload>
+                        { localData && localData.image && <div className="url">
+                            <img src={localData.image} alt="Cigar Image" />
+                            <p>URL: {localData.image}</p>
+                            <a href={localData.image} target="_blank" rel="noopener noreferrer">Open in new tab</a>
+                        </div>}
+                    </div>
+
                     <div className="slug-container">
                         <h2>Slug</h2>
                         <p>
@@ -376,6 +399,33 @@ const CrudForm = (props) => {
                 {`
                     .l2 {
     margin: 1em;
+}
+
+.image-upload-container .url {
+    padding: 0.5em 1em;
+    background-color: var(--dl-color-theme-primary2);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.image-upload-container .url p {
+    padding: 0.5em;
+}
+
+.image-upload-container .url a {
+    padding: 0.5em 1em;
+    font-family: Inter;
+    color: var(--dl-color-theme-secondary1);
+    background-color: var(--dl-color-theme-primary1);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.image-upload-container .url img {
+    max-height: 300px;
 }
 
 button:target {

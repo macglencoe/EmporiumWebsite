@@ -203,6 +203,19 @@ const EditCigarPage = (props) => {
         localStorage.setItem('tempData_cigars', JSON.stringify(tempData));
         router.push('/cigars/' + localData['slug']);
     }
+    const saveChangesSingle = (slug, updates) => {
+        let tempData = JSON.parse(localStorage.getItem('tempData_cigars'));
+        if (!tempData) {
+            tempData = props.data;
+            localStorage.setItem('tempData_cigars', JSON.stringify(tempData));
+        }
+
+        const index = tempData.findIndex(item => item.slug === slug);
+        if (index !== -1) {
+            Object.assign(tempData[index], updates);
+            localStorage.setItem('tempData_cigars', JSON.stringify(tempData));
+        }
+    }
 
     return (
         <>
@@ -224,6 +237,7 @@ const EditCigarPage = (props) => {
                     generateSlug={generateSlug}
                     isSlugUnique={isSlugUnique}
                     onSubmit={saveChanges}
+                    onSubmitSingle={saveChangesSingle}
                 >
 
                 </CrudForm>
