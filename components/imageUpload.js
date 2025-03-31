@@ -76,10 +76,13 @@ export const ImageUpload = (props) => {
                 {
                     compressionProgress > 0 &&
                     compressionProgress < 100 &&
-                    <>
-                        <label htmlFor="compression">Compressing...</label>
+                    <div className="compression-progress">
+                        <div>
+                            <label htmlFor="compression">Compressing...</label>
+                            <p>{compressionProgress}%</p>
+                        </div>
                         <progress value={compressionProgress} max="100" id="compression">{compressionProgress}%</progress>
-                    </>
+                    </div>
                 }
             </div>
             <style jsx>
@@ -145,18 +148,36 @@ div.error::before {
     color: var(--dl-color-theme-primary2);
     font-weight: bold;
 }
+
+.compression-progress {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--dl-color-theme-primary2);
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid var(--dl-color-theme-primary2);
+}
+.compression-progress div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 0.5em;
+}
+.compression-progress label {
+    color: var(--dl-color-theme-secondary1);
+}
 progress {
     height: 1em;
     width: 100%;
 }
 progress::-webkit-progress-value {
     background-color: var(--dl-color-theme-secondary2);
-    border-radius: 0px 0.5em 0.5em 0px;
+    border-right: 5px solid var(--dl-color-theme-primary1);
 }
 progress::-webkit-progress-bar {
     background-color: var(--dl-color-theme-primary2);
-    border-radius: 0.5em;
-    overflow: hidden;
 }
 
                 `}
