@@ -30,10 +30,13 @@ export default async function handler(req, res) {
                 }
 
                 const fileData = fs.readFileSync(file.filepath);
+                const mimeType = file.mimetype || 'application/octet-stream';
+
     
     
                 const blob = await put(`images/${file.originalFilename}`, fileData, {
                     access: 'public',
+                    contentType: mimeType
                 });
                 res.status(200).json({ url: blob.url });
             } catch (error) {

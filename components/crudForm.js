@@ -155,18 +155,34 @@ const CrudForm = (props) => {
     const [localData, setLocalData] = useState();
     const [errors, setErrors] = useState({});
 
-    const [imageURL, setImageURL] = useState(null);
     const [loading, setLoading] = useState(false);
     const [fileSize, setFileSize] = useState(0);
 
+    const [finalFileSize, setFinalFileSize] = useState(0);
+
 
     
-
+    const getFinalFileSize = async (url) => {
+        try {
+            const response = await fetch(url);
+            const blob = await response.blob();
+            const fileSizeInKB = (blob.size / 1024).toFixed(2);
+            setFinalFileSize(fileSizeInKB);
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     useEffect(() => {
         setLocalData(props.allCigars);
         if (typeof window !== 'undefined' && props.pullTempData && props.pullAllTempData) {
             setLocalData(props.pullTempData());
+        }
+    }, []);
+
+    useEffect(() => {
+        if (localData && localData.image) {
+            getFinalFileSize(localData.image);
         }
     }, []);
 
@@ -179,6 +195,11 @@ const CrudForm = (props) => {
             })
         }
         setErrors(tempErrors);
+
+
+        if ( localData && localData.image) {
+            getFinalFileSize(localData.image);
+        }
     }, [localData]);
 
     const validateField = (key, value, field) => {
@@ -210,12 +231,23 @@ const CrudForm = (props) => {
         if (props.onSubmitSingle) {
             props.onSubmitSingle( localData.slug, { image: url });
         }
+
+        // fetch final image size, after compression
+        fetch(url)
+            .then(response => response.blob())
+            .then(blob => {
+                setFinalFileSize((blob.size / 1024).toFixed(2));
+            }).catch(error => {
+                console.error(error);
+            })
     }
 
     const onImageUpload = (fileSizeInKb = null) => {
         setLoading(true);
         setFileSize(fileSizeInKb);
     }
+
+     
 
 
 
@@ -332,6 +364,7 @@ const CrudForm = (props) => {
                     <div className="image-upload-container">
                         <h2>Image Upload</h2>
                         <ImageUpload
+                            fileName = {localData.slug}
                             onImageUpload={onImageUpload}
                             onImageUploadSuccess={onImageUploadSuccess}
                         ></ImageUpload>
@@ -342,9 +375,12 @@ const CrudForm = (props) => {
                             </>
                         }
                         { localData && localData.image && <div className="url">
+                            {finalFileSize > 0 && <p>Final file size: {finalFileSize} KB</p>}
                             <img src={localData.image} alt="Cigar Image" />
                             <p>URL: {localData.image}</p>
                             <a href={localData.image} target="_blank" rel="noopener noreferrer">Open in new tab</a>
+                            
+                            
                         </div>}
                     </div>
 

@@ -1,8 +1,13 @@
 import { useState } from "react";
+import browserImageCompression from "browser-image-compression";
 
 export const ImageUpload = (props) => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [error, setError] = useState(null);
+    const [compressionProgress, setCompressionProgress] = useState(0);
+
+    const fileName = props.fileName ?? "image";
+
 
     const handleFileChange = (event) => {
         setSelectedFile(event.target.files[0]);
@@ -11,10 +16,30 @@ export const ImageUpload = (props) => {
     const handleUpload = async () => {
         if (!selectedFile) return;
 
-        const formData = new FormData();
-        formData.append('file', selectedFile);
+        let compressedImage
 
-        const fileSizeInKB = (selectedFile.size / 1024).toFixed(2);
+        try {
+            compressedImage = await browserImageCompression(selectedFile, {
+                maxSizeMB: 1,
+                onProgress: onProgress,
+                fileType: selectedFile.type
+            })
+        } catch (error) {
+            console.error("Image compression failed:", error);
+            setError("Image compression failed. See console for details.");
+        }
+
+        console.log(compressedImage.type)
+
+        const fileExtension = selectedFile.type.split("/")[1];
+        const fixedFile = new File([compressedImage], `${fileName}.${fileExtension}`, { 
+            type: compressedImage.type
+        });
+
+        const formData = new FormData();
+        formData.append('file', fixedFile);
+
+        const fileSizeInKB = (fixedFile.size / 1024).toFixed(2);
         props.onImageUpload(fileSizeInKB);
 
         const response = await fetch('/api/uploadImage', {
@@ -35,6 +60,11 @@ export const ImageUpload = (props) => {
 
     }
 
+    const onProgress = (progress) => {
+        console.log(`Compression progress: ${progress}%`);
+        setCompressionProgress(progress);
+    }
+
     return (
         <>
             <div className="container">
@@ -42,6 +72,15 @@ export const ImageUpload = (props) => {
                 <input type="file" onChange={handleFileChange} />
                 <button onClick={handleUpload}>Upload</button>
                 {error && <div className="error"><p>{error}</p></div>}
+
+                {
+                    compressionProgress > 0 &&
+                    compressionProgress < 100 &&
+                    <>
+                        <label htmlFor="compression">Compressing...</label>
+                        <progress value={compressionProgress} max="100" id="compression">{compressionProgress}%</progress>
+                    </>
+                }
             </div>
             <style jsx>
                 {`
@@ -51,6 +90,7 @@ div.container {
     align-items: flex-start;
     margin: 20px;
     gap: 1em;
+    width: fit-content;
 }
 input[type="file"]::file-selector-button {
     background-color: var(--dl-color-theme-secondary2);
@@ -104,6 +144,19 @@ div.error::before {
     font-family: Inter;
     color: var(--dl-color-theme-primary2);
     font-weight: bold;
+}
+progress {
+    height: 1em;
+    width: 100%;
+}
+progress::-webkit-progress-value {
+    background-color: var(--dl-color-theme-secondary2);
+    border-radius: 0px 0.5em 0.5em 0px;
+}
+progress::-webkit-progress-bar {
+    background-color: var(--dl-color-theme-primary2);
+    border-radius: 0.5em;
+    overflow: hidden;
 }
 
                 `}
