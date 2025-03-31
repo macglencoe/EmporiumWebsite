@@ -32,7 +32,7 @@ export const ImageUpload = (props) => {
         console.log(compressedImage.type)
 
         const fileExtension = selectedFile.type.split("/")[1];
-        const fixedFile = new File([compressedImage], `${fileName}.${fileExtension}`, { 
+        const fixedFile = new File([compressedImage], `${fileName}.${fileExtension}`, {
             type: compressedImage.type
         });
 
@@ -78,10 +78,43 @@ export const ImageUpload = (props) => {
                     compressionProgress < 100 &&
                     <div className="compression-progress">
                         <div>
+
                             <label htmlFor="compression">Compressing...</label>
+                            <p>
+                                {
+                                    selectedFile.size > 1048576
+                                        ? `${(selectedFile.size / 1048576).toFixed(2)}MB`
+                                        : `${(selectedFile.size / 1024).toFixed(2)}KdB`
+                                }
+                            </p>
                             <p>{compressionProgress}%</p>
                         </div>
-                        <progress value={compressionProgress} max="100" id="compression">{compressionProgress}%</progress>
+                        <span style={{
+                            position: "absolute",
+                            bottom: "0",
+                            left: `${(
+                                (
+                                    selectedFile.size - (selectedFile.size - 1048576) * (100 / 100)
+                                ) / selectedFile.size
+                            ) * 100}%`
+
+                        }} className="target">1MB</span>
+                        <span style={{
+                            position: "absolute",
+                            bottom: "0",
+                            left: `${(
+                                (
+                                    selectedFile.size - (selectedFile.size - 1048576) * (compressionProgress / 100)
+                                ) / selectedFile.size
+                            ) * 100}%`
+                        }} className="current">{(selectedFile && Math.round(((selectedFile.size - (selectedFile.size - 1048576) * (compressionProgress / 100)) / 1048576) * 100) / 100)} MB</span>
+                        <progress value={Math.round(
+                            (
+                                (
+                                    selectedFile.size - (selectedFile.size - 1048576) * (compressionProgress / 100)
+                                ) / selectedFile.size
+                            ) * 100
+                        )} max="100" id="compression">{compressionProgress}%</progress>
                     </div>
                 }
             </div>
@@ -157,6 +190,7 @@ div.error::before {
     border-radius: 5px;
     overflow: hidden;
     border: 2px solid var(--dl-color-theme-primary2);
+    position: relative;
 }
 .compression-progress div {
     display: flex;
@@ -168,6 +202,24 @@ div.error::before {
 .compression-progress label {
     color: var(--dl-color-theme-secondary1);
 }
+.compression-progress span.target {
+    transform: translateX(-2em);
+    font-family: Inter;
+    font-size: 14px;
+    color: var(--dl-color-theme-primary1);
+    font-weight: bold;
+    border-right: 3px solid var(--dl-color-theme-primary2);
+    padding-right: 3px;
+    white-space: nowrap;
+}
+.compression-progress span.current {
+    transform: translateX(3px);
+    font-family: Inter;
+    font-size: 14px;
+    color: var(--dl-color-theme-primary1);
+    font-weight: bold;
+    white-space: nowrap;
+}
 progress {
     height: 1em;
     width: 100%;
@@ -175,6 +227,7 @@ progress {
 progress::-webkit-progress-value {
     background-color: var(--dl-color-theme-secondary2);
     border-right: 5px solid var(--dl-color-theme-primary1);
+    z-index: 5;
 }
 progress::-webkit-progress-bar {
     background-color: var(--dl-color-theme-primary2);
