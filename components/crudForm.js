@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { use, useEffect, useState } from "react";
 import ImageUpload from "./imageUpload";
+import ImageDelete from "./imageDelete";
 
 const InputField = (props) => {
     return (
@@ -379,7 +380,7 @@ const CrudForm = (props) => {
                             <img src={localData.image} alt="Cigar Image" />
                             <p>URL: {localData.image}</p>
                             <a href={localData.image} target="_blank" rel="noopener noreferrer">Open in new tab</a>
-                            
+                            <ImageDelete url={localData.image}></ImageDelete>
                             
                         </div>}
                     </div>
