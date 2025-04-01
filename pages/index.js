@@ -104,7 +104,15 @@ const Catalog = (props) => {
                 </div>
               </div>
 
-              {commits.length === 0 ? (
+
+              { commits.message ? (
+                <div>
+                  <h3>Error</h3>
+                  <p>"{commits.message}"</p>
+                </div>
+              ) :
+              
+              commits.length === 0 ? (
                 <p>Loading...</p>
               ) : (
                 commits.map((commit) => (
