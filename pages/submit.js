@@ -113,7 +113,7 @@ export const SubmitPage = (props) => {
                 </div>
             </div>
 
-            <button onClick={() => {
+            <button disabled className='commit-button' onClick={() => {
                 const branches = ['testing', 'cms'];
                 for (const branch of branches) {
                     commitToGit(localData, branch);
@@ -122,6 +122,24 @@ export const SubmitPage = (props) => {
         </Layout>
         <style jsx>
             {`
+
+.commit-button {
+    background-color: var(--dl-color-theme-secondary2);
+    color: var(--dl-color-theme-primary1);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    align-self: center;
+}
+.commit-button:enabled:hover {
+    color: var(--dl-color-theme-primary2);
+}
+.commit-button:disabled {
+    filter: opacity(75%);
+    cursor: not-allowed;
+}
 .line-new {
     background-color: rgba(0, 255, 0, 0.3);
 }
