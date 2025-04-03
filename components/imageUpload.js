@@ -6,6 +6,7 @@ export const ImageUpload = (props) => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [error, setError] = useState(null);
     const [compressionProgress, setCompressionProgress] = useState(0);
+    const [loadingDeletion, setLoadingDeletion] = useState(false);
 
     const fileName = props.fileName ?? "image";
 
@@ -15,15 +16,36 @@ export const ImageUpload = (props) => {
         setSelectedFile(event.target.files[0]);
     };
 
-    const handleDelete = () => {
-        del(props.image)
+    const handleDelete = async (url) => {
+        setLoadingDeletion(true);
+        confirm("Delete former image?")
+        if (!url) {
+            alert("No URL to delete found. Please report this")
+        }
+        
+        const response = await fetch('/api/deleteImage', {
+            method: 'DELETE',
+            body: url
+        })
+
+        const data = await response.json();
+
+        if (response.ok) {
+            console.log('Image Deleted Successfully');
+            if (props.onImageDeleteSuccess) {
+                props.onImageDeleteSuccess();
+            }
+        } else {
+            console.error("Deletion failed: ", data.message)
+        }
+        setLoadingDeletion(false);
     }
 
     const handleUpload = async () => {
         if (!selectedFile) return;
 
         if (props.image) {
-            handleDelete();
+            handleDelete(props.image);
         }
 
         let compressedImage
@@ -82,6 +104,7 @@ export const ImageUpload = (props) => {
                 <input type="file" onChange={handleFileChange} />
                 <button onClick={handleUpload}>Upload</button>
                 {error && <div className="error"><p>{error}</p></div>}
+                {loadingDeletion && <div className="loading"><p>Removing former image...</p></div>}
 
                 {
                     compressionProgress > 0 &&

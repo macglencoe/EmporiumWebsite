@@ -157,6 +157,7 @@ const CrudForm = (props) => {
     const [errors, setErrors] = useState({});
 
     const [loading, setLoading] = useState(false);
+    const [loadingDelete, setLoadingDelete] = useState(false);
     const [fileSize, setFileSize] = useState(0);
 
     const [finalFileSize, setFinalFileSize] = useState(0);
@@ -251,8 +252,35 @@ const CrudForm = (props) => {
     }
 
     const onImageUpload = (fileSizeInKb = null) => {
+        if (localData.image) {
+            handleDeleteImage(localData.image)
+        }
         setLoading(true);
         setFileSize(fileSizeInKb);
+    }
+
+    const handleDeleteImage = async (url) => {
+        setLoadingDelete(true);
+        if (!url) {
+            alert("No URL to delete found. Please report this")
+        }
+        
+        const response = await fetch('/api/deleteImage', {
+            method: 'DELETE',
+            body: url
+        })
+
+        const data = await response.json();
+
+        if (response.ok) {
+            console.log('Image Deleted Successfully');
+            if (props.onImageDeleteSuccess) {
+                props.onImageDeleteSuccess();
+            }
+        } else {
+            console.error("Deletion failed: ", data.message)
+        }
+        setLoadingDelete(false);
     }
 
      
@@ -381,6 +409,9 @@ const CrudForm = (props) => {
                             <p>Loading...</p>
                             {fileSize && <p>File size: {fileSize} KB</p>}
                             </>
+                        }
+                        {loadingDelete &&
+                            <p>Removing former image...</p>
                         }
                         { localData && localData.image && <div className="url">
                             {finalFileSize > 0 && <p>Final file size: {finalFileSize} KB</p>}
