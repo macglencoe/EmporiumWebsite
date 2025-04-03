@@ -242,6 +242,13 @@ const CrudForm = (props) => {
                 console.error(error);
             })
     }
+    const onImageDeleteSuccess = () => {
+        const { image, ...rest } = localData;
+        setLocalData(rest);
+        if (props.onSubmitSingle) {
+            props.onSubmitSingle (localData.slug, {image: null})
+        }
+    }
 
     const onImageUpload = (fileSizeInKb = null) => {
         setLoading(true);
@@ -380,7 +387,10 @@ const CrudForm = (props) => {
                             <img src={localData.image} alt="Cigar Image" />
                             <p>URL: {localData.image}</p>
                             <a href={localData.image} target="_blank" rel="noopener noreferrer">Open in new tab</a>
-                            <ImageDelete url={localData.image}></ImageDelete>
+                            <ImageDelete
+                                url={localData.image}
+                                onImageDeleteSuccess={onImageDeleteSuccess}
+                            ></ImageDelete>
                             
                         </div>}
                     </div>

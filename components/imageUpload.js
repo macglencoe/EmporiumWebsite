@@ -1,5 +1,6 @@
 import { useState } from "react";
 import browserImageCompression from "browser-image-compression";
+import { del } from "@vercel/blob";
 
 export const ImageUpload = (props) => {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -9,12 +10,21 @@ export const ImageUpload = (props) => {
     const fileName = props.fileName ?? "image";
 
 
+
     const handleFileChange = (event) => {
         setSelectedFile(event.target.files[0]);
     };
 
+    const handleDelete = () => {
+        del(props.image)
+    }
+
     const handleUpload = async () => {
         if (!selectedFile) return;
+
+        if (props.image) {
+            handleDelete();
+        }
 
         let compressedImage
 

@@ -1,13 +1,37 @@
 import { del } from "@vercel/blob";
+import { useState } from "react";
 
 export const ImageDelete = (props) => {
-    const handleDeleteImage = () => {
-        del(props.url)
+
+    const [loading, setLoading] = useState(false);
+    const handleDeleteImage = async () => {
+        setLoading(true);
+        if (!props.url) {
+            alert("No URL to delete found. Please report this")
+        }
+        
+        const response = await fetch('/api/deleteImage', {
+            method: 'DELETE',
+            body: props.url
+        })
+
+        const data = await response.json();
+
+        if (response.ok) {
+            console.log('Image Deleted Successfully');
+            if (props.onImageDeleteSuccess) {
+                props.onImageDeleteSuccess();
+            }
+        } else {
+            console.error("Deletion failed: ", data.message)
+        }
+        setLoading(false);
     }
     return (
         <>
         <div>
             <button onClick={handleDeleteImage}>Delete Image</button>
+            {loading && <p>Working on it...</p>}
             <p><b>Notice:</b> If the image was uploaded in the last 5 minutes, it will still appear as the product's image until you upload a new one</p>
         </div>
         <style jsx>

@@ -212,7 +212,13 @@ const EditCigarPage = (props) => {
 
         const index = tempData.findIndex(item => item.slug === slug);
         if (index !== -1) {
-            Object.assign(tempData[index], updates);
+            for (const key in updates) {
+                if (updates[key] === null) {
+                    delete tempData[index][key];
+                } else {
+                    tempData[index][key] = updates[key];
+                }
+            }
             localStorage.setItem('tempData_cigars', JSON.stringify(tempData));
         }
     }
