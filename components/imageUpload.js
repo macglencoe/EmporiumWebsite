@@ -1,6 +1,7 @@
 import { useState } from "react";
 import browserImageCompression from "browser-image-compression";
 import { del } from "@vercel/blob";
+import Notice from "./notice";
 
 export const ImageUpload = (props) => {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -103,8 +104,7 @@ export const ImageUpload = (props) => {
                 {selectedFile && <img src={URL.createObjectURL(selectedFile)} alt="Selected" />}
                 <input type="file" onChange={handleFileChange} />
                 <button onClick={handleUpload}>Upload</button>
-                {error && <div className="error"><p>{error}</p></div>}
-                {loadingDeletion && <div className="loading"><p>Removing former image...</p></div>}
+                {error && <Notice header="Error" type="error">{error}</Notice>}
 
                 {
                     compressionProgress > 0 &&

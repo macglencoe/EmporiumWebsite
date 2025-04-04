@@ -1,5 +1,6 @@
 import { del } from "@vercel/blob";
 import { useState } from "react";
+import Notice from "./notice";
 
 export const ImageDelete = (props) => {
 
@@ -31,7 +32,7 @@ export const ImageDelete = (props) => {
         <>
         <div>
             <button onClick={handleDeleteImage}>Delete Image</button>
-            {loading && <p>Working on it...</p>}
+            {loading && <Notice type="loading">Deleting image from server...</Notice>}
             <p><b>Notice:</b> If the image was uploaded in the last 5 minutes, it will still appear as the product's image until you upload a new one</p>
         </div>
         <style jsx>

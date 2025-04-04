@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { use, useEffect, useState } from "react";
 import ImageUpload from "./imageUpload";
 import ImageDelete from "./imageDelete";
+import Notice from "./notice";
 
 const InputField = (props) => {
     return (
@@ -405,13 +406,10 @@ const CrudForm = (props) => {
                             onImageUploadSuccess={onImageUploadSuccess}
                         ></ImageUpload>
                         {loading && 
-                            <>
-                            <p>Loading...</p>
-                            {fileSize && <p>File size: {fileSize} KB</p>}
-                            </>
+                            <Notice type="loading">Uploading {fileSize} KB...</Notice>
                         }
                         {loadingDelete &&
-                            <p>Removing former image...</p>
+                            <Notice type="loading">Deleting former image...</Notice>
                         }
                         { localData && localData.image && <div className="url">
                             {finalFileSize > 0 && <p>Final file size: {finalFileSize} KB</p>}
@@ -519,6 +517,11 @@ const CrudForm = (props) => {
 
 .image-upload-container .url img {
     max-height: 300px;
+}
+.image-upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 button:target {
