@@ -5,6 +5,23 @@ import ImageDelete from "./imageDelete";
 import Notice from "./notice";
 
 const InputField = (props) => {
+    const [options, setOptions] = useState([]);
+    const [input, setInput] = useState(props.value);
+    const [filtered, setFiltered] = useState([]);
+    const handleChange = (e) => {
+        props.onChange(e);
+        setInput(e.target.value);
+        if (options.length > 0) {setFiltered(
+            options.filter((option) =>
+                option.toLowerCase().includes(e.target.value.toLowerCase())
+            )
+        );}
+    }
+    useEffect(() => {
+        if (props.getOptions) {
+            setOptions(props.getOptions(props.name));
+        }
+    }, []);
     return (
         <>
             <div className={
@@ -12,7 +29,7 @@ const InputField = (props) => {
             }>
                 <label>{props.label}</label>
                 <div>
-                    {props.onRevert && props.original && <button onClick={(e) => {
+                    {props.onRevert && props.original && <button className="fieldRevert" onClick={(e) => {
                         props.onRevert(e);
                         if (props.setErrors) {
                             props.setErrors({ ...props.errors, [props.name]: false });
@@ -29,14 +46,64 @@ const InputField = (props) => {
                         value={props.value}
                         name={props.name}
                         onChange={(e) => {
-                            props.onChange(e);
+                            handleChange(e);
                         }}
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter") {
+                                e.preventDefault();
+                                if (filtered.length > 0) {
+                                    handleChange({ target: { value: filtered[0] } });
+                                }
+                            }
+                        }}
+                        
                     />
+                    {filtered.length > 0 && (
+                        <div className="autocomplete">
+                            <select id="autocomplete" onChange={(e) => handleChange(e)}>
+                                {filtered.map((option, i) => (
+                                    <option key={option} value={option}>
+                                        {option}
+                                    </option>
+                                ))}
+                            </select>
+                            <button className="selectTopOption" onClick={(e) => handleChange({ target: { value: filtered[0] } })}>Select (Enter)</button>
+                        </div>
+                    )}
                     {props.children}
+
                 </div>
             </div>
             <style jsx>
                 {`
+div.autocomplete {
+    grid-row: 3;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--dl-color-theme-primary2);
+    width: 100%;
+    align-items: center;
+    gap: 0.5em;
+}
+
+div.autocomplete .selectTopOption {
+    text-transform: uppercase;
+    background-color: transparent;
+    margin: 0;
+    border: none;
+    font-weight: 600;
+    font-size: 0.6em;
+    color: var(--dl-color-theme-secondary2);
+}
+
+.inputField:not(:focus-within) .autocomplete {
+    display: none;
+}
+
+
+
+
 .inputField:not(.changed) > div button, 
 .inputField:not(.changed) > div strike {
     display: none;
@@ -47,6 +114,7 @@ const InputField = (props) => {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+
 }
 
 .inputField label {
@@ -89,8 +157,9 @@ const InputField = (props) => {
     overflow: hidden;
     display: grid;
     grid-template-columns: auto 1fr;
+    position: relative;
 }
-.inputField > div button {
+.inputField > div .fieldRevert {
     background-color: var(--dl-color-theme-secondary2);
     color: var(--dl-color-theme-primary1);
     cursor: pointer;
@@ -111,7 +180,7 @@ const InputField = (props) => {
     font-family: Inter;
     padding: 0.5em;
     grid-column: 1 / -1;
-    grid-row: 3;
+    grid-row: 4;
 }
 
 div.size-tools {
@@ -164,7 +233,9 @@ const CrudForm = (props) => {
     const [finalFileSize, setFinalFileSize] = useState(0);
 
 
-    
+
+
+
     const getFinalFileSize = async (url) => {
         try {
             const response = await fetch(url);
@@ -175,6 +246,14 @@ const CrudForm = (props) => {
             console.error(error);
         }
     };
+
+    const getUniqueMetadata = (field) => {
+        let uniqueValues = [];
+        if (typeof window !== 'undefined' && props.pullTempData && props.pullAllTempData) {
+            uniqueValues = [...new Set(props.pullAllTempData().map(item => item[field]))].sort((a, b) => a.localeCompare(b));
+        }
+        return uniqueValues;
+    }
 
     useEffect(() => {
         setLocalData(props.allCigars);
@@ -200,14 +279,13 @@ const CrudForm = (props) => {
         setErrors(tempErrors);
 
 
-        if ( localData && localData.image) {
+        if (localData && localData.image) {
             getFinalFileSize(localData.image);
         }
     }, [localData]);
 
     const validateField = (key, value, field) => {
-        if (field)
-        {
+        if (field) {
             if (field.type == "number") {
                 if (!isNaN(parseInt(value))) {
                     return field.message;
@@ -232,7 +310,7 @@ const CrudForm = (props) => {
         setLoading(false);
         setLocalData({ ...localData, image: url });
         if (props.onSubmitSingle) {
-            props.onSubmitSingle( localData.slug, { image: url });
+            props.onSubmitSingle(localData.slug, { image: url });
         }
 
         // fetch final image size, after compression
@@ -248,7 +326,7 @@ const CrudForm = (props) => {
         const { image, ...rest } = localData;
         setLocalData(rest);
         if (props.onSubmitSingle) {
-            props.onSubmitSingle (localData.slug, {image: null})
+            props.onSubmitSingle(localData.slug, { image: null })
         }
     }
 
@@ -265,7 +343,7 @@ const CrudForm = (props) => {
         if (!url) {
             alert("No URL to delete found. Please report this")
         }
-        
+
         const response = await fetch('/api/deleteImage', {
             method: 'DELETE',
             body: url
@@ -284,7 +362,7 @@ const CrudForm = (props) => {
         setLoadingDelete(false);
     }
 
-     
+
 
 
 
@@ -314,6 +392,7 @@ const CrudForm = (props) => {
                                         }}
                                         setErrors={setErrors}
                                         error={errors[key]}
+                                        getOptions = {getUniqueMetadata}
                                     ></InputField>
                                 )
                             }
@@ -401,17 +480,17 @@ const CrudForm = (props) => {
                     <div className="image-upload-container">
                         <h2>Image Upload</h2>
                         <ImageUpload
-                            fileName = {localData ? localData.slug : "cigar"}
+                            fileName={localData ? localData.slug : "cigar"}
                             onImageUpload={onImageUpload}
                             onImageUploadSuccess={onImageUploadSuccess}
                         ></ImageUpload>
-                        {loading && 
+                        {loading &&
                             <Notice type="loading">Uploading {fileSize} KB...</Notice>
                         }
                         {loadingDelete &&
                             <Notice type="loading">Deleting former image...</Notice>
                         }
-                        { localData && localData.image && <div className="url">
+                        {localData && localData.image && <div className="url">
                             {finalFileSize > 0 && <p>Final file size: {finalFileSize} KB</p>}
                             <img src={localData.image} alt="Cigar Image" />
                             <p>URL: {localData.image}</p>
@@ -420,7 +499,7 @@ const CrudForm = (props) => {
                                 url={localData.image}
                                 onImageDeleteSuccess={onImageDeleteSuccess}
                             ></ImageDelete>
-                            
+
                         </div>}
                     </div>
 
