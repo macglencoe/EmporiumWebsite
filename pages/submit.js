@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Layout from '../components/layout'
 import PageTitle1 from '../components/pagetitle1';
-import { Fragment } from 'react/cjs/react.production.min';
+import { diffJson } from 'diff';
 
 
 async function commitToGit(commitData, branch) {
@@ -34,22 +34,23 @@ async function commitToGit(commitData, branch) {
 export const getStaticProps = async () => {
     const data = await import('../public/data/consolidated_cigars.json');
     return {
-      props: {
-        data: data.default
-      },
+        props: {
+            data: data.default
+        },
     };
-  };
+};
 
 
 export const SubmitPage = (props) => {
     const audioRef = useRef();
+    const [diff, setDiff] = useState([]);
 
     const play = () => {
         if (audioRef.current) {
             audioRef.current.play();
         }
     }
-    
+
     const [localData, setLocalData] = useState(props.data);
 
     useEffect(() => {
@@ -61,81 +62,119 @@ export const SubmitPage = (props) => {
             setLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
         }
     }, []);
+    useEffect(() => {
+        getDiff();
+    }, [localData]);
+
+    const getDiff = () => {
+        const tempDiff = [];
+        localData.map((cigar, index) => {
+            const originalCigar = props.data.find((originalCigar) => originalCigar.slug === cigar.slug);
+            let cigarDiff;
+
+            const newCigar = { ...cigar };
+
+
+            if (!originalCigar || JSON.stringify(originalCigar) !== JSON.stringify(newCigar)) {
+                newCigar.slug = cigar['new-slug'];
+                delete newCigar['new-slug'];
+
+                tempDiff.push([...diffJson(originalCigar, newCigar)]);
+            }
+
+        })
+        setDiff(tempDiff)
+    };
 
     return (
         <>
-        <Layout>
-            <PageTitle1>Submit Changes</PageTitle1>
-            <div>
-            <h2>Changes to be committed:</h2>
-            <b>Please inspect your changes carefully.</b>
-                <div className='pre-container'>
-                    
-                        {localData.map((cigar, index) => {
-                            const originalCigar = props.data.find((originalCigar) => originalCigar.slug === cigar.slug);
-                            if (!originalCigar || JSON.stringify(originalCigar) !== JSON.stringify(cigar)) {
-                                const originalCigarLines = originalCigar ? JSON.stringify(originalCigar, null, 2).split('\n') : [''];
-    
-                                const updatedCigar = { ...cigar };
-                                if (updatedCigar['new-slug']) {
-                                    updatedCigar['slug'] = updatedCigar['new-slug'];
-                                    delete updatedCigar['new-slug'];
-                                }
-                                const cigarLines = JSON.stringify(
-                                    updatedCigar,
-                                    null, 2
-                                ).split('\n');
-    
-                                const maxLines = Math.max(originalCigarLines.length, cigarLines.length);
+            <Layout>
+                <PageTitle1>Submit Changes</PageTitle1>
+                <div className='submit-container'>
+                    <b>Please inspect your changes carefully.</b>
+                    <div className='diff-button-container'>
+                        <label htmlFor="diff">Changes not showing up?</label>
+                        <button id='get-diff' onClick={getDiff}>Force Get Diff</button>
+                    </div>
+                    {diff &&
+                        <div className='diff-container'>
+                            {diff.map((diffObjectLines, objectIndex) => {
+                            console.log(diffObjectLines);
                                 return (
-                                    <Fragment key={cigar.slug}>
-                                        {index > 0 && 
-                                            <div style={{
-                                                width: '100%',
-                                                height: '2px',
-                                                backgroundColor: 'black',
-                                                margin: '10px 0'
-                                            }}></div>
+                                    <div className='diff-split'>
+                                        {diffObjectLines.find((diffLine) => diffLine.value.includes('Cigar Name')) &&
+                                            <div>
+                                                <h3>{diffObjectLines.find((diffLine) => diffLine.value.includes('Cigar Name')).value.match(/"Cigar Name":\s*"([^"]+)"/)[1]}</h3>
+                                            </div>
                                         }
-                                        {cigarLines.map((line, i) => {
-                                            const originalLine = originalCigarLines[i] || '';
-                                            if (originalLine !== line) {
+
+                                        {diffObjectLines.map((diffLine, i) => {
+                                            if (diffLine.removed || diffLine.added) {
                                                 return (
-                                                    <pre key={`${cigar.slug}-${i}`} className='pre-line'>
-                                                        <strike className='line-old'>{originalLine}</strike>
-                                                        <span className='line-new'>{line}</span>
-                                                    </pre>
+                                                    <pre className={diffLine.added ? 'line-new' : diffLine.removed ? 'line-old' : ''}>{diffLine.value}</pre>
                                                 )
-                                            } else if (line.startsWith('{') || line.startsWith('}') || line.includes('Cigar Name')) {
-                                                return <pre key={`${cigar.slug}-${i}`}>{line}</pre>
                                             }
                                         })}
-                                    </Fragment>
+                                    </div>
                                 )
-                            }
-                            return null;
-                        }).filter((element) => element !== null)}
-                        
-                    
+                            })}
+                        </div>
+                    }
                 </div>
-            </div>
 
-            <div
-                onMouseEnter={() => play()}
-                onTouchStart={() => play()}
-            >
-                <button disabled className='commit-button' onClick={() => {
-                    const branches = ['testing', 'cms'];
-                    for (const branch of branches) {
-                        commitToGit(localData, branch);
-                    } 
-                }} onMouseEnter={() => play()}>Commit</button>
-                <audio ref={audioRef} src="/a_a_a.mp3"></audio>
-            </div>
-        </Layout>
-        <style jsx>
-            {`
-
+                <div
+                    onMouseEnter={() => play()}
+                    onTouchStart={() => play()}
+                >
+                    <button disabled className='commit-button' onClick={() => {
+                        const branches = ['testing', 'cms'];
+                        for (const branch of branches) {
+                            commitToGit(localData, branch);
+                        }
+                    }} onMouseEnter={() => play()}>Commit</button>
+                    <audio ref={audioRef} src="/a_a_a.mp3"></audio>
+                </div>
+            </Layout>
+            <style jsx>
+                {`
+.submit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+button {
+    background-color: var(--dl-color-theme-secondary2);
+    color: var(--dl-color-theme-primary1);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+}
+button:hover {
+    color: var(--dl-color-theme-primary2);
+}
+.diff-split {
+    padding: 8px;
+    border-top: 3px dotted var(--dl-color-theme-primary1);
+}
+.diff-split:first-child {
+    border-top: none;
+}
+.diff-split h3 {
+    margin: 0.3em 0.3em 0.5em 0.3em;
+    font-family: Inter;
+}
+.diff-container {
+    background-color: var(--dl-color-theme-primary2);
+    border-radius: 5px;
+    width: 100%;
+}
+.diff-container pre {
+    white-space: pre-wrap;
+    word-break: break-all;
+}
 .commit-button {
     background-color: var(--dl-color-theme-secondary2);
     color: var(--dl-color-theme-primary1);
@@ -172,6 +211,7 @@ export const SubmitPage = (props) => {
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
+    display: none;
 }
 
 
@@ -180,7 +220,7 @@ export const SubmitPage = (props) => {
 
 
             `}
-        </style>
+            </style>
         </>
     )
 }
