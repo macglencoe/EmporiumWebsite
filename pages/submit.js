@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Layout from '../components/layout'
 import PageTitle1 from '../components/pagetitle1';
 import { Fragment } from 'react/cjs/react.production.min';
@@ -42,6 +42,13 @@ export const getStaticProps = async () => {
 
 
 export const SubmitPage = (props) => {
+    const audioRef = useRef();
+
+    const play = () => {
+        if (audioRef.current) {
+            audioRef.current.play();
+        }
+    }
     
     const [localData, setLocalData] = useState(props.data);
 
@@ -113,12 +120,18 @@ export const SubmitPage = (props) => {
                 </div>
             </div>
 
-            <button disabled className='commit-button' onClick={() => {
-                const branches = ['testing', 'cms'];
-                for (const branch of branches) {
-                    commitToGit(localData, branch);
-                }
-            }}>Commit</button>
+            <div
+                onMouseEnter={() => play()}
+                onTouchStart={() => play()}
+            >
+                <button disabled className='commit-button' onClick={() => {
+                    const branches = ['testing', 'cms'];
+                    for (const branch of branches) {
+                        commitToGit(localData, branch);
+                    } 
+                }} onMouseEnter={() => play()}>Commit</button>
+                <audio ref={audioRef} src="/a_a_a.mp3"></audio>
+            </div>
         </Layout>
         <style jsx>
             {`
