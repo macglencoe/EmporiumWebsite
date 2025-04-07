@@ -3,6 +3,7 @@ import { use, useEffect, useState } from "react";
 import ImageUpload from "./imageUpload";
 import ImageDelete from "./imageDelete";
 import Notice from "./notice";
+import MappedRange from "./mappedRange";
 
 const InputField = (props) => {
     const [options, setOptions] = useState([]);
@@ -209,16 +210,7 @@ button#remove-size:hover {
     )
 }
 
-/**
- * A reusable form component for editing cigar data.
- * @param {object} props
- * @param {object} props.allCigars - All data of all cigars
- * @param {object} props.dataFields - The fields of a cigar that can be edited
- * @param {function} props.onSubmit - Called when the user submits the form
- * @param {function} props.generateSlug - Generates a slug based on the cigar's name and brand
- * @param {function} props.isSlugUnique - Checks if a slug is already in use
- * @param {function} props.pullTempData - Pulls current cigar data from local storage
- */
+
 const CrudForm = (props) => {
 
     const router = useRouter();
@@ -296,6 +288,7 @@ const CrudForm = (props) => {
                     return field.message;
                 } else return false;
             }
+            
         }
         return false;
     }
@@ -394,6 +387,23 @@ const CrudForm = (props) => {
                                         error={errors[key]}
                                         getOptions = {getUniqueMetadata}
                                     ></InputField>
+                                )
+                            }
+                            if (props.dataFields[key]["type"] == "mapped range") {
+                                if (!props.dataFields[key]["values"]) {
+                                    console.error("Missing values for mapped range field: ", key);
+                                }
+                                return (
+                                    <MappedRange
+                                        values={props.dataFields[key]["values"]}
+                                        value={localData[key]}
+                                        onChange={(e) => {
+                                            setLocalData({ ...localData, [key]: e.target.value });
+                                        }}
+                                        label={key}
+                                        zero
+                                        originalValue={props.dataOriginal[key]}
+                                    ></MappedRange>
                                 )
                             }
                         })

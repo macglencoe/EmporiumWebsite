@@ -70,7 +70,8 @@ const EditCigarPage = (props) => {
             type: 'string'
         },
         "Strength_Profile": {
-            type: 'string'
+            type: 'mapped range',
+            values: [null, 'Mild', 'Mild-Medium', 'Medium', 'Medium-Full', 'Full']
         },
         "Sizes": {
             type: 'array',
