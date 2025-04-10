@@ -12,17 +12,22 @@ const InputField = (props) => {
     const handleChange = (e) => {
         props.onChange(e);
         setInput(e.target.value);
-        if (options.length > 0) {setFiltered(
-            options.filter((option) =>
-                option.toLowerCase().includes(e.target.value.toLowerCase())
-            )
-        );}
+
+        if (options.length > 0) {
+            setFiltered(
+                options.filter((option) =>
+                    option.toLowerCase().includes(e.target.value.toLowerCase())
+                )
+            );
+        }
     }
     useEffect(() => {
         if (props.getOptions) {
             setOptions(props.getOptions(props.name));
         }
-    }, []);
+        console.log(options);
+
+    }, [input]);
     return (
         <>
             <div className={
@@ -57,7 +62,7 @@ const InputField = (props) => {
                                 }
                             }
                         }}
-                        
+
                     />
                     {filtered.length > 0 && (
                         <div className="autocomplete">
@@ -239,10 +244,22 @@ const CrudForm = (props) => {
         }
     };
 
-    const getUniqueMetadata = (field) => {
+    const getUniqueValues = (field, flatMapKey = false, getData = props.pullAllTempData,) => {
+        console.log(field, flatMapKey);
         let uniqueValues = [];
-        if (typeof window !== 'undefined' && props.pullTempData && props.pullAllTempData) {
-            uniqueValues = [...new Set(props.pullAllTempData().map(item => item[field]))].sort((a, b) => a.localeCompare(b));
+        if (typeof window !== 'undefined' && getData) {
+            if (flatMapKey) {
+                uniqueValues = [...new Set(getData()
+                    .flatMap(item => item[field] ?
+                        item[field].map(subItem => subItem[flatMapKey].toString()) :
+                        []
+                    ))]
+                    .sort((a, b) => String(a).localeCompare(String(b)));
+            } else {
+                uniqueValues = [...new Set(getData()
+                    .map(item => item[field]))]
+                    .sort((a, b) => a.localeCompare(b));
+            }
         }
         return uniqueValues;
     }
@@ -288,7 +305,7 @@ const CrudForm = (props) => {
                     return field.message;
                 } else return false;
             }
-            
+
         }
         return false;
     }
@@ -385,7 +402,7 @@ const CrudForm = (props) => {
                                         }}
                                         setErrors={setErrors}
                                         error={errors[key]}
-                                        getOptions = {getUniqueMetadata}
+                                        getOptions={getUniqueValues}
                                     ></InputField>
                                 )
                             }
@@ -441,6 +458,10 @@ const CrudForm = (props) => {
                                                                                 let copy = [...localData[key]];
                                                                                 copy[sizeIndex][fieldKey] = props.dataOriginal[key][sizeIndex]?.[fieldKey];
                                                                                 setLocalData({ ...localData, [key]: copy });
+                                                                            }}
+                                                                            getOptions={() => {
+                                                                                console.log(key, fieldKey);
+                                                                                return getUniqueValues(key, fieldKey);
                                                                             }}
                                                                         ></InputField>
                                                                     )
