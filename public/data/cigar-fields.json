@@ -35,7 +35,7 @@
                 "type": "string"
             },
             "In_Stock": {
-                "type": "string"
+                "type": "boolean"
             },
             "Price": {
                 "type": "string"
