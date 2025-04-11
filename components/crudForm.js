@@ -5,6 +5,7 @@ import ImageDelete from "./imageDelete";
 import Notice from "./notice";
 import MappedRange from "./mappedRange";
 import { BooleanInput } from "./booleanInput";
+import { PriceInput } from "./priceInput";
 
 const InputField = (props) => {
     const [options, setOptions] = useState([]);
@@ -431,6 +432,7 @@ const CrudForm = (props) => {
                                 )
                             }
                             
+                            
                         })
                     }
                 </div>
@@ -488,6 +490,19 @@ const CrudForm = (props) => {
                                                                                         setLocalData({ ...localData, [key]: copy });
                                                                                     }}>
                                                                                 </BooleanInput>
+                                                                        )
+                                                                    }
+                                                                    if (props.dataFields[key]["fields"][fieldKey]["type"] == "price") {
+                                                                        return (
+                                                                            <PriceInput
+                                                                                label={fieldKey}
+                                                                                value={localData[key][sizeIndex][fieldKey]}
+                                                                                onChange={(e) => {
+                                                                                    let copy = [...localData[key]];
+                                                                                    copy[sizeIndex][fieldKey] = e;
+                                                                                    setLocalData({ ...localData, [key]: copy });
+                                                                                }}>
+                                                                            </PriceInput>
                                                                         )
                                                                     }
                                                                 })

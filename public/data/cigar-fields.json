@@ -47,8 +47,7 @@
                 "type": "boolean"
             },
             "Price": {
-                "type": "string",
-                "autosuggest": false
+                "type": "price"
             }
         }
     }
