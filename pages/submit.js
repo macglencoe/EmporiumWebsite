@@ -69,9 +69,8 @@ export const SubmitPage = (props) => {
     const getDiff = () => {
         const tempDiff = [];
         localData.map((cigar, index) => {
-            const originalCigar = props.data.find((originalCigar) => originalCigar.slug === cigar.slug);
-            let cigarDiff;
-
+            const originalCigar = props.data.find((originalCigar) => originalCigar.slug === cigar.slug)
+                ?? ""; // if the cigar doesn't exist in the original data, return an empty string
             const newCigar = { ...cigar };
 
 

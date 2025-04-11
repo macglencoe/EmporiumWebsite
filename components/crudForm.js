@@ -244,17 +244,24 @@ const CrudForm = (props) => {
         }
     };
 
+/**
+ * Retrieves unique values from a specified field in a data set.
+ * 
+ * @param {string} field - The field name to extract unique values from.
+ * @param {string|boolean} [flatMapKey=false] - The key to extract values from within a nested array.
+ * @param {Function} [getData=props.pullAllTempData] - A function that retrieves the data set.
+ * @returns {Array} - An array of unique values sorted in lexicographical order.
+ */
     const getUniqueValues = (field, flatMapKey = false, getData = props.pullAllTempData,) => {
         console.log(field, flatMapKey);
         let uniqueValues = [];
         if (typeof window !== 'undefined' && getData) {
             if (flatMapKey) {
                 uniqueValues = [...new Set(getData()
-                    .flatMap(item => item[field] ?
-                        item[field].map(subItem => subItem[flatMapKey].toString()) :
-                        []
-                    ))]
-                    .sort((a, b) => String(a).localeCompare(String(b)));
+                    .filter(item => item[field] && item[field].length > 0) // filter out empty arrays
+                    .flatMap(item => item[field].map(subItem => subItem[flatMapKey] ? subItem[flatMapKey].toString() : ''))
+                )]
+                .sort((a, b) => String(a).localeCompare(String(b)));
             } else {
                 uniqueValues = [...new Set(getData()
                     .map(item => item[field]))]

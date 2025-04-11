@@ -28,9 +28,9 @@ export const MappedRange = ({
                 <label htmlFor="range-input">{label}</label>
                 <div>
                     <div className="value-container">
-                        {originalValue == "" && value !== null && <span className="original-value"><strike>N/A</strike></span>}
+                        {originalValue == "" && value !== "" && <span className="original-value"><strike>N/A</strike></span>}
                         {originalValue != value && <span className="original-value"><strike>{originalValue ?? "N/A"}</strike></span>}
-                        <span>{value ?? "N/A"}</span>
+                        <span>{value !== "" ? value : "N/A"}</span>
                     </div>
                     <input list="range-datalist" id="range-input" type="range" min={min} max={max} value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
 

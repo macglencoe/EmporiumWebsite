@@ -23,7 +23,7 @@
     },
     "Strength_Profile": {
         "type": "mapped range",
-        "values": [null, "Mild", "Mild-Medium", "Medium", "Medium-Full", "Full"]
+        "values": ["", "Mild", "Mild-Medium", "Medium", "Medium-Full", "Full"]
     },
     "Sizes": {
         "type": "array",
