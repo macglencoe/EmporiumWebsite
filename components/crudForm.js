@@ -4,6 +4,7 @@ import ImageUpload from "./imageUpload";
 import ImageDelete from "./imageDelete";
 import Notice from "./notice";
 import MappedRange from "./mappedRange";
+import { BooleanInput } from "./booleanInput";
 
 const InputField = (props) => {
     const [options, setOptions] = useState([]);
@@ -25,7 +26,6 @@ const InputField = (props) => {
         if (props.getOptions) {
             setOptions(props.getOptions(props.name));
         }
-        console.log(options);
 
     }, [input]);
     return (
@@ -253,7 +253,6 @@ const CrudForm = (props) => {
  * @returns {Array} - An array of unique values sorted in lexicographical order.
  */
     const getUniqueValues = (field, flatMapKey = false, getData = props.pullAllTempData,) => {
-        console.log(field, flatMapKey);
         let uniqueValues = [];
         if (typeof window !== 'undefined' && getData) {
             if (flatMapKey) {
@@ -430,6 +429,7 @@ const CrudForm = (props) => {
                                     ></MappedRange>
                                 )
                             }
+                            
                         })
                     }
                 </div>
@@ -437,8 +437,8 @@ const CrudForm = (props) => {
                     {
                         localData &&
                         props.dataFields &&
-                        Object.keys(localData).map((key, arrayIndex) => {
-                            if (Array.isArray(localData[key])) {
+                        Object.keys(props.dataFields).map((key, arrayIndex) => {
+                            if (props.dataFields[key]["type"] == "array") {
                                 return (
                                     <>
                                         <h2>{key}</h2>
@@ -448,30 +448,46 @@ const CrudForm = (props) => {
                                                     return (
                                                         <div key={sizeIndex} className="l2 array-item">
                                                             <h3>Entry {sizeIndex + 1}</h3>
-                                                            {props.arrayFields[key] &&
-                                                                Object.keys(props.arrayFields[key]).map((fieldKey, index) => {
-                                                                    return (
-                                                                        <InputField
-                                                                            label={fieldKey}
-                                                                            name={fieldKey}
-                                                                            value={localData[key][sizeIndex][fieldKey]}
-                                                                            original={props.dataOriginal[key][sizeIndex]?.[fieldKey]}
-                                                                            onChange={(e) => {
-                                                                                let copy = [...localData[key]];
-                                                                                copy[sizeIndex][fieldKey] = e.target.value;
-                                                                                setLocalData({ ...localData, [key]: copy });
-                                                                            }}
-                                                                            onRevert={(e) => {
-                                                                                let copy = [...localData[key]];
-                                                                                copy[sizeIndex][fieldKey] = props.dataOriginal[key][sizeIndex]?.[fieldKey];
-                                                                                setLocalData({ ...localData, [key]: copy });
-                                                                            }}
-                                                                            getOptions={() => {
-                                                                                console.log(key, fieldKey);
-                                                                                return getUniqueValues(key, fieldKey);
-                                                                            }}
-                                                                        ></InputField>
-                                                                    )
+                                                            {props.dataFields[key] && props.dataFields[key]["fields"] &&
+                                                                Object.keys(props.dataFields[key]["fields"]).map((fieldKey, index) => {
+                                                                    console.log("key: ", key);
+                                                                    console.log("fieldKey: ", fieldKey, props.dataFields[key]["fields"][fieldKey]);
+                                                                    if (props.dataFields[key]["fields"][fieldKey]["type"] == "string") {
+                                                                        return (
+                                                                            <InputField
+                                                                                label={fieldKey}
+                                                                                name={fieldKey}
+                                                                                value={localData[key][sizeIndex][fieldKey]}
+                                                                                original={props.dataOriginal[key][sizeIndex]?.[fieldKey]}
+                                                                                onChange={(e) => {
+                                                                                    let copy = [...localData[key]];
+                                                                                    copy[sizeIndex][fieldKey] = e.target.value;
+                                                                                    setLocalData({ ...localData, [key]: copy });
+                                                                                }}
+                                                                                onRevert={(e) => {
+                                                                                    let copy = [...localData[key]];
+                                                                                    copy[sizeIndex][fieldKey] = props.dataOriginal[key][sizeIndex]?.[fieldKey];
+                                                                                    setLocalData({ ...localData, [key]: copy });
+                                                                                }}
+                                                                                getOptions={() => {
+                                                                                    return getUniqueValues(key, fieldKey);
+                                                                                }}
+                                                                            ></InputField>
+                                                                        )
+                                                                    }
+                                                                    if (props.dataFields[key]["fields"][fieldKey]["type"] == "boolean") {
+                                                                        return (
+                                                                                <BooleanInput
+                                                                                    label={fieldKey}
+                                                                                    value={localData[key][sizeIndex][fieldKey]}
+                                                                                    onChange={(e) => {
+                                                                                        let copy = [...localData[key]];
+                                                                                        copy[sizeIndex][fieldKey] = e;
+                                                                                        setLocalData({ ...localData, [key]: copy });
+                                                                                    }}>
+                                                                                </BooleanInput>
+                                                                        )
+                                                                    }
                                                                 })
                                                             }
                                                             <div className="array-item-tools">
