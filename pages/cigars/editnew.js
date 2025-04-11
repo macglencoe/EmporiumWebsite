@@ -4,6 +4,7 @@ import PageTitle1 from "../../components/pagetitle1";
 import { use, useEffect, useState } from "react";
 import CrudForm from "../../components/crudForm";
 import Toolbar from "../../components/toolbar";
+import cigarFields from "../../public/data/cigar-fields.json"
 
 export const getStaticProps = async () => {
     const cigarsData = await import('../../public/data/consolidated_cigars.json');
@@ -18,50 +19,7 @@ const EditNewCigarPage = (props) => {
     const [cigarLocalData, setCigarLocalData] = useState({});
     const [allCigarData, setAllCigarData] = useState(props.data);
 
-    const cigarFields = {
-        'Cigar Brand': {
-            required: true,
-            type: 'string',
-            message: 'Cigar brand is required'
-        },
-        'Cigar Name': {
-            required: true,
-            type: 'string',
-            message: 'Cigar name is required'
-        },
-        'Wrapper': {
-            type: 'string'
-        },
-        'Binder': {
-            type: 'string'
-        },
-        'Filler': {
-            type: 'string'
-        },
-        "Flavor_Profile": {
-            type: 'string'
-        },
-        "Strength_Profile": {
-            type: 'string'
-        },
-        "Sizes": {
-            type: 'array',
-            fields: {
-                "Size": {
-                    type: 'string'
-                },
-                "Barcode": {
-                    type: 'string'
-                },
-                "In_Stock": {
-                    type: 'string'
-                },
-                "Price": {
-                    type: 'string'
-                }
-            }
-        }
-    }
+    
     const sizeFields = {
         "Size": "",
         "Barcode": "",

@@ -4,6 +4,7 @@ import setLocalData from '../../../utils/setLocalData';
 import { useRouter } from 'next/router';
 import CrudForm from '../../../components/crudForm';
 import { type } from 'jquery';
+import cigarFields from '../../../public/data/cigar-fields.json'
 
 
 export const getStaticPaths = async () => {
@@ -46,51 +47,7 @@ const EditCigarPage = (props) => {
         // 'slug': "", // slug is generated from the cigar name, added afterwards
     } */
 
-    const cigarFields = {
-        'Cigar Brand': {
-            required: true,
-            type: 'string',
-            message: 'Cigar brand is required'
-        },
-        'Cigar Name': {
-            required: true,
-            type: 'string',
-            message: 'Cigar name is required'
-        },
-        'Wrapper': {
-            type: 'string'
-        },
-        'Binder': {
-            type: 'string'
-        },
-        'Filler': {
-            type: 'string'
-        },
-        "Flavor_Profile": {
-            type: 'string'
-        },
-        "Strength_Profile": {
-            type: 'mapped range',
-            values: [null, 'Mild', 'Mild-Medium', 'Medium', 'Medium-Full', 'Full']
-        },
-        "Sizes": {
-            type: 'array',
-            fields: {
-                "Size": {
-                    type: 'string'
-                },
-                "Barcode": {
-                    type: 'string'
-                },
-                "In_Stock": {
-                    type: 'string'
-                },
-                "Price": {
-                    type: 'string'
-                }
-            }
-        }
-    }
+
 
     const sizeFields = {
         "Size": "",
