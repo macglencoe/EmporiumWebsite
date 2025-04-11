@@ -2,24 +2,31 @@
     "Cigar Brand": {
         "required": true,
         "type": "string",
-        "message": "Cigar brand is required"
+        "message": "Cigar brand is required",
+        "autosuggest": true
+        
     },
     "Cigar Name": {
         "required": true,
         "type": "string",
-        "message": "Cigar name is required"
+        "message": "Cigar name is required",
+        "autosuggest": false
     },
     "Wrapper": {
-        "type": "string"
+        "type": "string",
+        "autosuggest": true
     },
     "Binder": {
-        "type": "string"
+        "type": "string",
+        "autosuggest": true
     },
     "Filler": {
-        "type": "string"
+        "type": "string",
+        "autosuggest": true
     },
     "Flavor_Profile": {
-        "type": "string"
+        "type": "string",
+        "autosuggest": false
     },
     "Strength_Profile": {
         "type": "mapped range",
@@ -29,16 +36,19 @@
         "type": "array",
         "fields": {
             "Size": {
-                "type": "string"
+                "type": "string",
+                "autosuggest": true
             },
             "Barcode": {
-                "type": "string"
+                "type": "string",
+                "autosuggest": false
             },
             "In_Stock": {
                 "type": "boolean"
             },
             "Price": {
-                "type": "string"
+                "type": "string",
+                "autosuggest": false
             }
         }
     }

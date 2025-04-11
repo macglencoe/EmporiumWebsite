@@ -64,7 +64,7 @@ const InputField = (props) => {
                         }}
 
                     />
-                    {filtered.length > 0 && (
+                    {filtered.length > 0 && props.autosuggest && (
                         <div className="autocomplete">
                             <select id="autocomplete" onChange={(e) => handleChange(e)}>
                                 {filtered.map((option, i) => (
@@ -409,6 +409,7 @@ const CrudForm = (props) => {
                                         setErrors={setErrors}
                                         error={errors[key]}
                                         getOptions={getUniqueValues}
+                                        autosuggest={props.dataFields[key]["autosuggest"]}
                                     ></InputField>
                                 )
                             }
@@ -472,6 +473,7 @@ const CrudForm = (props) => {
                                                                                 getOptions={() => {
                                                                                     return getUniqueValues(key, fieldKey);
                                                                                 }}
+                                                                                autosuggest={props.dataFields[key]["fields"][fieldKey]["autosuggest"]}
                                                                             ></InputField>
                                                                         )
                                                                     }
