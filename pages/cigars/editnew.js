@@ -112,7 +112,7 @@ const EditNewCigarPage = (props) => {
             alert('Slug already exists. Please choose a different name.');
             return;
         }
-        localData['new-slug'] = generateSlug(localData);
+        localData['slug'] = generateSlug(localData);
 
         // Load the temp data from local storage
         // If it doesn't exist, alert the user and return without saving
