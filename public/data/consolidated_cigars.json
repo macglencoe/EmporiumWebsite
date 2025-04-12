@@ -12,7 +12,7 @@
         "Size": "Toro",
         "Barcode": 7427025678329,
         "In_Stock": "TRUE",
-        "Price": "$\t16.70"
+        "Price": "16.70"
       }
     ],
     "slug": "aganorsa-anniversario-corojo"
@@ -30,7 +30,7 @@
         "Size": "Toro",
         "Barcode": 7427025678732,
         "In_Stock": "TRUE",
-        "Price": "$\t16.45"
+        "Price": "16.45"
       }
     ],
     "slug": "aganorsa-anniversario-maduro"
@@ -48,7 +48,7 @@
         "Size": "Toro",
         "Barcode": 7427025678435,
         "In_Stock": "TRUE",
-        "Price": "$\t11.65"
+        "Price": "11.65"
       }
     ],
     "slug": "aganorsa-cerberus"
@@ -66,7 +66,7 @@
         "Size": "Robusto",
         "Barcode": 7426824782381,
         "In_Stock": "TRUE",
-        "Price": "$\t7.40"
+        "Price": "7.40"
       }
     ],
     "slug": "aganorsa-jfr-connecticut"
@@ -84,7 +84,7 @@
         "Size": "Robusto",
         "Barcode": 7427025680377,
         "In_Stock": "TRUE",
-        "Price": "$\t6.60"
+        "Price": "6.60"
       }
     ],
     "slug": "aganorsa-jfr-connecticut-jr"
@@ -102,7 +102,7 @@
         "Size": "Super toro",
         "Barcode": 7426824777318,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       }
     ],
     "slug": "aganorsa-jfr-corojo"
@@ -120,7 +120,7 @@
         "Size": "Toro",
         "Barcode": 7427025678152,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       }
     ],
     "slug": "aganorsa-jfr-hombre-limbre"
@@ -138,7 +138,7 @@
         "Size": "Corona",
         "Barcode": 7426824782664,
         "In_Stock": "TRUE",
-        "Price": "$\t6.60"
+        "Price": "6.60"
       }
     ],
     "slug": "aganorsa-jfr-junior"
@@ -156,7 +156,7 @@
         "Size": "Toro",
         "Barcode": 7427025680032,
         "In_Stock": "TRUE",
-        "Price": "$\t10.60"
+        "Price": "10.60"
       }
     ],
     "slug": "aganorsa-jfr-lunactic-maduro"
@@ -174,7 +174,7 @@
         "Size": "Super toro",
         "Barcode": 7426824777356,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       }
     ],
     "slug": "aganorsa-jfr-maduro"
@@ -192,7 +192,7 @@
         "Size": "Toro",
         "Barcode": 7426824782817,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "aganorsa-jfr-xt-corojo"
@@ -210,7 +210,7 @@
         "Size": "Toro",
         "Barcode": 7426824782787,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "aganorsa-jfr-xt-maduro"
@@ -228,13 +228,13 @@
         "Size": "Robusto",
         "Barcode": 7427025680216,
         "In_Stock": "TRUE",
-        "Price": "$\t7.95"
+        "Price": "7.95"
       },
       {
         "Size": "Toro",
         "Barcode": 7427025680223,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       }
     ],
     "slug": "aganorsa-new-cuba-superior"
@@ -252,7 +252,7 @@
         "Size": "Toro",
         "Barcode": 7427025678565,
         "In_Stock": "TRUE",
-        "Price": "$\t9.80"
+        "Price": "9.80"
       }
     ],
     "slug": "aganorsa-valadacion-corojo"
@@ -270,7 +270,7 @@
         "Size": "Toro",
         "Barcode": 7427025678541,
         "In_Stock": "TRUE",
-        "Price": "$\t10.90"
+        "Price": "10.90"
       }
     ],
     "slug": "aganorsa-valadacion-maduro"
@@ -288,7 +288,7 @@
         "Size": "Toro",
         "Barcode": 7427025678480,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "aganorsa-validacaion-connecticut"
@@ -306,7 +306,7 @@
         "Size": "Toro",
         "Barcode": 7427025678497,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "aganorsa-validacion-habano"
@@ -324,7 +324,7 @@
         "Size": "Toro",
         "Barcode": 7429457791799,
         "In_Stock": "TRUE",
-        "Price": "$\t11.70"
+        "Price": "11.70"
       }
     ],
     "slug": "aj-fernandez-bella-artes"
@@ -342,7 +342,7 @@
         "Size": "Toro",
         "Barcode": 7429457990925,
         "In_Stock": "TRUE",
-        "Price": "$\t11.20"
+        "Price": "11.20"
       }
     ],
     "slug": "aj-fernandez-bella-artes-rojita"
@@ -360,7 +360,7 @@
         "Size": "Corona",
         "Barcode": 7426824785146,
         "In_Stock": "TRUE",
-        "Price": "$\t10.60"
+        "Price": "10.60"
       }
     ],
     "slug": "aj-fernandez-dias-de-gloria"
@@ -378,13 +378,13 @@
         "Size": "Robusto",
         "Barcode": 7426824785931,
         "In_Stock": "TRUE",
-        "Price": "$\t15.35"
+        "Price": "15.35"
       },
       {
         "Size": "Toro",
         "Barcode": 7426824785948,
         "In_Stock": "TRUE",
-        "Price": "$\t15.90"
+        "Price": "15.90"
       }
     ],
     "slug": "aj-fernandez-dias-de-gloria-brazil"
@@ -402,19 +402,19 @@
         "Size": "Toro",
         "Barcode": 7426824785894,
         "In_Stock": "TRUE",
-        "Price": "$\t12.75"
+        "Price": "12.75"
       },
       {
         "Size": "Robusto",
         "Barcode": 7426824785887,
         "In_Stock": "TRUE",
-        "Price": "$\t11.65"
+        "Price": "11.65"
       },
       {
         "Size": "Perfecto",
         "Barcode": 7426824785917,
         "In_Stock": "TRUE",
-        "Price": "$\t13.50"
+        "Price": "13.50"
       }
     ],
     "slug": "aj-fernandez-dorado"
@@ -432,19 +432,19 @@
         "Size": "Robusto",
         "Barcode": 7429457191124,
         "In_Stock": "TRUE",
-        "Price": "$\t9.55"
+        "Price": "9.55"
       },
       {
         "Size": "Churchill",
         "Barcode": 7429457191148,
         "In_Stock": "TRUE",
-        "Price": "$\t11.15"
+        "Price": "11.15"
       },
       {
         "Size": "Toro",
         "Barcode": 7429457191131,
         "In_Stock": "TRUE",
-        "Price": "$\t10.60"
+        "Price": "10.60"
       }
     ],
     "slug": "aj-fernandez-enclave-broadleaf"
@@ -462,19 +462,19 @@
         "Size": "Robusto",
         "Barcode": 851350001496,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       },
       {
         "Size": "Toro",
         "Barcode": 851350001465,
         "In_Stock": "TRUE",
-        "Price": "$\t9.55"
+        "Price": "9.55"
       },
       {
         "Size": "Churchill",
         "Barcode": 851350001434,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "aj-fernandez-enclave-habano"
@@ -492,7 +492,7 @@
         "Size": "Robusto",
         "Barcode": 196043037728,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "aj-fernandez-h-uppman-aj-fernandez"
@@ -510,13 +510,13 @@
         "Size": "Robusto",
         "Barcode": 7426824785320,
         "In_Stock": "TRUE",
-        "Price": "$\t7.45"
+        "Price": "7.45"
       },
       {
         "Size": "Rothschild",
         "Barcode": 7426824785313,
         "In_Stock": "TRUE",
-        "Price": "$\t6.80"
+        "Price": "6.80"
       }
     ],
     "slug": "aj-fernandez-last-call-habano"
@@ -534,7 +534,7 @@
         "Size": "Rothschild",
         "Barcode": 7426824785368,
         "In_Stock": "TRUE",
-        "Price": "$\t7.25"
+        "Price": "7.25"
       }
     ],
     "slug": "aj-fernandez-last-call-maduro"
@@ -552,25 +552,25 @@
         "Size": "Churchill",
         "Barcode": 7429457491453,
         "In_Stock": "TRUE",
-        "Price": "$\t8.25"
+        "Price": "8.25"
       },
       {
         "Size": "Toro",
         "Barcode": 7429457491477,
         "In_Stock": "TRUE",
-        "Price": "$\t8.25"
+        "Price": "8.25"
       },
       {
         "Size": "Toro",
         "Barcode": 7429457491484,
         "In_Stock": "TRUE",
-        "Price": "$\t7.95"
+        "Price": "7.95"
       },
       {
         "Size": "Corona",
         "Barcode": 7429457491460,
         "In_Stock": "TRUE",
-        "Price": "$\t6.80"
+        "Price": "6.80"
       }
     ],
     "slug": "aj-fernandez-new-world-cameroon"
@@ -588,19 +588,19 @@
         "Size": "Robusto",
         "Barcode": 851350001991,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       },
       {
         "Size": "Toro",
         "Barcode": 851350001960,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       },
       {
         "Size": "Perfecto",
         "Barcode": 851350001939,
         "In_Stock": "TRUE",
-        "Price": "$\t8.80"
+        "Price": "8.80"
       }
     ],
     "slug": "aj-fernandez-new-world-connecticut"
@@ -618,7 +618,7 @@
         "Size": "Corona",
         "Barcode": 7426824785870,
         "In_Stock": "TRUE",
-        "Price": "$\t11.15"
+        "Price": "11.15"
       }
     ],
     "slug": "aj-fernandez-new-world-dorado"
@@ -636,25 +636,25 @@
         "Size": "Robusto",
         "Barcode": 851350000994,
         "In_Stock": "TRUE",
-        "Price": "$\t8.90"
+        "Price": "8.90"
       },
       {
         "Size": "Toro",
         "Barcode": 7426824785498,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       },
       {
         "Size": "Toro",
         "Barcode": 851350000932,
         "In_Stock": "TRUE",
-        "Price": "$\t9.25"
+        "Price": "9.25"
       },
       {
         "Size": "Toro",
         "Barcode": 7426824785429,
         "In_Stock": "TRUE",
-        "Price": "$\t9.55"
+        "Price": "9.55"
       }
     ],
     "slug": "aj-fernandez-new-world-oscuro"
@@ -672,25 +672,25 @@
         "Size": "Robusto",
         "Barcode": 7429457091073,
         "In_Stock": "TRUE",
-        "Price": "$\t9.65"
+        "Price": "9.65"
       },
       {
         "Size": "Toro",
         "Barcode": 7429457091080,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       },
       {
         "Size": "Gordo",
         "Barcode": 7429457291299,
         "In_Stock": "TRUE",
-        "Price": "$\t11.15"
+        "Price": "11.15"
       },
       {
         "Size": "Corona",
         "Barcode": 7429457091066,
         "In_Stock": "TRUE",
-        "Price": "$\t9.45"
+        "Price": "9.45"
       }
     ],
     "slug": "aj-fernandez-puro-especial"
@@ -708,7 +708,7 @@
         "Size": "Robusto",
         "Barcode": 7429457891871,
         "In_Stock": "TRUE",
-        "Price": "$\t13.70"
+        "Price": "13.70"
       }
     ],
     "slug": "aj-fernandez-ramon-allones"
@@ -726,13 +726,13 @@
         "Size": "Robusto",
         "Barcode": 7429457191186,
         "In_Stock": "TRUE",
-        "Price": "$\t10.10"
+        "Price": "10.10"
       },
       {
         "Size": "Toro",
         "Barcode": 7429457191193,
         "In_Stock": "TRUE",
-        "Price": "$\t10.60"
+        "Price": "10.60"
       }
     ],
     "slug": "aj-fernandez-san-lotano-bull"
@@ -750,13 +750,13 @@
         "Size": "Robusto",
         "Barcode": 851350003902,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       },
       {
         "Size": "Toro",
         "Barcode": 851350003889,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "aj-fernandez-san-lotano-requim"
@@ -774,13 +774,13 @@
         "Size": "Robusto",
         "Barcode": 851350000048,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       },
       {
         "Size": "Toro",
         "Barcode": 851350000024,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       }
     ],
     "slug": "aj-fernandez-san-lotano-requim-connecticut"
@@ -798,13 +798,13 @@
         "Size": "Robusto",
         "Barcode": 851350003988,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       },
       {
         "Size": "Toro",
         "Barcode": 851350003964,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "aj-fernandez-san-lotano-requim-maduro"
@@ -814,7 +814,7 @@
     "Cigar Name": "Viva La Vida",
     "Wrapper": "Habano Oscuro",
     "Binder": "Nicaraguan Corojo",
-    "Filler": "Criollo ‘98",
+    "Filler": "Criollo \u201898",
     "Flavor_Profile": "Black Pepper, Leather",
     "Strength_Profile": "Full",
     "Sizes": [
@@ -822,7 +822,7 @@
         "Size": "Toro",
         "Barcode": 7429457591580,
         "In_Stock": "TRUE",
-        "Price": "$\t12.60"
+        "Price": "12.60"
       }
     ],
     "slug": "aj-fernandez-viva-la-vida"
@@ -840,13 +840,13 @@
         "Size": "Toro",
         "Barcode": 815337018457,
         "In_Stock": "TRUE",
-        "Price": "$\t12.30"
+        "Price": "12.30"
       },
       {
         "Size": "Robusto",
         "Barcode": 815337018426,
         "In_Stock": "TRUE",
-        "Price": "$\t10.60"
+        "Price": "10.60"
       }
     ],
     "slug": "alec-bradley-double-broadleaf"
@@ -864,7 +864,7 @@
         "Size": "Toro",
         "Barcode": 815337015326,
         "In_Stock": "TRUE",
-        "Price": "$\t9.75"
+        "Price": "9.75"
       }
     ],
     "slug": "alec-bradley-magic-toast"
@@ -882,7 +882,7 @@
         "Size": "Toro",
         "Barcode": 815337018822,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "alec-bradley-post-embargo"
@@ -900,7 +900,7 @@
         "Size": "Churchill",
         "Barcode": 815337010284,
         "In_Stock": "TRUE",
-        "Price": "$\t14.30"
+        "Price": "14.30"
       }
     ],
     "slug": "alec-bradley-prensado"
@@ -918,7 +918,7 @@
         "Size": "Robusto",
         "Barcode": 815337015470,
         "In_Stock": "TRUE",
-        "Price": "$\t6.40"
+        "Price": "6.40"
       }
     ],
     "slug": "alec-bradley-project-40"
@@ -936,7 +936,7 @@
         "Size": "Robusto",
         "Barcode": 815337016453,
         "In_Stock": "TRUE",
-        "Price": "$\t6.60"
+        "Price": "6.60"
       }
     ],
     "slug": "alec-bradley-project-40-maduro"
@@ -954,7 +954,7 @@
         "Size": "Robusto",
         "Barcode": 689674157052,
         "In_Stock": "TRUE",
-        "Price": "$\t13.00"
+        "Price": "13.00"
       }
     ],
     "slug": "alec-bradley-safe-keeping"
@@ -972,7 +972,7 @@
         "Size": "Toro",
         "Barcode": 815337012110,
         "In_Stock": "TRUE",
-        "Price": "$\t7.95"
+        "Price": "7.95"
       }
     ],
     "slug": "alec-bradley-american-sungrown"
@@ -990,7 +990,7 @@
         "Size": "Toro",
         "Barcode": 843182100072,
         "In_Stock": "TRUE",
-        "Price": "$\t8.20"
+        "Price": "8.20"
       }
     ],
     "slug": "arturo-fuente-8-5-8-maduro"
@@ -1008,7 +1008,7 @@
         "Size": "Toro",
         "Barcode": 843182100096,
         "In_Stock": "TRUE",
-        "Price": "$\t8.20"
+        "Price": "8.20"
       }
     ],
     "slug": "arturo-fuente-8-5-8-natural"
@@ -1026,7 +1026,7 @@
         "Size": "Toro",
         "Barcode": 843182100249,
         "In_Stock": "TRUE",
-        "Price": "$\t8.85"
+        "Price": "8.85"
       }
     ],
     "slug": "arturo-fuente-8-5-8-sungrown"
@@ -1044,7 +1044,7 @@
         "Size": "Corona",
         "Barcode": 843182102113,
         "In_Stock": "TRUE",
-        "Price": "$\t12.20"
+        "Price": "12.20"
       }
     ],
     "slug": "arturo-fuente-anejo-46"
@@ -1062,7 +1062,7 @@
         "Size": "Churchill",
         "Barcode": 843182102151,
         "In_Stock": "TRUE",
-        "Price": "$\t15.25"
+        "Price": "15.25"
       }
     ],
     "slug": "arturo-fuente-anejo-49"
@@ -1080,7 +1080,7 @@
         "Size": "Robusto",
         "Barcode": 843182102175,
         "In_Stock": "TRUE",
-        "Price": "$\t13.00"
+        "Price": "13.00"
       }
     ],
     "slug": "arturo-fuente-anejo-50"
@@ -1098,7 +1098,7 @@
         "Size": "Toro",
         "Barcode": 843182102212,
         "In_Stock": "TRUE",
-        "Price": "$\t14.75"
+        "Price": "14.75"
       }
     ],
     "slug": "arturo-fuente-anejo-60"
@@ -1116,7 +1116,7 @@
         "Size": "Lancero",
         "Barcode": 843182102236,
         "In_Stock": "TRUE",
-        "Price": "$\t13.75"
+        "Price": "13.75"
       }
     ],
     "slug": "arturo-fuente-anejo-888"
@@ -1134,7 +1134,7 @@
         "Size": "Corona",
         "Barcode": 843182100348,
         "In_Stock": "TRUE",
-        "Price": "$\t3.60"
+        "Price": "3.60"
       }
     ],
     "slug": "arturo-fuente-breva-maduro"
@@ -1152,7 +1152,7 @@
         "Size": "Corona",
         "Barcode": 843182100362,
         "In_Stock": "TRUE",
-        "Price": "$\t3.60"
+        "Price": "3.60"
       }
     ],
     "slug": "arturo-fuente-breva-natural"
@@ -1170,7 +1170,7 @@
         "Size": "Toro",
         "Barcode": 843182120100,
         "In_Stock": "TRUE",
-        "Price": "$\t10.50"
+        "Price": "10.50"
       }
     ],
     "slug": "arturo-fuente-casa-cuba-divine-inspiration"
@@ -1188,7 +1188,7 @@
         "Size": "Robusto",
         "Barcode": 843182120131,
         "In_Stock": "TRUE",
-        "Price": "$\t12.85"
+        "Price": "12.85"
       }
     ],
     "slug": "arturo-fuente-casa-cuba-doble-cinco"
@@ -1206,7 +1206,7 @@
         "Size": "Lancero",
         "Barcode": 843182120193,
         "In_Stock": "TRUE",
-        "Price": "$\t11.00"
+        "Price": "11.00"
       }
     ],
     "slug": "arturo-fuente-casa-cuba-doble-dos"
@@ -1224,7 +1224,7 @@
         "Size": "Toro",
         "Barcode": 843182100423,
         "In_Stock": "TRUE",
-        "Price": "$\t5.60"
+        "Price": "5.60"
       }
     ],
     "slug": "arturo-fuente-cazadores"
@@ -1242,7 +1242,7 @@
         "Size": "Robusto",
         "Barcode": 843182100577,
         "In_Stock": "TRUE",
-        "Price": "$\t8.00"
+        "Price": "8.00"
       }
     ],
     "slug": "arturo-fuente-chateau-fuente-maduro"
@@ -1260,7 +1260,7 @@
         "Size": "Robusto",
         "Barcode": 843182100607,
         "In_Stock": "TRUE",
-        "Price": "$\t8.00"
+        "Price": "8.00"
       }
     ],
     "slug": "arturo-fuente-chateau-fuente-natural"
@@ -1278,7 +1278,7 @@
         "Size": "Toro",
         "Barcode": 843182100621,
         "In_Stock": "TRUE",
-        "Price": "$\t10.10"
+        "Price": "10.10"
       }
     ],
     "slug": "arturo-fuente-chateau-fuente-pyramids"
@@ -1296,7 +1296,7 @@
         "Size": "Robusto",
         "Barcode": 843182100690,
         "In_Stock": "TRUE",
-        "Price": "$\t8.00"
+        "Price": "8.00"
       }
     ],
     "slug": "arturo-fuente-chateau-fuente-sungrown"
@@ -1314,7 +1314,7 @@
         "Size": "Toro Grande",
         "Barcode": 843182102328,
         "In_Stock": "TRUE",
-        "Price": "$\t11.10"
+        "Price": "11.10"
       }
     ],
     "slug": "arturo-fuente-chateau-royal-salute-maduro"
@@ -1332,7 +1332,7 @@
         "Size": "Churchill",
         "Barcode": 843182100768,
         "In_Stock": "TRUE",
-        "Price": "$\t8.60"
+        "Price": "8.60"
       }
     ],
     "slug": "arturo-fuente-churchill-maduro"
@@ -1350,7 +1350,7 @@
         "Size": "Churchill",
         "Barcode": 843182100904,
         "In_Stock": "TRUE",
-        "Price": "$\t6.25"
+        "Price": "6.25"
       }
     ],
     "slug": "arturo-fuente-conquistador"
@@ -1368,7 +1368,7 @@
         "Size": "Torpedo",
         "Barcode": 843182100485,
         "In_Stock": "TRUE",
-        "Price": "$\t9.10"
+        "Price": "9.10"
       }
     ],
     "slug": "arturo-fuente-cuban-belicoso"
@@ -1386,7 +1386,7 @@
         "Size": "Robusto",
         "Barcode": 843182101185,
         "In_Stock": "TRUE",
-        "Price": "$\t3.90"
+        "Price": "3.90"
       }
     ],
     "slug": "arturo-fuente-curly-head-natural"
@@ -1404,13 +1404,13 @@
         "Size": "Robusto",
         "Barcode": 843182121916,
         "In_Stock": "TRUE",
-        "Price": "$\t13.45"
+        "Price": "13.45"
       },
       {
         "Size": "Belicoso",
         "Barcode": 843182121305,
         "In_Stock": "TRUE",
-        "Price": "$\t14.95"
+        "Price": "14.95"
       }
     ],
     "slug": "arturo-fuente-don-carlos"
@@ -1428,7 +1428,7 @@
         "Size": "Gordito",
         "Barcode": 843182122111,
         "In_Stock": "TRUE",
-        "Price": "$\t13.65"
+        "Price": "13.65"
       }
     ],
     "slug": "arturo-fuente-don-carlos-eye-of-the-bull"
@@ -1446,7 +1446,7 @@
         "Size": "Pyramid",
         "Barcode": 843182122074,
         "In_Stock": "TRUE",
-        "Price": "$\t18.65"
+        "Price": "18.65"
       }
     ],
     "slug": "arturo-fuente-don-carlos-eye-of-the-shark"
@@ -1464,7 +1464,7 @@
         "Size": "Corona",
         "Barcode": 843182121688,
         "In_Stock": "TRUE",
-        "Price": "$\t12.25"
+        "Price": "12.25"
       }
     ],
     "slug": "arturo-fuente-don-carlos-no-3"
@@ -1482,7 +1482,7 @@
         "Size": "Robusto",
         "Barcode": 843182121824,
         "In_Stock": "FALSE",
-        "Price": "$\t20.10"
+        "Price": "20.10"
       }
     ],
     "slug": "arturo-fuente-don-carlos-personal-reserve"
@@ -1500,7 +1500,7 @@
         "Size": "Toro",
         "Barcode": 843182101307,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "arturo-fuente-double-chateau-maduro"
@@ -1518,13 +1518,13 @@
         "Size": "Toro",
         "Barcode": 843182101338,
         "In_Stock": "TRUE",
-        "Price": "$\t9.10"
+        "Price": "9.10"
       },
       {
         "Size": "Churchill",
         "Barcode": 843182101338,
         "In_Stock": "TRUE",
-        "Price": "$\t9.10"
+        "Price": "9.10"
       }
     ],
     "slug": "arturo-fuente-double-chateau-natural"
@@ -1542,7 +1542,7 @@
         "Size": "Toro",
         "Barcode": 843182101406,
         "In_Stock": "TRUE",
-        "Price": "$\t9.10"
+        "Price": "9.10"
       }
     ],
     "slug": "arturo-fuente-double-chateau-sungrown"
@@ -1560,7 +1560,7 @@
         "Size": "Toro",
         "Barcode": 843182101420,
         "In_Stock": "TRUE",
-        "Price": "$\t6.00"
+        "Price": "6.00"
       }
     ],
     "slug": "arturo-fuente-emperador"
@@ -1578,7 +1578,7 @@
         "Size": "Petite Gordo",
         "Barcode": 843182122111,
         "In_Stock": "TRUE",
-        "Price": "$\t13.75"
+        "Price": "13.75"
       }
     ],
     "slug": "arturo-fuente-eye-of-the-bull"
@@ -1596,7 +1596,7 @@
         "Size": "Corona",
         "Barcode": 843182101130,
         "In_Stock": "TRUE",
-        "Price": "$\t4.30"
+        "Price": "4.30"
       }
     ],
     "slug": "arturo-fuente-fuente-curly-head-deluxe-natural"
@@ -1614,7 +1614,7 @@
         "Size": "Corona",
         "Barcode": 843182101116,
         "In_Stock": "TRUE",
-        "Price": "$\t4.30"
+        "Price": "4.30"
       }
     ],
     "slug": "arturo-fuente-fuente-curly-head-maduro-deluxe"
@@ -1632,7 +1632,7 @@
         "Size": "Belicoso",
         "Barcode": 843182100508,
         "In_Stock": "TRUE",
-        "Price": "$\t12.00"
+        "Price": "12.00"
       }
     ],
     "slug": "arturo-fuente-fuente-king-b-sungrown"
@@ -1650,7 +1650,7 @@
         "Size": "Churchill",
         "Barcode": 843182100799,
         "In_Stock": "TRUE",
-        "Price": "$\t8.60"
+        "Price": "8.60"
       }
     ],
     "slug": "arturo-fuente-gran-reserva"
@@ -1668,7 +1668,7 @@
         "Size": "Toro Grande",
         "Barcode": 843182100409,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       }
     ],
     "slug": "arturo-fuente-gran-reserva-canones"
@@ -1686,7 +1686,7 @@
         "Size": "Corona",
         "Barcode": 843182101000,
         "In_Stock": "TRUE",
-        "Price": "$\t7.65"
+        "Price": "7.65"
       }
     ],
     "slug": "arturo-fuente-gran-reserva-cuban-corona-natural"
@@ -1704,7 +1704,7 @@
         "Size": "Rothschild",
         "Barcode": 843182102304,
         "In_Stock": "TRUE",
-        "Price": "$\t7.10"
+        "Price": "7.10"
       }
     ],
     "slug": "arturo-fuente-gran-reserva-natural"
@@ -1722,7 +1722,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122319,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       }
     ],
     "slug": "arturo-fuente-hemingway-best-seller-maduro"
@@ -1740,7 +1740,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122333,
         "In_Stock": "TRUE",
-        "Price": "$\t8.80"
+        "Price": "8.80"
       }
     ],
     "slug": "arturo-fuente-hemingway-best-seller-natural"
@@ -1758,7 +1758,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122401,
         "In_Stock": "TRUE",
-        "Price": "$\t12.35"
+        "Price": "12.35"
       }
     ],
     "slug": "arturo-fuente-hemingway-classic-natural"
@@ -1776,7 +1776,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122456,
         "In_Stock": "TRUE",
-        "Price": "$\t11.70"
+        "Price": "11.70"
       }
     ],
     "slug": "arturo-fuente-hemingway-classic-sungrown"
@@ -1794,7 +1794,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122548,
         "In_Stock": "TRUE",
-        "Price": "$\t7.90"
+        "Price": "7.90"
       }
     ],
     "slug": "arturo-fuente-hemingway-short-story-natural"
@@ -1812,7 +1812,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122630,
         "In_Stock": "TRUE",
-        "Price": "$\t10.40"
+        "Price": "10.40"
       }
     ],
     "slug": "arturo-fuente-hemingway-signature-maduro"
@@ -1830,7 +1830,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122654,
         "In_Stock": "TRUE",
-        "Price": "$\t10.40"
+        "Price": "10.40"
       }
     ],
     "slug": "arturo-fuente-hemingway-signature-natural"
@@ -1848,7 +1848,7 @@
         "Size": "Perfecto",
         "Barcode": "",
         "In_Stock": "FALSE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       }
     ],
     "slug": "arturo-fuente-hemingway-signature-sungrown"
@@ -1866,7 +1866,7 @@
         "Size": "Toro",
         "Barcode": 843182122708,
         "In_Stock": "TRUE",
-        "Price": "$\t10.85"
+        "Price": "10.85"
       }
     ],
     "slug": "arturo-fuente-hemingway-sungrown-reserva-especial"
@@ -1884,7 +1884,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122760,
         "In_Stock": "TRUE",
-        "Price": "$\t12.00"
+        "Price": "12.00"
       }
     ],
     "slug": "arturo-fuente-hemingway-work-of-art-natural"
@@ -1902,7 +1902,7 @@
         "Size": "Corona",
         "Barcode": 843182102052,
         "In_Stock": "FALSE",
-        "Price": "$\t6.45"
+        "Price": "6.45"
       }
     ],
     "slug": "arturo-fuente-petite-corona"
@@ -1920,7 +1920,7 @@
         "Size": "Torpedo",
         "Barcode": 843182100645,
         "In_Stock": "TRUE",
-        "Price": "$\t9.45"
+        "Price": "9.45"
       }
     ],
     "slug": "arturo-fuente-queen-b-sungrown"
@@ -1938,7 +1938,7 @@
         "Size": "Robusto",
         "Barcode": 843182123255,
         "In_Stock": "TRUE",
-        "Price": "$\t9.95"
+        "Price": "9.95"
       }
     ],
     "slug": "arturo-fuente-rosado-sungrown-vitola-44"
@@ -1956,7 +1956,7 @@
         "Size": "Robusto",
         "Barcode": 843182123286,
         "In_Stock": "TRUE",
-        "Price": "$\t9.25"
+        "Price": "9.25"
       }
     ],
     "slug": "arturo-fuente-rosado-sungrown-vitola-52"
@@ -1974,7 +1974,7 @@
         "Size": "Toro",
         "Barcode": 843182123316,
         "In_Stock": "TRUE",
-        "Price": "$\t11.00"
+        "Price": "11.00"
       }
     ],
     "slug": "arturo-fuente-rosado-sungrown-vitola-54"
@@ -1992,7 +1992,7 @@
         "Size": "Toro",
         "Barcode": 843182123354,
         "In_Stock": "TRUE",
-        "Price": "$\t9.90"
+        "Price": "9.90"
       }
     ],
     "slug": "arturo-fuente-rosado-sungrown-vitola-56"
@@ -2010,7 +2010,7 @@
         "Size": "Churchill",
         "Barcode": 843182102342,
         "In_Stock": "TRUE",
-        "Price": "$\t11.10"
+        "Price": "11.10"
       }
     ],
     "slug": "arturo-fuente-royal-salute-natural"
@@ -2028,7 +2028,7 @@
         "Size": "Churchill",
         "Barcode": 843182102366,
         "In_Stock": "TRUE",
-        "Price": "$\t11.60"
+        "Price": "11.60"
       }
     ],
     "slug": "arturo-fuente-royal-salute-sungrown"
@@ -2046,7 +2046,7 @@
         "Size": "Churchill",
         "Barcode": 843182100829,
         "In_Stock": "TRUE",
-        "Price": "$\t9.10"
+        "Price": "9.10"
       }
     ],
     "slug": "arturo-fuente-sellecion-dor"
@@ -2064,7 +2064,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122517,
         "In_Stock": "TRUE",
-        "Price": "$\t7.50"
+        "Price": "7.50"
       }
     ],
     "slug": "arturo-fuente-short-story-maduro"
@@ -2082,7 +2082,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122630,
         "In_Stock": "TRUE",
-        "Price": "$\t10.45"
+        "Price": "10.45"
       }
     ],
     "slug": "arturo-fuente-signature-maduro"
@@ -2100,7 +2100,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122722,
         "In_Stock": "TRUE",
-        "Price": "$\t17.75"
+        "Price": "17.75"
       }
     ],
     "slug": "arturo-fuente-untold-story-maduro"
@@ -2118,7 +2118,7 @@
         "Size": "Panatella",
         "Barcode": 843182101499,
         "In_Stock": "TRUE",
-        "Price": "$\t3.25"
+        "Price": "3.25"
       }
     ],
     "slug": "arturo-fuente-exquisitos"
@@ -2136,25 +2136,25 @@
         "Size": "Lonsdale",
         "Barcode": 819577011735,
         "In_Stock": "TRUE",
-        "Price": "$\t13.00"
+        "Price": "13.00"
       },
       {
         "Size": "Corona",
         "Barcode": 819577011797,
         "In_Stock": "TRUE",
-        "Price": "$\t12.50"
+        "Price": "12.50"
       },
       {
         "Size": "Robusto",
         "Barcode": 819577011858,
         "In_Stock": "TRUE",
-        "Price": "$\t12.65"
+        "Price": "12.65"
       },
       {
         "Size": "Toro",
         "Barcode": 819577011810,
         "In_Stock": "TRUE",
-        "Price": "$\t14.85"
+        "Price": "14.85"
       }
     ],
     "slug": "ashton-ashton"
@@ -2172,7 +2172,7 @@
         "Size": "Robusto",
         "Barcode": 819577012176,
         "In_Stock": "TRUE",
-        "Price": "$\t13.80"
+        "Price": "13.80"
       }
     ],
     "slug": "ashton-ashton-maduro-no-10"
@@ -2190,7 +2190,7 @@
         "Size": "Toro",
         "Barcode": 819577011636,
         "In_Stock": "TRUE",
-        "Price": "$\t18.35"
+        "Price": "18.35"
       }
     ],
     "slug": "ashton-cabinet"
@@ -2208,7 +2208,7 @@
         "Size": "Toro",
         "Barcode": 819577012039,
         "In_Stock": "TRUE",
-        "Price": "$\t30.00"
+        "Price": "30.00"
       }
     ],
     "slug": "ashton-esg"
@@ -2226,13 +2226,13 @@
         "Size": "Toro",
         "Barcode": 819577012411,
         "In_Stock": "TRUE",
-        "Price": "$\t18.65"
+        "Price": "18.65"
       },
       {
         "Size": "Robusto",
         "Barcode": 819577012398,
         "In_Stock": "FALSE",
-        "Price": "$\t13.65"
+        "Price": "13.65"
       }
     ],
     "slug": "ashton-symmetry"
@@ -2250,7 +2250,7 @@
         "Size": "Robusto",
         "Barcode": 819577012558,
         "In_Stock": "TRUE",
-        "Price": "$\t16.70"
+        "Price": "16.70"
       }
     ],
     "slug": "ashton-vsg"
@@ -2268,7 +2268,7 @@
         "Size": "Robusto",
         "Barcode": 819577012534,
         "In_Stock": "TRUE",
-        "Price": "$\t19.85"
+        "Price": "19.85"
       }
     ],
     "slug": "ashton-vsg-pegasus"
@@ -2286,7 +2286,7 @@
         "Size": "Toro",
         "Barcode": 819577012657,
         "In_Stock": "TRUE",
-        "Price": "$\t17.10"
+        "Price": "17.10"
       }
     ],
     "slug": "ashton-vsg-wizard"
@@ -2304,7 +2304,7 @@
         "Size": "Robusto",
         "Barcode": 7623500244434,
         "In_Stock": "TRUE",
-        "Price": "$\t10.50"
+        "Price": "10.50"
       }
     ],
     "slug": "avo-uvezian"
@@ -2322,13 +2322,13 @@
         "Size": "Robusto",
         "Barcode": 7623500445916,
         "In_Stock": "TRUE",
-        "Price": "$\t11.90"
+        "Price": "11.90"
       },
       {
         "Size": "Toro",
         "Barcode": 7623500446548,
         "In_Stock": "TRUE",
-        "Price": "$\t14.35"
+        "Price": "14.35"
       }
     ],
     "slug": "avo-uvezian-synchro"
@@ -2346,13 +2346,13 @@
         "Size": "Robusto",
         "Barcode": 7423825002067,
         "In_Stock": "TRUE",
-        "Price": "$\t6.30"
+        "Price": "6.30"
       },
       {
         "Size": "Toro",
         "Barcode": 7423825002043,
         "In_Stock": "TRUE",
-        "Price": "$\t6.50"
+        "Price": "6.50"
       }
     ],
     "slug": "baccarat-baccarat"
@@ -2370,13 +2370,13 @@
         "Size": "Robusto",
         "Barcode": 689674111344,
         "In_Stock": "TRUE",
-        "Price": "$\t6.30"
+        "Price": "6.30"
       },
       {
         "Size": "Toro",
         "Barcode": 689674111474,
         "In_Stock": "TRUE",
-        "Price": "$\t7.00"
+        "Price": "7.00"
       }
     ],
     "slug": "bolivar-cofradia"
@@ -2394,7 +2394,7 @@
         "Size": "Belicoso",
         "Barcode": 689674111443,
         "In_Stock": "TRUE",
-        "Price": "$\t7.25"
+        "Price": "7.25"
       }
     ],
     "slug": "bolivar-cofredia-fino-2"
@@ -2412,19 +2412,19 @@
         "Size": "Robusto",
         "Barcode": 689674155522,
         "In_Stock": "TRUE",
-        "Price": "$\t6.40"
+        "Price": "6.40"
       },
       {
         "Size": "Toro",
         "Barcode": 689674155461,
         "In_Stock": "TRUE",
-        "Price": "$\t8.40"
+        "Price": "8.40"
       },
       {
         "Size": "Gordo",
         "Barcode": 689674155492,
         "In_Stock": "TRUE",
-        "Price": "$\t7.75"
+        "Price": "7.75"
       }
     ],
     "slug": "bolivar-cofredia-oscuro"
@@ -2442,13 +2442,13 @@
         "Size": "Robusto",
         "Barcode": 689674146308,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       },
       {
         "Size": "Toro",
         "Barcode": 689674146339,
         "In_Stock": "TRUE",
-        "Price": "$\t8.90"
+        "Price": "8.90"
       }
     ],
     "slug": "bolivar-gran-republica"
@@ -2466,7 +2466,7 @@
         "Size": "Robusto",
         "Barcode": 860003528501,
         "In_Stock": "TRUE",
-        "Price": "$\t16.65"
+        "Price": "16.65"
       }
     ],
     "slug": "c-l-e-25th-anniversary"
@@ -2484,7 +2484,7 @@
         "Size": "Toro",
         "Barcode": 855290006405,
         "In_Stock": "TRUE",
-        "Price": "$\t8.60"
+        "Price": "8.60"
       }
     ],
     "slug": "c-l-e-asylum"
@@ -2502,13 +2502,13 @@
         "Size": "Toro",
         "Barcode": 854185004250,
         "In_Stock": "TRUE",
-        "Price": "$\t9.95"
+        "Price": "9.95"
       },
       {
         "Size": "Gordo",
         "Barcode": 855290006023,
         "In_Stock": "TRUE",
-        "Price": "$\t14.30"
+        "Price": "14.30"
       }
     ],
     "slug": "c-l-e-asylum-13"
@@ -2526,13 +2526,13 @@
         "Size": "Robusto",
         "Barcode": 855374008578,
         "In_Stock": "TRUE",
-        "Price": "$\t7.00"
+        "Price": "7.00"
       },
       {
         "Size": "Toro",
         "Barcode": 855374008592,
         "In_Stock": "TRUE",
-        "Price": "$\t7.85"
+        "Price": "7.85"
       }
     ],
     "slug": "c-l-e-asylum-insidious"
@@ -2550,7 +2550,7 @@
         "Size": "Gordo",
         "Barcode": 7426824777271,
         "In_Stock": "TRUE",
-        "Price": "$\t9.75"
+        "Price": "9.75"
       }
     ],
     "slug": "c-l-e-asylum-lunatic-maduro"
@@ -2568,7 +2568,7 @@
         "Size": "Toro",
         "Barcode": 855374008363,
         "In_Stock": "TRUE",
-        "Price": "$\t10.40"
+        "Price": "10.40"
       }
     ],
     "slug": "c-l-e-azabache"
@@ -2586,7 +2586,7 @@
         "Size": "Toro",
         "Barcode": 854185004984,
         "In_Stock": "TRUE",
-        "Price": "$\t14.90"
+        "Price": "14.90"
       }
     ],
     "slug": "c-l-e-cbt"
@@ -2604,7 +2604,7 @@
         "Size": "Toro",
         "Barcode": 854185004489,
         "In_Stock": "TRUE",
-        "Price": "$\t10.50"
+        "Price": "10.50"
       }
     ],
     "slug": "c-l-e-connecticut"
@@ -2622,7 +2622,7 @@
         "Size": "Robusto",
         "Barcode": 854185004090,
         "In_Stock": "TRUE",
-        "Price": "$\t8.80"
+        "Price": "8.80"
       }
     ],
     "slug": "c-l-e-corojo"
@@ -2640,7 +2640,7 @@
         "Size": "Toro",
         "Barcode": 855290006450,
         "In_Stock": "TRUE",
-        "Price": "$\t5.00"
+        "Price": "5.00"
       }
     ],
     "slug": "c-l-e-schizo-maduro"
@@ -2658,7 +2658,7 @@
         "Size": "Toro",
         "Barcode": 869327000304,
         "In_Stock": "FALSE",
-        "Price": "$\t16.95"
+        "Price": "16.95"
       }
     ],
     "slug": "c-l-e-the-first-20"
@@ -2676,13 +2676,13 @@
         "Size": "Toro",
         "Barcode": 7623500175226,
         "In_Stock": "TRUE",
-        "Price": "$\t10.30"
+        "Price": "10.30"
       },
       {
         "Size": "Robusto",
         "Barcode": 7623500175219,
         "In_Stock": "TRUE",
-        "Price": "$\t9.80"
+        "Price": "9.80"
       }
     ],
     "slug": "camacho-connecticut"
@@ -2700,13 +2700,13 @@
         "Size": "Toro",
         "Barcode": 7623500175394,
         "In_Stock": "TRUE",
-        "Price": "$\t9.30"
+        "Price": "9.30"
       },
       {
         "Size": "Robusto",
         "Barcode": 7623500175387,
         "In_Stock": "TRUE",
-        "Price": "$\t8.80"
+        "Price": "8.80"
       }
     ],
     "slug": "camacho-corojo"
@@ -2724,7 +2724,7 @@
         "Size": "Toro",
         "Barcode": 7623500325775,
         "In_Stock": "TRUE",
-        "Price": "$\t9.30"
+        "Price": "9.30"
       }
     ],
     "slug": "camacho-ecuador-bxp"
@@ -2742,7 +2742,7 @@
         "Size": "Toro",
         "Barcode": 7623500525229,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "camacho-factory-unleashed"
@@ -2760,13 +2760,13 @@
         "Size": "Robusto",
         "Barcode": 7623500430639,
         "In_Stock": "TRUE",
-        "Price": "$\t8.80"
+        "Price": "8.80"
       },
       {
         "Size": "Toro",
         "Barcode": 7623500430646,
         "In_Stock": "TRUE",
-        "Price": "$\t9.80"
+        "Price": "9.80"
       }
     ],
     "slug": "camacho-nicaragua"
@@ -2784,13 +2784,13 @@
         "Size": "Robusto",
         "Barcode": 7623500175493,
         "In_Stock": "TRUE",
-        "Price": "$\t12.30"
+        "Price": "12.30"
       },
       {
         "Size": "Toro",
         "Barcode": 7623500489453,
         "In_Stock": "TRUE",
-        "Price": "$\t13.15"
+        "Price": "13.15"
       }
     ],
     "slug": "camacho-triple-maduro"
@@ -2808,7 +2808,7 @@
         "Size": "Toro",
         "Barcode": 652125016116,
         "In_Stock": "TRUE",
-        "Price": "$\t10.60"
+        "Price": "10.60"
       }
     ],
     "slug": "cao-americas"
@@ -2826,13 +2826,13 @@
         "Size": "Robusto",
         "Barcode": 8720400475452,
         "In_Stock": "TRUE",
-        "Price": "$\t10.45"
+        "Price": "10.45"
       },
       {
         "Size": "Toro",
         "Barcode": 652125006810,
         "In_Stock": "TRUE",
-        "Price": "$\t10.50"
+        "Price": "10.50"
       }
     ],
     "slug": "cao-brazilia"
@@ -2850,7 +2850,7 @@
         "Size": "Toro",
         "Barcode": 689674140566,
         "In_Stock": "TRUE",
-        "Price": "$\t10.70"
+        "Price": "10.70"
       }
     ],
     "slug": "cao-bx3"
@@ -2868,7 +2868,7 @@
         "Size": "Toro",
         "Barcode": 689674154969,
         "In_Stock": "TRUE",
-        "Price": "$\t7.45"
+        "Price": "7.45"
       }
     ],
     "slug": "cao-fasa-noche"
@@ -2886,7 +2886,7 @@
         "Size": "Toro",
         "Barcode": 689674155065,
         "In_Stock": "FALSE",
-        "Price": "$\t7.45"
+        "Price": "7.45"
       }
     ],
     "slug": "cao-fasa-sol"
@@ -2904,19 +2904,19 @@
         "Size": "Corona",
         "Barcode": 689674114192,
         "In_Stock": "TRUE",
-        "Price": "$\t9.85"
+        "Price": "9.85"
       },
       {
         "Size": "Robusto",
         "Barcode": 689674062875,
         "In_Stock": "TRUE",
-        "Price": "$\t11.65"
+        "Price": "11.65"
       },
       {
         "Size": "Toro",
         "Barcode": 689674062882,
         "In_Stock": "TRUE",
-        "Price": "$\t14.30"
+        "Price": "14.30"
       }
     ],
     "slug": "cao-flathead"
@@ -2934,7 +2934,7 @@
         "Size": "8x60",
         "Barcode": 689674154228,
         "In_Stock": "TRUE",
-        "Price": "$\t13.65"
+        "Price": "13.65"
       }
     ],
     "slug": "cao-flathead-resonator"
@@ -2952,14 +2952,14 @@
         "Size": "Toro",
         "Barcode": 652125011012,
         "In_Stock": "TRUE",
-        "Price": "$\t10.45"
+        "Price": "10.45"
       }
     ],
     "slug": "cao-italia"
   },
   {
     "Cigar Brand": "CAO",
-    "Cigar Name": "L’Anniversaire Cameroon",
+    "Cigar Name": "L\u2019Anniversaire Cameroon",
     "Wrapper": "Cameroon",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
@@ -2970,7 +2970,7 @@
         "Size": "Toro",
         "Barcode": 652125004519,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       }
     ],
     "slug": "cao-l-anniversaire-cameroon"
@@ -2988,7 +2988,7 @@
         "Size": "Toro",
         "Barcode": 689674125129,
         "In_Stock": "TRUE",
-        "Price": "$\t11.60"
+        "Price": "11.60"
       }
     ],
     "slug": "cao-mortal-coil"
@@ -3006,7 +3006,7 @@
         "Size": "Toro",
         "Barcode": 652125000214,
         "In_Stock": "TRUE",
-        "Price": "$\t11.65"
+        "Price": "11.65"
       }
     ],
     "slug": "cao-mx2"
@@ -3024,13 +3024,13 @@
         "Size": "Toro",
         "Barcode": 689674133803,
         "In_Stock": "TRUE",
-        "Price": "$\t9.60"
+        "Price": "9.60"
       },
       {
         "Size": "Gigante",
         "Barcode": 689674133865,
         "In_Stock": "TRUE",
-        "Price": "$\t9.90"
+        "Price": "9.90"
       }
     ],
     "slug": "cao-pilon-anejo"
@@ -3048,7 +3048,7 @@
         "Size": "Toro",
         "Barcode": 689674069997,
         "In_Stock": "TRUE",
-        "Price": "$\t15.00"
+        "Price": "15.00"
       }
     ],
     "slug": "cao-amazon-basin"
@@ -3066,7 +3066,7 @@
         "Size": "Toro",
         "Barcode": 7426824777691,
         "In_Stock": "TRUE",
-        "Price": "$\t3.00"
+        "Price": "3.00"
       }
     ],
     "slug": "casa-fernandez-new-cuba-corojo"
@@ -3084,13 +3084,13 @@
         "Size": "Toro",
         "Barcode": 7426824777035,
         "In_Stock": "TRUE",
-        "Price": "$\t2.80"
+        "Price": "2.80"
       },
       {
         "Size": "Robusto",
         "Barcode": 7426824777707,
         "In_Stock": "TRUE",
-        "Price": "$\t2.00"
+        "Price": "2.00"
       }
     ],
     "slug": "casa-fernandez-new-cuba-maduro"
@@ -3108,7 +3108,7 @@
         "Size": "Toro",
         "Barcode": 689674090786,
         "In_Stock": "TRUE",
-        "Price": "$\t15.80"
+        "Price": "15.80"
       }
     ],
     "slug": "cohiba-blue-dot"
@@ -3126,7 +3126,7 @@
         "Size": "Toro",
         "Barcode": 689674023456,
         "In_Stock": "TRUE",
-        "Price": "$\t26.00"
+        "Price": "26.00"
       }
     ],
     "slug": "cohiba-red-dot"
@@ -3144,7 +3144,7 @@
         "Size": "Lancero",
         "Barcode": 6896741562846,
         "In_Stock": "TRUE",
-        "Price": "$\t15.90"
+        "Price": "15.90"
       }
     ],
     "slug": "cohiba-riviera"
@@ -3162,13 +3162,13 @@
         "Size": "Robusto",
         "Barcode": 814539015653,
         "In_Stock": "TRUE",
-        "Price": "$\t15.00"
+        "Price": "15.00"
       },
       {
         "Size": "Toro",
         "Barcode": 814539015660,
         "In_Stock": "TRUE",
-        "Price": "$\t15.50"
+        "Price": "15.50"
       }
     ],
     "slug": "cuba-aliados-cabinet"
@@ -3186,13 +3186,13 @@
         "Size": "Robusto",
         "Barcode": 814539015554,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       },
       {
         "Size": "Toro",
         "Barcode": 814539015561,
         "In_Stock": "TRUE",
-        "Price": "$\t11.00"
+        "Price": "11.00"
       }
     ],
     "slug": "cuba-aliados-original"
@@ -3210,7 +3210,7 @@
         "Size": "Robusto",
         "Barcode": 726754193125,
         "In_Stock": "TRUE",
-        "Price": "$\t4.25"
+        "Price": "4.25"
       }
     ],
     "slug": "curivari-buena-ventura"
@@ -3228,7 +3228,7 @@
         "Size": "Toro",
         "Barcode": 689674146469,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "diesel-disciple"
@@ -3246,7 +3246,7 @@
         "Size": "Toro",
         "Barcode": 689674107873,
         "In_Stock": "TRUE",
-        "Price": "$\t10.80"
+        "Price": "10.80"
       }
     ],
     "slug": "diesel-estelli-puro"
@@ -3264,7 +3264,7 @@
         "Size": "Robusto",
         "Barcode": 689674150794,
         "In_Stock": "TRUE",
-        "Price": "$\t7.45"
+        "Price": "7.45"
       }
     ],
     "slug": "diesel-vintage"
@@ -3282,13 +3282,13 @@
         "Size": "Toro",
         "Barcode": 689674150824,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       },
       {
         "Size": "Gigante",
         "Barcode": 689674160670,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "diesel-vintage-maduro"
@@ -3306,19 +3306,19 @@
         "Size": "Robutso",
         "Barcode": 689674154662,
         "In_Stock": "TRUE",
-        "Price": "$\t8.25"
+        "Price": "8.25"
       },
       {
         "Size": "Gigante",
         "Barcode": 689674160649,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       },
       {
         "Size": "Toro",
         "Barcode": 689674154693,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       }
     ],
     "slug": "diesel-vintage-natural"
@@ -3336,7 +3336,7 @@
         "Size": "Toro",
         "Barcode": 689674095187,
         "In_Stock": "TRUE",
-        "Price": "$\t10.60"
+        "Price": "10.60"
       }
     ],
     "slug": "diesel-whiskey-row-bourbon"
@@ -3354,7 +3354,7 @@
         "Size": "Toro",
         "Barcode": 689674099376,
         "In_Stock": "TRUE",
-        "Price": "$\t10.60"
+        "Price": "10.60"
       }
     ],
     "slug": "diesel-whiskey-row-sherry"
@@ -3372,7 +3372,7 @@
         "Size": "Perfecto",
         "Barcode": 689674154785,
         "In_Stock": "TRUE",
-        "Price": "$\t10.60"
+        "Price": "10.60"
       }
     ],
     "slug": "diesel-worthy-fool"
@@ -3390,7 +3390,7 @@
         "Size": "Corona",
         "Barcode": 876742001137,
         "In_Stock": "TRUE",
-        "Price": "$\t7.00"
+        "Price": "7.00"
       }
     ],
     "slug": "drew-estate-acid-blondie"
@@ -3408,7 +3408,7 @@
         "Size": "Gordo",
         "Barcode": 876742001199,
         "In_Stock": "TRUE",
-        "Price": "$\t13.50"
+        "Price": "13.50"
       }
     ],
     "slug": "drew-estate-acid-extra-larry"
@@ -3426,7 +3426,7 @@
         "Size": "Lonsdale",
         "Barcode": 876742001120,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       }
     ],
     "slug": "drew-estate-acid-holistic-cold-infusion"
@@ -3444,7 +3444,7 @@
         "Size": "Toro",
         "Barcode": 876742001779,
         "In_Stock": "TRUE",
-        "Price": "$\t10.50"
+        "Price": "10.50"
       }
     ],
     "slug": "drew-estate-acid-kuba-grande"
@@ -3462,7 +3462,7 @@
         "Size": "Robusto",
         "Barcode": 876742001144,
         "In_Stock": "TRUE",
-        "Price": "$\t8.75"
+        "Price": "8.75"
       }
     ],
     "slug": "drew-estate-acid-kuba-kuba"
@@ -3480,7 +3480,7 @@
         "Size": "Seniority",
         "Barcode": 876742001205,
         "In_Stock": "TRUE",
-        "Price": "$\t2.00"
+        "Price": "2.00"
       }
     ],
     "slug": "drew-estate-acid-note"
@@ -3498,7 +3498,7 @@
         "Size": "Perfecto",
         "Barcode": 876742005111,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       }
     ],
     "slug": "drew-estate-deadwood-crazy-alice"
@@ -3516,7 +3516,7 @@
         "Size": "Toro",
         "Barcode": 818578013892,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       }
     ],
     "slug": "drew-estate-deadwood-fat-bottom-betty"
@@ -3534,7 +3534,7 @@
         "Size": "Toro",
         "Barcode": 818578018521,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "drew-estate-deadwood-leather-rose"
@@ -3552,7 +3552,7 @@
         "Size": "Robusto",
         "Barcode": 876742005098,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "drew-estate-deadwood-sweet-jane"
@@ -3570,13 +3570,13 @@
         "Size": "Robusto",
         "Barcode": 818578010907,
         "In_Stock": "TRUE",
-        "Price": "$\t2.80"
+        "Price": "2.80"
       },
       {
         "Size": "Robusto",
         "Barcode": 818578010860,
         "In_Stock": "TRUE",
-        "Price": "$\t2.80"
+        "Price": "2.80"
       }
     ],
     "slug": "drew-estate-factory-smoke"
@@ -3594,7 +3594,7 @@
         "Size": "Toro",
         "Barcode": 818578010891,
         "In_Stock": "TRUE",
-        "Price": "$\t3.60"
+        "Price": "3.60"
       }
     ],
     "slug": "drew-estate-factory-smoke-maduro"
@@ -3612,7 +3612,7 @@
         "Size": "Robusto",
         "Barcode": 818578016985,
         "In_Stock": "TRUE",
-        "Price": "$\t6.00"
+        "Price": "6.00"
       }
     ],
     "slug": "drew-estate-isla-del-sol"
@@ -3630,7 +3630,7 @@
         "Size": "Robusto",
         "Barcode": 846261001048,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "drew-estate-java-latte"
@@ -3648,7 +3648,7 @@
         "Size": "Corona",
         "Barcode": 846261001147,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "drew-estate-java-maduro"
@@ -3666,14 +3666,14 @@
         "Size": "Corona",
         "Barcode": 846261006869,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "drew-estate-java-mint"
   },
   {
     "Cigar Brand": "Drew Estate",
-    "Cigar Name": "Java Mint “58”",
+    "Cigar Name": "Java Mint \u201c58\u201d",
     "Wrapper": "Brazilian Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
@@ -3684,7 +3684,7 @@
         "Size": "Toro",
         "Barcode": 846261006920,
         "In_Stock": "TRUE",
-        "Price": "$\t13.00"
+        "Price": "13.00"
       }
     ],
     "slug": "drew-estate-java-mint-58"
@@ -3702,7 +3702,7 @@
         "Size": "Toro",
         "Barcode": 876742009690,
         "In_Stock": "TRUE",
-        "Price": "$\t9.70"
+        "Price": "9.70"
       }
     ],
     "slug": "drew-estate-kentucky-fire-cured"
@@ -3720,7 +3720,7 @@
         "Size": "Toro",
         "Barcode": 818578018835,
         "In_Stock": "TRUE",
-        "Price": "$\t6.60"
+        "Price": "6.60"
       }
     ],
     "slug": "drew-estate-nica-rustica-adobe"
@@ -3738,7 +3738,7 @@
         "Size": "Toro",
         "Barcode": 876742001823,
         "In_Stock": "TRUE",
-        "Price": "$\t7.60"
+        "Price": "7.60"
       }
     ],
     "slug": "drew-estate-nica-rustica-broadleaf"
@@ -3756,19 +3756,19 @@
         "Size": "Toro",
         "Barcode": 876742000758,
         "In_Stock": "TRUE",
-        "Price": "$\t10.50"
+        "Price": "10.50"
       },
       {
         "Size": "Corona",
         "Barcode": 876742000734,
         "In_Stock": "TRUE",
-        "Price": "$\t8.00"
+        "Price": "8.00"
       },
       {
         "Size": "Robusto",
         "Barcode": 876742000741,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       },
       {
         "Size": "Belicoso",
@@ -3792,20 +3792,20 @@
         "Size": "Robusto",
         "Barcode": 876742000611,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       },
       {
         "Size": "Toro",
         "Barcode": 876742000628,
         "In_Stock": "TRUE",
-        "Price": "$\t10.50"
+        "Price": "10.50"
       }
     ],
     "slug": "drew-estate-tabak-negra"
   },
   {
     "Cigar Brand": "Drew Estate",
-    "Cigar Name": "Undercrown All Dekk’d Out",
+    "Cigar Name": "Undercrown All Dekk\u2019d Out",
     "Wrapper": "San Andres",
     "Binder": "Connecticut Broadleaf, San Andres",
     "Filler": "Nicaraguan",
@@ -3816,7 +3816,7 @@
         "Size": "Toro",
         "Barcode": 818578011096,
         "In_Stock": "TRUE",
-        "Price": "$\t13.00"
+        "Price": "13.00"
       }
     ],
     "slug": "drew-estate-undercrown-all-dekk-d-out"
@@ -3834,7 +3834,7 @@
         "Size": "Toro",
         "Barcode": 876742000215,
         "In_Stock": "TRUE",
-        "Price": "$\t10.80"
+        "Price": "10.80"
       }
     ],
     "slug": "drew-estate-undercrown-maduro"
@@ -3852,7 +3852,7 @@
         "Size": "Toro",
         "Barcode": 876742004176,
         "In_Stock": "TRUE",
-        "Price": "$\t10.80"
+        "Price": "10.80"
       }
     ],
     "slug": "drew-estate-undercrown-shade"
@@ -3870,7 +3870,7 @@
         "Size": "Corona",
         "Barcode": 19962720123,
         "In_Stock": "FALSE",
-        "Price": "$\t11.65"
+        "Price": "11.65"
       }
     ],
     "slug": "dunbarton-tobacco-and-trust-sobremesa"
@@ -3888,7 +3888,7 @@
         "Size": "Robusto",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t13.90"
+        "Price": "13.90"
       }
     ],
     "slug": "e-p-carrillo-allegiance-robusto"
@@ -3906,7 +3906,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t14.30"
+        "Price": "14.30"
       }
     ],
     "slug": "e-p-carrillo-allegiance-toro"
@@ -3924,7 +3924,7 @@
         "Size": "Toro",
         "Barcode": 811167021438,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "e-p-carrillo-dusk"
@@ -3942,7 +3942,7 @@
         "Size": "ToroGrande",
         "Barcode": 811167021155,
         "In_Stock": "TRUE",
-        "Price": "$\t13.50"
+        "Price": "13.50"
       }
     ],
     "slug": "e-p-carrillo-encore"
@@ -3960,13 +3960,13 @@
         "Size": "Robusto",
         "Barcode": 811167022909,
         "In_Stock": "TRUE",
-        "Price": "$\t9.80"
+        "Price": "9.80"
       },
       {
         "Size": "Toro",
         "Barcode": 811167022923,
         "In_Stock": "TRUE",
-        "Price": "$\t10.60"
+        "Price": "10.60"
       }
     ],
     "slug": "e-p-carrillo-honduras"
@@ -3984,13 +3984,13 @@
         "Size": "Toro",
         "Barcode": 811167020820,
         "In_Stock": "TRUE",
-        "Price": "$\t13.25"
+        "Price": "13.25"
       },
       {
         "Size": "Robusto",
         "Barcode": 811167020806,
         "In_Stock": "TRUE",
-        "Price": "$\t13.25"
+        "Price": "13.25"
       }
     ],
     "slug": "e-p-carrillo-la-historia"
@@ -4008,7 +4008,7 @@
         "Size": "Gordo",
         "Barcode": 811167020219,
         "In_Stock": "TRUE",
-        "Price": "$\t9.25"
+        "Price": "9.25"
       }
     ],
     "slug": "e-p-carrillo-new-wave-connecticut"
@@ -4026,7 +4026,7 @@
         "Size": "Robusto",
         "Barcode": 811167020189,
         "In_Stock": "TRUE",
-        "Price": "$\t8.20"
+        "Price": "8.20"
       }
     ],
     "slug": "e-p-carrillo-new-wave-connecticut-brilliantes"
@@ -4044,7 +4044,7 @@
         "Size": "Toro",
         "Barcode": 811167020165,
         "In_Stock": "TRUE",
-        "Price": "$\t9.30"
+        "Price": "9.30"
       }
     ],
     "slug": "e-p-carrillo-new-wave-connecticut-divino"
@@ -4062,7 +4062,7 @@
         "Size": "Corona",
         "Barcode": 811167020172,
         "In_Stock": "TRUE",
-        "Price": "$\t6.90"
+        "Price": "6.90"
       }
     ],
     "slug": "e-p-carrillo-new-wave-connecticut-stella"
@@ -4080,13 +4080,13 @@
         "Size": "toro",
         "Barcode": 811167021711,
         "In_Stock": "TRUE",
-        "Price": "$\t13.90"
+        "Price": "13.90"
       },
       {
         "Size": "Lonsdale",
         "Barcode": 811167022329,
         "In_Stock": "TRUE",
-        "Price": "$\t12.70"
+        "Price": "12.70"
       }
     ],
     "slug": "e-p-carrillo-pledge"
@@ -4104,7 +4104,7 @@
         "Size": "Robusto",
         "Barcode": 855374008424,
         "In_Stock": "TRUE",
-        "Price": "$\t14.30"
+        "Price": "14.30"
       }
     ],
     "slug": "eiroia-the-first-20"
@@ -4122,7 +4122,7 @@
         "Size": "Toro",
         "Barcode": 689674152033,
         "In_Stock": "TRUE",
-        "Price": "$\t6.70"
+        "Price": "6.70"
       }
     ],
     "slug": "el-rey-del-mundo-el-rey-del-mundo-shade"
@@ -4140,13 +4140,13 @@
         "Size": "Toro",
         "Barcode": 689674138563,
         "In_Stock": "TRUE",
-        "Price": "$\t7.40"
+        "Price": "7.40"
       },
       {
         "Size": "Corona Larga",
         "Barcode": 689674138488,
         "In_Stock": "TRUE",
-        "Price": "$\t5.70"
+        "Price": "5.70"
       }
     ],
     "slug": "el-rey-del-mundo-natural"
@@ -4164,13 +4164,13 @@
         "Size": "RobustoLarga",
         "Barcode": 689674124672,
         "In_Stock": "TRUE",
-        "Price": "$\t7.20"
+        "Price": "7.20"
       },
       {
         "Size": "Robusto",
         "Barcode": 689674124641,
         "In_Stock": "TRUE",
-        "Price": "$\t6.00"
+        "Price": "6.00"
       }
     ],
     "slug": "el-rey-del-mundo-oscuro"
@@ -4188,7 +4188,7 @@
         "Size": "Churchill",
         "Barcode": 689674159209,
         "In_Stock": "TRUE",
-        "Price": "$\t7.30"
+        "Price": "7.30"
       }
     ],
     "slug": "el-rey-del-mundo-churchill-shade"
@@ -4206,19 +4206,19 @@
         "Size": "Petite Corona",
         "Barcode": 856713006538,
         "In_Stock": "TRUE",
-        "Price": "$\t6.15"
+        "Price": "6.15"
       },
       {
         "Size": "Robusto",
         "Barcode": 856713003780,
         "In_Stock": "TRUE",
-        "Price": "$\t8.15"
+        "Price": "8.15"
       },
       {
         "Size": "Toro",
         "Barcode": 856713003797,
         "In_Stock": "TRUE",
-        "Price": "$\t9.25"
+        "Price": "9.25"
       }
     ],
     "slug": "esteban-carrera-12-year"
@@ -4236,13 +4236,13 @@
         "Size": "",
         "Barcode": 856713007283,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       },
       {
         "Size": "",
         "Barcode": 856713007344,
         "In_Stock": "FALSE",
-        "Price": "$\t5.85"
+        "Price": "5.85"
       }
     ],
     "slug": "esteban-carrera-cashmere"
@@ -4260,7 +4260,7 @@
         "Size": "RobustoGrande",
         "Barcode": 856713004091,
         "In_Stock": "TRUE",
-        "Price": "$\t8.60"
+        "Price": "8.60"
       }
     ],
     "slug": "esteban-carrera-chupa-cabra"
@@ -4278,7 +4278,7 @@
         "Size": "Toro",
         "Barcode": 856713007924,
         "In_Stock": "TRUE",
-        "Price": "$\t11.25"
+        "Price": "11.25"
       }
     ],
     "slug": "esteban-carrera-devils-hand"
@@ -4296,7 +4296,7 @@
         "Size": "Toro",
         "Barcode": 856713008488,
         "In_Stock": "TRUE",
-        "Price": "$\t12.25"
+        "Price": "12.25"
       }
     ],
     "slug": "esteban-carrera-devils-hand-maduro"
@@ -4314,7 +4314,7 @@
         "Size": "Toro",
         "Barcode": 856713007139,
         "In_Stock": "TRUE",
-        "Price": "$\t12.50"
+        "Price": "12.50"
       }
     ],
     "slug": "esteban-carrera-esteban-carrera-unforsaken"
@@ -4332,7 +4332,7 @@
         "Size": "Gordo",
         "Barcode": 856713004077,
         "In_Stock": "TRUE",
-        "Price": "$\t10.60"
+        "Price": "10.60"
       }
     ],
     "slug": "esteban-carrera-esteban-carrera-chupacabra"
@@ -4350,7 +4350,7 @@
         "Size": "",
         "Barcode": 856713003933,
         "In_Stock": "TRUE",
-        "Price": "$\t10.30"
+        "Price": "10.30"
       }
     ],
     "slug": "esteban-carrera-esteban-carrera-mr-brownstone"
@@ -4368,7 +4368,7 @@
         "Size": "Toro",
         "Barcode": 856713003483,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       }
     ],
     "slug": "esteban-carrera-habano"
@@ -4386,7 +4386,7 @@
         "Size": "Corona",
         "Barcode": 856713007788,
         "In_Stock": "TRUE",
-        "Price": "$\t5.50"
+        "Price": "5.50"
       }
     ],
     "slug": "esteban-carrera-hawaii-breeze"
@@ -4404,7 +4404,7 @@
         "Size": "Toro",
         "Barcode": 856713008563,
         "In_Stock": "TRUE",
-        "Price": "$\t7.45"
+        "Price": "7.45"
       }
     ],
     "slug": "esteban-carrera-soga"
@@ -4422,7 +4422,7 @@
         "Size": "Toro",
         "Barcode": 856713005319,
         "In_Stock": "TRUE",
-        "Price": "$\t10.60"
+        "Price": "10.60"
       }
     ],
     "slug": "esteban-carrera-the-covenant"
@@ -4440,7 +4440,7 @@
         "Size": "Gordo",
         "Barcode": 856713007917,
         "In_Stock": "TRUE",
-        "Price": "$\t12.90"
+        "Price": "12.90"
       }
     ],
     "slug": "esteban-carrera-the-devils-hand"
@@ -4458,7 +4458,7 @@
         "Size": "Toro",
         "Barcode": 856713003711,
         "In_Stock": "TRUE",
-        "Price": "$\t12.30"
+        "Price": "12.30"
       }
     ],
     "slug": "esteban-carrera-10-anos"
@@ -4476,7 +4476,7 @@
         "Size": "Corona",
         "Barcode": 689674139041,
         "In_Stock": "TRUE",
-        "Price": "$\t6.00"
+        "Price": "6.00"
       }
     ],
     "slug": "flvr-fist-bump"
@@ -4494,7 +4494,7 @@
         "Size": "Corona",
         "Barcode": 689674139072,
         "In_Stock": "TRUE",
-        "Price": "$\t6.00"
+        "Price": "6.00"
       }
     ],
     "slug": "flvr-ski-chalet"
@@ -4512,7 +4512,7 @@
         "Size": "Corona",
         "Barcode": 689674139010,
         "In_Stock": "TRUE",
-        "Price": "$\t6.00"
+        "Price": "6.00"
       }
     ],
     "slug": "flvr-space-ranger"
@@ -4530,7 +4530,7 @@
         "Size": "Corona",
         "Barcode": 689674139133,
         "In_Stock": "TRUE",
-        "Price": "$\t4.80"
+        "Price": "4.80"
       }
     ],
     "slug": "flvr-unicorn-tears"
@@ -4548,7 +4548,7 @@
         "Size": "Corona",
         "Barcode": 689674139102,
         "In_Stock": "TRUE",
-        "Price": "$\t6.00"
+        "Price": "6.00"
       }
     ],
     "slug": "flvr-yacht-rock"
@@ -4566,7 +4566,7 @@
         "Size": "Toro",
         "Barcode": 689674153979,
         "In_Stock": "TRUE",
-        "Price": "$\t5.75"
+        "Price": "5.75"
       }
     ],
     "slug": "forged-chillin-moose"
@@ -4584,7 +4584,7 @@
         "Size": "Toro",
         "Barcode": 689674151142,
         "In_Stock": "TRUE",
-        "Price": "$\t10.50"
+        "Price": "10.50"
       }
     ],
     "slug": "forged-johnny-tobacconaut"
@@ -4602,7 +4602,7 @@
         "Size": "toro",
         "Barcode": 689674137993,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       }
     ],
     "slug": "forged-los-statos-deluxe"
@@ -4620,7 +4620,7 @@
         "Size": "Toro",
         "Barcode": 689674157618,
         "In_Stock": "FALSE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       }
     ],
     "slug": "forged-los-statos-deluxe-connecticut"
@@ -4638,7 +4638,7 @@
         "Size": "Toro",
         "Barcode": 689674152408,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       }
     ],
     "slug": "forged-los-statos-deluxe-maduro"
@@ -4656,7 +4656,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t7.50"
+        "Price": "7.50"
       }
     ],
     "slug": "foundation-charter-oak"
@@ -4674,7 +4674,7 @@
         "Size": "Gordo",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t7.60"
+        "Price": "7.60"
       }
     ],
     "slug": "foundation-charter-oak-maduro"
@@ -4692,7 +4692,7 @@
         "Size": "Robusto",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t6.50"
+        "Price": "6.50"
       }
     ],
     "slug": "foundation-charter-oak-rothschild"
@@ -4710,7 +4710,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "foundation-django"
@@ -4728,7 +4728,7 @@
         "Size": "Churchill",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t12.45"
+        "Price": "12.45"
       }
     ],
     "slug": "foundation-el-gueguense-churchill"
@@ -4746,7 +4746,7 @@
         "Size": "Robusto",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t11.90"
+        "Price": "11.90"
       }
     ],
     "slug": "foundation-el-gueguense-robusto"
@@ -4764,7 +4764,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t13.50"
+        "Price": "13.50"
       }
     ],
     "slug": "foundation-el-gueguense-toro"
@@ -4782,7 +4782,7 @@
         "Size": "Corona",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t5.75"
+        "Price": "5.75"
       }
     ],
     "slug": "foundation-small-axe"
@@ -4800,13 +4800,13 @@
         "Size": "Toro",
         "Barcode": 810138033913,
         "In_Stock": "TRUE",
-        "Price": "$\t11.00"
+        "Price": "11.00"
       },
       {
         "Size": "Robusto",
         "Barcode": 810138033937,
         "In_Stock": "TRUE",
-        "Price": "$\t10.50"
+        "Price": "10.50"
       }
     ],
     "slug": "gran-habano-blue-in-green"
@@ -4824,13 +4824,13 @@
         "Size": "Robusto",
         "Barcode": 810141022270,
         "In_Stock": "TRUE",
-        "Price": "$\t7.60"
+        "Price": "7.60"
       },
       {
         "Size": "Toro",
         "Barcode": 810141020771,
         "In_Stock": "TRUE",
-        "Price": "$\t8.20"
+        "Price": "8.20"
       }
     ],
     "slug": "gran-habano-connecticut-1"
@@ -4848,7 +4848,7 @@
         "Size": "Robusto",
         "Barcode": 810141020924,
         "In_Stock": "TRUE",
-        "Price": "$\t8.20"
+        "Price": "8.20"
       }
     ],
     "slug": "gran-habano-corojo-5"
@@ -4866,7 +4866,7 @@
         "Size": "Robusto",
         "Barcode": 810141021952,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       }
     ],
     "slug": "gran-habano-corojo-maduro"
@@ -4884,7 +4884,7 @@
         "Size": "Toro",
         "Barcode": 810138034477,
         "In_Stock": "TRUE",
-        "Price": "$\t6.90"
+        "Price": "6.90"
       }
     ],
     "slug": "gran-habano-g-a-r-american-standard"
@@ -4902,7 +4902,7 @@
         "Size": "Toro",
         "Barcode": 810141022515,
         "In_Stock": "TRUE",
-        "Price": "$\t6.90"
+        "Price": "6.90"
       }
     ],
     "slug": "gran-habano-persian-king"
@@ -4920,7 +4920,7 @@
         "Size": "Toro",
         "Barcode": 810138034620,
         "In_Stock": "TRUE",
-        "Price": "$\t15.70"
+        "Price": "15.70"
       }
     ],
     "slug": "gran-habano-corojo-7"
@@ -4938,7 +4938,7 @@
         "Size": "Toro",
         "Barcode": 71610516366,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       }
     ],
     "slug": "h-upmann-1844-vintage-cameroon"
@@ -4956,7 +4956,7 @@
         "Size": "Churchill",
         "Barcode": 689674028604,
         "In_Stock": "TRUE",
-        "Price": "$\t11.65"
+        "Price": "11.65"
       }
     ],
     "slug": "hoyo-de-monterrey-excalibur-claro-no-1"
@@ -4974,7 +4974,7 @@
         "Size": "Toro",
         "Barcode": 689674034650,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       }
     ],
     "slug": "hoyo-de-monterrey-governor-sumatran"
@@ -4992,13 +4992,13 @@
         "Size": "Rothschild",
         "Barcode": 689674155164,
         "In_Stock": "TRUE",
-        "Price": "$\t6.35"
+        "Price": "6.35"
       },
       {
         "Size": "Toro",
         "Barcode": 689674155195,
         "In_Stock": "TRUE",
-        "Price": "$\t7.95"
+        "Price": "7.95"
       }
     ],
     "slug": "hoyo-de-monterrey-hoyo-oscuro"
@@ -5016,13 +5016,13 @@
         "Size": "Rothschild",
         "Barcode": 689674155294,
         "In_Stock": "TRUE",
-        "Price": "$\t6.35"
+        "Price": "6.35"
       },
       {
         "Size": "Toro",
         "Barcode": 689674155324,
         "In_Stock": "TRUE",
-        "Price": "$\t7.95"
+        "Price": "7.95"
       }
     ],
     "slug": "hoyo-de-monterrey-hoyo-rojo"
@@ -5040,13 +5040,13 @@
         "Size": "Double Robusto",
         "Barcode": 76622028104,
         "In_Stock": "TRUE",
-        "Price": "$\t20.95"
+        "Price": "20.95"
       },
       {
         "Size": "Double Toro",
         "Barcode": 76622028005,
         "In_Stock": "TRUE",
-        "Price": "$\t19.85"
+        "Price": "19.85"
       }
     ],
     "slug": "j-c-newman-angel-cuesta"
@@ -5064,13 +5064,13 @@
         "Size": "Robusto",
         "Barcode": 76622098312,
         "In_Stock": "TRUE",
-        "Price": "$\t19.95"
+        "Price": "19.95"
       },
       {
         "Size": "Toro",
         "Barcode": 76622098305,
         "In_Stock": "TRUE",
-        "Price": "$\t23.10"
+        "Price": "23.10"
       }
     ],
     "slug": "j-c-newman-black-diamond"
@@ -5088,13 +5088,13 @@
         "Size": "Robusto",
         "Barcode": 76622025318,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       },
       {
         "Size": "Toro",
         "Barcode": 76622025219,
         "In_Stock": "TRUE",
-        "Price": "$\t8.85"
+        "Price": "8.85"
       }
     ],
     "slug": "j-c-newman-brickhouse-double-connecticut"
@@ -5112,7 +5112,7 @@
         "Size": "Gordo",
         "Barcode": 76622025417,
         "In_Stock": "TRUE",
-        "Price": "$\t9.70"
+        "Price": "9.70"
       }
     ],
     "slug": "j-c-newman-brick-house-conn-mighty-mighty"
@@ -5130,13 +5130,13 @@
         "Size": "Robusto",
         "Barcode": 76622025356,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       },
       {
         "Size": "Toro",
         "Barcode": 76622025257,
         "In_Stock": "TRUE",
-        "Price": "$\t8.90"
+        "Price": "8.90"
       }
     ],
     "slug": "j-c-newman-brickhouse-maduro"
@@ -5154,7 +5154,7 @@
         "Size": "Churchill",
         "Barcode": 76622025455,
         "In_Stock": "TRUE",
-        "Price": "$\t9.70"
+        "Price": "9.70"
       }
     ],
     "slug": "j-c-newman-brickhouse-maduro-mighty-mighty"
@@ -5172,19 +5172,19 @@
         "Size": "Robusto",
         "Barcode": 76622025301,
         "In_Stock": "TRUE",
-        "Price": "$\t8.05"
+        "Price": "8.05"
       },
       {
         "Size": "Toro",
         "Barcode": 76622025202,
         "In_Stock": "TRUE",
-        "Price": "$\t8.45"
+        "Price": "8.45"
       },
       {
         "Size": "Churchill",
         "Barcode": 76622025400,
         "In_Stock": "TRUE",
-        "Price": "$\t8.55"
+        "Price": "8.55"
       }
     ],
     "slug": "j-c-newman-brickhouse-sungrown"
@@ -5202,7 +5202,7 @@
         "Size": "Toro",
         "Barcode": 76622025103,
         "In_Stock": "TRUE",
-        "Price": "$\t7.10"
+        "Price": "7.10"
       }
     ],
     "slug": "j-c-newman-brickhouse-sungrown-corona-larga"
@@ -5220,7 +5220,7 @@
         "Size": "Gordo",
         "Barcode": 76622025004,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       }
     ],
     "slug": "j-c-newman-brickhouse-sungrown-mighty-mighty"
@@ -5238,7 +5238,7 @@
         "Size": "Toro",
         "Barcode": 76622097209,
         "In_Stock": "TRUE",
-        "Price": "$\t9.55"
+        "Price": "9.55"
       }
     ],
     "slug": "j-c-newman-cuesta-rey-no-60"
@@ -5256,7 +5256,7 @@
         "Size": "Robusto",
         "Barcode": 76622097100,
         "In_Stock": "TRUE",
-        "Price": "$\t8.75"
+        "Price": "8.75"
       }
     ],
     "slug": "j-c-newman-cuesta-rey-no-7"
@@ -5274,7 +5274,7 @@
         "Size": "Robusto",
         "Barcode": 76622097162,
         "In_Stock": "TRUE",
-        "Price": "$\t8.30"
+        "Price": "8.30"
       }
     ],
     "slug": "j-c-newman-cuesta-rey-sungrown"
@@ -5310,7 +5310,7 @@
         "Size": "Robusto",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t19.10"
+        "Price": "19.10"
       }
     ],
     "slug": "j-c-newman-diamond-crown-3"
@@ -5328,7 +5328,7 @@
         "Size": "Robusto",
         "Barcode": 76622097414,
         "In_Stock": "TRUE",
-        "Price": "$\t16.55"
+        "Price": "16.55"
       }
     ],
     "slug": "j-c-newman-diamond-crown-4"
@@ -5346,7 +5346,7 @@
         "Size": "Robusto",
         "Barcode": 76622097421,
         "In_Stock": "TRUE",
-        "Price": "$\t15.30"
+        "Price": "15.30"
       }
     ],
     "slug": "j-c-newman-diamond-crown-5"
@@ -5364,7 +5364,7 @@
         "Size": "Robusto",
         "Barcode": 76622097551,
         "In_Stock": "TRUE",
-        "Price": "$\t15.30"
+        "Price": "15.30"
       }
     ],
     "slug": "j-c-newman-diamond-crown-maduro-5"
@@ -5382,7 +5382,7 @@
         "Size": "Toro",
         "Barcode": 76622098046,
         "In_Stock": "TRUE",
-        "Price": "$\t18.20"
+        "Price": "18.20"
       }
     ],
     "slug": "j-c-newman-diamond-crown-maximus-4"
@@ -5400,7 +5400,7 @@
         "Size": "Robusto",
         "Barcode": 76622098053,
         "In_Stock": "TRUE",
-        "Price": "$\t15.40"
+        "Price": "15.40"
       }
     ],
     "slug": "j-c-newman-diamond-crown-maximus-5"
@@ -5436,7 +5436,7 @@
         "Size": "",
         "Barcode": "",
         "In_Stock": "FALSE",
-        "Price": "$\t4.50"
+        "Price": "4.50"
       }
     ],
     "slug": "j-c-newman-don-jose-grandee"
@@ -5454,19 +5454,19 @@
         "Size": "Torpedo",
         "Barcode": 76622089105,
         "In_Stock": "TRUE",
-        "Price": "$\t8.70"
+        "Price": "8.70"
       },
       {
         "Size": "Belicoso",
         "Barcode": 76622089457,
         "In_Stock": "TRUE",
-        "Price": "$\t8.35"
+        "Price": "8.35"
       },
       {
         "Size": "Robusto",
         "Barcode": 76622089303,
         "In_Stock": "TRUE",
-        "Price": "$\t8.80"
+        "Price": "8.80"
       }
     ],
     "slug": "j-c-newman-el-baton"
@@ -5484,7 +5484,7 @@
         "Size": "Corona",
         "Barcode": 76622022010,
         "In_Stock": "TRUE",
-        "Price": "$\t7,426,824,782,381.00"
+        "Price": "7,426,824,782,381.00"
       }
     ],
     "slug": "j-c-newman-factory-49"
@@ -5502,7 +5502,7 @@
         "Size": "Corona",
         "Barcode": 76622020115,
         "In_Stock": "TRUE",
-        "Price": "$\t1.75"
+        "Price": "1.75"
       }
     ],
     "slug": "j-c-newman-factory-49-sweet"
@@ -5520,7 +5520,7 @@
         "Size": "Robusto",
         "Barcode": 76622020009,
         "In_Stock": "TRUE",
-        "Price": "$\t1.75"
+        "Price": "1.75"
       }
     ],
     "slug": "j-c-newman-factory-59"
@@ -5538,7 +5538,7 @@
         "Size": "Robusto",
         "Barcode": 76622020061,
         "In_Stock": "TRUE",
-        "Price": "$\t1.75"
+        "Price": "1.75"
       }
     ],
     "slug": "j-c-newman-factory-59-sweet"
@@ -5556,7 +5556,7 @@
         "Size": "Toro",
         "Barcode": 76622022027,
         "In_Stock": "TRUE",
-        "Price": "$\t2.10"
+        "Price": "2.10"
       }
     ],
     "slug": "j-c-newman-factory-99"
@@ -5574,7 +5574,7 @@
         "Size": "Toro",
         "Barcode": 76622022065,
         "In_Stock": "TRUE",
-        "Price": "$\t2.10"
+        "Price": "2.10"
       }
     ],
     "slug": "j-c-newman-factory-99-sweet"
@@ -5592,7 +5592,7 @@
         "Size": "Robusto",
         "Barcode": 76622026056,
         "In_Stock": "TRUE",
-        "Price": "$\t4.95"
+        "Price": "4.95"
       }
     ],
     "slug": "j-c-newman-house-handmade-maduro-5x56"
@@ -5610,7 +5610,7 @@
         "Size": "Toro",
         "Barcode": 76622026155,
         "In_Stock": "TRUE",
-        "Price": "$\t5.35"
+        "Price": "5.35"
       }
     ],
     "slug": "j-c-newman-house-handmade-maduro-6x54"
@@ -5628,7 +5628,7 @@
         "Size": "Toro",
         "Barcode": 76622026551,
         "In_Stock": "TRUE",
-        "Price": "$\t5.90"
+        "Price": "5.90"
       }
     ],
     "slug": "j-c-newman-house-handmade-maduro-6x60"
@@ -5646,7 +5646,7 @@
         "Size": "Robusto",
         "Barcode": 76622826007,
         "In_Stock": "TRUE",
-        "Price": "$\t4.95"
+        "Price": "4.95"
       }
     ],
     "slug": "j-c-newman-house-handmade-shade-5x56"
@@ -5664,7 +5664,7 @@
         "Size": "Toro",
         "Barcode": 76622026100,
         "In_Stock": "TRUE",
-        "Price": "$\t5.35"
+        "Price": "5.35"
       }
     ],
     "slug": "j-c-newman-house-handmade-shade-6x54"
@@ -5682,7 +5682,7 @@
         "Size": "Toro",
         "Barcode": 76622026506,
         "In_Stock": "TRUE",
-        "Price": "$\t5.90"
+        "Price": "5.90"
       }
     ],
     "slug": "j-c-newman-house-handmade-shade-6x60"
@@ -5700,19 +5700,19 @@
         "Size": "Robusto",
         "Barcode": 76622099807,
         "In_Stock": "TRUE",
-        "Price": "$\t15.40"
+        "Price": "15.40"
       },
       {
         "Size": "Corona",
         "Barcode": 76622099906,
         "In_Stock": "TRUE",
-        "Price": "$\t13.15"
+        "Price": "13.15"
       },
       {
         "Size": "Toro",
         "Barcode": 76622099500,
         "In_Stock": "TRUE",
-        "Price": "$\t17.35"
+        "Price": "17.35"
       }
     ],
     "slug": "j-c-newman-julius-caesar"
@@ -5730,7 +5730,7 @@
         "Size": "Toro",
         "Barcode": 76622160378,
         "In_Stock": "TRUE",
-        "Price": "$\t8.90"
+        "Price": "8.90"
       }
     ],
     "slug": "j-c-newman-la-unica-600-connecticut"
@@ -5748,7 +5748,7 @@
         "Size": "Robusto",
         "Barcode": 76622065321,
         "In_Stock": "TRUE",
-        "Price": "$\t8.90"
+        "Price": "8.90"
       }
     ],
     "slug": "j-c-newman-la-unica-600-maduro"
@@ -5766,7 +5766,7 @@
         "Size": "Robusto",
         "Barcode": 76622040335,
         "In_Stock": "TRUE",
-        "Price": "$\t8.40"
+        "Price": "8.40"
       }
     ],
     "slug": "j-c-newman-la-unica-connecticut"
@@ -5784,19 +5784,19 @@
         "Size": "Robusto",
         "Barcode": 76622013032,
         "In_Stock": "FALSE",
-        "Price": "$\t19.30"
+        "Price": "19.30"
       },
       {
         "Size": "Toro",
         "Barcode": 76622013056,
         "In_Stock": "FALSE",
-        "Price": "$\t20.95"
+        "Price": "20.95"
       },
       {
         "Size": "Double Robusto",
         "Barcode": 76622013254,
         "In_Stock": "FALSE",
-        "Price": "$\t20.95"
+        "Price": "20.95"
       }
     ],
     "slug": "j-c-newman-the-american"
@@ -5814,7 +5814,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "j-c-newman-yagua"
@@ -5832,7 +5832,7 @@
         "Size": "Robusto",
         "Barcode": "",
         "In_Stock": "FALSE",
-        "Price": "$\t9.15"
+        "Price": "9.15"
       }
     ],
     "slug": "joya-de-nicaragua-cabineta"
@@ -5850,13 +5850,13 @@
         "Size": "Toro",
         "Barcode": 682621316205,
         "In_Stock": "TRUE",
-        "Price": "$\t9.70"
+        "Price": "9.70"
       },
       {
         "Size": "Robusto",
         "Barcode": 682621316199,
         "In_Stock": "TRUE",
-        "Price": "$\t9.15"
+        "Price": "9.15"
       }
     ],
     "slug": "joya-de-nicaragua-joya-cabinetta"
@@ -5892,7 +5892,7 @@
         "Size": "Rothschild",
         "Barcode": 819577015092,
         "In_Stock": "TRUE",
-        "Price": "$\t7.45"
+        "Price": "7.45"
       }
     ],
     "slug": "la-aroma-de-cuba-connecticut"
@@ -5910,7 +5910,7 @@
         "Size": "Corona",
         "Barcode": 819577015078,
         "In_Stock": "TRUE",
-        "Price": "$\t7.30"
+        "Price": "7.30"
       }
     ],
     "slug": "la-aroma-de-cuba-connecticut-corona"
@@ -5928,7 +5928,7 @@
         "Size": "Double Gordo",
         "Barcode": 819577014835,
         "In_Stock": "TRUE",
-        "Price": "$\t10.15"
+        "Price": "10.15"
       }
     ],
     "slug": "la-aroma-de-cuba-connecticut-el-jefe"
@@ -5946,7 +5946,7 @@
         "Size": "Gordo",
         "Barcode": 819577014859,
         "In_Stock": "TRUE",
-        "Price": "$\t9.35"
+        "Price": "9.35"
       }
     ],
     "slug": "la-aroma-de-cuba-connecticut-immensa"
@@ -5964,7 +5964,7 @@
         "Size": "Toro",
         "Barcode": 819577014873,
         "In_Stock": "TRUE",
-        "Price": "$\t8.70"
+        "Price": "8.70"
       }
     ],
     "slug": "la-aroma-de-cuba-connecticut-monarch"
@@ -5982,7 +5982,7 @@
         "Size": "Robusto",
         "Barcode": 819577014897,
         "In_Stock": "TRUE",
-        "Price": "$\t8.60"
+        "Price": "8.60"
       }
     ],
     "slug": "la-aroma-de-cuba-connecticut-robusto"
@@ -6000,7 +6000,7 @@
         "Size": "Robusto",
         "Barcode": 819577010042,
         "In_Stock": "TRUE",
-        "Price": "$\t10.50"
+        "Price": "10.50"
       }
     ],
     "slug": "la-aroma-de-cuba-edition-especial-no-2"
@@ -6018,7 +6018,7 @@
         "Size": "Toro",
         "Barcode": 819577010066,
         "In_Stock": "TRUE",
-        "Price": "$\t10.70"
+        "Price": "10.70"
       }
     ],
     "slug": "la-aroma-de-cuba-edition-especial-no-3"
@@ -6036,7 +6036,7 @@
         "Size": "Gordo",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       }
     ],
     "slug": "la-aroma-de-cuba-el-jefe"
@@ -6054,13 +6054,13 @@
         "Size": "Rothschild",
         "Barcode": 819577015054,
         "In_Stock": "TRUE",
-        "Price": "$\t7.40"
+        "Price": "7.40"
       },
       {
         "Size": "Robusto",
         "Barcode": 819577010509,
         "In_Stock": "TRUE",
-        "Price": "$\t8.60"
+        "Price": "8.60"
       }
     ],
     "slug": "la-aroma-de-cuba-la-aroma-de-cuba"
@@ -6078,7 +6078,7 @@
         "Size": "Corona",
         "Barcode": 819577010387,
         "In_Stock": "TRUE",
-        "Price": "$\t7.30"
+        "Price": "7.30"
       }
     ],
     "slug": "la-aroma-de-cuba-la-aroma-de-cuba-corona"
@@ -6096,7 +6096,7 @@
         "Size": "Churchill",
         "Barcode": 819577010424,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       }
     ],
     "slug": "la-aroma-de-cuba-la-aroma-de-cuba-el-jefe"
@@ -6114,7 +6114,7 @@
         "Size": "Immensa",
         "Barcode": 819577010448,
         "In_Stock": "TRUE",
-        "Price": "$\t9.35"
+        "Price": "9.35"
       }
     ],
     "slug": "la-aroma-de-cuba-la-aroma-de-cuba-immensa"
@@ -6132,7 +6132,7 @@
         "Size": "Toro",
         "Barcode": 819577010486,
         "In_Stock": "TRUE",
-        "Price": "$\t8.90"
+        "Price": "8.90"
       }
     ],
     "slug": "la-aroma-de-cuba-la-aroma-de-cuba-monarch"
@@ -6150,13 +6150,13 @@
         "Size": "Robusto",
         "Barcode": 819577013647,
         "In_Stock": "TRUE",
-        "Price": "$\t11.45"
+        "Price": "11.45"
       },
       {
         "Size": "Corona",
         "Barcode": 819577013562,
         "In_Stock": "TRUE",
-        "Price": "$\t10.85"
+        "Price": "10.85"
       }
     ],
     "slug": "la-aroma-de-cuba-pasion"
@@ -6174,7 +6174,7 @@
         "Size": "Gordo",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t13.25"
+        "Price": "13.25"
       }
     ],
     "slug": "la-aroma-de-cuba-pasion-gordo"
@@ -6192,7 +6192,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t12.40"
+        "Price": "12.40"
       }
     ],
     "slug": "la-aroma-de-cuba-pasion-toro"
@@ -6210,7 +6210,7 @@
         "Size": "Toro",
         "Barcode": 7460644702709,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       }
     ],
     "slug": "la-flor-dominicana-cabinet-oscuro-l-300"
@@ -6228,7 +6228,7 @@
         "Size": "ToroGrande",
         "Barcode": 7460644702815,
         "In_Stock": "TRUE",
-        "Price": "$\t9.90"
+        "Price": "9.90"
       }
     ],
     "slug": "la-flor-dominicana-cabinet-oscuro-l-400"
@@ -6246,7 +6246,7 @@
         "Size": "Robusto",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t11.40"
+        "Price": "11.40"
       }
     ],
     "slug": "la-flor-dominicana-cameroon-cabinet-5"
@@ -6264,7 +6264,7 @@
         "Size": "Churchill",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t12.00"
+        "Price": "12.00"
       }
     ],
     "slug": "la-flor-dominicana-coronado-double-corona"
@@ -6282,7 +6282,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t12.00"
+        "Price": "12.00"
       }
     ],
     "slug": "la-flor-dominicana-coronado-toro"
@@ -6300,7 +6300,7 @@
         "Size": "Toro",
         "Barcode": 7460644702310,
         "In_Stock": "TRUE",
-        "Price": "$\t11.35"
+        "Price": "11.35"
       }
     ],
     "slug": "la-flor-dominicana-dl-chisel-maduro"
@@ -6318,7 +6318,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t11.85"
+        "Price": "11.85"
       }
     ],
     "slug": "la-flor-dominicana-dl-chisel-natueo"
@@ -6336,7 +6336,7 @@
         "Size": "Corona",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t9.85"
+        "Price": "9.85"
       }
     ],
     "slug": "la-flor-dominicana-dl-chiselito-maduro"
@@ -6354,7 +6354,7 @@
         "Size": "Toro",
         "Barcode": 7460644702440,
         "In_Stock": "TRUE",
-        "Price": "$\t9.85"
+        "Price": "9.85"
       }
     ],
     "slug": "la-flor-dominicana-dl-600-maduro"
@@ -6372,7 +6372,7 @@
         "Size": "Toro",
         "Barcode": 7460644702297,
         "In_Stock": "TRUE",
-        "Price": "$\t9.45"
+        "Price": "9.45"
       }
     ],
     "slug": "la-flor-dominicana-dl-600-natural"
@@ -6390,7 +6390,7 @@
         "Size": "Robusto",
         "Barcode": 7460644702464,
         "In_Stock": "TRUE",
-        "Price": "$\t10.80"
+        "Price": "10.80"
       }
     ],
     "slug": "la-flor-dominicana-double-ligero-dl-654"
@@ -6408,7 +6408,7 @@
         "Size": "Toro",
         "Barcode": 7460644702303,
         "In_Stock": "TRUE",
-        "Price": "$\t11.90"
+        "Price": "11.90"
       }
     ],
     "slug": "la-flor-dominicana-double-ligero-dl-700"
@@ -6426,7 +6426,7 @@
         "Size": "Churchill",
         "Barcode": 7460644702372,
         "In_Stock": "TRUE",
-        "Price": "$\t12.30"
+        "Price": "12.30"
       }
     ],
     "slug": "la-flor-dominicana-especiales-oscuro-natural"
@@ -6444,7 +6444,7 @@
         "Size": "Toro",
         "Barcode": 7460644702716,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       }
     ],
     "slug": "la-flor-dominicana-l-400"
@@ -6462,7 +6462,7 @@
         "Size": "ToroGrande",
         "Barcode": 7460644702822,
         "In_Stock": "TRUE",
-        "Price": "$\t10.80"
+        "Price": "10.80"
       }
     ],
     "slug": "la-flor-dominicana-l-500"
@@ -6480,7 +6480,7 @@
         "Size": "Robusto",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t8.05"
+        "Price": "8.05"
       }
     ],
     "slug": "la-flor-dominicana-maceo-suave-natural-robusto"
@@ -6498,7 +6498,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t11.35"
+        "Price": "11.35"
       }
     ],
     "slug": "la-flor-dominicana-maceo-suave-natural-toro"
@@ -6516,7 +6516,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t11.60"
+        "Price": "11.60"
       }
     ],
     "slug": "la-flor-dominicana-reserva-especial"
@@ -6534,7 +6534,7 @@
         "Size": "Gordo",
         "Barcode": 7460644702396,
         "In_Stock": "TRUE",
-        "Price": "$\t10.15"
+        "Price": "10.15"
       }
     ],
     "slug": "la-flor-dominicana-dl-700-maduro"
@@ -6552,7 +6552,7 @@
         "Size": "Figurado",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t19.95"
+        "Price": "19.95"
       }
     ],
     "slug": "la-flor-dominicana-andalusian-bull"
@@ -6570,7 +6570,7 @@
         "Size": "Toro",
         "Barcode": 689674139768,
         "In_Stock": "TRUE",
-        "Price": "$\t11.10"
+        "Price": "11.10"
       }
     ],
     "slug": "la-gloria-cubana-corona-de-oro"
@@ -6588,7 +6588,7 @@
         "Size": "Gigante",
         "Barcode": 689674156239,
         "In_Stock": "TRUE",
-        "Price": "$\t15.90"
+        "Price": "15.90"
       }
     ],
     "slug": "la-gloria-cubana-gran-legado"
@@ -6606,13 +6606,13 @@
         "Size": "Churchill Grande",
         "Barcode": 689674046691,
         "In_Stock": "TRUE",
-        "Price": "$\t13.25"
+        "Price": "13.25"
       },
       {
         "Size": "ToroGrande",
         "Barcode": 689674046684,
         "In_Stock": "TRUE",
-        "Price": "$\t12.40"
+        "Price": "12.40"
       }
     ],
     "slug": "la-gloria-cubana-serie-r"
@@ -6630,7 +6630,7 @@
         "Size": "Gordo",
         "Barcode": 689674046707,
         "In_Stock": "TRUE",
-        "Price": "$\t12.40"
+        "Price": "12.40"
       }
     ],
     "slug": "la-gloria-cubana-serie-r-maduro"
@@ -6648,13 +6648,13 @@
         "Size": "Toro",
         "Barcode": 689674098515,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       },
       {
         "Size": "Robusto",
         "Barcode": 689674098393,
         "In_Stock": "TRUE",
-        "Price": "$\t9.30"
+        "Price": "9.30"
       }
     ],
     "slug": "la-gloria-cubana-serie-r-spanish-press"
@@ -6672,19 +6672,19 @@
         "Size": "Gordo",
         "Barcode": 689674140191,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       },
       {
         "Size": "Robusto",
         "Barcode": 689674140122,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       },
       {
         "Size": "Gigante",
         "Barcode": 689674149248,
         "In_Stock": "FALSE",
-        "Price": "$\t9.05"
+        "Price": "9.05"
       }
     ],
     "slug": "la-gloria-cubana-serie-s"
@@ -6702,19 +6702,19 @@
         "Size": "Gordo",
         "Barcode": 817094024191,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       },
       {
         "Size": "Robusto",
         "Barcode": 817094021879,
         "In_Stock": "TRUE",
-        "Price": "$\t7.50"
+        "Price": "7.50"
       },
       {
         "Size": "Toro",
         "Barcode": 817094021886,
         "In_Stock": "TRUE",
-        "Price": "$\t8.00"
+        "Price": "8.00"
       }
     ],
     "slug": "la-palina-connecticut"
@@ -6732,19 +6732,19 @@
         "Size": "Gordo",
         "Barcode": 817094021848,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       },
       {
         "Size": "Robusto",
         "Barcode": 817094021794,
         "In_Stock": "TRUE",
-        "Price": "$\t7.50"
+        "Price": "7.50"
       },
       {
         "Size": "Toro",
         "Barcode": 817094021800,
         "In_Stock": "TRUE",
-        "Price": "$\t8.00"
+        "Price": "8.00"
       }
     ],
     "slug": "la-palina-maduro"
@@ -6762,7 +6762,7 @@
         "Size": "Toro",
         "Barcode": 817094020414,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "la-palina-nicaraguan-connecticut"
@@ -6780,7 +6780,7 @@
         "Size": "Gordo",
         "Barcode": 852527003770,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       }
     ],
     "slug": "la-palina-nicaraguan-oscuro"
@@ -6798,7 +6798,7 @@
         "Size": "Toro",
         "Barcode": 689674100713,
         "In_Stock": "TRUE",
-        "Price": "$\t9.90"
+        "Price": "9.90"
       }
     ],
     "slug": "macanudo-bourbon"
@@ -6816,13 +6816,13 @@
         "Size": "Toro",
         "Barcode": 689674115649,
         "In_Stock": "FALSE",
-        "Price": "$\t11.65"
+        "Price": "11.65"
       },
       {
         "Size": "Churchill",
         "Barcode": 689674115717,
         "In_Stock": "FALSE",
-        "Price": "$\t12.70"
+        "Price": "12.70"
       }
     ],
     "slug": "macanudo-brazilian-shade"
@@ -6840,13 +6840,13 @@
         "Size": "Petit Corona",
         "Barcode": 689674013297,
         "In_Stock": "TRUE",
-        "Price": "$\t20.35"
+        "Price": "20.35"
       },
       {
         "Size": "Corona",
         "Barcode": 689674026020,
         "In_Stock": "TRUE",
-        "Price": "$\t4.50"
+        "Price": "4.50"
       }
     ],
     "slug": "macanudo-cafe"
@@ -6864,7 +6864,7 @@
         "Size": "Toro",
         "Barcode": 689674127727,
         "In_Stock": "TRUE",
-        "Price": "$\t10.50"
+        "Price": "10.50"
       }
     ],
     "slug": "macanudo-espresso-and-cream"
@@ -6882,7 +6882,7 @@
         "Size": "Robusto",
         "Barcode": 689674092520,
         "In_Stock": "TRUE",
-        "Price": "$\t8.90"
+        "Price": "8.90"
       }
     ],
     "slug": "macanudo-inspirado-black"
@@ -6900,13 +6900,13 @@
         "Size": "Toro",
         "Barcode": 689674108252,
         "In_Stock": "TRUE",
-        "Price": "$\t9.40"
+        "Price": "9.40"
       },
       {
         "Size": "Robusto",
         "Barcode": 689674108221,
         "In_Stock": "TRUE",
-        "Price": "$\t7.95"
+        "Price": "7.95"
       }
     ],
     "slug": "macanudo-inspirado-green"
@@ -6924,7 +6924,7 @@
         "Size": "Toro",
         "Barcode": 689674114840,
         "In_Stock": "TRUE",
-        "Price": "$\t8.90"
+        "Price": "8.90"
       }
     ],
     "slug": "macanudo-inspirado-orange"
@@ -6942,13 +6942,13 @@
         "Size": "Robusto",
         "Barcode": 689674094593,
         "In_Stock": "TRUE",
-        "Price": "$\t8.35"
+        "Price": "8.35"
       },
       {
         "Size": "Toro",
         "Barcode": 689674095309,
         "In_Stock": "TRUE",
-        "Price": "$\t8.90"
+        "Price": "8.90"
       }
     ],
     "slug": "macanudo-inspirado-red"
@@ -6966,19 +6966,19 @@
         "Size": "Robusto",
         "Barcode": 689674092117,
         "In_Stock": "TRUE",
-        "Price": "$\t9.15"
+        "Price": "9.15"
       },
       {
         "Size": "Toro",
         "Barcode": 689674093541,
         "In_Stock": "TRUE",
-        "Price": "$\t9.55"
+        "Price": "9.55"
       },
       {
         "Size": "Gordo",
         "Barcode": 689674108122,
         "In_Stock": "TRUE",
-        "Price": "$\t9.50"
+        "Price": "9.50"
       }
     ],
     "slug": "macanudo-inspirado-white"
@@ -6996,7 +6996,7 @@
         "Size": "Robusto",
         "Barcode": 689674096016,
         "In_Stock": "TRUE",
-        "Price": "$\t10.45"
+        "Price": "10.45"
       }
     ],
     "slug": "macanudo-inspirado-white-tube"
@@ -7014,13 +7014,13 @@
         "Size": "Robusto",
         "Barcode": 689674112099,
         "In_Stock": "TRUE",
-        "Price": "$\t9.80"
+        "Price": "9.80"
       },
       {
         "Size": "Churchill",
         "Barcode": 689674112129,
         "In_Stock": "TRUE",
-        "Price": "$\t10.30"
+        "Price": "10.30"
       }
     ],
     "slug": "macanudo-palladium"
@@ -7038,7 +7038,7 @@
         "Size": "Toro",
         "Barcode": 689674149132,
         "In_Stock": "TRUE",
-        "Price": "$\t13.75"
+        "Price": "13.75"
       }
     ],
     "slug": "macanudo-vintage-2013-maduro"
@@ -7056,7 +7056,7 @@
         "Size": "Toro",
         "Barcode": 71610927971,
         "In_Stock": "TRUE",
-        "Price": "$\t14.60"
+        "Price": "14.60"
       }
     ],
     "slug": "montecristo-classic-yellow-label"
@@ -7074,7 +7074,7 @@
         "Size": "Robusto",
         "Barcode": 71610928039,
         "In_Stock": "TRUE",
-        "Price": "$\t12.35"
+        "Price": "12.35"
       }
     ],
     "slug": "montecristo-classic-yellow-label-no-3"
@@ -7092,19 +7092,19 @@
         "Size": "Rothschild",
         "Barcode": 71610930018,
         "In_Stock": "TRUE",
-        "Price": "$\t12.35"
+        "Price": "12.35"
       },
       {
         "Size": "Toro",
         "Barcode": 71610930025,
         "In_Stock": "TRUE",
-        "Price": "$\t13.30"
+        "Price": "13.30"
       },
       {
         "Size": "Churchill",
         "Barcode": 71610930032,
         "In_Stock": "TRUE",
-        "Price": "$\t15.30"
+        "Price": "15.30"
       }
     ],
     "slug": "montecristo-white-label"
@@ -7122,7 +7122,7 @@
         "Size": "RobustoGrande",
         "Barcode": 814539011990,
         "In_Stock": "TRUE",
-        "Price": "$\t9.85"
+        "Price": "9.85"
       }
     ],
     "slug": "nub-connecticut"
@@ -7140,7 +7140,7 @@
         "Size": "RobustoGrande",
         "Barcode": 814539012034,
         "In_Stock": "TRUE",
-        "Price": "$\t9.85"
+        "Price": "9.85"
       }
     ],
     "slug": "nub-habano"
@@ -7158,7 +7158,7 @@
         "Size": "RobustoGrande",
         "Barcode": 814539012065,
         "In_Stock": "TRUE",
-        "Price": "$\t9.85"
+        "Price": "9.85"
       }
     ],
     "slug": "nub-maduro"
@@ -7176,7 +7176,7 @@
         "Size": "Petite Corona",
         "Barcode": 814539014359,
         "In_Stock": "TRUE",
-        "Price": "$\t5.80"
+        "Price": "5.80"
       }
     ],
     "slug": "nub-nuance-single-roast"
@@ -7194,7 +7194,7 @@
         "Size": "Petite Corona",
         "Barcode": 814539014311,
         "In_Stock": "TRUE",
-        "Price": "$\t5.80"
+        "Price": "5.80"
       }
     ],
     "slug": "nub-nuance-triple-roast"
@@ -7212,7 +7212,7 @@
         "Size": "Gigante",
         "Barcode": 689674095538,
         "In_Stock": "TRUE",
-        "Price": "$\t3.20"
+        "Price": "3.20"
       }
     ],
     "slug": "odyssey-maduro"
@@ -7230,7 +7230,7 @@
         "Size": "Robusto",
         "Barcode": 689674095477,
         "In_Stock": "TRUE",
-        "Price": "$\t2.30"
+        "Price": "2.30"
       }
     ],
     "slug": "odyssey-odyssey"
@@ -7248,7 +7248,7 @@
         "Size": "Gigante",
         "Barcode": 689674128786,
         "In_Stock": "FALSE",
-        "Price": "$\t3.00"
+        "Price": "3.00"
       }
     ],
     "slug": "odyssey-odyssey-full-flavor"
@@ -7266,7 +7266,7 @@
         "Size": "Toro",
         "Barcode": 689674104896,
         "In_Stock": "TRUE",
-        "Price": "$\t2.80"
+        "Price": "2.80"
       }
     ],
     "slug": "odyssey-sweet-tip"
@@ -7284,13 +7284,13 @@
         "Size": "Robusto",
         "Barcode": 814539011549,
         "In_Stock": "TRUE",
-        "Price": "$\t9.55"
+        "Price": "9.55"
       },
       {
         "Size": "Toro",
         "Barcode": 814539011556,
         "In_Stock": "TRUE",
-        "Price": "$\t10.75"
+        "Price": "10.75"
       }
     ],
     "slug": "oliva-connecticut-reserve"
@@ -7308,13 +7308,13 @@
         "Size": "Robusto",
         "Barcode": 814539014984,
         "In_Stock": "TRUE",
-        "Price": "$\t6.90"
+        "Price": "6.90"
       },
       {
         "Size": "Toro",
         "Barcode": 814539015004,
         "In_Stock": "TRUE",
-        "Price": "$\t7.75"
+        "Price": "7.75"
       }
     ],
     "slug": "oliva-gilberto-oliva-reserva-red"
@@ -7332,13 +7332,13 @@
         "Size": "Toro",
         "Barcode": 814539015059,
         "In_Stock": "TRUE",
-        "Price": "$\t8.90"
+        "Price": "8.90"
       },
       {
         "Size": "Robusto",
         "Barcode": 814539015035,
         "In_Stock": "TRUE",
-        "Price": "$\t7.75"
+        "Price": "7.75"
       }
     ],
     "slug": "oliva-gilberto-oliva-reserva-blanc"
@@ -7356,7 +7356,7 @@
         "Size": "Corona",
         "Barcode": 814539014380,
         "In_Stock": "TRUE",
-        "Price": "$\t7.00"
+        "Price": "7.00"
       }
     ],
     "slug": "oliva-nuace"
@@ -7374,19 +7374,19 @@
         "Size": "Robusto",
         "Barcode": 814539011600,
         "In_Stock": "TRUE",
-        "Price": "$\t6.70"
+        "Price": "6.70"
       },
       {
         "Size": "Perfecto",
         "Barcode": 814539011594,
         "In_Stock": "TRUE",
-        "Price": "$\t6.25"
+        "Price": "6.25"
       },
       {
         "Size": "Churchill",
         "Barcode": 814539011686,
         "In_Stock": "TRUE",
-        "Price": "$\t7.80"
+        "Price": "7.80"
       }
     ],
     "slug": "oliva-serie-g"
@@ -7404,7 +7404,7 @@
         "Size": "Churchill",
         "Barcode": 814539011754,
         "In_Stock": "TRUE",
-        "Price": "$\t7.45"
+        "Price": "7.45"
       }
     ],
     "slug": "oliva-serie-g-maduro"
@@ -7422,13 +7422,13 @@
         "Size": "Perfecto",
         "Barcode": 814539011808,
         "In_Stock": "TRUE",
-        "Price": "$\t10.60"
+        "Price": "10.60"
       },
       {
         "Size": "Robusto",
         "Barcode": 814539011785,
         "In_Stock": "TRUE",
-        "Price": "$\t8.35"
+        "Price": "8.35"
       }
     ],
     "slug": "oliva-serie-o"
@@ -7446,13 +7446,13 @@
         "Size": "Double Robusto",
         "Barcode": 814539011433,
         "In_Stock": "TRUE",
-        "Price": "$\t10.40"
+        "Price": "10.40"
       },
       {
         "Size": "Double Toro",
         "Barcode": 814539011457,
         "In_Stock": "TRUE",
-        "Price": "$\t14.75"
+        "Price": "14.75"
       }
     ],
     "slug": "oliva-serie-v"
@@ -7470,13 +7470,13 @@
         "Size": "Double Robusto",
         "Barcode": 814539015103,
         "In_Stock": "TRUE",
-        "Price": "$\t12.50"
+        "Price": "12.50"
       },
       {
         "Size": "Double Toro",
         "Barcode": 814539015141,
         "In_Stock": "TRUE",
-        "Price": "$\t13.80"
+        "Price": "13.80"
       }
     ],
     "slug": "oliva-serie-v-maduro"
@@ -7494,7 +7494,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t17.80"
+        "Price": "17.80"
       }
     ],
     "slug": "oliva-serie-v-melanio-maduro"
@@ -7512,7 +7512,7 @@
         "Size": "Robusto",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t14.00"
+        "Price": "14.00"
       }
     ],
     "slug": "oliva-serie-v-melanio-robusto"
@@ -7530,7 +7530,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t17.80"
+        "Price": "17.80"
       }
     ],
     "slug": "oliva-serie-v-melanio-toro"
@@ -7548,7 +7548,7 @@
         "Size": "Petite Corona",
         "Barcode": 814539013130,
         "In_Stock": "TRUE",
-        "Price": "$\t8.70"
+        "Price": "8.70"
       }
     ],
     "slug": "oliva-serie-v-no-4"
@@ -7566,7 +7566,7 @@
         "Size": "Assortment",
         "Barcode": 1406,
         "In_Stock": "TRUE",
-        "Price": "$\t64.50"
+        "Price": "64.50"
       }
     ],
     "slug": "oliva-serie-v-sampler"
@@ -7584,7 +7584,7 @@
         "Size": "Robusto",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t17.90"
+        "Price": "17.90"
       }
     ],
     "slug": "padron-1926-natural"
@@ -7602,7 +7602,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t16.60"
+        "Price": "16.60"
       }
     ],
     "slug": "padron-1964-maduro"
@@ -7620,7 +7620,7 @@
         "Size": "Robusto",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t8.95"
+        "Price": "8.95"
       }
     ],
     "slug": "padron-2000-maduro"
@@ -7638,7 +7638,7 @@
         "Size": "Robusto",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t8.95"
+        "Price": "8.95"
       }
     ],
     "slug": "padron-2000-natural"
@@ -7656,7 +7656,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t9.30"
+        "Price": "9.30"
       }
     ],
     "slug": "padron-3000-maduro"
@@ -7674,7 +7674,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t9.30"
+        "Price": "9.30"
       }
     ],
     "slug": "padron-3000-natural"
@@ -7692,7 +7692,7 @@
         "Size": "Gordo",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t12.25"
+        "Price": "12.25"
       }
     ],
     "slug": "padron-7000-natural"
@@ -7710,13 +7710,13 @@
         "Size": "Robusto",
         "Barcode": 689674030362,
         "In_Stock": "TRUE",
-        "Price": "$\t11.00"
+        "Price": "11.00"
       },
       {
         "Size": "Toro",
         "Barcode": 689674030355,
         "In_Stock": "TRUE",
-        "Price": "$\t12.00"
+        "Price": "12.00"
       }
     ],
     "slug": "partagas-1845"
@@ -7734,7 +7734,7 @@
         "Size": "Toro Grande",
         "Barcode": 689674093091,
         "In_Stock": "TRUE",
-        "Price": "$\t10.25"
+        "Price": "10.25"
       }
     ],
     "slug": "partagas-1845-extra-oscuro"
@@ -7752,13 +7752,13 @@
         "Size": "Perfecto",
         "Barcode": 689674129264,
         "In_Stock": "TRUE",
-        "Price": "$\t7.90"
+        "Price": "7.90"
       },
       {
         "Size": "Robusto",
         "Barcode": 689674129196,
         "In_Stock": "TRUE",
-        "Price": "$\t7.00"
+        "Price": "7.00"
       }
     ],
     "slug": "partagas-anejo"
@@ -7776,13 +7776,13 @@
         "Size": "Robusto",
         "Barcode": 689674124863,
         "In_Stock": "TRUE",
-        "Price": "$\t7.95"
+        "Price": "7.95"
       },
       {
         "Size": "Toro",
         "Barcode": 689674124887,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       }
     ],
     "slug": "partagas-cortado"
@@ -7800,19 +7800,19 @@
         "Size": "Robusto",
         "Barcode": 689674148845,
         "In_Stock": "TRUE",
-        "Price": "$\t8.50"
+        "Price": "8.50"
       },
       {
         "Size": "Toro",
         "Barcode": 689674148876,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       },
       {
         "Size": "Churchill",
         "Barcode": 689674148920,
         "In_Stock": "TRUE",
-        "Price": "$\t10.10"
+        "Price": "10.10"
       }
     ],
     "slug": "partagas-valle-verde"
@@ -7830,7 +7830,7 @@
         "Size": "Toro",
         "Barcode": 76622072305,
         "In_Stock": "TRUE",
-        "Price": "$\t9.20"
+        "Price": "9.20"
       }
     ],
     "slug": "perla-del-mar-corojo"
@@ -7848,7 +7848,7 @@
         "Size": "Toro Grande",
         "Barcode": 76622027046,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       }
     ],
     "slug": "perla-del-mar-double-toro"
@@ -7866,13 +7866,13 @@
         "Size": "Toro",
         "Barcode": 76622027039,
         "In_Stock": "TRUE",
-        "Price": "$\t9.20"
+        "Price": "9.20"
       },
       {
         "Size": "Robusto",
         "Barcode": 76622027022,
         "In_Stock": "TRUE",
-        "Price": "$\t8.40"
+        "Price": "8.40"
       }
     ],
     "slug": "perla-del-mar-shade"
@@ -7890,19 +7890,19 @@
         "Size": "Toro",
         "Barcode": 76622027039,
         "In_Stock": "TRUE",
-        "Price": "$\t9.20"
+        "Price": "9.20"
       },
       {
         "Size": "Toro",
         "Barcode": 76622027350,
         "In_Stock": "TRUE",
-        "Price": "$\t9.20"
+        "Price": "9.20"
       },
       {
         "Size": "Toro",
         "Barcode": 76622072305,
         "In_Stock": "TRUE",
-        "Price": "$\t9.20"
+        "Price": "9.20"
       }
     ],
     "slug": "perla-del-mar-toro"
@@ -7920,7 +7920,7 @@
         "Size": "Churchill",
         "Barcode": 689674029212,
         "In_Stock": "TRUE",
-        "Price": "$\t7.95"
+        "Price": "7.95"
       }
     ],
     "slug": "punch-after-dinner"
@@ -7938,7 +7938,7 @@
         "Size": "Toro",
         "Barcode": 689674154570,
         "In_Stock": "TRUE",
-        "Price": "$\t7.95"
+        "Price": "7.95"
       }
     ],
     "slug": "punch-dad-home-movie"
@@ -7956,13 +7956,13 @@
         "Size": "Robusto",
         "Barcode": 689674146605,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       },
       {
         "Size": "Toro",
         "Barcode": 689674146636,
         "In_Stock": "TRUE",
-        "Price": "$\t10.50"
+        "Price": "10.50"
       }
     ],
     "slug": "punch-golden-era"
@@ -7980,7 +7980,7 @@
         "Size": "RobustoGrande",
         "Barcode": 689674146223,
         "In_Stock": "TRUE",
-        "Price": "$\t5.85"
+        "Price": "5.85"
       }
     ],
     "slug": "punch-knuckle-buster"
@@ -7998,13 +7998,13 @@
         "Size": "Toro",
         "Barcode": 689674116554,
         "In_Stock": "TRUE",
-        "Price": "$\t6.45"
+        "Price": "6.45"
       },
       {
         "Size": "Gordo",
         "Barcode": 689674116585,
         "In_Stock": "TRUE",
-        "Price": "$\t6.60"
+        "Price": "6.60"
       }
     ],
     "slug": "punch-knuckle-buster-maduro"
@@ -8022,13 +8022,13 @@
         "Size": "Robusto",
         "Barcode": 689674154341,
         "In_Stock": "TRUE",
-        "Price": "$\t5.70"
+        "Price": "5.70"
       },
       {
         "Size": "Toro",
         "Barcode": 689674154372,
         "In_Stock": "TRUE",
-        "Price": "$\t6.45"
+        "Price": "6.45"
       }
     ],
     "slug": "punch-knuckle-buster-shade"
@@ -8046,7 +8046,7 @@
         "Size": "Rothschild",
         "Barcode": 689674154433,
         "In_Stock": "TRUE",
-        "Price": "$\t5.85"
+        "Price": "5.85"
       }
     ],
     "slug": "punch-knuckle-buster-shade-stubby"
@@ -8064,7 +8064,7 @@
         "Size": "Rothschild",
         "Barcode": 689674154297,
         "In_Stock": "TRUE",
-        "Price": "$\t5.85"
+        "Price": "5.85"
       }
     ],
     "slug": "punch-knuckle-buster-stubby-maduro"
@@ -8082,7 +8082,7 @@
         "Size": "Perfecto",
         "Barcode": 689674029250,
         "In_Stock": "TRUE",
-        "Price": "$\t8.25"
+        "Price": "8.25"
       }
     ],
     "slug": "punch-punch-champion"
@@ -8100,7 +8100,7 @@
         "Size": "Corona",
         "Barcode": 689674023678,
         "In_Stock": "TRUE",
-        "Price": "$\t5.15"
+        "Price": "5.15"
       }
     ],
     "slug": "punch-punch-elite"
@@ -8118,7 +8118,7 @@
         "Size": "Corona",
         "Barcode": 689674029342,
         "In_Stock": "TRUE",
-        "Price": "$\t5.15"
+        "Price": "5.15"
       }
     ],
     "slug": "punch-punch-elite-maduro"
@@ -8136,7 +8136,7 @@
         "Size": "Robusto",
         "Barcode": 689674116523,
         "In_Stock": "TRUE",
-        "Price": "$\t5.75"
+        "Price": "5.75"
       }
     ],
     "slug": "punch-punch-knuckle-buster"
@@ -8154,7 +8154,7 @@
         "Size": "Corona",
         "Barcode": 689674029403,
         "In_Stock": "TRUE",
-        "Price": "$\t4.70"
+        "Price": "4.70"
       }
     ],
     "slug": "punch-punch-london-club"
@@ -8172,7 +8172,7 @@
         "Size": "Petite Corona",
         "Barcode": 689674029410,
         "In_Stock": "TRUE",
-        "Price": "$\t4.70"
+        "Price": "4.70"
       }
     ],
     "slug": "punch-punch-london-club-maduro"
@@ -8190,7 +8190,7 @@
         "Size": "Gordo",
         "Barcode": 689674159360,
         "In_Stock": "TRUE",
-        "Price": "$\t12.00"
+        "Price": "12.00"
       }
     ],
     "slug": "punch-rare-corojo"
@@ -8280,25 +8280,25 @@
         "Size": "Double Robusto",
         "Barcode": 76622773004,
         "In_Stock": "TRUE",
-        "Price": "$\t3.20"
+        "Price": "3.20"
       },
       {
         "Size": "Double Grande",
         "Barcode": 76622773202,
         "In_Stock": "TRUE",
-        "Price": "$\t3.60"
+        "Price": "3.60"
       },
       {
         "Size": "Double Toro",
         "Barcode": 76622773103,
         "In_Stock": "TRUE",
-        "Price": "$\t3.10"
+        "Price": "3.10"
       },
       {
         "Size": "Double Churchill",
         "Barcode": 76622773301,
         "In_Stock": "TRUE",
-        "Price": "$\t3.35"
+        "Price": "3.35"
       }
     ],
     "slug": "quorum-havana-q"
@@ -8316,13 +8316,13 @@
         "Size": "Robusto",
         "Barcode": 76622770201,
         "In_Stock": "TRUE",
-        "Price": "$\t2.10"
+        "Price": "2.10"
       },
       {
         "Size": "Toro",
         "Barcode": 76622770300,
         "In_Stock": "TRUE",
-        "Price": "$\t2.30"
+        "Price": "2.30"
       }
     ],
     "slug": "quorum-quorum"
@@ -8340,7 +8340,7 @@
         "Size": "Robusto",
         "Barcode": 76622775206,
         "In_Stock": "TRUE",
-        "Price": "$\t2.20"
+        "Price": "2.20"
       }
     ],
     "slug": "quorum-quorum-maduro"
@@ -8358,13 +8358,13 @@
         "Size": "Robusto",
         "Barcode": 76622771208,
         "In_Stock": "TRUE",
-        "Price": "$\t2.10"
+        "Price": "2.10"
       },
       {
         "Size": "Toro",
         "Barcode": 76622771307,
         "In_Stock": "TRUE",
-        "Price": "$\t2.30"
+        "Price": "2.30"
       }
     ],
     "slug": "quorum-quorum-natural"
@@ -8382,7 +8382,7 @@
         "Size": "Toro",
         "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       }
     ],
     "slug": "rock-a-feller-dominican-blue"
@@ -8400,7 +8400,7 @@
         "Size": "Robusto",
         "Barcode": 7429457694687,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       }
     ],
     "slug": "rock-a-feller-vintage-connecticut-robusto"
@@ -8418,7 +8418,7 @@
         "Size": "Toro",
         "Barcode": 7429457694694,
         "In_Stock": "TRUE",
-        "Price": "$\t10.00"
+        "Price": "10.00"
       }
     ],
     "slug": "rock-a-feller-vintage-connecticut-toro"
@@ -8436,7 +8436,7 @@
         "Size": "Robusto",
         "Barcode": 7429457794769,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       }
     ],
     "slug": "rock-a-feller-vintage-maduro"
@@ -8454,7 +8454,7 @@
         "Size": "Toro",
         "Barcode": 846261000393,
         "In_Stock": "TRUE",
-        "Price": "$\t11.50"
+        "Price": "11.50"
       }
     ],
     "slug": "rocky-patel-10-year-sumatran"
@@ -8472,7 +8472,7 @@
         "Size": "Toro",
         "Barcode": 846261000119,
         "In_Stock": "TRUE",
-        "Price": "$\t11.50"
+        "Price": "11.50"
       }
     ],
     "slug": "rocky-patel-12-year-broadleaf"
@@ -8490,7 +8490,7 @@
         "Size": "Toro",
         "Barcode": 846261000782,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       }
     ],
     "slug": "rocky-patel-corojo-edge"
@@ -8508,7 +8508,7 @@
         "Size": "Corona",
         "Barcode": 846261014130,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       }
     ],
     "slug": "rocky-patel-java-red"
@@ -8526,7 +8526,7 @@
         "Size": "Toro",
         "Barcode": 846261000560,
         "In_Stock": "TRUE",
-        "Price": "$\t11.50"
+        "Price": "11.50"
       }
     ],
     "slug": "rocky-patel-vintage-connecticut"
@@ -8544,13 +8544,13 @@
         "Size": "Robusto",
         "Barcode": 76452351182,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       },
       {
         "Size": "Toro",
         "Barcode": 76452351175,
         "In_Stock": "TRUE",
-        "Price": "$\t9.45"
+        "Price": "9.45"
       }
     ],
     "slug": "romeo-y-julieta-1875-gold-box"
@@ -8568,7 +8568,7 @@
         "Size": "Toro",
         "Barcode": 76452518233,
         "In_Stock": "TRUE",
-        "Price": "$\t10.50"
+        "Price": "10.50"
       }
     ],
     "slug": "romeo-y-julieta-1875-nicaragua-connecticut"
@@ -8586,7 +8586,7 @@
         "Size": "Toro",
         "Barcode": 76452518523,
         "In_Stock": "TRUE",
-        "Price": "$\t11.90"
+        "Price": "11.90"
       }
     ],
     "slug": "romeo-y-julieta-1875-reserva-real-nicaragua"
@@ -8604,13 +8604,13 @@
         "Size": "Robusto",
         "Barcode": 76452351694,
         "In_Stock": "TRUE",
-        "Price": "$\t9.90"
+        "Price": "9.90"
       },
       {
         "Size": "Toro",
         "Barcode": 76452351687,
         "In_Stock": "TRUE",
-        "Price": "$\t11.00"
+        "Price": "11.00"
       }
     ],
     "slug": "romeo-y-julieta-reserva-real-red-box"
@@ -8628,7 +8628,7 @@
         "Size": "Toro",
         "Barcode": 819577010783,
         "In_Stock": "TRUE",
-        "Price": "$\t10.15"
+        "Price": "10.15"
       }
     ],
     "slug": "san-cristobal-elegances-imperial"
@@ -8646,7 +8646,7 @@
         "Size": "Toro",
         "Barcode": 819577011407,
         "In_Stock": "TRUE",
-        "Price": "$\t10.65"
+        "Price": "10.65"
       }
     ],
     "slug": "san-cristobal-quintessence-epicure"
@@ -8664,7 +8664,7 @@
         "Size": "Toro",
         "Barcode": 819577010936,
         "In_Stock": "TRUE",
-        "Price": "$\t10.60"
+        "Price": "10.60"
       }
     ],
     "slug": "san-cristobal-revelation-legend"
@@ -8682,13 +8682,13 @@
         "Size": "Robusto",
         "Barcode": 689674142447,
         "In_Stock": "TRUE",
-        "Price": "$\t7.95"
+        "Price": "7.95"
       },
       {
         "Size": "Toro",
         "Barcode": 689674142478,
         "In_Stock": "TRUE",
-        "Price": "$\t9.55"
+        "Price": "9.55"
       }
     ],
     "slug": "sancho-panza-double-maduro"
@@ -8706,13 +8706,13 @@
         "Size": "Toro",
         "Barcode": 689674156345,
         "In_Stock": "TRUE",
-        "Price": "$\t10.15"
+        "Price": "10.15"
       },
       {
         "Size": "Robusto",
         "Barcode": 689674156314,
         "In_Stock": "TRUE",
-        "Price": "$\t9.35"
+        "Price": "9.35"
       }
     ],
     "slug": "sancho-panza-extra-chido"
@@ -8730,13 +8730,13 @@
         "Size": "Robusto",
         "Barcode": 689674142355,
         "In_Stock": "TRUE",
-        "Price": "$\t3.00"
+        "Price": "3.00"
       },
       {
         "Size": "Toro",
         "Barcode": 689674142386,
         "In_Stock": "TRUE",
-        "Price": "$\t3.00"
+        "Price": "3.00"
       }
     ],
     "slug": "sancho-panza-extra-fuerte"
@@ -8754,13 +8754,13 @@
         "Size": "Robusto",
         "Barcode": 689674142539,
         "In_Stock": "TRUE",
-        "Price": "$\t3.00"
+        "Price": "3.00"
       },
       {
         "Size": "Toro",
         "Barcode": 689674142560,
         "In_Stock": "TRUE",
-        "Price": "$\t3.00"
+        "Price": "3.00"
       }
     ],
     "slug": "sancho-panza-original"
@@ -8778,13 +8778,13 @@
         "Size": "Robusto",
         "Barcode": 689674145905,
         "In_Stock": "TRUE",
-        "Price": "$\t5.10"
+        "Price": "5.10"
       },
       {
         "Size": "Toro",
         "Barcode": 689674145936,
         "In_Stock": "TRUE",
-        "Price": "$\t5.30"
+        "Price": "5.30"
       }
     ],
     "slug": "shady-moose-shady-moose"
@@ -8802,7 +8802,7 @@
         "Size": "Rothschild",
         "Barcode": 71610854215,
         "In_Stock": "TRUE",
-        "Price": "$\t7.00"
+        "Price": "7.00"
       }
     ],
     "slug": "st-louis-rey-maduro"
@@ -8820,7 +8820,7 @@
         "Size": "Rothschild",
         "Barcode": 71610854208,
         "In_Stock": "TRUE",
-        "Price": "$\t7.00"
+        "Price": "7.00"
       }
     ],
     "slug": "st-louis-rey-st-louis-rey"
@@ -8838,7 +8838,7 @@
         "Size": "Gordo",
         "Barcode": 71610854918,
         "In_Stock": "TRUE",
-        "Price": "$\t8.00"
+        "Price": "8.00"
       }
     ],
     "slug": "st-louis-rey-titan"
@@ -8856,7 +8856,7 @@
         "Size": "Gordo",
         "Barcode": 71610854888,
         "In_Stock": "TRUE",
-        "Price": "$\t8.00"
+        "Price": "8.00"
       }
     ],
     "slug": "st-louis-rey-titan-maduro"
@@ -8874,13 +8874,13 @@
         "Size": "Toro",
         "Barcode": 7623500431704,
         "In_Stock": "TRUE",
-        "Price": "$\t7.35"
+        "Price": "7.35"
       },
       {
         "Size": "Robusto",
         "Barcode": 7623500431698,
         "In_Stock": "TRUE",
-        "Price": "$\t7.20"
+        "Price": "7.20"
       }
     ],
     "slug": "zino-zino"
@@ -8898,7 +8898,7 @@
         "Size": "Toro",
         "Barcode": 636655226535,
         "In_Stock": "TRUE",
-        "Price": "$\t8.30"
+        "Price": "8.30"
       }
     ],
     "slug": "la-galera-el-lector-connecticut"
@@ -8916,7 +8916,7 @@
         "Size": "toro",
         "Barcode": 636655226870,
         "In_Stock": "TRUE",
-        "Price": "$\t9.20"
+        "Price": "9.20"
       }
     ],
     "slug": "la-galera-el-lector-maduro"
@@ -8934,7 +8934,7 @@
         "Size": "Churchill",
         "Barcode": 636655226450,
         "In_Stock": "TRUE",
-        "Price": "$\t9.80"
+        "Price": "9.80"
       }
     ],
     "slug": "la-galera-habano-tabaquero-p"
@@ -8952,7 +8952,7 @@
         "Size": "Robusto",
         "Barcode": 670087877453,
         "In_Stock": "TRUE",
-        "Price": "$\t9.00"
+        "Price": "9.00"
       }
     ],
     "slug": "la-galera-imperial-jade"
@@ -8970,7 +8970,7 @@
         "Size": "Corona",
         "Barcode": 636655228201,
         "In_Stock": "TRUE",
-        "Price": "$\t3.45"
+        "Price": "3.45"
       }
     ],
     "slug": "la-galera-rough-rider-connecticut"
@@ -8988,7 +8988,7 @@
         "Size": "Perfecto",
         "Barcode": 879790005935,
         "In_Stock": "TRUE",
-        "Price": "$\t13.90"
+        "Price": "13.90"
       }
     ],
     "slug": "gurkha-cellar-reserve"
@@ -9006,7 +9006,7 @@
         "Size": "Toro",
         "Barcode": 732388221431,
         "In_Stock": "TRUE",
-        "Price": "$\t15.90"
+        "Price": "15.90"
       }
     ],
     "slug": "el-septimo-toscana"
