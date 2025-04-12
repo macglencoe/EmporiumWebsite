@@ -2,34 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import Layout from '../components/layout'
 import PageTitle1 from '../components/pagetitle1';
 import { diffJson } from 'diff';
+import { type } from 'jquery';
 
 
-async function commitToGit(commitData, branch) {
-    // this function takes the data from the CMS form and commits it to github
-    // we need to remove the new-slug field that is added by the CMS form
-    // because it doesn't exist in the original data
-    const editedData = commitData.map(data => {
-        // remove the new-slug field from the data
-        const { 'new-slug': _, ...rest } = data;
-        // return the rest of the data
-        return rest;
-    });
-    const response = await fetch('/api/commit', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            filePath: 'public/data/consolidated_cigars.json',
-            content: JSON.stringify(editedData, null, 2),
-            message: `CMS Commit - ${new Date().toLocaleString()}`,
-            branch: branch
-        }),
-    });
 
-    const data = await response.json();
-    console.log(data);
-}
+
 
 export const getStaticProps = async () => {
     const data = await import('../public/data/consolidated_cigars.json');
@@ -44,6 +21,7 @@ export const getStaticProps = async () => {
 export const SubmitPage = (props) => {
     const audioRef = useRef();
     const [diff, setDiff] = useState([]);
+    const [responseConsole, setResponseConsole] = useState([]);
 
     const play = () => {
         if (audioRef.current) {
@@ -65,6 +43,83 @@ export const SubmitPage = (props) => {
     useEffect(() => {
         getDiff();
     }, [localData]);
+    useEffect(() => {
+
+    }, [responseConsole]);
+
+    const commitToGit = async (commitData, branch) => {
+        // this function takes the data from the CMS form and commits it to github
+        // we need to remove the new-slug field that is added by the CMS form
+        // because it doesn't exist in the original data
+        try {
+            const editedData = commitData.map(data => {
+                // remove the new-slug field from the data
+                const { 'new-slug': _, ...rest } = data;
+                // return the rest of the data
+                return rest;
+            });
+
+            // Add Loading to response stream
+            setResponseConsole([...responseConsole, {
+                time: new Date().toLocaleString(),
+                status: "standby",
+                statusText: 'Waiting for response...',
+                ok: true
+            }])
+            const response = await fetch('/api/commit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    filePath: 'public/data/consolidated_cigars.json',
+                    content: JSON.stringify(editedData, null, 2),
+                    message: `CMS Commit - ${new Date().toLocaleString()}`,
+                    branch: branch
+                }),
+            });
+
+            const data = await response.json();
+            console.log(data);
+
+            if (responseConsole[responseConsole.length - 1].status === "standby") {
+                setResponseConsole(responseConsole.slice(0, responseConsole.length - 1));
+            }
+
+            setResponseConsole([...responseConsole, {
+                time: new Date().toLocaleString(),
+                status: response.status ?? null,
+                statusText: response.statusText ?? null,
+                ok: response.ok ?? null,
+                ...data,
+                ...data.error ?? null
+            }])
+        }
+        catch (error) {
+            console.error(error);
+            setResponseConsole([...responseConsole, {
+                time: new Date().toLocaleString(),
+                statusText: "error",
+                ok: false,
+                message: error.message
+            }])
+        }
+
+        /* if (response.ok) {
+            
+            setResponseConsole([...responseConsole, {
+                time: new Date().toLocaleString(),
+                ...response
+            }]);
+        } else {
+            console.log(response);
+            setResponseConsole([...responseConsole, {
+                time: new Date().toLocaleString(),
+                status: response.status,
+                ...data
+            }]);
+        } */
+    }
 
     const getDiff = () => {
         const tempDiff = [];
@@ -104,7 +159,7 @@ export const SubmitPage = (props) => {
                     {diff &&
                         <div className='diff-container'>
                             {diff.map((diffObjectLines, objectIndex) => {
-                            console.log(diffObjectLines);
+                                console.log(diffObjectLines);
                                 return (
                                     <div className='diff-split'>
                                         {diffObjectLines.find((diffLine) => diffLine.value.includes('Cigar Name')) &&
@@ -131,17 +186,92 @@ export const SubmitPage = (props) => {
                     onMouseEnter={() => play()}
                     onTouchStart={() => play()}
                 >
-                    <button disabled className='commit-button' onClick={() => {
+                    <button /* disabled */ className='commit-button' onClick={() => {
                         const branches = ['testing', 'cms'];
                         for (const branch of branches) {
                             commitToGit(localData, branch);
                         }
                     }} onMouseEnter={() => play()}>Commit</button>
+                    {responseConsole.length > 0 &&
+                        <div className='response-container'>
+                            <ul>
+                                {responseConsole.map((response, index) => {
+                                    return (
+                                        <li className={response.ok ? 'response-ok' : 'response-error'}>
+                                            <div >
+                                                <h1>
+                                                    {response.status ? response.status + ": " : ""} {response.statusText ?? "Unknown"}
+                                                </h1>
+                                                <p>{response.time ?? "Unknown"}</p>
+                                            </div>
+
+                                            <pre className='message-display'>{response.message ?? "No message"}</pre>
+                                            <details>
+                                                <summary>See full response</summary>
+                                                <pre>{JSON.stringify(response, null, 2)}</pre>
+                                            </details>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                    }
                     <audio ref={audioRef} src="/a_a_a.mp3"></audio>
                 </div>
             </Layout>
             <style jsx>
                 {`
+.response-container {
+    background-color: var(--dl-color-theme-primary2);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.response-container > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.response-container li {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--dl-color-theme-primary1);
+}
+.response-container li.response-ok {
+    box-shadow: inset 10px 0 10px -10px var(--positive);
+}
+.response-container li.response-error {
+    box-shadow: inset 10px 0 10px -10px var(--negative);
+}
+.response-container li > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.response-container .message-display {
+    font-family: Inter;
+    padding-left: 0.5em;
+    border-left: 2px solid var(--dl-color-theme-primary1);
+}
+
+.response-container pre {
+    white-space: pre-wrap;
+}
+.response-container summary {
+    font-family: Inter;
+    cursor: pointer;
+}
+.response-container h1 {
+    text-transform: uppercase;
+    font-family: Inter;
+    font-size: 1.2em;
+}
 .submit-container {
     display: flex;
     flex-direction: column;
