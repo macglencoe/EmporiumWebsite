@@ -51,7 +51,7 @@ const Catalog = (props) => {
     return issueNumbers;
   }
 
-  const adminConsoleVersion = process.env.ADMIN_CONSOLE_VERSION ?? "1.0";
+  const adminConsoleVersion = process.env.VERCEL_GIT_COMMIT_SHA ?? 'Unknown';
 
   return (
     <>
