@@ -13,7 +13,16 @@ import ShopSuggestions from '../components/shopSuggestions'
 import { handleLocationClick } from '../utils/location'
 import WikiLink from '../components/wikiLink'
 
-const Catalog = (props) => {
+
+export async function getServerSideProps() {
+  return {
+    props: {
+      commitSha: process.env.VERCEL_GIT_COMMIT_SHA || 'Unknown',
+    },
+  }
+}
+
+const Catalog = ({ commitSha }) => {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     isMobile = window.innerWidth < 680;
@@ -51,7 +60,7 @@ const Catalog = (props) => {
     return issueNumbers;
   }
 
-  const adminConsoleVersion = process.env.VERCEL_GIT_COMMIT_SHA ?? 'Unknown';
+  
 
   return (
     <>
@@ -69,7 +78,7 @@ const Catalog = (props) => {
           <header>
             <h1>Admin Console</h1>
             <b>Dashboard</b>
-            <p>Version: <b>{adminConsoleVersion}</b></p>
+            <p>Version: <b>{commitSha}</b></p>
           </header>
           <div className='widgets'>
             <div className='vercel-container'>
