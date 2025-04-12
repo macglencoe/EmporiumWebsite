@@ -18,7 +18,7 @@ export default async function handler(req, res) {
 
         form.parse(req, async (err, fields, files) => {
             if (err) {
-                return res.status(500).json({ message: "Failed to process file: " + err.message });
+                return res.status(422).json({ message: "Failed to process file: " + err.message });
             }
 
             
