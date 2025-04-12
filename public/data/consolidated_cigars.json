@@ -814,7 +814,7 @@
     "Cigar Name": "Viva La Vida",
     "Wrapper": "Habano Oscuro",
     "Binder": "Nicaraguan Corojo",
-    "Filler": "Criollo \u201898",
+    "Filler": "Criollo ‘98",
     "Flavor_Profile": "Black Pepper, Leather",
     "Strength_Profile": "Full",
     "Sizes": [
@@ -2959,7 +2959,7 @@
   },
   {
     "Cigar Brand": "CAO",
-    "Cigar Name": "L\u2019Anniversaire Cameroon",
+    "Cigar Name": "L’Anniversaire Cameroon",
     "Wrapper": "Cameroon",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
@@ -3673,7 +3673,7 @@
   },
   {
     "Cigar Brand": "Drew Estate",
-    "Cigar Name": "Java Mint \u201c58\u201d",
+    "Cigar Name": "Java Mint “58”",
     "Wrapper": "Brazilian Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
@@ -3805,7 +3805,7 @@
   },
   {
     "Cigar Brand": "Drew Estate",
-    "Cigar Name": "Undercrown All Dekk\u2019d Out",
+    "Cigar Name": "Undercrown All Dekk’d Out",
     "Wrapper": "San Andres",
     "Binder": "Connecticut Broadleaf, San Andres",
     "Filler": "Nicaraguan",
@@ -9028,5 +9028,25 @@
       }
     ],
     "slug": "random-stick"
+  },
+  {
+    "Cigar Brand": "test brand",
+    "Cigar Name": "test name",
+    "Wrapper": "test wrapper",
+    "Binder": "test binder",
+    "Filler": "test filler",
+    "Flavor_Profile": "test flavor",
+    "Strength_Profile": "",
+    "Sizes": [
+      {
+        "Size": "test size",
+        "Barcode": "1234",
+        "In_Stock": true,
+        "Price": "1.00"
+      }
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/image-RIfZKPJloIcNO7jVWiL4f2OlJvUnXH.png",
+    "slug": "test-brand-test-name",
+    "Date Added": "2025-04-12"
   }
 ]
