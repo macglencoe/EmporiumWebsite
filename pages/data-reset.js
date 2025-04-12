@@ -1,18 +1,23 @@
 import { Router, useRouter } from "next/router"
 import Layout from "../components/layout"
 import PageTitle1 from "../components/pagetitle1"
+import resetData from "../utils/resetData"
 
-export const getStaticProps = async () => {
-    const data = await import('../public/data/consolidated_cigars.json');
+
+export async function getServerSideProps() {
     return {
-      props: {
-        data: data.default
-      },
-    };
-  };
+        props: {
+            commitSha: process.env.VERCEL_GIT_COMMIT_SHA || 'Unknown',
+        },
+    }
+}
 
 export const DataReset = (props) => {
     const router = useRouter();
+    const handleReset = async () => {
+        await resetData({commitSha: props.commitSha});
+        router.push('/');
+    }
     return (
         <>
             <Layout>
@@ -22,12 +27,8 @@ export const DataReset = (props) => {
                     <b>This will discard any unsubmitted changes</b>
                     <div className="confirmation">
                         <h2>Are you sure?</h2>
-                        <img src="/areyousure.jpg"/>
-                        <button onClick={() => {
-                            localStorage.removeItem("tempData_cigars")
-                            localStorage.setItem("tempData_cigars", JSON.stringify(props.data))
-                            router.push("/")
-                        }}>Reset Data</button>
+                        <img src="/areyousure.jpg" />
+                        <button onClick={handleReset}>Reset Data</button>
                     </div>
                 </div>
             </Layout>
