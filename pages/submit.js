@@ -82,6 +82,12 @@ export const SubmitPage = (props) => {
             }
 
         })
+        // Get deleted cigars
+        props.data.map((originalCigar) => {
+            if (!localData.find((cigar) => cigar.slug === originalCigar.slug)) {
+                tempDiff.push([...diffJson(originalCigar, "")]);
+            }
+        })
         setDiff(tempDiff)
     };
 
