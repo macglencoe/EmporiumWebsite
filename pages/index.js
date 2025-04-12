@@ -218,7 +218,7 @@ const Catalog = ({ commitSha }) => {
             </div>
           </details>
           <details>
-            <summary>Current Features ({adminConsoleVersion})</summary>
+            <summary>Current Features ({commitSha})</summary>
             <div>
               <ul>
                 <li>Vercel Authentication <a href='https://github.com/macglencoe/EmporiumWebsite/issues/47'>Issue #47</a></li>
