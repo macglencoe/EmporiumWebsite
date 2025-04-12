@@ -198,7 +198,7 @@ export const SubmitPage = (props) => {
                                 {responseConsole.map((response, index) => {
                                     return (
                                         <li className={response.ok ? 'response-ok' : 'response-error'}>
-                                            <div >
+                                            <div className='response-header'>
                                                 <h1>
                                                     {response.status ? response.status + ": " : ""} {response.statusText ?? "Unknown"}
                                                 </h1>
@@ -206,6 +206,12 @@ export const SubmitPage = (props) => {
                                             </div>
 
                                             <pre className='message-display'>{response.message ?? "No message"}</pre>
+                                            {response.status === 200 &&
+                                                <div className='vercel-deployments'>
+                                                    <b>Go to the Vercel Dashboard to see the deployment status: </b>
+                                                    <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>Vercel Deployments</a>
+                                                </div>
+                                            }
                                             <details>
                                                 <summary>See full response</summary>
                                                 <pre>{JSON.stringify(response, null, 2)}</pre>
@@ -247,12 +253,25 @@ export const SubmitPage = (props) => {
 .response-container li.response-error {
     box-shadow: inset 10px 0 10px -10px var(--negative);
 }
-.response-container li > div {
+.response-container li > div.response-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+.response-container li > div.vercel-deployments {
+    display: flex;
+    flex-direction: column;
+}
+.response-container li b {
+    font-family: Inter;
+}
+.response-container li a {
+    font-family: Inter;
+    text-decoration: underline;
+    text-decoration-color: var(--dl-color-theme-primary1);
+    font-size: 1.3em;
 }
 .response-container .message-display {
     font-family: Inter;
