@@ -179,22 +179,37 @@ export const SubmitPage = (props) => {
                     onMouseEnter={() => play()}
                     onTouchStart={() => play()}
                 >
-                    <button /* disabled */ className='commit-button' onClick={() => {
-                        if (diff.length === 0) {
-                            setResponseConsole([...responseConsole, {
-                                time: new Date().toLocaleString(),
-                                status: 400,
-                                statusText: "Bad Request",
-                                ok: false,
-                                message: "No changes detected"
-                            }])
-                            return
+                    <button /* disabled */ className='commit-button' onClick={(e) => {
+                        if (e.currentTarget.textContent == "Commit") {
+                            e.currentTarget.textContent = "Are you sure?";
+                            e.currentTarget.style.backgroundColor = "var(--negative)";
+                        } else {
+                            e.currentTarget.textContent = "Commit";
+                            e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
+                            if (diff.length === 0) {
+                                setResponseConsole([...responseConsole, {
+                                    time: new Date().toLocaleString(),
+                                    status: 400,
+                                    statusText: "Bad Request",
+                                    ok: false,
+                                    message: "No changes detected"
+                                }])
+                                return
+                            }
+                            const branches = ['testing', 'cms'];
+                            for (const branch of branches) {
+                                commitToGit(localData, branch);
+                            }
                         }
-                        const branches = ['testing', 'cms'];
-                        for (const branch of branches) {
-                            commitToGit(localData, branch);
+                    }}
+                    onBlur={(e) => {
+                        if (e.currentTarget.textContent == "Are you sure?") {
+                            e.currentTarget.textContent = "Commit";
+                            e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
                         }
-                    }} onMouseEnter={() => play()}>Commit</button>
+                    }}
+                    
+                    >Commit</button>
                     {responseConsole.length > 0 &&
                         <div className='response-container'>
                             <ul>
