@@ -137,10 +137,18 @@ export const SubmitPage = (props) => {
                 <PageTitle1>Submit Changes</PageTitle1>
                 <div className='submit-container'>
                     <b>Please inspect your changes carefully.</b>
-                    <div className='diff-button-container'>
-                        <label htmlFor="diff">Changes not showing up?</label>
-                        <button id='get-diff' onClick={getDiff}>Force Get Diff</button>
-                    </div>
+                    {diff.length === 0 &&
+                        <div className='diff-container'>
+                            <div className='diff-split'>
+                                <h3>No changes detected</h3>
+                                <p>To make changes, select a cigar in the <a href="/cigars">Catalog</a> and click "Edit", or <a href="/cigars/add">create a new cigar</a>.</p>
+                                <div className='diff-button-container'>
+                                    <label htmlFor="diff">Changes not showing up?</label>
+                                    <button id='get-diff' onClick={getDiff}>Force Get Diff</button>
+                                </div>
+                            </div>
+                        </div>
+                    }
                     {diff &&
                         <div className='diff-container'>
                             {diff.map((diffObjectLines, objectIndex) => {
@@ -212,6 +220,25 @@ export const SubmitPage = (props) => {
             </Layout>
             <style jsx>
                 {`
+.diff-button-container button {
+    background-color: transparent;
+    padding: 0px;
+    font-weight: 500;
+    font-style: italic;
+    margin: 0.5em 1em;
+}
+.diff-button-container button:hover {
+    color: var(--dl-color-theme-primary1);
+    text-decoration: underline;
+}
+a {
+    color: var(--dl-color-theme-primary1);
+    font-style: italic;
+    font-weight: 500;
+}
+a:hover {
+    text-decoration: underline;
+}
 .response-container {
     background-color: var(--dl-color-theme-primary2);
     padding: 10px;
@@ -281,6 +308,7 @@ export const SubmitPage = (props) => {
     flex-direction: column;
     align-items: flex-start;
     padding: 10px;
+    gap: 10px;
 }
 button {
     background-color: var(--dl-color-theme-secondary2);
