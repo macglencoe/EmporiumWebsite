@@ -23,10 +23,6 @@ export async function getServerSideProps() {
 }
 
 const Catalog = ({ commitSha }) => {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    isMobile = window.innerWidth < 680;
-  })
 
   const [commits, setCommits] = useState([]);
   const [updatePage, setUpdatePage] = useState(1);
@@ -41,26 +37,12 @@ const Catalog = ({ commitSha }) => {
       element.style.cursor = 'pointer';
     }
 
-    fetch('/api/getCommits?branch='+updateBranch).then(response => response.json()).then(data => setCommits(data));
+    fetch('/api/getCommits?branch=' + updateBranch).then(response => response.json()).then(data => setCommits(data));
   }, []);
 
-  const getIssueNumbers = () => {
-    const issueNumbers = [];
-    if (commits.length > 0) {
-      commits.forEach(commit => {
-        const matches = commit.message?.match(/#(\d+)/g);
-        if (matches) {
-          matches.forEach(match => {
-            const issueNumber = match.slice(1); // Remove the '#' character
-            issueNumbers.push(issueNumber);
-          });
-        }
-      });
-    }
-    return issueNumbers;
-  }
 
-  
+
+
 
   return (
     <>
@@ -114,50 +96,50 @@ const Catalog = ({ commitSha }) => {
               </div>
 
 
-              { commits.message ? (
+              {commits.message ? (
                 <div>
                   <h3>Error</h3>
                   <p>"{commits.message}"</p>
                 </div>
               ) :
-              
-              commits.length === 0 ? (
-                <p>Loading...</p>
-              ) : (
-                commits.map((commit) => (
-                  <div className='timeline-item'>
-                    <div className='timeline-badge' key={commit.id}>
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="jsx-c75b57f7aa6fb9c9"><path xmlns="http://www.w3.org/2000/svg" d="M480-257q-76 0-135-45.5T266-417H46v-126h220q20-69 79-114.5T480-703q76 0 135 45.5T694-543h220v126H694q-20 69-79 114.5T480-257Zm.41-126Q521-383 549-411.41t28-69Q577-521 548.79-549q-28.2-28-68.5-28-40.29 0-68.79 28.21-28.5 28.2-28.5 68.5 0 40.29 28.41 68.79 28.41 28.5 69 28.5Z" class="jsx-a30a9aeeb1937205"></path></svg>
+
+                commits.length === 0 ? (
+                  <p>Loading...</p>
+                ) : (
+                  commits.map((commit) => (
+                    <div className='timeline-item'>
+                      <div className='timeline-badge' key={commit.id}>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="jsx-c75b57f7aa6fb9c9"><path xmlns="http://www.w3.org/2000/svg" d="M480-257q-76 0-135-45.5T266-417H46v-126h220q20-69 79-114.5T480-703q76 0 135 45.5T694-543h220v126H694q-20 69-79 114.5T480-257Zm.41-126Q521-383 549-411.41t28-69Q577-521 548.79-549q-28.2-28-68.5-28-40.29 0-68.79 28.21-28.5 28.2-28.5 68.5 0 40.29 28.41 68.79 28.41 28.5 69 28.5Z" class="jsx-a30a9aeeb1937205"></path></svg>
+                      </div>
+                      <div className='commit-body' key={commit.id}>
+                        {
+                          commit.commit.message?.match(/#(\d+)/g) && (
+                            <div className='commit-issues'>
+                              {commit.commit.message.match(/#(\d+)/g).map(issue => {
+                                const issueNumber = issue.slice(1); // Remove the '#' character
+                                return (
+                                  <a
+                                    href={`https://github.com/macglencoe/EmporiumWebsite/issues/${issueNumber}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    key={issueNumber}
+                                  >
+                                    Issue #{issueNumber}
+                                  </a>
+                                );
+                              })}
+
+                            </div>
+                          )
+                        }
+                        <a href={commit.html_url} className='commit-message'>{commit.commit.message}</a>
+
+
+                        <p className='commit-date'>{commit.commit.author.date}</p>
+                      </div>
                     </div>
-                    <div className='commit-body' key={commit.id}>
-                      {
-                        commit.commit.message?.match(/#(\d+)/g) && (
-                          <div className='commit-issues'>
-                            {commit.commit.message.match(/#(\d+)/g).map(issue => {
-                              const issueNumber = issue.slice(1); // Remove the '#' character
-                              return (
-                                <a
-                                  href={`https://github.com/macglencoe/EmporiumWebsite/issues/${issueNumber}`}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  key={issueNumber}
-                                >
-                                  Issue #{issueNumber}
-                                </a>
-                              );
-                            })}
-
-                          </div>
-                        )
-                      }
-                      <a href={commit.html_url} className='commit-message'>{commit.commit.message}</a>
-
-
-                      <p className='commit-date'>{commit.commit.author.date}</p>
-                    </div>
-                  </div>
-                ))
-              )}
+                  ))
+                )}
             </div>
 
             <div className='wiki'>
@@ -171,71 +153,6 @@ const Catalog = ({ commitSha }) => {
             </div>
 
           </div>
-
-          <details className='accordion'>
-            <summary>How to use</summary>
-            <div>
-              <p>The admin console is a work in progress. As such, right now it only supports adding, editing, and deleting cigars.</p>
-              <ul>
-                <li>
-                  <h2>Adding a cigar</h2>
-                  <ol>
-                    <li>Click "Add New Cigar" anytime on the top-right of the page.</li>
-                    <li>Fill out the form. There are 2 required fields: Cigar Name and Brand</li>
-                    <li>Click "Submit" at the bottom of the form</li>
-                  </ol>
-                </li>
-                <li>
-                  <h2>Editing a cigar</h2>
-                  <ol>
-                    <li>In the cigar catalog, search for the cigar you want to edit</li>
-                    <li>Click on the cigar. <br></br>
-                      If this is a cigar that you added in this session, it will take you directly to the edit form. In this case, skip step 3</li>
-                    <li>Click "Edit" in the top-right</li>
-                    <li>Fill out the form</li>
-                    <li>Click "Submit" at the bottom of the form</li>
-                  </ol>
-                </li>
-                <li>
-                  <h2>Deleting a cigar</h2>
-                  <ol>
-                    <li>In the cigar catalog, search for the cigar you want to delete</li>
-                    <li>Click on the cigar.</li>
-                    <li>Click "Delete" in the top-right</li>
-                    <li>Read the confirmation page. If you are sure you want to delete the data, click "Delete Cigar" at the bottom.</li>
-                  </ol>
-                </li>
-                <li>
-                  <h2>Submitting your changes</h2>
-                  <p>Your changes are not immediately sent to the website. They are cached on your browser until you are ready to submit them all together.</p>
-                  <ol>
-                    <li>Click "Submit all Changes" at the top of the page, next to the "Add New Cigar" button</li>
-                    <li>Read the confirmation page carefully. If there looks to be anything out of place, amend them or contact the developer.</li>
-                    <li>If you are satisfied with the changes, click "Commit" at the bottom of the page.</li>
-                  </ol>
-                </li>
-              </ul>
-            </div>
-          </details>
-          <details>
-            <summary>Current Features ({commitSha})</summary>
-            <div>
-              <ul>
-                <li>Vercel Authentication <a href='https://github.com/macglencoe/EmporiumWebsite/issues/47'>Issue #47</a></li>
-                <li>CRUD (Create, Read, Update, Delete) Form <a href='https://github.com/macglencoe/EmporiumWebsite/issues/29'>Issue #29</a></li>
-                <li>Real-time Validation <a href='https://github.com/macglencoe/EmporiumWebsite/issues/30'>Issue #30</a></li>
-                <li>Load Original Data <a href='https://github.com/macglencoe/EmporiumWebsite/issues/32'>Issue #32</a></li>
-                <li>Edit Cigar <a href='https://github.com/macglencoe/EmporiumWebsite/issues/28'>Issue #28</a></li>
-                <li>Delete Cigar <a href='https://github.com/macglencoe/EmporiumWebsite/issues/53'>Issue #53</a></li>
-                <li>Add Cigar <a href='https://github.com/macglencoe/EmporiumWebsite/issues/51'>Issue #51</a></li>
-                <li>Delete New Cigar <a href='https://github.com/macglencoe/EmporiumWebsite/issues/54'>Issue #54</a></li>
-                <li>Slug Generation & Validation <a href='https://github.com/macglencoe/EmporiumWebsite/issues/34'>Issue #34</a></li>
-                <li>Submit All Changes <a>Pending Issue</a></li>
-                <li>Link to Vercel Dashboard <a href='https://github.com/macglencoe/EmporiumWebsite/issues/40'>Issue #40</a></li>
-              </ul>
-              <a href='https://github.com/users/macglencoe/projects/2/views/3'>Check out the Roadmap!</a>
-            </div>
-          </details>
         </div>
 
         <div className='welcome-container-b' >
