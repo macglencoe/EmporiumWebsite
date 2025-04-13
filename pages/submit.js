@@ -175,14 +175,12 @@ export const SubmitPage = (props) => {
                     }
                 </div>
 
-                <div
-                    onMouseEnter={() => play()}
-                    onTouchStart={() => play()}
-                >
+                <div>
                     <button /* disabled */ className='commit-button' onClick={(e) => {
                         if (e.currentTarget.textContent == "Commit") {
                             e.currentTarget.textContent = "Are you sure?";
                             e.currentTarget.style.backgroundColor = "var(--negative)";
+                            play();
                         } else {
                             e.currentTarget.textContent = "Commit";
                             e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
@@ -240,7 +238,7 @@ export const SubmitPage = (props) => {
                             </ul>
                         </div>
                     }
-                    <audio ref={audioRef} src="/a_a_a.mp3"></audio>
+                    <audio ref={audioRef} src="/areyousure.mp3"></audio>
                 </div>
             </Layout>
             <style jsx>
