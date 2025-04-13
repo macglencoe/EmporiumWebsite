@@ -8,13 +8,12 @@ import resetData from "../utils/resetData"
 
 export const DataUpdate = ({commitSha}) => {
     const handleUpdate = async () => {
-        console.log(commitSha);
         await resetData({commitSha: commitSha});
     }
 
     useEffect(() => {
         handleUpdate();
-    }, [])
+    }, [commitSha]);
 
     return null;
 }
