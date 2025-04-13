@@ -9,11 +9,9 @@ import { PriceInput } from "./priceInput";
 
 const InputField = (props) => {
     const [options, setOptions] = useState([]);
-    const [input, setInput] = useState(props.value);
     const [filtered, setFiltered] = useState([]);
     const handleChange = (e) => {
         props.onChange(e);
-        setInput(e.target.value);
 
         if (options.length > 0) {
             setFiltered(
@@ -27,8 +25,7 @@ const InputField = (props) => {
         if (props.getOptions) {
             setOptions(props.getOptions(props.name));
         }
-
-    }, [input]);
+    }, [props.name]);
     return (
         <>
             <div className={
@@ -50,7 +47,7 @@ const InputField = (props) => {
                         rows={props.rows ?? 1}
                         cols="20"
                         type="text"
-                        value={props.value}
+                        value={props.value ?? ""}
                         name={props.name}
                         onChange={(e) => {
                             handleChange(e);
