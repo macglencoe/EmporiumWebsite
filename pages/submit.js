@@ -67,7 +67,7 @@ export const SubmitPage = (props) => {
                 ok: true
             }])
             const response = await fetch('/api/commit', {
-                method: 'POST',
+                method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -82,7 +82,7 @@ export const SubmitPage = (props) => {
             const data = await response.json();
             console.log(data);
 
-            if (responseConsole[responseConsole.length - 1].status === "standby") {
+            if (responseConsole.length > 0 && responseConsole[responseConsole.length - 1].status === "standby") {
                 setResponseConsole(responseConsole.slice(0, responseConsole.length - 1));
             }
 
