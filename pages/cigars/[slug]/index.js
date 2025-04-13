@@ -88,7 +88,7 @@ const CigarPage = (props) => {
               icon: <path xmlns="http://www.w3.org/2000/svg" d="M269-86q-53 0-89.5-36.5T143-212v-497H80v-126h257v-63h284v63h259v126h-63v497q0 53-36.5 89.5T691-86H269Zm422-623H269v497h422v-497ZM342-281h103v-360H342v360Zm173 0h103v-360H515v360ZM269-709v497-497Z"/>
              },
              {
-              label: 'Revert', href: router.asPath + '/edit#revert',
+              label: 'Revert', href: router.asPath + '/edit?tab=submit-section#revert',
               icon: <path xmlns="http://www.w3.org/2000/svg" d="M292-166v-126h293q51 0 87-35.5t36-86.5q0-51-36-87t-87-36H366l83 83-88 88-235-234 235-234 88 88-83 83h219q103 0 176 72.5T834-415q0 103-73 176t-176 73H292Z"/>
              }
           ]}
