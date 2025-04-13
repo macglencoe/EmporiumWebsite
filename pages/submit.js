@@ -67,7 +67,7 @@ export const SubmitPage = (props) => {
                 ok: true
             }])
             const response = await fetch('/api/commit', {
-                method: 'POST',
+                method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -180,6 +180,16 @@ export const SubmitPage = (props) => {
                     onTouchStart={() => play()}
                 >
                     <button /* disabled */ className='commit-button' onClick={() => {
+                        if (diff.length === 0) {
+                            setResponseConsole([...responseConsole, {
+                                time: new Date().toLocaleString(),
+                                status: 400,
+                                statusText: "Bad Request",
+                                ok: false,
+                                message: "No changes detected"
+                            }])
+                            return
+                        }
                         const branches = ['testing', 'cms'];
                         for (const branch of branches) {
                             commitToGit(localData, branch);
