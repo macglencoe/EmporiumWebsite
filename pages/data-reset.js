@@ -15,7 +15,7 @@ export async function getServerSideProps() {
 export const DataReset = (props) => {
     const router = useRouter();
     const handleReset = async () => {
-        await resetData({commitSha: props.commitSha});
+        await resetData({commitSha: props.commitSha, force: true});
         router.push('/');
     }
     return (

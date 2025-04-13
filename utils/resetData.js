@@ -1,12 +1,12 @@
 "use client"
-export const resetData = async ({commitSha}) => {
+export const resetData = async ({commitSha, force}) => {
     if (typeof window == 'undefined') {
         console.log("undefined window");
         return;
     }
 
     const localSha = localStorage.getItem('tempData_sha');
-    if (commitSha == localSha) return;
+    if (commitSha == localSha && !force) return;
 
     alert("New data available. Resetting now.");
 
