@@ -67,7 +67,7 @@ export const SubmitPage = (props) => {
                 ok: true
             }])
             const response = await fetch('/api/commit', {
-                method: 'PUT',
+                method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
