@@ -9028,19 +9028,5 @@
       }
     ],
     "slug": "random-stick"
-  },
-  {
-    "Cigar Brand": "Test",
-    "Cigar Name": "Test",
-    "Wrapper": "",
-    "Binder": "",
-    "Filler": "",
-    "Flavor_Profile": "",
-    "Strength_Profile": "",
-    "Sizes": [
-      {}
-    ],
-    "slug": "test-test",
-    "Date Added": "2025-04-13"
   }
 ]
