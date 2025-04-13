@@ -104,21 +104,6 @@ export const SubmitPage = (props) => {
                 message: error.message
             }])
         }
-
-        /* if (response.ok) {
-            
-            setResponseConsole([...responseConsole, {
-                time: new Date().toLocaleString(),
-                ...response
-            }]);
-        } else {
-            console.log(response);
-            setResponseConsole([...responseConsole, {
-                time: new Date().toLocaleString(),
-                status: response.status,
-                ...data
-            }]);
-        } */
     }
 
     const getDiff = () => {
