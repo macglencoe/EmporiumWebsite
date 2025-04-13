@@ -248,10 +248,10 @@ export const SubmitPage = (props) => {
     border: 1px solid var(--dl-color-theme-primary1);
 }
 .response-container li.response-ok {
-    box-shadow: inset 10px 0 10px -10px var(--positive);
+    border-left: 10px solid var(--positive);
 }
 .response-container li.response-error {
-    box-shadow: inset 10px 0 10px -10px var(--negative);
+    border-left: 10px solid var(--negative);
 }
 .response-container li > div.response-header {
     display: flex;
