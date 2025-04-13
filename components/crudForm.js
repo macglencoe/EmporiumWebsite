@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ImageUpload from "./imageUpload";
 import ImageDelete from "./imageDelete";
 import Notice from "./notice";
@@ -227,16 +227,40 @@ const CrudForm = (props) => {
 
     const [finalFileSize, setFinalFileSize] = useState(0);
 
+    const tabList = [
+        { id: "metadata-section", label: "Metadata", default: true },
+        { id: "array-section", label: "Sizes" },
+        { id: "image-section", label: "Image" },
+        { id: "submit-section", label: "Submit" },
+    ];
+
     const [currentSection, setCurrentSection] = useState("");
 
 
-
+    // On initial mount, set the current section from the query or use the default tab.
     useEffect(() => {
         const { tab } = router.query;
         if (tab) {
             setCurrentSection(tab);
+        } else if (!currentSection) {
+            const defaultTab = tabList.find((tab) => tab.default);
+            setCurrentSection(defaultTab.id);
         }
-    }, [router.query]);
+    }, []);
+
+    // Update the URL query using shallow routing only if necessary.
+    useEffect(() => {
+        if (router.query.tab !== currentSection) {
+            router.replace(
+                {
+                    pathname: router.pathname,
+                    query: { ...router.query, tab: currentSection },
+                },
+                undefined,
+                { shallow: true }
+            );
+        }
+    }, [currentSection, router]);
 
     const getFinalFileSize = async (url) => {
         try {
@@ -288,26 +312,28 @@ const CrudForm = (props) => {
         }
     }, []);
 
-    useEffect(() => {
-        const tempErrors = {};
-        if (props.dataFields && localData) {
-            Object.entries(localData).forEach(([key, value]) => {
-                const error = validateField(key, value, props.dataFields[key]);
-                tempErrors = ({ ...tempErrors, [key]: error });
-            })
-        }
-        setErrors(tempErrors);
+    const openSection = (section) => {
+        setCurrentSection(section);
+    }
 
+    useEffect(() => {
+        if (props.dataFields && localData) {
+            const tempErrors = Object.keys(localData).reduce((acc, key) => {
+                return { ...acc, [key]: validateField(key, localData[key], props.dataFields[key]) };
+            }, {});
+            setErrors(tempErrors);
+        }
 
         if (localData && localData.image) {
             getFinalFileSize(localData.image);
         }
-    }, [localData]);
+    }, [localData, props.dataFields]);
+
 
     const validateField = (key, value, field) => {
         if (field) {
             if (field.type == "number") {
-                if (!isNaN(parseInt(value))) {
+                if (isNaN(parseInt(value))) {
                     return field.message;
                 } else return false;
             }
@@ -335,13 +361,7 @@ const CrudForm = (props) => {
         }
 
         // fetch final image size, after compression
-        fetch(url)
-            .then(response => response.blob())
-            .then(blob => {
-                setFinalFileSize((blob.size / 1024).toFixed(2));
-            }).catch(error => {
-                console.error(error);
-            })
+        getFinalFileSize(url);
     }
     const onImageDeleteSuccess = () => {
         const { image, ...rest } = localData;
@@ -383,59 +403,25 @@ const CrudForm = (props) => {
         setLoadingDelete(false);
     }
 
-    const openSection = (section) => {
-        setCurrentSection(section);
-    }
 
-    useEffect(() => {
-        router.push({
-            pathname: router.pathname,
-            query: { ...router.query, tab: currentSection }
-        });
-        if (typeof window == 'undefined') return;
-
-
-        const tabContainer = document.querySelector('.tabs-container');
-
-        if (tabContainer) {
-            tabContainer.scrollTop = 0;
-            for (let i = 0; i < tabContainer.children.length; i++) {
-                tabContainer.children[i].classList.remove('active');
-                if (tabContainer.children[i].classList.contains(currentSection)) {
-                    tabContainer.children[i].classList.add('active');
-                }
-                if (tabContainer.children[i].classList.contains('default') && currentSection === '') {
-                    tabContainer.children[i].classList.add('active');
-                }
-            }
-        }
-
-        const tablinks = document.querySelectorAll('.tablinks button');
-
-        for (let i = 0; i < tablinks.length; i++) {
-            tablinks[i].classList.remove('active');
-            if (tablinks[i].classList.contains(currentSection)) {
-                tablinks[i].classList.add('active');
-            }
-            if (tablinks[i].classList.contains('default') && currentSection === '') {
-                tablinks[i].classList.add('active');
-            }
-        }
-
-    }, [currentSection]);
 
 
 
     return (
         <>
             <div className="tablinks">
-                <button className="metadata-section default" onClick={() => openSection("metadata-section")}>Metadata</button>
-                <button className="array-section" onClick={() => openSection("array-section")}>Sizes</button>
-                <button className="image-section" onClick={() => openSection("image-section")}>Image</button>
-                <button className="submit-section" onClick={() => openSection("submit-section")}>Submit</button>
+                {tabList.map((tab) => (
+                    <button
+                        key={tab.id}
+                        onClick={() => openSection(tab.id)}
+                        className={`${tab.id} ${currentSection === tab.id ? "active" : ""}`}
+                    >
+                        {tab.label}
+                    </button>
+                ))}
             </div>
             <div className="tabs-container">
-                <section className="metadata-section default">
+                <section className={`metadata-section ${currentSection === "metadata-section" ? "active" : ""}`}>
                     <h2>{props.metadataTitle ?? "Metadata"}</h2>
                     {
                         localData &&
@@ -485,7 +471,7 @@ const CrudForm = (props) => {
                         })
                     }
                 </section>
-                <section className="array-section">
+                <section className={`array-section ${currentSection === "array-section" ? "active" : ""}`}>
                     {
                         localData &&
                         props.dataFields &&
@@ -598,7 +584,7 @@ const CrudForm = (props) => {
                     }
 
                 </section>
-                <section className="image-section">
+                <section className={`image-section ${currentSection === "image-section" ? "active" : ""}`}>
                     <h2>Image Upload</h2>
                     <ImageUpload
                         fileName={localData ? localData.slug : "cigar"}
@@ -624,7 +610,7 @@ const CrudForm = (props) => {
                     </div>}
                 </section>
 
-                <section className="submit-section">
+                <section className={`submit-section ${currentSection === "submit-section" ? "active" : ""}`}>
                     <div className="slug-container">
                         <h2>Slug</h2>
                         <p>
