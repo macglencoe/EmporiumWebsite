@@ -4200,7 +4200,7 @@
     "Binder": "Dominican",
     "Filler": "Dominican, Nicaraguan",
     "Flavor_Profile": "Cream",
-    "Strength_Profile": "Medium-Full",
+    "Strength_Profile": "Mild",
     "Sizes": [
       {
         "Size": "Petite Corona",
@@ -9030,23 +9030,21 @@
     "slug": "random-stick"
   },
   {
-    "Cigar Brand": "test brand",
-    "Cigar Name": "test name",
-    "Wrapper": "test wrapper",
-    "Binder": "test binder",
-    "Filler": "test filler",
-    "Flavor_Profile": "test flavor",
-    "Strength_Profile": "",
+    "Cigar Brand": "Test brand",
+    "Cigar Name": "Test cigar",
+    "Wrapper": "",
+    "Binder": "",
+    "Filler": "",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Medium",
     "Sizes": [
       {
-        "Size": "test size",
+        "Size": "Toro",
         "Barcode": "1234",
-        "In_Stock": true,
-        "Price": "1.00"
+        "Price": "1.20"
       }
     ],
-    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/image-RIfZKPJloIcNO7jVWiL4f2OlJvUnXH.png",
-    "slug": "test-brand-test-name",
-    "Date Added": "2025-04-12"
+    "slug": "test-brand-test-cigar",
+    "Date Added": "2025-04-13"
   }
 ]
