@@ -15,6 +15,49 @@ import PageTitle1 from '/components/pagetitle1';
 import { handleLocationClick } from '../utils/location';
 import { handlePhoneClick } from '../utils/phone';
 
+export const PodcastLink = ({ url }) => {
+    return (
+        <>
+            <div>
+                <h2>The Stick Figures</h2>
+                <b>This cigar was featured on an episode of our podcast!</b>
+                {url.includes('<iframe') && <iframe src={url.match(/src="([^"]*)"/)[1]} frameBorder="0" height="200px" width="100%"></iframe>}
+                {!url.includes('<iframe') && <>
+                    <p>Listen to the episode: </p>
+                    <a href={url} target="_blank" rel="noreferrer">The Stick Figures Podcast</a>
+                </>}
+            </div>
+            <style jsx>
+                {`
+div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+    align-items: center;
+}
+b {
+    font-family: Inter;
+    text-align: center;
+}
+iframe {
+    max-width: 600px;
+}
+a {
+    font-style: italic;
+    font-size: 2em;
+    text-decoration: underline;
+}
+a:hover {
+    translate: 0px -5px;
+    scale: 1.2;
+}
+                `}
+            </style>
+        </>
+    )
+}
+
 export const StringBubbleList = (props) => {
     return (
         <>
@@ -61,7 +104,7 @@ export const StringBubbleList = (props) => {
 }
 export const ProductImage = (props) => {
     const router = useRouter();
-    
+
     return (
         <>
             <div className={props.src ? "" : "no-image"}>
