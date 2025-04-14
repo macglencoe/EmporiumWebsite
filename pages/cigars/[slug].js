@@ -12,7 +12,7 @@ import Ksman from '../../components/ksman'
 import Link from 'next/link';
 import Layout from '../../components/layout';
 import PageTitle1 from '../../components/pagetitle1';
-import ProductPage, { Navigation, ShareButton, StringBubbleList } from '../../components/productPage';
+import ProductPage, { Navigation, PodcastLink, ShareButton, StringBubbleList } from '../../components/productPage';
 import { ProductImage, ProductSideContent } from '../../components/productPage';
 import { ProductSizeChart, ProductBasicInfo } from '../../components/productPage';
 import { ProductMainContent, ProductTitle } from '../../components/productPage';
@@ -99,6 +99,8 @@ const CigarPage = (props) => {
 
           </ProductMainContent>
         </ProductPage>
+
+        {cigar['Podcast_Link'] && <PodcastLink url={cigar['Podcast_Link']} />}
         
         <Disclaimer />
       </Layout>
