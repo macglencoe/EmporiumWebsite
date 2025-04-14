@@ -32,6 +32,10 @@
         "type": "mapped range",
         "values": ["", "Mild", "Mild-Medium", "Medium", "Medium-Full", "Full"]
     },
+    "Podcast_Link": {
+        "type": "string",
+        "autosuggest": false
+    },
     "Sizes": {
         "type": "array",
         "fields": {
