@@ -66,7 +66,7 @@ const CigarPage = (props) => {
           <ProductSideContent>
             <ProductImage
               hasImage={true}
-              src={`/cigars-img/${cigar.slug}/img.png`}
+              src={cigar.image}
               fallbackSearch={encodeURIComponent(cigar['Cigar Brand'] + ' ' + cigar['Cigar Name'])}
             />
             <ProductSizeChart

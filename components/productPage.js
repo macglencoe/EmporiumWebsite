@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { Fragment, useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router';
 import Data from '../public/data/consolidated_cigars.json';
 import cigarSizes from '../public/data/cigarsizes.json';
@@ -104,23 +104,11 @@ export const StringBubbleList = (props) => {
 }
 export const ProductImage = (props) => {
     const router = useRouter();
-    const [imageExists, setImageExists] = useState(false);
 
-    useEffect(() => {
-        const checkImageExists = async () => {
-            try {
-                const response = await fetch(props.src, { method: 'HEAD' });
-                setImageExists(response.ok);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-        checkImageExists();
-    }, [router.asPath]);
     return (
         <>
-            <div className={imageExists ? "" : "no-image"}>
-                {props.hasImage && imageExists ? (
+            <div className={props.src ? "" : "no-image"}>
+                {props.src && imageExists ? (
                     <img
                         alt="image"
                         src={props.src}
@@ -227,23 +215,23 @@ export const Navigation = (props) => {
                             </Link>
                         </li>
                     }
-                    
-                    { props.next && props.next[props.nameField] &&
-                        <li>
-                        <Link href={".." + props.href + "/" + props.next.slug} >
-                            <a className="next" aria-label='Next' tabIndex={0}>
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        height="33px"
-                                        viewBox="0 -960 960 960"
-                                        width="33px"
-                                    ><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" /></svg>
-                                    <span>{props.next[props.nameField]}</span>
 
-                                </div>
-                            </a>
-                        </Link>
-                    </li>}
+                    {props.next && props.next[props.nameField] &&
+                        <li>
+                            <Link href={".." + props.href + "/" + props.next.slug} >
+                                <a className="next" aria-label='Next' tabIndex={0}>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            height="33px"
+                                            viewBox="0 -960 960 960"
+                                            width="33px"
+                                        ><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" /></svg>
+                                        <span>{props.next[props.nameField]}</span>
+
+                                    </div>
+                                </a>
+                            </Link>
+                        </li>}
                 </ul>
             </nav>
 
@@ -593,25 +581,26 @@ export const ShareButton = (props) => {
     const router = useRouter();
     return (
         <>
-        <button onClick={() => {
-            if (navigator.canShare)
-            {navigator.share({
-                title: props.title,
-                text: props.text,
-                url: router.asPath
-            });} else {
-                navigator.clipboard.writeText(router.asPath).then(() => {
-                    alert('Link copied to clipboard!');
-                });
-            }
-        }}>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="M683.94-46Q621-46 577-89.75T533-196q0-5 2-19L288-358q-19 14-41.91 22-22.91 8-49.09 8-62.92 0-106.96-44.26Q46-416.53 46-479.76 46-543 90.04-587.5 134.08-632 197-632q26 0 50 8.5t44 23.5l243-141q-1-5-1-11v-11q0-62.92 44.06-106.96 44.06-44.04 107-44.04T791-869.94q44 44.06 44 107T790.96-656Q746.92-612 684-612q-28.36 0-53.18-9.5T586-648L347-511q2 8.05 2.5 15.52.5 7.48.5 15.98t-1 17q-1 8.5-3 16.5l238 137q20-18 45.45-28.5Q654.91-348 684-348q62.92 0 106.96 44.26Q835-259.47 835-196.24 835-133 790.94-89.5 746.88-46 683.94-46Zm-.55-116q14.61 0 25.11-10.09t10.5-25Q719-212 708.65-222T683-232q-14.45 0-24.22 10.5Q649-211 649-197t9.89 24.5q9.88 10.5 24.5 10.5Zm-486.3-282Q212-444 223-454.29t11-25.5q0-15.21-11-25.71T197.09-516q-14.91 0-25 10.29T162-480.21q0 15.21 10.09 25.71t25 10.5ZM684-728q14 0 24-9.89 10-9.88 10-24.5 0-14.61-9.89-25.11-9.88-10.5-24.5-10.5-14.61 0-25.11 10.35T648-762q0 14.45 11 24.22 11 9.78 25 9.78Zm1 531ZM198-480Zm486-283Z"/></svg>
-            <span>Share</span>
-        </button>
+            <button onClick={() => {
+                if (navigator.canShare) {
+                    navigator.share({
+                        title: props.title,
+                        text: props.text,
+                        url: router.asPath
+                    });
+                } else {
+                    navigator.clipboard.writeText(router.asPath).then(() => {
+                        alert('Link copied to clipboard!');
+                    });
+                }
+            }}>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="M683.94-46Q621-46 577-89.75T533-196q0-5 2-19L288-358q-19 14-41.91 22-22.91 8-49.09 8-62.92 0-106.96-44.26Q46-416.53 46-479.76 46-543 90.04-587.5 134.08-632 197-632q26 0 50 8.5t44 23.5l243-141q-1-5-1-11v-11q0-62.92 44.06-106.96 44.06-44.04 107-44.04T791-869.94q44 44.06 44 107T790.96-656Q746.92-612 684-612q-28.36 0-53.18-9.5T586-648L347-511q2 8.05 2.5 15.52.5 7.48.5 15.98t-1 17q-1 8.5-3 16.5l238 137q20-18 45.45-28.5Q654.91-348 684-348q62.92 0 106.96 44.26Q835-259.47 835-196.24 835-133 790.94-89.5 746.88-46 683.94-46Zm-.55-116q14.61 0 25.11-10.09t10.5-25Q719-212 708.65-222T683-232q-14.45 0-24.22 10.5Q649-211 649-197t9.89 24.5q9.88 10.5 24.5 10.5Zm-486.3-282Q212-444 223-454.29t11-25.5q0-15.21-11-25.71T197.09-516q-14.91 0-25 10.29T162-480.21q0 15.21 10.09 25.71t25 10.5ZM684-728q14 0 24-9.89 10-9.88 10-24.5 0-14.61-9.89-25.11-9.88-10.5-24.5-10.5-14.61 0-25.11 10.35T648-762q0 14.45 11 24.22 11 9.78 25 9.78Zm1 531ZM198-480Zm486-283Z" /></svg>
+                <span>Share</span>
+            </button>
 
-       
-        <style jsx>
-            {`
+
+            <style jsx>
+                {`
             button {
                 align-self: flex-end;
                 padding: 10px;
@@ -646,7 +635,7 @@ export const ShareButton = (props) => {
                 }
             }
             `}
-        </style>
+            </style>
         </>
     )
 }
