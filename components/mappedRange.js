@@ -32,7 +32,7 @@ export const MappedRange = ({
                         {originalValue != value && <span className="original-value"><strike>{originalValue ?? "N/A"}</strike></span>}
                         <span>{value !== "" ? value : "N/A"}</span>
                     </div>
-                    <input list="range-datalist" id="range-input" type="range" min={min} max={max} value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+                    <input list="range-datalist" id="range-input" type="range" min={min} max={max} value={inputValue} onChange={(e) => setInputValue(parseInt(e.target.value))} />
 
                     <datalist id="range-datalist">
                         {values.map((v, i) => <option key={i} value={zero ? i : i + 1} label={v}>{v}</option>)}

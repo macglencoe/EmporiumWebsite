@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ImageUpload from "./imageUpload";
 import ImageDelete from "./imageDelete";
 import Notice from "./notice";
@@ -9,16 +9,16 @@ import { PriceInput } from "./priceInput";
 
 const InputField = (props) => {
     const [options, setOptions] = useState([]);
-    const [input, setInput] = useState(props.value);
     const [filtered, setFiltered] = useState([]);
     const handleChange = (e) => {
         props.onChange(e);
-        setInput(e.target.value);
 
-        if (options.length > 0) {
+        if (options.length > 0 && !(options.length == 1 && options[0] == undefined)) {
+            console.log(options);
+
             setFiltered(
                 options.filter((option) =>
-                    option.toLowerCase().includes(e.target.value.toLowerCase())
+                    option?.toLowerCase().includes(e.target.value.toLowerCase())
                 )
             );
         }
@@ -27,8 +27,7 @@ const InputField = (props) => {
         if (props.getOptions) {
             setOptions(props.getOptions(props.name));
         }
-
-    }, [input]);
+    }, [props.name]);
     return (
         <>
             <div className={
@@ -50,7 +49,7 @@ const InputField = (props) => {
                         rows={props.rows ?? 1}
                         cols="20"
                         type="text"
-                        value={props.value}
+                        value={props.value ?? ""}
                         name={props.name}
                         onChange={(e) => {
                             handleChange(e);
@@ -230,9 +229,40 @@ const CrudForm = (props) => {
 
     const [finalFileSize, setFinalFileSize] = useState(0);
 
+    const tabList = [
+        { id: "metadata-section", label: "Metadata", default: true },
+        { id: "array-section", label: "Sizes" },
+        { id: "image-section", label: "Image" },
+        { id: "submit-section", label: "Submit" },
+    ];
+
+    const [currentSection, setCurrentSection] = useState("");
 
 
+    // On initial mount, set the current section from the query or use the default tab.
+    useEffect(() => {
+        const { tab } = router.query;
+        if (tab) {
+            setCurrentSection(tab);
+        } else if (!currentSection) {
+            const defaultTab = tabList.find((tab) => tab.default);
+            setCurrentSection(defaultTab.id);
+        }
+    }, []);
 
+    // Update the URL query using shallow routing only if necessary.
+    useEffect(() => {
+        if (router.query.tab !== currentSection) {
+            router.replace(
+                {
+                    pathname: router.pathname,
+                    query: { ...router.query, tab: currentSection },
+                },
+                undefined,
+                { shallow: true }
+            );
+        }
+    }, [currentSection, router]);
 
     const getFinalFileSize = async (url) => {
         try {
@@ -245,14 +275,14 @@ const CrudForm = (props) => {
         }
     };
 
-/**
- * Retrieves unique values from a specified field in a data set.
- * 
- * @param {string} field - The field name to extract unique values from.
- * @param {string|boolean} [flatMapKey=false] - The key to extract values from within a nested array.
- * @param {Function} [getData=props.pullAllTempData] - A function that retrieves the data set.
- * @returns {Array} - An array of unique values sorted in lexicographical order.
- */
+    /**
+     * Retrieves unique values from a specified field in a data set.
+     * 
+     * @param {string} field - The field name to extract unique values from.
+     * @param {string|boolean} [flatMapKey=false] - The key to extract values from within a nested array.
+     * @param {Function} [getData=props.pullAllTempData] - A function that retrieves the data set.
+     * @returns {Array} - An array of unique values sorted in lexicographical order.
+     */
     const getUniqueValues = (field, flatMapKey = false, getData = props.pullAllTempData,) => {
         let uniqueValues = [];
         if (typeof window !== 'undefined' && getData) {
@@ -261,7 +291,7 @@ const CrudForm = (props) => {
                     .filter(item => item[field] && item[field].length > 0) // filter out empty arrays
                     .flatMap(item => item[field].map(subItem => subItem[flatMapKey] ? subItem[flatMapKey].toString() : ''))
                 )]
-                .sort((a, b) => String(a).localeCompare(String(b)));
+                    .sort((a, b) => String(a).localeCompare(String(b)));
             } else {
                 uniqueValues = [...new Set(getData()
                     .map(item => item[field]))]
@@ -284,26 +314,28 @@ const CrudForm = (props) => {
         }
     }, []);
 
-    useEffect(() => {
-        const tempErrors = {};
-        if (props.dataFields && localData) {
-            Object.entries(localData).forEach(([key, value]) => {
-                const error = validateField(key, value, props.dataFields[key]);
-                tempErrors = ({ ...tempErrors, [key]: error });
-            })
-        }
-        setErrors(tempErrors);
+    const openSection = (section) => {
+        setCurrentSection(section);
+    }
 
+    useEffect(() => {
+        if (props.dataFields && localData) {
+            const tempErrors = Object.keys(localData).reduce((acc, key) => {
+                return { ...acc, [key]: validateField(key, localData[key], props.dataFields[key]) };
+            }, {});
+            setErrors(tempErrors);
+        }
 
         if (localData && localData.image) {
             getFinalFileSize(localData.image);
         }
-    }, [localData]);
+    }, [localData, props.dataFields]);
+
 
     const validateField = (key, value, field) => {
         if (field) {
             if (field.type == "number") {
-                if (!isNaN(parseInt(value))) {
+                if (isNaN(parseInt(value))) {
                     return field.message;
                 } else return false;
             }
@@ -331,13 +363,7 @@ const CrudForm = (props) => {
         }
 
         // fetch final image size, after compression
-        fetch(url)
-            .then(response => response.blob())
-            .then(blob => {
-                setFinalFileSize((blob.size / 1024).toFixed(2));
-            }).catch(error => {
-                console.error(error);
-            })
+        getFinalFileSize(url);
     }
     const onImageDeleteSuccess = () => {
         const { image, ...rest } = localData;
@@ -385,8 +411,19 @@ const CrudForm = (props) => {
 
     return (
         <>
-            <section>
-                <div>
+            <div className="tablinks">
+                {tabList.map((tab) => (
+                    <button
+                        key={tab.id}
+                        onClick={() => openSection(tab.id)}
+                        className={`${tab.id} ${currentSection === tab.id ? "active" : ""}`}
+                    >
+                        {tab.label}
+                    </button>
+                ))}
+            </div>
+            <div className="tabs-container">
+                <section className={`metadata-section ${currentSection === "metadata-section" ? "active" : ""}`}>
                     <h2>{props.metadataTitle ?? "Metadata"}</h2>
                     {
                         localData &&
@@ -431,12 +468,12 @@ const CrudForm = (props) => {
                                     ></MappedRange>
                                 )
                             }
-                            
-                            
+
+
                         })
                     }
-                </div>
-                <div>
+                </section>
+                <section className={`array-section ${currentSection === "array-section" ? "active" : ""}`}>
                     {
                         localData &&
                         props.dataFields &&
@@ -453,8 +490,7 @@ const CrudForm = (props) => {
                                                             <h3>Entry {sizeIndex + 1}</h3>
                                                             {props.dataFields[key] && props.dataFields[key]["fields"] &&
                                                                 Object.keys(props.dataFields[key]["fields"]).map((fieldKey, index) => {
-                                                                    console.log("key: ", key);
-                                                                    console.log("fieldKey: ", fieldKey, props.dataFields[key]["fields"][fieldKey]);
+                                                                    
                                                                     if (props.dataFields[key]["fields"][fieldKey]["type"] == "string") {
                                                                         return (
                                                                             <InputField
@@ -481,15 +517,15 @@ const CrudForm = (props) => {
                                                                     }
                                                                     if (props.dataFields[key]["fields"][fieldKey]["type"] == "boolean") {
                                                                         return (
-                                                                                <BooleanInput
-                                                                                    label={fieldKey}
-                                                                                    value={localData[key][sizeIndex][fieldKey]}
-                                                                                    onChange={(e) => {
-                                                                                        let copy = [...localData[key]];
-                                                                                        copy[sizeIndex][fieldKey] = e;
-                                                                                        setLocalData({ ...localData, [key]: copy });
-                                                                                    }}>
-                                                                                </BooleanInput>
+                                                                            <BooleanInput
+                                                                                label={fieldKey}
+                                                                                value={localData[key][sizeIndex][fieldKey]}
+                                                                                onChange={(e) => {
+                                                                                    let copy = [...localData[key]];
+                                                                                    copy[sizeIndex][fieldKey] = e;
+                                                                                    setLocalData({ ...localData, [key]: copy });
+                                                                                }}>
+                                                                            </BooleanInput>
                                                                         )
                                                                     }
                                                                     if (props.dataFields[key]["fields"][fieldKey]["type"] == "price") {
@@ -548,32 +584,35 @@ const CrudForm = (props) => {
                         })
                     }
 
-                    <div className="image-upload-container">
-                        <h2>Image Upload</h2>
-                        <ImageUpload
-                            fileName={localData ? localData.slug : "cigar"}
-                            onImageUpload={onImageUpload}
-                            onImageUploadSuccess={onImageUploadSuccess}
-                        ></ImageUpload>
-                        {loading &&
-                            <Notice type="loading">Uploading {fileSize} KB...</Notice>
-                        }
-                        {loadingDelete &&
-                            <Notice type="loading">Deleting former image...</Notice>
-                        }
-                        {localData && localData.image && <div className="url">
-                            {finalFileSize > 0 && <p>Final file size: {finalFileSize} KB</p>}
-                            <img src={localData.image} alt="Cigar Image" />
-                            <p>URL: {localData.image}</p>
-                            <a href={localData.image} target="_blank" rel="noopener noreferrer">Open in new tab</a>
-                            <ImageDelete
-                                url={localData.image}
-                                onImageDeleteSuccess={onImageDeleteSuccess}
-                            ></ImageDelete>
+                </section>
+                <section className={`image-section ${currentSection === "image-section" ? "active" : ""}`}>
+                    <h2>Image Upload</h2>
+                    <ImageUpload
+                        image={localData ? localData.image : null}
+                        fileName={localData ? localData.slug : "cigar"}
+                        onImageUpload={onImageUpload}
+                        onImageUploadSuccess={onImageUploadSuccess}
+                    ></ImageUpload>
+                    {loading &&
+                        <Notice type="loading">Uploading {fileSize} KB...</Notice>
+                    }
+                    {loadingDelete &&
+                        <Notice type="loading">Deleting former image...</Notice>
+                    }
+                    {localData && localData.image && <div className="url">
+                        {finalFileSize > 0 && <p>Final file size: {finalFileSize} KB</p>}
+                        <img src={localData.image} alt="Cigar Image" />
+                        <p>URL: {localData.image}</p>
+                        <a href={localData.image} target="_blank" rel="noopener noreferrer">Open in new tab</a>
+                        <ImageDelete
+                            url={localData.image}
+                            onImageDeleteSuccess={onImageDeleteSuccess}
+                        ></ImageDelete>
 
-                        </div>}
-                    </div>
+                    </div>}
+                </section>
 
+                <section className={`submit-section ${currentSection === "submit-section" ? "active" : ""}`}>
                     <div className="slug-container">
                         <h2>Slug</h2>
                         <p>
@@ -634,12 +673,54 @@ const CrudForm = (props) => {
                             }}
                         >Revert</button>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
             <style jsx>
                 {`
                     .l2 {
     margin: 1em;
+}
+
+.tablinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.tablinks button {
+    padding: 0.5em 1em;
+    flex: 1;
+    font-size: 1.3em;
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 5px solid var(--dl-color-theme-secondary2);
+    text-transform: uppercase;
+    box-shadow: inset 0px -40px 40px -40px rgba(0, 0, 0, 0.35);
+}
+.tablinks button.active {
+    border-bottom: 5px solid var(--dl-color-theme-primary1);
+    filter: brightness(100%);
+    box-shadow: none;
+}
+.tablinks button:has(+ .active) {
+    border-right: 4px solid var(--dl-color-theme-secondary2);
+    border-bottom-right-radius: 10px;
+    box-shadow: inset -30px -40px 40px -40px rgba(0, 0, 0, 0.35);
+}
+.tablinks .active + button {
+    border-left: 4px solid var(--dl-color-theme-secondary2);
+    border-bottom-left-radius: 10px;
+    box-shadow: inset 30px -40px 40px -40px rgba(0, 0, 0, 0.35);
+}
+
+.tabs-container > section {
+    display: none;
+}
+
+.tabs-container > section.active {
+    display: flex;
 }
 
 .image-upload-container .url {
