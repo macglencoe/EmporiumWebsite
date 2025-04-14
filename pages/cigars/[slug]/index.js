@@ -110,7 +110,7 @@ const CigarPage = (props) => {
               fallbackSearch={encodeURIComponent(cigar['Cigar Brand'] + ' ' + cigar['Cigar Name'])}
             />
             <ProductSizeChart
-              sizes={cigarLocalData.Sizes.map(size => size.Size)}
+              sizes={cigarLocalData.Sizes}
               allCigarSizes={cigarSizes}
             />
             {cigar['Flavor_Profile'] && <StringBubbleList title="Flavor"

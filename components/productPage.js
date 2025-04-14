@@ -343,8 +343,12 @@ export const ProductSizeChart = (props) => {
                 {props.sizes.map((size) => (
                     <div key={size} className="cigar-page-size-container">
                         <div className='cigar-size-cigar'>
-                            <span className="cigar-page-size">{size} </span>
-                            {props.allCigarSizes && props.allCigarSizes[size] && <span className="cigar-page-size" style={{ opacity: '70%' }}>{props.allCigarSizes[size].join(' x ')} *</span>}
+                            <span className="cigar-page-size">{size.Size} </span>
+                            {props.allCigarSizes && props.allCigarSizes[size.Size] && <span className="cigar-page-size" style={{ opacity: '70%',  fontSize: '10px' }}>{props.allCigarSizes[size.Size].join(' x ')} *</span>}
+                            {size.Barcode && <span className="cigar-page-size" style={{ opacity: '70%',  fontSize: '10px'}}>{size.Barcode}</span>}
+                            {size.Price && <span className="cigar-page-size">$ {size.Price}</span>}
+                            {size["In_Stock"] && <span className="cigar-page-size" style={{ fontSize: '10px' }}>{"In Stock"}</span>}
+                            {!size["In_Stock"] && <span className="cigar-page-size" style={{ fontSize: '10px' }}>{"Out of Stock"}</span>}
                         </div>
                         <div className='cigar-size-cigar-end'></div>
                     </div>
@@ -380,7 +384,11 @@ export const ProductSizeChart = (props) => {
             padding: 5px;
             background: var(--dl-color-theme-secondary2);
             min-width: max-content;
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
           }
+        
 
           .cigar-page-size {
             font-size: 18px;
