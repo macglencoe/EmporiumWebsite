@@ -1,4 +1,3 @@
-import { del } from "@vercel/blob";
 import { useState } from "react";
 import Notice from "./notice";
 
@@ -9,6 +8,8 @@ export const ImageDelete = (props) => {
         setLoading(true);
         if (!props.url) {
             alert("No URL to delete found. Please report this")
+            setLoading(false);
+            return
         }
         
         const response = await fetch('/api/deleteImage', {
