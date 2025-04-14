@@ -194,7 +194,7 @@ export const SubmitPage = (props) => {
                                 }])
                                 return
                             }
-                            const branches = ['cms'];
+                            const branches = ['cms', 'main'];
                             for (const branch of branches) {
                                 commitToGit(localData, branch);
                             }
