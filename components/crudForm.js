@@ -13,7 +13,8 @@ const InputField = (props) => {
     const handleChange = (e) => {
         props.onChange(e);
 
-        if (options.length > 0) {
+        if (options.length > 0 && !(options.length == 1 && options[0] == undefined)) {
+            console.log(options);
             setFiltered(
                 options.filter((option) =>
                     option.toLowerCase().includes(e.target.value.toLowerCase())
@@ -488,8 +489,7 @@ const CrudForm = (props) => {
                                                             <h3>Entry {sizeIndex + 1}</h3>
                                                             {props.dataFields[key] && props.dataFields[key]["fields"] &&
                                                                 Object.keys(props.dataFields[key]["fields"]).map((fieldKey, index) => {
-                                                                    console.log("key: ", key);
-                                                                    console.log("fieldKey: ", fieldKey, props.dataFields[key]["fields"][fieldKey]);
+                                                                    
                                                                     if (props.dataFields[key]["fields"][fieldKey]["type"] == "string") {
                                                                         return (
                                                                             <InputField
