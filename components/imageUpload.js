@@ -1,13 +1,11 @@
 import { useState } from "react";
 import browserImageCompression from "browser-image-compression";
-import { del } from "@vercel/blob";
 import Notice from "./notice";
 
 export const ImageUpload = (props) => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [error, setError] = useState(null);
     const [compressionProgress, setCompressionProgress] = useState(0);
-    const [loadingDeletion, setLoadingDeletion] = useState(false);
 
     const fileName = props.fileName ?? "image";
 
@@ -18,8 +16,7 @@ export const ImageUpload = (props) => {
     };
 
     const handleDelete = async (url) => {
-        setLoadingDeletion(true);
-        confirm("Delete former image?")
+        alert("Deleting former image...");
         if (!url) {
             alert("No URL to delete found. Please report this")
         }
@@ -39,7 +36,6 @@ export const ImageUpload = (props) => {
         } else {
             console.error("Deletion failed: ", data.message)
         }
-        setLoadingDeletion(false);
     }
 
     const handleUpload = async () => {
@@ -62,8 +58,6 @@ export const ImageUpload = (props) => {
             setError("Image compression failed. See console for details.");
         }
 
-        console.log(compressedImage.type)
-
         const fileExtension = selectedFile.type.split("/")[1];
         const fixedFile = new File([compressedImage], `${fileName}.${fileExtension}`, {
             type: compressedImage.type
@@ -73,7 +67,9 @@ export const ImageUpload = (props) => {
         formData.append('file', fixedFile);
 
         const fileSizeInKB = (fixedFile.size / 1024).toFixed(2);
-        props.onImageUpload(fileSizeInKB);
+        if (props.onImageUpload) {
+            props.onImageUpload(fileSizeInKB);
+        }
 
         const response = await fetch('/api/uploadImage', {
             method: 'POST',
@@ -84,7 +80,9 @@ export const ImageUpload = (props) => {
 
         if (response.ok) {
             console.log('Image uploaded successfully:', data.url);
-            props.onImageUploadSuccess(data.url);
+            if (props.onImageUploadSuccess) {
+                props.onImageUploadSuccess(data.url);
+            }
         } else {
             console.error("Upload failed:", data.message);
             setError(data.message);
@@ -108,7 +106,6 @@ export const ImageUpload = (props) => {
 
                 {
                     compressionProgress > 0 &&
-                    compressionProgress < 100 &&
                     <div className="compression-progress">
                         <div>
 
@@ -117,7 +114,7 @@ export const ImageUpload = (props) => {
                                 {
                                     selectedFile.size > 1048576
                                         ? `${(selectedFile.size / 1048576).toFixed(2)}MB`
-                                        : `${(selectedFile.size / 1024).toFixed(2)}KdB`
+                                        : `${(selectedFile.size / 1024).toFixed(2)}KB`
                                 }
                             </p>
                             <p>{compressionProgress}%</p>

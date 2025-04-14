@@ -587,6 +587,7 @@ const CrudForm = (props) => {
                 <section className={`image-section ${currentSection === "image-section" ? "active" : ""}`}>
                     <h2>Image Upload</h2>
                     <ImageUpload
+                        image={localData ? localData.image : null}
                         fileName={localData ? localData.slug : "cigar"}
                         onImageUpload={onImageUpload}
                         onImageUploadSuccess={onImageUploadSuccess}
