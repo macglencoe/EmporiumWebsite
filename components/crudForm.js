@@ -15,9 +15,10 @@ const InputField = (props) => {
 
         if (options.length > 0 && !(options.length == 1 && options[0] == undefined)) {
             console.log(options);
+
             setFiltered(
                 options.filter((option) =>
-                    option.toLowerCase().includes(e.target.value.toLowerCase())
+                    option?.toLowerCase().includes(e.target.value.toLowerCase())
                 )
             );
         }
