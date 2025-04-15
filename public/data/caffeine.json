@@ -28,6 +28,12 @@
         "Type": "Coffee"
     },
     {
+        "Product Name": "The Stick Figures Blend",
+        "Roast": "Medium",
+        "slug": "the-stick-figures-blend",
+        "Type": "Coffee"
+    },
+    {
         "Product Name": "Kona Blend",
         "Roast": "Medium",
         "Origin": "Hawaii",
