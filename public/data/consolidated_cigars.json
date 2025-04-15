@@ -8193,7 +8193,8 @@
         "Price": "12.00"
       }
     ],
-    "slug": "punch-rare-corojo"
+    "slug": "punch-rare-corojo",
+    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/4VHM2oMHnSOgTbvk12cKCj?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
   },
   {
     "Cigar Brand": "Quorum",
