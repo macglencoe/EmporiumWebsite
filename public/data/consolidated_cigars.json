@@ -2516,14 +2516,20 @@
       {
         "Size": "Toro",
         "Barcode": 854185004250,
-        "In_Stock": "TRUE",
+        "In_Stock": false,
         "Price": "9.95"
       },
       {
         "Size": "Gordo",
         "Barcode": 855290006023,
-        "In_Stock": "TRUE",
+        "In_Stock": false,
         "Price": "14.30"
+      },
+      {
+        "Size": "80 x6",
+        "Barcode": "854185004946",
+        "In_Stock": true,
+        "Price": "13.90"
       }
     ],
     "slug": "c-l-e-asylum-13"
@@ -3926,7 +3932,7 @@
       {
         "Size": "Toro",
         "Barcode": "",
-        "In_Stock": "TRUE",
+        "In_Stock": false,
         "Price": "14.30"
       }
     ],
@@ -3970,7 +3976,7 @@
   },
   {
     "Cigar Brand": "E.P. Carrillo",
-    "Cigar Name": "Honduras",
+    "Cigar Name": "Essence Honduras",
     "Wrapper": "Honduran",
     "Binder": "Honduran",
     "Filler": "Honduran , Nicaraguan",
@@ -9261,6 +9267,183 @@
       }
     ],
     "slug": "la-flor-dominicana-reserva-especial-el-jocko",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "E.P. Carrillo",
+    "Cigar Name": "Essence Sumatra",
+    "Wrapper": "Ecuador Sumatra",
+    "Binder": "Nicaragua, Honduras",
+    "Filler": "Dominican, Nicaraguan",
+    "Flavor_Profile": "Almond, White Pepper, Coffee, Sweetness",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "811167022770",
+        "In_Stock": true,
+        "Price": "9.80"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "811167022787",
+        "In_Stock": true,
+        "Price": "10.60"
+      }
+    ],
+    "slug": "ep-carrillo-essence-sumatra",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "E.P. Carrillo",
+    "Cigar Name": "Essence Maduro",
+    "Wrapper": "Mexican San Andres",
+    "Binder": "Honduran",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Spice, Cocoa, Sweetness",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "811167022831",
+        "In_Stock": true,
+        "Price": "9.80"
+      }
+    ],
+    "slug": "ep-carrillo-essence-maduro",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "Montecristo",
+    "Cigar Name": "Original No.3",
+    "Wrapper": "Connecticut Shade",
+    "Binder": "Dominican",
+    "Filler": "Cuban Seed Dominican",
+    "Flavor_Profile": "Smooth, Creamy, White Pepper, Herbal",
+    "Strength_Profile": "Mild",
+    "Sizes": [
+      {
+        "Size": "44x5 1/2 Corona",
+        "Barcode": "071610980891",
+        "In_Stock": true,
+        "Price": "14.25"
+      }
+    ],
+    "slug": "montecristo-original-no3",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "Macanudo",
+    "Cigar Name": "M Vanilla Bourbon",
+    "Wrapper": "Cameroon",
+    "Binder": "Honduran",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Vanilla, Bourbon, Toasted Oak",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674161585",
+        "In_Stock": true,
+        "Price": "10.00"
+      }
+    ],
+    "slug": "macanudo-m-vanilla-bourbon",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "Macanudo",
+    "Cigar Name": "M Coffee",
+    "Wrapper": "Indonesian",
+    "Binder": "Philippine",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Coffee, Cream, Cedar, Spice",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674095941",
+        "In_Stock": true,
+        "Price": "10.50"
+      }
+    ],
+    "slug": "macanudo-m-coffee",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "Macanudo",
+    "Cigar Name": "M Bourbon",
+    "Wrapper": "Ecuadorian Shade",
+    "Binder": "Ecuadorian",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Bourbon, Cherry, Bitters",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674100713",
+        "In_Stock": true,
+        "Price": "10.00"
+      }
+    ],
+    "slug": "macanudo-m-bourbon",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "Macanudo",
+    "Cigar Name": "M Honey",
+    "Wrapper": "Ecuadorian Connect",
+    "Binder": "Honduran OSA",
+    "Filler": "Piloto Cubano, Dominican Olor",
+    "Flavor_Profile": "Honey, Sweet, Citrus, Fruit",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674161486",
+        "In_Stock": true,
+        "Price": "10.00"
+      }
+    ],
+    "slug": "macanudo-m-honey",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "Macanudo",
+    "Cigar Name": "M Irish Cream",
+    "Wrapper": "Cameroon",
+    "Binder": "Honduran OSA",
+    "Filler": "Piloto Cubano, Dominican Olor",
+    "Flavor_Profile": "Cream, Chocolate, Caramel",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674161530",
+        "In_Stock": true,
+        "Price": "10.00"
+      }
+    ],
+    "slug": "macanudo-m-irish-cream",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "E.P. Carrillo",
+    "Cigar Name": "Allegiance Confidant",
+    "Wrapper": "Ecuadorian Sumatra",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Spice, Nuts, Sweetness",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "811167022350",
+        "In_Stock": true,
+        "Price": "13.95"
+      }
+    ],
+    "slug": "ep-carrillo-allegiance-confidant",
     "Date Added": "2025-04-17"
   }
 ]
