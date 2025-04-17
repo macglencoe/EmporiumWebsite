@@ -9244,5 +9244,23 @@
     ],
     "slug": "perla-del-mar-maduro",
     "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "La Flor Dominicana",
+    "Cigar Name": "Reserva Especial El Jocko",
+    "Wrapper": "Connecticut Broadleaf",
+    "Binder": "Nicaraguan",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Cedar, Green Apple, Sassafras, Cream, Earth",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Perfecto",
+        "In_Stock": true,
+        "Price": "9.60"
+      }
+    ],
+    "slug": "la-flor-dominicana-reserva-especial-el-jocko",
+    "Date Added": "2025-04-17"
   }
 ]
