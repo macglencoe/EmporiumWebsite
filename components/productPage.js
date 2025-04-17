@@ -343,8 +343,10 @@ export const ProductSizeChart = (props) => {
                 {props.sizes.map((size) => (
                     <div key={size} className="cigar-page-size-container">
                         <div className='cigar-size-cigar'>
-                            <span className="cigar-page-size">{size} </span>
-                            {props.allCigarSizes && props.allCigarSizes[size] && <span className="cigar-page-size" style={{ opacity: '70%' }}>{props.allCigarSizes[size].join(' x ')} *</span>}
+                            <span className="cigar-page-size">{size.Size} </span>
+                            {size["In_Stock"] && <span className="in stock" style={{ fontSize: '10px' }}>{"In Stock"}</span>}
+                            {!size["In_Stock"] && <span className="out stock" style={{ fontSize: '10px' }}>{"Out of Stock"}</span>}
+                            {props.allCigarSizes && props.allCigarSizes[size.Size] && <span className="cigar-page-size" style={{ opacity: '70%', fontSize: '10px' }}>{props.allCigarSizes[size.Size].join(' x ')} *</span>}
                         </div>
                         <div className='cigar-size-cigar-end'></div>
                     </div>
@@ -364,6 +366,7 @@ export const ProductSizeChart = (props) => {
             border-bottom-left-radius: 10px;
             padding-top: 6px;
             padding-bottom: 10px;
+            
           }
         .cigar-page-available-sizes {
             font-size: 30px;
@@ -379,7 +382,11 @@ export const ProductSizeChart = (props) => {
         .cigar-size-cigar {
             padding: 5px;
             background: var(--dl-color-theme-secondary2);
-            min-width: max-content;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+            flex-wrap: wrap;
           }
 
           .cigar-page-size {
@@ -387,11 +394,29 @@ export const ProductSizeChart = (props) => {
             font-weight: 500;
             font-family: 'Inter';
             color: var(--dl-color-theme-primary2);
+            white-space: nowrap;
+          }
+          .stock {
+            font-size: 18px;
+            font-weight: 700;
+            font-family: Inter;
+            color: var(--dl-color-theme-secondary2);
+            white-space: nowrap;
+            background-color: var(--dl-color-theme-primary2);
+            padding: 0.1em 0.4em;
+            border-radius: 5px;
+          }
+          .in.stock {
+            border-left: 5px solid var(--positive);
+          }
+          .stock.out {
+            border-left: 5px solid var(--negative);
           }
 
           .cigar-size-cigar-end {
             background: var(--dl-color-theme-secondary2);
-            width: 20px;
+            width: 30px;
+            min-width: 30px;
             border-bottom-right-radius: 50%;
             border-top-right-radius: 50%;
           }
