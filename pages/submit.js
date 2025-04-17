@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
 import Layout from '../components/layout'
 import PageTitle1 from '../components/pagetitle1';
 import { diffJson } from 'diff';
-import { type } from 'jquery';
 
 
 
@@ -22,6 +21,9 @@ export const SubmitPage = (props) => {
     const audioRef = useRef();
     const [diff, setDiff] = useState([]);
     const [responseConsole, setResponseConsole] = useState([]);
+    const [commits, setCommits] = useState([]);
+    const [recentCommitSha, setRecentCommitSha] = useState('');
+    const [currentCommitSha, setCurrentCommitSha] = useState('');
 
     const play = () => {
         if (audioRef.current) {
@@ -38,14 +40,27 @@ export const SubmitPage = (props) => {
                 localStorage.setItem('tempData_cigars', JSON.stringify(props.data));
             }
             setLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
+            fetch(`/api/getCommits?branch=cms`).then(response => response.json()).then(data => setCommits(data));
+            setCurrentCommitSha(localStorage.getItem('tempData_sha') ?? 'No Sha Found');
         }
     }, []);
     useEffect(() => {
         getDiff();
     }, [localData]);
-    useEffect(() => {
 
-    }, [responseConsole]);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            fetch(`/api/getCommits?branch=cms`).then(response => response.json()).then(data => setCommits(data));
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        if (commits.length > 0) {
+            setRecentCommitSha(commits[0].sha);
+        }
+    }, [commits])
+
 
     const commitToGit = async (commitData, branch) => {
         // this function takes the data from the CMS form and commits it to github
@@ -135,6 +150,56 @@ export const SubmitPage = (props) => {
         <>
             <Layout>
                 <PageTitle1>Submit Changes</PageTitle1>
+
+                <table className='commit'>
+                    <tr>
+                        <th>Most Recent Commit: </th>
+                        <td>
+                            {commits.length > 0 &&
+                                <>
+                                    <p>{commits[0].commit.message ?? "No commit message found"}</p>
+                                    <p className='date'>{commits[0].commit.author.date ?? "No date found"}</p>
+                                    <b>{recentCommitSha ?? "No SHA Found"}</b>
+                                </>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Current Commit: </th>
+                        <td>
+                            <b>{currentCommitSha}</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Status: </th>
+                        <td>
+                            {currentCommitSha !== recentCommitSha && currentCommitSha !== "Unknown" &&
+                                <>
+                                    <b>{currentCommitSha.slice(0, 7)} ≠ {recentCommitSha.slice(0, 7)}</b>
+                                    <p>This most likely means a build is currently in progress, or there was an error with the build</p>
+                                    <p>Go to the <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>Vercel Dashboard</a> to check the build status</p>
+                                    <p>In the meantime, <b>you won't be able to submit changes</b></p>
+                                </>
+                            }
+                            {
+                                currentCommitSha === recentCommitSha &&
+                                <>
+                                    <b>{currentCommitSha.slice(0, 7)} = {recentCommitSha.slice(0, 7)}</b>
+                                    <p>Commits are up to date, and <b>you are able to submit changes</b></p>
+                                </>
+                            }
+                            {
+                                currentCommitSha === "Unknown" &&
+                                <>
+                                    <p>Unable to determine if commits are up to date.</p>
+                                    <p>This most likely means you are running a local instance</p>
+                                    <b>You are not able to submit changes</b>
+                                </>
+                            }
+                        </td>
+                    </tr>
+
+                </table>
                 <div className='submit-container'>
                     <b>Please inspect your changes carefully.</b>
                     {diff.length === 0 &&
@@ -184,6 +249,16 @@ export const SubmitPage = (props) => {
                         } else {
                             e.currentTarget.textContent = "Commit";
                             e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
+                            if (currentCommitSha !== recentCommitSha) {
+                                setResponseConsole([...responseConsole, {
+                                    time: new Date().toLocaleString(),
+                                    status: 400,
+                                    statusText: "Bad Request",
+                                    ok: false,
+                                    message: "Cannot commit when current commit is not up to date"
+                                }])
+                                return
+                            }
                             if (diff.length === 0) {
                                 setResponseConsole([...responseConsole, {
                                     time: new Date().toLocaleString(),
@@ -200,13 +275,13 @@ export const SubmitPage = (props) => {
                             }
                         }
                     }}
-                    onBlur={(e) => {
-                        if (e.currentTarget.textContent == "Are you sure?") {
-                            e.currentTarget.textContent = "Commit";
-                            e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
-                        }
-                    }}
-                    
+                        onBlur={(e) => {
+                            if (e.currentTarget.textContent == "Are you sure?") {
+                                e.currentTarget.textContent = "Commit";
+                                e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
+                            }
+                        }}
+
                     >Commit</button>
                     {responseConsole.length > 0 &&
                         <div className='response-container'>
@@ -243,6 +318,33 @@ export const SubmitPage = (props) => {
             </Layout>
             <style jsx>
                 {`
+.commit b {
+    font-family: Inter;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+.commit .date {
+    font-size: 0.7em;
+}
+table.commit {
+    border-collapse: collapse;
+    background-color: var(--dl-color-theme-primary2);
+    margin: 10px;
+    border-radius: 5px;
+}
+table.commit tr {
+    border-bottom: 2px solid var(--dl-color-theme-primary1);
+}
+table.commit tr:last-child {
+    border-bottom: none;
+}
+table.commit tr > * {
+    border-right: 1px dashed var(--dl-color-theme-primary1);  
+    padding: 0.5em
+}
+table.commit tr > *:last-child {
+    border-right: none;
+}
 .diff-button-container button {
     background-color: transparent;
     padding: 0px;
