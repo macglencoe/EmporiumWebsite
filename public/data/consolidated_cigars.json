@@ -67,6 +67,12 @@
         "Barcode": 7426824782381,
         "In_Stock": "TRUE",
         "Price": "7.40"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "7426824782404",
+        "In_Stock": true,
+        "Price": "8.75"
       }
     ],
     "slug": "aganorsa-jfr-connecticut"
@@ -252,7 +258,7 @@
         "Size": "Toro",
         "Barcode": 7427025678565,
         "In_Stock": "TRUE",
-        "Price": "9.80"
+        "Price": "10.85"
       }
     ],
     "slug": "aganorsa-valadacion-corojo"
@@ -534,8 +540,14 @@
       {
         "Size": "Rothschild",
         "Barcode": 7426824785368,
-        "In_Stock": "TRUE",
-        "Price": "7.25"
+        "In_Stock": false,
+        "Price": "7.45"
+      },
+      {
+        "Size": "Corona",
+        "Barcode": "7426824785375",
+        "In_Stock": true,
+        "Price": "7.45"
       }
     ],
     "slug": "aj-fernandez-last-call-maduro"
@@ -589,7 +601,7 @@
         "Size": "Robusto",
         "Barcode": 851350001991,
         "In_Stock": "TRUE",
-        "Price": "8.50"
+        "Price": "9.00"
       },
       {
         "Size": "Toro",
@@ -673,13 +685,13 @@
         "Size": "Robusto",
         "Barcode": 7429457091073,
         "In_Stock": "TRUE",
-        "Price": "9.65"
+        "Price": "10.00"
       },
       {
         "Size": "Toro",
         "Barcode": 7429457091080,
         "In_Stock": "TRUE",
-        "Price": "10.00"
+        "Price": "10.60"
       },
       {
         "Size": "Gordo",
@@ -776,13 +788,13 @@
         "Size": "Robusto",
         "Barcode": 851350000048,
         "In_Stock": "TRUE",
-        "Price": "8.50"
+        "Price": "9.00"
       },
       {
         "Size": "Toro",
         "Barcode": 851350000024,
         "In_Stock": "TRUE",
-        "Price": "9.00"
+        "Price": "9.60"
       }
     ],
     "slug": "aj-fernandez-san-lotano-requim-connecticut"
@@ -1370,7 +1382,7 @@
         "Size": "Torpedo",
         "Barcode": 843182100485,
         "In_Stock": "TRUE",
-        "Price": "9.10"
+        "Price": "9.50"
       }
     ],
     "slug": "arturo-fuente-cuban-belicoso"
@@ -1724,7 +1736,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122319,
         "In_Stock": "TRUE",
-        "Price": "8.50"
+        "Price": "9.20"
       }
     ],
     "slug": "arturo-fuente-hemingway-best-seller-maduro"
@@ -1814,7 +1826,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122630,
         "In_Stock": "TRUE",
-        "Price": "10.40"
+        "Price": "11.25"
       }
     ],
     "slug": "arturo-fuente-hemingway-signature-maduro"
@@ -1832,7 +1844,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122654,
         "In_Stock": "TRUE",
-        "Price": "10.40"
+        "Price": "11.30"
       }
     ],
     "slug": "arturo-fuente-hemingway-signature-natural"
@@ -1995,7 +2007,7 @@
         "Size": "Toro",
         "Barcode": 843182123354,
         "In_Stock": "TRUE",
-        "Price": "9.90"
+        "Price": "11.65"
       }
     ],
     "slug": "arturo-fuente-rosado-sungrown-vitola-56"
@@ -2067,7 +2079,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122517,
         "In_Stock": "TRUE",
-        "Price": "7.50"
+        "Price": "7.90"
       }
     ],
     "slug": "arturo-fuente-short-story-maduro"
@@ -2103,7 +2115,7 @@
         "Size": "Perfecto",
         "Barcode": 843182122722,
         "In_Stock": "TRUE",
-        "Price": "17.75"
+        "Price": "19.00"
       }
     ],
     "slug": "arturo-fuente-untold-story-maduro"
@@ -2379,7 +2391,7 @@
         "Size": "Toro",
         "Barcode": 689674111474,
         "In_Stock": "TRUE",
-        "Price": "7.00"
+        "Price": "7.75"
       }
     ],
     "slug": "bolivar-cofradia"
@@ -2528,14 +2540,14 @@
       {
         "Size": "Robusto",
         "Barcode": 855374008578,
-        "In_Stock": "TRUE",
+        "In_Stock": false,
         "Price": "7.00"
       },
       {
         "Size": "Toro",
         "Barcode": 855374008592,
         "In_Stock": "TRUE",
-        "Price": "7.85"
+        "Price": "9.50"
       }
     ],
     "slug": "c-l-e-asylum-insidious"
@@ -3705,7 +3717,7 @@
         "Size": "Toro",
         "Barcode": 876742009690,
         "In_Stock": "TRUE",
-        "Price": "9.70"
+        "Price": "10.00"
       }
     ],
     "slug": "drew-estate-kentucky-fire-cured"
@@ -3740,8 +3752,14 @@
       {
         "Size": "Toro",
         "Barcode": 876742001823,
-        "In_Stock": "TRUE",
-        "Price": "7.60"
+        "In_Stock": false,
+        "Price": "8.50"
+      },
+      {
+        "Size": "Gordo",
+        "Barcode": "818578019382",
+        "In_Stock": true,
+        "Price": "9.35"
       }
     ],
     "slug": "drew-estate-nica-rustica-broadleaf"
@@ -3993,7 +4011,7 @@
         "Size": "Robusto",
         "Barcode": 811167020806,
         "In_Stock": "TRUE",
-        "Price": "13.25"
+        "Price": "13.00"
       }
     ],
     "slug": "e-p-carrillo-la-historia",
@@ -4037,7 +4055,7 @@
   },
   {
     "Cigar Brand": "E.P. Carrillo",
-    "Cigar Name": "New Wave Connecticut Divino",
+    "Cigar Name": "New Wave Connecticut Brilliantes",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Nicaraguan",
     "Filler": "Dominican",
@@ -4045,10 +4063,10 @@
     "Strength_Profile": "Mild-Medium",
     "Sizes": [
       {
-        "Size": "Toro",
+        "Size": "Robusto",
         "Barcode": 811167020165,
         "In_Stock": "TRUE",
-        "Price": "9.30"
+        "Price": "8.20"
       }
     ],
     "slug": "e-p-carrillo-new-wave-connecticut-divino"
@@ -4282,7 +4300,7 @@
         "Size": "Toro",
         "Barcode": 856713007924,
         "In_Stock": "TRUE",
-        "Price": "11.25"
+        "Price": "13.35"
       }
     ],
     "slug": "esteban-carrera-devils-hand"
@@ -4805,7 +4823,7 @@
         "Size": "Toro",
         "Barcode": 810138033913,
         "In_Stock": "TRUE",
-        "Price": "11.00"
+        "Price": "11.75"
       },
       {
         "Size": "Robusto",
@@ -4829,13 +4847,13 @@
         "Size": "Robusto",
         "Barcode": 810141022270,
         "In_Stock": "TRUE",
-        "Price": "7.60"
+        "Price": "8.20"
       },
       {
         "Size": "Toro",
         "Barcode": 810141020771,
         "In_Stock": "TRUE",
-        "Price": "8.20"
+        "Price": "8.80"
       }
     ],
     "slug": "gran-habano-connecticut-1"
@@ -5161,7 +5179,7 @@
         "Size": "Churchill",
         "Barcode": 76622025455,
         "In_Stock": "TRUE",
-        "Price": "9.70"
+        "Price": "10.10"
       }
     ],
     "slug": "j-c-newman-brickhouse-maduro-mighty-mighty"
@@ -5185,13 +5203,13 @@
         "Size": "Toro",
         "Barcode": 76622025202,
         "In_Stock": "TRUE",
-        "Price": "8.45"
+        "Price": "8.90"
       },
       {
-        "Size": "Churchill",
+        "Size": "Gordo",
         "Barcode": 76622025400,
         "In_Stock": "TRUE",
-        "Price": "8.55"
+        "Price": "9.20"
       }
     ],
     "slug": "j-c-newman-brickhouse-sungrown"
@@ -5953,7 +5971,7 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 819577014859,
+        "Barcode": "",
         "In_Stock": "TRUE",
         "Price": "9.35"
       }
@@ -5973,7 +5991,7 @@
         "Size": "Toro",
         "Barcode": 819577014873,
         "In_Stock": "TRUE",
-        "Price": "8.70"
+        "Price": "8.90"
       }
     ],
     "slug": "la-aroma-de-cuba-connecticut-monarch"
@@ -6237,7 +6255,7 @@
         "Size": "ToroGrande",
         "Barcode": 7460644702815,
         "In_Stock": "TRUE",
-        "Price": "9.90"
+        "Price": "10.80"
       }
     ],
     "slug": "la-flor-dominicana-cabinet-oscuro-l-400"
@@ -6544,7 +6562,7 @@
         "Size": "Gordo",
         "Barcode": 7460644702396,
         "In_Stock": "TRUE",
-        "Price": "10.15"
+        "Price": "11.90"
       }
     ],
     "slug": "la-flor-dominicana-dl-700-maduro"
@@ -6616,7 +6634,7 @@
         "Size": "Churchill Grande",
         "Barcode": 689674046691,
         "In_Stock": "TRUE",
-        "Price": "13.25"
+        "Price": "13.80"
       },
       {
         "Size": "ToroGrande",
@@ -6630,7 +6648,7 @@
   {
     "Cigar Brand": "La Gloria Cubana",
     "Cigar Name": "Serie R Maduro",
-    "Wrapper": "Mescan San Andres",
+    "Wrapper": "Mexican San Andres",
     "Binder": "Nicaraguan",
     "Filler": "Dominican, Nicaraguan",
     "Flavor_Profile": "Rich, Spicy, Full Body",
@@ -6640,7 +6658,7 @@
         "Size": "Gordo",
         "Barcode": 689674046707,
         "In_Stock": "TRUE",
-        "Price": "12.40"
+        "Price": "13.80"
       }
     ],
     "slug": "la-gloria-cubana-serie-r-maduro"
@@ -7036,7 +7054,7 @@
         "Size": "Churchill",
         "Barcode": 689674112129,
         "In_Stock": "TRUE",
-        "Price": "10.30"
+        "Price": "10.70"
       }
     ],
     "slug": "macanudo-palladium"
@@ -7282,7 +7300,7 @@
         "Size": "Toro",
         "Barcode": 689674104896,
         "In_Stock": "TRUE",
-        "Price": "2.80"
+        "Price": "3.00"
       }
     ],
     "slug": "odyssey-sweet-tip"
@@ -7354,7 +7372,7 @@
         "Size": "Robusto",
         "Barcode": 814539015035,
         "In_Stock": "TRUE",
-        "Price": "7.75"
+        "Price": "8.60"
       }
     ],
     "slug": "oliva-gilberto-oliva-reserva-blanc"
@@ -8309,7 +8327,7 @@
         "Size": "Double Grande",
         "Barcode": 76622773202,
         "In_Stock": "TRUE",
-        "Price": "3.60"
+        "Price": "4.00"
       },
       {
         "Size": "Double Toro",
@@ -8339,13 +8357,13 @@
         "Size": "Robusto",
         "Barcode": 76622770201,
         "In_Stock": "TRUE",
-        "Price": "2.10"
+        "Price": "2.15"
       },
       {
         "Size": "Toro",
         "Barcode": 76622770300,
         "In_Stock": "TRUE",
-        "Price": "2.30"
+        "Price": "2.50"
       }
     ],
     "slug": "quorum-quorum"
@@ -8381,13 +8399,13 @@
         "Size": "Robusto",
         "Barcode": 76622771208,
         "In_Stock": "TRUE",
-        "Price": "2.10"
+        "Price": "2.15"
       },
       {
         "Size": "Toro",
         "Barcode": 76622771307,
         "In_Stock": "TRUE",
-        "Price": "2.30"
+        "Price": "2.50"
       }
     ],
     "slug": "quorum-quorum-natural"
@@ -8879,7 +8897,7 @@
         "Size": "Gordo",
         "Barcode": 71610854888,
         "In_Stock": "TRUE",
-        "Price": "8.00"
+        "Price": "8.45"
       }
     ],
     "slug": "st-louis-rey-titan-maduro"
@@ -8993,7 +9011,7 @@
         "Size": "Corona",
         "Barcode": 636655228201,
         "In_Stock": "TRUE",
-        "Price": "3.45"
+        "Price": "3.60"
       }
     ],
     "slug": "la-galera-rough-rider-connecticut"
@@ -9181,6 +9199,50 @@
       }
     ],
     "slug": "la-flor-dominicana-colorado-oscuro-no-4",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "Arturo Fuente",
+    "Cigar Name": "Hemingway Classic Maduro",
+    "Wrapper": "Connecticut Broadleaf",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Earth, baking spice, Cocoa",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "843182122371",
+        "In_Stock": true,
+        "Price": "12.25"
+      }
+    ],
+    "slug": "arturo-fuente-hemingway-classic-maduro",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "Perla Del Mar",
+    "Cigar Name": "Maduro",
+    "Wrapper": "Connecticut Broadleaf",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Spice, Coffee, Dark Chocolate ",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "076622027251",
+        "In_Stock": true,
+        "Price": "8.40"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "076622027350",
+        "In_Stock": true,
+        "Price": "9.20"
+      }
+    ],
+    "slug": "perla-del-mar-maduro",
     "Date Added": "2025-04-17"
   }
 ]
