@@ -1670,7 +1670,7 @@
         "Size": "Toro Grande",
         "Barcode": 843182100409,
         "In_Stock": "TRUE",
-        "Price": "10.00"
+        "Price": "11.90"
       }
     ],
     "slug": "arturo-fuente-gran-reserva-canones"
@@ -4905,9 +4905,9 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 810141022515,
+        "Barcode": "",
         "In_Stock": "TRUE",
-        "Price": "6.90"
+        "Price": "8.00"
       }
     ],
     "slug": "gran-habano-persian-king"
@@ -6882,17 +6882,23 @@
   {
     "Cigar Brand": "Macanudo",
     "Cigar Name": "Inspirado Black",
-    "Wrapper": "Indonesian",
-    "Binder": "Philippene",
+    "Wrapper": "Connecticut Broadleaf",
+    "Binder": "Ecuadorian Sumatra",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Cocoa, Cedar",
-    "Strength_Profile": "Full",
+    "Strength_Profile": "Medium-Full",
     "Sizes": [
       {
         "Size": "Robusto",
         "Barcode": 689674092520,
         "In_Stock": "TRUE",
-        "Price": "8.90"
+        "Price": "9.55"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "689674092551",
+        "In_Stock": true,
+        "Price": "10.60"
       }
     ],
     "slug": "macanudo-inspirado-black"
@@ -7383,7 +7389,7 @@
       {
         "Size": "Robusto",
         "Barcode": 814539011600,
-        "In_Stock": "TRUE",
+        "In_Stock": false,
         "Price": "6.70"
       },
       {
@@ -7397,6 +7403,12 @@
         "Barcode": 814539011686,
         "In_Stock": "TRUE",
         "Price": "7.80"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "814539011648",
+        "In_Stock": true,
+        "Price": "8.40"
       }
     ],
     "slug": "oliva-serie-g"
@@ -9039,5 +9051,136 @@
       }
     ],
     "slug": "random-stick"
+  },
+  {
+    "Cigar Brand": "La Gloria Cubana",
+    "Cigar Name": "Los Gloriosos",
+    "Wrapper": "Ecuadorian Habana",
+    "Binder": "Nicaraguan Jalapa",
+    "Filler": "Nicaraguan, Dominican",
+    "Flavor_Profile": "Leather, Spice, Espresso, Cocoa",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674161189",
+        "In_Stock": true,
+        "Price": "9.55"
+      }
+    ],
+    "slug": "la-gloria-cubana-los-gloriosos",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "El Rey Del Mundo",
+    "Cigar Name": "Appointment",
+    "Wrapper": "Honduran Cameroon Seed",
+    "Binder": "Connecticut Broadleaf",
+    "Filler": "Ecuadorian, Nicaraguan",
+    "Flavor_Profile": "Pepper, Cream, Sweet Herbs",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674162209",
+        "Price": "9.75",
+        "In_Stock": true
+      }
+    ],
+    "slug": "el-rey-del-mundo-appointment",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "Casa Cuba",
+    "Cigar Name": "Doble Seis",
+    "Wrapper": "Ecuadorian Habana",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Wood, Spice, Creamy Finish",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "843182120261",
+        "In_Stock": true,
+        "Price": "14.15"
+      }
+    ],
+    "slug": "casa-cuba-doble-seis",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "RomaCraft",
+    "Cigar Name": "Intemperance Volstead",
+    "Wrapper": "Ecuadorian Sumatra",
+    "Binder": "Mexican San Andrés",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Pepper, Coffee, Leather, Baking Spice",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "5 1/2 x 54 Belicoso",
+        "Barcode": "647903840908",
+        "In_Stock": true,
+        "Price": "11.70"
+      }
+    ],
+    "slug": "romacraft-intemperance-volstead",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "RomaCraft",
+    "Cigar Name": "Cromagnon Aquataine",
+    "Wrapper": "Ecuadorian Habano Ligero",
+    "Binder": "Cameroon",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "White Pepper, Earth, Sweetness",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "5.75 x46 Anthropology",
+        "In_Stock": true,
+        "Price": "12.5"
+      }
+    ],
+    "slug": "romacraft-cromagnon-aquataine",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Fasa Sombra",
+    "Wrapper": "Ecuadorian Shade",
+    "Binder": "Cameroon",
+    "Filler": "Dominican, Nicaraguan",
+    "Flavor_Profile": "Butter, Hay, Cream, Almonds",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674160731",
+        "In_Stock": true,
+        "Price": "7.45"
+      }
+    ],
+    "slug": "cao-fasa-sombra",
+    "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "La Flor Dominicana",
+    "Cigar Name": "Colorado Oscuro No. 4",
+    "Wrapper": "Ecuadorian Sumatra",
+    "Binder": "Dominican Sumatra",
+    "Filler": "Dominican, Nicaraguan",
+    "Flavor_Profile": "Grass, Leather, Citrus, Spice, Pepper",
+    "Strength_Profile": "Full",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "In_Stock": true,
+        "Price": "10.60"
+      }
+    ],
+    "slug": "la-flor-dominicana-colorado-oscuro-no-4",
+    "Date Added": "2025-04-17"
   }
 ]
