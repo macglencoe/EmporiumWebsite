@@ -35,7 +35,7 @@ export const BarcodeSearch = (props) => {
     useEffect(() => {
         if (router.query.search) {
             const search = router.query.search;
-            const results = props.data.filter((cigar) => cigar.Sizes.some((size) => size.Barcode.toString().includes(search)));
+            const results = props.data.filter((cigar) => cigar.Sizes.some((size) => size.Barcode?.toString().includes(search)));
             setResults(results);
         }
     }, [router.query.search]);
