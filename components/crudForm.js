@@ -472,6 +472,14 @@ const CrudForm = (props) => {
 
                         })
                     }
+                    {localData &&
+                    <>
+                        <p>Date Added: {localData['Date Added'] ?? "Unknown"}</p>
+                        <button className="resetDate" onClick={() => {
+                            setLocalData({ ...localData, "Date Added": new Date().toISOString().slice(0, 10) })
+                        }}>Reset Date To Now</button>
+                    </>
+                    }
                 </section>
                 <section className={`array-section ${currentSection === "array-section" ? "active" : ""}`}>
                     {
@@ -679,6 +687,16 @@ const CrudForm = (props) => {
                 {`
                     .l2 {
     margin: 1em;
+}
+
+button.resetDate {
+    background-color: var(--dl-color-theme-secondary2);
+    color: var(--dl-color-theme-primary1);
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    align-self: flex-start;
 }
 
 .tablinks {
