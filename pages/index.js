@@ -11,6 +11,16 @@ import Ksman from '../components/ksman'
 import Layout from '../components/layout'
 import ShopSuggestions from '../components/shopSuggestions'
 import { handleLocationClick } from '../utils/location'
+import NewArrivalList from '../components/newArrivalList'
+
+export const getStaticProps = async () => {
+  const data = await import('../public/data/consolidated_cigars.json');
+  return {
+    props: {
+      data: data.default
+    },
+  };
+};
 
 const Catalog = (props) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -132,6 +142,10 @@ const Catalog = (props) => {
             { href: "/tobacco/families", label: "Family" },
           ]}
         />
+
+        <div className='divider'></div>
+
+        <NewArrivalList cigars={props.data}/>
 
 
 
