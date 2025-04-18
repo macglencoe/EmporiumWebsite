@@ -97,6 +97,10 @@ const CigarCatalog = (props) => {
         sortOptions={
           [
             {
+              value: "Date Added",
+              label: "Newest First"
+            },
+            {
               value: "Cigar Name",
               label: "Name",
             },
