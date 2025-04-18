@@ -44,7 +44,7 @@ export const Barcodeless = (props) => {
                                                             <td>{cigar["Cigar Name"]}</td>
                                                             <td>{size.Size}</td>
                                                             <td className='price'>{size.Price ? `$ ${size.Price}` : "None"}</td>
-                                                            <td><a href={`/cigars/${size.Cigar_Slug}`}>See More</a></td>
+                                                            <td><a href={`/cigars/${cigar.slug}`}>See More</a></td>
                                                         </tr>
                                                     )
                                                 })
