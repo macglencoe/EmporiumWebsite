@@ -182,7 +182,6 @@ export const SubmitPage = (props) => {
                             <td colSpan={3}>
                                 {currentCommitSha !== recentCommitSha && currentCommitSha !== "Unknown" &&
                                     <>
-                                        <b>{currentCommitSha.slice(0, 7)} ≠ {recentCommitSha.slice(0, 7)}</b>
                                         <p>This most likely means a build is currently in progress, or there was an error with the build</p>
                                         <p>Go to the <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>Vercel Dashboard</a> to check the build status</p>
                                         <p>In the meantime, <b>you won't be able to submit changes</b></p>
@@ -191,7 +190,6 @@ export const SubmitPage = (props) => {
                                 {
                                     currentCommitSha === recentCommitSha &&
                                     <>
-                                        <b>{currentCommitSha.slice(0, 7)} = {recentCommitSha.slice(0, 7)}</b>
                                         <p>Commits are up to date, and <b>you are able to submit changes</b></p>
                                     </>
                                 }
