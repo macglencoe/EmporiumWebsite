@@ -24,6 +24,7 @@ export const SubmitPage = (props) => {
     const [commits, setCommits] = useState([]);
     const [recentCommitSha, setRecentCommitSha] = useState('');
     const [currentCommitSha, setCurrentCommitSha] = useState('');
+    const [currentCommitMessage, setCurrentCommitMessage] = useState('');
 
     const play = () => {
         if (audioRef.current) {
@@ -34,7 +35,6 @@ export const SubmitPage = (props) => {
     const [localData, setLocalData] = useState(props.data);
 
     useEffect(() => {
-
         if (typeof window !== 'undefined') {
             if (!localStorage.getItem('tempData_cigars')) {
                 localStorage.setItem('tempData_cigars', JSON.stringify(props.data));
@@ -42,6 +42,7 @@ export const SubmitPage = (props) => {
             setLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
             fetch(`/api/getCommits?branch=cms`).then(response => response.json()).then(data => setCommits(data));
             setCurrentCommitSha(localStorage.getItem('tempData_sha') ?? 'No Sha Found');
+            setCurrentCommitMessage(localStorage.getItem('tempData_message') ?? 'No Message Found');
         }
     }, []);
     useEffect(() => {
@@ -152,53 +153,59 @@ export const SubmitPage = (props) => {
                 <PageTitle1>Submit Changes</PageTitle1>
 
                 <table className='commit'>
-                    <tr>
-                        <th>Most Recent Commit: </th>
-                        <td>
-                            {commits.length > 0 &&
-                                <>
-                                    <p>{commits[0].commit.message ?? "No commit message found"}</p>
-                                    <p className='date'>{commits[0].commit.author.date ?? "No date found"}</p>
-                                    <b>{recentCommitSha ?? "No SHA Found"}</b>
-                                </>
-                            }
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Current Commit: </th>
-                        <td>
-                            <b>{currentCommitSha}</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Status: </th>
-                        <td>
-                            {currentCommitSha !== recentCommitSha && currentCommitSha !== "Unknown" &&
-                                <>
-                                    <b>{currentCommitSha.slice(0, 7)} ≠ {recentCommitSha.slice(0, 7)}</b>
-                                    <p>This most likely means a build is currently in progress, or there was an error with the build</p>
-                                    <p>Go to the <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>Vercel Dashboard</a> to check the build status</p>
-                                    <p>In the meantime, <b>you won't be able to submit changes</b></p>
-                                </>
-                            }
-                            {
-                                currentCommitSha === recentCommitSha &&
-                                <>
-                                    <b>{currentCommitSha.slice(0, 7)} = {recentCommitSha.slice(0, 7)}</b>
-                                    <p>Commits are up to date, and <b>you are able to submit changes</b></p>
-                                </>
-                            }
-                            {
-                                currentCommitSha === "Unknown" &&
-                                <>
-                                    <p>Unable to determine if commits are up to date.</p>
-                                    <p>This most likely means you are running a local instance</p>
-                                    <b>You are not able to submit changes</b>
-                                </>
-                            }
-                        </td>
-                    </tr>
-
+                    <thead>
+                        <tr>
+                            <th>Most Recent Commit</th>
+                            <th></th>
+                            <th>Local Commit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {commits.length > 0 && <td>
+                                <p>{commits[0].commit.message ?? "No commit message found"}</p>
+                                <p className='date'>{commits[0].commit.author.date ?? "No date found"}</p>
+                                <p><b>{recentCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
+                            </td>}
+                            {commits.length === 0 && <td><p>Loading ...</p></td>}
+                            <td>
+                                <div className='equivalence'><p>{currentCommitSha === recentCommitSha ? '=' : '≠'}</p></div>
+                            </td>
+                            <td>
+                                <p>{currentCommitMessage ?? "No commit message found"}</p>
+                                <p><b>{currentCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colSpan={3}>
+                                {currentCommitSha !== recentCommitSha && currentCommitSha !== "Unknown" &&
+                                    <>
+                                        <b>{currentCommitSha.slice(0, 7)} ≠ {recentCommitSha.slice(0, 7)}</b>
+                                        <p>This most likely means a build is currently in progress, or there was an error with the build</p>
+                                        <p>Go to the <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>Vercel Dashboard</a> to check the build status</p>
+                                        <p>In the meantime, <b>you won't be able to submit changes</b></p>
+                                    </>
+                                }
+                                {
+                                    currentCommitSha === recentCommitSha &&
+                                    <>
+                                        <b>{currentCommitSha.slice(0, 7)} = {recentCommitSha.slice(0, 7)}</b>
+                                        <p>Commits are up to date, and <b>you are able to submit changes</b></p>
+                                    </>
+                                }
+                                {
+                                    currentCommitSha === "Unknown" &&
+                                    <>
+                                        <p>Unable to determine if commits are up to date.</p>
+                                        <p>This most likely means you are running a local instance</p>
+                                        <b>You are not able to submit changes</b>
+                                    </>
+                                }
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
                 <div className='submit-container'>
                     <b>Please inspect your changes carefully.</b>
@@ -326,11 +333,17 @@ export const SubmitPage = (props) => {
 .commit .date {
     font-size: 0.7em;
 }
+table.commit thead, table.commit tbody {
+    border-bottom: 2px solid var(--dl-color-theme-primary1);
+}
 table.commit {
     border-collapse: collapse;
     background-color: var(--dl-color-theme-primary2);
     margin: 10px;
     border-radius: 5px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
 }
 table.commit tr {
     border-bottom: 2px solid var(--dl-color-theme-primary1);
@@ -339,11 +352,26 @@ table.commit tr:last-child {
     border-bottom: none;
 }
 table.commit tr > * {
-    border-right: 1px dashed var(--dl-color-theme-primary1);  
-    padding: 0.5em
+    padding: 0.5em;
+}
+table.commit tbody td:first-child > * {
+    text-align: right;
 }
 table.commit tr > *:last-child {
     border-right: none;
+}
+table.commit td, table.commit th {
+}
+table.commit .equivalence {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table.commit .equivalence p {
+    font-size: 2em;
+}
+table.commit > * > tr > *:not(:last-child):not(:first-child) {
+    width: 3em;
 }
 .diff-button-container button {
     background-color: transparent;

@@ -8,6 +8,7 @@ export async function getServerSideProps() {
     return {
         props: {
             commitSha: process.env.VERCEL_GIT_COMMIT_SHA || 'Unknown',
+            commitMessage: process.env.VERCEL_GIT_COMMIT_MESSAGE || 'Unknown',
         },
     }
 }
@@ -15,7 +16,7 @@ export async function getServerSideProps() {
 export const DataReset = (props) => {
     const router = useRouter();
     const handleReset = async () => {
-        await resetData({commitSha: props.commitSha, force: true});
+        await resetData({commitSha: props.commitSha, commitMessage: props.commitMessage, force: true});
         router.push('/');
     }
     return (

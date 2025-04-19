@@ -1,5 +1,5 @@
 "use client"
-export const resetData = async ({commitSha, force}) => {
+export const resetData = async ({commitSha, commitMessage, force}) => {
     if (typeof window == 'undefined') {
         console.log("undefined window");
         return;
@@ -12,6 +12,7 @@ export const resetData = async ({commitSha, force}) => {
 
     localStorage.removeItem('tempData_cigars');
     localStorage.removeItem('tempData_sha');
+    localStorage.removeItem('tempData_message');
 
     try {
         const response = await fetch('/data/consolidated_cigars.json');
@@ -23,6 +24,7 @@ export const resetData = async ({commitSha, force}) => {
 
         localStorage.setItem('tempData_cigars', JSON.stringify(originalData));
         localStorage.setItem('tempData_sha', commitSha);
+        localStorage.setItem('tempData_message', commitMessage);
     }
     catch (error) {
         console.error('Error fetching data:', error);
