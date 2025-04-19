@@ -25,8 +25,8 @@ export const Barcodeless = (props) => {
                         [...noBarcodeBrands].map(brand => {
                             return (
                                 <details key={brand}>
-                                    <summary><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960" width="24px"><path d="M480-360 280-560h400L480-360Z"/></svg>
-                                    {brand}</summary>
+                                    <summary><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px"><path d="M480-360 280-560h400L480-360Z" /></svg>
+                                        {brand}</summary>
                                     <table>
                                         <tr>
                                             <th>Name</th>
@@ -35,18 +35,22 @@ export const Barcodeless = (props) => {
                                             <th>Page</th>
                                         </tr>
                                         {
-                                            props.data.filter(cigar => cigar["Cigar Brand"] === brand).flatMap(cigar => cigar.Sizes.filter(size => size.Barcode === "")).map((size, index) => {
-                                                const cigar = props.data.find(c => c["Cigar Brand"] === brand && c.Sizes.find(s => s.Size === size.Size && s.Barcode === size.Barcode));
-                                                return (
-                                                    <tr key={`${brand}-${index}`}>
-                                                        <td>{cigar["Cigar Name"]}</td>
-                                                        <td>{size.Size}</td>
-                                                        <td className='price'>{size.Price}</td>
-                                                        <td><a href={`/cigars/${cigar.slug}`}>See More</a></td>
-                                                    </tr>
+                                            props.data
+                                                .filter(cigar => cigar["Cigar Brand"] === brand)
+                                                .flatMap((cigar, ci) =>
+                                                    cigar.Sizes
+                                                        .filter(size => size.Barcode === "")
+                                                        .map((size, si) => (
+                                                            <tr key={`${brand}-${ci}-${si}`}>
+                                                                <td>{cigar["Cigar Name"]}</td>
+                                                                <td>{size.Size}</td>
+                                                                <td className="price">{size.Price}</td>
+                                                                <td><a href={`/cigars/${cigar.slug}`}>See More</a></td>
+                                                            </tr>
+                                                        ))
                                                 )
-                                            })
                                         }
+
                                     </table>
                                 </details>
                             )
