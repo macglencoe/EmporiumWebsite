@@ -9059,24 +9059,6 @@
     "slug": "el-septimo-toscana"
   },
   {
-    "Cigar Brand": "Random",
-    "Cigar Name": "Stick",
-    "Wrapper": "",
-    "Binder": "",
-    "Filler": "",
-    "Flavor_Profile": "",
-    "Strength_Profile": "",
-    "Sizes": [
-      {
-        "Size": "",
-        "Barcode": "",
-        "In_Stock": "FALSE",
-        "Price": ""
-      }
-    ],
-    "slug": "random-stick"
-  },
-  {
     "Cigar Brand": "La Gloria Cubana",
     "Cigar Name": "Los Gloriosos",
     "Wrapper": "Ecuadorian Habana",
