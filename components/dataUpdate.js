@@ -6,9 +6,9 @@ import { useEffect } from "react"
 import resetData from "../utils/resetData"
 
 
-export const DataUpdate = ({commitSha}) => {
+export const DataUpdate = ({commitSha, commitMessage}) => {
     const handleUpdate = async () => {
-        await resetData({commitSha: commitSha});
+        await resetData({commitSha: commitSha, commitMessage: commitMessage});
     }
 
     useEffect(() => {
