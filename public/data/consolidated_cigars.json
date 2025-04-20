@@ -105,7 +105,7 @@
     "Strength_Profile": "Medium",
     "Sizes": [
       {
-        "Size": "Super toro",
+        "Size": "Super Toro",
         "Barcode": 7426824777318,
         "In_Stock": "TRUE",
         "Price": "8.50"
@@ -177,7 +177,7 @@
     "Strength_Profile": "Medium-Full",
     "Sizes": [
       {
-        "Size": "Super toro",
+        "Size": "Super Toro",
         "Barcode": 7426824777356,
         "In_Stock": "TRUE",
         "Price": "9.00"
@@ -4105,7 +4105,7 @@
     "Strength_Profile": "Medium-Full",
     "Sizes": [
       {
-        "Size": "toro",
+        "Size": "Toro",
         "Barcode": 811167021711,
         "In_Stock": "TRUE",
         "Price": "13.90"
@@ -4628,7 +4628,7 @@
     "Strength_Profile": "Medium",
     "Sizes": [
       {
-        "Size": "toro",
+        "Size": "Toro",
         "Barcode": 689674137993,
         "In_Stock": "TRUE",
         "Price": "10.00"
@@ -8960,7 +8960,7 @@
     "Strength_Profile": "Medium-Full",
     "Sizes": [
       {
-        "Size": "toro",
+        "Size": "Toro",
         "Barcode": 636655226870,
         "In_Stock": "TRUE",
         "Price": "9.20"
