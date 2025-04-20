@@ -3,6 +3,7 @@ import Layout from "../../components/layout"
 import PageTitle1 from "../../components/pagetitle1"
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
+import { Barcodeless } from "../../components/barcodeless"
 
 
 export const getStaticProps = async () => {
@@ -170,6 +171,7 @@ export const BarcodeSearch = (props) => {
                         </li>
                     </ul>
                 </div>
+                <Barcodeless data={[...props.data]} />
 
             </Layout >
             <style jsx>

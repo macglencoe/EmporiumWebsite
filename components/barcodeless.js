@@ -1,21 +1,10 @@
-import Layout from '../../components/layout';
-import PageTitle1 from '../../components/pagetitle1';
-
-
-export const getStaticProps = async () => {
-    const data = await import('../../public/data/consolidated_cigars.json');
-    return {
-        props: {
-            data: data.default
-        },
-    };
-};
+import PageTitle1 from "./pagetitle1";
+import Layout from "./layout";
 
 export const Barcodeless = (props) => {
     const noBarcodeBrands = new Set(props.data.filter(cigar => cigar.Sizes.filter(size => size.Barcode === "").length > 0).map(cigar => cigar["Cigar Brand"]));
     return (
         <>
-            <Layout>
                 <PageTitle1>Cigars Without Barcodes</PageTitle1>
                 <table>
                     <tr>
@@ -57,7 +46,6 @@ export const Barcodeless = (props) => {
                         })
                     }
                 </table>
-            </Layout>
             <style jsx>
                 {`
             tr a {
@@ -119,5 +107,3 @@ export const Barcodeless = (props) => {
         </>
     )
 }
-
-export default Barcodeless

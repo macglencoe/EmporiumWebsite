@@ -89,12 +89,8 @@ const Layout = (props) => {
                     icon: <path xmlns="http://www.w3.org/2000/svg" d="M417-417H166v-126h251v-251h126v251h251v126H543v251H417v-251Z" />
                   },
                   {
-                    href: '/cigars/barcodeSearch', label: 'Barcode Search',
+                    href: '/cigars/barcodeSearch', label: 'Point of Sale',
                     icon: <path xmlns="http://www.w3.org/2000/svg" d="M40-120v-188h66.67v121.33H228V-120H40Zm691.33 0v-66.67h121.34V-308h66.66v188h-188Zm-576-114v-492.67h80V-234h-80ZM276-234v-492.67h41.33V-234H276Zm121.33 0v-492.67h82V-234h-82Zm123.34 0v-492.67h120.66V-234H520.67Zm162 0v-492.67H724V-234h-41.33Zm82 0v-492.67h38.66V-234h-38.66ZM40-652v-188h188v66.67H106.67V-652H40Zm812.67 0v-121.33H731.33V-840h188v188h-66.66Z" />
-                  },
-                  {
-                    href: '/cigars/barcodeless', label: 'Barcodeless Cigars',
-                    icon: <path xmlns="http://www.w3.org/2000/svg" d="M80-200v-80h400v80H80Zm0-200v-80h200v80H80Zm0-200v-80h200v80H80Zm744 400L670-354q-24 17-52.5 25.5T560-320q-83 0-141.5-58.5T360-520q0-83 58.5-141.5T560-720q83 0 141.5 58.5T760-520q0 29-8.5 57.5T726-410l154 154-56 56ZM560-400q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"/>
                   },
                   {
                     href: '/data-reset', label: 'Reset Data',
