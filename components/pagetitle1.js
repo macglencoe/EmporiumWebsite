@@ -42,7 +42,7 @@ const PageTitle1 = (props) => {
             </nav>
           }
           {props.buttons && props.buttons.length > 0 &&
-            <nav>
+            <nav className="buttons">
               <ul>
                 {props.buttons.map((button, index) => (
                   <li key={index}>
@@ -151,7 +151,7 @@ const PageTitle1 = (props) => {
             align-items: center;
             background-color: var(--dl-color-theme-primary1);
           }
-            nav li button, nav li a {
+            nav.buttons li button, nav.buttons li a {
               background-color: var(--dl-color-theme-primary1);
               margin: 5px;
               padding: 0.5em 1em;
@@ -164,10 +164,10 @@ const PageTitle1 = (props) => {
               gap: 0.5em;
               font-family: Inter;
             }
-            nav li button:hover, nav li a:hover {
+            nav.buttons li button:hover, nav.buttons li a:hover {
               background-color: var(--dl-color-theme-primary2);
             }
-            nav li button svg, nav li a svg {
+            nav.buttons li button svg, nav.buttons li a svg {
               height: 1.5em;
               width: 1.5em;
               fill: var(--dl-color-theme-secondary2);
