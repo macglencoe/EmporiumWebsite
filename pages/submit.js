@@ -181,7 +181,7 @@ export const SubmitPage = (props) => {
                             </td>
                             <td>
                                 <p>{process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_MESSAGE}</p>
-                                <p><b>{process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA}</b></p>
+                                <p><b>{process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA?.slice(0, 7)}</b></p>
                             </td>
                             <td className='equivalence'>
                                 <div>
