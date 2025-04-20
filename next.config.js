@@ -1,5 +1,8 @@
 module.exports = {
-
+  env : {
+    NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA: process.env.VERCEL_GIT_COMMIT_SHA ?? 'Unknown',
+    NEXT_PUBLIC_VERCEL_GIT_COMMIT_MESSAGE: process.env.VERCEL_GIT_COMMIT_MESSAGE ?? 'Unknown',
+  },
     headers: async () => [
         {
             source: '/:path*',

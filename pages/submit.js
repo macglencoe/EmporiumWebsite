@@ -2,6 +2,7 @@ import { use, useEffect, useRef, useState } from 'react';
 import Layout from '../components/layout'
 import PageTitle1 from '../components/pagetitle1';
 import { diffJson } from 'diff';
+import Notice from '../components/notice';
 
 
 
@@ -15,6 +16,8 @@ export const getStaticProps = async () => {
         },
     };
 };
+
+
 
 
 export const SubmitPage = (props) => {
@@ -156,7 +159,9 @@ export const SubmitPage = (props) => {
                     <thead>
                         <tr>
                             <th>Most Recent Commit</th>
-                            <th></th>
+                            <th className='equivalence'></th>
+                            <th>Server Commit</th>
+                            <th className='equivalence'></th>
                             <th>Local Commit</th>
                         </tr>
                     </thead>
@@ -168,8 +173,23 @@ export const SubmitPage = (props) => {
                                 <p><b>{recentCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
                             </td>}
                             {commits.length === 0 && <td><p>Loading ...</p></td>}
+                            <td className='equivalence'>
+                                <div>
+                                    {recentCommitSha == process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA && <p>=</p>}
+                                    {recentCommitSha != process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA && <svg className='loading' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M320-160h320v-120q0-66-47-113t-113-47q-66 0-113 47t-47 113v120Zm160-360q66 0 113-47t47-113v-120H320v120q0 66 47 113t113 47ZM160-80v-80h80v-120q0-61 28.5-114.5T348-480q-51-32-79.5-85.5T240-680v-120h-80v-80h640v80h-80v120q0 61-28.5 114.5T612-480q51 32 79.5 85.5T720-280v120h80v80H160Z" /></svg>}
+                                </div>
+                            </td>
                             <td>
-                                <div className='equivalence'><p>{currentCommitSha === recentCommitSha ? '=' : '≠'}</p></div>
+                                <p>{process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_MESSAGE}</p>
+                                <p><b>{process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA}</b></p>
+                            </td>
+                            <td className='equivalence'>
+                                <div>
+                                    {currentCommitSha == process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA && <p>=</p>}
+                                    {currentCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA && 
+                                        <svg className='clickable' onClick={() => window.location.reload()} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/></svg>
+                                    }
+                                </div>
                             </td>
                             <td>
                                 <p>{currentCommitMessage ?? "No commit message found"}</p>
@@ -179,7 +199,7 @@ export const SubmitPage = (props) => {
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colSpan={3}>
+                            <td colSpan={5}>
                                 {currentCommitSha !== recentCommitSha && currentCommitSha !== "Unknown" &&
                                     <>
                                         <p>This most likely means a build is currently in progress, or there was an error with the build</p>
@@ -323,11 +343,7 @@ export const SubmitPage = (props) => {
             </Layout>
             <style jsx>
                 {`
-.commit b {
-    font-family: Inter;
-    word-break: break-all;
-    white-space: pre-wrap;
-}
+
 .commit .date {
     font-size: 0.7em;
 }
@@ -352,8 +368,8 @@ table.commit tr:last-child {
 table.commit tr > * {
     padding: 0.5em;
 }
-table.commit tbody td:first-child > * {
-    text-align: right;
+table.commit tbody tr > * {
+    text-align: center;
 }
 table.commit tr > *:last-child {
     border-right: none;
@@ -361,15 +377,49 @@ table.commit tr > *:last-child {
 table.commit td, table.commit th {
 }
 table.commit .equivalence {
+    width: 3em;
+}
+table.commit .equivalence svg.loading {
+    animation: spin 2s ease infinite;
+}
+table.commit .equivalence svg.clickable {
+    cursor: pointer;
+}
+table.commit .equivalence svg.clickable:hover {
+    scale: 1.2;
+}
+table.commit .equivalence svg {
+    height: 2em;
+    width: 2em;
+    fill: var(--dl-color-theme-primary1);
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    5% {
+        transform: rotate(0deg);
+    }
+    45% {
+        transform: rotate(180deg);
+    }
+    55% {
+        transform: rotate(180deg);
+    }
+    90% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+table.commit .equivalence div {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 table.commit .equivalence p {
     font-size: 2em;
-}
-table.commit > * > tr > *:not(:last-child):not(:first-child) {
-    width: 3em;
 }
 .diff-button-container button {
     background-color: transparent;
