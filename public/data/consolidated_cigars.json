@@ -3966,7 +3966,7 @@
     "Strength_Profile": "Medium-Full",
     "Sizes": [
       {
-        "Size": "ToroGrande",
+        "Size": "Toro Grande",
         "Barcode": 811167021155,
         "In_Stock": "TRUE",
         "Price": "13.50"
@@ -6258,7 +6258,7 @@
     "Strength_Profile": "Full",
     "Sizes": [
       {
-        "Size": "ToroGrande",
+        "Size": "Toro Grande",
         "Barcode": 7460644702815,
         "In_Stock": "TRUE",
         "Price": "10.80"
@@ -6492,7 +6492,7 @@
     "Strength_Profile": "Medium-Full",
     "Sizes": [
       {
-        "Size": "ToroGrande",
+        "Size": "Toro Grande",
         "Barcode": 7460644702822,
         "In_Stock": "TRUE",
         "Price": "10.80"
@@ -6643,7 +6643,7 @@
         "Price": "13.80"
       },
       {
-        "Size": "ToroGrande",
+        "Size": "Toro Grande",
         "Barcode": 689674046684,
         "In_Stock": "TRUE",
         "Price": "12.40"
