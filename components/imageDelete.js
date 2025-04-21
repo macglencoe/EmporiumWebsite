@@ -6,27 +6,7 @@ export const ImageDelete = (props) => {
     const [loading, setLoading] = useState(false);
     const handleDeleteImage = async () => {
         setLoading(true);
-        if (!props.url) {
-            alert("No URL to delete found. Please report this")
-            setLoading(false);
-            return
-        }
-        
-        const response = await fetch('/api/deleteImage', {
-            method: 'DELETE',
-            body: props.url
-        })
-
-        const data = await response.json();
-
-        if (response.ok) {
-            console.log('Image Deleted Successfully');
-            if (props.onImageDeleteSuccess) {
-                props.onImageDeleteSuccess();
-            }
-        } else {
-            console.error("Deletion failed: ", data.message)
-        }
+        await props.handleDeleteImage(props.url);
         setLoading(false);
     }
     return (

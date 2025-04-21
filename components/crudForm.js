@@ -375,6 +375,7 @@ const CrudForm = (props) => {
 
     const onImageUpload = (fileSizeInKb = null) => {
         if (localData.image) {
+            alert("Former image will now be deleted");
             handleDeleteImage(localData.image)
         }
         setLoading(true);
@@ -396,9 +397,7 @@ const CrudForm = (props) => {
 
         if (response.ok) {
             console.log('Image Deleted Successfully');
-            if (props.onImageDeleteSuccess) {
-                props.onImageDeleteSuccess();
-            }
+            onImageDeleteSuccess();
         } else {
             console.error("Deletion failed: ", data.message)
         }
@@ -614,7 +613,7 @@ const CrudForm = (props) => {
                         <a href={localData.image} target="_blank" rel="noopener noreferrer">Open in new tab</a>
                         <ImageDelete
                             url={localData.image}
-                            onImageDeleteSuccess={onImageDeleteSuccess}
+                            handleDeleteImage={handleDeleteImage}
                         ></ImageDelete>
 
                     </div>}

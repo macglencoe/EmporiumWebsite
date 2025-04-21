@@ -15,35 +15,8 @@ export const ImageUpload = (props) => {
         setSelectedFile(event.target.files[0]);
     };
 
-    const handleDelete = async (url) => {
-        alert("Deleting former image...");
-        if (!url) {
-            alert("No URL to delete found. Please report this")
-        }
-        
-        const response = await fetch('/api/deleteImage', {
-            method: 'DELETE',
-            body: url
-        })
-
-        const data = await response.json();
-
-        if (response.ok) {
-            console.log('Image Deleted Successfully');
-            if (props.onImageDeleteSuccess) {
-                props.onImageDeleteSuccess();
-            }
-        } else {
-            console.error("Deletion failed: ", data.message)
-        }
-    }
-
     const handleUpload = async () => {
         if (!selectedFile) return;
-
-        if (props.image) {
-            handleDelete(props.image);
-        }
 
         let compressedImage
 
