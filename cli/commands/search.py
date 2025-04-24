@@ -91,12 +91,15 @@ def run(args, data_path):
                 print(f'⚠️  Warning: Field "{args.edit_field}" not found in data. When you enter a value, a new "{args.edit_field}" key will be created in each edited entry.\n')
 
         for cigar, size in results:
-            display = (
-                f"{cigar.get('Cigar Brand')} - {cigar.get('Cigar Name')} | "
-                f"Size: {size.get('Size')} | Price: {size.get('Price')} | "
-                f"In Stock: {size.get('In_Stock')} | Barcode: {str(size.get('Barcode', '')).strip() or 'N/A'}"
-            )
-            print(display)
+            if args.display == ["all"]:
+                print(json.dumps(size, indent=2))
+            else:
+                display = (
+                    f"{cigar.get('Cigar Brand')} - {cigar.get('Cigar Name')} | "
+                    f"Size: {size.get('Size')} | Price: {size.get('Price')} | "
+                    f"In Stock: {size.get('In_Stock')} | Barcode: {str(size.get('Barcode', '')).strip() or 'N/A'}"
+                )
+                print(display)
 
             if args.edit_field:
                 user_input = input(f"Input {args.edit_field.title()} (Enter to skip): ").strip()
@@ -137,11 +140,14 @@ def run(args, data_path):
                 print(f'⚠️  Warning: Field "{args.edit_field}" not found in data. When you enter a value, a new "{args.edit_field}" key will be created in each edited entry.\n')
 
         for cigar in matches:
-            output = f"- {cigar.get('Cigar Name')} ({cigar.get('Cigar Brand')})"
-            if args.display:
-                extras = [f"{field}: {cigar.get(field, 'N/A')}" for field in args.display]
-                output += " | " + " | ".join(extras)
-            print(output)
+            if args.display == ["all"]:
+                print(json.dumps(cigar, indent=2))
+            else:
+                output = f"- {cigar.get('Cigar Name')} ({cigar.get('Cigar Brand')})"
+                if args.display:
+                    extras = [f"{field}: {cigar.get(field, 'N/A')}" for field in args.display]
+                    output += " | " + " | ".join(extras)
+                print(output)
 
             if args.edit_field:
                 user_input = input(f"Input {args.edit_field.title()} (Enter to skip): ").strip()
