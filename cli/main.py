@@ -1,6 +1,6 @@
 import argparse
 import os
-from commands import search, count, audit, importpy, fields
+from commands import search, count, audit, importpy, fields, schema, fix
 
 def main():
     
@@ -49,6 +49,17 @@ def main():
     # Fields command
     fields_parser = subparsers.add_parser("fields", help="List available fields")
 
+    # Schema
+    schema_path = os.path.abspath(os.path.join(script_dir, "../public/data/cigar.schema.json"))
+    schema_parser = subparsers.add_parser("schema", help="Validate the consolidated cigar JSON against a provided JSON Schema")
+
+    # Fix command
+    fix_parser = subparsers.add_parser("fix", help="Options for mass-fixing data")
+    fix_parser.add_argument("--remove-empty", help="Remove keys with empty values for the specified field")
+    fix_parser.add_argument("--to-string", help="Convert the specified field to a string")
+
+    
+
 
 
 
@@ -65,6 +76,10 @@ def main():
         importpy.run(args, data_path)
     elif args.command == "fields":
         fields.run(args, data_path)
+    elif args.command == "schema":
+        schema.run(args, data_path, schema_path)
+    elif args.command == "fix":
+        fix.run(args, data_path)
     else:
         parser.print_help()
 
