@@ -828,7 +828,7 @@
     "Cigar Name": "Viva La Vida",
     "Wrapper": "Habano Oscuro",
     "Binder": "Nicaraguan Corojo",
-    "Filler": "Criollo ‘98",
+    "Filler": "Criollo \u201898",
     "Flavor_Profile": "Black Pepper, Leather",
     "Strength_Profile": "Full",
     "Sizes": [
@@ -2980,7 +2980,7 @@
   },
   {
     "Cigar Brand": "CAO",
-    "Cigar Name": "L’Anniversaire Cameroon",
+    "Cigar Name": "L\u2019Anniversaire Cameroon",
     "Wrapper": "Cameroon",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
@@ -3694,7 +3694,7 @@
   },
   {
     "Cigar Brand": "Drew Estate",
-    "Cigar Name": "Java Mint “58”",
+    "Cigar Name": "Java Mint \u201c58\u201d",
     "Wrapper": "Brazilian Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
@@ -3800,8 +3800,7 @@
       {
         "Size": "Belicoso",
         "Barcode": 876742000840,
-        "In_Stock": "FALSE",
-        "Price": ""
+        "In_Stock": "FALSE"
       }
     ],
     "slug": "drew-estate-tabak-dulce"
@@ -3832,7 +3831,7 @@
   },
   {
     "Cigar Brand": "Drew Estate",
-    "Cigar Name": "Undercrown All Dekk’d Out",
+    "Cigar Name": "Undercrown All Dekk\u2019d Out",
     "Wrapper": "San Andres",
     "Binder": "Connecticut Broadleaf, San Andres",
     "Filler": "Nicaraguan",
@@ -5322,8 +5321,7 @@
       {
         "Size": "",
         "Barcode": "",
-        "In_Stock": "FALSE",
-        "Price": ""
+        "In_Stock": "FALSE"
       }
     ],
     "slug": "j-c-newman-decision-550"
@@ -5448,8 +5446,7 @@
       {
         "Size": "",
         "Barcode": "",
-        "In_Stock": "FALSE",
-        "Price": ""
+        "In_Stock": "FALSE"
       }
     ],
     "slug": "j-c-newman-don-jose-granada"
@@ -5906,8 +5903,7 @@
       {
         "Size": "",
         "Barcode": "",
-        "In_Stock": "TRUE",
-        "Price": ""
+        "In_Stock": "TRUE"
       }
     ],
     "slug": "joya-de-nicaragua-robusta"
@@ -8254,8 +8250,7 @@
       {
         "Size": "Churchill",
         "Barcode": "",
-        "In_Stock": "FALSE",
-        "Price": ""
+        "In_Stock": "FALSE"
       }
     ],
     "slug": "quorum-churchill-shade"
@@ -8272,8 +8267,7 @@
       {
         "Size": "Corona",
         "Barcode": "",
-        "In_Stock": "FALSE",
-        "Price": ""
+        "In_Stock": "FALSE"
       }
     ],
     "slug": "quorum-corona-maduro"
@@ -8290,8 +8284,7 @@
       {
         "Size": "Corona",
         "Barcode": "",
-        "In_Stock": "FALSE",
-        "Price": ""
+        "In_Stock": "FALSE"
       }
     ],
     "slug": "quorum-corona-original"
@@ -8308,8 +8301,7 @@
       {
         "Size": "Corona",
         "Barcode": "",
-        "In_Stock": "FALSE",
-        "Price": ""
+        "In_Stock": "FALSE"
       }
     ],
     "slug": "quorum-corona-shade"
@@ -9119,7 +9111,7 @@
     "Cigar Brand": "RomaCraft",
     "Cigar Name": "Intemperance Volstead",
     "Wrapper": "Ecuadorian Sumatra",
-    "Binder": "Mexican San Andrés",
+    "Binder": "Mexican San Andr\u00e9s",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Pepper, Coffee, Leather, Baking Spice",
     "Strength_Profile": "Medium",
