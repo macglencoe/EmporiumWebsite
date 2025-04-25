@@ -10,7 +10,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7427025678329,
+        "Barcode": "7427025678329",
         "In_Stock": "TRUE",
         "Price": "16.70"
       }
@@ -28,7 +28,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7427025678732,
+        "Barcode": "7427025678732",
         "In_Stock": "TRUE",
         "Price": "16.45"
       }
@@ -46,7 +46,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7427025678435,
+        "Barcode": "7427025678435",
         "In_Stock": "TRUE",
         "Price": "11.65"
       }
@@ -64,7 +64,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7426824782381,
+        "Barcode": "7426824782381",
         "In_Stock": "TRUE",
         "Price": "7.40"
       },
@@ -88,7 +88,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7427025680377,
+        "Barcode": "7427025680377",
         "In_Stock": "TRUE",
         "Price": "6.60"
       }
@@ -106,7 +106,7 @@
     "Sizes": [
       {
         "Size": "Super Toro",
-        "Barcode": 7426824777318,
+        "Barcode": "7426824777318",
         "In_Stock": "TRUE",
         "Price": "8.50"
       }
@@ -124,7 +124,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7427025678152,
+        "Barcode": "7427025678152",
         "In_Stock": "TRUE",
         "Price": "8.50"
       }
@@ -142,7 +142,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 7426824782664,
+        "Barcode": "7426824782664",
         "In_Stock": "TRUE",
         "Price": "6.60"
       }
@@ -160,7 +160,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7427025680032,
+        "Barcode": "7427025680032",
         "In_Stock": "TRUE",
         "Price": "10.60"
       }
@@ -178,7 +178,7 @@
     "Sizes": [
       {
         "Size": "Super Toro",
-        "Barcode": 7426824777356,
+        "Barcode": "7426824777356",
         "In_Stock": "TRUE",
         "Price": "9.00"
       }
@@ -196,7 +196,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7426824782817,
+        "Barcode": "7426824782817",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -214,7 +214,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7426824782787,
+        "Barcode": "7426824782787",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -232,13 +232,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7427025680216,
+        "Barcode": "7427025680216",
         "In_Stock": "TRUE",
         "Price": "7.95"
       },
       {
         "Size": "Toro",
-        "Barcode": 7427025680223,
+        "Barcode": "7427025680223",
         "In_Stock": "TRUE",
         "Price": "8.50"
       }
@@ -256,7 +256,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7427025678565,
+        "Barcode": "7427025678565",
         "In_Stock": "TRUE",
         "Price": "10.85"
       }
@@ -274,7 +274,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7427025678541,
+        "Barcode": "7427025678541",
         "In_Stock": "TRUE",
         "Price": "10.90"
       }
@@ -292,7 +292,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7427025678480,
+        "Barcode": "7427025678480",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -311,7 +311,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7427025678497,
+        "Barcode": "7427025678497",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -329,7 +329,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7429457791799,
+        "Barcode": "7429457791799",
         "In_Stock": "TRUE",
         "Price": "11.70"
       }
@@ -347,7 +347,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7429457990925,
+        "Barcode": "7429457990925",
         "In_Stock": "TRUE",
         "Price": "11.20"
       }
@@ -365,7 +365,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 7426824785146,
+        "Barcode": "7426824785146",
         "In_Stock": "TRUE",
         "Price": "10.60"
       }
@@ -383,13 +383,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7426824785931,
+        "Barcode": "7426824785931",
         "In_Stock": "TRUE",
         "Price": "15.35"
       },
       {
         "Size": "Toro",
-        "Barcode": 7426824785948,
+        "Barcode": "7426824785948",
         "In_Stock": "TRUE",
         "Price": "15.90"
       }
@@ -407,19 +407,19 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7426824785894,
+        "Barcode": "7426824785894",
         "In_Stock": "TRUE",
         "Price": "12.75"
       },
       {
         "Size": "Robusto",
-        "Barcode": 7426824785887,
+        "Barcode": "7426824785887",
         "In_Stock": "TRUE",
         "Price": "11.65"
       },
       {
         "Size": "Perfecto",
-        "Barcode": 7426824785917,
+        "Barcode": "7426824785917",
         "In_Stock": "TRUE",
         "Price": "13.50"
       }
@@ -437,19 +437,19 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7429457191124,
+        "Barcode": "7429457191124",
         "In_Stock": "TRUE",
         "Price": "9.55"
       },
       {
         "Size": "Churchill",
-        "Barcode": 7429457191148,
+        "Barcode": "7429457191148",
         "In_Stock": "TRUE",
         "Price": "11.15"
       },
       {
         "Size": "Toro",
-        "Barcode": 7429457191131,
+        "Barcode": "7429457191131",
         "In_Stock": "TRUE",
         "Price": "10.60"
       }
@@ -467,19 +467,19 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 851350001496,
+        "Barcode": "851350001496",
         "In_Stock": "TRUE",
         "Price": "8.50"
       },
       {
         "Size": "Toro",
-        "Barcode": 851350001465,
+        "Barcode": "851350001465",
         "In_Stock": "TRUE",
         "Price": "9.55"
       },
       {
         "Size": "Churchill",
-        "Barcode": 851350001434,
+        "Barcode": "851350001434",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -497,7 +497,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 196043037728,
+        "Barcode": "196043037728",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -515,13 +515,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7426824785320,
+        "Barcode": "7426824785320",
         "In_Stock": "TRUE",
         "Price": "7.45"
       },
       {
         "Size": "Rothschild",
-        "Barcode": 7426824785313,
+        "Barcode": "7426824785313",
         "In_Stock": "TRUE",
         "Price": "6.80"
       }
@@ -539,7 +539,7 @@
     "Sizes": [
       {
         "Size": "Rothschild",
-        "Barcode": 7426824785368,
+        "Barcode": "7426824785368",
         "In_Stock": false,
         "Price": "7.45"
       },
@@ -563,25 +563,25 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 7429457491453,
+        "Barcode": "7429457491453",
         "In_Stock": "TRUE",
         "Price": "8.25"
       },
       {
         "Size": "Toro",
-        "Barcode": 7429457491477,
+        "Barcode": "7429457491477",
         "In_Stock": "TRUE",
         "Price": "8.25"
       },
       {
         "Size": "Toro",
-        "Barcode": 7429457491484,
+        "Barcode": "7429457491484",
         "In_Stock": "TRUE",
         "Price": "7.95"
       },
       {
         "Size": "Corona",
-        "Barcode": 7429457491460,
+        "Barcode": "7429457491460",
         "In_Stock": "TRUE",
         "Price": "6.80"
       }
@@ -599,19 +599,19 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 851350001991,
+        "Barcode": "851350001991",
         "In_Stock": "TRUE",
         "Price": "9.00"
       },
       {
         "Size": "Toro",
-        "Barcode": 851350001960,
+        "Barcode": "851350001960",
         "In_Stock": "TRUE",
         "Price": "9.00"
       },
       {
         "Size": "Perfecto",
-        "Barcode": 851350001939,
+        "Barcode": "851350001939",
         "In_Stock": "TRUE",
         "Price": "8.80"
       }
@@ -629,7 +629,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 7426824785870,
+        "Barcode": "7426824785870",
         "In_Stock": "TRUE",
         "Price": "11.15"
       }
@@ -647,25 +647,25 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 851350000994,
+        "Barcode": "851350000994",
         "In_Stock": "TRUE",
         "Price": "8.90"
       },
       {
         "Size": "Toro",
-        "Barcode": 7426824785498,
+        "Barcode": "7426824785498",
         "In_Stock": "TRUE",
         "Price": "9.00"
       },
       {
         "Size": "Toro",
-        "Barcode": 851350000932,
+        "Barcode": "851350000932",
         "In_Stock": "TRUE",
         "Price": "9.25"
       },
       {
         "Size": "Toro",
-        "Barcode": 7426824785429,
+        "Barcode": "7426824785429",
         "In_Stock": "TRUE",
         "Price": "9.55"
       }
@@ -683,25 +683,25 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7429457091073,
+        "Barcode": "7429457091073",
         "In_Stock": "TRUE",
         "Price": "10.00"
       },
       {
         "Size": "Toro",
-        "Barcode": 7429457091080,
+        "Barcode": "7429457091080",
         "In_Stock": "TRUE",
         "Price": "10.60"
       },
       {
         "Size": "Gordo",
-        "Barcode": 7429457291299,
+        "Barcode": "7429457291299",
         "In_Stock": "TRUE",
         "Price": "11.15"
       },
       {
         "Size": "Corona",
-        "Barcode": 7429457091066,
+        "Barcode": "7429457091066",
         "In_Stock": "TRUE",
         "Price": "9.45"
       }
@@ -720,7 +720,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7429457891871,
+        "Barcode": "7429457891871",
         "In_Stock": "TRUE",
         "Price": "13.70"
       }
@@ -738,13 +738,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7429457191186,
+        "Barcode": "7429457191186",
         "In_Stock": "TRUE",
         "Price": "10.10"
       },
       {
         "Size": "Toro",
-        "Barcode": 7429457191193,
+        "Barcode": "7429457191193",
         "In_Stock": "TRUE",
         "Price": "10.60"
       }
@@ -762,13 +762,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 851350003902,
+        "Barcode": "851350003902",
         "In_Stock": "TRUE",
         "Price": "9.00"
       },
       {
         "Size": "Toro",
-        "Barcode": 851350003889,
+        "Barcode": "851350003889",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -786,13 +786,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 851350000048,
+        "Barcode": "851350000048",
         "In_Stock": "TRUE",
         "Price": "9.00"
       },
       {
         "Size": "Toro",
-        "Barcode": 851350000024,
+        "Barcode": "851350000024",
         "In_Stock": "TRUE",
         "Price": "9.60"
       }
@@ -810,13 +810,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 851350003988,
+        "Barcode": "851350003988",
         "In_Stock": "TRUE",
         "Price": "9.50"
       },
       {
         "Size": "Toro",
-        "Barcode": 851350003964,
+        "Barcode": "851350003964",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -834,7 +834,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7429457591580,
+        "Barcode": "7429457591580",
         "In_Stock": "TRUE",
         "Price": "12.60"
       }
@@ -852,13 +852,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 815337018457,
+        "Barcode": "815337018457",
         "In_Stock": "TRUE",
         "Price": "12.30"
       },
       {
         "Size": "Robusto",
-        "Barcode": 815337018426,
+        "Barcode": "815337018426",
         "In_Stock": "TRUE",
         "Price": "10.60"
       }
@@ -876,7 +876,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 815337015326,
+        "Barcode": "815337015326",
         "In_Stock": "TRUE",
         "Price": "9.75"
       }
@@ -894,7 +894,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 815337018822,
+        "Barcode": "815337018822",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -912,7 +912,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 815337010284,
+        "Barcode": "815337010284",
         "In_Stock": "TRUE",
         "Price": "14.30"
       }
@@ -930,7 +930,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 815337015470,
+        "Barcode": "815337015470",
         "In_Stock": "TRUE",
         "Price": "6.40"
       }
@@ -948,7 +948,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 815337016453,
+        "Barcode": "815337016453",
         "In_Stock": "TRUE",
         "Price": "6.60"
       }
@@ -966,7 +966,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674157052,
+        "Barcode": "689674157052",
         "In_Stock": "TRUE",
         "Price": "13.00"
       }
@@ -984,7 +984,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 815337012110,
+        "Barcode": "815337012110",
         "In_Stock": "TRUE",
         "Price": "7.95"
       }
@@ -1002,7 +1002,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 843182100072,
+        "Barcode": "843182100072",
         "In_Stock": "TRUE",
         "Price": "8.20"
       }
@@ -1020,7 +1020,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 843182100096,
+        "Barcode": "843182100096",
         "In_Stock": "TRUE",
         "Price": "8.20"
       }
@@ -1038,7 +1038,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 843182100249,
+        "Barcode": "843182100249",
         "In_Stock": "TRUE",
         "Price": "8.85"
       }
@@ -1056,7 +1056,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 843182102113,
+        "Barcode": "843182102113",
         "In_Stock": "TRUE",
         "Price": "12.20"
       }
@@ -1074,7 +1074,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 843182102151,
+        "Barcode": "843182102151",
         "In_Stock": "TRUE",
         "Price": "15.25"
       }
@@ -1092,7 +1092,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 843182102175,
+        "Barcode": "843182102175",
         "In_Stock": "TRUE",
         "Price": "13.00"
       }
@@ -1110,7 +1110,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 843182102212,
+        "Barcode": "843182102212",
         "In_Stock": "TRUE",
         "Price": "14.75"
       }
@@ -1128,7 +1128,7 @@
     "Sizes": [
       {
         "Size": "Lancero",
-        "Barcode": 843182102236,
+        "Barcode": "843182102236",
         "In_Stock": "TRUE",
         "Price": "13.75"
       }
@@ -1146,7 +1146,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 843182100348,
+        "Barcode": "843182100348",
         "In_Stock": "TRUE",
         "Price": "3.60"
       }
@@ -1164,7 +1164,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 843182100362,
+        "Barcode": "843182100362",
         "In_Stock": "TRUE",
         "Price": "3.60"
       }
@@ -1182,7 +1182,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 843182120100,
+        "Barcode": "843182120100",
         "In_Stock": "TRUE",
         "Price": "10.50"
       }
@@ -1200,7 +1200,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 843182120131,
+        "Barcode": "843182120131",
         "In_Stock": "TRUE",
         "Price": "12.85"
       }
@@ -1218,7 +1218,7 @@
     "Sizes": [
       {
         "Size": "Lancero",
-        "Barcode": 843182120193,
+        "Barcode": "843182120193",
         "In_Stock": "TRUE",
         "Price": "11.00"
       }
@@ -1236,7 +1236,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 843182100423,
+        "Barcode": "843182100423",
         "In_Stock": "TRUE",
         "Price": "5.60"
       }
@@ -1254,7 +1254,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 843182100577,
+        "Barcode": "843182100577",
         "In_Stock": "TRUE",
         "Price": "8.00"
       }
@@ -1272,7 +1272,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 843182100607,
+        "Barcode": "843182100607",
         "In_Stock": "TRUE",
         "Price": "8.00"
       }
@@ -1290,7 +1290,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 843182100621,
+        "Barcode": "843182100621",
         "In_Stock": "TRUE",
         "Price": "10.10"
       }
@@ -1308,7 +1308,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 843182100690,
+        "Barcode": "843182100690",
         "In_Stock": "TRUE",
         "Price": "8.00"
       }
@@ -1326,7 +1326,7 @@
     "Sizes": [
       {
         "Size": "Toro Grande",
-        "Barcode": 843182102328,
+        "Barcode": "843182102328",
         "In_Stock": "TRUE",
         "Price": "11.10"
       }
@@ -1344,7 +1344,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 843182100768,
+        "Barcode": "843182100768",
         "In_Stock": "TRUE",
         "Price": "8.60"
       }
@@ -1362,7 +1362,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 843182100904,
+        "Barcode": "843182100904",
         "In_Stock": "TRUE",
         "Price": "6.25"
       }
@@ -1380,7 +1380,7 @@
     "Sizes": [
       {
         "Size": "Torpedo",
-        "Barcode": 843182100485,
+        "Barcode": "843182100485",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -1398,7 +1398,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 843182101185,
+        "Barcode": "843182101185",
         "In_Stock": "TRUE",
         "Price": "3.90"
       }
@@ -1416,13 +1416,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 843182121916,
+        "Barcode": "843182121916",
         "In_Stock": "TRUE",
         "Price": "13.45"
       },
       {
         "Size": "Belicoso",
-        "Barcode": 843182121305,
+        "Barcode": "843182121305",
         "In_Stock": "TRUE",
         "Price": "14.95"
       }
@@ -1440,7 +1440,7 @@
     "Sizes": [
       {
         "Size": "Gordito",
-        "Barcode": 843182122111,
+        "Barcode": "843182122111",
         "In_Stock": "TRUE",
         "Price": "13.65"
       }
@@ -1458,7 +1458,7 @@
     "Sizes": [
       {
         "Size": "Pyramid",
-        "Barcode": 843182122074,
+        "Barcode": "843182122074",
         "In_Stock": "TRUE",
         "Price": "18.65"
       }
@@ -1476,7 +1476,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 843182121688,
+        "Barcode": "843182121688",
         "In_Stock": "TRUE",
         "Price": "12.25"
       }
@@ -1494,7 +1494,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 843182121824,
+        "Barcode": "843182121824",
         "In_Stock": "FALSE",
         "Price": "20.10"
       }
@@ -1512,7 +1512,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 843182101307,
+        "Barcode": "843182101307",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -1530,13 +1530,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 843182101338,
+        "Barcode": "843182101338",
         "In_Stock": "TRUE",
         "Price": "9.10"
       },
       {
         "Size": "Churchill",
-        "Barcode": 843182101338,
+        "Barcode": "843182101338",
         "In_Stock": "TRUE",
         "Price": "9.10"
       }
@@ -1554,7 +1554,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 843182101406,
+        "Barcode": "843182101406",
         "In_Stock": "TRUE",
         "Price": "9.10"
       }
@@ -1572,7 +1572,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 843182101420,
+        "Barcode": "843182101420",
         "In_Stock": "TRUE",
         "Price": "6.00"
       }
@@ -1590,7 +1590,7 @@
     "Sizes": [
       {
         "Size": "Petite Gordo",
-        "Barcode": 843182122111,
+        "Barcode": "843182122111",
         "In_Stock": "TRUE",
         "Price": "13.75"
       }
@@ -1608,7 +1608,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 843182101130,
+        "Barcode": "843182101130",
         "In_Stock": "TRUE",
         "Price": "4.30"
       }
@@ -1626,7 +1626,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 843182101116,
+        "Barcode": "843182101116",
         "In_Stock": "TRUE",
         "Price": "4.30"
       }
@@ -1644,7 +1644,7 @@
     "Sizes": [
       {
         "Size": "Belicoso",
-        "Barcode": 843182100508,
+        "Barcode": "843182100508",
         "In_Stock": "TRUE",
         "Price": "12.00"
       }
@@ -1662,7 +1662,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 843182100799,
+        "Barcode": "843182100799",
         "In_Stock": "TRUE",
         "Price": "8.60"
       }
@@ -1680,7 +1680,7 @@
     "Sizes": [
       {
         "Size": "Toro Grande",
-        "Barcode": 843182100409,
+        "Barcode": "843182100409",
         "In_Stock": "TRUE",
         "Price": "11.90"
       }
@@ -1698,7 +1698,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 843182101000,
+        "Barcode": "843182101000",
         "In_Stock": "TRUE",
         "Price": "7.65"
       }
@@ -1716,7 +1716,7 @@
     "Sizes": [
       {
         "Size": "Rothschild",
-        "Barcode": 843182102304,
+        "Barcode": "843182102304",
         "In_Stock": "TRUE",
         "Price": "7.10"
       }
@@ -1734,7 +1734,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 843182122319,
+        "Barcode": "843182122319",
         "In_Stock": "TRUE",
         "Price": "9.20"
       }
@@ -1752,7 +1752,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 843182122333,
+        "Barcode": "843182122333",
         "In_Stock": "TRUE",
         "Price": "8.80"
       }
@@ -1770,7 +1770,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 843182122401,
+        "Barcode": "843182122401",
         "In_Stock": "TRUE",
         "Price": "12.35"
       }
@@ -1788,7 +1788,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 843182122456,
+        "Barcode": "843182122456",
         "In_Stock": "TRUE",
         "Price": "11.70"
       }
@@ -1806,7 +1806,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 843182122548,
+        "Barcode": "843182122548",
         "In_Stock": "TRUE",
         "Price": "7.90"
       }
@@ -1824,7 +1824,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 843182122630,
+        "Barcode": "843182122630",
         "In_Stock": "TRUE",
         "Price": "11.25"
       }
@@ -1842,7 +1842,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 843182122654,
+        "Barcode": "843182122654",
         "In_Stock": "TRUE",
         "Price": "11.30"
       }
@@ -1877,7 +1877,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 843182122708,
+        "Barcode": "843182122708",
         "In_Stock": "TRUE",
         "Price": "10.85"
       }
@@ -1895,7 +1895,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 843182122760,
+        "Barcode": "843182122760",
         "In_Stock": "TRUE",
         "Price": "12.00"
       }
@@ -1913,7 +1913,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 843182102052,
+        "Barcode": "843182102052",
         "In_Stock": "FALSE",
         "Price": "6.45"
       }
@@ -1931,7 +1931,7 @@
     "Sizes": [
       {
         "Size": "Torpedo",
-        "Barcode": 843182100645,
+        "Barcode": "843182100645",
         "In_Stock": "TRUE",
         "Price": "9.45"
       }
@@ -1949,7 +1949,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 843182123255,
+        "Barcode": "843182123255",
         "In_Stock": "TRUE",
         "Price": "9.95"
       }
@@ -1968,7 +1968,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 843182123286,
+        "Barcode": "843182123286",
         "In_Stock": "TRUE",
         "Price": "9.25"
       }
@@ -1986,7 +1986,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 843182123316,
+        "Barcode": "843182123316",
         "In_Stock": "TRUE",
         "Price": "11.00"
       }
@@ -2004,7 +2004,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 843182123354,
+        "Barcode": "843182123354",
         "In_Stock": "TRUE",
         "Price": "11.65"
       }
@@ -2022,7 +2022,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 843182102342,
+        "Barcode": "843182102342",
         "In_Stock": "TRUE",
         "Price": "11.60"
       }
@@ -2040,7 +2040,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 843182102366,
+        "Barcode": "843182102366",
         "In_Stock": "TRUE",
         "Price": "11.60"
       }
@@ -2058,7 +2058,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 843182100829,
+        "Barcode": "843182100829",
         "In_Stock": "TRUE",
         "Price": "9.10"
       }
@@ -2076,7 +2076,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 843182122517,
+        "Barcode": "843182122517",
         "In_Stock": "TRUE",
         "Price": "7.90"
       }
@@ -2094,7 +2094,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 843182122630,
+        "Barcode": "843182122630",
         "In_Stock": "TRUE",
         "Price": "10.45"
       }
@@ -2112,7 +2112,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 843182122722,
+        "Barcode": "843182122722",
         "In_Stock": "TRUE",
         "Price": "19.00"
       }
@@ -2130,7 +2130,7 @@
     "Sizes": [
       {
         "Size": "Panatella",
-        "Barcode": 843182101499,
+        "Barcode": "843182101499",
         "In_Stock": "TRUE",
         "Price": "3.25"
       }
@@ -2148,25 +2148,25 @@
     "Sizes": [
       {
         "Size": "Lonsdale",
-        "Barcode": 819577011735,
+        "Barcode": "819577011735",
         "In_Stock": "TRUE",
         "Price": "13.00"
       },
       {
         "Size": "Corona",
-        "Barcode": 819577011797,
+        "Barcode": "819577011797",
         "In_Stock": "TRUE",
         "Price": "12.50"
       },
       {
         "Size": "Robusto",
-        "Barcode": 819577011858,
+        "Barcode": "819577011858",
         "In_Stock": "TRUE",
         "Price": "12.65"
       },
       {
         "Size": "Toro",
-        "Barcode": 819577011810,
+        "Barcode": "819577011810",
         "In_Stock": "TRUE",
         "Price": "14.85"
       }
@@ -2184,7 +2184,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 819577012176,
+        "Barcode": "819577012176",
         "In_Stock": "TRUE",
         "Price": "13.80"
       }
@@ -2202,7 +2202,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 819577011636,
+        "Barcode": "819577011636",
         "In_Stock": "TRUE",
         "Price": "18.35"
       }
@@ -2220,7 +2220,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 819577012039,
+        "Barcode": "819577012039",
         "In_Stock": "TRUE",
         "Price": "30.00"
       }
@@ -2238,13 +2238,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 819577012411,
+        "Barcode": "819577012411",
         "In_Stock": "TRUE",
         "Price": "18.65"
       },
       {
         "Size": "Robusto",
-        "Barcode": 819577012398,
+        "Barcode": "819577012398",
         "In_Stock": "FALSE",
         "Price": "13.65"
       }
@@ -2262,7 +2262,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 819577012558,
+        "Barcode": "819577012558",
         "In_Stock": "TRUE",
         "Price": "16.70"
       }
@@ -2280,7 +2280,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 819577012534,
+        "Barcode": "819577012534",
         "In_Stock": "TRUE",
         "Price": "19.85"
       }
@@ -2298,7 +2298,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 819577012657,
+        "Barcode": "819577012657",
         "In_Stock": "TRUE",
         "Price": "17.10"
       }
@@ -2316,7 +2316,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7623500244434,
+        "Barcode": "7623500244434",
         "In_Stock": "TRUE",
         "Price": "10.50"
       }
@@ -2334,13 +2334,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7623500445916,
+        "Barcode": "7623500445916",
         "In_Stock": "TRUE",
         "Price": "11.90"
       },
       {
         "Size": "Toro",
-        "Barcode": 7623500446548,
+        "Barcode": "7623500446548",
         "In_Stock": "TRUE",
         "Price": "14.35"
       }
@@ -2358,13 +2358,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7423825002067,
+        "Barcode": "7423825002067",
         "In_Stock": "TRUE",
         "Price": "6.30"
       },
       {
         "Size": "Toro",
-        "Barcode": 7423825002043,
+        "Barcode": "7423825002043",
         "In_Stock": "TRUE",
         "Price": "6.50"
       }
@@ -2382,13 +2382,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674111344,
+        "Barcode": "689674111344",
         "In_Stock": "TRUE",
         "Price": "6.30"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674111474,
+        "Barcode": "689674111474",
         "In_Stock": "TRUE",
         "Price": "7.75"
       }
@@ -2406,7 +2406,7 @@
     "Sizes": [
       {
         "Size": "Belicoso",
-        "Barcode": 689674111443,
+        "Barcode": "689674111443",
         "In_Stock": "TRUE",
         "Price": "7.25"
       }
@@ -2424,19 +2424,19 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674155522,
+        "Barcode": "689674155522",
         "In_Stock": "TRUE",
         "Price": "6.40"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674155461,
+        "Barcode": "689674155461",
         "In_Stock": "TRUE",
         "Price": "8.40"
       },
       {
         "Size": "Gordo",
-        "Barcode": 689674155492,
+        "Barcode": "689674155492",
         "In_Stock": "TRUE",
         "Price": "7.75"
       }
@@ -2454,13 +2454,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674146308,
+        "Barcode": "689674146308",
         "In_Stock": "TRUE",
         "Price": "8.50"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674146339,
+        "Barcode": "689674146339",
         "In_Stock": "TRUE",
         "Price": "8.90"
       }
@@ -2478,7 +2478,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 860003528501,
+        "Barcode": "860003528501",
         "In_Stock": "TRUE",
         "Price": "16.65"
       }
@@ -2496,7 +2496,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 855290006405,
+        "Barcode": "855290006405",
         "In_Stock": "TRUE",
         "Price": "8.60"
       }
@@ -2514,13 +2514,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 854185004250,
+        "Barcode": "854185004250",
         "In_Stock": false,
         "Price": "9.95"
       },
       {
         "Size": "Gordo",
-        "Barcode": 855290006023,
+        "Barcode": "855290006023",
         "In_Stock": false,
         "Price": "14.30"
       },
@@ -2544,13 +2544,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 855374008578,
+        "Barcode": "855374008578",
         "In_Stock": false,
         "Price": "7.00"
       },
       {
         "Size": "Toro",
-        "Barcode": 855374008592,
+        "Barcode": "855374008592",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -2568,7 +2568,7 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 7426824777271,
+        "Barcode": "7426824777271",
         "In_Stock": "TRUE",
         "Price": "9.75"
       }
@@ -2586,7 +2586,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 855374008363,
+        "Barcode": "855374008363",
         "In_Stock": "TRUE",
         "Price": "10.40"
       }
@@ -2604,7 +2604,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 854185004984,
+        "Barcode": "854185004984",
         "In_Stock": "TRUE",
         "Price": "14.90"
       }
@@ -2622,7 +2622,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 854185004489,
+        "Barcode": "854185004489",
         "In_Stock": "TRUE",
         "Price": "10.50"
       }
@@ -2640,7 +2640,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 854185004090,
+        "Barcode": "854185004090",
         "In_Stock": "TRUE",
         "Price": "8.80"
       }
@@ -2658,7 +2658,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 855290006450,
+        "Barcode": "855290006450",
         "In_Stock": "TRUE",
         "Price": "5.00"
       }
@@ -2676,7 +2676,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 869327000304,
+        "Barcode": "869327000304",
         "In_Stock": "FALSE",
         "Price": "16.95"
       }
@@ -2694,13 +2694,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7623500175226,
+        "Barcode": "7623500175226",
         "In_Stock": "TRUE",
         "Price": "10.30"
       },
       {
         "Size": "Robusto",
-        "Barcode": 7623500175219,
+        "Barcode": "7623500175219",
         "In_Stock": "TRUE",
         "Price": "9.80"
       }
@@ -2718,13 +2718,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7623500175394,
+        "Barcode": "7623500175394",
         "In_Stock": "TRUE",
         "Price": "9.30"
       },
       {
         "Size": "Robusto",
-        "Barcode": 7623500175387,
+        "Barcode": "7623500175387",
         "In_Stock": "TRUE",
         "Price": "8.80"
       }
@@ -2742,7 +2742,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7623500325775,
+        "Barcode": "7623500325775",
         "In_Stock": "TRUE",
         "Price": "9.30"
       }
@@ -2760,7 +2760,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7623500525229,
+        "Barcode": "7623500525229",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -2778,13 +2778,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7623500430639,
+        "Barcode": "7623500430639",
         "In_Stock": "TRUE",
         "Price": "8.80"
       },
       {
         "Size": "Toro",
-        "Barcode": 7623500430646,
+        "Barcode": "7623500430646",
         "In_Stock": "TRUE",
         "Price": "9.80"
       }
@@ -2802,13 +2802,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7623500175493,
+        "Barcode": "7623500175493",
         "In_Stock": "TRUE",
         "Price": "12.30"
       },
       {
         "Size": "Toro",
-        "Barcode": 7623500489453,
+        "Barcode": "7623500489453",
         "In_Stock": "TRUE",
         "Price": "13.15"
       }
@@ -2826,7 +2826,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 652125016116,
+        "Barcode": "652125016116",
         "In_Stock": "TRUE",
         "Price": "10.60"
       }
@@ -2844,13 +2844,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 8720400475452,
+        "Barcode": "8720400475452",
         "In_Stock": "TRUE",
         "Price": "10.45"
       },
       {
         "Size": "Toro",
-        "Barcode": 652125006810,
+        "Barcode": "652125006810",
         "In_Stock": "TRUE",
         "Price": "10.50"
       }
@@ -2868,7 +2868,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674140566,
+        "Barcode": "689674140566",
         "In_Stock": "TRUE",
         "Price": "10.70"
       }
@@ -2886,7 +2886,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674154969,
+        "Barcode": "689674154969",
         "In_Stock": "TRUE",
         "Price": "7.45"
       }
@@ -2904,7 +2904,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674155065,
+        "Barcode": "689674155065",
         "In_Stock": "FALSE",
         "Price": "7.45"
       }
@@ -2922,19 +2922,19 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 689674114192,
+        "Barcode": "689674114192",
         "In_Stock": "TRUE",
         "Price": "9.85"
       },
       {
         "Size": "Robusto",
-        "Barcode": 689674062875,
+        "Barcode": "689674062875",
         "In_Stock": "TRUE",
         "Price": "11.65"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674062882,
+        "Barcode": "689674062882",
         "In_Stock": "TRUE",
         "Price": "14.30"
       }
@@ -2952,7 +2952,7 @@
     "Sizes": [
       {
         "Size": "8x60",
-        "Barcode": 689674154228,
+        "Barcode": "689674154228",
         "In_Stock": "TRUE",
         "Price": "13.65"
       }
@@ -2970,7 +2970,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 652125011012,
+        "Barcode": "652125011012",
         "In_Stock": "TRUE",
         "Price": "10.45"
       }
@@ -2988,7 +2988,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 652125004519,
+        "Barcode": "652125004519",
         "In_Stock": "TRUE",
         "Price": "10.00"
       }
@@ -3006,7 +3006,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674125129,
+        "Barcode": "689674125129",
         "In_Stock": "TRUE",
         "Price": "11.60"
       }
@@ -3024,7 +3024,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 652125000214,
+        "Barcode": "652125000214",
         "In_Stock": "TRUE",
         "Price": "11.65"
       }
@@ -3042,13 +3042,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674133803,
+        "Barcode": "689674133803",
         "In_Stock": "TRUE",
         "Price": "9.60"
       },
       {
         "Size": "Gigante",
-        "Barcode": 689674133865,
+        "Barcode": "689674133865",
         "In_Stock": "TRUE",
         "Price": "9.90"
       }
@@ -3066,7 +3066,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674069997,
+        "Barcode": "689674069997",
         "In_Stock": "TRUE",
         "Price": "15.00"
       }
@@ -3084,7 +3084,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7426824777691,
+        "Barcode": "7426824777691",
         "In_Stock": "TRUE",
         "Price": "3.00"
       }
@@ -3102,13 +3102,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7426824777035,
+        "Barcode": "7426824777035",
         "In_Stock": "TRUE",
         "Price": "2.80"
       },
       {
         "Size": "Robusto",
-        "Barcode": 7426824777707,
+        "Barcode": "7426824777707",
         "In_Stock": "TRUE",
         "Price": "2.00"
       }
@@ -3126,7 +3126,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674090786,
+        "Barcode": "689674090786",
         "In_Stock": "TRUE",
         "Price": "15.80"
       }
@@ -3144,7 +3144,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674023456,
+        "Barcode": "689674023456",
         "In_Stock": "TRUE",
         "Price": "26.00"
       }
@@ -3162,7 +3162,7 @@
     "Sizes": [
       {
         "Size": "Lancero",
-        "Barcode": 6896741562846,
+        "Barcode": "6896741562846",
         "In_Stock": "TRUE",
         "Price": "15.90"
       }
@@ -3180,13 +3180,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 814539015653,
+        "Barcode": "814539015653",
         "In_Stock": "TRUE",
         "Price": "15.00"
       },
       {
         "Size": "Toro",
-        "Barcode": 814539015660,
+        "Barcode": "814539015660",
         "In_Stock": "TRUE",
         "Price": "15.50"
       }
@@ -3204,13 +3204,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 814539015554,
+        "Barcode": "814539015554",
         "In_Stock": "TRUE",
         "Price": "10.00"
       },
       {
         "Size": "Toro",
-        "Barcode": 814539015561,
+        "Barcode": "814539015561",
         "In_Stock": "TRUE",
         "Price": "11.00"
       }
@@ -3228,7 +3228,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 726754193125,
+        "Barcode": "726754193125",
         "In_Stock": "TRUE",
         "Price": "4.25"
       }
@@ -3246,7 +3246,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674146469,
+        "Barcode": "689674146469",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -3264,7 +3264,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674107873,
+        "Barcode": "689674107873",
         "In_Stock": "TRUE",
         "Price": "10.80"
       }
@@ -3282,7 +3282,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674150794,
+        "Barcode": "689674150794",
         "In_Stock": "TRUE",
         "Price": "7.45"
       }
@@ -3300,13 +3300,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674150824,
+        "Barcode": "689674150824",
         "In_Stock": "TRUE",
         "Price": "8.50"
       },
       {
         "Size": "Gigante",
-        "Barcode": 689674160670,
+        "Barcode": "689674160670",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -3324,19 +3324,19 @@
     "Sizes": [
       {
         "Size": "Robutso",
-        "Barcode": 689674154662,
+        "Barcode": "689674154662",
         "In_Stock": "TRUE",
         "Price": "8.25"
       },
       {
         "Size": "Gigante",
-        "Barcode": 689674160649,
+        "Barcode": "689674160649",
         "In_Stock": "TRUE",
         "Price": "9.50"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674154693,
+        "Barcode": "689674154693",
         "In_Stock": "TRUE",
         "Price": "8.50"
       }
@@ -3354,7 +3354,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674095187,
+        "Barcode": "689674095187",
         "In_Stock": "TRUE",
         "Price": "10.60"
       }
@@ -3372,7 +3372,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674099376,
+        "Barcode": "689674099376",
         "In_Stock": "TRUE",
         "Price": "10.60"
       }
@@ -3390,7 +3390,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 689674154785,
+        "Barcode": "689674154785",
         "In_Stock": "TRUE",
         "Price": "10.60"
       }
@@ -3408,7 +3408,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 876742001137,
+        "Barcode": "876742001137",
         "In_Stock": "TRUE",
         "Price": "7.00"
       }
@@ -3426,7 +3426,7 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 876742001199,
+        "Barcode": "876742001199",
         "In_Stock": "TRUE",
         "Price": "13.50"
       }
@@ -3444,7 +3444,7 @@
     "Sizes": [
       {
         "Size": "Lonsdale",
-        "Barcode": 876742001120,
+        "Barcode": "876742001120",
         "In_Stock": "TRUE",
         "Price": "10.00"
       }
@@ -3462,7 +3462,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 876742001779,
+        "Barcode": "876742001779",
         "In_Stock": "TRUE",
         "Price": "10.50"
       }
@@ -3480,7 +3480,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 876742001144,
+        "Barcode": "876742001144",
         "In_Stock": "TRUE",
         "Price": "8.75"
       }
@@ -3498,7 +3498,7 @@
     "Sizes": [
       {
         "Size": "Seniority",
-        "Barcode": 876742001205,
+        "Barcode": "876742001205",
         "In_Stock": "TRUE",
         "Price": "2.00"
       }
@@ -3516,7 +3516,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 876742005111,
+        "Barcode": "876742005111",
         "In_Stock": "TRUE",
         "Price": "8.50"
       }
@@ -3534,7 +3534,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 818578013892,
+        "Barcode": "818578013892",
         "In_Stock": "TRUE",
         "Price": "10.00"
       }
@@ -3552,7 +3552,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 818578018521,
+        "Barcode": "818578018521",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -3570,7 +3570,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 876742005098,
+        "Barcode": "876742005098",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -3588,13 +3588,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 818578010907,
+        "Barcode": "818578010907",
         "In_Stock": "TRUE",
         "Price": "2.80"
       },
       {
         "Size": "Robusto",
-        "Barcode": 818578010860,
+        "Barcode": "818578010860",
         "In_Stock": "TRUE",
         "Price": "2.80"
       }
@@ -3612,7 +3612,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 818578010891,
+        "Barcode": "818578010891",
         "In_Stock": "TRUE",
         "Price": "3.60"
       }
@@ -3630,7 +3630,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 818578016985,
+        "Barcode": "818578016985",
         "In_Stock": "TRUE",
         "Price": "6.00"
       }
@@ -3648,7 +3648,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 846261001048,
+        "Barcode": "846261001048",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -3666,7 +3666,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 846261001147,
+        "Barcode": "846261001147",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -3684,7 +3684,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 846261006869,
+        "Barcode": "846261006869",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -3702,7 +3702,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 846261006920,
+        "Barcode": "846261006920",
         "In_Stock": "TRUE",
         "Price": "13.00"
       }
@@ -3720,7 +3720,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 876742009690,
+        "Barcode": "876742009690",
         "In_Stock": "TRUE",
         "Price": "10.00"
       }
@@ -3738,7 +3738,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 818578018835,
+        "Barcode": "818578018835",
         "In_Stock": "TRUE",
         "Price": "6.60"
       }
@@ -3756,7 +3756,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 876742001823,
+        "Barcode": "876742001823",
         "In_Stock": false,
         "Price": "8.50"
       },
@@ -3780,25 +3780,25 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 876742000758,
+        "Barcode": "876742000758",
         "In_Stock": "TRUE",
         "Price": "10.50"
       },
       {
         "Size": "Corona",
-        "Barcode": 876742000734,
+        "Barcode": "876742000734",
         "In_Stock": "TRUE",
         "Price": "8.00"
       },
       {
         "Size": "Robusto",
-        "Barcode": 876742000741,
+        "Barcode": "876742000741",
         "In_Stock": "TRUE",
         "Price": "10.00"
       },
       {
         "Size": "Belicoso",
-        "Barcode": 876742000840,
+        "Barcode": "876742000840",
         "In_Stock": "FALSE"
       }
     ],
@@ -3815,13 +3815,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 876742000611,
+        "Barcode": "876742000611",
         "In_Stock": "TRUE",
         "Price": "10.00"
       },
       {
         "Size": "Toro",
-        "Barcode": 876742000628,
+        "Barcode": "876742000628",
         "In_Stock": "TRUE",
         "Price": "10.50"
       }
@@ -3839,7 +3839,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 818578011096,
+        "Barcode": "818578011096",
         "In_Stock": "TRUE",
         "Price": "13.00"
       }
@@ -3857,7 +3857,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 876742000215,
+        "Barcode": "876742000215",
         "In_Stock": "TRUE",
         "Price": "10.80"
       }
@@ -3875,7 +3875,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 876742004176,
+        "Barcode": "876742004176",
         "In_Stock": "TRUE",
         "Price": "10.80"
       }
@@ -3893,7 +3893,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 19962720123,
+        "Barcode": "19962720123",
         "In_Stock": "FALSE",
         "Price": "11.65"
       }
@@ -3945,7 +3945,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 811167021438,
+        "Barcode": "811167021438",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -3963,7 +3963,7 @@
     "Sizes": [
       {
         "Size": "Toro Grande",
-        "Barcode": 811167021155,
+        "Barcode": "811167021155",
         "In_Stock": "TRUE",
         "Price": "13.50"
       }
@@ -3981,13 +3981,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 811167022909,
+        "Barcode": "811167022909",
         "In_Stock": "TRUE",
         "Price": "9.80"
       },
       {
         "Size": "Toro",
-        "Barcode": 811167022923,
+        "Barcode": "811167022923",
         "In_Stock": "TRUE",
         "Price": "10.60"
       }
@@ -4005,13 +4005,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 811167020820,
+        "Barcode": "811167020820",
         "In_Stock": "TRUE",
         "Price": "13.25"
       },
       {
         "Size": "Robusto",
-        "Barcode": 811167020806,
+        "Barcode": "811167020806",
         "In_Stock": "TRUE",
         "Price": "13.00"
       }
@@ -4030,7 +4030,7 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 811167020219,
+        "Barcode": "811167020219",
         "In_Stock": "TRUE",
         "Price": "9.25"
       }
@@ -4048,7 +4048,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 811167020189,
+        "Barcode": "811167020189",
         "In_Stock": "TRUE",
         "Price": "8.20"
       }
@@ -4066,7 +4066,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 811167020165,
+        "Barcode": "811167020165",
         "In_Stock": "TRUE",
         "Price": "8.20"
       }
@@ -4084,7 +4084,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 811167020172,
+        "Barcode": "811167020172",
         "In_Stock": "TRUE",
         "Price": "6.90"
       }
@@ -4102,13 +4102,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 811167021711,
+        "Barcode": "811167021711",
         "In_Stock": "TRUE",
         "Price": "13.90"
       },
       {
         "Size": "Lonsdale",
-        "Barcode": 811167022329,
+        "Barcode": "811167022329",
         "In_Stock": "TRUE",
         "Price": "12.70"
       }
@@ -4126,7 +4126,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 855374008424,
+        "Barcode": "855374008424",
         "In_Stock": "TRUE",
         "Price": "14.30"
       }
@@ -4144,7 +4144,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674152033,
+        "Barcode": "689674152033",
         "In_Stock": "TRUE",
         "Price": "6.70"
       }
@@ -4162,13 +4162,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674138563,
+        "Barcode": "689674138563",
         "In_Stock": "TRUE",
         "Price": "7.40"
       },
       {
         "Size": "Corona Larga",
-        "Barcode": 689674138488,
+        "Barcode": "689674138488",
         "In_Stock": "TRUE",
         "Price": "5.70"
       }
@@ -4186,13 +4186,13 @@
     "Sizes": [
       {
         "Size": "RobustoLarga",
-        "Barcode": 689674124672,
+        "Barcode": "689674124672",
         "In_Stock": "TRUE",
         "Price": "7.20"
       },
       {
         "Size": "Robusto",
-        "Barcode": 689674124641,
+        "Barcode": "689674124641",
         "In_Stock": "TRUE",
         "Price": "6.00"
       }
@@ -4210,7 +4210,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 689674159209,
+        "Barcode": "689674159209",
         "In_Stock": "TRUE",
         "Price": "7.30"
       }
@@ -4228,19 +4228,19 @@
     "Sizes": [
       {
         "Size": "Petite Corona",
-        "Barcode": 856713006538,
+        "Barcode": "856713006538",
         "In_Stock": "TRUE",
         "Price": "6.15"
       },
       {
         "Size": "Robusto",
-        "Barcode": 856713003780,
+        "Barcode": "856713003780",
         "In_Stock": "TRUE",
         "Price": "8.15"
       },
       {
         "Size": "Toro",
-        "Barcode": 856713003797,
+        "Barcode": "856713003797",
         "In_Stock": "TRUE",
         "Price": "9.25"
       }
@@ -4258,13 +4258,13 @@
     "Sizes": [
       {
         "Size": "",
-        "Barcode": 856713007283,
+        "Barcode": "856713007283",
         "In_Stock": "TRUE",
         "Price": "10.00"
       },
       {
         "Size": "",
-        "Barcode": 856713007344,
+        "Barcode": "856713007344",
         "In_Stock": "FALSE",
         "Price": "5.85"
       }
@@ -4282,7 +4282,7 @@
     "Sizes": [
       {
         "Size": "RobustoGrande",
-        "Barcode": 856713004091,
+        "Barcode": "856713004091",
         "In_Stock": "TRUE",
         "Price": "8.60"
       }
@@ -4300,7 +4300,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 856713007924,
+        "Barcode": "856713007924",
         "In_Stock": "TRUE",
         "Price": "13.35"
       }
@@ -4318,7 +4318,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 856713008488,
+        "Barcode": "856713008488",
         "In_Stock": "TRUE",
         "Price": "12.25"
       }
@@ -4336,7 +4336,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 856713007139,
+        "Barcode": "856713007139",
         "In_Stock": "TRUE",
         "Price": "12.50"
       }
@@ -4354,7 +4354,7 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 856713004077,
+        "Barcode": "856713004077",
         "In_Stock": "TRUE",
         "Price": "10.60"
       }
@@ -4372,7 +4372,7 @@
     "Sizes": [
       {
         "Size": "",
-        "Barcode": 856713003933,
+        "Barcode": "856713003933",
         "In_Stock": "TRUE",
         "Price": "10.30"
       }
@@ -4390,7 +4390,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 856713003483,
+        "Barcode": "856713003483",
         "In_Stock": "TRUE",
         "Price": "9.00"
       }
@@ -4408,7 +4408,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 856713007788,
+        "Barcode": "856713007788",
         "In_Stock": "TRUE",
         "Price": "5.50"
       }
@@ -4426,7 +4426,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 856713008563,
+        "Barcode": "856713008563",
         "In_Stock": "TRUE",
         "Price": "7.45"
       }
@@ -4444,7 +4444,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 856713005319,
+        "Barcode": "856713005319",
         "In_Stock": "TRUE",
         "Price": "10.60"
       }
@@ -4462,7 +4462,7 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 856713007917,
+        "Barcode": "856713007917",
         "In_Stock": "TRUE",
         "Price": "12.90"
       }
@@ -4480,7 +4480,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 856713003711,
+        "Barcode": "856713003711",
         "In_Stock": "TRUE",
         "Price": "12.30"
       }
@@ -4498,7 +4498,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 689674139041,
+        "Barcode": "689674139041",
         "In_Stock": "TRUE",
         "Price": "6.00"
       }
@@ -4516,7 +4516,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 689674139072,
+        "Barcode": "689674139072",
         "In_Stock": "TRUE",
         "Price": "6.00"
       }
@@ -4534,7 +4534,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 689674139010,
+        "Barcode": "689674139010",
         "In_Stock": "TRUE",
         "Price": "6.00"
       }
@@ -4552,7 +4552,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 689674139133,
+        "Barcode": "689674139133",
         "In_Stock": "TRUE",
         "Price": "4.80"
       }
@@ -4570,7 +4570,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 689674139102,
+        "Barcode": "689674139102",
         "In_Stock": "TRUE",
         "Price": "6.00"
       }
@@ -4588,7 +4588,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674153979,
+        "Barcode": "689674153979",
         "In_Stock": "TRUE",
         "Price": "5.75"
       }
@@ -4606,7 +4606,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674151142,
+        "Barcode": "689674151142",
         "In_Stock": "TRUE",
         "Price": "10.50"
       }
@@ -4625,7 +4625,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674137993,
+        "Barcode": "689674137993",
         "In_Stock": "TRUE",
         "Price": "10.00"
       }
@@ -4643,7 +4643,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674157618,
+        "Barcode": "689674157618",
         "In_Stock": "FALSE",
         "Price": "10.00"
       }
@@ -4661,7 +4661,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674152408,
+        "Barcode": "689674152408",
         "In_Stock": "TRUE",
         "Price": "10.00"
       }
@@ -4815,13 +4815,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 810138033913,
+        "Barcode": "810138033913",
         "In_Stock": "TRUE",
         "Price": "11.75"
       },
       {
         "Size": "Robusto",
-        "Barcode": 810138033937,
+        "Barcode": "810138033937",
         "In_Stock": "TRUE",
         "Price": "10.50"
       }
@@ -4839,13 +4839,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 810141022270,
+        "Barcode": "810141022270",
         "In_Stock": "TRUE",
         "Price": "8.20"
       },
       {
         "Size": "Toro",
-        "Barcode": 810141020771,
+        "Barcode": "810141020771",
         "In_Stock": "TRUE",
         "Price": "8.80"
       }
@@ -4863,7 +4863,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 810141020924,
+        "Barcode": "810141020924",
         "In_Stock": "TRUE",
         "Price": "8.20"
       }
@@ -4881,7 +4881,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 810141021952,
+        "Barcode": "810141021952",
         "In_Stock": "TRUE",
         "Price": "8.50"
       }
@@ -4899,7 +4899,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 810138034477,
+        "Barcode": "810138034477",
         "In_Stock": "TRUE",
         "Price": "6.90"
       }
@@ -4934,7 +4934,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 810138034620,
+        "Barcode": "810138034620",
         "In_Stock": "TRUE",
         "Price": "15.70"
       }
@@ -4953,7 +4953,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 71610516366,
+        "Barcode": "71610516366",
         "In_Stock": "TRUE",
         "Price": "10.00"
       }
@@ -4971,7 +4971,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 689674028604,
+        "Barcode": "689674028604",
         "In_Stock": "TRUE",
         "Price": "11.65"
       }
@@ -4989,7 +4989,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674034650,
+        "Barcode": "689674034650",
         "In_Stock": "TRUE",
         "Price": "8.50"
       }
@@ -5007,13 +5007,13 @@
     "Sizes": [
       {
         "Size": "Rothschild",
-        "Barcode": 689674155164,
+        "Barcode": "689674155164",
         "In_Stock": "TRUE",
         "Price": "6.35"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674155195,
+        "Barcode": "689674155195",
         "In_Stock": "TRUE",
         "Price": "7.95"
       }
@@ -5031,13 +5031,13 @@
     "Sizes": [
       {
         "Size": "Rothschild",
-        "Barcode": 689674155294,
+        "Barcode": "689674155294",
         "In_Stock": "TRUE",
         "Price": "6.35"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674155324,
+        "Barcode": "689674155324",
         "In_Stock": "TRUE",
         "Price": "7.95"
       }
@@ -5056,13 +5056,13 @@
     "Sizes": [
       {
         "Size": "Double Robusto",
-        "Barcode": 76622028104,
+        "Barcode": "76622028104",
         "In_Stock": "TRUE",
         "Price": "20.95"
       },
       {
         "Size": "Double Toro",
-        "Barcode": 76622028005,
+        "Barcode": "76622028005",
         "In_Stock": "TRUE",
         "Price": "19.85"
       }
@@ -5080,13 +5080,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622098312,
+        "Barcode": "76622098312",
         "In_Stock": "TRUE",
         "Price": "19.95"
       },
       {
         "Size": "Toro",
-        "Barcode": 76622098305,
+        "Barcode": "76622098305",
         "In_Stock": "TRUE",
         "Price": "23.10"
       }
@@ -5104,13 +5104,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622025318,
+        "Barcode": "76622025318",
         "In_Stock": "TRUE",
         "Price": "8.50"
       },
       {
         "Size": "Toro",
-        "Barcode": 76622025219,
+        "Barcode": "76622025219",
         "In_Stock": "TRUE",
         "Price": "8.85"
       }
@@ -5128,7 +5128,7 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 76622025417,
+        "Barcode": "76622025417",
         "In_Stock": "TRUE",
         "Price": "9.70"
       }
@@ -5146,13 +5146,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622025356,
+        "Barcode": "76622025356",
         "In_Stock": "TRUE",
         "Price": "8.50"
       },
       {
         "Size": "Toro",
-        "Barcode": 76622025257,
+        "Barcode": "76622025257",
         "In_Stock": "TRUE",
         "Price": "8.90"
       }
@@ -5170,7 +5170,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 76622025455,
+        "Barcode": "76622025455",
         "In_Stock": "TRUE",
         "Price": "10.10"
       }
@@ -5188,19 +5188,19 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622025301,
+        "Barcode": "76622025301",
         "In_Stock": "TRUE",
         "Price": "8.05"
       },
       {
         "Size": "Toro",
-        "Barcode": 76622025202,
+        "Barcode": "76622025202",
         "In_Stock": "TRUE",
         "Price": "8.90"
       },
       {
         "Size": "Gordo",
-        "Barcode": 76622025400,
+        "Barcode": "76622025400",
         "In_Stock": "TRUE",
         "Price": "9.20"
       }
@@ -5218,7 +5218,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76622025103,
+        "Barcode": "76622025103",
         "In_Stock": "TRUE",
         "Price": "7.10"
       }
@@ -5236,7 +5236,7 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 76622025004,
+        "Barcode": "76622025004",
         "In_Stock": "TRUE",
         "Price": "9.00"
       }
@@ -5254,7 +5254,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76622097209,
+        "Barcode": "76622097209",
         "In_Stock": "TRUE",
         "Price": "9.55"
       }
@@ -5272,7 +5272,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622097100,
+        "Barcode": "76622097100",
         "In_Stock": "TRUE",
         "Price": "8.75"
       }
@@ -5290,7 +5290,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622097162,
+        "Barcode": "76622097162",
         "In_Stock": "TRUE",
         "Price": "8.30"
       }
@@ -5341,7 +5341,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622097414,
+        "Barcode": "76622097414",
         "In_Stock": "TRUE",
         "Price": "16.55"
       }
@@ -5359,7 +5359,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622097421,
+        "Barcode": "76622097421",
         "In_Stock": "TRUE",
         "Price": "15.30"
       }
@@ -5377,7 +5377,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622097551,
+        "Barcode": "76622097551",
         "In_Stock": "TRUE",
         "Price": "15.30"
       }
@@ -5395,7 +5395,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76622098046,
+        "Barcode": "76622098046",
         "In_Stock": "TRUE",
         "Price": "18.20"
       }
@@ -5413,7 +5413,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622098053,
+        "Barcode": "76622098053",
         "In_Stock": "TRUE",
         "Price": "15.40"
       }
@@ -5464,19 +5464,19 @@
     "Sizes": [
       {
         "Size": "Torpedo",
-        "Barcode": 76622089105,
+        "Barcode": "76622089105",
         "In_Stock": "TRUE",
         "Price": "8.70"
       },
       {
         "Size": "Belicoso",
-        "Barcode": 76622089457,
+        "Barcode": "76622089457",
         "In_Stock": "TRUE",
         "Price": "8.35"
       },
       {
         "Size": "Robusto",
-        "Barcode": 76622089303,
+        "Barcode": "76622089303",
         "In_Stock": "TRUE",
         "Price": "8.80"
       }
@@ -5494,7 +5494,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 76622022010,
+        "Barcode": "76622022010",
         "In_Stock": "TRUE",
         "Price": "1.75"
       }
@@ -5513,7 +5513,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 76622020115,
+        "Barcode": "76622020115",
         "In_Stock": "TRUE",
         "Price": "1.75"
       }
@@ -5531,7 +5531,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622020009,
+        "Barcode": "76622020009",
         "In_Stock": "TRUE",
         "Price": "1.75"
       }
@@ -5549,7 +5549,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622020061,
+        "Barcode": "76622020061",
         "In_Stock": "TRUE",
         "Price": "1.75"
       }
@@ -5567,7 +5567,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76622022027,
+        "Barcode": "76622022027",
         "In_Stock": "TRUE",
         "Price": "2.10"
       }
@@ -5585,7 +5585,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76622022065,
+        "Barcode": "76622022065",
         "In_Stock": "TRUE",
         "Price": "2.10"
       }
@@ -5603,7 +5603,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622026056,
+        "Barcode": "76622026056",
         "In_Stock": "TRUE",
         "Price": "4.95"
       }
@@ -5621,7 +5621,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76622026155,
+        "Barcode": "76622026155",
         "In_Stock": "TRUE",
         "Price": "5.35"
       }
@@ -5639,7 +5639,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76622026551,
+        "Barcode": "76622026551",
         "In_Stock": "TRUE",
         "Price": "5.90"
       }
@@ -5657,7 +5657,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622826007,
+        "Barcode": "76622826007",
         "In_Stock": "TRUE",
         "Price": "4.95"
       }
@@ -5675,7 +5675,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76622026100,
+        "Barcode": "76622026100",
         "In_Stock": "TRUE",
         "Price": "5.35"
       }
@@ -5693,7 +5693,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76622026506,
+        "Barcode": "76622026506",
         "In_Stock": "TRUE",
         "Price": "5.90"
       }
@@ -5711,19 +5711,19 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622099807,
+        "Barcode": "76622099807",
         "In_Stock": "TRUE",
         "Price": "15.40"
       },
       {
         "Size": "Corona",
-        "Barcode": 76622099906,
+        "Barcode": "76622099906",
         "In_Stock": "TRUE",
         "Price": "13.15"
       },
       {
         "Size": "Toro",
-        "Barcode": 76622099500,
+        "Barcode": "76622099500",
         "In_Stock": "TRUE",
         "Price": "17.35"
       }
@@ -5741,7 +5741,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76622160378,
+        "Barcode": "76622160378",
         "In_Stock": "TRUE",
         "Price": "8.90"
       }
@@ -5759,7 +5759,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622065321,
+        "Barcode": "76622065321",
         "In_Stock": "TRUE",
         "Price": "8.90"
       }
@@ -5777,7 +5777,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622040335,
+        "Barcode": "76622040335",
         "In_Stock": "TRUE",
         "Price": "8.40"
       }
@@ -5795,19 +5795,19 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622013032,
+        "Barcode": "76622013032",
         "In_Stock": "FALSE",
         "Price": "19.30"
       },
       {
         "Size": "Toro",
-        "Barcode": 76622013056,
+        "Barcode": "76622013056",
         "In_Stock": "FALSE",
         "Price": "20.95"
       },
       {
         "Size": "Double Robusto",
-        "Barcode": 76622013254,
+        "Barcode": "76622013254",
         "In_Stock": "FALSE",
         "Price": "20.95"
       }
@@ -5860,13 +5860,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 682621316205,
+        "Barcode": "682621316205",
         "In_Stock": "TRUE",
         "Price": "9.70"
       },
       {
         "Size": "Robusto",
-        "Barcode": 682621316199,
+        "Barcode": "682621316199",
         "In_Stock": "TRUE",
         "Price": "9.15"
       }
@@ -5900,7 +5900,7 @@
     "Sizes": [
       {
         "Size": "Rothschild",
-        "Barcode": 819577015092,
+        "Barcode": "819577015092",
         "In_Stock": "TRUE",
         "Price": "7.45"
       }
@@ -5918,7 +5918,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 819577015078,
+        "Barcode": "819577015078",
         "In_Stock": "TRUE",
         "Price": "7.30"
       }
@@ -5936,7 +5936,7 @@
     "Sizes": [
       {
         "Size": "Double Gordo",
-        "Barcode": 819577014835,
+        "Barcode": "819577014835",
         "In_Stock": "TRUE",
         "Price": "10.15"
       }
@@ -5971,7 +5971,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 819577014873,
+        "Barcode": "819577014873",
         "In_Stock": "TRUE",
         "Price": "8.90"
       }
@@ -5989,7 +5989,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 819577014897,
+        "Barcode": "819577014897",
         "In_Stock": "TRUE",
         "Price": "8.60"
       }
@@ -6007,7 +6007,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 819577010042,
+        "Barcode": "819577010042",
         "In_Stock": "TRUE",
         "Price": "10.50"
       }
@@ -6025,7 +6025,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 819577010066,
+        "Barcode": "819577010066",
         "In_Stock": "TRUE",
         "Price": "10.70"
       }
@@ -6060,13 +6060,13 @@
     "Sizes": [
       {
         "Size": "Rothschild",
-        "Barcode": 819577015054,
+        "Barcode": "819577015054",
         "In_Stock": "TRUE",
         "Price": "7.40"
       },
       {
         "Size": "Robusto",
-        "Barcode": 819577010509,
+        "Barcode": "819577010509",
         "In_Stock": "TRUE",
         "Price": "8.60"
       }
@@ -6084,7 +6084,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 819577010387,
+        "Barcode": "819577010387",
         "In_Stock": "TRUE",
         "Price": "7.30"
       }
@@ -6102,7 +6102,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 819577010424,
+        "Barcode": "819577010424",
         "In_Stock": "TRUE",
         "Price": "10.00"
       }
@@ -6120,7 +6120,7 @@
     "Sizes": [
       {
         "Size": "Immensa",
-        "Barcode": 819577010448,
+        "Barcode": "819577010448",
         "In_Stock": "TRUE",
         "Price": "9.35"
       }
@@ -6138,7 +6138,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 819577010486,
+        "Barcode": "819577010486",
         "In_Stock": "TRUE",
         "Price": "8.90"
       }
@@ -6156,13 +6156,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 819577013647,
+        "Barcode": "819577013647",
         "In_Stock": "TRUE",
         "Price": "11.45"
       },
       {
         "Size": "Corona",
-        "Barcode": 819577013562,
+        "Barcode": "819577013562",
         "In_Stock": "TRUE",
         "Price": "10.85"
       }
@@ -6214,7 +6214,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7460644702709,
+        "Barcode": "7460644702709",
         "In_Stock": "TRUE",
         "Price": "8.50"
       }
@@ -6232,7 +6232,7 @@
     "Sizes": [
       {
         "Size": "Toro Grande",
-        "Barcode": 7460644702815,
+        "Barcode": "7460644702815",
         "In_Stock": "TRUE",
         "Price": "10.80"
       }
@@ -6301,7 +6301,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7460644702310,
+        "Barcode": "7460644702310",
         "In_Stock": "TRUE",
         "Price": "11.35"
       }
@@ -6353,7 +6353,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7460644702440,
+        "Barcode": "7460644702440",
         "In_Stock": "TRUE",
         "Price": "9.85"
       }
@@ -6371,7 +6371,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7460644702297,
+        "Barcode": "7460644702297",
         "In_Stock": "TRUE",
         "Price": "9.45"
       }
@@ -6389,7 +6389,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7460644702464,
+        "Barcode": "7460644702464",
         "In_Stock": "TRUE",
         "Price": "10.80"
       }
@@ -6407,7 +6407,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7460644702303,
+        "Barcode": "7460644702303",
         "In_Stock": "TRUE",
         "Price": "11.90"
       }
@@ -6425,7 +6425,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 7460644702372,
+        "Barcode": "7460644702372",
         "In_Stock": "TRUE",
         "Price": "12.30"
       }
@@ -6443,7 +6443,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7460644702716,
+        "Barcode": "7460644702716",
         "In_Stock": "TRUE",
         "Price": "9.00"
       }
@@ -6461,7 +6461,7 @@
     "Sizes": [
       {
         "Size": "Toro Grande",
-        "Barcode": 7460644702822,
+        "Barcode": "7460644702822",
         "In_Stock": "TRUE",
         "Price": "10.80"
       }
@@ -6531,7 +6531,7 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 7460644702396,
+        "Barcode": "7460644702396",
         "In_Stock": "TRUE",
         "Price": "11.90"
       }
@@ -6566,7 +6566,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674139768,
+        "Barcode": "689674139768",
         "In_Stock": "TRUE",
         "Price": "11.10"
       }
@@ -6584,7 +6584,7 @@
     "Sizes": [
       {
         "Size": "Gigante",
-        "Barcode": 689674156239,
+        "Barcode": "689674156239",
         "In_Stock": "TRUE",
         "Price": "15.90"
       }
@@ -6602,13 +6602,13 @@
     "Sizes": [
       {
         "Size": "Churchill Grande",
-        "Barcode": 689674046691,
+        "Barcode": "689674046691",
         "In_Stock": "TRUE",
         "Price": "13.80"
       },
       {
         "Size": "Toro Grande",
-        "Barcode": 689674046684,
+        "Barcode": "689674046684",
         "In_Stock": "TRUE",
         "Price": "12.40"
       }
@@ -6626,7 +6626,7 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 689674046707,
+        "Barcode": "689674046707",
         "In_Stock": "TRUE",
         "Price": "13.80"
       }
@@ -6644,13 +6644,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674098515,
+        "Barcode": "689674098515",
         "In_Stock": "TRUE",
         "Price": "10.00"
       },
       {
         "Size": "Robusto",
-        "Barcode": 689674098393,
+        "Barcode": "689674098393",
         "In_Stock": "TRUE",
         "Price": "9.30"
       }
@@ -6668,19 +6668,19 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 689674140191,
+        "Barcode": "689674140191",
         "In_Stock": "TRUE",
         "Price": "9.00"
       },
       {
         "Size": "Robusto",
-        "Barcode": 689674140122,
+        "Barcode": "689674140122",
         "In_Stock": "TRUE",
         "Price": "8.50"
       },
       {
         "Size": "Gigante",
-        "Barcode": 689674149248,
+        "Barcode": "689674149248",
         "In_Stock": "FALSE",
         "Price": "9.05"
       }
@@ -6698,19 +6698,19 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 817094024191,
+        "Barcode": "817094024191",
         "In_Stock": "TRUE",
         "Price": "8.50"
       },
       {
         "Size": "Robusto",
-        "Barcode": 817094021879,
+        "Barcode": "817094021879",
         "In_Stock": "TRUE",
         "Price": "7.50"
       },
       {
         "Size": "Toro",
-        "Barcode": 817094021886,
+        "Barcode": "817094021886",
         "In_Stock": "TRUE",
         "Price": "8.00"
       }
@@ -6728,19 +6728,19 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 817094021848,
+        "Barcode": "817094021848",
         "In_Stock": "TRUE",
         "Price": "9.50"
       },
       {
         "Size": "Robusto",
-        "Barcode": 817094021794,
+        "Barcode": "817094021794",
         "In_Stock": "TRUE",
         "Price": "7.50"
       },
       {
         "Size": "Toro",
-        "Barcode": 817094021800,
+        "Barcode": "817094021800",
         "In_Stock": "TRUE",
         "Price": "8.00"
       }
@@ -6758,7 +6758,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 817094020414,
+        "Barcode": "817094020414",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -6776,7 +6776,7 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 852527003770,
+        "Barcode": "852527003770",
         "In_Stock": "TRUE",
         "Price": "10.00"
       }
@@ -6794,7 +6794,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674100713,
+        "Barcode": "689674100713",
         "In_Stock": "TRUE",
         "Price": "9.90"
       }
@@ -6812,13 +6812,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674115649,
+        "Barcode": "689674115649",
         "In_Stock": "FALSE",
         "Price": "11.65"
       },
       {
         "Size": "Churchill",
-        "Barcode": 689674115717,
+        "Barcode": "689674115717",
         "In_Stock": "FALSE",
         "Price": "12.70"
       }
@@ -6836,13 +6836,13 @@
     "Sizes": [
       {
         "Size": "Petit Corona",
-        "Barcode": 689674013297,
+        "Barcode": "689674013297",
         "In_Stock": "TRUE",
         "Price": "20.35"
       },
       {
         "Size": "Corona",
-        "Barcode": 689674026020,
+        "Barcode": "689674026020",
         "In_Stock": "TRUE",
         "Price": "4.50"
       }
@@ -6860,7 +6860,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674127727,
+        "Barcode": "689674127727",
         "In_Stock": "TRUE",
         "Price": "10.50"
       }
@@ -6878,7 +6878,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674092520,
+        "Barcode": "689674092520",
         "In_Stock": "TRUE",
         "Price": "9.55"
       },
@@ -6902,13 +6902,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674108252,
+        "Barcode": "689674108252",
         "In_Stock": "TRUE",
         "Price": "9.40"
       },
       {
         "Size": "Robusto",
-        "Barcode": 689674108221,
+        "Barcode": "689674108221",
         "In_Stock": "TRUE",
         "Price": "7.95"
       }
@@ -6926,7 +6926,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674114840,
+        "Barcode": "689674114840",
         "In_Stock": "TRUE",
         "Price": "8.90"
       }
@@ -6944,13 +6944,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674094593,
+        "Barcode": "689674094593",
         "In_Stock": "TRUE",
         "Price": "8.35"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674095309,
+        "Barcode": "689674095309",
         "In_Stock": "TRUE",
         "Price": "8.90"
       }
@@ -6968,19 +6968,19 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674092117,
+        "Barcode": "689674092117",
         "In_Stock": "TRUE",
         "Price": "9.15"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674093541,
+        "Barcode": "689674093541",
         "In_Stock": "TRUE",
         "Price": "9.55"
       },
       {
         "Size": "Gordo",
-        "Barcode": 689674108122,
+        "Barcode": "689674108122",
         "In_Stock": "TRUE",
         "Price": "9.50"
       }
@@ -6998,7 +6998,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674096016,
+        "Barcode": "689674096016",
         "In_Stock": "TRUE",
         "Price": "10.45"
       }
@@ -7016,13 +7016,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674112099,
+        "Barcode": "689674112099",
         "In_Stock": "TRUE",
         "Price": "9.80"
       },
       {
         "Size": "Churchill",
-        "Barcode": 689674112129,
+        "Barcode": "689674112129",
         "In_Stock": "TRUE",
         "Price": "10.70"
       }
@@ -7040,7 +7040,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674149132,
+        "Barcode": "689674149132",
         "In_Stock": "TRUE",
         "Price": "13.75"
       }
@@ -7058,7 +7058,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 71610927971,
+        "Barcode": "71610927971",
         "In_Stock": "TRUE",
         "Price": "14.60"
       }
@@ -7076,7 +7076,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 71610928039,
+        "Barcode": "71610928039",
         "In_Stock": "TRUE",
         "Price": "12.35"
       }
@@ -7094,19 +7094,19 @@
     "Sizes": [
       {
         "Size": "Rothschild",
-        "Barcode": 71610930018,
+        "Barcode": "71610930018",
         "In_Stock": "TRUE",
         "Price": "12.35"
       },
       {
         "Size": "Toro",
-        "Barcode": 71610930025,
+        "Barcode": "71610930025",
         "In_Stock": "TRUE",
         "Price": "13.30"
       },
       {
         "Size": "Churchill",
-        "Barcode": 71610930032,
+        "Barcode": "71610930032",
         "In_Stock": "TRUE",
         "Price": "15.30"
       }
@@ -7124,7 +7124,7 @@
     "Sizes": [
       {
         "Size": "RobustoGrande",
-        "Barcode": 814539011990,
+        "Barcode": "814539011990",
         "In_Stock": "TRUE",
         "Price": "9.85"
       }
@@ -7142,7 +7142,7 @@
     "Sizes": [
       {
         "Size": "RobustoGrande",
-        "Barcode": 814539012034,
+        "Barcode": "814539012034",
         "In_Stock": "TRUE",
         "Price": "9.85"
       }
@@ -7160,7 +7160,7 @@
     "Sizes": [
       {
         "Size": "RobustoGrande",
-        "Barcode": 814539012065,
+        "Barcode": "814539012065",
         "In_Stock": "TRUE",
         "Price": "9.85"
       }
@@ -7178,7 +7178,7 @@
     "Sizes": [
       {
         "Size": "Petite Corona",
-        "Barcode": 814539014359,
+        "Barcode": "814539014359",
         "In_Stock": "TRUE",
         "Price": "5.80"
       }
@@ -7196,7 +7196,7 @@
     "Sizes": [
       {
         "Size": "Petite Corona",
-        "Barcode": 814539014311,
+        "Barcode": "814539014311",
         "In_Stock": "TRUE",
         "Price": "5.80"
       }
@@ -7214,7 +7214,7 @@
     "Sizes": [
       {
         "Size": "Gigante",
-        "Barcode": 689674095538,
+        "Barcode": "689674095538",
         "In_Stock": "TRUE",
         "Price": "3.20"
       }
@@ -7232,7 +7232,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674095477,
+        "Barcode": "689674095477",
         "In_Stock": "TRUE",
         "Price": "2.30"
       }
@@ -7250,7 +7250,7 @@
     "Sizes": [
       {
         "Size": "Gigante",
-        "Barcode": 689674128786,
+        "Barcode": "689674128786",
         "In_Stock": "FALSE",
         "Price": "3.00"
       }
@@ -7268,7 +7268,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674104896,
+        "Barcode": "689674104896",
         "In_Stock": "TRUE",
         "Price": "3.00"
       }
@@ -7286,13 +7286,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 814539011549,
+        "Barcode": "814539011549",
         "In_Stock": "TRUE",
         "Price": "9.55"
       },
       {
         "Size": "Toro",
-        "Barcode": 814539011556,
+        "Barcode": "814539011556",
         "In_Stock": "TRUE",
         "Price": "10.75"
       }
@@ -7310,13 +7310,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 814539014984,
+        "Barcode": "814539014984",
         "In_Stock": "TRUE",
         "Price": "6.90"
       },
       {
         "Size": "Toro",
-        "Barcode": 814539015004,
+        "Barcode": "814539015004",
         "In_Stock": "TRUE",
         "Price": "7.75"
       }
@@ -7334,13 +7334,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 814539015059,
+        "Barcode": "814539015059",
         "In_Stock": "TRUE",
         "Price": "8.90"
       },
       {
         "Size": "Robusto",
-        "Barcode": 814539015035,
+        "Barcode": "814539015035",
         "In_Stock": "TRUE",
         "Price": "8.60"
       }
@@ -7358,7 +7358,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 814539014380,
+        "Barcode": "814539014380",
         "In_Stock": "TRUE",
         "Price": "7.00"
       }
@@ -7376,19 +7376,19 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 814539011600,
+        "Barcode": "814539011600",
         "In_Stock": false,
         "Price": "6.70"
       },
       {
         "Size": "Perfecto",
-        "Barcode": 814539011594,
+        "Barcode": "814539011594",
         "In_Stock": "TRUE",
         "Price": "6.25"
       },
       {
         "Size": "Churchill",
-        "Barcode": 814539011686,
+        "Barcode": "814539011686",
         "In_Stock": "TRUE",
         "Price": "7.80"
       },
@@ -7412,7 +7412,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 814539011754,
+        "Barcode": "814539011754",
         "In_Stock": "TRUE",
         "Price": "7.45"
       }
@@ -7430,13 +7430,13 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 814539011808,
+        "Barcode": "814539011808",
         "In_Stock": "TRUE",
         "Price": "10.60"
       },
       {
         "Size": "Robusto",
-        "Barcode": 814539011785,
+        "Barcode": "814539011785",
         "In_Stock": "TRUE",
         "Price": "8.35"
       }
@@ -7454,13 +7454,13 @@
     "Sizes": [
       {
         "Size": "Double Robusto",
-        "Barcode": 814539011433,
+        "Barcode": "814539011433",
         "In_Stock": "TRUE",
         "Price": "10.40"
       },
       {
         "Size": "Double Toro",
-        "Barcode": 814539011457,
+        "Barcode": "814539011457",
         "In_Stock": "TRUE",
         "Price": "14.75"
       }
@@ -7478,13 +7478,13 @@
     "Sizes": [
       {
         "Size": "Double Robusto",
-        "Barcode": 814539015103,
+        "Barcode": "814539015103",
         "In_Stock": "TRUE",
         "Price": "12.50"
       },
       {
         "Size": "Double Toro",
-        "Barcode": 814539015141,
+        "Barcode": "814539015141",
         "In_Stock": "TRUE",
         "Price": "13.80"
       }
@@ -7553,7 +7553,7 @@
     "Sizes": [
       {
         "Size": "Petite Corona",
-        "Barcode": 814539013130,
+        "Barcode": "814539013130",
         "In_Stock": "TRUE",
         "Price": "8.70"
       }
@@ -7571,7 +7571,7 @@
     "Sizes": [
       {
         "Size": "Assortment",
-        "Barcode": 1406,
+        "Barcode": "1406",
         "In_Stock": "TRUE",
         "Price": "64.50"
       }
@@ -7708,13 +7708,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674030362,
+        "Barcode": "689674030362",
         "In_Stock": "TRUE",
         "Price": "11.00"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674030355,
+        "Barcode": "689674030355",
         "In_Stock": "TRUE",
         "Price": "12.00"
       }
@@ -7732,7 +7732,7 @@
     "Sizes": [
       {
         "Size": "Toro Grande",
-        "Barcode": 689674093091,
+        "Barcode": "689674093091",
         "In_Stock": "TRUE",
         "Price": "10.25"
       }
@@ -7750,13 +7750,13 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 689674129264,
+        "Barcode": "689674129264",
         "In_Stock": "TRUE",
         "Price": "7.90"
       },
       {
         "Size": "Robusto",
-        "Barcode": 689674129196,
+        "Barcode": "689674129196",
         "In_Stock": "TRUE",
         "Price": "7.00"
       }
@@ -7774,13 +7774,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674124863,
+        "Barcode": "689674124863",
         "In_Stock": "TRUE",
         "Price": "7.95"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674124887,
+        "Barcode": "689674124887",
         "In_Stock": "TRUE",
         "Price": "9.00"
       }
@@ -7798,19 +7798,19 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674148845,
+        "Barcode": "689674148845",
         "In_Stock": "TRUE",
         "Price": "8.50"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674148876,
+        "Barcode": "689674148876",
         "In_Stock": "TRUE",
         "Price": "9.00"
       },
       {
         "Size": "Churchill",
-        "Barcode": 689674148920,
+        "Barcode": "689674148920",
         "In_Stock": "TRUE",
         "Price": "10.10"
       }
@@ -7828,7 +7828,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76622072305,
+        "Barcode": "76622072305",
         "In_Stock": "TRUE",
         "Price": "9.20"
       }
@@ -7846,7 +7846,7 @@
     "Sizes": [
       {
         "Size": "Toro Grande",
-        "Barcode": 76622027046,
+        "Barcode": "76622027046",
         "In_Stock": "TRUE",
         "Price": "9.00"
       }
@@ -7864,13 +7864,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76622027039,
+        "Barcode": "76622027039",
         "In_Stock": "TRUE",
         "Price": "9.20"
       },
       {
         "Size": "Robusto",
-        "Barcode": 76622027022,
+        "Barcode": "76622027022",
         "In_Stock": "TRUE",
         "Price": "8.40"
       }
@@ -7888,19 +7888,19 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76622027039,
+        "Barcode": "76622027039",
         "In_Stock": "TRUE",
         "Price": "9.20"
       },
       {
         "Size": "Toro",
-        "Barcode": 76622027350,
+        "Barcode": "76622027350",
         "In_Stock": "TRUE",
         "Price": "9.20"
       },
       {
         "Size": "Toro",
-        "Barcode": 76622072305,
+        "Barcode": "76622072305",
         "In_Stock": "TRUE",
         "Price": "9.20"
       }
@@ -7918,7 +7918,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 689674029212,
+        "Barcode": "689674029212",
         "In_Stock": "TRUE",
         "Price": "7.95"
       }
@@ -7936,7 +7936,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674154570,
+        "Barcode": "689674154570",
         "In_Stock": "TRUE",
         "Price": "7.95"
       }
@@ -7954,13 +7954,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674146605,
+        "Barcode": "689674146605",
         "In_Stock": "TRUE",
         "Price": "10.00"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674146636,
+        "Barcode": "689674146636",
         "In_Stock": "TRUE",
         "Price": "10.50"
       }
@@ -7978,7 +7978,7 @@
     "Sizes": [
       {
         "Size": "RobustoGrande",
-        "Barcode": 689674146223,
+        "Barcode": "689674146223",
         "In_Stock": "TRUE",
         "Price": "5.85"
       }
@@ -7996,13 +7996,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674116554,
+        "Barcode": "689674116554",
         "In_Stock": "TRUE",
         "Price": "6.45"
       },
       {
         "Size": "Gordo",
-        "Barcode": 689674116585,
+        "Barcode": "689674116585",
         "In_Stock": "TRUE",
         "Price": "6.60"
       }
@@ -8020,13 +8020,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674154341,
+        "Barcode": "689674154341",
         "In_Stock": "TRUE",
         "Price": "5.70"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674154372,
+        "Barcode": "689674154372",
         "In_Stock": "TRUE",
         "Price": "6.45"
       }
@@ -8044,7 +8044,7 @@
     "Sizes": [
       {
         "Size": "Rothschild",
-        "Barcode": 689674154433,
+        "Barcode": "689674154433",
         "In_Stock": "TRUE",
         "Price": "5.85"
       }
@@ -8062,7 +8062,7 @@
     "Sizes": [
       {
         "Size": "Rothschild",
-        "Barcode": 689674154297,
+        "Barcode": "689674154297",
         "In_Stock": "TRUE",
         "Price": "5.85"
       }
@@ -8080,7 +8080,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 689674029250,
+        "Barcode": "689674029250",
         "In_Stock": "TRUE",
         "Price": "8.25"
       }
@@ -8098,7 +8098,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 689674023678,
+        "Barcode": "689674023678",
         "In_Stock": "TRUE",
         "Price": "5.15"
       }
@@ -8116,7 +8116,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 689674029342,
+        "Barcode": "689674029342",
         "In_Stock": "TRUE",
         "Price": "5.15"
       }
@@ -8134,7 +8134,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674116523,
+        "Barcode": "689674116523",
         "In_Stock": "TRUE",
         "Price": "5.75"
       }
@@ -8152,7 +8152,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 689674029403,
+        "Barcode": "689674029403",
         "In_Stock": "TRUE",
         "Price": "4.70"
       }
@@ -8170,7 +8170,7 @@
     "Sizes": [
       {
         "Size": "Petite Corona",
-        "Barcode": 689674029410,
+        "Barcode": "689674029410",
         "In_Stock": "TRUE",
         "Price": "4.70"
       }
@@ -8188,7 +8188,7 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 689674159360,
+        "Barcode": "689674159360",
         "In_Stock": "TRUE",
         "Price": "12.00"
       }
@@ -8271,25 +8271,25 @@
     "Sizes": [
       {
         "Size": "Double Robusto",
-        "Barcode": 76622773004,
+        "Barcode": "76622773004",
         "In_Stock": "TRUE",
         "Price": "3.20"
       },
       {
         "Size": "Double Grande",
-        "Barcode": 76622773202,
+        "Barcode": "76622773202",
         "In_Stock": "TRUE",
         "Price": "4.00"
       },
       {
         "Size": "Double Toro",
-        "Barcode": 76622773103,
+        "Barcode": "76622773103",
         "In_Stock": "TRUE",
         "Price": "3.10"
       },
       {
         "Size": "Double Churchill",
-        "Barcode": 76622773301,
+        "Barcode": "76622773301",
         "In_Stock": "TRUE",
         "Price": "3.35"
       }
@@ -8307,13 +8307,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622770201,
+        "Barcode": "76622770201",
         "In_Stock": "TRUE",
         "Price": "2.15"
       },
       {
         "Size": "Toro",
-        "Barcode": 76622770300,
+        "Barcode": "76622770300",
         "In_Stock": "TRUE",
         "Price": "2.50"
       }
@@ -8331,7 +8331,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622775206,
+        "Barcode": "76622775206",
         "In_Stock": "TRUE",
         "Price": "2.20"
       }
@@ -8349,13 +8349,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76622771208,
+        "Barcode": "76622771208",
         "In_Stock": "TRUE",
         "Price": "2.15"
       },
       {
         "Size": "Toro",
-        "Barcode": 76622771307,
+        "Barcode": "76622771307",
         "In_Stock": "TRUE",
         "Price": "2.50"
       }
@@ -8390,7 +8390,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7429457694687,
+        "Barcode": "7429457694687",
         "In_Stock": "TRUE",
         "Price": "9.00"
       }
@@ -8408,7 +8408,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7429457694694,
+        "Barcode": "7429457694694",
         "In_Stock": "TRUE",
         "Price": "10.00"
       }
@@ -8426,7 +8426,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 7429457794769,
+        "Barcode": "7429457794769",
         "In_Stock": "TRUE",
         "Price": "9.00"
       }
@@ -8444,7 +8444,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 846261000393,
+        "Barcode": "846261000393",
         "In_Stock": "TRUE",
         "Price": "11.50"
       }
@@ -8462,7 +8462,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 846261000119,
+        "Barcode": "846261000119",
         "In_Stock": "TRUE",
         "Price": "11.50"
       }
@@ -8480,7 +8480,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 846261000782,
+        "Barcode": "846261000782",
         "In_Stock": "TRUE",
         "Price": "9.00"
       }
@@ -8498,7 +8498,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 846261014130,
+        "Barcode": "846261014130",
         "In_Stock": "TRUE",
         "Price": "9.00"
       }
@@ -8516,7 +8516,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 846261000560,
+        "Barcode": "846261000560",
         "In_Stock": "TRUE",
         "Price": "11.50"
       }
@@ -8534,13 +8534,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76452351182,
+        "Barcode": "76452351182",
         "In_Stock": "TRUE",
         "Price": "9.00"
       },
       {
         "Size": "Toro",
-        "Barcode": 76452351175,
+        "Barcode": "76452351175",
         "In_Stock": "TRUE",
         "Price": "9.45"
       }
@@ -8558,7 +8558,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76452518233,
+        "Barcode": "76452518233",
         "In_Stock": "TRUE",
         "Price": "10.50"
       }
@@ -8576,7 +8576,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 76452518523,
+        "Barcode": "76452518523",
         "In_Stock": "TRUE",
         "Price": "11.90"
       }
@@ -8594,13 +8594,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 76452351694,
+        "Barcode": "76452351694",
         "In_Stock": "TRUE",
         "Price": "9.90"
       },
       {
         "Size": "Toro",
-        "Barcode": 76452351687,
+        "Barcode": "76452351687",
         "In_Stock": "TRUE",
         "Price": "11.00"
       }
@@ -8618,7 +8618,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 819577010783,
+        "Barcode": "819577010783",
         "In_Stock": "TRUE",
         "Price": "10.15"
       }
@@ -8636,7 +8636,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 819577011407,
+        "Barcode": "819577011407",
         "In_Stock": "TRUE",
         "Price": "10.65"
       }
@@ -8654,7 +8654,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 819577010936,
+        "Barcode": "819577010936",
         "In_Stock": "TRUE",
         "Price": "10.60"
       }
@@ -8672,13 +8672,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674142447,
+        "Barcode": "689674142447",
         "In_Stock": "TRUE",
         "Price": "7.95"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674142478,
+        "Barcode": "689674142478",
         "In_Stock": "TRUE",
         "Price": "9.55"
       }
@@ -8696,13 +8696,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 689674156345,
+        "Barcode": "689674156345",
         "In_Stock": "TRUE",
         "Price": "10.15"
       },
       {
         "Size": "Robusto",
-        "Barcode": 689674156314,
+        "Barcode": "689674156314",
         "In_Stock": "TRUE",
         "Price": "9.35"
       }
@@ -8720,13 +8720,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674142355,
+        "Barcode": "689674142355",
         "In_Stock": "TRUE",
         "Price": "3.00"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674142386,
+        "Barcode": "689674142386",
         "In_Stock": "TRUE",
         "Price": "3.00"
       }
@@ -8744,13 +8744,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674142539,
+        "Barcode": "689674142539",
         "In_Stock": "TRUE",
         "Price": "3.00"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674142560,
+        "Barcode": "689674142560",
         "In_Stock": "TRUE",
         "Price": "3.00"
       }
@@ -8768,13 +8768,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 689674145905,
+        "Barcode": "689674145905",
         "In_Stock": "TRUE",
         "Price": "5.10"
       },
       {
         "Size": "Toro",
-        "Barcode": 689674145936,
+        "Barcode": "689674145936",
         "In_Stock": "TRUE",
         "Price": "5.30"
       }
@@ -8792,7 +8792,7 @@
     "Sizes": [
       {
         "Size": "Rothschild",
-        "Barcode": 71610854215,
+        "Barcode": "71610854215",
         "In_Stock": "TRUE",
         "Price": "7.00"
       }
@@ -8810,7 +8810,7 @@
     "Sizes": [
       {
         "Size": "Rothschild",
-        "Barcode": 71610854208,
+        "Barcode": "71610854208",
         "In_Stock": "TRUE",
         "Price": "7.00"
       }
@@ -8828,7 +8828,7 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 71610854918,
+        "Barcode": "71610854918",
         "In_Stock": "TRUE",
         "Price": "8.00"
       }
@@ -8846,7 +8846,7 @@
     "Sizes": [
       {
         "Size": "Gordo",
-        "Barcode": 71610854888,
+        "Barcode": "71610854888",
         "In_Stock": "TRUE",
         "Price": "8.45"
       }
@@ -8864,13 +8864,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 7623500431704,
+        "Barcode": "7623500431704",
         "In_Stock": "TRUE",
         "Price": "7.35"
       },
       {
         "Size": "Robusto",
-        "Barcode": 7623500431698,
+        "Barcode": "7623500431698",
         "In_Stock": "TRUE",
         "Price": "7.20"
       }
@@ -8888,7 +8888,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 636655226535,
+        "Barcode": "636655226535",
         "In_Stock": "TRUE",
         "Price": "8.30"
       }
@@ -8906,7 +8906,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 636655226870,
+        "Barcode": "636655226870",
         "In_Stock": "TRUE",
         "Price": "9.20"
       }
@@ -8924,7 +8924,7 @@
     "Sizes": [
       {
         "Size": "Churchill",
-        "Barcode": 636655226450,
+        "Barcode": "636655226450",
         "In_Stock": "TRUE",
         "Price": "9.80"
       }
@@ -8942,7 +8942,7 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": 670087877453,
+        "Barcode": "670087877453",
         "In_Stock": "TRUE",
         "Price": "9.00"
       }
@@ -8960,7 +8960,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": 636655228201,
+        "Barcode": "636655228201",
         "In_Stock": "TRUE",
         "Price": "3.60"
       }
@@ -8978,7 +8978,7 @@
     "Sizes": [
       {
         "Size": "Perfecto",
-        "Barcode": 879790005935,
+        "Barcode": "879790005935",
         "In_Stock": "TRUE",
         "Price": "13.90"
       }
@@ -8996,7 +8996,7 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": 732388221431,
+        "Barcode": "732388221431",
         "In_Stock": "TRUE",
         "Price": "15.90"
       }
