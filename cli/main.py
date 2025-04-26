@@ -1,12 +1,13 @@
 import argparse
 import os
 from commands import search, count, audit, importpy, fields, schema, fix
+from config import get_data_path, set_data_path
 
 def main():
     
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_path = os.path.abspath(os.path.join(script_dir, "../public/data/consolidated_cigars.json"))
+    data_path = os.path.abspath(os.path.join(script_dir, get_data_path()))
 
     parser = argparse.ArgumentParser(description="Cigar Catalog CLI Utility")
     subparsers = parser.add_subparsers(dest="command")
@@ -58,6 +59,11 @@ def main():
     fix_parser.add_argument("--remove-empty", help="Remove keys with empty values for the specified field")
     fix_parser.add_argument("--to-string", help="Convert the specified field to a string")
 
+    # Set data path
+    path_parser = subparsers.add_parser("path", help="Update and store new dataPath in config.json")
+    path_parser.add_argument("--set", help="Set the data path")
+    path_parser.add_argument("--get", action="store_true", help="Get the current data path")
+
     
 
 
@@ -80,6 +86,11 @@ def main():
         schema.run(args, data_path, schema_path)
     elif args.command == "fix":
         fix.run(args, data_path)
+    elif args.command == "path":
+        if args.set:
+            set_data_path(args.set)
+        elif args.get:
+            print(get_data_path())
     else:
         parser.print_help()
 

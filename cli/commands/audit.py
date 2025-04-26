@@ -63,12 +63,12 @@ def run(args, data_path):
             print(f"[✓] All cigars have {label}")
 
     for field in ["Wrapper", "Binder", "Filler", "Strength_Profile", "Flavor_Profile"]:
-        missing_field = [c for c in catalog if not str(c.get(field, "")).strip()]
+        missing_field = [c for c in catalog if c.get(field) in [None, ""]]
         print_check(field, missing_field)
 
 
-    missing_brand = [c for c in catalog if not str(c.get("Cigar Brand", "")).strip()]
-    missing_name = [c for c in catalog if not str(c.get("Cigar Name", "")).strip()]
+    missing_brand = [c for c in catalog if c.get("Cigar Brand") in [None, ""]]
+    missing_name = [c for c in catalog if c.get("Cigar Name") in [None, ""]]
     print_check("Cigar Brand", missing_brand)
     print_check("Cigar Name", missing_name)
 
@@ -85,7 +85,7 @@ def run(args, data_path):
     for cigar in catalog:
         for size in cigar.get("Sizes", []):
             price = str(size.get("Price", "")).strip()
-            if price == "":
+            if price == "" or price is None:
                 missing_price += 1
 
             barcode = str(size.get("Barcode", "")).strip()
