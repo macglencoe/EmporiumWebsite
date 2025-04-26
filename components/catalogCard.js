@@ -221,7 +221,28 @@ const CatalogCard = (props) => {
                             {props.buttonText &&
                                 <button type="button" className="catalog-button2 button" tabIndex={-1}>
                                     {props.buttonText}
-                                </button>}
+                                </button>
+                            }
+                            {
+                                props.sizes &&
+                                <div className="size-cigar">
+                                    <div className="size-cigar-text">
+                                        <span>{
+                                            props.sizes.length > 1 ?
+                                                props.sizes.length + ' Sizes Available' :
+                                                props.sizes[0].Size
+                                        }</span>
+                                        {
+                                            props.sizes.length == 1 && props.sizes[0].In_Stock == false &&
+                                            <label style={{
+                                                backgroundColor: "var(--negative)"
+                                            }}>Out of Stock</label>
+                                        }
+                                    </div>
+                                    <div className="size-cigar-end"></div>
+                                </div>
+                            }
+
                         </div>
 
 
@@ -233,6 +254,50 @@ const CatalogCard = (props) => {
             <style jsx>
                 {
                     `
+        .size-cigar {
+            display: flex;
+            width: 100%;
+            padding: 1em;
+            padding-top: 1.5em;
+        }
+        .size-cigar-text, .size-cigar-end {
+            border-color: var(--dl-color-theme-primary1);
+            border-style: solid;
+            border-width: 3px 0;
+            background-image: linear-gradient(to bottom, transparent 50%, var(--dl-color-theme-primary1) 300%);
+        }
+        .size-cigar-text {
+            width: 100%;
+            padding: 0.5em 1em;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+            border-left-width: 3px;
+        }
+        .size-cigar-text span {
+            font-size: 1.8em;
+            text-transform: uppercase;
+            color: var(--dl-color-theme-secondary2);
+        }
+        .size-cigar-text label {
+            font-size: 0.8em;
+            padding: 0.3em;
+            font-weight: bold;
+            position: absolute;
+            bottom: 100%;
+            left: -3px;
+            border-top-right-radius: 5px;
+            color: var(--dl-color-theme-primary2);
+        }
+        
+        .size-cigar-end {
+            width: 50px;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            translate: -1px 0;
+            border-right-width: 3px;
+        }
         
         card-head:not(.no-image) > .description-container {
             display: none;
@@ -306,9 +371,10 @@ const CatalogCard = (props) => {
             width: 100%;
             height: auto;
             display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: var(--dl-space-space-halfunit);
             align-self: center;
-            align-items: flex-start;
             justify-content: center;
           }
         .catalog-button2 {
@@ -341,6 +407,12 @@ const CatalogCard = (props) => {
             }
             .catalog-button2 {
                 font-size: 15px;
+            }
+            .size-cigar-text span {
+                font-size: 1em;
+            }
+            .size-cigar-end {
+                width: 30px;
             }
             .card-content {
                 display: flex;

@@ -154,11 +154,10 @@ const CigarCatalog = (props) => {
           href: (item) => {
             return ('/cigars/' + item.slug)
           },
-          buttonText: (item) => {
+          sizes: (item) => {
             return (
-              item.Sizes.length > 1 ?
-                item.Sizes.length + ' Sizes Available' :
-                item.Sizes[0].Size)
+              item.Sizes
+            )
           },
           barcode: (item) => {
             if (router.query['Display Barcode'] === 'true') {
