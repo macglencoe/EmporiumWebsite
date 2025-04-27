@@ -211,7 +211,7 @@ export const SubmitPage = (props) => {
                                 {dataCommits.length > 0 && <>
                                     <p>{dataCommits[0].commit.message ?? "No commit message found"}</p>
                                     <p className='date'>{dataCommits[0].commit.author.date ?? "No date found"}</p>
-                                    <p><b>{recentDataCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
+                                    <p><b>{recentCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
                                 </>}
                                 {commits.length === 0 && <p>Loading ...</p>}
                             </td>
