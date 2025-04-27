@@ -239,7 +239,7 @@ export const SubmitPage = (props) => {
                                     }
                                     {
                                         currentCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA && currentCommitSha !== recentDataCommitSha &&
-                                        <p>&lt;</p>
+                                        <p>&gt;</p>
                                     }
                                 </div>
                             </td>
@@ -252,7 +252,7 @@ export const SubmitPage = (props) => {
                     <tfoot>
                         <tr>
                             <td colSpan={5}>
-                                {currentCommitSha !== recentCommitSha && currentCommitSha !== "Unknown" &&
+                                {currentCommitSha !== recentCommitSha && currentCommitSha !== "Unknown" && recentCommitSha == recentDataCommitSha &&
                                     <>
                                         <p>This most likely means a build is currently in progress, or there was an error with the build</p>
                                         <p>Go to the <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>Vercel Dashboard</a> to check the build status</p>
@@ -260,7 +260,8 @@ export const SubmitPage = (props) => {
                                     </>
                                 }
                                 {
-                                    currentCommitSha !== recentCommitSha && currentCommitSha !== "Unknown" && recentCommitSha !== recentDataCommitSha &&
+                                    recentCommitSha == process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
+                                    recentCommitSha != recentDataCommitSha &&
                                     <>
                                         <p>This commit is ahead of the last commit that updated the data</p>
                                         <p><b>You are able to submit changes</b></p>
