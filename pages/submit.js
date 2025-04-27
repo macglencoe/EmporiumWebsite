@@ -334,7 +334,7 @@ export const SubmitPage = (props) => {
                         } else {
                             e.currentTarget.textContent = "Commit";
                             e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
-                            if (currentCommitSha !== recentCommitSha) {
+                            if (currentCommitSha !== recentCommitSha && recentCommitSha != recentDataCommitSha) {
                                 setResponseConsole([...responseConsole, {
                                     time: new Date().toLocaleString(),
                                     status: 400,
