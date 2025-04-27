@@ -217,7 +217,7 @@ export const SubmitPage = (props) => {
                             </td>
                             <td className='equivalence'>
                                 <div>
-                                    {recentCommitSha == process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA && recentCommitSha == recentDataCommitSha &&
+                                    {recentCommitSha == process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA && 
                                     <p>=</p>}
                                     {recentCommitSha != process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
                                         recentCommitSha == recentDataCommitSha && 
