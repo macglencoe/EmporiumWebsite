@@ -46,6 +46,7 @@ const InputField = (props) => {
                     {props.original && <strike>{props.original ?? ""}</strike>}
                     {props.error && <span className="error">{props.error}</span>}
                     <textarea
+                        className={props.long ? "long" : ""}
                         rows={props.rows ?? 1}
                         cols="20"
                         type="text"
@@ -148,6 +149,9 @@ div.autocomplete .selectTopOption {
     border-bottom: 3px solid var(--dl-color-theme-primary1);
     resize: none;
     font-family: Inter;
+}
+.inputField textarea.long {
+    height: 5em;
 }
 
 .inputField input:focus {
@@ -446,6 +450,7 @@ const CrudForm = (props) => {
                                         error={errors[key]}
                                         getOptions={getUniqueValues}
                                         autosuggest={props.dataFields.properties[key]["autosuggest"]}
+                                        long={props.dataFields.properties[key]["long"]}
                                     ></InputField>
                                 )
                             }

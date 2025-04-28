@@ -45,6 +45,12 @@
         "inputType": "basic",
         "autosuggest": false
       },
+      "description": {
+        "type": "string",
+        "inputType": "basic",
+        "autosuggest": false,
+        "long": true
+      },
       "Sizes": {
         "type": "array",
         "items": {
