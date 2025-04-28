@@ -322,7 +322,7 @@ const CrudForm = (props) => {
     useEffect(() => {
         if (props.dataFields && localData) {
             const tempErrors = Object.keys(localData).reduce((acc, key) => {
-                return { ...acc, [key]: validateField(key, localData[key], props.dataFields[key]) };
+                return { ...acc, [key]: validateField(key, localData[key], props.dataFields.properties[key]) };
             }, {});
             setErrors(tempErrors);
         }
@@ -334,18 +334,15 @@ const CrudForm = (props) => {
 
 
     const validateField = (key, value, field) => {
+        const required = props.dataFields.required;
         if (field) {
-            if (field.type == "number") {
-                if (isNaN(parseInt(value))) {
-                    return field.message;
-                } else return false;
-            }
-            if (field.required) {
+            if (required.includes(key)) {
                 if (!value || value.length === 0 || value === "null" || value === "") {
-                    return field.message;
+                    return field.missingMessage ?? "This field is required";
                 } else return false;
             }
-
+        } else {
+            console.log("no field")
         }
         return false;
     }
