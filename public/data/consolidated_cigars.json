@@ -828,7 +828,7 @@
     "Cigar Name": "Viva La Vida",
     "Wrapper": "Habano Oscuro",
     "Binder": "Nicaraguan Corojo",
-    "Filler": "Criollo \u201898",
+    "Filler": "Criollo ‘98",
     "Flavor_Profile": "Black Pepper, Leather",
     "Strength_Profile": "Full",
     "Sizes": [
@@ -2979,7 +2979,7 @@
   },
   {
     "Cigar Brand": "CAO",
-    "Cigar Name": "L\u2019Anniversaire Cameroon",
+    "Cigar Name": "L’Anniversaire Cameroon",
     "Wrapper": "Cameroon",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
@@ -3693,7 +3693,7 @@
   },
   {
     "Cigar Brand": "Drew Estate",
-    "Cigar Name": "Java Mint \u201c58\u201d",
+    "Cigar Name": "Java Mint “58”",
     "Wrapper": "Brazilian Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
@@ -3830,7 +3830,7 @@
   },
   {
     "Cigar Brand": "Drew Estate",
-    "Cigar Name": "Undercrown All Dekk\u2019d Out",
+    "Cigar Name": "Undercrown All Dekk’d Out",
     "Wrapper": "San Andres",
     "Binder": "Connecticut Broadleaf, San Andres",
     "Filler": "Nicaraguan",
@@ -5202,7 +5202,7 @@
         "Size": "Gordo",
         "Barcode": "76622025400",
         "In_Stock": true,
-        "Price": "9.20"
+        "Price": "9.70"
       }
     ],
     "slug": "j-c-newman-brickhouse-sungrown"
@@ -9064,7 +9064,7 @@
     "Cigar Brand": "RomaCraft",
     "Cigar Name": "Intemperance Volstead",
     "Wrapper": "Ecuadorian Sumatra",
-    "Binder": "Mexican San Andr\u00e9s",
+    "Binder": "Mexican San Andrés",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Pepper, Coffee, Leather, Baking Spice",
     "Strength_Profile": "Medium",
@@ -9372,5 +9372,23 @@
     ],
     "slug": "ep-carrillo-allegiance-confidant",
     "Date Added": "2025-04-17"
+  },
+  {
+    "Cigar Brand": "Foundation ",
+    "Cigar Name": "Highclere Castle Victorian",
+    "Wrapper": "Habana Ecuador",
+    "Binder": "Brazilian Mata Fina",
+    "Filler": "Nicaraguan ",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "In_Stock": true,
+        "Price": "16.95"
+      }
+    ],
+    "slug": "foundation-highclere-castle-victorian",
+    "Date Added": "2025-04-28"
   }
 ]
