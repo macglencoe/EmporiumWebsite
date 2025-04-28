@@ -1,58 +1,80 @@
 {
-    "Cigar Brand": {
-        "required": true,
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "Cigar Brand": {
         "type": "string",
-        "message": "Cigar brand is required",
+        "inputType": "basic",
+        "autosuggest": true,
+        "missingMessage": "All cigars must have a brand"
+      },
+      "Cigar Name": {
+        "type": "string",
+        "inputType": "basic",
+        "autosuggest": false,
+        "missingMessage": "All cigars must have a name"
+      },
+      "Wrapper": {
+        "type": "string",
+        "inputType": "basic",
         "autosuggest": true
-        
-    },
-    "Cigar Name": {
-        "required": true,
+      },
+      "Binder": {
         "type": "string",
-        "message": "Cigar name is required",
+        "inputType": "basic",
+        "autosuggest": true
+      },
+      "Filler": {
+        "type": "string",
+        "inputType": "basic",
+        "autosuggest": true
+      },
+      "Flavor_Profile": {
+        "type": "string",
+        "inputType": "basic",
         "autosuggest": false
-    },
-    "Wrapper": {
+      },
+      "Strength_Profile": {
         "type": "string",
-        "autosuggest": true
-    },
-    "Binder": {
+        "inputType": "mapped range",
+        "enum": ["", "Mild", "Mild-Medium", "Medium", "Medium-Full", "Full"],
+        "zero": true
+      },
+      "Podcast_Link": {
         "type": "string",
-        "autosuggest": true
-    },
-    "Filler": {
-        "type": "string",
-        "autosuggest": true
-    },
-    "Flavor_Profile": {
-        "type": "string",
+        "inputType": "basic",
         "autosuggest": false
-    },
-    "Strength_Profile": {
-        "type": "mapped range",
-        "values": ["", "Mild", "Mild-Medium", "Medium", "Medium-Full", "Full"]
-    },
-    "Podcast_Link": {
-        "type": "string",
-        "autosuggest": false
-    },
-    "Sizes": {
+      },
+      "Sizes": {
         "type": "array",
-        "fields": {
+        "items": {
+          "type": "object",
+          "properties": {
             "Size": {
-                "type": "string",
-                "autosuggest": true
+              "type": "string",
+              "inputType": "basic",
+              "autosuggest": true
             },
             "Barcode": {
-                "type": "string",
-                "autosuggest": false
+              "type": "string",
+              "inputType": "basic",
+              "autosuggest": false,
+              "pattern": "^\\d+$"
             },
             "In_Stock": {
-                "type": "boolean"
+              "type": "boolean",
+              "inputType": "checkbox"
             },
             "Price": {
-                "type": "price"
+              "type": "string",
+              "inputType": "price",
+              "pattern": "^[0-9]+(\\.[0-9]{2})?$"
             }
+          },
+          "required": ["Size"]
         }
-    }
-}
+      }
+    },
+    "required": ["Cigar Brand", "Cigar Name"]
+  }
+  

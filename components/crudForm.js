@@ -216,6 +216,7 @@ button#remove-size:hover {
 }
 
 
+
 const CrudForm = (props) => {
 
     const router = useRouter();
@@ -427,8 +428,9 @@ const CrudForm = (props) => {
                     {
                         localData &&
                         props.dataFields &&
-                        Object.keys(props.dataFields).map((key, index) => {
-                            if (props.dataFields[key]["type"] == "string") {
+                        props.dataFields.properties &&
+                        Object.keys(props.dataFields.properties).map((key, index) => {
+                            if (props.dataFields.properties[key]["inputType"] == "basic") {
                                 return (
                                     <InputField
                                         label={key}
@@ -437,38 +439,34 @@ const CrudForm = (props) => {
                                         original={props.dataOriginal[key]}
                                         onChange={(e) => {
                                             setLocalData({ ...localData, [key]: e.target.value });
-                                            handleValidation(e, props.dataFields[key]);
+                                            handleValidation(e, props.dataFields.properties[key]);
                                         }}
                                         onRevert={(e) => {
                                             setLocalData({ ...localData, [key]: props.dataOriginal[key] });
-                                            handleValidation(e, props.dataFields[key]);
+                                            handleValidation(e, props.dataFields.properties[key]);
                                         }}
                                         setErrors={setErrors}
                                         error={errors[key]}
                                         getOptions={getUniqueValues}
-                                        autosuggest={props.dataFields[key]["autosuggest"]}
+                                        autosuggest={props.dataFields.properties[key]["autosuggest"]}
                                     ></InputField>
                                 )
                             }
-                            if (props.dataFields[key]["type"] == "mapped range") {
-                                if (!props.dataFields[key]["values"]) {
-                                    console.error("Missing values for mapped range field: ", key);
-                                }
+                            if (props.dataFields.properties[key]["inputType"] == "mapped range") {
                                 return (
                                     <MappedRange
-                                        values={props.dataFields[key]["values"]}
+                                        values={props.dataFields.properties[key]["enum"]}
                                         value={localData[key]}
                                         onChange={(e) => {
                                             setLocalData({ ...localData, [key]: e.target.value });
+                                            handleValidation(e, props.dataFields.properties[key]);
                                         }}
+                                        zero={props.dataFields.properties[key]["zero"]}
                                         label={key}
-                                        zero
                                         originalValue={props.dataOriginal[key]}
                                     ></MappedRange>
                                 )
                             }
-
-
                         })
                     }
                     {localData &&
@@ -484,112 +482,78 @@ const CrudForm = (props) => {
                     {
                         localData &&
                         props.dataFields &&
-                        Object.keys(props.dataFields).map((key, arrayIndex) => {
-                            if (props.dataFields[key]["type"] == "array") {
+                        Object.keys(props.dataFields.properties).map((key, arrayIndex) => {
+                            if (props.dataFields.properties[key]["type"] == "array") {
                                 return (
                                     <>
-                                        <h2>{key}</h2>
-                                        <div id="array-container">
-                                            {
-                                                localData[key].map((item, sizeIndex) => {
-                                                    return (
-                                                        <div key={sizeIndex} className="l2 array-item">
-                                                            <h3>Entry {sizeIndex + 1}</h3>
-                                                            {props.dataFields[key] && props.dataFields[key]["fields"] &&
-                                                                Object.keys(props.dataFields[key]["fields"]).map((fieldKey, index) => {
-                                                                    
-                                                                    if (props.dataFields[key]["fields"][fieldKey]["type"] == "string") {
-                                                                        return (
-                                                                            <InputField
-                                                                                label={fieldKey}
-                                                                                name={fieldKey}
-                                                                                value={localData[key][sizeIndex][fieldKey]}
-                                                                                original={props.dataOriginal[key][sizeIndex]?.[fieldKey]}
-                                                                                onChange={(e) => {
-                                                                                    let copy = [...localData[key]];
-                                                                                    copy[sizeIndex][fieldKey] = e.target.value;
-                                                                                    setLocalData({ ...localData, [key]: copy });
-                                                                                }}
-                                                                                onRevert={(e) => {
-                                                                                    let copy = [...localData[key]];
-                                                                                    copy[sizeIndex][fieldKey] = props.dataOriginal[key][sizeIndex]?.[fieldKey];
-                                                                                    setLocalData({ ...localData, [key]: copy });
-                                                                                }}
-                                                                                getOptions={() => {
-                                                                                    return getUniqueValues(key, fieldKey);
-                                                                                }}
-                                                                                autosuggest={props.dataFields[key]["fields"][fieldKey]["autosuggest"]}
-                                                                            ></InputField>
-                                                                        )
-                                                                    }
-                                                                    if (props.dataFields[key]["fields"][fieldKey]["type"] == "boolean") {
-                                                                        return (
-                                                                            <BooleanInput
-                                                                                label={fieldKey}
-                                                                                value={localData[key][sizeIndex][fieldKey]}
-                                                                                onChange={(e) => {
-                                                                                    let copy = [...localData[key]];
-                                                                                    copy[sizeIndex][fieldKey] = e;
-                                                                                    setLocalData({ ...localData, [key]: copy });
-                                                                                }}>
-                                                                            </BooleanInput>
-                                                                        )
-                                                                    }
-                                                                    if (props.dataFields[key]["fields"][fieldKey]["type"] == "price") {
-                                                                        return (
-                                                                            <PriceInput
-                                                                                label={fieldKey}
-                                                                                value={localData[key][sizeIndex][fieldKey]}
-                                                                                onChange={(e) => {
-                                                                                    let copy = [...localData[key]];
-                                                                                    copy[sizeIndex][fieldKey] = e;
-                                                                                    setLocalData({ ...localData, [key]: copy });
-                                                                                }}>
-                                                                            </PriceInput>
-                                                                        )
-                                                                    }
-                                                                })
-                                                            }
-                                                            <div className="array-item-tools">
-                                                                {
-                                                                    <button id="remove-array-item" onClick={(e) => {
-                                                                        if (e.currentTarget.textContent == "Remove") {
-                                                                            e.currentTarget.textContent = "Are you sure?";
-                                                                            e.currentTarget.style.backgroundColor = "rgba(255, 89, 0, 1)";
-                                                                        } else {
-                                                                            setLocalData({ ...localData, [key]: [...localData[key].slice(0, sizeIndex), ...localData[key].slice(sizeIndex + 1)] });
-                                                                            e.currentTarget.textContent = "Remove";
-                                                                            e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
-                                                                        }
-                                                                    }}
-                                                                        onBlur={(e) => {
-                                                                            if (e.currentTarget.textContent == "Are you sure?") {
-                                                                                e.currentTarget.textContent = "Remove";
-                                                                                e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
-                                                                            }
-                                                                        }}
-                                                                    >Remove</button>
+                                    <h2>{key}</h2>
+                                    <div id="array-container">
+                                        {
+                                            localData[key].map((item, sizeIndex) => {
+                                                return (
+                                                    <div key={sizeIndex} className="l2 array-item">
+                                                        <h3>Entry {sizeIndex + 1}</h3>
+                                                        {
+                                                            props.dataFields.properties[key]['items'] &&
+                                                            props.dataFields.properties[key]['items']['type'] == "object" &&
+                                                            props.dataFields.properties[key]['items']['properties'] &&
+                                                            Object.keys(props.dataFields.properties[key]['items']['properties']).map((fieldKey, index) => {
+                                                                if (props.dataFields.properties[key]['items']['properties'][fieldKey]["inputType"] == "basic") {
+                                                                    return (
+                                                                        <InputField
+                                                                            label={fieldKey}
+                                                                            name={fieldKey}
+                                                                            value={item[fieldKey]}
+                                                                            onChange={(e) => {
+                                                                                const updatedArray = [...localData[key]];
+                                                                                updatedArray[sizeIndex] = { ...updatedArray[sizeIndex], [fieldKey]: e.target.value };
+                                                                                setLocalData({ ...localData, [key]: updatedArray });
+                                                                            }}
+                                                                            autosuggest={props.dataFields.properties[key]['items']['properties'][fieldKey]["autosuggest"]}
+                                                                        ></InputField>
+                                                                    )
                                                                 }
-                                                            </div>
-                                                        </div>
-                                                    )
-                                                })
-                                            }
-                                            <div className="l2">
-                                                <button id="add-array-item" type="button" onClick={() => {
-                                                    let copy = [...localData[key]];
-                                                    copy.push({});
-                                                    setLocalData({ ...localData, [key]: copy });
-                                                }} >
-                                                    Add {key}
-                                                </button>
-                                            </div>
-                                        </div>
+                                                                if (props.dataFields.properties[key]['items']['properties'][fieldKey]["inputType"] == "checkbox") {
+                                                                    return (
+                                                                        <BooleanInput
+                                                                            label={fieldKey}
+                                                                            value={item[fieldKey]}
+                                                                            onChange={(e) => {
+                                                                                let copy = [...localData[key]];
+                                                                                copy[sizeIndex][fieldKey] = e;
+                                                                                setLocalData({ ...localData, [key]: copy });
+                                                                            }}
+                                                                        ></BooleanInput>
+                                                                    )
+                                                                }
+                                                                if (props.dataFields.properties[key]['items']['properties'][fieldKey]["inputType"] == "price") {
+                                                                    return (
+                                                                        <PriceInput
+                                                                            label={fieldKey}
+                                                                            name={fieldKey}
+                                                                            value={item[fieldKey]}
+                                                                            onChange={(e) => {
+                                                                                let copy = [...localData[key]];
+                                                                                    copy[sizeIndex][fieldKey] = e;
+                                                                                    setLocalData({ ...localData, [key]: copy });
+                                                                            }}
+                                                                            autosuggest={props.dataFields.properties[key]['items']['properties'][fieldKey]["autosuggest"]}
+                                                                        ></PriceInput>
+                                                                    )
+                                                                }
+                                                            })
+                                                        }
+                                                    </div>
+                                                )
+                                            })
+                                        }
+                                    </div>
                                     </>
                                 )
                             }
                         })
                     }
+                    
 
                 </section>
                 <section className={`image-section ${currentSection === "image-section" ? "active" : ""}`}>
