@@ -50,7 +50,6 @@ const Catalog = ({ commitSha }) => {
       <Head>
         <title>The King Street Emporium - Home</title>
       </Head>
-      <Script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></Script>
 
       <Layout>
         <div className="mobile-home-contact">
