@@ -60,6 +60,13 @@
         "long": true,
         "description": "This will be displayed at the bottom of the product page."
       },
+      "Date Added": {
+        "type": "string",
+        "inputType": "basic",
+        "autosuggest": false,
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+        "description": "YYYY-MM-DD format"
+      },
       "Sizes": {
         "type": "array",
         "items": {
