@@ -286,6 +286,11 @@ export const SubmitPage = (props) => {
                     }
                 </div>
 
+                <div className='section-header'>
+                    <h1>Commit Changes</h1>
+                    <p>Send your changes to the repository, and optionally enter a custom message</p>
+                </div>
+
                 <div>
                     <div className='commit-dialog'>
                         <button /* disabled */ className='commit-button' onClick={(e) => {
@@ -372,6 +377,18 @@ export const SubmitPage = (props) => {
             </Layout>
             <style jsx>
                 {`
+.section-header {
+    padding: 0.25em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.section-header h1 {
+    border-bottom: 9px double var(--dl-color-theme-secondary2);
+    padding: 0.25em;
+
+}
+
 
 .commit .date {
     font-size: 0.7em;
