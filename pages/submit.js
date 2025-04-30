@@ -29,14 +29,15 @@ export const SubmitPage = (props) => {
     const [currentCommitSha, setCurrentCommitSha] = useState('');
     const [currentCommitMessage, setCurrentCommitMessage] = useState('');
 
+    
     const play = () => {
         if (audioRef.current) {
             audioRef.current.play();
         }
     }
-
+    
     const [localData, setLocalData] = useState(props.data);
-
+    
     useEffect(() => {
         if (typeof window !== 'undefined') {
             if (!localStorage.getItem('tempData_cigars')) {
@@ -51,26 +52,41 @@ export const SubmitPage = (props) => {
     useEffect(() => {
         getDiff();
     }, [localData]);
-
+    
     useEffect(() => {
         const interval = setInterval(() => {
             fetch(`/api/getCommits?branch=cms`).then(response => response.json()).then(data => setCommits(data));
         }, 5000);
         return () => clearInterval(interval);
     }, []);
-
+    
     useEffect(() => {
         if (commits.length > 0) {
             setRecentCommitSha(commits[0].sha);
         }
     }, [commits])
+    
+    const [defaultCommitMessage, setDefaultCommitMessage] = useState('');
+    // update default commit message
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setDefaultCommitMessage(`CMS Commit - ${new Date().toLocaleString()}`);
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
+
+    // commit message from user input
+    const [customCommitMessage, setCustomCommitMessage] = useState('');
 
 
-    const commitToGit = async (commitData, branch) => {
+
+    const commitToGit = async (commitData, branch, message) => {
         // this function takes the data from the CMS form and commits it to github
         // we need to remove the new-slug field that is added by the CMS form
         // because it doesn't exist in the original data
         try {
+
+            // create a new array without the new-slug field
             const editedData = commitData.map(data => {
                 // remove the new-slug field from the data
                 const { 'new-slug': _, ...rest } = data;
@@ -93,7 +109,7 @@ export const SubmitPage = (props) => {
                 body: JSON.stringify({
                     filePath: 'public/data/consolidated_cigars.json',
                     content: JSON.stringify(editedData, null, 2),
-                    message: `CMS Commit - ${new Date().toLocaleString()}`,
+                    message: message,
                     branch: branch
                 }),
             });
@@ -271,48 +287,56 @@ export const SubmitPage = (props) => {
                 </div>
 
                 <div>
-                    <button /* disabled */ className='commit-button' onClick={(e) => {
-                        if (e.currentTarget.textContent == "Commit") {
-                            e.currentTarget.textContent = "Are you sure?";
-                            e.currentTarget.style.backgroundColor = "var(--negative)";
-                            play();
-                        } else {
-                            e.currentTarget.textContent = "Commit";
-                            e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
-                            if (currentCommitSha !== recentCommitSha) {
-                                setResponseConsole([...responseConsole, {
-                                    time: new Date().toLocaleString(),
-                                    status: 400,
-                                    statusText: "Bad Request",
-                                    ok: false,
-                                    message: "Cannot commit when current commit is not up to date"
-                                }])
-                                return
-                            }
-                            if (diff.length === 0) {
-                                setResponseConsole([...responseConsole, {
-                                    time: new Date().toLocaleString(),
-                                    status: 400,
-                                    statusText: "Bad Request",
-                                    ok: false,
-                                    message: "No changes detected"
-                                }])
-                                return
-                            }
-                            const branches = ['cms', 'main'];
-                            for (const branch of branches) {
-                                commitToGit(localData, branch);
-                            }
-                        }
-                    }}
-                        onBlur={(e) => {
-                            if (e.currentTarget.textContent == "Are you sure?") {
+                    <div className='commit-dialog'>
+                        <button /* disabled */ className='commit-button' onClick={(e) => {
+                            if (e.currentTarget.textContent == "Commit") {
+                                e.currentTarget.textContent = "Are you sure?";
+                                e.currentTarget.style.backgroundColor = "var(--negative)";
+                                play();
+                            } else {
                                 e.currentTarget.textContent = "Commit";
                                 e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
+                                if (currentCommitSha !== recentCommitSha) {
+                                    setResponseConsole([...responseConsole, {
+                                        time: new Date().toLocaleString(),
+                                        status: 400,
+                                        statusText: "Bad Request",
+                                        ok: false,
+                                        message: "Cannot commit when current commit is not up to date"
+                                    }])
+                                    return
+                                }
+                                if (diff.length === 0) {
+                                    setResponseConsole([...responseConsole, {
+                                        time: new Date().toLocaleString(),
+                                        status: 400,
+                                        statusText: "Bad Request",
+                                        ok: false,
+                                        message: "No changes detected"
+                                    }])
+                                    return
+                                }
+                                const branches = ['cms', 'main'];
+                                for (const branch of branches) {
+                                    commitToGit(localData, branch, customCommitMessage ?? defaultCommitMessage);
+                                }
                             }
                         }}
-
-                    >Commit</button>
+                            onBlur={(e) => {
+                                if (e.currentTarget.textContent == "Are you sure?") {
+                                    e.currentTarget.textContent = "Commit";
+                                    e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
+                                }
+                            }}
+    
+                        >Commit</button>
+                        <div className='message-container'>
+                            <label htmlFor="message">Message</label>
+                            <input id='message' className='commit-message' type="text" placeholder={defaultCommitMessage} onChange={(e) => {
+                                setCustomCommitMessage(e.target.value);
+                            }}></input>
+                        </div>
+                    </div>
                     {responseConsole.length > 0 &&
                         <div className='response-container'>
                             <ul>
@@ -428,13 +452,13 @@ table.commit .equivalence p {
 }
 .diff-button-container button {
     background-color: transparent;
+    color: var(--dl-color-theme-primary1);
     padding: 0px;
     font-weight: 500;
     font-style: italic;
     margin: 0.5em 1em;
 }
 .diff-button-container button:hover {
-    color: var(--dl-color-theme-primary1);
     text-decoration: underline;
 }
 a {
@@ -516,18 +540,6 @@ a:hover {
     padding: 10px;
     gap: 10px;
 }
-button {
-    background-color: var(--dl-color-theme-secondary2);
-    color: var(--dl-color-theme-primary1);
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 10px;
-}
-button:hover {
-    color: var(--dl-color-theme-primary2);
-}
 .diff-split {
     padding: 8px;
     border-top: 3px dotted var(--dl-color-theme-primary1);
@@ -548,15 +560,44 @@ button:hover {
     white-space: pre-wrap;
     word-break: break-all;
 }
+.commit-dialog {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+.commit-dialog .message-container {
+    flex: 1;
+    position: relative;
+}
+.commit-dialog .message-container label {
+    position: absolute;
+    top: 0.4em;
+    left: 0.5em;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--dl-color-theme-secondary2);
+}
+.commit-dialog input {
+    width: 100%;
+    background-color: var(--dl-color-theme-primary2);
+    color: var(--dl-color-theme-secondary1);
+    padding: 0.5em 1em;
+    padding-top: 1.2em;
+    outline: none;
+    font-family: Inter;
+}
 .commit-button {
     background-color: var(--dl-color-theme-secondary2);
     color: var(--dl-color-theme-primary1);
     padding: 0.5em 1em;
-    border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    margin: 10px;
-    align-self: center;
 }
 .commit-button:enabled:hover {
     color: var(--dl-color-theme-primary2);
