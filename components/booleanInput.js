@@ -6,7 +6,7 @@ export const BooleanInput = (props) => {
                     <label htmlFor="boolean-input">{props.label}</label>
                     <description>{props.description}</description>
                 </div>
-                <input id="boolean-input" type="checkbox" checked={props.value} onChange={(e) => props.onChange(e.target.checked)} />
+                <input id="boolean-input" type="checkbox" checked={props.value} onChange={props.onChange} />
             </div>
             <style jsx>
                 {`

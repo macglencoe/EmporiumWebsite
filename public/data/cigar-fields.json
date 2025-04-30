@@ -67,6 +67,12 @@
         "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
         "description": "YYYY-MM-DD format"
       },
+      "hidden": {
+        "type": "string",
+        "inputType": "checkbox",
+        "autosuggest": false,
+        "description": "Check box if this cigar should be hidden on the public site"
+      },
       "Sizes": {
         "type": "array",
         "items": {

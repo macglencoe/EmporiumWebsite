@@ -491,6 +491,21 @@ const CrudForm = (props) => {
                                     ></MappedRange>
                                 )
                             }
+                            if (props.dataFields.properties[key]["inputType"] == "checkbox") {
+                                return (
+                                    <BooleanInput
+                                        label={key}
+                                        value={localData[key]}
+                                        onChange={(e) => {
+                                            setLocalData({ ...localData, [key]: e.target.checked });
+                                            handleValidation(e, props.dataFields.properties[key]);
+                                        }}
+                                        originalValue={props.dataOriginal[key]}
+
+                                        description={props.dataFields.properties[key]["description"]}
+                                    ></BooleanInput>
+                                )
+                            }
                         })
                     }
                     {localData &&
@@ -545,7 +560,7 @@ const CrudForm = (props) => {
                                                                             value={item[fieldKey]}
                                                                             onChange={(e) => {
                                                                                 let copy = [...localData[key]];
-                                                                                copy[sizeIndex][fieldKey] = e;
+                                                                                copy[sizeIndex][fieldKey] = e.target.checked;
                                                                                 setLocalData({ ...localData, [key]: copy });
                                                                             }}
                                                                             description={props.dataFields.properties[key]['items']['properties'][fieldKey]["description"]}
