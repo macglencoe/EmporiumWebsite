@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 
 export const MappedRange = ({
-    values = [], value, onChange, zero, label, originalValue
+    values = [], value, onChange, zero, label, originalValue, description
 }) => {
     const min = zero ? 0 : 1;
     const max = zero ? values.length - 1 : values.length;
@@ -25,8 +25,11 @@ export const MappedRange = ({
     return (
         <>
             <div className="mapped-range">
-                <label htmlFor="range-input">{label}</label>
-                <div>
+                <div className="label-container">
+                    <label htmlFor="range-input">{label}</label>
+                    <description>{description}</description>
+                </div>
+                <div className="input-container">
                     <div className="value-container">
                         {originalValue == "" && value !== "" && <span className="original-value"><strike>N/A</strike></span>}
                         {originalValue != value && <span className="original-value"><strike>{originalValue ?? "N/A"}</strike></span>}
@@ -49,7 +52,25 @@ export const MappedRange = ({
     margin: 1em;
     gap: 0.5em;
 }
-.mapped-range > div {
+.mapped-range > div.label-container {
+    padding-top: 0.2em;
+    width: 100%;
+    border-top: 3px solid var(--dl-color-theme-secondary2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.mapped-range > div.label-container description {
+    padding: 0.5em 1em;
+    font-size: 0.7em;
+    font-family: Inter;
+    min-width: 190px;
+    flex: 1 1;
+    align-self: flex-end;
+    text-align: right;
+}
+.mapped-range > div.input-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -60,9 +81,6 @@ export const MappedRange = ({
 .mapped-range label {
     font-weight: bold;
     font-size: 1.2em;
-    padding-top: 0.2em;
-    width: 100%;
-    border-top: 3px solid var(--dl-color-theme-secondary2);
 }
 .mapped-range span {
     font-weight: bold;

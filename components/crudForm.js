@@ -33,8 +33,11 @@ const InputField = (props) => {
             <div className={
                 (props.value != props.original ? "changed" : "") + " inputField"
             }>
-                <label>{props.label}</label>
-                <div>
+                <div className="label-container">
+                    <label>{props.label}</label>
+                    <description>{props.description}</description>
+                </div>
+                <div className="input-container">
                     {props.onRevert && props.original && <button className="fieldRevert" onClick={(e) => {
                         props.onRevert(e);
                         if (props.setErrors) {
@@ -83,6 +86,7 @@ const InputField = (props) => {
             </div>
             <style jsx>
                 {`
+
 div.autocomplete {
     grid-row: 3;
     grid-column: 1 / -1;
@@ -124,13 +128,29 @@ div.autocomplete .selectTopOption {
 
 }
 
-.inputField label {
-    font-weight: bold;
-    font-size: 1.2em;
-    padding-top: 0.2em;
+.inputField > div.label-container {
     width: 100%;
     border-top: 3px solid var(--dl-color-theme-secondary2);
+    padding-top: 0.2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.inputField > div.label-container description {
+    padding: 0.5em 1em;
+    font-size: 0.7em;
+    font-family: Inter;
+    min-width: 190px;
+    flex: 1 1;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.inputField > div.label-container label {
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 .inputField input {
@@ -158,24 +178,24 @@ div.autocomplete .selectTopOption {
     outline: none
 }
 
-.inputField > div:focus-within {
+.inputField > div.input-container:focus-within {
     outline: 3px solid var(--dl-color-theme-secondary2);
 }
 
-.inputField > div {
+.inputField > div.input-container {
     border-radius: 5px;
     overflow: hidden;
     display: grid;
     grid-template-columns: auto 1fr;
     position: relative;
 }
-.inputField > div .fieldRevert {
+.inputField > div.input-container .fieldRevert {
     background-color: var(--dl-color-theme-secondary2);
     color: var(--dl-color-theme-primary1);
     cursor: pointer;
     grid-row: 1;
 }
-.inputField > div strike {
+.inputField > div.input-container strike {
     width: auto;
     padding: 0.5em;
     background-color: var(--dl-color-theme-primary2);
@@ -183,7 +203,7 @@ div.autocomplete .selectTopOption {
     overflow-wrap: break-word;
 }
 
-.inputField > div span.error {
+.inputField > div.input-container span.error {
     background-color: var(--dl-color-theme-primary2);
     color: red;
     font-size: 0.8em;
@@ -451,6 +471,7 @@ const CrudForm = (props) => {
                                         getOptions={getUniqueValues}
                                         autosuggest={props.dataFields.properties[key]["autosuggest"]}
                                         long={props.dataFields.properties[key]["long"]}
+                                        description={props.dataFields.properties[key]["description"]}
                                     ></InputField>
                                 )
                             }
@@ -466,6 +487,7 @@ const CrudForm = (props) => {
                                         zero={props.dataFields.properties[key]["zero"]}
                                         label={key}
                                         originalValue={props.dataOriginal[key]}
+                                        description={props.dataFields.properties[key]["description"]}
                                     ></MappedRange>
                                 )
                             }
@@ -512,6 +534,7 @@ const CrudForm = (props) => {
                                                                                 setLocalData({ ...localData, [key]: updatedArray });
                                                                             }}
                                                                             autosuggest={props.dataFields.properties[key]['items']['properties'][fieldKey]["autosuggest"]}
+                                                                            description={props.dataFields.properties[key]['items']['properties'][fieldKey]["description"]}
                                                                         ></InputField>
                                                                     )
                                                                 }
@@ -525,6 +548,7 @@ const CrudForm = (props) => {
                                                                                 copy[sizeIndex][fieldKey] = e;
                                                                                 setLocalData({ ...localData, [key]: copy });
                                                                             }}
+                                                                            description={props.dataFields.properties[key]['items']['properties'][fieldKey]["description"]}
                                                                         ></BooleanInput>
                                                                     )
                                                                 }
@@ -540,15 +564,28 @@ const CrudForm = (props) => {
                                                                                     setLocalData({ ...localData, [key]: copy });
                                                                             }}
                                                                             autosuggest={props.dataFields.properties[key]['items']['properties'][fieldKey]["autosuggest"]}
+                                                                            description={props.dataFields.properties[key]['items']['properties'][fieldKey]["description"]}
                                                                         ></PriceInput>
                                                                     )
                                                                 }
                                                             })
                                                         }
+                                                    <button className="standard-button" onClick={() => {
+                                                        const copy = [...localData[key]];
+                                                        copy.splice(sizeIndex, 1);
+                                                        setLocalData({ ...localData, [key]: copy });
+                                                    }}>Delete Entry</button>
                                                     </div>
                                                 )
                                             })
                                         }
+                                    </div>
+                                    <div className="l2 standard-button">
+                                        <button onClick={() => {
+                                            const copy = [...localData[key]];
+                                            copy.push({});
+                                            setLocalData({ ...localData, [key]: copy });
+                                        }}>Add Entry</button>
                                     </div>
                                     </>
                                 )
@@ -652,6 +689,21 @@ const CrudForm = (props) => {
                 {`
                     .l2 {
     margin: 1em;
+}
+
+.standard-button {
+    background-color: var(--dl-color-theme-secondary2);
+    width: fit-content;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border-radius: 5px;
+    color: var(--dl-color-theme-primary1);
+    font-weight: bold;
+    cursor: pointer;
+}
+.standard-button:hover {
+    filter: brightness(110%);
+    color: var(--dl-color-theme-primary2);
 }
 
 button.resetDate {
