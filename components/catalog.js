@@ -132,6 +132,7 @@ const Catalog = (props) => {
             console.log(props.filters);
 
             return (
+                !item.hidden &&
                 props.filters.every(filter =>
                     router.query[filter.name] == '' ||
                     (Array.isArray(item[filter.name])
