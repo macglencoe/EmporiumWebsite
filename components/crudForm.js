@@ -509,14 +509,6 @@ const CrudForm = (props) => {
                             }
                         })
                     }
-                    {localData &&
-                    <>
-                        <p>Date Added: {localData['Date Added'] ?? "Unknown"}</p>
-                        <button className="resetDate" onClick={() => {
-                            setLocalData({ ...localData, "Date Added": new Date().toISOString().slice(0, 10) })
-                        }}>Reset Date To Now</button>
-                    </>
-                    }
                 </section>
                 <section className={`array-section ${currentSection === "array-section" ? "active" : ""}`}>
                     {
