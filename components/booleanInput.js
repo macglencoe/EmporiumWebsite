@@ -38,6 +38,7 @@ export const BooleanInput = (props) => {
 .boolean-input > div.label-container label {
     font-weight: bold;
     font-size: 1.2em;
+    text-transform: capitalize;
 }
                 `}
             </style>

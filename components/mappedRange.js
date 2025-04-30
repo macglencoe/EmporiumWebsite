@@ -81,6 +81,7 @@ export const MappedRange = ({
 .mapped-range label {
     font-weight: bold;
     font-size: 1.2em;
+    text-transform: capitalize;
 }
 .mapped-range span {
     font-weight: bold;

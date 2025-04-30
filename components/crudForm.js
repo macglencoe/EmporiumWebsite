@@ -151,6 +151,7 @@ div.autocomplete .selectTopOption {
 .inputField > div.label-container label {
     font-weight: bold;
     font-size: 1.2em;
+    text-transform: capitalize;
 }
 
 .inputField input {

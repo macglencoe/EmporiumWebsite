@@ -45,6 +45,7 @@ export const PriceInput = ({ label, value, onChange, description}) => {
 .price-input > div.label-container > label {
     font-weight: bold;
     font-size: 1.2em;
+    text-transform: capitalize;
 }
 .price-input span {
     background-color: field;
