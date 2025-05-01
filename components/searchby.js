@@ -33,7 +33,7 @@ const SearchBy = (props) => {
     if (props.method == "flatmap" && props.flatmap) {
 
         uniqueBrands = [
-            ...new Set(data.flatMap(item => item[props.flatmap] ? item[props.flatmap].map(size => size.Size.trim()) : []))
+            ...new Set(data.flatMap(item => item[props.flatmap] ? item[props.flatmap].map(size => size.Size ? size.Size.trim() : null).filter(size => size !== null) : []))
         ].sort((a, b) => a.localeCompare(b));
     } else if (props.method == "list") {
         uniqueBrands = [
