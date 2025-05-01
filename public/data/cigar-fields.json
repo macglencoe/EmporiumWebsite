@@ -47,12 +47,6 @@
         "zero": true,
         "description": "Slide to select the strength, from N/A to Mild to Full."
       },
-      "Podcast_Link": {
-        "type": "string",
-        "inputType": "basic",
-        "autosuggest": false,
-        "description": "Paste the link or embed code of the podcast episode this cigar was featured on."
-      },
       "description": {
         "type": "string",
         "inputType": "basic",
@@ -68,10 +62,40 @@
         "description": "YYYY-MM-DD format"
       },
       "hidden": {
-        "type": "string",
+        "type": "boolean",
         "inputType": "checkbox",
         "autosuggest": false,
         "description": "Check box if this cigar should be hidden on the public site"
+      },
+      "Podcast_Link": {
+        "type": "string",
+        "inputType": "basic",
+        "autosuggest": false,
+        "description": "Paste the link or embed code of the podcast episode this cigar was featured on."
+      },
+      "featured_Week": {
+        "type": "string",
+        "inputType": "date",
+        "autosuggest": false,
+        "description": "Cigar of the week"
+      },
+      "featured_Eds_Pick": {
+        "type": "string",
+        "inputType": "date",
+        "autosuggest": false,
+        "description": "Ed's Pick"
+      },
+      "featured_Teds_Pick": {
+        "type": "string",
+        "inputType": "date",
+        "autosuggest": false,
+        "description": "Ted's Pick"
+      },
+      "featured_StickFigures": {
+        "type": "string",
+        "inputType": "date",
+        "autosuggest": false,
+        "description": "Stick Figures"
       },
       "Sizes": {
         "type": "array",
