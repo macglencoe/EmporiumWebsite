@@ -5463,22 +5463,22 @@
     "Strength_Profile": "Medium-Full",
     "Sizes": [
       {
-        "Size": "Torpedo",
-        "Barcode": "76622089105",
+        "Size": "Double Toro",
+        "Barcode": "076622089204",
         "In_Stock": true,
-        "Price": "8.70"
+        "Price": "10.55"
       },
       {
         "Size": "Belicoso",
         "Barcode": "76622089457",
         "In_Stock": true,
-        "Price": "8.35"
+        "Price": "9.80"
       },
       {
         "Size": "Robusto",
         "Barcode": "76622089303",
         "In_Stock": true,
-        "Price": "8.80"
+        "Price": "9.60"
       }
     ],
     "slug": "j-c-newman-el-baton"
@@ -7866,7 +7866,7 @@
         "Size": "Toro",
         "Barcode": "76622027039",
         "In_Stock": true,
-        "Price": "9.20"
+        "Price": "9.25"
       },
       {
         "Size": "Robusto",
