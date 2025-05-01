@@ -1,26 +1,16 @@
-import React, { Fragment, useState, useEffect } from 'react'
-import { useRouter } from 'next/router';
-import Data from '../../public/data/consolidated_cigars.json';
-import cigarSizes from '../../public/data/cigarsizes.json';
-
+import cigarSizes from '../../../public/data/cigarsizes.json';
 import Head from 'next/head'
-
-import Footer32 from '../../components/footer32'
-import Contact from '../../components/contact'
-import Directory from '../../components/directory';
-import Ksman from '../../components/ksman'
-import Link from 'next/link';
-import Layout from '../../components/layout';
-import PageTitle1 from '../../components/pagetitle1';
-import ProductPage, { Navigation, PodcastLink, ShareButton, StringBubbleList } from '../../components/productPage';
-import { ProductImage, ProductSideContent } from '../../components/productPage';
-import { ProductSizeChart, ProductBasicInfo } from '../../components/productPage';
-import { ProductMainContent, ProductTitle } from '../../components/productPage';
-import { ProductInfoFields, ProductCallOrVisitButtons } from '../../components/productPage';
-import { Disclaimer } from '../../components/productPage';
+import Layout from '../../../components/layout';
+import PageTitle1 from '../../../components/pagetitle1';
+import ProductPage, { Navigation, PodcastLink, ShareButton, StringBubbleList } from '../../../components/productPage';
+import { ProductImage, ProductSideContent } from '../../../components/productPage';
+import { ProductSizeChart, ProductBasicInfo } from '../../../components/productPage';
+import { ProductMainContent, ProductTitle } from '../../../components/productPage';
+import { ProductInfoFields, ProductCallOrVisitButtons } from '../../../components/productPage';
+import { Disclaimer } from '../../../components/productPage';
 
 export const getStaticPaths = async () => {
-  const cigars = await import('../../public/data/consolidated_cigars.json');
+  const cigars = await import('../../../public/data/consolidated_cigars.json');
   const data = await cigars.default;
   const paths = data.map((cigar) => ({
     params: { slug: cigar.slug },
@@ -29,7 +19,7 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const cigarsData = await import('../../public/data/consolidated_cigars.json');
+  const cigarsData = await import('../../../public/data/consolidated_cigars.json');
   const data = await cigarsData.default;
   const cigarIndex = data.findIndex((cigar) => cigar.slug === params.slug);
   const cigar = data[cigarIndex];
