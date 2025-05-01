@@ -323,7 +323,7 @@ export const SubmitPage = (props) => {
                                 }
                                 const branches = ['cms', 'main'];
                                 for (const branch of branches) {
-                                    commitToGit(localData, branch, customCommitMessage ?? defaultCommitMessage);
+                                    commitToGit(localData, branch, customCommitMessage === "" ? defaultCommitMessage : customCommitMessage);
                                 }
                             }
                         }}
