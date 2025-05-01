@@ -2,7 +2,7 @@ import cigarSizes from '../../../public/data/cigarsizes.json';
 import Head from 'next/head'
 import Layout from '../../../components/layout';
 import PageTitle1 from '../../../components/pagetitle1';
-import ProductPage, { Navigation, PodcastLink, ShareButton, StringBubbleList } from '../../../components/productPage';
+import ProductPage, { InteractionPanel, Navigation, PodcastLink, ShareButton, StringBubbleList } from '../../../components/productPage';
 import { ProductImage, ProductSideContent } from '../../../components/productPage';
 import { ProductSizeChart, ProductBasicInfo } from '../../../components/productPage';
 import { ProductMainContent, ProductTitle } from '../../../components/productPage';
@@ -80,11 +80,10 @@ const CigarPage = (props) => {
                 { name: "Strength", value: cigar['Strength_Profile'] },
               ]}
             />
-            <ProductCallOrVisitButtons />
-            <ShareButton
-              title={cigar['Cigar Brand'] + ' ' + cigar['Cigar Name']}
-              text="Check out this cigar on King Street Emporium's online catalog!"
-              
+            <InteractionPanel
+                image={cigar.image}
+                title={cigar['Cigar Name']}
+                description={"Check out this cigar from King Street Emporium!"}
             />
 
           </ProductMainContent>
