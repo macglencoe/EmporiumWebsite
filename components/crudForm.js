@@ -6,6 +6,7 @@ import Notice from "./notice";
 import MappedRange from "./mappedRange";
 import { BooleanInput } from "./booleanInput";
 import { PriceInput } from "./priceInput";
+import { DateInput } from "./dateInput";
 
 const InputField = (props) => {
     const [options, setOptions] = useState([]);
@@ -505,6 +506,20 @@ const CrudForm = (props) => {
 
                                         description={props.dataFields.properties[key]["description"]}
                                     ></BooleanInput>
+                                )
+                            }
+                            if (props.dataFields.properties[key]["inputType"] == "date") {
+                                return (
+                                    <DateInput
+                                        label={key}
+                                        value={localData[key]}
+                                        onChange={(e) => {
+                                            setLocalData({ ...localData, [key]: e.target.value });
+                                            handleValidation(e, props.dataFields.properties[key]);
+                                        }}
+                                        originalValue={props.dataOriginal[key]}
+                                        description={props.dataFields.properties[key]["description"]}
+                                    ></DateInput>
                                 )
                             }
                         })
