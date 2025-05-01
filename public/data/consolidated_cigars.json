@@ -9394,21 +9394,6 @@
     "Date Added": "2025-04-28"
   },
   {
-    "Cigar Brand": "test cigar",
-    "Cigar Name": "test brand",
-    "Wrapper": "",
-    "Binder": "",
-    "Filler": "",
-    "Flavor_Profile": "",
-    "Strength_Profile": "",
-    "Sizes": [
-      {}
-    ],
-    "hidden": true,
-    "slug": "test-cigar-test-brand",
-    "Date Added": "2025-05-01"
-  },
-  {
     "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "8-5-8 Rosado Sungrown",
     "Wrapper": "Ecuadorian Rosado Sungrown",
