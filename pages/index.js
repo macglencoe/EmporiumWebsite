@@ -12,6 +12,7 @@ import Layout from '../components/layout'
 import ShopSuggestions from '../components/shopSuggestions'
 import { handleLocationClick } from '../utils/location'
 import NewArrivalList from '../components/newArrivalList'
+import Featured from '../components/featured'
 
 export const getStaticProps = async () => {
   const data = await import('../public/data/consolidated_cigars.json');
@@ -144,6 +145,8 @@ const Catalog = (props) => {
         />
 
         <div className='divider'></div>
+
+        <Featured cigars={props.data} />
 
         <NewArrivalList cigars={props.data}/>
 
