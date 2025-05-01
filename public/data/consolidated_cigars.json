@@ -9390,5 +9390,20 @@
     ],
     "slug": "foundation-highclere-castle-victorian",
     "Date Added": "2025-04-28"
+  },
+  {
+    "Cigar Brand": "test cigar",
+    "Cigar Name": "test brand",
+    "Wrapper": "",
+    "Binder": "",
+    "Filler": "",
+    "Flavor_Profile": "",
+    "Strength_Profile": "",
+    "Sizes": [
+      {}
+    ],
+    "hidden": true,
+    "slug": "test-cigar-test-brand",
+    "Date Added": "2025-05-01"
   }
 ]
