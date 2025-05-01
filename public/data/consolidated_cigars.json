@@ -1220,7 +1220,7 @@
         "Size": "Lancero",
         "Barcode": "843182120193",
         "In_Stock": true,
-        "Price": "11.00"
+        "Price": "13.00"
       }
     ],
     "slug": "arturo-fuente-casa-cuba-doble-dos"
@@ -1433,10 +1433,10 @@
     "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Don Carlos Eye of the Bull",
     "Wrapper": "Cameroon",
-    "Binder": "Undisclosed",
-    "Filler": "Undisclosed",
-    "Flavor_Profile": "",
-    "Strength_Profile": "",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Spice, Vanilla, White Pepper, Coffee",
+    "Strength_Profile": "Mild-Medium",
     "Sizes": [
       {
         "Size": "Gordito",
@@ -1448,13 +1448,13 @@
     "slug": "arturo-fuente-don-carlos-eye-of-the-bull"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Don Carlos Eye of the Shark",
     "Wrapper": "Cameroon",
     "Binder": "Undisclosed",
     "Filler": "Undisclosed",
-    "Flavor_Profile": "",
-    "Strength_Profile": "",
+    "Flavor_Profile": "Earth, Orange Peel, Nutmeg, Cream",
+    "Strength_Profile": "Mild-Medium",
     "Sizes": [
       {
         "Size": "Pyramid",
@@ -1531,14 +1531,14 @@
       {
         "Size": "Toro",
         "Barcode": "843182101338",
-        "In_Stock": true,
-        "Price": "9.10"
+        "In_Stock": false,
+        "Price": "9.50"
       },
       {
         "Size": "Churchill",
         "Barcode": "843182101338",
         "In_Stock": true,
-        "Price": "9.10"
+        "Price": "9.50"
       }
     ],
     "slug": "arturo-fuente-double-chateau-natural"
@@ -1879,7 +1879,7 @@
         "Size": "Toro",
         "Barcode": "843182122708",
         "In_Stock": true,
-        "Price": "10.85"
+        "Price": "11.75"
       }
     ],
     "slug": "arturo-fuente-hemingway-sungrown-reserva-especial"
@@ -9020,7 +9020,8 @@
       }
     ],
     "slug": "la-gloria-cubana-los-gloriosos",
-    "Date Added": "2025-04-17"
+    "Date Added": "2025-04-17",
+    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/4hpaTCg5zkoH74tJGtgp49?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
   },
   {
     "Cigar Brand": "El Rey Del Mundo",
@@ -9039,7 +9040,8 @@
       }
     ],
     "slug": "el-rey-del-mundo-appointment",
-    "Date Added": "2025-04-17"
+    "Date Added": "2025-04-17",
+    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/4EAp2iq53hOdjWHbTb6Dnm?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
   },
   {
     "Cigar Brand": "Casa Cuba",
@@ -9404,6 +9406,69 @@
     ],
     "hidden": true,
     "slug": "test-cigar-test-brand",
+    "Date Added": "2025-05-01"
+  },
+  {
+    "Cigar Brand": "Arturo Fuente",
+    "Cigar Name": "8-5-8 Rosado Sungrown",
+    "Wrapper": "Ecuadorian Rosado Sungrown",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Cedar, Hay, Floral",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "843182100218",
+        "In_Stock": true,
+        "Price": "8.85"
+      }
+    ],
+    "slug": "arturo-fuente-858-rosado-sungrown",
+    "Date Added": "2025-05-01"
+  },
+  {
+    "Cigar Brand": "Arturo Fuente",
+    "Cigar Name": "Hemingway Oscuro Sungrown",
+    "Wrapper": "Habana Oscuro",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Nuttiness, Tartness, Saltness",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro Signature Perfecto",
+        "Barcode": "843182123477",
+        "In_Stock": true,
+        "Price": "11.75"
+      },
+      {
+        "Size": "Churchill Classic Perfecto",
+        "Barcode": "843182123453",
+        "In_Stock": true,
+        "Price": "12.60"
+      }
+    ],
+    "slug": "arturo-fuente-hemingway-oscuro-sungrown",
+    "Date Added": "2025-05-01"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Brazilia Go!",
+    "Wrapper": "Brazilian Maduro",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Earth, Floral, Toasty, Nutty",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "652125006414",
+        "In_Stock": true,
+        "Price": "10.45"
+      }
+    ],
+    "slug": "cao-brazilia-go",
     "Date Added": "2025-05-01"
   }
 ]
