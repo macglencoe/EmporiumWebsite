@@ -123,7 +123,8 @@ const Catalog = (props) => {
 
         <div className='divider'></div>
 
-        { }
+        <Featured cigars={props.data} />
+      
 
         <ShopSuggestions
           title="Cigars"
@@ -146,7 +147,6 @@ const Catalog = (props) => {
 
         <div className='divider'></div>
 
-        <Featured cigars={props.data} />
 
         <NewArrivalList cigars={props.data}/>
 
