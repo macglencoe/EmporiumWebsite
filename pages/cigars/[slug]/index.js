@@ -12,7 +12,7 @@ import Ksman from '../../../components/ksman'
 import Link from 'next/link';
 import Layout from '../../../components/layout';
 import PageTitle1 from '../../../components/pagetitle1';
-import ProductPage, { Navigation, PodcastLink, StringBubbleList } from '../../../components/productPage';
+import ProductPage, { InteractionPanel, Navigation, PodcastLink, ShareButton, StringBubbleList } from '../../../components/productPage';
 import { ProductImage, ProductSideContent } from '../../../components/productPage';
 import { ProductSizeChart, ProductBasicInfo } from '../../../components/productPage';
 import { ProductMainContent, ProductTitle } from '../../../components/productPage';
@@ -130,7 +130,11 @@ const CigarPage = (props) => {
                 { name: "Strength", value: cigarLocalData['Strength_Profile'], markout: props.cigar['Strength_Profile'] },
               ]}
             />
-            <ProductCallOrVisitButtons />
+            <InteractionPanel
+                image={cigarLocalData.image}
+                title={cigarLocalData['Cigar Name']}
+                description={"Check out this cigar from King Street Emporium!"}
+            />
 
           </ProductMainContent>
         </ProductPage>
