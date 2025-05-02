@@ -22,31 +22,11 @@ const Layout = (props) => {
     window.scrollTo(0, 0);
   }
 
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://connect.facebook.net/en_US/sdk.js';
-    script.async = true;
-    script.defer = true;
-    script.crossOrigin = 'anonymous';
-    script.nonce = 'YOUR_NONCE_HERE';
-    document.body.appendChild(script);
-
-    /* window.fbAsyncInit = function() {
-      FB.init({
-        xfbml: true,
-        version: 'v13.0',
-      });
-      console.log('Facebook SDK initialized');
-    }; */
-
-  }, []);
-
   return (
     <>
 
 
       <div id="fb-root"></div>
-      <Script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></Script>
 
       <div className="catalog-container10">
         <header className='layout-header'>
