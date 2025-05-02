@@ -41,6 +41,27 @@ const PageTitle1 = (props) => {
               </ul>
             </nav>
           }
+          {props.buttons && props.buttons.length > 0 &&
+            <nav className="buttons">
+              <ul>
+                {props.buttons.map((button, index) => (
+                  <li key={index}>
+                    { button.onClick && <button onClick={button.onClick}>
+                      {button.icon && <svg xmlns="http://www.w3.org/2000/svg" height="1.7em" viewBox="0 -960 960 960"fill="#e8eaed">{button.icon}</svg>}
+                      {button.label && button.label}
+                    </button>}
+                    {
+                      button.href && <a href={button.href}>
+                        {button.icon && <svg xmlns="http://www.w3.org/2000/svg" height="1.7em" viewBox="0 -960 960 960"fill="#e8eaed">{button.icon}</svg>}
+                        {button.label && button.label}
+                      </a>
+                    }
+
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          }
         </div>
       </div>
       <style jsx>
@@ -68,9 +89,6 @@ const PageTitle1 = (props) => {
             nav li:active div{
               transform: scale(0.9);
             }
-            nav svg {
-              fill: var(--dl-color-theme-primary1);
-            }
             nav li:first-child {
               border-right: 2px solid var(--dl-color-theme-primary1);
             }
@@ -78,15 +96,15 @@ const PageTitle1 = (props) => {
               border-left: 2px solid var(--dl-color-theme-primary1);
             }
 
-            nav li svg {
+            nav li div > svg {
+              fill: var(--dl-color-theme-primary1);
               transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.575);
             }
 
-            nav li:first-child:hover svg, nav li:first-child:focus-within svg {
+            nav li:first-child:hover div > svg, nav li:first-child:focus-within div > svg {
               transform: translate(-8px, 0);
             }
-
-            nav li:last-child:hover svg, nav li:last-child:focus-within svg {
+            nav li:last-child:hover div > svg, nav li:last-child:focus-within div > svg {
               transform: translate(8px, 0);
             }
         
@@ -95,8 +113,6 @@ const PageTitle1 = (props) => {
           display: flex;
           flex-direction: column;
           padding: 10px;
-
-
         }
         .page-title-container h2 {
           color: var(--dl-color-theme-primary1);
@@ -135,6 +151,28 @@ const PageTitle1 = (props) => {
             align-items: center;
             background-color: var(--dl-color-theme-primary1);
           }
+            nav.buttons li button, nav.buttons li a {
+              background-color: var(--dl-color-theme-primary1);
+              margin: 5px;
+              padding: 0.5em 1em;
+              font-weight: bold;
+              color: var(--dl-color-theme-secondary2);
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              flex-direction: row;
+              gap: 0.5em;
+              font-family: Inter;
+            }
+            nav.buttons li button:hover, nav.buttons li a:hover {
+              background-color: var(--dl-color-theme-primary2);
+            }
+            nav.buttons li button svg, nav.buttons li a svg {
+              height: 1.5em;
+              width: 1.5em;
+              fill: var(--dl-color-theme-secondary2);
+              color: var(--dl-color-theme-secondary2);
+            }
             
             `}
       </style>
