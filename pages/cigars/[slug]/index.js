@@ -44,7 +44,7 @@ const CigarPage = (props) => {
       </Head>
       <Layout>
         <PageTitle1
-          subtitle={cigar['Cigar Name']}
+          subtitle={cigar ? cigar['Cigar Name'] : "Data not found"}
           next={props.next}
           prev={props.prev}
           href="/cigars"
@@ -55,7 +55,6 @@ const CigarPage = (props) => {
         >
           <ProductSideContent>
             <ProductImage
-              hasImage={true}
               src={cigar.image}
               fallbackSearch={encodeURIComponent(cigar['Cigar Brand'] + ' ' + cigar['Cigar Name'])}
             />
