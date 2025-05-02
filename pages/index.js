@@ -12,6 +12,8 @@ import Layout from '../components/layout'
 import ShopSuggestions from '../components/shopSuggestions'
 import { handleLocationClick } from '../utils/location'
 import WikiLink from '../components/wikiLink'
+import NewArrivalList from '../components/newArrivalList'
+import Featured from '../components/featured'
 
 
 export async function getServerSideProps() {
@@ -28,6 +30,10 @@ const Catalog = ({ commitSha }) => {
   const [updatePage, setUpdatePage] = useState(1);
   const [updateBranch, setUpdateBranch] = useState("main");
 
+  const [localData, setLocalData] = useState([]);
+
+
+
 
 
   useEffect(() => {
@@ -38,6 +44,13 @@ const Catalog = ({ commitSha }) => {
     }
 
     fetch('/api/getCommits?branch=' + updateBranch).then(response => response.json()).then(data => setCommits(data));
+
+    if (window !== undefined) {
+      if (!localStorage.getItem('tempData_cigars')) {
+        localStorage.setItem('tempData_cigars', JSON.stringify(Data));
+      }
+      setLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
+    }
   }, []);
 
 
@@ -226,7 +239,8 @@ const Catalog = ({ commitSha }) => {
 
         <div className='divider'></div>
 
-        { }
+        <Featured cigars={localData} />
+      
 
         <ShopSuggestions
           title="Cigars"
@@ -246,6 +260,11 @@ const Catalog = ({ commitSha }) => {
             { href: "/tobacco/families", label: "Family" },
           ]}
         />
+
+        <div className='divider'></div>
+
+
+        <NewArrivalList cigars={localData}/>
 
 
 
@@ -320,7 +339,7 @@ const Catalog = ({ commitSha }) => {
 
 
 
-        <div style={{
+        <section style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -360,7 +379,9 @@ const Catalog = ({ commitSha }) => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        
 
       </Layout>
 
@@ -913,6 +934,10 @@ const Catalog = ({ commitSha }) => {
           
          
         @media (max-width: 680px) {
+
+          section#testimonials blockquote {
+            line-height: 1.5em;
+          }
           .mobile-home-contact {
             display: flex;
             width: 100%;
