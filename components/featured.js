@@ -7,46 +7,45 @@ export const Featured = ({cigars}) => {
     const [feature_StickFigures, setFeature_StickFigures] = useState([]);
 
     useEffect(() => {
-        setFeature_Week(cigars.filter(cigar => cigar['feature_Week']).sort((a, b) => new Date(b['feature_Week']) - new Date(a['feature_Week'])));
-        setFeature_Eds_Pick(cigars.filter(cigar => cigar['feature_Eds_Pick']).sort((a, b) => new Date(b['feature_Eds_Pick']) - new Date(a['feature_Eds_Pick'])));
-        setFeature_Teds_Pick(cigars.filter(cigar => cigar['feature_Teds_Pick']).sort((a, b) => new Date(b['feature_Teds_Pick']) - new Date(a['feature_Teds_Pick'])));
-        setFeature_StickFigures(cigars.filter(cigar => cigar['feature_StickFigures']).sort((a, b) => new Date(b['feature_StickFigures']) - new Date(a['feature_StickFigures'])));
+        setFeature_Week(cigars.filter(cigar => cigar['featured_Week']).sort((a, b) => new Date(b['featured_Week']) - new Date(a['featured_Week'])));
+        setFeature_Eds_Pick(cigars.filter(cigar => cigar['featured_Eds_Pick']).sort((a, b) => new Date(b['featured_Eds_Pick']) - new Date(a['featured_Eds_Pick'])));
+        setFeature_Teds_Pick(cigars.filter(cigar => cigar['featured_Teds_Pick']).sort((a, b) => new Date(b['featured_Teds_Pick']) - new Date(a['featured_Teds_Pick'])));
+        setFeature_StickFigures(cigars.filter(cigar => cigar['featured_StickFigures']).sort((a, b) => new Date(b['featured_StickFigures']) - new Date(a['featured_StickFigures'])));
     }, [cigars])
 
     return (
         <>
-        { (feature_Week.length > 0 || feature_Eds_Pick.length > 0 || feature_Teds_Pick.length > 0 || feature_StickFigures.length > 0) &&
             <div className='featured'>
             <h1>Featured Cigars</h1>
             <div className="spread">
                 { feature_Week.length > 0 &&
                     <div className='feature week'>
                     <h2>Cigar of the Week</h2>
-                    <b>{feature_Week[0]['feature_Week']}</b>
+                    <b>{feature_Week[0]['featured_Week']}</b>
                     <p><a href={ '/cigars/' +feature_Week[0]['slug']}><i>{feature_Week[0]['Cigar Brand']} </i>{feature_Week[0]['Cigar Name']}</a></p>
                 </div>}
                 { feature_Eds_Pick.length > 0 &&
                     <div className='feature eds-Pick'>
                     <h2>Ed's Pick</h2>
-                    <b>{feature_Eds_Pick[0]['feature_Eds_Pick']}</b>
+                    <b>{feature_Eds_Pick[0]['featured_Eds_Pick']}</b>
                     <p><a href={ '/cigars/' +feature_Eds_Pick[0]['slug']}><i>{feature_Eds_Pick[0]['Cigar Brand']} </i>{feature_Eds_Pick[0]['Cigar Name']}</a></p>
                 </div>}
                 { feature_Teds_Pick.length > 0 &&
                     <div className='feature teds-Pick'>
                     <h2>Ted's Pick</h2>
-                    <b>{feature_Teds_Pick[0]['feature_Teds_Pick']}</b>
+                    <b>{feature_Teds_Pick[0]['featured_Teds_Pick']}</b>
                     <p><a href={ '/cigars/' +feature_Teds_Pick[0]['slug']}><i>{feature_Teds_Pick[0]['Cigar Brand']} </i>{feature_Teds_Pick[0]['Cigar Name']}</a></p>
 
                 </div>}
                 { feature_StickFigures.length > 0 &&
                     <div className='feature stickFigures'>
                     <h2>On The Stick Figures Podcast</h2>
-                    <b>{feature_StickFigures[0]['feature_StickFigures']}</b>
+                    <b>{feature_StickFigures[0]['featured_StickFigures']}</b>
                     <p><a href={ '/cigars/' +feature_StickFigures[0]['slug']}><i>{feature_StickFigures[0]['Cigar Brand']} </i>{feature_StickFigures[0]['Cigar Name']}</a></p>
                 </div>}
                 
             </div>
-        </div>}
+        </div>
         <style jsx>
             {`
         .feature {
