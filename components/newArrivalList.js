@@ -28,8 +28,9 @@ export const NewArrivalList = ({ cigars }) => {
                             </p>
                             <Link href={`/cigars/${cigar.slug}`}>
                                 <a>
-                                    <i>{cigar['Cigar Brand']}</i>
-                                    <b>{cigar['Cigar Name']}</b>
+                                    <p className='cigarTitle'>
+                                        <i>{cigar['Cigar Brand']}</i> <b>{cigar['Cigar Name']}</b>
+                                    </p>
                                 </a>
                             </Link>
                             <div className='attributes'>
@@ -58,6 +59,9 @@ div.new-arrivals {
     align-items: center;
     background-color: var(--dl-color-theme-primary2);
     padding: 10px;
+}
+.cigarTitle {
+    font-family: Playfair;
 }
 p.date {
     font-size: 0.8em;
