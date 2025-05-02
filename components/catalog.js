@@ -151,7 +151,13 @@ const Catalog = (props) => {
     const searchedItems = filteredItems.filter((item) => {
         if (router.isReady) {
             return Object.values(item).some(value =>
-                String(value).toLowerCase().includes(router.query.search ? router.query.search.toLowerCase() : '')
+                Array.isArray(value) ?
+                    value.some(val =>
+                        typeof val === 'object' ?
+                            Object.values(val).some(v => String(v).toLowerCase().includes(router.query.search ? router.query.search.toLowerCase() : ''))
+                            : String(val).toLowerCase().includes(router.query.search ? router.query.search.toLowerCase() : '')
+                    ) :
+                    String(value).toLowerCase().includes(router.query.search ? router.query.search.toLowerCase() : '')
             );
         }
     });
