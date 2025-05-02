@@ -118,6 +118,10 @@ const CigarCatalog = (props) => {
         sortOptions={
           [
             {
+              value: "Date Added",
+              label: "Newest First"
+            },
+            {
               value: "Cigar Name",
               label: "Name",
             },
@@ -173,14 +177,6 @@ const CigarCatalog = (props) => {
             }
             return ('/cigars/' + item.slug)
           },
-          buttonText: (item) => {
-            return (
-              item.Sizes.length > 1 ?
-                item.Sizes.length + ' Sizes Available' :
-                item.Sizes[0].Size)
-          },
-          
-
           list: (item) => {
             if (true) {
               return (

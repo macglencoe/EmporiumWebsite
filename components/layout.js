@@ -97,7 +97,7 @@ const Layout = (props) => {
             <div id='fb-skip'></div>
           </div>
           <main className="catalog-content1" id='content'>
-            <Analytics />
+            <Analytics/>
             {props.children}
 
 
@@ -120,11 +120,11 @@ const Layout = (props) => {
               }
               rootClassName="footer32root-class-name1"
             ></Footer32>
-          </main>
+        </main>
 
 
-        </div>
-      </div >
+      </div>
+    </div >
       <style jsx>
         {`
         
