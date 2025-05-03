@@ -8,7 +8,7 @@ import DataUpdate from "../components/dataUpdate";
 export default function MyApp({ Component, pageProps, commitSha, commitMessage }) {
   return (
     <>
-    <DataUpdate commitSha = {commitSha} commitMessage = {commitMessage}></DataUpdate>
+    <DataUpdate serverCommitSha = {commitSha} serverCommitMessage = {commitMessage}></DataUpdate>
     <Component {...pageProps} />
     </>
   );

@@ -4,7 +4,7 @@ export default async function handler(req, res) {
         return res.status(405).json({ message: "Only GET requests are allowed." });
     }
 
-    const { per_page = 5, page = 1, branch = "main" } = req.query;
+    const { per_page = 5, page = 1, branch = "main", path } = req.query;
 
     const owner = 'macglencoe';
     const repo = 'EmporiumWebsite';
@@ -13,7 +13,7 @@ export default async function handler(req, res) {
         return res.status(500).json({ message: "Github token not found." });
     }
 
-    const githubApiUrl = `https://api.github.com/repos/${owner}/${repo}/commits?per_page=${per_page}&page=${page}&sha=${branch}`;
+    const githubApiUrl = `https://api.github.com/repos/${owner}/${repo}/commits?per_page=${per_page}&page=${page}&sha=${branch}`+(path ? `&path=${path}` : '');
 
     const commitsResponse = await fetch(githubApiUrl, {
         method: 'GET',

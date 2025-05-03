@@ -5,8 +5,6 @@ export const resetData = async ({commitSha, commitMessage, force}) => {
         return;
     }
 
-    const localSha = localStorage.getItem('tempData_sha');
-    if (commitSha == localSha && !force) return;
 
     alert("New data available. Resetting now.");
 

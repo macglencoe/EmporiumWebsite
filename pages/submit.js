@@ -24,27 +24,34 @@ export const SubmitPage = (props) => {
     const audioRef = useRef();
     const [diff, setDiff] = useState([]);
     const [responseConsole, setResponseConsole] = useState([]);
-    const [commits, setCommits] = useState([]);
-    const [recentCommitSha, setRecentCommitSha] = useState('');
     const [currentCommitSha, setCurrentCommitSha] = useState('');
     const [currentCommitMessage, setCurrentCommitMessage] = useState('');
+    // all commits
+    const [allCommits, setAllCommits] = useState([]);
+    const [recentAllCommitSha, setRecentAllCommitSha] = useState('');
+    // only commits touching cigar data file
+    const [dataCommits, setDataCommits] = useState([]);
+    const [recentDataCommitSha, setRecentDataCommitSha] = useState('');
 
-    
     const play = () => {
         if (audioRef.current) {
             audioRef.current.play();
         }
     }
-    
+
     const [localData, setLocalData] = useState(props.data);
-    
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
             if (!localStorage.getItem('tempData_cigars')) {
                 localStorage.setItem('tempData_cigars', JSON.stringify(props.data));
             }
             setLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
-            fetch(`/api/getCommits?branch=cms`).then(response => response.json()).then(data => setCommits(data));
+            // fetch all commits
+            fetch(`/api/getCommits?branch=cms`).then(response => response.json()).then(data => setAllCommits(data));
+            // fetch only commits touching cigar data file
+            fetch(`/api/getCommits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}&branch=cms`).then(response => response.json()).then(data => setDataCommits(data));
+
             setCurrentCommitSha(localStorage.getItem('tempData_sha') ?? 'No Sha Found');
             setCurrentCommitMessage(localStorage.getItem('tempData_message') ?? 'No Message Found');
         }
@@ -52,20 +59,29 @@ export const SubmitPage = (props) => {
     useEffect(() => {
         getDiff();
     }, [localData]);
-    
+
     useEffect(() => {
         const interval = setInterval(() => {
-            fetch(`/api/getCommits?branch=cms`).then(response => response.json()).then(data => setCommits(data));
+            // fetch all commits
+            fetch(`/api/getCommits?branch=cms`).then(response => response.json()).then(data => setAllCommits(data));
+            // fetch only commits touching cigar data file
+            fetch(`/api/getCommits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}&branch=cms`).then(response => response.json()).then(data => setDataCommits(data));
         }, 5000);
         return () => clearInterval(interval);
     }, []);
-    
+
     useEffect(() => {
-        if (commits.length > 0) {
-            setRecentCommitSha(commits[0].sha);
+        if (allCommits.length > 0) {
+            setRecentAllCommitSha(allCommits[0].sha);
         }
-    }, [commits])
-    
+    }, [allCommits])
+
+    useEffect(() => {
+        if (dataCommits.length > 0) {
+            setRecentDataCommitSha(dataCommits[0].sha);
+        }
+    }, [dataCommits])
+
     const [defaultCommitMessage, setDefaultCommitMessage] = useState('');
     // update default commit message
     useEffect(() => {
@@ -170,7 +186,8 @@ export const SubmitPage = (props) => {
         <>
             <Layout>
                 <PageTitle1 buttons={[
-                    {label: "Revert Changes",
+                    {
+                        label: "Revert Changes",
                         icon: <path xmlns="http://www.w3.org/2000/svg" d="M212-239q-43-48-67.5-110T120-480q0-150 105-255t255-105v-80l200 150-200 150v-80q-91 0-155.5 64.5T260-480q0 46 17.5 86t47.5 70l-113 85ZM480-40 280-190l200-150v80q91 0 155.5-64.5T700-480q0-46-17.5-86T635-636l113-85q43 48 67.5 110T840-480q0 150-105 255T480-120v80Z" />,
                         href: "/data-reset"
                     }
@@ -179,39 +196,96 @@ export const SubmitPage = (props) => {
                 <table className='commit'>
                     <thead>
                         <tr>
-                            <th>Most Recent Commit</th>
+                            <th>Most Recent Data Commit</th>
                             <th className='equivalence'></th>
-                            <th>Server Commit</th>
+                            <th>Most Recent of All Commits</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {dataCommits.length > 0 &&
+                                <td>
+                                    <p>{dataCommits[0].commit.message ?? "No commit message found"}</p>
+                                    <p className='date'>{dataCommits[0].commit.author.date ?? "No date found"}</p>
+                                    <p><b>{recentDataCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
+                                </td>
+                            }
+                            {dataCommits.length === 0 && <td><p>Loading ...</p></td>}
+                            <td className='equivalence'>
+                                <div>
+                                    {recentDataCommitSha === recentAllCommitSha &&
+                                        <p>=</p>
+                                    }
+                                    {recentDataCommitSha !== recentAllCommitSha &&
+                                        <p>&lt;</p>
+                                    }
+                                </div>
+                            </td>
+                            {allCommits.length > 0 &&
+                                <td>
+                                    <p>{allCommits[0].commit.message ?? "No commit message found"}</p>
+                                    <p className='date'>{allCommits[0].commit.author.date ?? "No date found"}</p>
+                                    <p><b>{recentAllCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
+                                </td>
+                            }
+
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table className='commit'>
+                    <thead>
+                        <tr>
+                            <th>Most Recent Data Commit</th>
                             <th className='equivalence'></th>
                             <th>Local Commit</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            {commits.length > 0 && <td>
-                                <p>{commits[0].commit.message ?? "No commit message found"}</p>
-                                <p className='date'>{commits[0].commit.author.date ?? "No date found"}</p>
-                                <p><b>{recentCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
-                            </td>}
-                            {commits.length === 0 && <td><p>Loading ...</p></td>}
+                            {/* Display information for the most recent data commit */}
+                            {dataCommits.length > 0 ? (
+                                <td>
+                                    <p>{dataCommits[0].commit.message ?? "No commit message found"}</p>
+                                    <p className='date'>{dataCommits[0].commit.author.date ?? "No date found"}</p>
+                                    <p><b>{recentDataCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
+                                </td>
+                            ) : (
+                                <td><p>Loading ...</p></td>
+                            )}
                             <td className='equivalence'>
                                 <div>
-                                    {recentCommitSha == process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA && <p>=</p>}
-                                    {recentCommitSha != process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA && <svg className='loading' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M320-160h320v-120q0-66-47-113t-113-47q-66 0-113 47t-47 113v120Zm160-360q66 0 113-47t47-113v-120H320v120q0 66 47 113t113 47ZM160-80v-80h80v-120q0-61 28.5-114.5T348-480q-51-32-79.5-85.5T240-680v-120h-80v-80h640v80h-80v120q0 61-28.5 114.5T612-480q51 32 79.5 85.5T720-280v120h80v80H160Z" /></svg>}
-                                </div>
-                            </td>
-                            <td>
-                                <p>{process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_MESSAGE}</p>
-                                <p><b>{process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA?.slice(0, 7)}</b></p>
-                            </td>
-                            <td className='equivalence'>
-                                <div>
-                                    {currentCommitSha == process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA && <p>=</p>}
-                                    {currentCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA && 
-                                        <svg className='clickable' onClick={() => window.location.reload()} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/></svg>
+                                    {/* Case 1: Local commit is the same as recent data commit */}
+                                    {recentDataCommitSha === currentCommitSha && <p>=</p>}
+
+                                    {/* Case 2: Loading state - local, build, and fetched commits are out-of-sync */}
+                                    {recentDataCommitSha !== currentCommitSha &&
+                                        recentDataCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
+                                        currentCommitSha !== recentAllCommitSha && (
+                                            <svg className='loading' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                                                <path d="M320-160h320v-120q0-66-47-113t-113-47q-66 0-113 47t-47 113v120Zm160-360q66 0 113-47t47-113v-120H320v120q0 66 47 113t113 47ZM160-80v-80h80v-120q0-61 28.5-114.5T348-480q-51-32-79.5-85.5T240-680v-120h-80v-80h640v80h-80v120q0 61-28.5 114.5T612-480q51 32 79.5 85.5T720-280v120h80v80H160Z" />
+                                            </svg>
+                                        )
+                                    }
+
+                                    {/* Case 3: Current commit is ahead of the last data commit */}
+                                    {recentDataCommitSha !== currentCommitSha &&
+                                        recentDataCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
+                                        currentCommitSha === recentAllCommitSha && <p>&lt;</p>}
+
+                                    {/* Case 4: Server commit is ahead of local commit */}
+                                    {recentDataCommitSha !== currentCommitSha &&
+                                        recentDataCommitSha === process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA && (
+                                            <a href='.'>
+                                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z" />
+                                                </svg>
+                                            </a>
+                                        )
                                     }
                                 </div>
                             </td>
+                            {/* Display information for the current commit in local storage */}
                             <td>
                                 <p>{currentCommitMessage ?? "No commit message found"}</p>
                                 <p><b>{currentCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
@@ -220,19 +294,40 @@ export const SubmitPage = (props) => {
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colSpan={5}>
-                                {currentCommitSha !== recentCommitSha && currentCommitSha !== "Unknown" &&
+                            <td colSpan={3}>
+                                { // Loading state
+                                    recentDataCommitSha !== currentCommitSha &&
+                                    recentDataCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
+                                    currentCommitSha !== recentAllCommitSha &&
+                                    currentCommitSha !== "Unknown" &&
                                     <>
                                         <p>This most likely means a build is currently in progress, or there was an error with the build</p>
                                         <p>Go to the <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>Vercel Dashboard</a> to check the build status</p>
                                         <p>In the meantime, <b>you won't be able to submit changes</b></p>
                                     </>
                                 }
-                                {
-                                    currentCommitSha === recentCommitSha &&
+                                { // Local commit is up to date
+                                    recentDataCommitSha === currentCommitSha &&
                                     <>
-                                        <p>Commits are up to date, and <b>you are able to submit changes</b></p>
+                                        <p>Commit is up to date, and <b>you are able to submit changes</b></p>
                                     </>
+                                }
+                                { // Current commit is ahead of the last data commit
+                                    recentDataCommitSha !== currentCommitSha &&
+                                    recentDataCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
+                                    currentCommitSha === recentAllCommitSha &&
+                                    <>
+                                        <p>Commit is ahead of the last data commit, and <b>you are able to submit changes</b></p>
+                                    </>
+                                }
+                                { // Server commit is ahead of local commit
+                                    recentDataCommitSha !== currentCommitSha &&
+                                    recentDataCommitSha === process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
+                                    <>
+                                        <p>Server commit is ahead of local commit. <br></br>This means the site hasn't had the chance to update the local data yet. Try <a href='.'>refreshing the page</a></p>
+                                        <p>In the meantime, <b>you won't be able to submit changes</b></p>
+                                    </>
+
                                 }
                                 {
                                     currentCommitSha === "Unknown" &&
@@ -301,7 +396,10 @@ export const SubmitPage = (props) => {
                             } else {
                                 e.currentTarget.textContent = "Commit";
                                 e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
-                                if (currentCommitSha !== recentCommitSha) {
+                                if (
+                                    currentCommitSha !== recentDataCommitSha
+                                    && currentCommitSha !== recentAllCommitSha
+                                ) {
                                     setResponseConsole([...responseConsole, {
                                         time: new Date().toLocaleString(),
                                         status: 400,
@@ -333,7 +431,7 @@ export const SubmitPage = (props) => {
                                     e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
                                 }
                             }}
-    
+
                         >Commit</button>
                         <div className='message-container'>
                             <label htmlFor="message">Message</label>
