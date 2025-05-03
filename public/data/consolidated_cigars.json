@@ -992,7 +992,7 @@
     "slug": "alec-bradley-american-sungrown"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "8-5-8 Maduro",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Dominican",
@@ -1007,10 +1007,11 @@
         "Price": "8.20"
       }
     ],
-    "slug": "arturo-fuente-8-5-8-maduro"
+    "slug": "arturo-fuente-8-5-8-maduro",
+    "description": "This cigar features a dark Connecticut Broadleaf Maduro wrapper over a core of Dominican long filler and binder, offering a smooth experience with full flavor and a mild to medium body. As the Maduro version of one of the brand’s longest-running best sellers in our store, it stays true to Fuente’s signature balance and consistency. A reliable classic with just enough richness to keep seasoned smokers coming back."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "8-5-8 Natural",
     "Wrapper": "Cameroon",
     "Binder": "Dominican Republican",
@@ -1025,15 +1026,16 @@
         "Price": "8.20"
       }
     ],
-    "slug": "arturo-fuente-8-5-8-natural"
+    "slug": "arturo-fuente-8-5-8-natural",
+    "description": "This cigar has earned its reputation over the past 30 years as a shop staple and one of our top sellers. Wrapped in a toothy Cameroon leaf over Dominican binder and filler, it delivers a mild to medium body with rich, nutty flavors that show exactly why the blend has lasted this long. Familiar, reliable, and always in demand."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "8-5-8 Sungrown",
     "Wrapper": "Ecuadorian Sungrown",
     "Binder": "Dominican Republic",
     "Filler": "Dominican Republic",
-    "Flavor_Profile": "",
+    "Flavor_Profile": "Cedar, Leather, Spice",
     "Strength_Profile": "Medium",
     "Sizes": [
       {
@@ -1043,10 +1045,11 @@
         "Price": "8.85"
       }
     ],
-    "slug": "arturo-fuente-8-5-8-sungrown"
+    "slug": "arturo-fuente-8-5-8-sungrown",
+    "description": "Once a limited run, now a regular in the Fuente lineup, the 8-5-8 Sun Grown offers a deeper take on a familiar favorite. The Ecuadorian sun grown wrapper adds a layer of spice and body to the Dominican core, bringing out notes of leather, cedar, cinnamon, and a warm, earthy finish. Medium-bodied and well-balanced, it adds just enough edge without losing its roots."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Anejo #46",
     "Wrapper": "Cognac Maduro",
     "Binder": "Dominican",
@@ -1061,10 +1064,11 @@
         "Price": "12.20"
       }
     ],
-    "slug": "arturo-fuente-anejo-46"
+    "slug": "arturo-fuente-anejo-46",
+    "description": "Originally created out of necessity after a storm wiped out Fuente’s wrapper supply, the Añejo has since earned its place as one of the family’s most celebrated releases. Built with the same aged Dominican filler and binder found in the Opus X line, the blend is finished with a Connecticut Broadleaf Maduro wrapper that spent time resting in cognac barrels. Full-bodied and complex, this cigar offers deep notes of cocoa, baking spice, and a subtle sweetness that sets it apart. Once rare, still revered."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Anejo #49",
     "Wrapper": "Cognac Maduro",
     "Binder": "Dominican",
@@ -1079,10 +1083,11 @@
         "Price": "15.25"
       }
     ],
-    "slug": "arturo-fuente-anejo-49"
+    "slug": "arturo-fuente-anejo-49",
+    "description": "Originally created out of necessity after a storm wiped out Fuente’s wrapper supply, the Añejo has since earned its place as one of the family’s most celebrated releases. Built with the same aged Dominican filler and binder found in the Opus X line, the blend is finished with a Connecticut Broadleaf Maduro wrapper that spent time resting in cognac barrels. Full-bodied and complex, this cigar offers deep notes of cocoa, baking spice, and a subtle sweetness that sets it apart. Once rare, still revered."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Anejo #50",
     "Wrapper": "Cognac Maduro",
     "Binder": "Dominican",
@@ -1097,10 +1102,11 @@
         "Price": "13.00"
       }
     ],
-    "slug": "arturo-fuente-anejo-50"
+    "slug": "arturo-fuente-anejo-50",
+    "description": "Originally created out of necessity after a storm wiped out Fuente’s wrapper supply, the Añejo has since earned its place as one of the family’s most celebrated releases. Built with the same aged Dominican filler and binder found in the Opus X line, the blend is finished with a Connecticut Broadleaf Maduro wrapper that spent time resting in cognac barrels. Full-bodied and complex, this cigar offers deep notes of cocoa, baking spice, and a subtle sweetness that sets it apart. Once rare, still revered."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Anejo #60",
     "Wrapper": "Cognac Maduro",
     "Binder": "Dominican",
@@ -1115,10 +1121,11 @@
         "Price": "14.75"
       }
     ],
-    "slug": "arturo-fuente-anejo-60"
+    "slug": "arturo-fuente-anejo-60",
+    "description": "Originally created out of necessity after a storm wiped out Fuente’s wrapper supply, the Añejo has since earned its place as one of the family’s most celebrated releases. Built with the same aged Dominican filler and binder found in the Opus X line, the blend is finished with a Connecticut Broadleaf Maduro wrapper that spent time resting in cognac barrels. Full-bodied and complex, this cigar offers deep notes of cocoa, baking spice, and a subtle sweetness that sets it apart. Once rare, still revered."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Anejo 888",
     "Wrapper": "Cognac Maduro",
     "Binder": "Dominican",
@@ -1133,16 +1140,17 @@
         "Price": "13.75"
       }
     ],
-    "slug": "arturo-fuente-anejo-888"
+    "slug": "arturo-fuente-anejo-888",
+    "description": "Originally created out of necessity after a storm wiped out Fuente’s wrapper supply, the Añejo has since earned its place as one of the family’s most celebrated releases. Built with the same aged Dominican filler and binder found in the Opus X line, the blend is finished with a Connecticut Broadleaf Maduro wrapper that spent time resting in cognac barrels. Full-bodied and complex, this cigar offers deep notes of cocoa, baking spice, and a subtle sweetness that sets it apart. Once rare, still revered."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Breva Maduro",
     "Wrapper": "Connecticut Broadleaf Maduro",
     "Binder": "Dominican Republican",
     "Filler": "Dominican Republican",
-    "Flavor_Profile": "Dark spicy kick",
-    "Strength_Profile": "Mild-Medium",
+    "Flavor_Profile": "Dark spicy kick, Coffee, Sweetness, Vanilla ",
+    "Strength_Profile": "Medium",
     "Sizes": [
       {
         "Size": "Corona",
@@ -1151,15 +1159,16 @@
         "Price": "3.60"
       }
     ],
-    "slug": "arturo-fuente-breva-maduro"
+    "slug": "arturo-fuente-breva-maduro",
+    "description": "Crafted with a Connecticut Broadleaf Maduro wrapper over Dominican binder and filler, the Brevas Royale Maduro offers a medium-bodied profile with notes of coffee, sweetness, and vanilla. This cigar provides a consistent and approachable experience, suitable for both newcomers and seasoned enthusiasts. Its balanced flavor and accessible price point make it a reliable choice for everyday enjoyment."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Breva Natural",
     "Wrapper": "Cameroon",
     "Binder": "Dominican Republican",
     "Filler": "Dominican Republican",
-    "Flavor_Profile": "Famous Fuente Flavor:  the triple F",
+    "Flavor_Profile": "Cedar, Toast, Spice",
     "Strength_Profile": "Mild-Medium",
     "Sizes": [
       {
@@ -1169,15 +1178,16 @@
         "Price": "3.60"
       }
     ],
-    "slug": "arturo-fuente-breva-natural"
+    "slug": "arturo-fuente-breva-natural",
+    "description": "Wrapped in Cameroon and filled with Dominican tobacco, this cigar leans mild to medium with notes of cedar, toast, and a touch of spice. Built for consistency, it’s an easygoing smoke that fits into just about any time of day. Affordable, dependable, and unmistakably Fuente."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Casa Cuba Divine Inspiration",
     "Wrapper": "Ecuadorian Habana",
     "Binder": "Dominican",
     "Filler": "Dominican",
-    "Flavor_Profile": "Wood, Spice, Creamy finish",
+    "Flavor_Profile": "Cedar, Spice, Creamy finish, Natural Tobacco",
     "Strength_Profile": "Medium",
     "Sizes": [
       {
@@ -1187,15 +1197,16 @@
         "Price": "10.50"
       }
     ],
-    "slug": "arturo-fuente-casa-cuba-divine-inspiration"
+    "slug": "arturo-fuente-casa-cuba-divine-inspiration",
+    "description": "This cigar stands as the final blend conceived by Carlos Fuente Sr., inspired by a dream and brought to life through his guidance from afar. Featuring an Ecuadorian Havana wrapper over Dominican binder and filler, it delivers a medium experience with notes of cedar, natural tobacco, and subtle sweetness. The Casa Cuba offers a balanced and nuanced profile, paying homage to traditional Cuban cigar-making techniques."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Casa Cuba Doble Cinco",
     "Wrapper": "Ecuadorian Habana",
     "Binder": "Dominican",
     "Filler": "Dominican",
-    "Flavor_Profile": "Wood, Spicy, Creamy Finish",
+    "Flavor_Profile": "Cedar, Spicy, Creamy Finish, Natural Tobacco",
     "Strength_Profile": "Medium",
     "Sizes": [
       {
@@ -1205,15 +1216,16 @@
         "Price": "12.85"
       }
     ],
-    "slug": "arturo-fuente-casa-cuba-doble-cinco"
+    "slug": "arturo-fuente-casa-cuba-doble-cinco",
+    "description": "This cigar stands as the final blend conceived by Carlos Fuente Sr., inspired by a dream and brought to life through his guidance from afar. Featuring an Ecuadorian Havana wrapper over Dominican binder and filler, it delivers a medium bodied experience with notes of cedar, natural tobacco, and subtle sweetness. The Casa Cuba offers a balanced and nuanced profile, paying homage to traditional Cuban cigar-making techniques."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Casa Cuba Doble Dos",
     "Wrapper": "Ecuadorian Habana",
     "Binder": "Dominican",
     "Filler": "Dominican",
-    "Flavor_Profile": "Wood, Spice, Creamy finish",
+    "Flavor_Profile": "Wood, Spice, Creamy Finish, Citrus",
     "Strength_Profile": "Medium",
     "Sizes": [
       {
@@ -1224,15 +1236,16 @@
       }
     ],
     "slug": "arturo-fuente-casa-cuba-doble-dos",
-    "featured_Teds_Pick": "2025-05-01"
+    "featured_Teds_Pick": "2025-05-01",
+    "description": "Crafted with an Ecuadorian Habano wrapper over Dominican binder and filler, this medium-bodied cigar offers a profile of cedar, baking spice, and a touch of citrus. The 6.5 x 42 Lonsdale format allows the wrapper's character to shine, delivering a balanced and nuanced experience. As a personal favorite of Ted's, this cigar exemplifies the harmony between size and flavor."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Cazadores",
-    "Wrapper": "Dominican Republic",
+    "Wrapper": "Ecuadorian  Habano",
     "Binder": "Dominican Republic",
     "Filler": "Dominican",
-    "Flavor_Profile": "Smooth and Full Flavored",
+    "Flavor_Profile": "Cedar, Oak, Spice",
     "Strength_Profile": "Mild-Medium",
     "Sizes": [
       {
@@ -1242,52 +1255,55 @@
         "Price": "5.60"
       }
     ],
-    "slug": "arturo-fuente-cazadores"
+    "slug": "arturo-fuente-cazadores",
+    "description": "Handmade in the Dominican Republic, the Arturo Fuente Especiales line offers a medium-bodied profile with notes of cedar, oak, and subtle spice. Wrapped in an Ecuadorian Habano leaf over Dominican binder and filler, these cigars provide a consistent and approachable experience. Available in various sizes, including the Cazadores (6 x 50), Emperador (7 x 52), and Conquistadores (5.5 x 56), the Especiales line delivers quality craftsmanship at an accessible price point."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Chateau Fuente Maduro",
     "Wrapper": "Connecticut Broadleaf Maduro",
     "Binder": "Dominican Republican",
     "Filler": "Dominican Republican",
-    "Flavor_Profile": "Nutty core, Hints of spice",
-    "Strength_Profile": "Mild-Medium",
+    "Flavor_Profile": "Cedar, Leather, Cocoa, Coffee,  Hints of spice",
+    "Strength_Profile": "Medium",
     "Sizes": [
       {
-        "Size": "Robusto",
+        "Size": "Rothschild",
         "Barcode": "843182100577",
         "In_Stock": true,
         "Price": "8.00"
       }
     ],
-    "slug": "arturo-fuente-chateau-fuente-maduro"
+    "slug": "arturo-fuente-chateau-fuente-maduro",
+    "description": "Wrapped in Connecticut Broadleaf and filled with Dominican tobaccos, this cigar offers a rich, medium-bodied profile built on notes of cocoa, cedar, and dark roasted coffee. The Rothschild size delivers a smooth draw and a clean, even burn from start to finish. A dependable Maduro with just enough depth to keep things interesting, it remains a favorite for everyday smoking without ever feeling routine."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Chateau Fuente Natural",
     "Wrapper": "Connecticut Shade",
     "Binder": "Dominican Republican",
     "Filler": "Dominican Republican",
-    "Flavor_Profile": "Creamy smooth blend",
+    "Flavor_Profile": "Cedar, Cream, Sweetness",
     "Strength_Profile": "Mild-Medium",
     "Sizes": [
       {
-        "Size": "Robusto",
+        "Size": "Rothschild",
         "Barcode": "843182100607",
         "In_Stock": true,
         "Price": "8.00"
       }
     ],
-    "slug": "arturo-fuente-chateau-fuente-natural"
+    "slug": "arturo-fuente-chateau-fuente-natural",
+    "description": "Wrapped in a smooth Connecticut Shade leaf, this cigar delivers a mild to medium profile centered on cedar, cream, and a light sweetness. The Dominican filler and binder keep the smoke balanced and easygoing, while the Rothschild size ensures a steady, even burn. Unpretentious and consistent, this cigar has long been a go-to for those who want something mellow but not boring."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Chateau Fuente Pyramids",
     "Wrapper": "Ecuadorian Shade",
     "Binder": "Dominican",
     "Filler": "Dominican",
-    "Flavor_Profile": "Creamy Smooth Blend",
-    "Strength_Profile": "Mild",
+    "Flavor_Profile": "Cedar, Cream, Spice",
+    "Strength_Profile": "Mild-Medium",
     "Sizes": [
       {
         "Size": "Toro",
@@ -1296,16 +1312,17 @@
         "Price": "10.10"
       }
     ],
-    "slug": "arturo-fuente-chateau-fuente-pyramids"
+    "slug": "arturo-fuente-chateau-fuente-pyramids",
+    "description": "Rolled in a Connecticut Shade wrapper over Dominican binder and filler, this torpedo-shaped cigar delivers a mild to medium profile with notes of cedar, cream, and a hint of spice. The tapered head offers a more concentrated draw, bringing out the nuance in the wrapper. A refined option in the Chateau line, suited for those who prefer a classic flavor profile in a more elegant format."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Chateau Fuente Sungrown",
     "Wrapper": "Ecuadorian Sungrown",
     "Binder": "Dominican Republican",
     "Filler": "Dominican Republican",
-    "Flavor_Profile": "Cocoa, Sweet spice, Dark chocolate",
-    "Strength_Profile": "Medium-Full",
+    "Flavor_Profile": "Cedar, Leather, Spice",
+    "Strength_Profile": "Medium",
     "Sizes": [
       {
         "Size": "Robusto",
@@ -1314,16 +1331,17 @@
         "Price": "8.00"
       }
     ],
-    "slug": "arturo-fuente-chateau-fuente-sungrown"
+    "slug": "arturo-fuente-chateau-fuente-sungrown",
+    "description": "Wrapped in an Ecuadorian Sun Grown leaf over Dominican binder and filler, this cigar delivers a medium-bodied profile with notes of cedar, leather, and a hint of spice. The wrapper adds a touch of natural sweetness, enhancing the overall balance. Consistent construction and a smooth draw make it a reliable choice for those seeking a flavorful yet approachable smoke."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Chateau Royal Salute Maduro",
     "Wrapper": "Connecticut Broadleaf Maduro",
     "Binder": "Dominican",
     "Filler": "Dominican",
-    "Flavor_Profile": "Toast, Coffee bean, Nutty intonations",
-    "Strength_Profile": "Mild-Medium",
+    "Flavor_Profile": "Toast, Cocoa, Coffee bean",
+    "Strength_Profile": "Medium",
     "Sizes": [
       {
         "Size": "Toro Grande",
@@ -1332,16 +1350,17 @@
         "Price": "11.10"
       }
     ],
-    "slug": "arturo-fuente-chateau-royal-salute-maduro"
+    "slug": "arturo-fuente-chateau-royal-salute-maduro",
+    "description": "The Royal Salute Maduro comes wrapped in dark Connecticut Broadleaf over Dominican binder and filler, offering a medium-bodied profile with notes of cocoa, espresso, and a hint of spice. Bold in size but easy in character, it’s a natural fit for those who prefer a longer smoke without the intensity to match."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Churchill Maduro",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Dominican",
     "Filler": "Dominican",
-    "Flavor_Profile": "Smooth and Full Flavored",
-    "Strength_Profile": "Mild-Medium",
+    "Flavor_Profile": "Dark Chocolate, Licorice, Almond, Woodiness",
+    "Strength_Profile": "Medium",
     "Sizes": [
       {
         "Size": "Churchill",
@@ -1350,15 +1369,16 @@
         "Price": "8.60"
       }
     ],
-    "slug": "arturo-fuente-churchill-maduro"
+    "slug": "arturo-fuente-churchill-maduro",
+    "description": "Wrapped in a dark Connecticut Broadleaf over Dominican binder and filler, this Churchill sized cigar offers a medium bodied profile with notes of dark chocolate, licorice, almonds, and wood. Its consistent construction and smooth draw make it a reliable choice for those seeking a rich and balanced smoking experience."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Conquistador",
-    "Wrapper": "Dominican Republic",
+    "Wrapper": "Ecuadorian  Habano",
     "Binder": "Dominican Republican",
     "Filler": "Dominican Republican",
-    "Flavor_Profile": "Earth, Oak, Cedar, Spice, Delicate sweet finish",
+    "Flavor_Profile": "Cedar, Oak, Spice",
     "Strength_Profile": "Medium",
     "Sizes": [
       {
@@ -1368,16 +1388,17 @@
         "Price": "6.25"
       }
     ],
-    "slug": "arturo-fuente-conquistador"
+    "slug": "arturo-fuente-conquistador",
+    "description": "Handmade in the Dominican Republic, the Arturo Fuente Especiales line offers a medium-bodied profile with notes of cedar, oak, and subtle spice. Wrapped in an Ecuadorian Habano leaf over Dominican binder and filler, these cigars provide a consistent and approachable experience. Available in various sizes, including the Cazadores (6 x 50), Emperador (7 x 52), and Conquistadores (5.5 x 56), the Especiales line delivers quality craftsmanship at an accessible price point."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Cuban Belicoso",
     "Wrapper": "Dominican Sungrown",
     "Binder": "Dominican Republican",
     "Filler": "Dominican Republican",
-    "Flavor_Profile": "Nuts, Cocoa, Sour earth, Leather",
-    "Strength_Profile": "Medium-Full",
+    "Flavor_Profile": "Cedar, Caramel, Earth",
+    "Strength_Profile": "Medium",
     "Sizes": [
       {
         "Size": "Torpedo",
@@ -1386,16 +1407,17 @@
         "Price": "9.50"
       }
     ],
-    "slug": "arturo-fuente-cuban-belicoso"
+    "slug": "arturo-fuente-cuban-belicoso",
+    "description": "Wrapped in an Ecuadorian Sun Grown leaf over Dominican binder and filler, this medium bodied cigar offers notes of cedar, caramel, and a touch of earthiness. The 5¾ x 52 Belicoso format provides a balanced and nuanced experience, allowing the wrapper's character to shine. Consistent construction and a smooth draw make it a reliable choice for those seeking a flavorful yet approachable smoke"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Curly Head Natural",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
-    "Flavor_Profile": "Rich nutty flavors",
-    "Strength_Profile": "Mild-Medium",
+    "Flavor_Profile": "Cedar, Cream, Sweetness",
+    "Strength_Profile": "Mild",
     "Sizes": [
       {
         "Size": "Robusto",
@@ -1404,15 +1426,16 @@
         "Price": "3.90"
       }
     ],
-    "slug": "arturo-fuente-curly-head-natural"
+    "slug": "arturo-fuente-curly-head-natural",
+    "description": "Wrapped in a Cameroon leaf over Dominican binder and filler, this Lonsdale sized cigar offers a mild profile with notes of cedar, cream, and subtle sweetness. Its approachable flavor and affordable price point make it a reliable choice for everyday enjoyment."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Don Carlos",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
-    "Flavor_Profile": "Nuttiness, Earth, Sweetness, Black pepper",
+    "Flavor_Profile": "Cedar, Cocoa, Sweet Spice",
     "Strength_Profile": "Medium",
     "Sizes": [
       {
@@ -1428,16 +1451,17 @@
         "Price": "14.95"
       }
     ],
-    "slug": "arturo-fuente-don-carlos"
+    "slug": "arturo-fuente-don-carlos",
+    "description": "Created by Carlos Fuente Sr. as a personal blend, this cigar represents one of the most respected names in the Fuente family legacy. Featuring a toothy Cameroon wrapper over aged Dominican filler and binder, it offers a medium bodied profile with notes of cedar, cocoa, and sweet spice. The Don Carlos line is a tribute to tradition. Refined, patient, and built with decades of experience behind every leaf."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Don Carlos Eye of the Bull",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Spice, Vanilla, White Pepper, Coffee",
-    "Strength_Profile": "Mild-Medium",
+    "Strength_Profile": "Medium",
     "Sizes": [
       {
         "Size": "Gordito",
@@ -1446,7 +1470,8 @@
         "Price": "13.65"
       }
     ],
-    "slug": "arturo-fuente-don-carlos-eye-of-the-bull"
+    "slug": "arturo-fuente-don-carlos-eye-of-the-bull",
+    "description": "This compact 3½ x 55 cigar delivers a medium to full-bodied profile with notes of Spice, Cedar, White Pepper, and Coffee. The Cameroon wrapper, combined with Dominican binder and filler, offers a rich and balanced experience. A distinctive feature is the dark tobacco circle on the cap, resembling a bull's eye, adding a unique touch to this limited release."
   },
   {
     "Cigar Brand": "Arturo Fuente",
@@ -1467,12 +1492,12 @@
     "slug": "arturo-fuente-don-carlos-eye-of-the-shark"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Don Carlos No.3",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
-    "Flavor_Profile": "Nuttiness, Earth, Sweetness, Black pepper",
+    "Flavor_Profile": "Cedar, Cocoa, Sweet Spice",
     "Strength_Profile": "Medium",
     "Sizes": [
       {
@@ -1482,16 +1507,17 @@
         "Price": "12.25"
       }
     ],
-    "slug": "arturo-fuente-don-carlos-no-3"
+    "slug": "arturo-fuente-don-carlos-no-3",
+    "description": "Created by Carlos Fuente Sr. as a personal blend, this cigar represents one of the most respected names in the Fuente family legacy. Featuring a toothy Cameroon wrapper over aged Dominican filler and binder, it offers a medium bodied profile with notes of cedar, cocoa, and sweet spice. The Don Carlos line is a tribute to tradition. Refined, patient, and built with decades of experience behind every leaf."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Don Carlos Personal Reserve",
     "Wrapper": "Cameroon",
     "Binder": "Undisclosed",
     "Filler": "Undisclosed",
     "Flavor_Profile": "",
-    "Strength_Profile": "",
+    "Strength_Profile": "Medium-Full",
     "Sizes": [
       {
         "Size": "Robusto",
@@ -1500,15 +1526,16 @@
         "Price": "20.10"
       }
     ],
-    "slug": "arturo-fuente-don-carlos-personal-reserve"
+    "slug": "arturo-fuente-don-carlos-personal-reserve",
+    "description": "Created as a tribute to Carlos Fuente Sr., this cigar was originally reserved for his personal use before becoming available in limited quantities. It features the signature Don Carlos blend, a Cameroon wrapper over Dominican tobaccos but with additional age and a deeper, more rounded profile. Medium to full in body, it offers a balanced mix of natural sweetness and gentle spice. A dignified cigar that reflects the legacy of the man it was made for."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Double Chateau Maduro",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Dominican",
     "Filler": "Dominican",
-    "Flavor_Profile": "Velvety and Naturally Sweet",
+    "Flavor_Profile": "Cocoa, Earth, Naturally Sweet",
     "Strength_Profile": "Medium",
     "Sizes": [
       {
@@ -1518,40 +1545,36 @@
         "Price": "9.50"
       }
     ],
-    "slug": "arturo-fuente-double-chateau-maduro"
+    "slug": "arturo-fuente-double-chateau-maduro",
+    "description": "The Maduro version of the Chateau line features a dark Connecticut Broadleaf wrapper over Dominican binder and filler, offering a medium-bodied profile with notes of cocoa, earth, and subtle sweetness. Each size in the line maintains the same steady flavor focus, with just enough variation in shape to suit any smoker’s preference. Familiar, approachable, and true to Fuente’s house style, this line remains a dependable go to for those who enjoy a softer take on Maduro."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Double Chateau Natural",
     "Wrapper": "Connecticut Shade",
     "Binder": "Dominican Republican",
     "Filler": "Dominican Republican",
-    "Flavor_Profile": "Nutty, Smooth, Aromatic cedar",
+    "Flavor_Profile": "Cream, Nutty,  Aromatic cedar",
     "Strength_Profile": "Mild-Medium",
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "843182101338",
-        "In_Stock": false,
-        "Price": "9.50"
-      },
-      {
-        "Size": "Churchill",
-        "Barcode": "843182101338",
         "In_Stock": true,
         "Price": "9.50"
       }
     ],
-    "slug": "arturo-fuente-double-chateau-natural"
+    "slug": "arturo-fuente-double-chateau-natural",
+    "description": "Wrapped in a golden Connecticut Shade leaf over Dominican binder and filler, the Chateau Natural line delivers a mild to medium bodied profile with notes of cream, cedar, and a touch of sweetness. Whether in the Rothschild, Churchill, or larger Double Chateau format, the blend stays consistent, smooth, balanced, and unmistakably Fuente. A reliable choice for those who enjoy a classic Connecticut without sacrificing character."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Double Chateau Sungrown",
     "Wrapper": "Ecuadorian Sungrown",
     "Binder": "Dominican Republican",
     "Filler": "Dominican Republican",
     "Flavor_Profile": "Cedar, Cinnamon, Leather, Hints of tobacco sweetness",
-    "Strength_Profile": "Medium-Full",
+    "Strength_Profile": "Medium",
     "Sizes": [
       {
         "Size": "Toro",
@@ -1560,15 +1583,16 @@
         "Price": "9.10"
       }
     ],
-    "slug": "arturo-fuente-double-chateau-sungrown"
+    "slug": "arturo-fuente-double-chateau-sungrown",
+    "description": "Using an Ecuadorian Sun Grown wrapper over Dominican binder and filler, the Chateau Sun Grown line offers a medium bodied profile with notes of cedar, spice, and a warm natural sweetness. The slightly darker wrapper adds depth without overwhelming the blend’s core character. Across all sizes, it remains a balanced and flavorful option for those who want a bit more body from the Chateau series without stepping into full strength."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Emperador",
-    "Wrapper": "Dominican Republic",
+    "Wrapper": "Ecuadorian  Habano",
     "Binder": "Dominican Republican",
     "Filler": "Dominican Republican",
-    "Flavor_Profile": "Oak, Cedar, Spice, Sweet finish",
+    "Flavor_Profile": "Oak, Cedar, Spice",
     "Strength_Profile": "Medium",
     "Sizes": [
       {
@@ -1578,7 +1602,8 @@
         "Price": "6.00"
       }
     ],
-    "slug": "arturo-fuente-emperador"
+    "slug": "arturo-fuente-emperador",
+    "description": "Handmade in the Dominican Republic, the Arturo Fuente Especiales line offers a medium-bodied profile with notes of cedar, oak, and subtle spice. Wrapped in an Ecuadorian Habano leaf over Dominican binder and filler, these cigars provide a consistent and approachable experience. Available in various sizes, including the Cazadores (6 x 50), Emperador (7 x 52), and Conquistadores (5.5 x 56), the Especiales line delivers quality craftsmanship at an accessible price point."
   },
   {
     "Cigar Brand": "Arturo Fuente.",
@@ -1596,10 +1621,11 @@
         "Price": "13.75"
       }
     ],
-    "slug": "arturo-fuente-eye-of-the-bull"
+    "slug": "arturo-fuente-eye-of-the-bull",
+    "hidden": true
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Fuente Curly Head Deluxe natural",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
@@ -1617,13 +1643,13 @@
     "slug": "arturo-fuente-fuente-curly-head-deluxe-natural"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Fuente Curly Head Maduro Deluxe",
     "Wrapper": "Connecticut Broadleaf Maduro",
     "Binder": "Dominican",
     "Filler": "Dominican",
-    "Flavor_Profile": "Nutty core, Subtle spice",
-    "Strength_Profile": "Mild-Medium",
+    "Flavor_Profile": "Cocoa, Earth, Subtle spice",
+    "Strength_Profile": "Medium",
     "Sizes": [
       {
         "Size": "Corona",
@@ -1632,10 +1658,11 @@
         "Price": "4.30"
       }
     ],
-    "slug": "arturo-fuente-fuente-curly-head-maduro-deluxe"
+    "slug": "arturo-fuente-fuente-curly-head-maduro-deluxe",
+    "description": "Wrapped in a dark Connecticut Broadleaf over Dominican binder and filler, this cigar offers a medium bodied profile with notes of cocoa, earth, and subtle sweetness. Its approachable flavor and affordable price point make it a reliable choice for everyday enjoyment."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Fuente King B Sungrown",
     "Wrapper": "Ecuadorian Sungrown",
     "Binder": "Dominican",
@@ -1650,7 +1677,8 @@
         "Price": "12.00"
       }
     ],
-    "slug": "arturo-fuente-fuente-king-b-sungrown"
+    "slug": "arturo-fuente-fuente-king-b-sungrown",
+    "description": "Using an Ecuadorian Sun Grown wrapper over Dominican binder and filler, the Chateau Sun Grown line offers a medium bodied profile with notes of cedar, spice, and a warm natural sweetness. The slightly darker wrapper adds depth without overwhelming the blend’s core character. Across all sizes, it remains a balanced and flavorful option for those who want a bit more body from the Chateau series without stepping into full strength.\n"
   },
   {
     "Cigar Brand": "Arturo Fuente.",
@@ -2121,22 +2149,23 @@
     "slug": "arturo-fuente-untold-story-maduro"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
+    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Exquisitos",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
-    "Flavor_Profile": "Sweet, nutty , smooth",
-    "Strength_Profile": "Mild",
+    "Flavor_Profile": "Sweet, Cedar, Cream",
+    "Strength_Profile": "Mild-Medium",
     "Sizes": [
       {
-        "Size": "Panatella",
+        "Size": "Petite Corona",
         "Barcode": "843182101499",
         "In_Stock": true,
         "Price": "3.25"
       }
     ],
-    "slug": "arturo-fuente-exquisitos"
+    "slug": "arturo-fuente-exquisitos",
+    "description": "This cigar features a Cameroon wrapper over Dominican binder and filler, offering a mild to medium bodied profile with notes of cedar, cream, and subtle sweetness. Its compact size makes it an ideal choice for those seeking a brief yet flavorful smoking experience. Consistent construction and a smooth draw make it a reliable option for everyday enjoyment."
   },
   {
     "Cigar Brand": "Ashton",
@@ -4487,7 +4516,8 @@
         "Price": "12.30"
       }
     ],
-    "slug": "esteban-carrera-10-anos"
+    "slug": "esteban-carrera-10-anos",
+    "description": "Built to celebrate a decade in the game, the 10 Años is everything Esteban Carreras does well. Bold, smooth, and no wasted motion. It’s wrapped in a dark Mexican San Andrés leaf over Nicaraguan binder and filler, delivering a medium to full-bodied profile that leans hard into coffee and cocoa. Think rich, steady flavor without the usual flash. No fancy box needed, just a cigar that proves ten years wasn’t wasted."
   },
   {
     "Cigar Brand": "FLVR",
@@ -8502,7 +8532,7 @@
         "Size": "Corona",
         "Barcode": "846261014130",
         "In_Stock": true,
-        "Price": "9.00"
+        "Price": "9.50"
       }
     ],
     "slug": "rocky-patel-java-red"
@@ -9024,7 +9054,8 @@
     "slug": "la-gloria-cubana-los-gloriosos",
     "Date Added": "2025-04-17",
     "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/4hpaTCg5zkoH74tJGtgp49?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
-    "featured_StickFigures": "2025-05-02"
+    "featured_StickFigures": "2025-05-02",
+    "description": "This cigar is more than just a solid smoke, it marks the return of Ernesto Pérez-Carrillo to the brand he helped build. Los Gloriosos brings his signature touch back into the fold with an Ecuadorian Habano wrapper and a Nicaraguan/ Dominican blend underneath. Medium to full-bodied with a steady mix of earth, espresso, and a little pepper, it’s balanced and bold.  A welcome return, and one that earns its place in any humidor."
   },
   {
     "Cigar Brand": "El Rey Del Mundo",
