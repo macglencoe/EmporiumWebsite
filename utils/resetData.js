@@ -23,8 +23,7 @@ export const resetData = async ({ commitSha, commitMessage, force }) => {
         }
     } catch (error) {
         console.error("Error fetching data commits:", error);
-        alert("Error fetching data commits. See console for details.");
-        return;
+        return "Error fetching data commits. See console for details.";
     }
 
     const recentDataCommitSha = dataCommits[0].sha;
@@ -33,7 +32,7 @@ export const resetData = async ({ commitSha, commitMessage, force }) => {
 
 
 
-    alert("New data available. Resetting now.");
+    //alert("New data available. Resetting now.");
 
     try {
         const response = await fetch(
@@ -48,11 +47,12 @@ export const resetData = async ({ commitSha, commitMessage, force }) => {
         localStorage.setItem('tempData_cigars', JSON.stringify(data));
         localStorage.setItem('tempData_sha', recentDataCommitSha);
         localStorage.setItem('tempData_message', dataCommits[0].commit.message);
+
+        return "Data Version: " + dataCommits[0].commit.message;
     }
     catch (error) {
         console.error('Error fetching data:', error);
-        alert('Error fetching data. See console for details.');
-        return;
+        return "Error fetching data. See console for details.";
     }
 }
 
