@@ -16,6 +16,8 @@ export const DataUpdate = ({serverCommitSha, serverCommitMessage}) => {
 
     const handleUpdate = async () => {
         await resetData({commitSha: serverCommitSha, commitMessage: serverCommitMessage});
+        const newSha = localStorage.getItem('tempData_sha');
+        setLocalCommitSha(newSha);
     }
 
 
@@ -45,7 +47,7 @@ export const DataUpdate = ({serverCommitSha, serverCommitMessage}) => {
         
         if (localCommitSha === recentDataCommitSha) return;
 
-        if (serverCommitSha === recentDataCommitSha) handleUpdate();
+        handleUpdate();
 
     }, [serverCommitSha, recentDataCommitSha]);
 
