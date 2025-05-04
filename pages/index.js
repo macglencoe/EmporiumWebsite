@@ -31,6 +31,7 @@ const Catalog = ({ commitSha }) => {
   const [updateBranch, setUpdateBranch] = useState("main");
 
   const [localData, setLocalData] = useState([]);
+  const [originData, setOriginData] = useState({});
 
 
 
@@ -50,6 +51,11 @@ const Catalog = ({ commitSha }) => {
         localStorage.setItem('tempData_cigars', JSON.stringify(Data));
       }
       setLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
+
+      if (!localStorage.getItem('tempData_origin')) {
+        localStorage.setItem('tempData_origin', JSON.stringify(Data));
+      }
+      setOriginData(JSON.parse(localStorage.getItem('tempData_origin')));
     }
   }, []);
 

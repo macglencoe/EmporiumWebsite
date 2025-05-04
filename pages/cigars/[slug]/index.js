@@ -51,6 +51,7 @@ const CigarPage = (props) => {
   }
 
   const [cigarLocalData, setCigarLocalData] = useState(cigar);
+  const [cigarOriginData, setCigarOriginData] = useState(cigar);
 
   const revertToOriginal = () => {
     setCigarLocalData(cigar);
@@ -61,12 +62,18 @@ const CigarPage = (props) => {
     const firstCigarWithSameSlug = tempData.find((cigar) => cigar.slug === cigarLocalData.slug);
     setCigarLocalData(firstCigarWithSameSlug);
   }
+  const pullOriginData = () => {
+    const tempData = JSON.parse(localStorage.getItem('originData_cigars'));
+    const firstCigarWithSameSlug = tempData.find((cigar) => cigar.slug === cigarLocalData.slug);
+    return firstCigarWithSameSlug;
+  }
 
   useEffect(() => {
 
     setLocalData(props.allCigars);
     if (typeof window !== 'undefined') {
       pullTempData();
+      pullOriginData();
     }
 
   }, []);
@@ -75,7 +82,7 @@ const CigarPage = (props) => {
   return (
     <>
       <Head>
-        <title>{cigar['Cigar Brand']} {cigar['Cigar Name']}</title>
+        <title>{cigarOriginData['Cigar Brand']} {cigarOriginData['Cigar Name']}</title>
       </Head>
       <Layout>
         <Toolbar
@@ -107,14 +114,14 @@ const CigarPage = (props) => {
           <ProductSideContent>
             <ProductImage
               src={cigarLocalData.image}
-              fallbackSearch={encodeURIComponent(cigar['Cigar Brand'] + ' ' + cigar['Cigar Name'])}
+              fallbackSearch={encodeURIComponent(cigarOriginData['Cigar Brand'] + ' ' + cigarOriginData['Cigar Name'])}
             />
             <ProductSizeChart
               sizes={cigarLocalData.Sizes}
               allCigarSizes={cigarSizes}
             />
-            {cigar['Flavor_Profile'] && <StringBubbleList title="Flavor"
-              data={cigar['Flavor_Profile'].split(', ')}
+            {cigarOriginData['Flavor_Profile'] && <StringBubbleList title="Flavor"
+              data={cigarOriginData['Flavor_Profile'].split(', ')}
             >
 
             </StringBubbleList>
@@ -123,11 +130,11 @@ const CigarPage = (props) => {
           <ProductMainContent>
             <ProductInfoFields
               fields={[
-                { name: "Brand", value: cigarLocalData['Cigar Brand'], markout: props.cigar['Cigar Brand'] },
-                { name: "Wrapper", value: cigarLocalData['Wrapper'], markout: props.cigar['Wrapper'] },
-                { name: "Binder", value: cigarLocalData['Binder'], markout: props.cigar['Binder'] },
-                { name: "Filler", value: cigarLocalData['Filler'], markout: props.cigar['Filler'] },
-                { name: "Strength", value: cigarLocalData['Strength_Profile'], markout: props.cigar['Strength_Profile'] },
+                { name: "Brand", value: cigarLocalData['Cigar Brand'], markout: cigarOriginData['Cigar Brand'] },
+                { name: "Wrapper", value: cigarLocalData['Wrapper'], markout: cigarOriginData['Wrapper'] },
+                { name: "Binder", value: cigarLocalData['Binder'], markout: cigarOriginData['Binder'] },
+                { name: "Filler", value: cigarLocalData['Filler'], markout: cigarOriginData['Filler'] },
+                { name: "Strength", value: cigarLocalData['Strength_Profile'], markout: cigarOriginData['Strength_Profile'] },
               ]}
             />
             <InteractionPanel

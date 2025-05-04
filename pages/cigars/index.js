@@ -30,21 +30,21 @@ const CigarCatalog = (props) => {
 
   //CMS
 
-  const revertTempData = () => {
-    localStorage.setItem('tempData_cigars', JSON.stringify(props.data));
-  }
 
   const [tempData, setTempData] = useState(props.data);
+  const [originData, setOriginData] = useState(props.data);
 
   const pullTempData = () => {
     setTempData(JSON.parse(localStorage.getItem('tempData_cigars')));
   }
 
   useEffect(() => {
-    setLocalData(props.data);
     // pull from localstorage on page load
     if (window !== 'undefined') {
       pullTempData();
+      if (localStorage.getItem('originData_cigars')) {
+        setOriginData(JSON.parse(localStorage.getItem('originData_cigars')));
+      }
     }
   }, []);
 

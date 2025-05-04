@@ -33,6 +33,7 @@ const EditCigarPage = (props) => {
     }
 
     const [cigarLocalData, setCigarLocalData] = useState(props.cigar);
+    const [cigarOriginData, setCigarOriginData] = useState(props.cigar);
     const [allCigarsLocalData, setAllCigarsLocalData] = useState(props.allCigars);
 
     /* const cigarFields = {
@@ -62,6 +63,7 @@ const EditCigarPage = (props) => {
         // ----------------------------- //
         if (typeof window !== 'undefined') {
             pullTempData();
+            pullOriginData();
             setAllCigarsLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
         }
     }, []);
@@ -75,6 +77,12 @@ const EditCigarPage = (props) => {
         const tempData = JSON.parse(localStorage.getItem('tempData_cigars'));
         const firstCigarWithSameSlug = tempData.find((cigar) => props.cigar.slug === cigar.slug);
         setCigarLocalData(firstCigarWithSameSlug);
+        return firstCigarWithSameSlug;
+    }
+
+    const pullOriginData = () => {
+        const tempData = JSON.parse(localStorage.getItem('originData_cigars'));
+        const firstCigarWithSameSlug = tempData.find((cigar) => props.cigar.slug === cigar.slug);
         return firstCigarWithSameSlug;
     }
 
@@ -188,12 +196,12 @@ const EditCigarPage = (props) => {
                     pullTempData={pullTempData}
                     pullAllTempData={pullAllTempData}
                     dataFields={cigarFields}
-                    dataOriginal={props.cigar}
+                    dataOriginal={cigarOriginData}
                     onMetadataChange={(e) => {
                         setCigarLocalData({ ...cigarLocalData, [e.target.name]: e.target.value })
                     }}
                     onMetadataRevert={(e) => {
-                        setCigarLocalData({ ...cigarLocalData, [e.target.name]: props.cigar[e.target.name] })
+                        setCigarLocalData({ ...cigarLocalData, [e.target.name]: cigarOriginData[e.target.name] })
                     }}
                     arrayFields={{
                         "Sizes": sizeFields

@@ -40,6 +40,7 @@ export const SubmitPage = (props) => {
     }
 
     const [localData, setLocalData] = useState(props.data);
+    const [originData, setOriginData] = useState(props.data);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -47,6 +48,10 @@ export const SubmitPage = (props) => {
                 localStorage.setItem('tempData_cigars', JSON.stringify(props.data));
             }
             setLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
+            if (!localStorage.getItem('originData_cigars')) {
+                localStorage.setItem('originData_cigars', JSON.stringify(props.data));
+            }
+            setOriginData(JSON.parse(localStorage.getItem('originData_cigars')));
             // fetch all commits
             fetch(`/api/getCommits?branch=cms`).then(response => response.json()).then(data => setAllCommits(data));
             // fetch only commits touching cigar data file
@@ -66,6 +71,10 @@ export const SubmitPage = (props) => {
             fetch(`/api/getCommits?branch=cms`).then(response => response.json()).then(data => setAllCommits(data));
             // fetch only commits touching cigar data file
             fetch(`/api/getCommits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}&branch=cms`).then(response => response.json()).then(data => setDataCommits(data));
+
+            // get current commit
+            setCurrentCommitSha(localStorage.getItem('tempData_sha') ?? 'No Sha Found');
+            setCurrentCommitMessage(localStorage.getItem('tempData_message') ?? 'No Message Found');
         }, 5000);
         return () => clearInterval(interval);
     }, []);
@@ -160,7 +169,7 @@ export const SubmitPage = (props) => {
     const getDiff = () => {
         const tempDiff = [];
         localData.map((cigar, index) => {
-            const originalCigar = props.data.find((originalCigar) => originalCigar.slug === cigar.slug)
+            const originalCigar = originData.find((originalCigar) => originalCigar.slug === cigar.slug)
                 ?? ""; // if the cigar doesn't exist in the original data, return an empty string
             const newCigar = { ...cigar };
 
@@ -174,7 +183,7 @@ export const SubmitPage = (props) => {
 
         })
         // Get deleted cigars
-        props.data.map((originalCigar) => {
+        originData.map((originalCigar) => {
             if (!localData.find((cigar) => cigar.slug === originalCigar.slug)) {
                 tempDiff.push([...diffJson(originalCigar, "")]);
             }
@@ -185,53 +194,9 @@ export const SubmitPage = (props) => {
     return (
         <>
             <Layout>
-                <PageTitle1 buttons={[
-                    {
-                        label: "Revert Changes",
-                        icon: <path xmlns="http://www.w3.org/2000/svg" d="M212-239q-43-48-67.5-110T120-480q0-150 105-255t255-105v-80l200 150-200 150v-80q-91 0-155.5 64.5T260-480q0 46 17.5 86t47.5 70l-113 85ZM480-40 280-190l200-150v80q91 0 155.5-64.5T700-480q0-46-17.5-86T635-636l113-85q43 48 67.5 110T840-480q0 150-105 255T480-120v80Z" />,
-                        href: "/data-reset"
-                    }
-                ]}>Manage Changes</PageTitle1>
+                <PageTitle1>Manage Changes</PageTitle1>
 
-                <table className='commit'>
-                    <thead>
-                        <tr>
-                            <th>Most Recent Data Commit</th>
-                            <th className='equivalence'></th>
-                            <th>Most Recent of All Commits</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            {dataCommits.length > 0 &&
-                                <td>
-                                    <p>{dataCommits[0].commit.message ?? "No commit message found"}</p>
-                                    <p className='date'>{dataCommits[0].commit.author.date ?? "No date found"}</p>
-                                    <p><b>{recentDataCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
-                                </td>
-                            }
-                            {dataCommits.length === 0 && <td><p>Loading ...</p></td>}
-                            <td className='equivalence'>
-                                <div>
-                                    {recentDataCommitSha === recentAllCommitSha &&
-                                        <p>=</p>
-                                    }
-                                    {recentDataCommitSha !== recentAllCommitSha &&
-                                        <p>&lt;</p>
-                                    }
-                                </div>
-                            </td>
-                            {allCommits.length > 0 &&
-                                <td>
-                                    <p>{allCommits[0].commit.message ?? "No commit message found"}</p>
-                                    <p className='date'>{allCommits[0].commit.author.date ?? "No date found"}</p>
-                                    <p><b>{recentAllCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
-                                </td>
-                            }
-
-                        </tr>
-                    </tbody>
-                </table>
+                
 
                 <table className='commit'>
                     <thead>
@@ -301,9 +266,7 @@ export const SubmitPage = (props) => {
                                     currentCommitSha !== recentAllCommitSha &&
                                     currentCommitSha !== "Unknown" &&
                                     <>
-                                        <p>This most likely means a build is currently in progress, or there was an error with the build</p>
-                                        <p>Go to the <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>Vercel Dashboard</a> to check the build status</p>
-                                        <p>In the meantime, <b>you won't be able to submit changes</b></p>
+                                        <p>This most likely means your changes are still being fetched. Wait a few seconds, and if you still see this message, please <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>check the build status</a>.</p>
                                     </>
                                 }
                                 { // Local commit is up to date
@@ -342,7 +305,7 @@ export const SubmitPage = (props) => {
                     </tfoot>
                 </table>
                 <div className='submit-container'>
-                    <b>Please inspect your changes carefully.</b>
+                    <p><b>Please inspect your changes carefully.</b></p>
                     {diff.length === 0 &&
                         <div className='diff-container'>
                             <div className='diff-split'>
@@ -458,6 +421,8 @@ export const SubmitPage = (props) => {
                                                 <div className='vercel-deployments'>
                                                     <b>Go to the Vercel Dashboard to see the deployment status: </b>
                                                     <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>Vercel Deployments</a>
+                                                    <p><b>Public Site:</b> Changes will be visible in 1-2 minutes</p>
+                                                    <p><b>Admin Site:</b> Changes should be visible instantly, after the next page is loaded</p>
                                                 </div>
                                             }
                                             <details>

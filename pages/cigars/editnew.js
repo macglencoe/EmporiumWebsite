@@ -41,6 +41,9 @@ const EditNewCigarPage = (props) => {
     useEffect(() => {
         if (typeof window !== 'undefined') {
             pullTempData();
+            if (localStorage.getItem('originData_cigars')) {
+                setAllCigarData(JSON.parse(localStorage.getItem('originData_cigars')));
+            }
         }
 
     }, [router.query.slug]);
@@ -57,7 +60,7 @@ const EditNewCigarPage = (props) => {
 
             // if slug matches a cigar in original data, do not set cigarLocalData
             // this is because the user is editing a new cigar, not an existing one
-            if (!props.data.find((cigar) => cigar.slug === slug)) {
+            if (!allCigarData.find((cigar) => cigar.slug === slug)) {
                 setCigarLocalData(firstCigarWithSameSlug);
                 return firstCigarWithSameSlug;
             }
