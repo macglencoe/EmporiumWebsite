@@ -45,7 +45,7 @@ const Layout = (props) => {
             <div className='layout-title-container'>
               <Link href="/" aria-label='Go to homepage'>
                 <a>
-                  <h1 className="catalog-text109">The King Street Emporium</h1>
+                  <h1 className="catalog-text109">The King Street Emporium</h1><span>Content Management System</span>
                 </a>
               </Link>
               <Fragment>
@@ -133,7 +133,7 @@ const Layout = (props) => {
           left: 50%;
           height: 30px;
           transition: transform 0.3s;
-          transform: translateY(-1000%);
+          transform: translateY(-1100%);
         }
         .sr-skip div {
           color: black;
@@ -188,6 +188,14 @@ const Layout = (props) => {
           align-self: center;
           text-align: center;
         }
+        .layout-title-container span {
+          color: var(--dl-color-theme-primary2);
+          align-self: center;
+          text-align: center;
+          font-variant: small-caps;
+          font-family: Inter;
+        }
+        
         
         
   .sidebar {

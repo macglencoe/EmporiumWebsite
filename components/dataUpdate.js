@@ -81,6 +81,9 @@ export const DataUpdate = ({ serverCommitSha, serverCommitMessage }) => {
                     <svg className={loadingReset ? 'loading' : ''} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M162-140v-95h77l-3-4q-53-52-77-114t-24-125q0-127 82-223t208-120v130q-73 17-118.5 77.5T261-478q0 39 15.5 77t47.5 72l2 2v-73h95v260H162Zm373 1v-130q73-17 118.5-77.5T699-482q0-39-15.5-77T636-631l-2-2v73h-95v-260h259v95h-77l3 4q52 53 76.5 114.5T825-482q0 127-82 223T535-139Z" /></svg>
                 </button>
                 {resetMessage && <p>{resetMessage}</p>}
+                <p style={{
+                    textAlign: 'right'
+                }}>EXPERIMENTAL BUILD - Please report issues to developer</p>
 
             </div>
             <style jsx>
@@ -92,6 +95,9 @@ export const DataUpdate = ({ serverCommitSha, serverCommitMessage }) => {
                 gap: 1em;
                 align-items: center;
                 padding: 0.5em;
+            }
+            .infobar p {
+                width: 100%;
             }
             .infobar svg {
                 width: 1.5em;
