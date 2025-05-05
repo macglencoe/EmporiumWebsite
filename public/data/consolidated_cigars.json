@@ -9489,5 +9489,19 @@
     ],
     "slug": "cao-brazilia-go",
     "Date Added": "2025-05-01"
+  },
+  {
+    "Cigar Brand": "Cigar brand",
+    "Cigar Name": "Cigar name",
+    "Wrapper": "",
+    "Binder": "",
+    "Filler": "",
+    "Flavor_Profile": "",
+    "Strength_Profile": "",
+    "Sizes": [
+      {}
+    ],
+    "slug": "cigar-brand-cigar-name",
+    "Date Added": "2025-05-05"
   }
 ]
