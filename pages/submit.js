@@ -192,45 +192,7 @@ export const SubmitPage = (props) => {
             <Layout>
                 <PageTitle1>Manage Changes</PageTitle1>
 
-                <table className='commit'>
-                    <thead>
-                        <tr>
-                            <th>Most Recent Data Commit</th>
-                            <th className='equivalence'></th>
-                            <th>Most Recent of All Commits</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            {dataCommits.length > 0 &&
-                                <td>
-                                    <p>{dataCommits[0].commit.message ?? "No commit message found"}</p>
-                                    <p className='date'>{dataCommits[0].commit.author.date ?? "No date found"}</p>
-                                    <p><b>{recentDataCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
-                                </td>
-                            }
-                            {dataCommits.length === 0 && <td><p>Loading ...</p></td>}
-                            <td className='equivalence'>
-                                <div>
-                                    {recentDataCommitSha === recentAllCommitSha &&
-                                        <p>=</p>
-                                    }
-                                    {recentDataCommitSha !== recentAllCommitSha &&
-                                        <p>&lt;</p>
-                                    }
-                                </div>
-                            </td>
-                            {allCommits.length > 0 &&
-                                <td>
-                                    <p>{allCommits[0].commit.message ?? "No commit message found"}</p>
-                                    <p className='date'>{allCommits[0].commit.author.date ?? "No date found"}</p>
-                                    <p><b>{recentAllCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
-                                </td>
-                            }
-
-                        </tr>
-                    </tbody>
-                </table>
+                
 
                 <table className='commit'>
                     <thead>

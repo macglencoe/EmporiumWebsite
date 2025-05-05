@@ -6,21 +6,22 @@ import { useEffect, useState } from "react"
 import resetData from "../utils/resetData"
 
 
-export const DataUpdate = ({ serverCommitSha, serverCommitMessage }) => {
+export const DataUpdate = () => {
     // only commits touching cigar data file
     const [dataCommits, setDataCommits] = useState([]);
     const [recentDataCommitSha, setRecentDataCommitSha] = useState('');
     // local commit
     const [localCommitSha, setLocalCommitSha] = useState('');
-
+    
     // -- UI -- //
     const [loadingReset, setLoadingReset] = useState(false);
-    const [resetMessage, setResetMessage] = useState('');
+    const [localCommitMessage, setLocalCommitMessage] = useState('');
+    const [resetMessage, setResetMessage] = useState(localCommitMessage);
 
 
     const handleUpdate = async () => {
         setLoadingReset(true);
-        const response = await resetData({ commitSha: serverCommitSha, commitMessage: serverCommitMessage });
+        const response = await resetData();
         setResetMessage(response);
         const newSha = localStorage.getItem('tempData_sha');
         setLocalCommitSha(newSha);
@@ -28,6 +29,11 @@ export const DataUpdate = ({ serverCommitSha, serverCommitMessage }) => {
             setLoadingReset(false);
         }, 1000);
     }
+
+    useEffect(() => {
+        if (!localCommitMessage) return;
+        setResetMessage("Data Version: " + localCommitMessage);
+    }, [localCommitMessage]);
 
 
 
@@ -41,6 +47,8 @@ export const DataUpdate = ({ serverCommitSha, serverCommitMessage }) => {
         // fetch local commit sha
         if (!localStorage.getItem('tempData_sha')) return;
         setLocalCommitSha(localStorage.getItem('tempData_sha'));
+        if (!localStorage.getItem('tempData_message')) return;
+        setLocalCommitMessage(localStorage.getItem('tempData_message'));
     }, []);
 
     useEffect(() => {
@@ -52,13 +60,13 @@ export const DataUpdate = ({ serverCommitSha, serverCommitMessage }) => {
     }, [dataCommits]);
 
     useEffect(() => {
-        if (!serverCommitSha || !recentDataCommitSha) return;
+        if (!recentDataCommitSha) return;
 
         if (localCommitSha === recentDataCommitSha) return;
 
         handleUpdate();
 
-    }, [serverCommitSha, recentDataCommitSha]);
+    }, [recentDataCommitSha]);
 
     return (
         <>
@@ -68,36 +76,34 @@ export const DataUpdate = ({ serverCommitSha, serverCommitMessage }) => {
                     onClick={(e) => {
                         if (resetMessage === 'Click again to confirm') {
                             handleUpdate();
-                            setResetMessage('');
                         } else {
                             setResetMessage('Click again to confirm');
                         }
                     }}
                     onBlur={(e) => {
-                        setResetMessage('');
+                        setResetMessage(" Data Version: " + localCommitMessage);
                         e.currentTarget.style.backgroundColor = '';
                     }}
-                >
+                    >
                     <svg className={loadingReset ? 'loading' : ''} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M162-140v-95h77l-3-4q-53-52-77-114t-24-125q0-127 82-223t208-120v130q-73 17-118.5 77.5T261-478q0 39 15.5 77t47.5 72l2 2v-73h95v260H162Zm373 1v-130q73-17 118.5-77.5T699-482q0-39-15.5-77T636-631l-2-2v73h-95v-260h259v95h-77l3 4q52 53 76.5 114.5T825-482q0 127-82 223T535-139Z" /></svg>
                 </button>
-                {resetMessage && <p>{resetMessage}</p>}
-                <p style={{
-                    textAlign: 'right'
-                }}>EXPERIMENTAL BUILD - Please report issues to developer</p>
+                    {resetMessage && <p>{resetMessage}</p>}
 
             </div>
             <style jsx>
                 {`
             .infobar {
-                background-color: var(--dl-color-theme-secondary1);
-                color: var(--dl-color-theme-primary1);
+                background-color: var(--dl-color-theme-primary1);
+                color: var(--dl-color-theme-secondary2);
                 display: flex;
                 gap: 1em;
                 align-items: center;
                 padding: 0.5em;
+                border-bottom: 9px double var(--dl-color-theme-secondary2);
             }
             .infobar p {
                 width: 100%;
+                font-weight: 500;
             }
             .infobar svg {
                 width: 1.5em;
@@ -110,12 +116,16 @@ export const DataUpdate = ({ serverCommitSha, serverCommitMessage }) => {
             }
             .infobar button.confirming svg {
                 fill: var(--negative);
+                scale: 1.2;
             }
             .infobar button svg {
-                fill: var(--dl-color-theme-primary1);
+                fill: var(--dl-color-theme-secondary2);
+                transition: scale 0.3s ease;
+
             }
-            .loading {
-                animation: spin 2s linear infinite;
+            .infobar button svg.loading {
+                animation: spin 1.5s linear infinite;
+                scale: 0.8;
             }
             @keyframes spin {
                 from {
