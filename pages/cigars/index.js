@@ -30,21 +30,21 @@ const CigarCatalog = (props) => {
 
   //CMS
 
-  const revertTempData = () => {
-    localStorage.setItem('tempData_cigars', JSON.stringify(props.data));
-  }
 
   const [tempData, setTempData] = useState(props.data);
+  const [originData, setOriginData] = useState(props.data);
 
   const pullTempData = () => {
     setTempData(JSON.parse(localStorage.getItem('tempData_cigars')));
   }
 
   useEffect(() => {
-    setLocalData(props.data);
     // pull from localstorage on page load
     if (window !== 'undefined') {
       pullTempData();
+      if (localStorage.getItem('originData_cigars')) {
+        setOriginData(JSON.parse(localStorage.getItem('originData_cigars')));
+      }
     }
   }, []);
 
@@ -172,7 +172,7 @@ const CigarCatalog = (props) => {
           href: (item) => {
             // Redirect to the "edit new" page for cigars added in this session.
             // This identifies cigars by query parameters because static paths are generated only during the build process.
-            if (!props.data.some(dataItem => dataItem.slug === item.slug)) {
+            if (!originData.some(dataItem => dataItem.slug === item.slug)) {
               return ('/cigars/editnew?slug=' + item.slug)
             }
             return ('/cigars/' + item.slug)

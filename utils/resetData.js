@@ -48,6 +48,10 @@ export const resetData = async ({ commitSha, commitMessage, force }) => {
         localStorage.setItem('tempData_sha', recentDataCommitSha);
         localStorage.setItem('tempData_message', dataCommits[0].commit.message);
 
+        localStorage.setItem('originData_cigars', JSON.stringify(data));
+        localStorage.setItem('originData_sha', recentDataCommitSha);
+        localStorage.setItem('originData_message', dataCommits[0].commit.message);
+
         return "Data Version: " + dataCommits[0].commit.message;
     }
     catch (error) {

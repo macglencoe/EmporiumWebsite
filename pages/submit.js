@@ -40,6 +40,7 @@ export const SubmitPage = (props) => {
     }
 
     const [localData, setLocalData] = useState(props.data);
+    const [originData, setOriginData] = useState(props.data);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -47,6 +48,10 @@ export const SubmitPage = (props) => {
                 localStorage.setItem('tempData_cigars', JSON.stringify(props.data));
             }
             setLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
+            if (!localStorage.getItem('originData_cigars')) {
+                localStorage.setItem('originData_cigars', JSON.stringify(props.data));
+            }
+            setOriginData(JSON.parse(localStorage.getItem('originData_cigars')));
             // fetch all commits
             fetch(`/api/getCommits?branch=cms`).then(response => response.json()).then(data => setAllCommits(data));
             // fetch only commits touching cigar data file
@@ -160,7 +165,7 @@ export const SubmitPage = (props) => {
     const getDiff = () => {
         const tempDiff = [];
         localData.map((cigar, index) => {
-            const originalCigar = props.data.find((originalCigar) => originalCigar.slug === cigar.slug)
+            const originalCigar = originData.find((originalCigar) => originalCigar.slug === cigar.slug)
                 ?? ""; // if the cigar doesn't exist in the original data, return an empty string
             const newCigar = { ...cigar };
 
@@ -174,7 +179,7 @@ export const SubmitPage = (props) => {
 
         })
         // Get deleted cigars
-        props.data.map((originalCigar) => {
+        originData.map((originalCigar) => {
             if (!localData.find((cigar) => cigar.slug === originalCigar.slug)) {
                 tempDiff.push([...diffJson(originalCigar, "")]);
             }
