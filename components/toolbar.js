@@ -5,7 +5,7 @@ export const Toolbar = (props) => {
     const router = useRouter();
     return (
         <>
-        <nav style={props.style} className={props.type == "header" ? "header" : ""}>
+        <nav style={props.style} className={props.type}>
             <ul>
                 {props.links.map((link) => (
                     <li 
@@ -45,6 +45,32 @@ nav.header {
     transition: all 0.3s ease;
 }
 .header li.active svg {
+    fill: var(--dl-color-theme-primary2);
+    scale: 1.2;
+}
+
+nav.sidebar {
+    width: 100%;
+}
+nav.sidebar ul {
+    flex-direction: column;
+    justify-content: stretch;
+}
+nav.sidebar ul li {
+    background-color: transparent;
+}
+nav.sidebar ul li a {
+    width: 100%;
+}
+nav.sidebar li.active {
+    border: solid var(--dl-color-theme-primary2);
+    border-width: 0px 3px 0px 0px;
+    background-image: linear-gradient(to left, var(--dl-color-theme-primary1) -300%, transparent 80%);
+}
+nav.sidebar li.active a {
+    color: var(--dl-color-theme-primary2);
+}
+nav.sidebar li.active svg {
     fill: var(--dl-color-theme-primary2);
     scale: 1.2;
 }
