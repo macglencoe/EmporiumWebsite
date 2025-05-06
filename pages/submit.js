@@ -71,6 +71,10 @@ export const SubmitPage = (props) => {
             fetch(`/api/getCommits?branch=cms`).then(response => response.json()).then(data => setAllCommits(data));
             // fetch only commits touching cigar data file
             fetch(`/api/getCommits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}&branch=cms`).then(response => response.json()).then(data => setDataCommits(data));
+
+            // get current commit
+            setCurrentCommitSha(localStorage.getItem('tempData_sha') ?? 'No Sha Found');
+            setCurrentCommitMessage(localStorage.getItem('tempData_message') ?? 'No Message Found');
         }, 5000);
         return () => clearInterval(interval);
     }, []);
@@ -262,9 +266,7 @@ export const SubmitPage = (props) => {
                                     currentCommitSha !== recentAllCommitSha &&
                                     currentCommitSha !== "Unknown" &&
                                     <>
-                                        <p>This most likely means a build is currently in progress, or there was an error with the build</p>
-                                        <p>Go to the <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>Vercel Dashboard</a> to check the build status</p>
-                                        <p>In the meantime, <b>you won't be able to submit changes</b></p>
+                                        <p>This most likely means your changes are still being fetched. Wait a few seconds, and if you still see this message, please <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>check the build status</a>.</p>
                                     </>
                                 }
                                 { // Local commit is up to date
@@ -303,7 +305,7 @@ export const SubmitPage = (props) => {
                     </tfoot>
                 </table>
                 <div className='submit-container'>
-                    <b>Please inspect your changes carefully.</b>
+                    <p><b>Please inspect your changes carefully.</b></p>
                     {diff.length === 0 &&
                         <div className='diff-container'>
                             <div className='diff-split'>
@@ -419,6 +421,8 @@ export const SubmitPage = (props) => {
                                                 <div className='vercel-deployments'>
                                                     <b>Go to the Vercel Dashboard to see the deployment status: </b>
                                                     <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>Vercel Deployments</a>
+                                                    <p><b>Public Site:</b> Changes will be visible in 1-2 minutes</p>
+                                                    <p><b>Admin Site:</b> Changes should be visible instantly, after the next page is loaded</p>
                                                 </div>
                                             }
                                             <details>
