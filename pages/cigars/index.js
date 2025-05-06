@@ -172,7 +172,7 @@ const CigarCatalog = (props) => {
           href: (item) => {
             // Redirect to the "edit new" page for cigars added in this session.
             // This identifies cigars by query parameters because static paths are generated only during the build process.
-            if (!originData.some(dataItem => dataItem.slug === item.slug)) {
+            if (!props.data.some(dataItem => dataItem.slug === item.slug)) {
               return ('/cigars/editnew?slug=' + item.slug)
             }
             return ('/cigars/' + item.slug)
