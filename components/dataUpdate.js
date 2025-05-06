@@ -15,6 +15,7 @@ export const DataUpdate = () => {
     
     // -- UI -- //
     const [loadingReset, setLoadingReset] = useState(false);
+    const [updateSuccess, setUpdateSuccess] = useState(false);
     const [localCommitMessage, setLocalCommitMessage] = useState('');
     const [resetMessage, setResetMessage] = useState(localCommitMessage);
 
@@ -27,6 +28,7 @@ export const DataUpdate = () => {
         setLocalCommitSha(newSha);
         setTimeout(() => {
             setLoadingReset(false);
+            setUpdateSuccess(true);
         }, 1000);
     }
 
@@ -60,9 +62,14 @@ export const DataUpdate = () => {
     }, [dataCommits]);
 
     useEffect(() => {
-        if (!recentDataCommitSha) return;
+        if (!recentDataCommitSha) {
+            return;
+        };
 
-        if (localCommitSha === recentDataCommitSha) return;
+        if (localCommitSha === recentDataCommitSha) {
+            setUpdateSuccess(true)
+            return;
+        };
 
         handleUpdate();
 
@@ -72,7 +79,7 @@ export const DataUpdate = () => {
         <>
             <div className="infobar">
                 <button
-                    className={resetMessage === 'Click again to confirm' ? 'confirming' : ''}
+                    className={(resetMessage === 'Click again to confirm' ? 'confirming' : '') + (updateSuccess ? ' success' : '')}
                     onClick={(e) => {
                         if (resetMessage === 'Click again to confirm') {
                             handleUpdate();
@@ -116,13 +123,29 @@ export const DataUpdate = () => {
                 border: none;
                 cursor: pointer;
             }
+            .infobar button.success svg {
+                animation: success 0.6s ease-out;
+            }
+            @keyframes success {
+                0% {
+                    scale: 1;
+                }
+                50% {
+                    scale: 1.2;
+                    fill: var(--dl-color-theme-primary2);
+                }
+                100% {
+                    scale: 1;
+                    transform: rotate3d(0, 1, 0, 360deg);
+                }
+            }
             .infobar button.confirming svg {
                 fill: var(--negative);
                 scale: 1.2;
             }
             .infobar button svg {
                 fill: var(--dl-color-theme-primary1);
-                transition: scale 0.3s ease;
+                transition: all 0.3s ease;
 
             }
             .infobar button svg.loading {
