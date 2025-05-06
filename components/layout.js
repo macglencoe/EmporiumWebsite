@@ -57,27 +57,12 @@ const Layout = (props) => {
           </div>
 
 
-          <Directory></Directory>
-          <Toolbar
-            type='header'
-            links={[
-              {
-                href: '/submit', label: 'Manage Changes',
-                icon: <path xmlns="http://www.w3.org/2000/svg" d="M480-257q-76 0-135-45.5T266-417H46v-126h220q20-69 79-114.5T480-703q76 0 135 45.5T694-543h220v126H694q-20 69-79 114.5T480-257Zm.41-126Q521-383 549-411.41t28-69Q577-521 548.79-549q-28.2-28-68.5-28-40.29 0-68.79 28.21-28.5 28.2-28.5 68.5 0 40.29 28.41 68.79 28.41 28.5 69 28.5Z" />
-              },
-              {
-                href: '/cigars/add', label: 'Add New Cigar',
-                icon: <path xmlns="http://www.w3.org/2000/svg" d="M417-417H166v-126h251v-251h126v251h251v126H543v251H417v-251Z" />
-              },
-              {
-                href: '/cigars/barcodeSearch', label: 'Point of Sale',
-                icon: <path xmlns="http://www.w3.org/2000/svg" d="M40-120v-188h66.67v121.33H228V-120H40Zm691.33 0v-66.67h121.34V-308h66.66v188h-188Zm-576-114v-492.67h80V-234h-80ZM276-234v-492.67h41.33V-234H276Zm121.33 0v-492.67h82V-234h-82Zm123.34 0v-492.67h120.66V-234H520.67Zm162 0v-492.67H724V-234h-41.33Zm82 0v-492.67h38.66V-234h-38.66ZM40-652v-188h188v66.67H106.67V-652H40Zm812.67 0v-121.33H731.33V-840h188v188h-66.66Z" />
-              },
-            ]}
-            style={{ backgroundColor: 'var(--dl-color-theme-secondary1)' }}
-          >
-
-          </Toolbar>
+          <div className="directoryBar">
+            <button onClick={handleButtonClick} className={`sidebarToggle ${isActive ? 'open' : 'closed'}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M368.57-81.87 352.09-209.5q-11.59-4.28-23.04-10.58-11.44-6.29-21.01-13.09l-117.89 49.19L77.98-378.89l102.91-77.94q-.76-5.51-.76-10.57V-480q0-5.04.25-11.09.25-6.04 1.01-14.08L77.98-582.11l112.17-193.43 119.87 49.95q8.57-6.8 18.9-12.73 10.34-5.92 23.17-11.2l16.48-129.61h222.86l16.48 128.11q12.09 4.78 22.29 10.95 10.19 6.18 19.76 14.48l119.89-49.95 112.17 193.43-106.15 78.98q.76 6 .76 10.79V-480q0 7.54-.12 12.76t-1.14 10.91l105.15 77.44-112.41 194.91-118.63-50.19q-8.07 6.3-17.4 11.84-9.34 5.55-24.17 12.83L591.43-81.87H368.57Zm74.35-86h72.21l14.74-106.02q30.24-8 55.84-22.87 25.59-14.87 47.09-37.83l99.27 42 35.63-62.69-86.29-64.52q4.5-14.48 6.74-29.56 2.24-15.08 2.24-30.64 0-15.74-1.99-30.23t-6.99-29.97l86.76-65.52-35.1-62.69-100.53 43q-19.5-21.72-46.59-37.58-27.1-15.86-56.08-23.12l-12.93-107.02h-73.55l-13.02 106.28q-32.72 8.26-57.44 22.37-24.71 14.11-48.45 38.07l-97.78-42-35.87 62.69 84.54 62.79q-5 16.47-7.24 31.33t-2.24 31.07q0 15.27 1.99 30.25t6.99 31.95l-84.04 63.05 35.94 62.69 97.21-41.76q23.74 23.98 49.82 38.84 26.09 14.86 56.57 22.36l12.55 105.28ZM479.01-345q55.77 0 95.27-39.55 39.5-39.55 39.5-95.5t-39.53-95.45Q534.71-615 478.78-615q-56.26 0-95.63 39.55t-39.37 95.5q0 55.95 39.37 95.45t95.86 39.5Zm.49-135.5Z"/></svg>
+            </button>
+            <Directory></Directory>
+          </div>
         </header>
 
 
@@ -85,6 +70,27 @@ const Layout = (props) => {
           <div className={`catalog-container73 sidebar${isActive ? ' collapsed' : ''}`}>
 
             <Fragment>
+              <DataUpdate></DataUpdate>
+              <Toolbar
+                type='sidebar'
+                links={[
+                  {
+                    href: '/submit', label: 'Manage Changes',
+                    icon: <path xmlns="http://www.w3.org/2000/svg" d="M480-257q-76 0-135-45.5T266-417H46v-126h220q20-69 79-114.5T480-703q76 0 135 45.5T694-543h220v126H694q-20 69-79 114.5T480-257Zm.41-126Q521-383 549-411.41t28-69Q577-521 548.79-549q-28.2-28-68.5-28-40.29 0-68.79 28.21-28.5 28.2-28.5 68.5 0 40.29 28.41 68.79 28.41 28.5 69 28.5Z" />
+                  },
+                  {
+                    href: '/cigars/add', label: 'Add New Cigar',
+                    icon: <path xmlns="http://www.w3.org/2000/svg" d="M417-417H166v-126h251v-251h126v251h251v126H543v251H417v-251Z" />
+                  },
+                  {
+                    href: '/cigars/barcodeSearch', label: 'Point of Sale',
+                    icon: <path xmlns="http://www.w3.org/2000/svg" d="M40-120v-188h66.67v121.33H228V-120H40Zm691.33 0v-66.67h121.34V-308h66.66v188h-188Zm-576-114v-492.67h80V-234h-80ZM276-234v-492.67h41.33V-234H276Zm121.33 0v-492.67h82V-234h-82Zm123.34 0v-492.67h120.66V-234H520.67Zm162 0v-492.67H724V-234h-41.33Zm82 0v-492.67h38.66V-234h-38.66ZM40-652v-188h188v66.67H106.67V-652H40Zm812.67 0v-121.33H731.33V-840h188v188h-66.66Z" />
+                  },
+                ]}
+                style={{ backgroundColor: 'var(--dl-color-theme-secondary1)' }}
+              >
+
+              </Toolbar>
               {props.sidebarChildren}
             </Fragment>
 
@@ -92,16 +98,12 @@ const Layout = (props) => {
               <Contact></Contact>
             </div>
 
-            <a href='#fb-skip' tabIndex={0} className='sr-skip' id='sidebar-fb-skip'>
-              <div>Skip Facebook Embed</div>
-            </a>
 
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FKing-Street-Coffee-Tobacco-Emporium-100063496593967%2F&tabs=timeline&width=300&height=1000&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="300" height="1000" style={{ border: "none" }} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" id='fb-embed'></iframe>
-            <div id='fb-skip'></div>
+
+
           </div>
           <main className="catalog-content1" id='content'>
             <Analytics />
-            <DataUpdate></DataUpdate>
             {props.children}
 
 
@@ -131,7 +133,28 @@ const Layout = (props) => {
       </div >
       <style jsx>
         {`
-        
+
+.directoryBar {
+  background-color: var(--dl-color-theme-secondary1);
+  display: flex;
+  flex-direction: row;
+}
+.sidebarToggle {
+  display: none;
+}
+.sidebarToggle:active {
+  transform: scale(0.8);
+}
+.sidebarToggle svg {
+  height: 100%;
+  width: 23px;
+  fill: var(--dl-color-theme-primary1);
+  transition: rotate 0.6s ease;
+}
+.sidebarToggle.open svg {
+  rotate: 180deg;
+}
+
         .sr-skip {
           position: absolute;
           left: 50%;
@@ -156,7 +179,7 @@ const Layout = (props) => {
           position: sticky;
           top: 0;
           width: 100%;
-          z-index: 2;
+          z-index: 999;
           border-bottom: 6px solid var(--dl-color-theme-secondary2);
         }
 
@@ -203,7 +226,6 @@ const Layout = (props) => {
         
         
   .sidebar {
-        gap: 3px;
         flex: 0 0 300px;
         width: 300px;
         border: 2px dashed rgba(120, 120, 120, 0.4);
@@ -211,7 +233,7 @@ const Layout = (props) => {
         border-color: var(--dl-color-theme-secondary1);
         border-width: 0px;
         flex-direction: column;
-        background-color: var(--dl-color-theme-secondary2);
+        background-color: var(--dl-color-theme-secondary1);
         }
   .catalog-button7 {
       float: right;
@@ -348,12 +370,18 @@ const Layout = (props) => {
           white-space: normal;
         }
         
-        
+    .sidebarToggle {
+        display: block;
+    }
     .sidebar{
         position: absolute;
-        z-index: 1;
+        z-index: 998;
         transition: transform .5s;
-        display: none;
+        background-color: var(--dl-color-theme-secondary1);
+        height: 100vh;
+    }
+    .sidebar.collapsed {
+        transform: translateX(-300px);
     }
     
     .contact-container {

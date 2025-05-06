@@ -93,13 +93,15 @@ export const DataUpdate = () => {
             <style jsx>
                 {`
             .infobar {
-                background-color: var(--dl-color-theme-primary1);
-                color: var(--dl-color-theme-secondary2);
+                background-color: var(--dl-color-theme-secondary1);
+                color: var(--dl-color-theme-primary1);
                 display: flex;
-                gap: 1em;
                 align-items: center;
-                padding: 0.5em;
-                border-bottom: 9px double var(--dl-color-theme-secondary2);
+                padding: 13px 0;
+                margin: 6px 13px;
+                gap: 10px;
+                overflow: hidden;
+                border-bottom: 2px solid var(--dl-color-theme-secondary2);
             }
             .infobar p {
                 width: 100%;
@@ -119,7 +121,7 @@ export const DataUpdate = () => {
                 scale: 1.2;
             }
             .infobar button svg {
-                fill: var(--dl-color-theme-secondary2);
+                fill: var(--dl-color-theme-primary1);
                 transition: scale 0.3s ease;
 
             }
