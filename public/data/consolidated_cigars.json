@@ -9489,5 +9489,20 @@
     ],
     "slug": "cao-brazilia-go",
     "Date Added": "2025-05-01"
+  },
+  {
+    "Cigar Brand": "test brand",
+    "Cigar Name": "test cigar",
+    "Wrapper": "",
+    "Binder": "",
+    "Filler": "",
+    "Flavor_Profile": "",
+    "Strength_Profile": "",
+    "Sizes": [
+      {}
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1746577140538-image-Po9vKsJZ4Skze9yAT4IRMRwo31a6y2.png",
+    "slug": "test-brand-test-cigar",
+    "Date Added": "2025-05-07"
   }
 ]
