@@ -53,9 +53,9 @@ export const SubmitPage = (props) => {
             }
             setOriginData(JSON.parse(localStorage.getItem('originData_cigars')));
             // fetch all commits
-            fetch(`/api/getCommits?branch=cms`).then(response => response.json()).then(data => setAllCommits(data));
+            fetch(`/api/commits?branch=cms`).then(response => response.json()).then(data => setAllCommits(data));
             // fetch only commits touching cigar data file
-            fetch(`/api/getCommits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}&branch=cms`).then(response => response.json()).then(data => setDataCommits(data));
+            fetch(`/api/commits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}&branch=cms`).then(response => response.json()).then(data => setDataCommits(data));
 
             setCurrentCommitSha(localStorage.getItem('tempData_sha') ?? 'No Sha Found');
             setCurrentCommitMessage(localStorage.getItem('tempData_message') ?? 'No Message Found');
@@ -68,9 +68,9 @@ export const SubmitPage = (props) => {
     useEffect(() => {
         const interval = setInterval(() => {
             // fetch all commits
-            fetch(`/api/getCommits?branch=cms`).then(response => response.json()).then(data => setAllCommits(data));
+            fetch(`/api/commits?branch=cms`).then(response => response.json()).then(data => setAllCommits(data));
             // fetch only commits touching cigar data file
-            fetch(`/api/getCommits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}&branch=cms`).then(response => response.json()).then(data => setDataCommits(data));
+            fetch(`/api/commits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}&branch=cms`).then(response => response.json()).then(data => setDataCommits(data));
 
             // get current commit
             setCurrentCommitSha(localStorage.getItem('tempData_sha') ?? 'No Sha Found');
@@ -106,65 +106,76 @@ export const SubmitPage = (props) => {
 
 
     const commitToGit = async (commitData, branch, message) => {
-        // this function takes the data from the CMS form and commits it to github
-        // we need to remove the new-slug field that is added by the CMS form
-        // because it doesn't exist in the original data
         try {
-
-            // create a new array without the new-slug field
-            const editedData = commitData.map(data => {
-                // remove the new-slug field from the data
-                const { 'new-slug': _, ...rest } = data;
-                // return the rest of the data
+            // strip out the CMS-only field
+            const editedData = commitData.map(item => {
+                const { 'new-slug': _, ...rest } = item;
                 return rest;
             });
 
-            // Add Loading to response stream
-            setResponseConsole([...responseConsole, {
-                time: new Date().toLocaleString(),
-                status: "standby",
-                statusText: 'Waiting for response...',
-                ok: true
-            }])
-            const response = await fetch('/api/commit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+            // build URL
+            const filePath = encodeURIComponent('public/data/consolidated_cigars.json');
+            const url = `/api/files/${filePath}`;
+
+            // enqueue “standby”
+            setResponseConsole(c => [
+                ...c,
+                {
+                    time: new Date().toLocaleString(),
+                    status: 'standby',
+                    statusText: 'Waiting…',
+                    ok: true
+                }
+            ]);
+
+            // fire PUT
+            const response = await fetch(url, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    filePath: 'public/data/consolidated_cigars.json',
-                    content: JSON.stringify(editedData, null, 2),
-                    message: message,
-                    branch: branch
-                }),
+                    branch,
+                    message,
+                    content: JSON.stringify(editedData, null, 2)  // <— must be "content"
+                })
             });
 
-            const data = await response.json();
-            console.log(data);
+            // parse payload
+            const payload = await response.json();
 
-            if (responseConsole.length > 0 && responseConsole[responseConsole.length - 1].status === "standby") {
-                setResponseConsole(responseConsole.slice(0, responseConsole.length - 1));
-            }
+            // remove standby entry
+            setResponseConsole(c => c.slice(0, -1));
 
-            setResponseConsole([...responseConsole, {
-                time: new Date().toLocaleString(),
-                status: response.status ?? null,
-                statusText: response.statusText ?? null,
-                ok: response.ok ?? null,
-                ...data,
-                ...data.error ?? null
-            }])
+            // log what actually came back
+            console.log(payload);
+
+            // update console with result or error
+            setResponseConsole(c => [
+                ...c,
+                {
+                    time: new Date().toLocaleString(),
+                    status: response.status,
+                    statusText: response.statusText,
+                    ok: response.ok,
+                    ...(response.ok
+                        ? { message: payload.message, commitData: payload.result }
+                        : { error: payload.error })
+                }
+            ]);
         }
-        catch (error) {
-            console.error(error);
-            setResponseConsole([...responseConsole, {
-                time: new Date().toLocaleString(),
-                statusText: "error",
-                ok: false,
-                message: error.message
-            }])
+        catch (err) {
+            console.error(err);
+            setResponseConsole(c => [
+                ...c,
+                {
+                    time: new Date().toLocaleString(),
+                    statusText: 'error',
+                    ok: false,
+                    message: err.message
+                }
+            ]);
         }
-    }
+    };
+
 
     const getDiff = () => {
         const tempDiff = [];
@@ -196,7 +207,7 @@ export const SubmitPage = (props) => {
             <Layout>
                 <PageTitle1>Manage Changes</PageTitle1>
 
-                
+
 
                 <table className='commit'>
                     <thead>

@@ -44,7 +44,7 @@ const Catalog = ({ commitSha }) => {
       element.style.cursor = 'pointer';
     }
 
-    fetch('/api/getCommits?branch=' + updateBranch).then(response => response.json()).then(data => setCommits(data));
+    fetch('/api/commits?branch=' + updateBranch).then(response => response.json()).then(data => setCommits(data));
 
     if (window !== undefined) {
       if (!localStorage.getItem('tempData_cigars')) {
@@ -95,7 +95,7 @@ const Catalog = ({ commitSha }) => {
                   setCommits([]);
                   setUpdateBranch(e.target.value);
 
-                  fetch(`/api/getCommits?branch=${e.target.value}`).then(response => response.json()).then(data => setCommits(data));
+                  fetch(`/api/commits?branch=${e.target.value}`).then(response => response.json()).then(data => setCommits(data));
 
 
                 }}>
@@ -108,7 +108,7 @@ const Catalog = ({ commitSha }) => {
                   <label for='update-page'>Page:</label>
                   <input type='number' min='1' id='update-page' value={updatePage} onChange={(e) => {
                     setUpdatePage(e.target.value);
-                    fetch(`/api/getCommits?branch=${updateBranch}&page=${e.target.value}`).then(response => response.json()).then(data => setCommits(data));
+                    fetch(`/api/commits?branch=${updateBranch}&page=${e.target.value}`).then(response => response.json()).then(data => setCommits(data));
                   }}></input>
                 </div>
               </div>

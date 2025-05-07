@@ -41,7 +41,7 @@ export const DataUpdate = () => {
 
     useEffect(() => {
         // fetch **only** commits touching cigar data file
-        fetch(`/api/getCommits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}
+        fetch(`/api/commits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}
         &branch=cms&per_page=1`)
             .then(r => { return r.json(); })
             .then(data => { setDataCommits(data); });

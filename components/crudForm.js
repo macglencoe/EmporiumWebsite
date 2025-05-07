@@ -412,9 +412,8 @@ const CrudForm = (props) => {
             alert("No URL to delete found. Please report this")
         }
 
-        const response = await fetch('/api/deleteImage', {
-            method: 'DELETE',
-            body: url
+        const response = await fetch(`/api/images?url=${encodeURIComponent(url)}`, {
+            method: 'DELETE'
         })
 
         const data = await response.json();

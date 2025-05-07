@@ -44,7 +44,7 @@ export const ImageUpload = (props) => {
             props.onImageUpload(fileSizeInKB);
         }
 
-        const response = await fetch('/api/uploadImage', {
+        const response = await fetch('/api/images', {
             method: 'POST',
             body: formData,
         });
