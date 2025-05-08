@@ -1,48 +1,53 @@
 # King Street Emporium Website
-This project powers the official website for [The King Street Emporium](https://maps.app.goo.gl/qeLvCgUimEyXBjwy9) a cigar lounge and specialty shop located in **Martinsburg, WV**
 
-The site serves as an online catalog and informational hub, offering up-to-date details on in-store products, community updates, and other information.
+This project powers the official site for [The King Street Emporium](https://maps.app.goo.gl/qeLvCgUimEyXBjwy9), a cigar lounge and specialty shop based in **Martinsburg, WV**.
+
+The site serves as both a digital catalog and a place for store updates, giving customers easy access to product details, announcements, and store info.
+
+---
 
 # Features
-## 🗂️ Product Catalog
-Visitors can browse detailed listings of cigars, tobacco pipes, pipe tobacco, coffee, and tea—each with images, brand information, flavor, and strength profiles.
 
-## 🛠️ Content Management System (CMS)
-A custom-built CMS allows staff to:
+## 🗂️ Product Catalog  
+Browse an organized collection of cigars, pipes, pipe tobacco, coffee, and tea. Each listing includes images, brand details, flavor notes, and strength profiles.
 
-- Add, update, or remove products
+## 🛠️ Content Management System (CMS)  
+A custom CMS gives staff full control over the site’s content:
 
-- Upload images
+- Add, update, or remove products  
+- Upload product images  
+- Preview and validate changes before they go live  
+- All edits are version-controlled via GitHub and automatically deployed through Vercel—no developer needed.
 
-- Validate and preview content before publishing
+## 📍 Store Info & Updates  
+Store hours, location, and contact details are easy to find. The homepage also pulls live updates from Facebook, so customers can stay in the loop about events and new arrivals.
 
-- All changes are committed via GitHub and deployed through Vercel, allowing seamless updates without developer involvement.
-
-## 📍 Store Info & Updates
-Store hours, location, and contact information are easy to find. The homepage also features an embedded Facebook feed to show real-time announcements, event updates, and new arrivals.
-
-## 👓 Accessibility & Simplicity
-The site is optimized for clarity and ease of use. It uses large, readable fonts, consistent layout patterns, and intuitive navigation, catering to non-technical visitors.
-
-# Hosting
-The site is hosted at www.kingstreetemporium.com, through [Vercel](https://www.vercel.com).
-
-# Technology Stack
-- **Frontend Framework**: [Next.js](https://nextjs.org) - React-based with static site generation
-- **CMS Backend**: Github-powered content versioning
-- **Deployment**: Vercel (auto-redeploy on GitHub commit)
-- **Image Uploads**: Vercel Blob Storage
+## 👓 Accessibility & Simplicity  
+Built with ease-of-use in mind. Clear fonts, simple layouts, and intuitive navigation ensure that anyone can find what they need.
 
 ---
 
-# Wiki Reference
-Learn more about how the CMS works under the hood in the [project wiki](../../wiki)
-
-*A GitHub-powered CMS with static content versioning, image uploads, and idempotent updates.*
+# Hosting  
+Hosted at [www.kingstreetemporium.com](https://www.kingstreetemporium.com), deployed through [Vercel](https://www.vercel.com).
 
 ---
 
-# License
-King Street Emporium Website © 2025 by Liam McDonald
+# Tech Stack
 
+- **Frontend**: [Next.js](https://nextjs.org) (React-based, statically generated)
+- **CMS Backend**: GitHub version control
+- **Deployment**: Vercel with automatic redeploys on commit
+- **Image Handling**: Vercel Blob Storage
+
+---
+
+# Wiki Reference  
+Want a deeper dive into how the CMS works? Check out the [project wiki](../../wiki).
+
+*Built for stability and ease of use: versioned JSON data, GitHub-based publishing, and reliable image handling.*
+
+---
+
+# License  
+© 2025 Liam McDonald  
 Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
