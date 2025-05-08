@@ -1,76 +1,46 @@
 # King Street Emporium Website
-This project is a website for the cigar lounge, [The King Street Emporium](https://maps.app.goo.gl/qeLvCgUimEyXBjwy9), in **Martinsburg, WV**.
+This project powers the official website for [The King Street Emporium](https://maps.app.goo.gl/qeLvCgUimEyXBjwy9) a cigar lounge and specialty shop located in **Martinsburg, WV**
 
-Serving as an online catalog, this website provides patrons and prospective customers with up-to-date information on available products, store info, and community events while ensuring accessibility and ease of use.
+The site serves as an online catalog and informational hub, offering up-to-date details on in-store products, community updates, and other information.
 
+# Features
+## 🗂️ Product Catalog
+Visitors can browse detailed listings of cigars, tobacco pipes, pipe tobacco, coffee, and tea—each with images, brand information, flavor, and strength profiles.
 
-[![wakatime](https://wakatime.com/badge/user/f2f0ec8a-184f-40d7-89ff-dcb3f8dd8e21/project/15c4a501-6e1a-462a-b755-3d8625578979.svg)](https://wakatime.com/badge/user/f2f0ec8a-184f-40d7-89ff-dcb3f8dd8e21/project/15c4a501-6e1a-462a-b755-3d8625578979)
+## 🛠️ Content Management System (CMS)
+A custom-built CMS allows staff to:
 
-## Description
+- Add, update, or remove products
 
-### Catalog
-This website will primarily be used as an online catalog, allowing patrons to find informationa about products that are available in-store. This includes cigars, tobacco pipes, pipe tobacco, coffee, and tea. The catalog is updated semi-regularly by staff.
+- Upload images
 
-### Store Profile
-Secondarily, this website will provide basic, important information about the lounge itself. Operating hours, location, and contact information is easily available and up-to-date. Additionally, the business Facebook page is embedded on the home page, allowing users to see important updates such as store closing, upcoming events, and new arrivals
+- Validate and preview content before publishing
 
-### Ease of use
-Finally, the website will be straightforward and accessible. The intended audience for this website is not tech-savvy, so the website cannot be too complex. Elements are in predictable places, with bold easy-to-read fonts. Additionally, important navigation elements are easily accessible.
+- All changes are committed via GitHub and deployed through Vercel, allowing seamless updates without developer involvement.
 
-## Hosting
+## 📍 Store Info & Updates
+Store hours, location, and contact information are easy to find. The homepage also features an embedded Facebook feed to show real-time announcements, event updates, and new arrivals.
+
+## 👓 Accessibility & Simplicity
+The site is optimized for clarity and ease of use. It uses large, readable fonts, consistent layout patterns, and intuitive navigation, catering to non-technical visitors.
+
+# Hosting
 The site is hosted at www.kingstreetemporium.com, through [Vercel](https://www.vercel.com).
 
-## Technology Stack
-- This website is made with the [Next.js](https://nextjs.org) React framework, mostly for the routing, although many of its features come in handy.
-- For the time being, the data is static, and updated periodically. This is the best option for the needs of this website.
+# Technology Stack
+- **Frontend Framework**: [Next.js](nextjs.org) - React-based with static site generation
+- **CMS Backend**: Github-powered content versioning
+- **Deployment**: Vercel (auto-redeploy on GitHub commit)
+- **Image Uploads**: Vercel Blob Storage
 
-## <> Code Showcase </>
+---
 
-[`directory.js`](components/directory.js)
+# Wiki Reference
+Learn more about how the CMS works under the hood in the [project wiki](/wiki)
+*A GitHub-powered CMS with static content versioning, image uploads, and idempotent updates.*
 
-The following demonstrates the styling for the top navigation items, using JSX to conditionally change the class of the element based on the current page, and a fancy animated gradient background upon hover
+---
 
-``` javaScript
-<Link href={props.href}>
-	<a tabIndex={0} className={router.pathname == props.href ? "active-page" : ""}>
-		<div>
-			<span>{props.children}</span>
-			<div className='background-gradient'></div>
-		</div>
-	</a>
-</Link>
-```
-
-``` css
-a > div {
-	position: relative;
-	display: flex;
-	padding: 0.5em;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	overflow: hidden;
-}
-a .background-gradient {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	transform: translateY(100%);
-	background-image: var(--directory-gradient);
-	transition: 0.3s ease-in;
-}
-a {
-	width: 100%;
-}
-a:hover span, a:focus span {
-	text-decoration: var(--dl-color-theme-primary1) underline;
-}
-a:hover .background-gradient, a:focus .background-gradient {
-	transform: translateY(0);
-}
-a.active-page span {
-		color: var(--dl-color-theme-primary1);
-}
-```
-
-King Street Emporium Website © 2025 by Liam McDonald is licensed under Creative Commons Attribution-NonCommercial 4.0 International 
+# License
+King Street Emporium Website © 2025 by Liam McDonald
+Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
