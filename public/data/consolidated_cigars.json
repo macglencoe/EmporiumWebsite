@@ -4856,6 +4856,12 @@
         "Barcode": "810138033937",
         "In_Stock": true,
         "Price": "10.50"
+      },
+      {
+        "Size": "6x44 Corona",
+        "Barcode": "810138033951",
+        "In_Stock": true,
+        "Price": "11.50"
       }
     ],
     "slug": "gran-habano-blue-in-green"
