@@ -73,12 +73,6 @@
         "autosuggest": false,
         "description": "Paste the link or embed code of the podcast episode this cigar was featured on."
       },
-      "featured_Week": {
-        "type": "string",
-        "inputType": "date",
-        "autosuggest": false,
-        "description": "Cigar of the week"
-      },
       "featured_Eds_Pick": {
         "type": "string",
         "inputType": "date",
