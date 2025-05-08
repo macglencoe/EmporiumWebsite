@@ -68,7 +68,6 @@ export const Featured = ({ cigars }) => {
     const [feature_StickFigures, setFeature_StickFigures] = useState([]);
 
     useEffect(() => {
-        setFeature_Week(cigars.filter(cigar => cigar['featured_Week']).sort((a, b) => new Date(b['featured_Week']) - new Date(a['featured_Week'])));
         setFeature_Eds_Pick(cigars.filter(cigar => cigar['featured_Eds_Pick']).sort((a, b) => new Date(b['featured_Eds_Pick']) - new Date(a['featured_Eds_Pick'])));
         setFeature_Teds_Pick(cigars.filter(cigar => cigar['featured_Teds_Pick']).sort((a, b) => new Date(b['featured_Teds_Pick']) - new Date(a['featured_Teds_Pick'])));
         setFeature_StickFigures(cigars.filter(cigar => cigar['featured_StickFigures']).sort((a, b) => new Date(b['featured_StickFigures']) - new Date(a['featured_StickFigures'])));
@@ -80,14 +79,6 @@ export const Featured = ({ cigars }) => {
                     <div className='background'></div>
                 <h1>Featured Cigars</h1>
                 <div className="spread">
-                    {feature_Week.length > 0 &&
-                        <div className='feature week'>
-                            <h2>Cigar of the Week</h2>
-                            <p className='date'><b>{feature_Week[0]['featured_Week']}</b></p>
-                            <p className='cigarTitle'><a href={'/cigars/' + feature_Week[0]['slug']}><i>{feature_Week[0]['Cigar Brand']} </i>{feature_Week[0]['Cigar Name']}</a></p>
-                            <AttributeSpan item={feature_Week[0]} />
-                            <FlavorList flavorString={feature_Week[0]['Flavor_Profile']} />
-                        </div>}
                     {feature_Eds_Pick.length > 0 &&
                         <div className='feature eds-Pick'>
                             <h2>Ed's Pick</h2>
