@@ -9524,5 +9524,20 @@
     "slug": "partagas-y-nada-mas",
     "Date Added": "2025-05-08",
     "featured_Teds_Pick": "2025-05-08"
+  },
+  {
+    "Cigar Brand": "Test brand",
+    "Cigar Name": "Test cigar",
+    "Wrapper": "",
+    "Binder": "",
+    "Filler": "",
+    "Flavor_Profile": "",
+    "Strength_Profile": "",
+    "Sizes": [
+      {}
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1746743883876-image-44lS2TSqH8EZ9AYLBOdQgl7tbfpoc2.png",
+    "slug": "test-brand-test-cigar",
+    "Date Added": "2025-05-08"
   }
 ]
