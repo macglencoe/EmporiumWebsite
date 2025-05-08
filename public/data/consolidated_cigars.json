@@ -4628,7 +4628,7 @@
     "slug": "forged-chillin-moose"
   },
   {
-    "Cigar Brand": "Forged",
+    "Cigar Brand": "Room 101",
     "Cigar Name": "Johnny Tobacconaut",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Mexican",
@@ -4641,6 +4641,12 @@
         "Barcode": "689674151142",
         "In_Stock": true,
         "Price": "10.50"
+      },
+      {
+        "Size": "Robusto",
+        "Barcode": "689674151111",
+        "In_Stock": true,
+        "Price": "10.00"
       }
     ],
     "slug": "forged-johnny-tobacconaut",
