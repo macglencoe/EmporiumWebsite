@@ -37,10 +37,12 @@ The site is hosted at www.kingstreetemporium.com, through [Vercel](https://www.v
 
 # Wiki Reference
 Learn more about how the CMS works under the hood in the [project wiki](/wiki)
+
 *A GitHub-powered CMS with static content versioning, image uploads, and idempotent updates.*
 
 ---
 
 # License
 King Street Emporium Website © 2025 by Liam McDonald
+
 Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
