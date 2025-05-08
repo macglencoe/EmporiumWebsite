@@ -663,6 +663,11 @@ button:hover > svg {
     scale: 1.25;
     fill: var(--dl-color-theme-primary2);
 }
+@media (max-width: 680px) {
+    button {
+        font-size: 16px;
+    }
+}
             `}
             </style>
         </>
