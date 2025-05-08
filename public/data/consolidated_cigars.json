@@ -9495,5 +9495,25 @@
     ],
     "slug": "cao-brazilia-go",
     "Date Added": "2025-05-01"
+  },
+  {
+    "Cigar Brand": "Partagas",
+    "Cigar Name": "Y Nada Mas",
+    "Wrapper": "Habano 2000",
+    "Binder": "Sumatra",
+    "Filler": "Piloto Corojo, Ecuadorian Broadleaf",
+    "Flavor_Profile": "Earthy, White Pepper, Sweet",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674159285",
+        "In_Stock": true,
+        "Price": "9.55"
+      }
+    ],
+    "description": "The Partagás y Nada Más is a medium-bodied cigar that delivers refined character and classic Cuban-inspired flavor. True to its name, which means \"Partagás and nothing more,\" this cigar focuses on balance, tradition, and pure tobacco enjoyment. Expect notes of earth, cedar, and black pepper with a hint of sweetness that lingers just enough to keep each draw interesting. Smooth in strength but rich in flavor, it is ideal for those who enjoy complexity without overwhelming intensity.\nPerfect for seasoned smokers seeking subtlety or newcomers ready to explore the world of premium cigars. This is Partagás in its purest form.",
+    "slug": "partagas-y-nada-mas",
+    "Date Added": "2025-05-08"
   }
 ]
