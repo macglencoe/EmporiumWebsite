@@ -28,7 +28,7 @@ The site is optimized for clarity and ease of use. It uses large, readable fonts
 The site is hosted at www.kingstreetemporium.com, through [Vercel](https://www.vercel.com).
 
 # Technology Stack
-- **Frontend Framework**: [Next.js](nextjs.org) - React-based with static site generation
+- **Frontend Framework**: [Next.js](https://nextjs.org) - React-based with static site generation
 - **CMS Backend**: Github-powered content versioning
 - **Deployment**: Vercel (auto-redeploy on GitHub commit)
 - **Image Uploads**: Vercel Blob Storage
@@ -36,7 +36,7 @@ The site is hosted at www.kingstreetemporium.com, through [Vercel](https://www.v
 ---
 
 # Wiki Reference
-Learn more about how the CMS works under the hood in the [project wiki](/wiki)
+Learn more about how the CMS works under the hood in the [project wiki](../../wiki)
 
 *A GitHub-powered CMS with static content versioning, image uploads, and idempotent updates.*
 
