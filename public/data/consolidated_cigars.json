@@ -9524,5 +9524,25 @@
     "slug": "partagas-y-nada-mas",
     "Date Added": "2025-05-08",
     "featured_Teds_Pick": "2025-05-08"
+  },
+  {
+    "Cigar Brand": "Gran Habano",
+    "Cigar Name": "Habano #3",
+    "Wrapper": "Nicaraguan Habano",
+    "Binder": "Nicaraguan Habano",
+    "Filler": "Nicaraguan, Mexican, Costa Rican",
+    "Flavor_Profile": "Cedar, Spice, Coffee, Nuts",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "810141022294",
+        "In_Stock": true,
+        "Price": "9.25"
+      }
+    ],
+    "description": "The Gran Habano Habano No 3 is a medium-bodied cigar crafted with a unique blend of Nicaraguan, Mexican, and Costa Rican tobaccos. Wrapped in a smooth Habano leaf, it delivers a well-balanced profile with notes of cedar, spice, roasted coffee, and toasted nuts. Rich in flavor yet approachable, this cigar is a standout choice for smokers who appreciate complexity without overwhelming strength.",
+    "slug": "gran-habano-habano-3",
+    "Date Added": "2025-05-09"
   }
 ]
