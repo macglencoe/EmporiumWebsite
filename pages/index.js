@@ -119,6 +119,8 @@ const Catalog = (props) => {
         <div className='divider'></div>
 
         <Featured cigars={props.data} />
+
+        <div className='divider'></div>
       
 
         <ShopSuggestions
