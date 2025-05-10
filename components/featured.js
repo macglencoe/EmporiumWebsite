@@ -114,20 +114,35 @@ export const Featured = ({ cigars }) => {
             justify-content: space-around;
             align-items: center;
             padding: 20px;
-            border-radius: 5px;
+            border-radius: 10px;
             flex: 0.5 1 min-content;
             min-width: 300px;
             margin: 5px;
             gap: 0.5em;
             overflow: hidden;
             z-index: 1;
-            background-color: rgba(232, 169, 21, 0.3);
-            backdrop-filter: blur(10px);
-            transition: all 0.2s ease-in-out;
+            background-color: var(--dl-color-theme-primary2);
+            transition: all 0.3s ease-in-out;
+            background-image: radial-gradient(circle at center, transparent 20%, var(--dl-color-theme-primary1) 500%);
+            flex: 1;
+        }
+        .feature::before, .feature::after {
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--dl-color-theme-primary1);
+            z-index: 1;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature:hover::before, .feature:hover::after {
+            transform: scaleX(1);
+
         }
         .feature:hover {
             scale: 1.05;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
         .feature:hover a {
             text-decoration-color: var(--dl-color-theme-secondary2);
@@ -159,6 +174,8 @@ export const Featured = ({ cigars }) => {
             flex-direction: row;
             justify-content: space-evenly;
             flex-wrap: wrap;
+            width: 100%;
+            gap: 1em;
         }
         .featured {
             display: flex;
@@ -169,7 +186,6 @@ export const Featured = ({ cigars }) => {
             position: relative;;
             background-color: var(--dl-color-theme-primary2);
             overflow: hidden;
-            backdrop-filter: blur(10px);
         }
         .featured .background {
             position: absolute;
@@ -179,11 +195,9 @@ export const Featured = ({ cigars }) => {
             height: 100%;
             object-fit: cover;
             z-index: 0;
-            background-image: url('ksmantransparentbw-1500h.png');
             background-size: cover;
             opacity: 0.3;
             transition: all 0.3s ease-in-out;
-            filter: blur(5px);
 
         }
         .featured h1 {
