@@ -246,6 +246,8 @@ const Catalog = ({ commitSha }) => {
         <div className='divider'></div>
 
         <Featured cigars={localData} />
+
+        <div className='divider'></div>
       
 
         <ShopSuggestions
