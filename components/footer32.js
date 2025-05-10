@@ -142,6 +142,9 @@ const Footer32 = (props) => {
             display: flex;
             align-items: flex-start;
           }
+          .footer32-links > a {
+            width: max-content;
+          }
           .footer32-social-links {
             gap: var(--dl-space-space-unit);
             display: flex;
