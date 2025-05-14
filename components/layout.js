@@ -13,6 +13,7 @@ import { Analytics } from '@vercel/analytics/react'
 import Toolbar from './toolbar'
 import setLocalData from '../utils/setLocalData'
 import DataUpdate from './dataUpdate'
+import { Footer } from './footer'
 
 const Layout = (props) => {
   const router = useRouter();
@@ -108,25 +109,8 @@ const Layout = (props) => {
 
 
 
-            <Footer32
-              link1={
-                <Fragment>
-                  <span className="catalog-text227">About Us</span>
-                </Fragment>
-              }
-              link4={
-                <Fragment>
-                  <span className="catalog-text230">Contact Us</span>
-                </Fragment>
-              }
-              link5={
-                <Fragment>
-                  <span className="catalog-text231">Visit Us</span>
-                </Fragment>
-              }
-              rootClassName="footer32root-class-name1"
-            ></Footer32>
-          </main>
+            <Footer></Footer>
+        </main>
 
 
         </div>

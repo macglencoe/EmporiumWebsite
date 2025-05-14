@@ -1,0 +1,122 @@
+.container {
+    background-color: var(--dl-color-theme-secondary2);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1em;
+    color: var(--dl-color-theme-primary2);
+    
+}
+
+.list {
+    flex: 1;
+    padding: 0.3em;
+}
+
+.list ul {
+    list-style: none;
+    margin: 0.5em;
+    font-family: Inter;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    font-size: 1em;
+}
+.list h2 {
+    border-bottom: 3px solid var(--dl-color-theme-primary1);
+    padding-bottom: 0.1em;
+    opacity: 0.7;
+}
+.list:hover h2 {
+    opacity: 1;
+}
+.list a {
+    opacity: 0.7;
+}
+.list a:hover {
+    opacity: 1;
+}
+
+.contact {
+    flex: 0 1;
+    background-color:var(--dl-color-theme-primary2);
+    color: var(--dl-color-theme-secondary2);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    border: solid var(--dl-color-theme-primary1);
+    border-width: 0 3px;
+}
+.contact::before, .contact::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--dl-color-theme-secondary2);
+}
+
+.contact a {
+    opacity: 0.7;
+    padding: 0.5em 1em;
+    font-family: Inter;
+    white-space: nowrap;
+}
+.contact a:hover {
+    opacity: 1;
+}
+
+.brand {
+    flex: 0 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3em;
+}
+
+.brand > img {
+    height: 7em;
+}
+.brand .brandName {
+    white-space: nowrap
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+.socials svg {
+    width: 2em;
+    height: 2em;
+    fill: var(--dl-color-theme-primary2);
+    opacity: 0.7;
+}
+.socials a:hover svg {
+    opacity: 1;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 3px solid var(--dl-color-theme-primary1);
+    padding: 0.5em 0;
+    flex-wrap: wrap;
+}
+
