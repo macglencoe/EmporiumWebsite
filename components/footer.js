@@ -55,6 +55,7 @@ export const Footer = () => {
                 </div>
                 <div className={styles.bottom}>
                     <p>&copy; 2025 King Street Coffee & Tobacco Emporium</p>
+                    <a href='/privacy'><p>Privacy Policy</p></a>
                 </div>
             </footer>
     )
