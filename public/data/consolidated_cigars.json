@@ -3920,17 +3920,25 @@
     "Wrapper": "Ecuadorian Rosado",
     "Binder": "Matacapa Mexican",
     "Filler": "Nicaragua, Pennsylvania Broadleaf",
-    "Flavor_Profile": "Mellow nutty flavor",
-    "Strength_Profile": "Mild-Medium",
+    "Flavor_Profile": "Spice, Cedar, Coffee",
+    "Strength_Profile": "Medium",
     "Sizes": [
       {
         "Size": "Corona",
         "Barcode": "19962720123",
         "In_Stock": false,
         "Price": "11.65"
+      },
+      {
+        "Size": "Short Churchill",
+        "Barcode": "691835033990",
+        "In_Stock": true,
+        "Price": "12.50"
       }
     ],
-    "slug": "dunbarton-tobacco-and-trust-sobremesa"
+    "slug": "dunbarton-tobacco-and-trust-sobremesa",
+    "description": "Rich and elegant without trying too hard. Layers of Spice, black pepper, and cedar unfold slowly, grounded by a creamy finish. It’s a cigar for those quiet moments after a good meal. Exactly what the name promises.",
+    "featured_Eds_Pick": "2025-05-22"
   },
   {
     "Cigar Brand": "E.P. Carrillo",
@@ -5097,7 +5105,7 @@
     "Wrapper": "Ecuador Havana Rosado",
     "Binder": "Undisclosed",
     "Filler": "Undisclosed",
-    "Flavor_Profile": "Cinnamon, Oak, White Pepper, Musty Wood",
+    "Flavor_Profile": "Cinnamon, Cedar, White Pepper, Musty Wood",
     "Strength_Profile": "Medium-Full",
     "Sizes": [
       {
@@ -5111,9 +5119,16 @@
         "Barcode": "76622028005",
         "In_Stock": true,
         "Price": "19.85"
+      },
+      {
+        "Size": "Salomones",
+        "Barcode": "076622028203",
+        "In_Stock": true,
+        "Price": "24.40"
       }
     ],
-    "slug": "j-c-newman-angel-cuesta"
+    "slug": "j-c-newman-angel-cuesta",
+    "description": "Once reserved for royalty, now revived for the modern palate. Notes of cedar, cream, and subtle spice glide through a velvety draw, wrapped in quiet elegance. A legacy blend that smokes like a well kept secret."
   },
   {
     "Cigar Brand": "J.C. Newman",
@@ -5876,7 +5891,8 @@
       }
     ],
     "slug": "j-c-newman-yagua",
-    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/0mhcNHw8II18z89ZDo6XcA?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/0mhcNHw8II18z89ZDo6XcA?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "featured_Teds_Pick": "2025-05-22"
   },
   {
     "Cigar Brand": "Joya de Nicaragua",
@@ -9544,5 +9560,70 @@
     "description": "The Gran Habano Habano No 3 is a medium-bodied cigar crafted with a unique blend of Nicaraguan, Mexican, and Costa Rican tobaccos. Wrapped in a smooth Habano leaf, it delivers a well-balanced profile with notes of cedar, spice, roasted coffee, and toasted nuts. Rich in flavor yet approachable, this cigar is a standout choice for smokers who appreciate complexity without overwhelming strength.",
     "slug": "gran-habano-habano-3",
     "Date Added": "2025-05-09"
+  },
+  {
+    "Cigar Brand": "Punch",
+    "Cigar Name": "Mr. Punch's Wieners",
+    "Wrapper": "Ecuadorian Sumatra",
+    "Binder": "American Broadleaf",
+    "Filler": "Nicaraguan, Dominican, Honduran, Andullo",
+    "Flavor_Profile": "Vanilla, Oak, Sweetness, Spice",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "In_Stock": true,
+        "Price": "7.45"
+      }
+    ],
+    "description": "This year’s Father’s Day cigar is sweet, spicy, and just a little mischievous, just like Dad. Notes of vanilla, oak, and warm spice shine through, no matter which end you light.",
+    "featured_StickFigures": "2025-05-22",
+    "slug": "punch-mr-punchs-wieners",
+    "Date Added": "2025-05-22"
+  },
+  {
+    "Cigar Brand": "AJ Fernandez",
+    "Cigar Name": "Enclave by Eladio Diaz",
+    "Wrapper": "Corojo 99",
+    "Binder": "Ecuador",
+    "Filler": "Dominican Republic",
+    "Flavor_Profile": "Oak, Spice, Sweetness",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "659657757005",
+        "In_Stock": true,
+        "Price": "9.50"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "659657570178",
+        "In_Stock": true,
+        "Price": ""
+      }
+    ],
+    "description": "Two masters, one blend. This cigar delivers a bold, refined profile with notes of toasted oak, baking spice, and a subtle molasses sweetness. It’s a meeting of minds and the result is nothing short of exceptional",
+    "slug": "aj-fernandez-enclave-by-eladio-diaz",
+    "Date Added": "2025-05-22"
+  },
+  {
+    "Cigar Brand": "Deadwood",
+    "Cigar Name": "Dominicana",
+    "Wrapper": "Connecticut Shade",
+    "Binder": "Mexican San Andres",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Honey, Cream, Cocoa",
+    "Strength_Profile": "Mild",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "818558011504",
+        "In_Stock": true,
+        "Price": "12.50"
+      }
+    ],
+    "slug": "deadwood-dominicana",
+    "Date Added": "2025-05-22"
   }
 ]
