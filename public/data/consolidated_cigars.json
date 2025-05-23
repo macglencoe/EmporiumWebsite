@@ -4079,7 +4079,7 @@
   },
   {
     "Cigar Brand": "E.P. Carrillo",
-    "Cigar Name": "New Wave Connecticut Brilliantes",
+    "Cigar Name": "New Wave Connecticut Divinos",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Nicaraguan",
     "Filler": "Dominican",
@@ -4087,10 +4087,10 @@
     "Strength_Profile": "Mild-Medium",
     "Sizes": [
       {
-        "Size": "Robusto",
+        "Size": "Toro",
         "Barcode": "811167020189",
         "In_Stock": true,
-        "Price": "8.20"
+        "Price": "9.55"
       }
     ],
     "slug": "e-p-carrillo-new-wave-connecticut-brilliantes"
