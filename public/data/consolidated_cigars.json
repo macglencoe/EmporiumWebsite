@@ -647,19 +647,13 @@
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": "851350000994",
+        "Barcode": "810194080098",
         "In_Stock": true,
         "Price": "8.90"
       },
       {
         "Size": "Toro",
-        "Barcode": "7426824785498",
-        "In_Stock": true,
-        "Price": "9.00"
-      },
-      {
-        "Size": "Toro",
-        "Barcode": "851350000932",
+        "Barcode": "810194080074",
         "In_Stock": true,
         "Price": "9.25"
       },
