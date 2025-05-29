@@ -258,7 +258,7 @@ const CrudForm = (props) => {
 
     const tabList = [
         { id: "metadata-section", label: "Metadata", default: true },
-        { id: "array-section", label: "Sizes" },
+        { id: "array-section", label: "Sizes / Prices" },
         { id: "image-section", label: "Image" },
         { id: "submit-section", label: "Submit" },
     ];
