@@ -1288,7 +1288,8 @@
       }
     ],
     "slug": "arturo-fuente-chateau-fuente-natural",
-    "description": "Wrapped in a smooth Connecticut Shade leaf, this cigar delivers a mild to medium profile centered on cedar, cream, and a light sweetness. The Dominican filler and binder keep the smoke balanced and easygoing, while the Rothschild size ensures a steady, even burn. Unpretentious and consistent, this cigar has long been a go-to for those who want something mellow but not boring."
+    "description": "Wrapped in a smooth Connecticut Shade leaf, this cigar delivers a mild to medium profile centered on cedar, cream, and a light sweetness. The Dominican filler and binder keep the smoke balanced and easygoing, while the Rothschild size ensures a steady, even burn. Unpretentious and consistent, this cigar has long been a go-to for those who want something mellow but not boring.",
+    "featured_Eds_Pick": "2025-06-05"
   },
   {
     "Cigar Brand": "Arturo Fuente",
@@ -9618,6 +9619,74 @@
       }
     ],
     "slug": "deadwood-dominicana",
-    "Date Added": "2025-05-22"
+    "Date Added": "2025-05-22",
+    "description": "The Deadwood Dominicana is a fresh face in Drew Estate's Deadwood lineup, bringing a Dominican twist to the brand's signature style. Wrapped in a silky Ecuadorian Connecticut-seed leaf, it features a Mexican San Andrés binder and a core of Dominican Criollo '98 filler tobaccos from La Canela, courtesy of José Mendez & Co.",
+    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/0zjbXsFATguNOh0iVSJeAe?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "featured_StickFigures": "2025-06-05"
+  },
+  {
+    "Cigar Brand": "Hoyo De Monterrey",
+    "Cigar Name": "Hoyo Shade",
+    "Wrapper": "Honduran Shade",
+    "Binder": "Honduran",
+    "Filler": "Honduran",
+    "Flavor_Profile": "Vanilla, Cream, Wood, Must",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Rothschild",
+        "Barcode": "689674160397",
+        "In_Stock": true,
+        "Price": "6.50"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "689674160427",
+        "In_Stock": true,
+        "Price": "8.15"
+      }
+    ],
+    "description": "The latest addition to Hoyo's core lineup, the Shade, is a Honduran puro crafted entirely from Honduran tobaccos. It features a shade grown wrapper cultivated in Honduras, paired with Honduran binder and filler, delivering a mellow to medium-bodied profile. ",
+    "slug": "hoyo-de-monterrey-hoyo-shade",
+    "Date Added": "2025-06-05"
+  },
+  {
+    "Cigar Brand": "La Flor Dominicana",
+    "Cigar Name": "30th Anniversary",
+    "Wrapper": "Ecuadorian Sumatra",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Fruit, Spice, Coffee, Black Pepper",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "6 1/2 x 58",
+        "In_Stock": true,
+        "Price": "28.00"
+      }
+    ],
+    "description": "To mark three decades of craftsmanship, Litto and Ines Gomez have introduced the La Flor Dominicana 30th Anniversary cigar, a limited-edition release that embodies the brand's dedication to quality and innovation. Handcrafted at Tabacalera La Flor S.A. in the Dominican Republic, this cigar features an Ecuadorian Sumatra wrapper, a rare aged Dominican binder from Cotuí, and fillers from La Canela. \n\nMeasuring 6 ½ x 58, the cigar is presented in LFD's signature box-pressed Chisel shape, a unique wedge-shaped figurado. Each cigar is adorned with three bands, including a footband marked \"30 Years\" and a main band featuring a pink tobacco flower, symbolizing the company's name, \"The Dominican Flower.\"\n\nLimited to only 2,000 humidors, each containing 60 cigars, this release is a collector's item. The humidors themselves were crafted at La Flor Dominicana's box factory in the Dominican Republic, featuring an image of Litto and Ines on horseback in one of their tobacco fields.",
+    "slug": "la-flor-dominicana-30th-anniversary",
+    "Date Added": "2025-06-05"
+  },
+  {
+    "Cigar Brand": "Foundation",
+    "Cigar Name": "Askum Maduro",
+    "Wrapper": "Ecuador Sumatra ",
+    "Binder": "Connecticut Broadleaf",
+    "Filler": "Nicaragua",
+    "Flavor_Profile": "Cedar, Leather, Pepper, Cocoa",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "In_Stock": true,
+        "Price": "17.50"
+      }
+    ],
+    "description": "The Foundation Aksum Maduro is a medium to full-bodied cigar crafted by Nick Melillo of Foundation Cigars. This blend features a dark Ecuadorian Sumatra-seed wrapper, a USA Connecticut Broadleaf binder, and Nicaraguan fillers from Estelí and Jalapa. Handmade at AJ Fernandez’s Tabacalera Fernandez factory in Nicaragua, the Aksum Maduro offers a refined smoking experience.\nPreviously known as Metapa, the Aksum Maduro pays homage to the ancient Aksumite Kingdom, believed to be the resting place of the Ark of the Covenant. The cigar’s band features an image of Ras Makonnen, father of Haile Selassie, aligning with Foundation's tradition of incorporating historical and cultural themes into their branding.\n",
+    "featured_Teds_Pick": "2025-06-05",
+    "slug": "foundation-askum-maduro",
+    "Date Added": "2025-06-05"
   }
 ]
