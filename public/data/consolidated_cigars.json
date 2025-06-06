@@ -7900,14 +7900,7 @@
     "Filler": "Nicaraguan",
     "Flavor_Profile": "",
     "Strength_Profile": "Mild-Medium",
-    "Sizes": [
-      {
-        "Size": "Toro Grande",
-        "Barcode": "76622027046",
-        "In_Stock": true,
-        "Price": "9.00"
-      }
-    ],
+    "Sizes": [],
     "slug": "perla-del-mar-double-toro"
   },
   {
