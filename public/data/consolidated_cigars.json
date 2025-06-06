@@ -5225,10 +5225,10 @@
     "Strength_Profile": "Full",
     "Sizes": [
       {
-        "Size": "Churchill",
-        "Barcode": "76622025455",
+        "Size": "Gordo",
+        "Barcode": "076622025455",
         "In_Stock": true,
-        "Price": "10.10"
+        "Price": "10.85"
       }
     ],
     "slug": "j-c-newman-brickhouse-maduro-mighty-mighty"
@@ -5283,7 +5283,7 @@
   },
   {
     "Cigar Brand": "J.C. Newman",
-    "Cigar Name": "Brickhouse Sungrown Mighty Mighty",
+    "Cigar Name": "Brickhouse Sungrown Churchill",
     "Wrapper": "Ecuadorian  Havana",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
@@ -5291,10 +5291,10 @@
     "Strength_Profile": "Medium-Full",
     "Sizes": [
       {
-        "Size": "Gordo",
-        "Barcode": "76622025004",
+        "Size": "Churchill",
+        "Barcode": "076622025004",
         "In_Stock": true,
-        "Price": "9.00"
+        "Price": "10.55"
       }
     ],
     "slug": "j-c-newman-brickhouse-sungrown-mighty-mighty"
