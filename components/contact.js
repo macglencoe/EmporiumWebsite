@@ -135,8 +135,21 @@ const Hours = (props) => {
                 <div className="catalog-container79 weekday-container">
                     {days.map((day, index) => (
                         <div key={index} className={
-                            `weekday${index === currentDayIndex ? '-active-day' : ''}` + ' ' +
-                            `weekday${props.openDays.includes(index) ? '-open' : ''}`
+                            `
+                                text-center bg-transparent border-b-2 pb-1
+                            ` + ` ` +
+                            `${props.openDays.includes(index) ? `
+                                ` : `
+                                !border-b-0
+                            `}` + ` ` +
+                            `${index === currentDayIndex ? `
+                                !text-primary1 font-bold
+                                !border-primary1
+                            `: `
+                            text-center text-primary2
+                            !bg-transparent
+                            border-primary2
+                            `}`
                                     /* This is where open days are set */}>
                             <span>{day}</span>
                         </div>
