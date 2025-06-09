@@ -46,64 +46,40 @@ const Catalog = (props) => {
           <Contact ></Contact>
         </div>
 
-        <div className='welcome-container-b' >
-          <div className='welcome-container'>
+        <div id='hero-container' className='flex flex-row relative' style={{
+          backgroundImage: "url(/kschairs.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}>
+          <div className='absolute top-0 left-0 right-0 bottom-0 z-0' style={{
+            backgroundImage: "linear-gradient(to bottom, var(--dl-color-theme-secondary2) 10%, transparent 150%)",
+          }}></div>
+          <div className='
+          flex-3 z-10 
+          '>
 
-            <div className='welcome-text-container'>
-              <h1>The Eastern Panhandle's only cigar lounge</h1>
-              <p>
-                The King Street Emporium is the <b>perfect third space!</b> For over 30 years, we've been serving Martinsburg, WV, with a <b>friendly, laid-back spot</b> to relax, chat, and unwind
+            <div className='
+            flex flex-col gap-6
+            max-w-[675px] mx-auto
+            p-8
+            justify-evenly h-[100%]
+            '>
+              <h1 className='text-4xl font-bold text-primary2 text-center mt-10 mb-5'>The Eastern Panhandle's <em>only</em> cigar lounge</h1>
+              <p className='text-2xl text-primary2'>
+                The King Street Emporium is the perfect third space! For over 30 years, we've been serving Martinsburg, WV, with a friendly, laid-back spot to relax, chat, and unwind
               </p>
-              <p>
+              <p className='text-2xl text-primary2 font-bold'>
                 Whether you're looking for fine cigars, pipes, a nice cup of coffee, or some good conversation, <b>we're here to share our expertise</b>!
               </p>
 
-
-
-            </div>
-            <div className="divider"></div>
-            <div style={{
-              display: 'flex',
-              position: 'relative',
-              maxHeight: '200px',
-              width: '100%',
-
-            }}>
-              <img id="kschairs-background" alt="image" src="/kschairs.jpg" style={{
-                width: 'auto',
-                height: 'auto',
-                maxHeight: '100vh',
-                objectFit: 'cover',
-                opacity: '0.5',
-                width: '100%',
-              }} />
-              <div className='kschairs' style={{
-                borderTop: '3px solid var(--dl-color-theme-secondary2)',
-                width: '100%',
-                height: '100%',
-
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexDirection: 'column',
-                gap: '1em',
-                padding: '10px',
-                position: 'absolute',
-              }}>
-
-                <h1>Swing by, have a seat!</h1>
-                <button className="our-store-button" onClick={handleLocationClick}>Visit Our Store</button>
-              </div>
             </div>
           </div>
-          <div id='kschairs-container'>
-            <img alt="image" src="/ks-storefront.jpg" style={{
-              width: '100%',
-              height: 'auto',
-              objectFit: 'cover'
-
-            }} />
-          </div>
+         <div className='flex flex-col flex-1 m-6 z-10 gap-8 justify-between'>
+            <div className='p-2 bg-primary1'>
+              <img className='object-cover' alt="image" src="/ks-storefront.jpg"/>
+            </div>
+            <button className='w-full bg-primary1 p-3 text-secondary1 text-lg font-bold hover:bg-secondary1 hover:text-primary1' onClick={() => handleLocationClick()}>Visit Our Store</button>
+         </div>
         </div>
 
 
@@ -121,7 +97,7 @@ const Catalog = (props) => {
         <Featured cigars={props.data} />
 
         <div className='divider'></div>
-      
+
 
         <ShopSuggestions
           title="Cigars"
@@ -145,7 +121,7 @@ const Catalog = (props) => {
         <div className='divider'></div>
 
 
-        <NewArrivalList cigars={props.data}/>
+        <NewArrivalList cigars={props.data} />
 
 
 
@@ -262,7 +238,7 @@ const Catalog = (props) => {
           </div>
         </section>
 
-        
+
 
       </Layout>
 
