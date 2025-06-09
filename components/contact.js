@@ -6,6 +6,7 @@ import { handleLocationClick } from '../utils/location'
 import { handlePhoneClick } from '../utils/phone'
 import { handleEmailClick } from '../utils/email'
 import Link from 'next/link'
+import { PiDoorFill, PiDoorOpenFill, PiEnvelopeFill, PiEnvelopeSimpleDuotone, PiEnvelopeSimpleFill, PiNavigationArrowFill, PiPhoneFill } from 'react-icons/pi'
 
 const ContactLink = (props) => {
     return (
@@ -20,14 +21,7 @@ const ContactLink = (props) => {
                     <div className='contact-link-container'
                     >
                         <div>
-                            <svg
-                                width={props.iconSize ?? "36"}
-                                height={props.iconSize ?? "36"}
-                                viewBox="0 0 24 24"
-                                className="catalog-icon22"
-                            >
-                                {props.svgPath}
-                            </svg>
+                            {props.icon}
                         </div>
                         <span style={props["text-style"]}>{props.children}</span>
                     </div>
@@ -149,20 +143,23 @@ const Hours = (props) => {
                     ))}
                 </div>
                 <div className="catalog-container87">
-                    <span className="catalog-text248">
+                    <span className="catalog-text248 flex flex-row items-center gap-2">
+                        <PiDoorOpenFill size={28} />
                         {props.openingTime > 12 ? props.openingTime - 12 : props.openingTime}{props.openingTime < 12 ? 'AM' : 'PM'}
                     </span>
                     <span className="catalog-text249">
                         <span>-</span>
                         <br></br>
                     </span>
-                    <span className="catalog-text252">
+                    <span className="catalog-text252 flex flex-row items-center gap-2">
+                        <PiDoorFill size={28} />
                         {props.closingTime > 12 ? props.closingTime - 12 : props.closingTime}{props.closingTime < 12 ? 'AM' : 'PM'}
                     </span>
                 </div>
-                <div className="catalog-container88">
+                <div className="catalog-container88 flex flex-row !items-center">
                     <div className="catalog-container89">
-                        <span className="catalog-text253">{isOpen ? "Open Now" : "Closed"}</span>
+                        <span className="catalog-text253 flex flex-row items-center gap-3">{isOpen ? "Open Now" : "Closed"} </span>
+
                     </div>
                     <span className="catalog-text254">
                         <span>{formatTime(currentTime)}</span>
@@ -334,14 +331,12 @@ const Contact = (props) => {
             <section className="contact" aria-label='Contact Information'>
                 <div className="catalog-container75">
                     <ContactLink
-                        svgPath={<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7m0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5"
-                        ></path>}
+                        icon={<PiNavigationArrowFill size={24} />}
                         onClick={handleLocationClick}
                         text-style={{
                             textAlign: 'right',
                             fontSize: '0.96em',
                         }}
-                        iconSize="24"
                     >320 W King Street<br></br>
                         Martinsburg, West Virginia</ContactLink>
                         <Hours
@@ -352,9 +347,7 @@ const Contact = (props) => {
                             ]}
                         />
                     <ContactLink
-                        svgPath={<path
-                            d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02c-.37-1.11-.56-2.3-.56-3.53c0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99"
-                        ></path>}
+                        icon={<PiPhoneFill size={36} />}
                         onClick={handlePhoneClick}
                         text-style={{
                             textAlign: 'left',
@@ -364,9 +357,7 @@ const Contact = (props) => {
                         (304) 264-9130
                     </ContactLink>
                     <ContactLink
-                        svgPath={<path
-                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"
-                        ></path>}
+                        icon={<PiEnvelopeSimpleFill size={36} />}
                         onClick={handleEmailClick}
                         text-style={{
                             fontSize: '0.75em',
