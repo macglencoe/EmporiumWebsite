@@ -45,7 +45,7 @@ export default function Layout(props) {
             <div className="flex flex-wrap justify-between items-center w-full p-4 bg-secondary1">
               <Link href="/" aria-label="Go to homepage">
                 <a>
-                  <h1 className="small-caps text-[2em] font-bold text-primary2 text-center">
+                  <h1 className="small-caps text-[1em] md:text-[2em] font-bold text-primary2 text-center">
                     The King Street Emporium
                   </h1>
                 </a>
