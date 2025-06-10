@@ -13,6 +13,7 @@ import ShopSuggestions from '../components/shopSuggestions'
 import { handleLocationClick } from '../utils/location'
 import NewArrivalList from '../components/newArrivalList'
 import Featured from '../components/featured'
+import BrandShowcase from '../components/brandShowcase'
 
 export const getStaticProps = async () => {
   const data = await import('../public/data/consolidated_cigars.json');
@@ -54,7 +55,7 @@ const Catalog = (props) => {
             <div className='
             flex-3 z-10 
             '>
-  
+
               <div className='
               flex flex-col gap-6
               max-w-[675px] mx-auto
@@ -68,7 +69,7 @@ const Catalog = (props) => {
                 <p className='text-lg md:text-2xl text-primary2 font-bold'>
                   Whether you're looking for fine cigars, pipes, a nice cup of coffee, or some good conversation, <b>we're here to share our expertise</b>!
                 </p>
-  
+
               </div>
             </div>
             <div className='flex flex-col flex-1 m-6 z-10 gap-8 justify-around'>
@@ -130,32 +131,7 @@ const Catalog = (props) => {
 
 
         <div className='divider'></div>
-        <nav style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '20px'
-        }}>
-          <h1 style={{ fontSize: '2em' }}>We are proud to carry your favorite brands</h1>
-          <ul className='brand-logo-container'>
-            <Link href="/cigars?Cigar+Brand=Arturo+Fuente.">
-              <a tabIndex={0} aria-label='Arturo Fuente'>
-                <img alt="Arturo Fuente" src='/af-logo.webp' /></a></Link>
-            <Link href="/cigars?Cigar+Brand=J.C.+Newman">
-              <a tabIndex={0} aria-label='J.C. Newman'>
-                <img alt="J.C. Newman" src='/jcn-logo.png' /></a></Link>
-            <Link href="/pipes#savinelli">
-              <a tabIndex={0} aria-label='Savinelli'>
-                <img alt="Savinelli" src='/savinelli-logo.webp' /></a></Link>
-            <Link href="/pipes#peterson">
-              <a tabIndex={0} aria-label='Peterson'>
-                <img alt="Peterson" src='/peterson-logo.png' /></a></Link>
-            <Link href="/tobacco?Tobacco+Brand=Cornell+%26+Diehl">
-              <a tabIndex={0} aria-label='Cornell & Diehl'>
-                <img alt="Cornell & Diehl" src='/cd-logo.jpg' /></a></Link>
-          </ul>
-        </nav>
+        <BrandShowcase />
 
         <div className='divider'></div>
 
