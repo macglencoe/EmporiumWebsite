@@ -18,7 +18,7 @@ export const NewArrivalList = ({ cigars }) => {
         <>
             <div className='new-arrivals'>
                 <h2>New Arrivals</h2>
-                <ul>
+                <ul className="max-w-5xl mx-auto">
                     {newCigars.map(cigar => (
                         <li key={cigar.slug}>
                             <p className='date'>
