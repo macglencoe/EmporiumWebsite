@@ -42,11 +42,7 @@ const Catalog = (props) => {
       </Head>
 
       <Layout>
-        <div className="mobile-home-contact">
-          <Contact ></Contact>
-        </div>
-
-        <div id='hero-container' className='flex flex-row relative' style={{
+        <div id='hero-container' className='flex flex-col md:flex-row relative' style={{
           backgroundImage: "url(/kschairs.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center"
@@ -64,11 +60,11 @@ const Catalog = (props) => {
             p-8
             justify-evenly h-[100%]
             '>
-              <h1 className='text-4xl font-bold text-primary2 text-center mt-10 mb-5'>The Eastern Panhandle's <em>only</em> cigar lounge</h1>
-              <p className='text-2xl text-primary2'>
+              <h1 className='text-3xl md:text-5xl font-bold text-primary2 text-center mt-10 mb-5'>The Eastern Panhandle's <em>only</em> cigar lounge</h1>
+              <p className='text-lg md:text-2xl text-primary2'>
                 The King Street Emporium is the perfect third space! For over 30 years, we've been serving Martinsburg, WV, with a friendly, laid-back spot to relax, chat, and unwind
               </p>
-              <p className='text-2xl text-primary2 font-bold'>
+              <p className='text-lg md:text-2xl text-primary2 font-bold'>
                 Whether you're looking for fine cigars, pipes, a nice cup of coffee, or some good conversation, <b>we're here to share our expertise</b>!
               </p>
 
@@ -76,10 +72,14 @@ const Catalog = (props) => {
           </div>
          <div className='flex flex-col flex-1 m-6 z-10 gap-8 justify-between'>
             <div className='p-2 bg-primary1'>
-              <img className='object-cover' alt="image" src="/ks-storefront.jpg"/>
+              <img className='object-cover h-50 w-full md:h-auto' alt="image" src="/ks-storefront.jpg"/>
             </div>
             <button className='w-full bg-primary1 p-3 text-secondary1 text-lg font-bold hover:bg-secondary1 hover:text-primary1' onClick={() => handleLocationClick()}>Visit Our Store</button>
          </div>
+        </div>
+
+        <div className="md:hidden">
+          <Contact ></Contact>
         </div>
 
 
