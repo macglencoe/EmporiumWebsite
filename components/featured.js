@@ -105,37 +105,39 @@ const FeatureCard = ({ title, date, cigar, href }) => (
   
     return (
       <section className="flex flex-col items-center p-5 gap-6 relative bg-primary2 overflow-hidden">
-        <div className="absolute inset-0 bg-cover opacity-30 z-0" />
-        <h1 className="text-3xl font-bold z-10">Featured Cigars</h1>
-        <div className="flex flex-wrap justify-evenly gap-4 w-full z-10">
-          {featureEdsPick.length > 0 && (
-            <FeatureCard
-              title="Ed's Pick"
-              date={featureEdsPick[0]["featured_Eds_Pick"]}
-              cigar={featureEdsPick[0]}
-              href={`/cigars/${featureEdsPick[0].slug}`}
-            />
-          )}
-          {featureTedsPick.length > 0 && (
-            <FeatureCard
-              title="Ted's Pick"
-              date={featureTedsPick[0]["featured_Teds_Pick"]}
-              cigar={featureTedsPick[0]}
-              href={`/cigars/${featureTedsPick[0].slug}`}
-            />
-          )}
-          {featureStickFigures.length > 0 && (
-            <FeatureCard
-              title={
-                <>
-                  On <a className="underline" href="https://open.spotify.com/show/0xpAdXeTXnnh30J0HEVmoz">The Stick Figures Podcast</a>
-                </>
-              }
-              date={featureStickFigures[0]["featured_StickFigures"]}
-              cigar={featureStickFigures[0]}
-              href={`/cigars/${featureStickFigures[0].slug}`}
-            />
-          )}
+        <div className='flex flex-col items-center gap-6 relative max-w-5xl mx-auto'>
+          <div className="absolute inset-0 bg-cover opacity-90 z-0" />
+          <h1 className="text-3xl font-bold z-10">Featured Cigars</h1>
+          <div className="flex flex-wrap justify-evenly gap-4 w-full z-10 max-w-5xl">
+            {featureEdsPick.length > 0 && (
+              <FeatureCard
+                title="Ed's Pick"
+                date={featureEdsPick[0]["featured_Eds_Pick"]}
+                cigar={featureEdsPick[0]}
+                href={`/cigars/${featureEdsPick[0].slug}`}
+              />
+            )}
+            {featureTedsPick.length > 0 && (
+              <FeatureCard
+                title="Ted's Pick"
+                date={featureTedsPick[0]["featured_Teds_Pick"]}
+                cigar={featureTedsPick[0]}
+                href={`/cigars/${featureTedsPick[0].slug}`}
+              />
+            )}
+            {featureStickFigures.length > 0 && (
+              <FeatureCard
+                title={
+                  <>
+                    On <a className="underline" href="https://open.spotify.com/show/0xpAdXeTXnnh30J0HEVmoz">The Stick Figures Podcast</a>
+                  </>
+                }
+                date={featureStickFigures[0]["featured_StickFigures"]}
+                cigar={featureStickFigures[0]}
+                href={`/cigars/${featureStickFigures[0].slug}`}
+              />
+            )}
+          </div>
         </div>
       </section>
     );
