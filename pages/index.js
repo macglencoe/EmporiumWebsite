@@ -50,32 +50,34 @@ const Catalog = (props) => {
           <div className='absolute top-0 left-0 right-0 bottom-0 z-0' style={{
             backgroundImage: "linear-gradient(to bottom, var(--dl-color-theme-secondary2) 10%, transparent 150%)",
           }}></div>
-          <div className='
-          flex-3 z-10 
-          '>
-
+          <div className='flex flex-col md:flex-row max-w-5xl mx-auto'>
             <div className='
-            flex flex-col gap-6
-            max-w-[675px] mx-auto
-            p-8
-            justify-evenly h-[100%]
+            flex-3 z-10 
             '>
-              <h1 className='text-3xl md:text-5xl font-bold text-primary2 text-center mt-10 mb-5'>The Eastern Panhandle's <em>only</em> cigar lounge</h1>
-              <p className='text-lg md:text-2xl text-primary2'>
-                The King Street Emporium is the perfect third space! For over 30 years, we've been serving Martinsburg, WV, with a friendly, laid-back spot to relax, chat, and unwind
-              </p>
-              <p className='text-lg md:text-2xl text-primary2 font-bold'>
-                Whether you're looking for fine cigars, pipes, a nice cup of coffee, or some good conversation, <b>we're here to share our expertise</b>!
-              </p>
-
+  
+              <div className='
+              flex flex-col gap-6
+              max-w-[675px] mx-auto
+              p-8
+              justify-evenly h-[100%]
+              '>
+                <h1 className='text-3xl md:text-5xl font-bold text-primary2 text-center mt-10 mb-5'>The Eastern Panhandle's <em>only</em> cigar lounge</h1>
+                <p className='text-lg md:text-2xl text-primary2'>
+                  The King Street Emporium is the perfect third space! For over 30 years, we've been serving Martinsburg, WV, with a friendly, laid-back spot to relax, chat, and unwind
+                </p>
+                <p className='text-lg md:text-2xl text-primary2 font-bold'>
+                  Whether you're looking for fine cigars, pipes, a nice cup of coffee, or some good conversation, <b>we're here to share our expertise</b>!
+                </p>
+  
+              </div>
+            </div>
+            <div className='flex flex-col flex-1 m-6 z-10 gap-8 justify-around'>
+              <div className='p-2 bg-primary1'>
+                <img className='object-cover h-50 w-full md:h-auto' alt="image" src="/ks-storefront.jpg" />
+              </div>
+              <button className='w-full bg-primary1 p-3 text-secondary1 text-lg font-bold hover:bg-secondary1 hover:text-primary1' onClick={() => handleLocationClick()}>Visit Our Store</button>
             </div>
           </div>
-         <div className='flex flex-col flex-1 m-6 z-10 gap-8 justify-between'>
-            <div className='p-2 bg-primary1'>
-              <img className='object-cover h-50 w-full md:h-auto' alt="image" src="/ks-storefront.jpg"/>
-            </div>
-            <button className='w-full bg-primary1 p-3 text-secondary1 text-lg font-bold hover:bg-secondary1 hover:text-primary1' onClick={() => handleLocationClick()}>Visit Our Store</button>
-         </div>
         </div>
 
         <div className="md:hidden">
