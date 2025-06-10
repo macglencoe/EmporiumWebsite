@@ -19,6 +19,8 @@ export const BarcodeSearch = (props) => {
 
     const router = useRouter();
 
+    const [data, setData] = useState(props.data);
+
     const [results, setResults] = useState([]);
     const [searchInput, setSearchInput] = useState("");
 
@@ -36,10 +38,16 @@ export const BarcodeSearch = (props) => {
     useEffect(() => {
         if (router.query.search) {
             const search = router.query.search;
-            const results = props.data.filter((cigar) => cigar.Sizes.some((size) => size.Barcode?.toString().includes(search)));
+            const results = data.filter((cigar) => cigar.Sizes.some((size) => size.Barcode?.toString().includes(search)));
             setResults(results);
         }
     }, [router.query.search]);
+
+    useEffect(() => {
+        if (localStorage.getItem('tempData_cigars')) {
+            setData(JSON.parse(localStorage.getItem('tempData_cigars')));   
+        }
+    }, []);
 
     /* const result =
     {
@@ -80,7 +88,7 @@ export const BarcodeSearch = (props) => {
                         setSearchInput("");
                     }}>
                     <div className="scanner-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-120q-60 0-95.5-46.5T124-270l72-272q-33-21-54.5-57T120-680q0-66 47-113t113-47h320q45 0 68 38t3 78l-80 160q-11 20-29.5 32T520-520h-81l-11 40h12q17 0 28.5 11.5T480-440v80q0 17-11.5 28.5T440-320h-54l-30 112q-11 39-43 63.5T240-120Zm0-80q14 0 24-8t14-21l78-291h-83l-72 270q-5 19 7 34.5t32 15.5Zm40-400h240l80-160H280q-33 0-56.5 23.5T200-680q0 33 23.5 56.5T280-600Zm480-160-25-54 145-66 24 55-144 65Zm120 280-145-65 25-55 144 66-24 54ZM760-650v-60h160v60H760Zm-360-30Zm-85 160Z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-120q-60 0-95.5-46.5T124-270l72-272q-33-21-54.5-57T120-680q0-66 47-113t113-47h320q45 0 68 38t3 78l-80 160q-11 20-29.5 32T520-520h-81l-11 40h12q17 0 28.5 11.5T480-440v80q0 17-11.5 28.5T440-320h-54l-30 112q-11 39-43 63.5T240-120Zm0-80q14 0 24-8t14-21l78-291h-83l-72 270q-5 19 7 34.5t32 15.5Zm40-400h240l80-160H280q-33 0-56.5 23.5T200-680q0 33 23.5 56.5T280-600Zm480-160-25-54 145-66 24 55-144 65Zm120 280-145-65 25-55 144 66-24 54ZM760-650v-60h160v60H760Zm-360-30Zm-85 160Z" /></svg>
                     </div>
                     <input type="search" placeholder="Click here, then scan!" onChange={(e) => setSearchInput(e.target.value)} value={searchInput}></input>
                     <button type="submit" aria-label="Search">
@@ -141,7 +149,7 @@ export const BarcodeSearch = (props) => {
                                     textDecoration: "underline",
                                     textDecorationColor: "var(--positive)"
                                 }}>$5.00</p>
-                            </div> 
+                            </div>
                             <p>= Exact match</p>
                         </li>
                         <li>
@@ -171,7 +179,7 @@ export const BarcodeSearch = (props) => {
                         </li>
                     </ul>
                 </div>
-                <Barcodeless data={[...props.data]} />
+                <Barcodeless data={[...data]} />
 
             </Layout >
             <style jsx>
