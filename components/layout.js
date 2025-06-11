@@ -86,11 +86,12 @@ const Layout = (props) => {
                   },
                   {
                     href: '/cigars/barcodeSearch', label: 'Point of Sale',
-                    icon: <PiBarcodeBold size={26}/>
+                    icon: <PiBarcodeBold size={26}/>,
                   },
                   {
-                    href: '/cigars/dense', label: 'Dense Search',
-                    icon: <PiTableBold size={26}/>
+                    href: '/cigars/dense', label: 'Dense Catalog',
+                    icon: <PiTableBold size={26}/>,
+                    newExpiration: new Date("2025-06-21T00:00:00")
                   }
                 ]}
                 style={{ backgroundColor: 'var(--dl-color-theme-secondary1)' }}

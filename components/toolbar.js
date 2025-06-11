@@ -15,6 +15,19 @@ export const Toolbar = (props) => {
                         <Link href={link.href}>
                             <a>{link.icon && link.icon}{link.label}</a>
                         </Link>
+                        { link.newExpiration > Date.now() &&
+                            <span style={{
+                            color: 'var(--dl-color-theme-primary2)',
+                            fontFamily: 'Inter',
+                            fontSize: '1em',
+                            padding: '0.5em',
+                            marginLeft: '0.5em',
+                            backgroundColor: 'var(--dl-color-theme-secondary2)',
+                            borderRadius: '25px',
+                            }}>
+                                New!
+                            </span>
+                        }
                     </li>
                 ))}
             </ul>
@@ -86,6 +99,9 @@ ul {
 li {
     background-color: var(--dl-color-theme-secondary2);
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
 }
 li a {
     font-family: Inter;
