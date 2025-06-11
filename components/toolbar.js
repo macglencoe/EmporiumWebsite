@@ -13,7 +13,7 @@ export const Toolbar = (props) => {
                         className={router.pathname == link.href ? "active" : ""}
                     >
                         <Link href={link.href}>
-                            <a>{link.icon && <svg xmlns="http://www.w3.org/2000/svg" height="1.7em" viewBox="0 -960 960 960"fill="#e8eaed">{link.icon}</svg>}{link.label}</a>
+                            <a>{link.icon && link.icon}{link.label}</a>
                         </Link>
                     </li>
                 ))}
