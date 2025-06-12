@@ -5058,13 +5058,13 @@
         "Size": "Rothschild",
         "Barcode": "689674155164",
         "In_Stock": true,
-        "Price": "6.35"
+        "Price": "6.50"
       },
       {
         "Size": "Toro",
         "Barcode": "689674155195",
         "In_Stock": true,
-        "Price": "7.95"
+        "Price": "8.15"
       }
     ],
     "slug": "hoyo-de-monterrey-hoyo-oscuro"
@@ -6842,24 +6842,6 @@
   },
   {
     "Cigar Brand": "Macanudo",
-    "Cigar Name": "Bourbon",
-    "Wrapper": "Ecuadorian Shade",
-    "Binder": "Ecuadorian",
-    "Filler": "Dominican",
-    "Flavor_Profile": "Old-Fashioned w/o the glass:  Bourbon, Cherry, Bitters",
-    "Strength_Profile": "Mild-Medium",
-    "Sizes": [
-      {
-        "Size": "Toro",
-        "Barcode": "689674100713",
-        "In_Stock": true,
-        "Price": "9.90"
-      }
-    ],
-    "slug": "macanudo-bourbon"
-  },
-  {
-    "Cigar Brand": "Macanudo",
     "Cigar Name": "Brazilian Shade",
     "Wrapper": "Brazilian Shade",
     "Binder": "Mexican San Andrean",
@@ -7317,7 +7299,7 @@
   {
     "Cigar Brand": "Odyssey",
     "Cigar Name": "Sweet tip",
-    "Wrapper": "Maduro",
+    "Wrapper": "Shade",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Rich, Creamy and sweet",
@@ -7327,7 +7309,7 @@
         "Size": "Toro",
         "Barcode": "689674104896",
         "In_Stock": true,
-        "Price": "3.00"
+        "Price": "3.25"
       }
     ],
     "slug": "odyssey-sweet-tip"
@@ -9326,7 +9308,7 @@
         "Size": "Robusto",
         "Barcode": "689674161585",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "10.50"
       }
     ],
     "slug": "macanudo-m-vanilla-bourbon",
@@ -9364,7 +9346,7 @@
         "Size": "Robusto",
         "Barcode": "689674100713",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "10.50"
       }
     ],
     "slug": "macanudo-m-bourbon",
@@ -9383,7 +9365,7 @@
         "Size": "Robusto",
         "Barcode": "689674161486",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "10.50"
       }
     ],
     "slug": "macanudo-m-honey",
@@ -9402,7 +9384,7 @@
         "Size": "Robusto",
         "Barcode": "689674161530",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "10.50"
       }
     ],
     "slug": "macanudo-m-irish-cream",
