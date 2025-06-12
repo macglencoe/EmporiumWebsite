@@ -4151,7 +4151,7 @@
     "slug": "e-p-carrillo-pledge"
   },
   {
-    "Cigar Brand": "Eiroia",
+    "Cigar Brand": "Eiroa",
     "Cigar Name": "The First 20",
     "Wrapper": "Honduran",
     "Binder": "Honduran",
@@ -9701,5 +9701,51 @@
     "description": "The Chillin' Moose by Foundry Tobacco Co. is a medium-bodied cigar that offers a complex blend of tobaccos from five countries. It features a Connecticut Habano Rosado wrapper, an Ecuadorian Sumatra binder, and a filler blend of Nicaraguan, Dominican, U.S. Broadleaf, and Mexican San Andrés tobaccos",
     "slug": "foundry-chillin-moose",
     "Date Added": "2025-06-05"
+  },
+  {
+    "Cigar Brand": "Asylum 13",
+    "Cigar Name": "Medulla Maduro",
+    "Wrapper": "San Andres Maduro",
+    "Binder": "Corojo",
+    "Filler": "Corojo",
+    "Flavor_Profile": "Black Pepper, Leather, Espresso, Earth",
+    "Strength_Profile": "Full",
+    "Sizes": [
+      {
+        "Size": "6x60",
+        "Barcode": "855374008073",
+        "In_Stock": true,
+        "Price": "11.50"
+      }
+    ],
+    "description": "The Medulla Maduro takes everything people loved about the original and wraps it in a rich San Andrés Maduro leaf. Rolled at CLE’s factory in Honduras, this cigar stays true to its roots with bold Honduran Corojo filler and binder. The maduro wrapper adds a deeper sweetness and a touch of spice, bringing out notes of dark chocolate, leather, espresso, earth, and black pepper.",
+    "slug": "asylum-13-medulla-maduro",
+    "Date Added": "2025-06-12"
+  },
+  {
+    "Cigar Brand": "Eiroa",
+    "Cigar Name": "Jamastran",
+    "Wrapper": "Honduran Corojo",
+    "Binder": "Honduran Corojo",
+    "Filler": "Honduran Corojo",
+    "Flavor_Profile": "Peanuts, Herbal, Floral, Chocolate, Peppermint",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "860000439688",
+        "In_Stock": true,
+        "Price": "18.00"
+      },
+      {
+        "Size": "11/18 (Toro)",
+        "Barcode": "860001302509",
+        "In_Stock": true,
+        "Price": "19.50"
+      }
+    ],
+    "description": "The Eiroa Jamastran is a bold showcase of Honduran craftsmanship, built entirely from tobaccos grown in the Jamastran Valley. This puro offers a clean, focused expression of the Corojo leaf that put Christian Eiroa’s name on the map.\n\nIf you want to taste what Honduran tobacco can do on its own, this is the benchmark.",
+    "slug": "eiroa-jamastran",
+    "Date Added": "2025-06-12"
   }
 ]
