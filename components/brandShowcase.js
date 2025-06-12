@@ -145,17 +145,6 @@ export default function BrandShowcase() {
             </div>
           ))}
         </div>
-
-        {/* Bottom Section */}
-        <div className="text-center mt-12">
-          <div className="flex items-center justify-center gap-6 text-primary2">
-            <div className="w-20 h-px bg-primary2"></div>
-            <span className="text-sm font-semibold tracking-wider" style={{ fontFamily: 'serif' }}>
-              DISCOVER OUR COMPLETE COLLECTION
-            </span>
-            <div className="w-20 h-px bg-primary2"></div>
-          </div>
-        </div>
       </div>
     </section>
   );
