@@ -1462,7 +1462,7 @@
         "Size": "Gordito",
         "Barcode": "843182122111",
         "In_Stock": true,
-        "Price": "13.65"
+        "Price": "14.15"
       }
     ],
     "slug": "arturo-fuente-don-carlos-eye-of-the-bull",
@@ -2138,7 +2138,7 @@
         "Size": "Perfecto",
         "Barcode": "843182122722",
         "In_Stock": true,
-        "Price": "19.00"
+        "Price": "20.25"
       }
     ],
     "slug": "arturo-fuente-untold-story-maduro"
@@ -9728,6 +9728,25 @@
     ],
     "description": "The Eiroa Jamastran is a bold showcase of Honduran craftsmanship, built entirely from tobaccos grown in the Jamastran Valley. This puro offers a clean, focused expression of the Corojo leaf that put Christian Eiroa’s name on the map.\n\nIf you want to taste what Honduran tobacco can do on its own, this is the benchmark.",
     "slug": "eiroa-jamastran",
+    "Date Added": "2025-06-12"
+  },
+  {
+    "Cigar Brand": "Arturo Fuente",
+    "Cigar Name": "2021 Unnamed Reserve",
+    "Wrapper": "Rosado Sungrown",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Pepper, Cedar, Cream",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Corona Gorda",
+        "In_Stock": true,
+        "Price": "13.60"
+      }
+    ],
+    "description": "A rare annual release from Arturo Fuente’s Unnamed Reserve series, the 2021 edition comes in a 5 ¾ by 48 corona gorda that was rolled in 2016 and released five years later. It features a sun grown Rosado wrapper over Dominican binder and filler, all produced at Tabacalera A. Fuente y Cia. Only 1,000 boxes of 20 were made.\nThis cigar shows off classic Fuente craftsmanship with a smooth draw, even burn, and refined construction. Each stick comes in cellophane and a cedar sleeve marked ProduXion 2016, nodding to the early aging that sets this release apart.\nIdeal for collectors or anyone who appreciates pedigree, patience, and a quiet sense of excellence.",
+    "slug": "arturo-fuente-2021-unnamed-reserve",
     "Date Added": "2025-06-12"
   }
 ]
