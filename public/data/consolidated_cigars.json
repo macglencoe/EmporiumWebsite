@@ -9748,5 +9748,51 @@
     "description": "A rare annual release from Arturo Fuente’s Unnamed Reserve series, the 2021 edition comes in a 5 ¾ by 48 corona gorda that was rolled in 2016 and released five years later. It features a sun grown Rosado wrapper over Dominican binder and filler, all produced at Tabacalera A. Fuente y Cia. Only 1,000 boxes of 20 were made.\nThis cigar shows off classic Fuente craftsmanship with a smooth draw, even burn, and refined construction. Each stick comes in cellophane and a cedar sleeve marked ProduXion 2016, nodding to the early aging that sets this release apart.\nIdeal for collectors or anyone who appreciates pedigree, patience, and a quiet sense of excellence.",
     "slug": "arturo-fuente-2021-unnamed-reserve",
     "Date Added": "2025-06-12"
+  },
+  {
+    "Cigar Brand": "E.P. Carrillo",
+    "Cigar Name": "Essence Connecticut",
+    "Wrapper": "Ecuadorian Connecticut",
+    "Binder": "Honduran Criollo 98",
+    "Filler": "Honduras, Dominican",
+    "Flavor_Profile": "Cream, Hay, Cedar, Almond",
+    "Strength_Profile": "Mild",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "811167023067",
+        "In_Stock": true,
+        "Price": "9.80"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "811167023081",
+        "In_Stock": true,
+        "Price": "10.60"
+      }
+    ],
+    "description": "The fourth release in the Essence Series, the Essence Connecticut brings a mellow and elegant character to the E.P. Carrillo lineup. It features an Ecuadorian Connecticut wrapper, a Honduran Criollo 98 binder, and a blend of Honduran and Dominican fillers. The result is a smooth and balanced cigar with notes of cream, hay, light pepper, and subtle almond.\nRolled at Agroindustrias Diadema in Honduras, it offers a refined draw and clean finish that make it a perfect pick for those who enjoy Connecticut cigars with a little more depth. Available in Robusto, and Toro sizes, each in 24-count boxes.",
+    "slug": "ep-carrillo-essence-connecticut",
+    "Date Added": "2025-06-18"
+  },
+  {
+    "Cigar Brand": "E.P. Carrillo",
+    "Cigar Name": "Endure",
+    "Wrapper": "Cameroon",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Floral, Baking spice, Nuttiness, Pepper",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "811167023029",
+        "In_Stock": true,
+        "Price": "21.20"
+      }
+    ],
+    "description": "The E.P. Carrillo Endure is a return to tradition with a rare Meerapfel-grown Cameroon wrapper that hasn’t been featured in a Perez-Carrillo blend for decades. This is a cigar built on legacy, combining a smooth and flavorful exterior with a Nicaraguan core that brings both strength and finesse.\nMedium to full in body, it offers natural sweetness, floral touches, baking spice, and earthy depth, rounded out by a peppery finish and just a hint of nuttiness. Each puff tells a story of resilience and craftsmanship.\nRolled at Tabacalera La Alianza in the Dominican Republic, the Endure is available in box-pressed Robusto and Toro sizes, both packaged in 10-count boxes. A Corona Gorda is set to join the line soon.\n",
+    "slug": "ep-carrillo-endure",
+    "Date Added": "2025-06-18"
   }
 ]
