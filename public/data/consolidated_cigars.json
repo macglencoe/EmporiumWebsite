@@ -848,7 +848,7 @@
         "Size": "Toro",
         "Barcode": "815337018457",
         "In_Stock": true,
-        "Price": "12.30"
+        "Price": "13.00"
       },
       {
         "Size": "Robusto",
@@ -4650,7 +4650,7 @@
         "Size": "Robusto",
         "Barcode": "689674151111",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "10.25"
       }
     ],
     "slug": "forged-johnny-tobacconaut",
@@ -6661,7 +6661,7 @@
         "Size": "Churchill Grande",
         "Barcode": "689674046691",
         "In_Stock": true,
-        "Price": "13.80"
+        "Price": "14.30"
       },
       {
         "Size": "Toro Grande",
@@ -9794,5 +9794,60 @@
     "description": "The E.P. Carrillo Endure is a return to tradition with a rare Meerapfel-grown Cameroon wrapper that hasn’t been featured in a Perez-Carrillo blend for decades. This is a cigar built on legacy, combining a smooth and flavorful exterior with a Nicaraguan core that brings both strength and finesse.\nMedium to full in body, it offers natural sweetness, floral touches, baking spice, and earthy depth, rounded out by a peppery finish and just a hint of nuttiness. Each puff tells a story of resilience and craftsmanship.\nRolled at Tabacalera La Alianza in the Dominican Republic, the Endure is available in box-pressed Robusto and Toro sizes, both packaged in 10-count boxes. A Corona Gorda is set to join the line soon.\n",
     "slug": "ep-carrillo-endure",
     "Date Added": "2025-06-18"
+  },
+  {
+    "Cigar Brand": "Gurkha",
+    "Cigar Name": "Volition America",
+    "Wrapper": "Connecticut",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan, Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Mild",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "810136292589",
+        "In_Stock": true,
+        "Price": "13.80"
+      }
+    ],
+    "description": "Volition America by Gurkha is a patriotic cigar line crafted in partnership with the Folds of Honor Foundation. Each 6x54 Toro comes in one of three blends—Maduro, Habano, or Connecticut—offering options from bold to mild. The cigars are made in Nicaragua with a Nicaraguan binder and a mix of Nicaraguan and Dominican fillers. Every box of 13 cigars symbolizes the 13 folds of the American flag, and 13% of proceeds go toward educational scholarships for families of fallen or disabled military members and first responders.",
+    "slug": "gurkha-volition-america",
+    "Date Added": "2025-06-26"
+  },
+  {
+    "Cigar Brand": "Gurkha",
+    "Cigar Name": "Volition America Habano",
+    "Wrapper": "Habano",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan, Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "810136292619",
+        "In_Stock": true,
+        "Price": "13.80"
+      }
+    ],
+    "description": "Volition America by Gurkha is a patriotic cigar line crafted in partnership with the Folds of Honor Foundation. Each 6x54 Toro comes in one of three blends—Maduro, Habano, or Connecticut—offering options from bold to mild. The cigars are made in Nicaragua with a Nicaraguan binder and a mix of Nicaraguan and Dominican fillers. Every box of 13 cigars symbolizes the 13 folds of the American flag, and 13% of proceeds go toward educational scholarships for families of fallen or disabled military members and first responders.",
+    "slug": "gurkha-volition-america-habano",
+    "Date Added": "2025-06-26"
+  },
+  {
+    "Cigar Brand": "Gurkha",
+    "Cigar Name": "Volition America Maduro",
+    "Wrapper": "Maduro",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan, Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {}
+    ],
+    "description": "Volition America by Gurkha is a patriotic cigar line crafted in partnership with the Folds of Honor Foundation. Each 6x54 Toro comes in one of three blends—Maduro, Habano, or Connecticut—offering options from bold to mild. The cigars are made in Nicaragua with a Nicaraguan binder and a mix of Nicaraguan and Dominican fillers. Every box of 13 cigars symbolizes the 13 folds of the American flag, and 13% of proceeds go toward educational scholarships for families of fallen or disabled military members and first responders.",
+    "slug": "gurkha-volition-america-maduro",
+    "Date Added": "2025-06-26"
   }
 ]
