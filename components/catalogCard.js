@@ -224,7 +224,7 @@ const CatalogCard = (props) => {
                                 </button>
                             }
                             {
-                                props.sizes &&
+                                Array.isArray(props.sizes) && props.sizes.length > 0 &&
                                 <div className="size-cigar">
                                     <div className="size-cigar-text">
                                         <span>{
