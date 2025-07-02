@@ -135,13 +135,16 @@ const Catalog = (props) => {
 
         <div className='divider'></div>
 
-        <section className='podcast'>
-          <h1 id='podcast'>The Stick Figures</h1>
-          <b>Our very own podcast</b>
-          <p>What does a former 1%er biker, a modern farmer/ tobacconist, redneck battle rapper, and a submarine vet have in common? Nothing except that they are all brothers of the leaf. Tune in with the Stick Figures to hear about cigars, tobacco and life on this comedy cigar podcast.</p>
-          <iframe src="https://open.spotify.com/embed/show/0xpAdXeTXnnh30J0HEVmoz?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <section className='flex flex-col gap-4 p-6 bg-primary2/75'>
+          <h1 id='podcast' className='text-center text-3xl md:text-5xl font-bold text-secondary2 uppercase my-8'>The Stick Figures</h1>
+          <div className='h-1 w-full max-w-[4rem] mx-auto bg-secondary2'></div>
+          <p className='
+            text-lg md:text-xl text-secondary2
+            mx-3 my-3
+          '>What does a former 1%er biker, a modern farmer/ tobacconist, redneck battle rapper, and a submarine vet have in common? Nothing except that they are all brothers of the leaf. Tune in with the Stick Figures to hear about cigars, tobacco and life on this comedy cigar podcast.</p>
+          <iframe className='px-3 mx-auto max-w-3xl' src="https://open.spotify.com/embed/show/0xpAdXeTXnnh30J0HEVmoz?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-          <div className='podcast-links'>
+          <div className='podcast-links self-center'>
             <b>Find us on:</b>
             <ul>
               <li>
@@ -174,43 +177,43 @@ const Catalog = (props) => {
 
 
 
-        <section style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '20px',
-          width: '100%',
-          gap: '2em'
-        }}>
-          <h1 id='staff' style={{
-            fontSize: '2.5em'
-          }}>Meet our staff</h1>
-          <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            width: '100%',
-            justifyContent: 'center',
-            gap: '2em'
-
-          }}>
-            <div className='staff-container' >
-              <div className='staff-image'>
-                <img alt="Edward Trout" src='/edtrout.jpg' />
-              </div>
-              <div className='staff-info'>
-                <h2>Edward Trout</h2>
-                <p>Sole Proprietor</p>
-              </div>
+        <section className='staff-section bg-primary2/10 py-16 px-6'>
+          <div className='max-w-6xl mx-auto'>
+            <div className='text-center mb-12'>
+              <h1 id='staff' className='text-4xl md:text-5xl font-bold text-secondary2 uppercase mb-4'>Meet Our Staff</h1>
+              <div className='h-1 w-16 bg-secondary2 mx-auto mb-6'></div>
             </div>
-            <div className='staff-container'>
-              <div className='staff-image'>
-                <img alt="Teddie" src='/tedmcdonald.jpg' />
+            
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto'>
+              <div className='staff-card group'>
+                <div className='staff-card-inner'>
+                  <div className='staff-image-wrapper'>
+                    <div className='staff-image-container'>
+                      <img alt="Edward Trout" src='/edtrout.jpg' className='staff-photo' />
+                      <div className='staff-overlay'></div>
+                    </div>
+                  </div>
+                  <div className='staff-content'>
+                    <h2 className='staff-name'>Edward Trout</h2>
+                    <p className='staff-title'>Sole Proprietor</p>
+                    <div className='staff-divider'></div>
+                  </div>
+                </div>
               </div>
-              <div className='staff-info'>
-                <h2>Ted McDonald</h2>
-                <p>Tobacconist</p>
+              
+              <div className='staff-card group'>
+                <div className='staff-card-inner'>
+                  <div className='staff-image-wrapper'>
+                    <div className='staff-image-container'>
+                      <img alt="Ted McDonald" src='/tedmcdonald.jpg' className='staff-photo' />
+                    </div>
+                  </div>
+                  <div className='staff-content'>
+                    <h2 className='staff-name'>Ted McDonald</h2>
+                    <p className='staff-title'>Master Tobacconist</p>
+                    <div className='staff-divider'></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -222,6 +225,172 @@ const Catalog = (props) => {
 
       <style jsx>
         {`
+
+         .staff-section {
+            position: relative;
+          }
+          
+          .staff-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/kschairs.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+            z-index: 0;
+          }
+          
+          .staff-section > div {
+            position: relative;
+            z-index: 1;
+          }
+          
+          .staff-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+          
+          .staff-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+          }
+          
+          .staff-card-inner {
+            background: var(--dl-color-theme-primary2);
+            overflow: hidden;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 3px solid var(--dl-color-theme-secondary2);
+            position: relative;
+          }
+          .staff-card-inner::after {
+            content: '';
+            position: absolute;
+            inset: 5px;
+            border: 1px solid var(--dl-color-theme-primary1);
+            border-radius: 5px;
+          }
+          
+          .staff-card:hover .staff-card-inner::before {
+            opacity: 1;
+          }
+          
+          .staff-image-wrapper {
+            position: relative;
+            overflow: hidden;
+          }
+          
+          .staff-image-container {
+            position: relative;
+            aspect-ratio: 1;
+            width: 100%;
+            background: linear-gradient(135deg, var(--dl-color-theme-secondary2), var(--dl-color-theme-primary2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+          }
+          
+          .staff-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+          }
+          
+          .staff-card:hover .staff-photo {
+            transform: scale(1.05);
+          }
+          
+          .staff-card:hover .staff-overlay {
+            opacity: 1;
+          }
+          
+          .staff-content {
+            padding: 2rem;
+            text-align: center;
+          }
+          
+          .staff-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dl-color-theme-secondary2);
+            margin-bottom: 0.5rem;
+            font-style: italic;
+          }
+          
+          .staff-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dl-color-theme-primary1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+          }
+          
+          .staff-divider {
+            width: 60px;
+            height: 2px;
+            background: var(--dl-color-theme-secondary2);
+            margin: 1rem auto;
+            border-radius: 1px;
+          }
+          
+          .staff-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--dl-color-theme-secondary2);
+            opacity: 0.8;
+          }
+          
+          @media (max-width: 768px) {
+            .staff-section {
+              padding: 3rem 1rem;
+            }
+            
+            .staff-name {
+              font-size: 1.5rem;
+            }
+            
+            .staff-content {
+              padding: 1.5rem;
+            }
+            
+            .staff-image-container {
+              height: 240px;
+            }
+          }
+
+        div.podcast-links {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+
+        div.podcast-links ul {
+          list-style: none;
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        div.podcast-links li {
+        }
+
+        div.podcast-links a {
+          display: flex;
+          border-radius: 10px;
+          margin: 6px;
+
+        }
+
+        div.podcast-links a img {
+          height: 40px;
+        }
 
 
         section#testimonials h2 {
@@ -288,61 +457,6 @@ const Catalog = (props) => {
           color: var(--dl-color-theme-secondary2);
           border-top: 1px solid black;
           padding-top: 3px;
-        }
-
-        section.podcast {
-          background-color: var(--dl-color-theme-primary2);
-          padding: 10px;
-          border: solid var(--dl-color-theme-secondary2);
-          border-width: 3px 0px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          gap: 1em;
-        }
-
-        section.podcast h1 {
-          text-align: center;
-          font-size: 2em;
-        }
-
-        section.podcast b {
-          color: var(--dl-color-theme-secondary2);
-          font-family: Inter;
-        }
-
-        section.podcast p {
-          color: var(--dl-color-theme-secondary2);
-          text-indent: 2em;
-          padding: 10px;
-        }
-
-        div.podcast-links {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          flex-wrap: wrap;
-        }
-
-        div.podcast-links ul {
-          list-style: none;
-          display: flex;
-          flex-wrap: wrap;
-        }
-
-        div.podcast-links li {
-        }
-
-        div.podcast-links a {
-          display: flex;
-          border-radius: 10px;
-          margin: 6px;
-
-        }
-
-        div.podcast-links a img {
-          height: 40px;
         }
 
         
