@@ -9849,5 +9849,31 @@
     "description": "Volition America by Gurkha is a patriotic cigar line crafted in partnership with the Folds of Honor Foundation. Each 6x54 Toro comes in one of three blends—Maduro, Habano, or Connecticut—offering options from bold to mild. The cigars are made in Nicaragua with a Nicaraguan binder and a mix of Nicaraguan and Dominican fillers. Every box of 13 cigars symbolizes the 13 folds of the American flag, and 13% of proceeds go toward educational scholarships for families of fallen or disabled military members and first responders.",
     "slug": "gurkha-volition-america-maduro",
     "Date Added": "2025-06-26"
+  },
+  {
+    "Cigar Brand": "AJ Fernandez",
+    "Cigar Name": "New World Decinio",
+    "Wrapper": "Mexican San Andres",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan, Honduran",
+    "Flavor_Profile": "Cocoa, Black Pepper, Coffee",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "810194080005",
+        "In_Stock": true,
+        "Price": "13.25"
+      },
+      {
+        "Size": "Gordo",
+        "Barcode": "810194080043",
+        "In_Stock": true,
+        "Price": "15.90"
+      }
+    ],
+    "description": "Marking ten years since the original New World debuted, the Decenio is A.J. Fernandez’s way of celebrating the line that helped put his name on the map. Made at the San Lotano factory in Ocotál, Nicaragua, this anniversary blend brings refinement without losing the punch that New World fans expect.\nThe flavor profile leans rich and savory. Expect notes of dark chocolate, espresso, and black pepper, layered over hints of mesquite and a tangy sweetness that lingers. The result is a balanced, complex smoke that stays interesting from first light to final inch.",
+    "slug": "aj-fernandez-new-world-decinio",
+    "Date Added": "2025-07-03"
   }
 ]
