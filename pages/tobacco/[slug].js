@@ -52,7 +52,7 @@ const TobaccoPage = (props) => {
             </Head>
             <Layout>
                 <PageTitle1
-                    subtitle={tobacco['Tobacco Name']}
+                    description={tobacco['Tobacco Name']}
                     href="/tobacco"
                     prev={props.prev}
                     next={props.next}

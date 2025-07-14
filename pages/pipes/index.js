@@ -22,7 +22,7 @@ const PipeCatalog = (props) => {
                 <title>Tobacco Pipe Catalog</title>
             </Head>
             <Layout>
-                <PageTitle1 subtitle="We have a large selection of premium tobacco pipes, available for purchase in-store">
+                <PageTitle1 description="We have a large selection of premium tobacco pipes, available for purchase in-store">
                     Tobacco Pipes</PageTitle1>
                 <div className='content-container'>
                     <section className='section-container'>

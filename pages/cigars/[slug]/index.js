@@ -48,7 +48,7 @@ const CigarPage = (props) => {
           prev={props.prev}
           href="/cigars"
           nameField="Cigar Name"
-          miniTitle={"by " + cigar['Cigar Brand']}
+          subtitle={"by " + cigar['Cigar Brand']}
         >{cigar ? cigar['Cigar Name'] : "Data not found"}</PageTitle1>
         <ProductPage
           description={cigar.description}

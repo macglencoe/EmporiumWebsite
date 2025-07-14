@@ -37,7 +37,7 @@ export const getStaticProps = async () => {
  * @param {Array} props.sortOptions - The options available for sorting the catalog.
  * @param {Array} props.auxiliarySearchBars - Auxiliary search bars for additional searches.
  * @param {Object} props.cardSettings - Settings for rendering catalog cards.
- * @param {string} props.subtitle - Subtitle for the catalog page.
+ * @param {string} props.description - description for the catalog page.
  * @param {string} props.title - Title for the catalog page.
  * @param {Array} props.notices - Notices to be displayed on the catalog page.
  * @param {string} props.defaultSort - The default sort option.
@@ -253,7 +253,7 @@ const Catalog = (props) => {
                     </>
                 }
             >
-                <PageTitle1 subtitle={props.subtitle}>
+                <PageTitle1 description={props.description}>
                     {props.title ?? "Catalog"}
                 </PageTitle1>
                 {props.notices}

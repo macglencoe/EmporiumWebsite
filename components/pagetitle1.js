@@ -16,8 +16,8 @@ const PageTitle1 = (props) => {
         <div className="flex-1 h-1 bg-secondary1" />
       </div>
 
-      {props.miniTitle  && (
-          <span className="transform -translate-y-3 text-center text-lg text-secondary2 italic font-bold tracking-wide">{props.miniTitle}</span>
+      {props.subtitle  && (
+          <span className="transform -translate-y-3 text-center text-lg text-secondary2 italic font-bold tracking-wide">{props.subtitle}</span>
         )}
 
       {/* Prev / Next Arrows */}
@@ -55,10 +55,10 @@ const PageTitle1 = (props) => {
           </nav>
         )}
 
-      {/* Subtitle*/}
-        {props.subtitle && (
+      {/* description*/}
+        {props.description && (
           <h2 className="text-center text-secondary1 py-3 px-2 border-8 border-double border-secondary1/50 border-x-transparent mx-auto text-sm md:text-base font-inter font-semibold tracking-wide">
-            {props.subtitle}
+            {props.description}
           </h2>
         )}
 
