@@ -1,183 +1,107 @@
 import Link from "next/link";
-
+import { PiArrowLeftBold, PiArrowRightBold } from "react-icons/pi";
 
 const PageTitle1 = (props) => {
   return (
-    <>
-      <div className="page-title-container">
-        <div>
-          <h1 className="cigar-page-text116">{props.children}</h1>
-          <div className="cigar-page-container32"></div>
-          
-        </div>
-        <div>
-          {props.subtitle && <h2>{props.subtitle}</h2>}
-        {(props.next || props.prev) && props.href && props.nameField &&
-            <nav>
-              <ul>
-                {props.prev && props.prev[props.nameField] &&
-                  <li>
-                    <Link href={".." + props.href + "/" + props.prev.slug}>
-                      <a className="prev" aria-label='Previous' tabIndex={0}>
-                        <div>
-                          <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 -960 960 960" width="2em" ><path d="M560-208 288-480l272-272 88 88-184 184 184 184-88 88Z" /></svg>
-                        </div>
-                      </a>
-                    </Link>
-
-                  </li>
-                }
-                {props.next && props.next[props.nameField] &&
-                  <li>
-                    <Link href={".." + props.href + "/" + props.next.slug}>
-                      <a className="next" aria-label='Next' tabIndex={0}>
-                        <div>
-                          <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 -960 960 960" width="2em" ><path d="M472-480 288-664l88-88 272 272-272 272-88-88 184-184Z" /></svg>
-                        </div>
-                      </a>
-                    </Link>
-                  </li>
-                }
-              </ul>
-            </nav>
-          }
-          {props.buttons && props.buttons.length > 0 &&
-            <nav className="buttons">
-              <ul>
-                {props.buttons.map((button, index) => (
-                  <li key={index}>
-                    { button.onClick && <button onClick={button.onClick}>
-                      {button.icon && <svg xmlns="http://www.w3.org/2000/svg" height="1.7em" viewBox="0 -960 960 960"fill="#e8eaed">{button.icon}</svg>}
-                      {button.label && button.label}
-                    </button>}
-                    {
-                      button.href && <a href={button.href}>
-                        {button.icon && <svg xmlns="http://www.w3.org/2000/svg" height="1.7em" viewBox="0 -960 960 960"fill="#e8eaed">{button.icon}</svg>}
-                        {button.label && button.label}
-                      </a>
-                    }
-
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          }
-        </div>
+    <div className="bg-secondary2 px-3 py-3">
+      {/* Title & Divider */}
+      <div className="flex items-center justify-between gap-4 mb-4">
+        <h1 className="text-primary1 text-3xl md:text-4xl font-bold tracking-wide">
+          {props.children}
+        </h1>
+        <div className="flex-1 h-1 bg-primary1" />
       </div>
-      <style jsx>
-        {`
-            nav {
-              align-self: flex-end;
-            }
-            nav a {
-              outline: none;
-            }
-            nav ul {
-              display: flex;
-              align-items: center;
-              list-style-type: none;
-            }
-            nav li {
-              padding: 0 2px;
-              width: max-content;
-              transition: border-radius 0.2s ease-in-out;
-            }
-            
-            nav li:hover, nav li:focus-within {
-              outline: none;
-            }
-            nav li:active div{
-              transform: scale(0.9);
-            }
-            nav li:first-child {
-              border-right: 2px solid var(--dl-color-theme-primary1);
-            }
-            nav li:last-child {
-              border-left: 2px solid var(--dl-color-theme-primary1);
-            }
 
-            nav li div > svg {
-              fill: var(--dl-color-theme-primary1);
-              transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.575);
-            }
+      {/* Subtitle, Nav Arrows, and Buttons */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 ml-1">
+        {/* Subtitle */}
+        {props.subtitle && (
+          <h2 className="text-primary1 text-sm md:text-base font-inter font-semibold tracking-wide">
+            {props.subtitle}
+          </h2>
+        )}
 
-            nav li:first-child:hover div > svg, nav li:first-child:focus-within div > svg {
-              transform: translate(-8px, 0);
-            }
-            nav li:last-child:hover div > svg, nav li:last-child:focus-within div > svg {
-              transform: translate(8px, 0);
-            }
-        
-        .page-title-container {
-          background-color: var(--dl-color-theme-secondary2);
-          display: flex;
-          flex-direction: column;
-          padding: 10px;
-        }
-        .page-title-container h2 {
-          color: var(--dl-color-theme-primary1);
-          font-weight: 600;
-          font-size: 1em;
-          margin-top: 10px;
-          font-family: 'Inter';
-        }
-        .page-title-container > div:first-child {
-            gap: var(--dl-space-space-unit);
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .page-title-container > div:last-child {
-          margin-left: 10px;
-            gap: var(--dl-space-space-unit);
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .page-title-container  h1 {
-            fill: var(--dl-color-theme-primary1);
-            color: var(--dl-color-theme-primary1);
-            font-size: 25px;
-            font-style: normal;
-            font-weight: 700;
-          }
-        .cigar-page-container32 {
-            flex: 1;
-            width: 100%;
-            height: 10px;
-            display: flex;
-            align-items: center;
-            background-color: var(--dl-color-theme-primary1);
-          }
-            nav.buttons li button, nav.buttons li a {
-              background-color: var(--dl-color-theme-primary1);
-              margin: 5px;
-              padding: 0.5em 1em;
-              font-weight: bold;
-              color: var(--dl-color-theme-secondary2);
-              cursor: pointer;
-              display: flex;
-              align-items: center;
-              flex-direction: row;
-              gap: 0.5em;
-              font-family: Inter;
-            }
-            nav.buttons li button:hover, nav.buttons li a:hover {
-              background-color: var(--dl-color-theme-primary2);
-            }
-            nav.buttons li button svg, nav.buttons li a svg {
-              height: 1.5em;
-              width: 1.5em;
-              fill: var(--dl-color-theme-secondary2);
-              color: var(--dl-color-theme-secondary2);
-            }
-            
-            `}
-      </style>
-    </>
-  )
-}
+        {/* Prev / Next Arrows */}
+        {(props.prev || props.next) && props.href && props.nameField && (
+          <nav aria-label="Previous/Next navigation">
+            <ul className="flex items-center list-none p-0 m-0 gap-1">
+              {props.prev?.[props.nameField] && (
+                <li>
+                  <Link href={`..${props.href}/${props.prev.slug}`}>
+                    <a
+                      className="inline-flex items-center justify-center transition hover:scale-105 text-primary1 w-10 h-10 bg-primary1/10 hover:bg-primary1/20"
+                      aria-label="Previous"
+                      tabIndex={0}
+                    >
+                      <PiArrowLeftBold height={34} width={34} className="fill-primary1 w-full h-8" />
+                    </a>
+                  </Link>
+                </li>
+              )}
+              {props.next?.[props.nameField] && (
+                <li>
+                  <Link href={`..${props.href}/${props.next.slug}`}>
+                    <a
+                      className="inline-flex items-center justify-center transition hover:scale-105 text-primary1 w-10 h-10 bg-primary1/10 hover:bg-primary1/20"
+                      aria-label="Next"
+                      tabIndex={0}
+                    >
+                      <PiArrowRightBold height={34} width={34} className="fill-primary1 w-full h-8" />
+                    </a>
+                  </Link>
+                </li>
+              )}
+            </ul>
+          </nav>
+        )}
+
+        {/* Action Buttons */}
+        {props.buttons?.length > 0 && (
+          <nav className="w-full sm:w-auto">
+            <ul className="flex flex-wrap gap-2 list-none p-0 m-0">
+              {props.buttons.map((button, index) => (
+                <li key={index}>
+                  {button.onClick ? (
+                    <button
+                      onClick={button.onClick}
+                      className="inline-flex items-center gap-2 bg-primary1 text-secondary2 font-bold font-inter px-4 py-2 rounded hover:bg-primary2 transition"
+                    >
+                      {button.icon && (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 -960 960 960"
+                          className="w-[1.3em] h-[1.3em] fill-secondary2"
+                        >
+                          {button.icon}
+                        </svg>
+                      )}
+                      {button.label}
+                    </button>
+                  ) : (
+                    <a
+                      href={button.href}
+                      className="inline-flex items-center gap-2 bg-primary1 text-secondary2 font-bold font-inter px-4 py-2 rounded hover:bg-primary2 transition"
+                    >
+                      {button.icon && (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 -960 960 960"
+                          className="w-[1.3em] h-[1.3em] fill-secondary2"
+                        >
+                          {button.icon}
+                        </svg>
+                      )}
+                      {button.label}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default PageTitle1;

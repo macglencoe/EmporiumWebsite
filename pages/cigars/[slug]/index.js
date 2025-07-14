@@ -44,12 +44,12 @@ const CigarPage = (props) => {
       </Head>
       <Layout>
         <PageTitle1
-          subtitle={cigar ? cigar['Cigar Name'] : "Data not found"}
+          subtitle="Cigar Details"
           next={props.next}
           prev={props.prev}
           href="/cigars"
           nameField="Cigar Name"
-        >Cigar Information</PageTitle1>
+        >{cigar ? cigar['Cigar Name'] : "Data not found"}</PageTitle1>
         <ProductPage
           description={cigar.description}
         >
