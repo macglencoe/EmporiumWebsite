@@ -69,6 +69,10 @@
   font-variant: small-caps;
 }
 
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
 html {
   font-family: "Playfair";
   font-weight: bold;
