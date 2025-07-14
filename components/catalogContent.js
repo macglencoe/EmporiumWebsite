@@ -1,6 +1,111 @@
+import clsx from "clsx";
 import CatalogCard from "./catalogCard";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+import { PiArrowLeftBold, PiArrowRightBold, PiArrowUpBold } from "react-icons/pi";
+
+function Pagination({ totalPages, currentPage, handlePageChange, showReturnTop = false }) {
+    return (
+        <nav
+            className="flex flex-wrap justify-center my-4 mx-auto w-fit p-4 gap-4"
+            aria-label="Pagination Navigation"
+        >
+            <div className="flex justify-center gap-4 p-4 bg-secondary1 border-double border-8 border-primary1 items-center">
+                {/* Return to Top Button */}
+                {showReturnTop && (
+                    <button
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        className="border-2 transition-all duration-200 flex items-center justify-center p-1 cursor-pointer rounded-full h-8 aspect-square font-bold bg-primary2 hover:bg-primary1 border-transparent text-secondary2"
+                        aria-label="Return to Top"
+                    >
+                        <PiArrowUpBold className="text-xl" />
+                    </button>
+                )}
+
+                <span className="font-[Inter] text-primary2 font-semibold">Page:</span>
+
+                <ol className="flex flex-row flex-wrap gap-3 items-center">
+                    {/* Prev Button */}
+                    <li>
+                        <button
+                            onClick={() => handlePageChange(currentPage - 1)}
+                            disabled={currentPage === 1}
+                            className={`border-2 transition-all duration-200 flex items-center justify-center p-1 cursor-pointer rounded-full h-8 aspect-square font-bold
+            ${currentPage === 1
+                                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                                    : 'bg-primary2 hover:bg-primary1 border-transparent text-secondary2'
+                                }`}
+                            aria-label="Previous Page"
+                        >
+                            <PiArrowLeftBold className="text-xl" />
+                        </button>
+                    </li>
+
+                    {/* Page Numbers */}
+                    {Array.from({ length: totalPages }, (_, i) => i + 1)
+                        .filter(page => {
+                            return (
+                                page === 1 ||
+                                page === totalPages ||
+                                Math.abs(page - currentPage) <= 2
+                            );
+                        })
+                        .reduce((acc, page, idx, arr) => {
+                            const prev = arr[idx - 1];
+                            if (prev && page - prev > 1) {
+                                acc.push('ellipsis');
+                            }
+                            acc.push(page);
+                            return acc;
+                        }, [])
+                        .map((item, index) => {
+                            if (item === 'ellipsis') {
+                                return (
+                                    <li key={`ellipsis-${index}`}>
+                                        <span className="text-primary1 font-bold px-2">…</span>
+                                    </li>
+                                );
+                            }
+
+                            return (
+                                <li key={item}>
+                                    <button
+                                        className={`border-2 transition-all duration-200 flex items-center justify-center p-1 cursor-pointer rounded-full aspect-square h-8 font-bold ${item === currentPage
+                                            ? 'bg-primary1 border-primary2 text-secondary1'
+                                            : 'bg-primary2 border-transparent text-secondary2 hover:bg-primary1'
+                                            }`}
+                                        onClick={() => handlePageChange(item)}
+                                        aria-label={`Page ${item}`}
+                                        aria-current={item === currentPage ? 'page' : undefined}
+                                    >
+                                        {item}
+                                    </button>
+                                </li>
+                            );
+                        })}
+
+                    {/* Next Button */}
+                    <li>
+                        <button
+                            onClick={() => handlePageChange(currentPage + 1)}
+                            disabled={currentPage === totalPages}
+                            className={`border-2 transition-all duration-200 flex items-center justify-center p-1 cursor-pointer rounded-full h-8 aspect-square font-bold
+            ${currentPage === totalPages
+                                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                                    : 'bg-primary2 hover:bg-primary1 border-transparent text-secondary2'
+                                }`}
+                            aria-label="Next Page"
+                        >
+                            <PiArrowRightBold className="text-xl" />
+                        </button>
+                    </li>
+
+                </ol>
+            </div>
+        </nav>
+
+    );
+}
 
 /**
  * A component for displaying a list of items in a catalog, with pagination.
@@ -42,25 +147,11 @@ const CatalogContent = (props) => {
     }
     return (
         <section className="catalog-content-container">
-
-            <nav className='pagination'>
-                <span><b>Page:</b></span>
-                {Array.from({ length: totalPages }, (_, i) => (
-                    <a>
-                        <button
-                            key={i + 1}
-                            id={`page-${i + 1}`}
-                            className={i + 1 === currentPage ? 'page-active' : ''}
-                            onClick={() => handlePageChange(i + 1)}
-                            aria-label={`Page ${i + 1}`}
-                            aria-current={i + 1 === currentPage ? 'page' : undefined}
-                        >
-                            {i + 1}
-                        </button>
-                    </a>
-                )
-                )}
-            </nav>
+            <Pagination
+                totalPages={totalPages}
+                currentPage={currentPage}
+                handlePageChange={handlePageChange}
+            />
 
             <div className="catalog-container40">
                 {
@@ -75,7 +166,7 @@ const CatalogContent = (props) => {
                             data={props.cardSettings.data(item)}
                             href={props.cardSettings.href(item)}
 
-                            buttonText={props.cardSettings.buttonText? props.cardSettings.buttonText(item): null}
+                            buttonText={props.cardSettings.buttonText ? props.cardSettings.buttonText(item) : null}
                             sizes={props.cardSettings.sizes ? props.cardSettings.sizes(item) : null}
                             barcode={props.cardSettings.barcode ? props.cardSettings.barcode(item) : null}
 
@@ -85,23 +176,12 @@ const CatalogContent = (props) => {
                 }
             </div>
 
-            <nav className='pagination'>
-                <span><b>Page:</b></span>
-                {Array.from({ length: totalPages }, (_, i) => (
-                    <a>
-                        <button
-                            key={i + 1}
-                            className={i + 1 === currentPage ? 'page-active' : ''}
-                            onClick={() => handlePageChange(i + 1)}
-                            aria-label={`Page ${i + 1}`}
-                            aria-current={i + 1 === currentPage ? 'page' : undefined}
-                        >
-                            {i + 1}
-                        </button>
-                    </a>
-                )
-                )}
-            </nav>
+            <Pagination
+                totalPages={totalPages}
+                currentPage={currentPage}
+                handlePageChange={handlePageChange}
+                showReturnTop={true}
+            />
 
             <style jsx>
                 {`
