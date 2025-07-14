@@ -44,6 +44,7 @@ const CigarPage = (props) => {
       </Head>
       <Layout>
         <PageTitle1
+          description={cigar.description}
           next={props.next}
           prev={props.prev}
           href="/cigars"
@@ -51,7 +52,6 @@ const CigarPage = (props) => {
           subtitle={"by " + cigar['Cigar Brand']}
         >{cigar ? cigar['Cigar Name'] : "Data not found"}</PageTitle1>
         <ProductPage
-          description={cigar.description}
         >
           <ProductSideContent>
             <ProductImage

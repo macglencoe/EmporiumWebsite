@@ -52,14 +52,14 @@ const TobaccoPage = (props) => {
             </Head>
             <Layout>
                 <PageTitle1
-                    description={tobacco['Tobacco Name']}
+                    description={tobacco.description}
+                    subtitle={"by " + tobacco['Tobacco Brand']}
                     href="/tobacco"
                     prev={props.prev}
                     next={props.next}
                     nameField="Tobacco Name"
-                >Tobacco Information</PageTitle1>
+                >{tobacco['Tobacco Name']}</PageTitle1>
                 <ProductPage
-                    description = {tobacco.description}
                 >
                     <ProductSideContent>
                         {tobacco.Components &&
