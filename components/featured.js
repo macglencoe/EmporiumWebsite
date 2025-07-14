@@ -1,60 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import CigarCard from './cigarCard';
 
-const AttributePills = ({ cigar }) => (
-  <div className="flex flex-wrap justify-center gap-2 mb-4">
-    {cigar['Strength_Profile'] && (
-      <span className="bg-primary1/20 text-secondary2 px-3 py-1 rounded-full text-sm font-medium border border-primary1/40">
-        {cigar['Strength_Profile']}
-      </span>
-    )}
-    {cigar['Wrapper'] && (
-      <span className="bg-primary2/60 text-secondary2 px-3 py-1 rounded-full text-sm font-medium border border-primary1/30">
-        {cigar['Wrapper']}
-      </span>
-    )}
-    {cigar['Sizes'] && (
-      <span className="bg-secondary2/10 text-secondary2 px-3 py-1 rounded-full text-sm font-medium border border-secondary2/20">
-        {cigar['Sizes'].length > 1 ? `${cigar['Sizes'].length} Sizes` : cigar['Sizes'][0]?.Size || 'Size Info'}
-      </span>
-    )}
-  </div>
-)
 
-const FlavorList = ({ flavorString }) => (
-  <div className="flex flex-wrap gap-1 justify-center items-center">
-    {flavorString.split(',').map((item, index) => (
-      <span key={index} className="font-bold italic bg-secondary2 py-1 px-2 rounded-md text-primary2 mx-1">
-        {item}
-      </span>
-    ))}
-  </div>
-)
-
-const FeatureCard = ({ title, date, cigar, href }) => (
-  <div className="group relative bg-gradient-to-br from-primary2/80 via-primary2 to-primary2/90 border-2 border-primary1 rounded-xl p-8 flex flex-col justify-between text-center shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
-    <div className="absolute inset-3 border border-primary1/40 rounded-lg pointer-events-none"></div>
-    <div className="absolute -top-3 left-6 bg-gradient-to-r from-secondary2/90 to-secondary2 text-primary2 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg" style={{ fontFamily: 'serif' }}>
-      {title}
-    </div>
-    <div className="absolute top-6 right-6 bg-primary2/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-md border border-primary1/30">
-      <div className="text-xs text-secondary2 font-medium text-center leading-tight" style={{ fontFamily: 'serif' }}>
-        {new Date(date).toLocaleString('default', { month: 'short' }).toUpperCase()}<br />
-        <span className="text-lg font-bold text-secondary1">{new Date(date).getDate()}</span>
-      </div>
-    </div>
-    <Link href={href}>
-      <a className="mt-6">
-        <h3 className="text-lg font-bold mb-2 text-secondary1 underline decoration-primary1 hover:decoration-secondary2" style={{ fontFamily: 'serif' }}>
-          <i>{cigar['Cigar Brand']} </i>{cigar['Cigar Name']}
-        </h3>
-      </a>
-    </Link>
-    <AttributePills cigar={cigar} />
-    <FlavorList flavorString={cigar['Flavor_Profile']} />
-    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-primary1/30 to-primary1 opacity-0 group-hover:opacity-100 transition-all duration-300" />
-  </div>
-);
 
 export const Featured = ({ cigars }) => {
   const [featureEdsPick, setFeatureEdsPick] = useState([])
@@ -100,26 +48,26 @@ export const Featured = ({ cigars }) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {featureEdsPick.length > 0 && (
-            <FeatureCard
-              title="Ed's Pick"
-              date={featureEdsPick[0]['featured_Eds_Pick']}
+            <CigarCard
+              title={"Ed's Pick"}
               cigar={featureEdsPick[0]}
+              date={featureEdsPick[0]['featured_Eds_Pick']}
               href={`/cigars/${featureEdsPick[0].slug}`}
             />
           )}
           {featureTedsPick.length > 0 && (
-            <FeatureCard
-              title="Ted's Pick"
-              date={featureTedsPick[0]['featured_Teds_Pick']}
+            <CigarCard
+              title={"Ted's Pick"}
               cigar={featureTedsPick[0]}
+              date={featureTedsPick[0]['featured_Teds_Pick']}
               href={`/cigars/${featureTedsPick[0].slug}`}
             />
           )}
           {featureStickFigures.length > 0 && (
-            <FeatureCard
-              title={<><span>The Stick Figures Podcast</span></>}
-              date={featureStickFigures[0]['featured_StickFigures']}
+            <CigarCard
+              title={"Stick Figures"}
               cigar={featureStickFigures[0]}
+              date={featureStickFigures[0]['featured_StickFigures']}
               href={`/cigars/${featureStickFigures[0].slug}`}
             />
           )}
