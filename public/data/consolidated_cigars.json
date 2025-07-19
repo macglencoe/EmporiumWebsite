@@ -365,7 +365,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": "7426824785146",
+        "Barcode": "810194080913",
         "In_Stock": true,
         "Price": "10.60"
       }
@@ -2932,7 +2932,7 @@
         "Size": "Toro",
         "Barcode": "689674155065",
         "In_Stock": false,
-        "Price": "7.45"
+        "Price": "7.65"
       }
     ],
     "slug": "cao-fasa-sol"
@@ -7663,7 +7663,7 @@
       {
         "Size": "Robusto",
         "In_Stock": true,
-        "Price": "8.95"
+        "Price": "9.40"
       }
     ],
     "slug": "padron-2000-maduro"
