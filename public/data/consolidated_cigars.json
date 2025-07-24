@@ -5228,7 +5228,7 @@
         "Size": "Gordo",
         "Barcode": "076622025455",
         "In_Stock": true,
-        "Price": "10.85"
+        "Price": "10.50"
       }
     ],
     "slug": "j-c-newman-brickhouse-maduro-mighty-mighty"
@@ -7333,7 +7333,7 @@
         "Size": "Toro",
         "Barcode": "814539011556",
         "In_Stock": true,
-        "Price": "11.80"
+        "Price": "12.10"
       }
     ],
     "slug": "oliva-connecticut-reserve"
@@ -8305,25 +8305,25 @@
         "Size": "Double Robusto",
         "Barcode": "76622773004",
         "In_Stock": true,
-        "Price": "3.20"
+        "Price": "3.40"
       },
       {
         "Size": "Double Grande",
         "Barcode": "76622773202",
         "In_Stock": true,
-        "Price": "4.00"
+        "Price": "4.10"
       },
       {
         "Size": "Double Toro",
         "Barcode": "76622773103",
         "In_Stock": true,
-        "Price": "3.10"
+        "Price": "3.50"
       },
       {
         "Size": "Double Churchill",
         "Barcode": "76622773301",
         "In_Stock": true,
-        "Price": "3.35"
+        "Price": "3.80"
       }
     ],
     "slug": "quorum-havana-q"
