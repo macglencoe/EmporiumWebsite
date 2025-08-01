@@ -9875,5 +9875,45 @@
     "description": "Marking ten years since the original New World debuted, the Decenio is A.J. Fernandez’s way of celebrating the line that helped put his name on the map. Made at the San Lotano factory in Ocotál, Nicaragua, this anniversary blend brings refinement without losing the punch that New World fans expect.\nThe flavor profile leans rich and savory. Expect notes of dark chocolate, espresso, and black pepper, layered over hints of mesquite and a tangy sweetness that lingers. The result is a balanced, complex smoke that stays interesting from first light to final inch.",
     "slug": "aj-fernandez-new-world-decinio",
     "Date Added": "2025-07-03"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Stokk",
+    "Wrapper": "Ecuadorian Sumatra",
+    "Binder": "US Broadleaf",
+    "Filler": "Nicaraguan Esteli, Honduran La Entrada, Dominican Piloto & Andullo, Cyprian Latakia",
+    "Flavor_Profile": "Smokey, Tangey",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Belicoso",
+        "Barcode": "689674166986",
+        "In_Stock": true,
+        "Price": "14.10"
+      }
+    ],
+    "description": "Crafted in partnership with legendary Danish brand Peter Stokkebye, CAO Stock captures the Scandinavian spirit. Blending oak-cured Cyprian pipe tobacco with a complex Andullo-aged Dominican leaf, CAO Stock delivers a smoking experience to match CAO's quest for rare and unique tobaccos.",
+    "slug": "cao-stokk",
+    "Date Added": "2025-08-01"
+  },
+  {
+    "Cigar Brand": "Alec Bradley",
+    "Cigar Name": "Kintsugi Wabi Sabi",
+    "Wrapper": "Ecuadorian  Habano",
+    "Binder": "Mexican San Andrean",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674163381",
+        "In_Stock": true,
+        "Price": "13.60"
+      }
+    ],
+    "description": "Crafted in collaboration with A.J. Fernandez, Wabi Sabi is a limited-edition offshoot of the original Kintsugi line. It’s rolled in Nicaragua and offered in a single 6 x 52 toro,  boxed in runs of just 1,500 so when it’s gone, it’s gone. Inspired by the Japanese concept of Wabi Sabi, finding beauty in imperfection, this cigar isn’t about chasing perfection. It’s about honoring character, balance, and craftsmanship.\nA worthy addition for collectors and regulars alike.",
+    "slug": "alec-bradley-kintsugi-wabi-sabi",
+    "Date Added": "2025-08-01"
   }
 ]
