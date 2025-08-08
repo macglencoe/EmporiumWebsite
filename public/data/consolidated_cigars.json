@@ -9935,5 +9935,97 @@
     "description": "This one’s your invitation to pause and soak in a moment of calm. Handmade at La Isla in the Dominican Republic, Do Not Disturb opens smooth and grounded. Think earthy notes, fresh hay, and a whisper of tea, with a gentle spice that grows on you as it goes. It evolves steadily, rewarding quiet moments with thoughtful flavor.",
     "slug": "alec-bradley-do-not-disturb",
     "Date Added": "2025-08-07"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Surplus",
+    "Wrapper": "Honduran Shade",
+    "Binder": "Ecuadorian Sumatra",
+    "Filler": "Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674166542",
+        "In_Stock": true,
+        "Price": "2.35"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "689674166573",
+        "In_Stock": true,
+        "Price": "2.55"
+      }
+    ],
+    "description": "The CAO Surplus Shade delivers a smooth, budget-friendly smoke wrapped in a silky Honduran Connecticut leaf over an Ecuadorian Sumatra binder and Dominican Olor long-fillers. Balanced and creamy with just enough flavor to keep things interesting, it’s a dependable everyday cigar that proves great value doesn’t have to mean cutting corners.",
+    "slug": "cao-surplus",
+    "Date Added": "2025-08-08"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Surplus Maduro",
+    "Wrapper": "Mexican San Andres",
+    "Binder": "Ecuadorian Sumatra",
+    "Filler": "Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674166450",
+        "In_Stock": true,
+        "Price": "2.35"
+      },
+      {
+        "Size": "Gigante",
+        "Barcode": "689674166511",
+        "In_Stock": true,
+        "Price": "3.10"
+      }
+    ],
+    "description": "The CAO Surplus Maduro delivers bold flavor at a budget-friendly price, featuring a dark Mexican San Andrés wrapper over an Ecuadorian Sumatra binder and Dominican Olor long-fillers. Medium-bodied with rich cocoa and spice notes, it’s a satisfying everyday cigar that proves big taste doesn’t have to break the bank.",
+    "slug": "cao-surplus-maduro",
+    "Date Added": "2025-08-08"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Surplus Sweet",
+    "Wrapper": "Ecuadorian Sumatra",
+    "Binder": "Ecuadorian Sumatra",
+    "Filler": "Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674166665",
+        "In_Stock": true,
+        "Price": "2.95"
+      }
+    ],
+    "description": "The CAO Surplus Sweet combines an Ecuadorian Sumatran wrapper with an Ecuadorian Sumatra binder and Dominican Olor long-fillers, topped with a sweetened cap. Mild to medium-bodied with a smooth, approachable flavor, it’s an easygoing everyday smoke with a hint of sweetness to keep things interesting.",
+    "slug": "cao-surplus-sweet",
+    "Date Added": "2025-08-08"
+  },
+  {
+    "Cigar Brand": "Cohiba",
+    "Cigar Name": "Rubicon",
+    "Wrapper": "Ecuadorian Habana",
+    "Binder": "American Broadleaf",
+    "Filler": "Dominican Piloto, Honduran La Entrada and Jamastran, Nicaraguan",
+    "Flavor_Profile": "Black Pepper, Cedar, Spice",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674167068",
+        "In_Stock": true,
+        "Price": "9.75"
+      }
+    ],
+    "description": "The Cohiba Rubicon is a medium-bodied cigar crafted at Honduras’s HATSA factory with an Ecuadorian Habano wrapper, a U.S. binder, and select tobaccos from Honduras, Nicaragua, and the Dominican Republic. Offering rich notes of cocoa, roasted nuts, earthy spice, and natural sweetness, it invites you to cross the Rubicon into the rare territory of a Cohiba priced under ten dollars.",
+    "slug": "cohiba-rubicon",
+    "Date Added": "2025-08-08"
   }
 ]
