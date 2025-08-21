@@ -2721,13 +2721,13 @@
         "Size": "Toro",
         "Barcode": "7623500175226",
         "In_Stock": true,
-        "Price": "10.30"
+        "Price": "10.90"
       },
       {
         "Size": "Robusto",
         "Barcode": "7623500175219",
         "In_Stock": true,
-        "Price": "9.80"
+        "Price": "10.40"
       }
     ],
     "slug": "camacho-connecticut"
