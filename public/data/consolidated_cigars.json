@@ -2385,13 +2385,13 @@
         "Size": "Robusto",
         "Barcode": "7423825002067",
         "In_Stock": true,
-        "Price": "6.60"
+        "Price": "6.30"
       },
       {
         "Size": "Toro",
         "Barcode": "7423825002043",
         "In_Stock": true,
-        "Price": "6.90"
+        "Price": "6.50"
       }
     ],
     "slug": "baccarat-baccarat"
@@ -2721,15 +2721,14 @@
         "Size": "Toro",
         "Barcode": "7623500175226",
         "In_Stock": true,
-        "Price": "10.90"
+        "Price": "10.30"
       },
       {
         "Size": "Robusto",
         "Barcode": "7623500175219",
         "In_Stock": true,
-        "Price": "10.40"
-      },
-      {}
+        "Price": "9.80"
+      }
     ],
     "slug": "camacho-connecticut"
   },
@@ -4140,7 +4139,7 @@
         "Size": "Toro",
         "Barcode": "811167021711",
         "In_Stock": true,
-        "Price": "14.40"
+        "Price": "13.90"
       },
       {
         "Size": "Lonsdale",
@@ -8899,7 +8898,7 @@
         "Size": "Toro",
         "Barcode": "7623500431704",
         "In_Stock": true,
-        "Price": "8.50"
+        "Price": "7.35"
       },
       {
         "Size": "Robusto",
@@ -10028,5 +10027,25 @@
     "description": "The Cohiba Rubicon is a medium-bodied cigar crafted at Honduras’s HATSA factory with an Ecuadorian Habano wrapper, a U.S. binder, and select tobaccos from Honduras, Nicaragua, and the Dominican Republic. Offering rich notes of cocoa, roasted nuts, earthy spice, and natural sweetness, it invites you to cross the Rubicon into the rare territory of a Cohiba priced under ten dollars.",
     "slug": "cohiba-rubicon",
     "Date Added": "2025-08-08"
+  },
+  {
+    "Cigar Brand": "Alec Bradley",
+    "Cigar Name": "Chunk Maduro",
+    "Wrapper": "Mexican Maduro",
+    "Binder": "Honduran Jamastran",
+    "Filler": "Dominican Piloto, Nicaraguan Estelli",
+    "Flavor_Profile": "Cocoa, Molasses, Nuttiness, Cedar, Pepper",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "XL 4x60",
+        "Barcode": "689674157199",
+        "In_Stock": true,
+        "Price": "6.20"
+      }
+    ],
+    "description": "The Alec Bradley Chunk Maduro is a medium-bodied powerhouse rolled at the HATSA factory in Honduras. It pairs a dark Mexican Maduro wrapper with a Honduran Jamastrán binder and a blend of Dominican Piloto Cubano and Nicaraguan tobaccos. Expect waves of cocoa, molasses, cedar, nutty undertones, and a touch of pepper in every rich, satisfying draw.",
+    "slug": "alec-bradley-chunk-maduro",
+    "Date Added": "2025-08-21"
   }
 ]
