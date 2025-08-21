@@ -2385,13 +2385,13 @@
         "Size": "Robusto",
         "Barcode": "7423825002067",
         "In_Stock": true,
-        "Price": "6.30"
+        "Price": "6.60"
       },
       {
         "Size": "Toro",
         "Barcode": "7423825002043",
         "In_Stock": true,
-        "Price": "6.50"
+        "Price": "6.90"
       }
     ],
     "slug": "baccarat-baccarat"
@@ -2721,14 +2721,15 @@
         "Size": "Toro",
         "Barcode": "7623500175226",
         "In_Stock": true,
-        "Price": "10.30"
+        "Price": "10.90"
       },
       {
         "Size": "Robusto",
         "Barcode": "7623500175219",
         "In_Stock": true,
-        "Price": "9.80"
-      }
+        "Price": "10.40"
+      },
+      {}
     ],
     "slug": "camacho-connecticut"
   },
@@ -4139,7 +4140,7 @@
         "Size": "Toro",
         "Barcode": "811167021711",
         "In_Stock": true,
-        "Price": "13.90"
+        "Price": "14.40"
       },
       {
         "Size": "Lonsdale",
@@ -8898,7 +8899,7 @@
         "Size": "Toro",
         "Barcode": "7623500431704",
         "In_Stock": true,
-        "Price": "7.35"
+        "Price": "8.50"
       },
       {
         "Size": "Robusto",
