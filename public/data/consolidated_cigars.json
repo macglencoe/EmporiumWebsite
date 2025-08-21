@@ -2745,7 +2745,7 @@
         "Size": "Toro",
         "Barcode": "7623500175394",
         "In_Stock": true,
-        "Price": "9.30"
+        "Price": "10.90"
       },
       {
         "Size": "Robusto",
@@ -2754,7 +2754,8 @@
         "Price": "8.80"
       }
     ],
-    "slug": "camacho-corojo"
+    "slug": "camacho-corojo",
+    "description": "Camacho Corojo delivers full-bodied satisfaction built entirely from Honduran Corojo, from the robust fifth-priming wrapper to the binder and long-filler blend grown in the Jamastrán Valley’s sun-drenched fields to echo the original Cuban terroir. Aged, well-constructed, and rich in character, it’s the classic Camacho experience wrapped up in a bold, dependable smoke perfect for daily enjoyment."
   },
   {
     "Cigar Brand": "Camacho",
@@ -10046,6 +10047,46 @@
     ],
     "description": "The Alec Bradley Chunk Maduro is a medium-bodied powerhouse rolled at the HATSA factory in Honduras. It pairs a dark Mexican Maduro wrapper with a Honduran Jamastrán binder and a blend of Dominican Piloto Cubano and Nicaraguan tobaccos. Expect waves of cocoa, molasses, cedar, nutty undertones, and a touch of pepper in every rich, satisfying draw.",
     "slug": "alec-bradley-chunk-maduro",
+    "Date Added": "2025-08-21"
+  },
+  {
+    "Cigar Brand": "Camacho",
+    "Cigar Name": "Ecuador",
+    "Wrapper": "Ecuador Habano",
+    "Binder": "Brazilian",
+    "Filler": "Honduran, Dominican",
+    "Flavor_Profile": "Pepper, Floral, Citrus",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "7623500196016",
+        "In_Stock": true,
+        "Price": "10.90"
+      }
+    ],
+    "description": "Camacho  Ecuador is a bold, medium‑to‑full smoke wrapped in rich Ecuadorian Habano, built on a pepper‑driven Brazilian Mata Fina binder and layered with Honduran and Dominican filler, including rare Pelo de Oro, for a spicy, earthy flavor with hints of leather, citrus, and floral nuance that punches well above its price point.",
+    "slug": "camacho-ecuador",
+    "Date Added": "2025-08-21"
+  },
+  {
+    "Cigar Brand": "Camacho",
+    "Cigar Name": "Broadleaf",
+    "Wrapper": "Honduran Broadleaf",
+    "Binder": "Honduran",
+    "Filler": "Dominican, Honduran",
+    "Flavor_Profile": "Leather, Pepper, Fruity Sweetness",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "7623500507843",
+        "In_Stock": true,
+        "Price": "10.90"
+      }
+    ],
+    "description": "Camacho Broadleaf is a bold expression from Camacho that showcases a rugged Honduran Broadleaf wrapper over a Honduran binder with Dominican and Honduran long-fillers. Medium to full in body, it delivers the kind of rich, uncompromising character the brand is known for, making it a solid choice for smokers who want depth and strength without pretense.",
+    "slug": "camacho-broadleaf",
     "Date Added": "2025-08-21"
   }
 ]
