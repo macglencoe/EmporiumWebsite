@@ -10088,5 +10088,25 @@
     "description": "Camacho Broadleaf is a bold expression from Camacho that showcases a rugged Honduran Broadleaf wrapper over a Honduran binder with Dominican and Honduran long-fillers. Medium to full in body, it delivers the kind of rich, uncompromising character the brand is known for, making it a solid choice for smokers who want depth and strength without pretense.",
     "slug": "camacho-broadleaf",
     "Date Added": "2025-08-21"
+  },
+  {
+    "Cigar Brand": "Alec Bradley",
+    "Cigar Name": "Chunk Shade",
+    "Wrapper": "Honduran Shade",
+    "Binder": "American Broadleaf",
+    "Filler": "Dominican, Honduran, Nicaraguan",
+    "Flavor_Profile": "Tea, Hay, Toast",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "4 x 60",
+        "Barcode": "689674166856",
+        "In_Stock": true,
+        "Price": "6.50"
+      }
+    ],
+    "description": "Alec Bradley Chunk Shade brings that stout, chunky format you know and love in the Chunk family but with a smoother side. It’s wrapped in Honduran grown Connecticut Shade, built with a U.S. Broadleaf binder, and filled with a balanced blend of Dominican, Honduran, and Nicaraguan tobaccos made at the HATSA factory in Honduras. It’s easygoing yet bold, perfect for kicking back at any time.",
+    "slug": "alec-bradley-chunk-shade",
+    "Date Added": "2025-08-28"
   }
 ]
