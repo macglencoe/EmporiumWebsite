@@ -2971,6 +2971,12 @@
         "Barcode": "689674062875",
         "In_Stock": true,
         "Price": "13.60"
+      },
+      {
+        "Size": "7x70 (Big Block)",
+        "Barcode": "689674062882",
+        "In_Stock": true,
+        "Price": "14.30"
       }
     ],
     "slug": "cao-flathead"
