@@ -10108,5 +10108,71 @@
     "description": "Alec Bradley Chunk Shade brings that stout, chunky format you know and love in the Chunk family but with a smoother side. It’s wrapped in Honduran grown Connecticut Shade, built with a U.S. Broadleaf binder, and filled with a balanced blend of Dominican, Honduran, and Nicaraguan tobaccos made at the HATSA factory in Honduras. It’s easygoing yet bold, perfect for kicking back at any time.",
     "slug": "alec-bradley-chunk-shade",
     "Date Added": "2025-08-28"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Gold",
+    "Wrapper": "Ecuadorian Connecticut",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Nut, Earth, Pepper, Cocoa",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "652125002423",
+        "In_Stock": true,
+        "Price": "11.10"
+      },
+      {
+        "Size": "Corona Gorda",
+        "Barcode": "652125002522",
+        "In_Stock": true,
+        "Price": "11.40"
+      }
+    ],
+    "description": "CAO Gold is the cigar that first helped put CAO on the map and it hasn’t lost its shine. Wrapped in a silky Ecuadorian Connecticut leaf, built on a Nicaraguan binder and long-fillers, it settles right in the mellow to medium range. Rated in the 90s, it’s smooth, balanced, and dependable, with a brightness that makes it an easy go-to anytime.",
+    "slug": "cao-gold",
+    "Date Added": "2025-08-29"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Zocalo",
+    "Wrapper": "Mexican San Andres Morron",
+    "Binder": "Cameroon",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Nicaraguan",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674125068",
+        "In_Stock": true,
+        "Price": "11.20"
+      }
+    ],
+    "description": "CAO Zócalo brings a bold, authentically Mexican twist to the CAO lineup with its dark San Andrés Morrón wrapper atop a Cameroon binder and Nicaraguan long-fillers. Medium-Full in body and deeply flavorful, it’s the brand’s first cigar to feature a Mexican wrapper, giving smokers a rich, earthy experience with a touch of sweetness.",
+    "slug": "cao-zocalo",
+    "Date Added": "2025-08-29"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Columbia",
+    "Wrapper": "Honduran Jamastran",
+    "Binder": "Cameroon",
+    "Filler": "Brazilian, Columbian",
+    "Flavor_Profile": "Salty, Nuts, Coffee, Sweet",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "6 1/4 x 52 (Magdalena)",
+        "Barcode": "689674069959",
+        "In_Stock": true,
+        "Price": "11.10"
+      }
+    ],
+    "description": "CAO Colombia is CAO’s boldest world-blending adventure yet. It’s the first cigar in their lineup to showcase Colombian grown Ica Mazinga tobacco, a Cuban seed taken to the remote mountains of Colombia and perfected over 15 years, wrapped in a smooth Honduran Jamastrán leaf, secured with a Cameroon binder, and blended with Brazilian and Colombian long-fillers. It’s a mellow to medium-bodied smoke with unique character and smooth delivery, and an unexpected find at this price point",
+    "slug": "cao-columbia",
+    "Date Added": "2025-08-29"
   }
 ]
