@@ -2854,7 +2854,7 @@
         "Size": "Toro",
         "Barcode": "652125016116",
         "In_Stock": true,
-        "Price": "10.60"
+        "Price": "11.20"
       }
     ],
     "slug": "cao-americas"
@@ -2897,7 +2897,7 @@
         "Size": "Toro",
         "Barcode": "689674140566",
         "In_Stock": true,
-        "Price": "10.70"
+        "Price": "11.50"
       }
     ],
     "slug": "cao-bx3"
@@ -2916,9 +2916,16 @@
         "Barcode": "689674154969",
         "In_Stock": true,
         "Price": "7.45"
+      },
+      {
+        "Size": "Gordo",
+        "Barcode": "689674155010",
+        "In_Stock": true,
+        "Price": "8.70"
       }
     ],
-    "slug": "cao-fasa-noche"
+    "slug": "cao-fasa-noche",
+    "hidden": false
   },
   {
     "Cigar Brand": "CAO",
@@ -2955,15 +2962,15 @@
       },
       {
         "Size": "Robusto",
-        "Barcode": "689674062875",
+        "Barcode": "689674062868",
         "In_Stock": true,
-        "Price": "11.65"
+        "Price": "12.80"
       },
       {
-        "Size": "Toro",
-        "Barcode": "689674062882",
+        "Size": "Gordo",
+        "Barcode": "689674062875",
         "In_Stock": true,
-        "Price": "14.30"
+        "Price": "13.60"
       }
     ],
     "slug": "cao-flathead"
@@ -3053,7 +3060,7 @@
         "Size": "Toro",
         "Barcode": "652125000214",
         "In_Stock": true,
-        "Price": "11.65"
+        "Price": "12.80"
       }
     ],
     "slug": "cao-mx2"
@@ -9861,10 +9868,10 @@
     "Strength_Profile": "Medium-Full",
     "Sizes": [
       {
-        "Size": "Robusto",
-        "Barcode": "810194080005",
+        "Size": "Toro",
+        "Barcode": "810194080029",
         "In_Stock": true,
-        "Price": "13.25"
+        "Price": "14.85"
       },
       {
         "Size": "Gordo",
