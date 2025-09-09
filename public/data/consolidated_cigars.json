@@ -409,13 +409,13 @@
         "Size": "Toro",
         "Barcode": "7426824785894",
         "In_Stock": true,
-        "Price": "12.75"
+        "Price": "13.35"
       },
       {
         "Size": "Robusto",
         "Barcode": "7426824785887",
         "In_Stock": true,
-        "Price": "11.65"
+        "Price": "12.20"
       },
       {
         "Size": "Perfecto",
@@ -3799,7 +3799,7 @@
         "Size": "Toro",
         "Barcode": "876742001823",
         "In_Stock": false,
-        "Price": "8.50"
+        "Price": "9.80"
       },
       {
         "Size": "Gordo",
@@ -7643,7 +7643,7 @@
       {
         "Size": "Robusto",
         "In_Stock": true,
-        "Price": "17.90"
+        "Price": "19.20"
       }
     ],
     "slug": "padron-1926-natural"
