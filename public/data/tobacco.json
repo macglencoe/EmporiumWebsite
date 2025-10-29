@@ -237,5 +237,16 @@
         ],
         "Family": "Virginia",
         "slug":"sunrise-select"
+    },
+    {
+        "Tobacco Name": "Cherry Jubilee",
+        "Tobacco Brand": "Cornell & Diehl",
+        "Components": [
+            "Virginia",
+            "Burley",
+            "Black Cavendish"
+        ],
+        "Family": "Aromatic",
+        "slug": "cherry-jubilee"
     }
 ]
