@@ -409,13 +409,13 @@
         "Size": "Toro",
         "Barcode": "7426824785894",
         "In_Stock": true,
-        "Price": "12.75"
+        "Price": "13.35"
       },
       {
         "Size": "Robusto",
         "Barcode": "7426824785887",
         "In_Stock": true,
-        "Price": "11.65"
+        "Price": "12.20"
       },
       {
         "Size": "Perfecto",
@@ -998,7 +998,7 @@
         "Size": "Toro",
         "Barcode": "843182100072",
         "In_Stock": true,
-        "Price": "8.20"
+        "Price": "8.70"
       }
     ],
     "slug": "arturo-fuente-8-5-8-maduro",
@@ -1265,7 +1265,7 @@
         "Size": "Rothschild",
         "Barcode": "843182100577",
         "In_Stock": true,
-        "Price": "8.00"
+        "Price": "8.50"
       }
     ],
     "slug": "arturo-fuente-chateau-fuente-maduro",
@@ -1399,7 +1399,7 @@
         "Size": "Torpedo",
         "Barcode": "843182100485",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.10"
       }
     ],
     "slug": "arturo-fuente-cuban-belicoso",
@@ -1575,7 +1575,7 @@
         "Size": "Toro",
         "Barcode": "843182101406",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.10"
       }
     ],
     "slug": "arturo-fuente-double-chateau-sungrown",
@@ -1669,7 +1669,7 @@
         "Size": "Belicoso",
         "Barcode": "843182100508",
         "In_Stock": true,
-        "Price": "12.00"
+        "Price": "12.80"
       }
     ],
     "slug": "arturo-fuente-fuente-king-b-sungrown",
@@ -1778,7 +1778,7 @@
         "Size": "Perfecto",
         "Barcode": "843182122333",
         "In_Stock": true,
-        "Price": "8.80"
+        "Price": "9.10"
       }
     ],
     "slug": "arturo-fuente-hemingway-best-seller-natural"
@@ -1832,7 +1832,7 @@
         "Size": "Perfecto",
         "Barcode": "843182122548",
         "In_Stock": true,
-        "Price": "7.90"
+        "Price": "8.20"
       }
     ],
     "slug": "arturo-fuente-hemingway-short-story-natural"
@@ -2084,7 +2084,7 @@
         "Size": "Churchill",
         "Barcode": "843182100829",
         "In_Stock": true,
-        "Price": "9.10"
+        "Price": "9.70"
       }
     ],
     "slug": "arturo-fuente-sellecion-dor"
@@ -2391,7 +2391,7 @@
         "Size": "Toro",
         "Barcode": "7423825002043",
         "In_Stock": true,
-        "Price": "6.50"
+        "Price": "6.90"
       }
     ],
     "slug": "baccarat-baccarat"
@@ -2553,7 +2553,7 @@
         "Size": "80 x6",
         "Barcode": "854185004946",
         "In_Stock": true,
-        "Price": "13.90"
+        "Price": "14.80"
       }
     ],
     "slug": "c-l-e-asylum-13"
@@ -2577,7 +2577,7 @@
         "Size": "Toro",
         "Barcode": "855374008592",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.45"
       }
     ],
     "slug": "c-l-e-asylum-insidious"
@@ -2721,13 +2721,13 @@
         "Size": "Toro",
         "Barcode": "7623500175226",
         "In_Stock": true,
-        "Price": "10.30"
+        "Price": "10.90"
       },
       {
         "Size": "Robusto",
         "Barcode": "7623500175219",
         "In_Stock": true,
-        "Price": "9.80"
+        "Price": "10.40"
       }
     ],
     "slug": "camacho-connecticut"
@@ -2745,7 +2745,7 @@
         "Size": "Toro",
         "Barcode": "7623500175394",
         "In_Stock": true,
-        "Price": "9.30"
+        "Price": "10.90"
       },
       {
         "Size": "Robusto",
@@ -2754,7 +2754,8 @@
         "Price": "8.80"
       }
     ],
-    "slug": "camacho-corojo"
+    "slug": "camacho-corojo",
+    "description": "Camacho Corojo delivers full-bodied satisfaction built entirely from Honduran Corojo, from the robust fifth-priming wrapper to the binder and long-filler blend grown in the Jamastrán Valley’s sun-drenched fields to echo the original Cuban terroir. Aged, well-constructed, and rich in character, it’s the classic Camacho experience wrapped up in a bold, dependable smoke perfect for daily enjoyment."
   },
   {
     "Cigar Brand": "Camacho",
@@ -2811,7 +2812,7 @@
         "Size": "Toro",
         "Barcode": "7623500430646",
         "In_Stock": true,
-        "Price": "9.80"
+        "Price": "10.90"
       }
     ],
     "slug": "camacho-nicaragua"
@@ -2853,7 +2854,7 @@
         "Size": "Toro",
         "Barcode": "652125016116",
         "In_Stock": true,
-        "Price": "10.60"
+        "Price": "11.20"
       }
     ],
     "slug": "cao-americas"
@@ -2896,7 +2897,7 @@
         "Size": "Toro",
         "Barcode": "689674140566",
         "In_Stock": true,
-        "Price": "10.70"
+        "Price": "11.50"
       }
     ],
     "slug": "cao-bx3"
@@ -2914,10 +2915,17 @@
         "Size": "Toro",
         "Barcode": "689674154969",
         "In_Stock": true,
-        "Price": "7.45"
+        "Price": "7.65"
+      },
+      {
+        "Size": "Gordo",
+        "Barcode": "689674155010",
+        "In_Stock": true,
+        "Price": "8.70"
       }
     ],
-    "slug": "cao-fasa-noche"
+    "slug": "cao-fasa-noche",
+    "hidden": false
   },
   {
     "Cigar Brand": "CAO",
@@ -2954,12 +2962,18 @@
       },
       {
         "Size": "Robusto",
-        "Barcode": "689674062875",
+        "Barcode": "689674062868",
         "In_Stock": true,
-        "Price": "11.65"
+        "Price": "12.80"
       },
       {
-        "Size": "Toro",
+        "Size": "Gordo",
+        "Barcode": "689674062875",
+        "In_Stock": true,
+        "Price": "13.60"
+      },
+      {
+        "Size": "7x70 (Big Block)",
         "Barcode": "689674062882",
         "In_Stock": true,
         "Price": "14.30"
@@ -2998,7 +3012,7 @@
         "Size": "Toro",
         "Barcode": "652125011012",
         "In_Stock": true,
-        "Price": "10.45"
+        "Price": "11.50"
       }
     ],
     "slug": "cao-italia"
@@ -3052,7 +3066,7 @@
         "Size": "Toro",
         "Barcode": "652125000214",
         "In_Stock": true,
-        "Price": "11.65"
+        "Price": "12.80"
       }
     ],
     "slug": "cao-mx2"
@@ -3581,7 +3595,7 @@
         "Size": "Toro",
         "Barcode": "818578018521",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.50"
       }
     ],
     "slug": "drew-estate-deadwood-leather-rose"
@@ -3599,7 +3613,7 @@
         "Size": "Robusto",
         "Barcode": "876742005098",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.00"
       }
     ],
     "slug": "drew-estate-deadwood-sweet-jane"
@@ -3785,7 +3799,7 @@
         "Size": "Toro",
         "Barcode": "876742001823",
         "In_Stock": false,
-        "Price": "8.50"
+        "Price": "9.80"
       },
       {
         "Size": "Gordo",
@@ -4042,13 +4056,13 @@
         "Size": "Toro",
         "Barcode": "811167020820",
         "In_Stock": true,
-        "Price": "13.25"
+        "Price": "10.60"
       },
       {
         "Size": "Robusto",
         "Barcode": "811167020806",
         "In_Stock": true,
-        "Price": "13.00"
+        "Price": "10.40"
       }
     ],
     "slug": "e-p-carrillo-la-historia",
@@ -4139,7 +4153,7 @@
         "Size": "Toro",
         "Barcode": "811167021711",
         "In_Stock": true,
-        "Price": "13.90"
+        "Price": "14.40"
       },
       {
         "Size": "Lonsdale",
@@ -4687,7 +4701,7 @@
         "Size": "Toro",
         "Barcode": "689674157618",
         "In_Stock": false,
-        "Price": "10.00"
+        "Price": "10.25"
       }
     ],
     "slug": "forged-los-statos-deluxe-connecticut"
@@ -4890,7 +4904,7 @@
         "Size": "Robusto",
         "Barcode": "810141022270",
         "In_Stock": true,
-        "Price": "8.20"
+        "Price": "8.80"
       },
       {
         "Size": "Toro",
@@ -5022,7 +5036,7 @@
         "Size": "Churchill",
         "Barcode": "689674028604",
         "In_Stock": true,
-        "Price": "11.65"
+        "Price": "9.30"
       }
     ],
     "slug": "hoyo-de-monterrey-excalibur-claro-no-1"
@@ -6685,7 +6699,7 @@
         "Size": "Gordo",
         "Barcode": "689674046707",
         "In_Stock": true,
-        "Price": "13.80"
+        "Price": "14.30"
       }
     ],
     "slug": "la-gloria-cubana-serie-r-maduro"
@@ -7381,7 +7395,7 @@
         "Size": "Robusto",
         "Barcode": "814539015035",
         "In_Stock": true,
-        "Price": "8.60"
+        "Price": "8.85"
       }
     ],
     "slug": "oliva-gilberto-oliva-reserva-blanc"
@@ -7542,7 +7556,7 @@
       {
         "Size": "Toro",
         "In_Stock": true,
-        "Price": "17.80"
+        "Price": "18.30"
       }
     ],
     "slug": "oliva-serie-v-melanio-maduro"
@@ -7576,7 +7590,7 @@
       {
         "Size": "Toro",
         "In_Stock": true,
-        "Price": "17.80"
+        "Price": "18.30"
       }
     ],
     "slug": "oliva-serie-v-melanio-toro"
@@ -7629,7 +7643,7 @@
       {
         "Size": "Robusto",
         "In_Stock": true,
-        "Price": "17.90"
+        "Price": "19.20"
       }
     ],
     "slug": "padron-1926-natural"
@@ -7697,7 +7711,7 @@
       {
         "Size": "Toro",
         "In_Stock": true,
-        "Price": "9.30"
+        "Price": "10.30"
       }
     ],
     "slug": "padron-3000-maduro"
@@ -8030,7 +8044,7 @@
         "Size": "Toro",
         "Barcode": "689674116554",
         "In_Stock": true,
-        "Price": "6.45"
+        "Price": "6.65"
       },
       {
         "Size": "Gordo",
@@ -9048,7 +9062,7 @@
         "Size": "Toro",
         "Barcode": "689674161189",
         "In_Stock": true,
-        "Price": "9.55"
+        "Price": "9.80"
       }
     ],
     "slug": "la-gloria-cubana-los-gloriosos",
@@ -9069,7 +9083,7 @@
       {
         "Size": "Toro",
         "Barcode": "689674162209",
-        "Price": "9.75",
+        "Price": "10.00",
         "In_Stock": true
       }
     ],
@@ -9768,7 +9782,7 @@
         "Size": "Toro",
         "Barcode": "811167023081",
         "In_Stock": true,
-        "Price": "10.60"
+        "Price": "11.15"
       }
     ],
     "description": "The fourth release in the Essence Series, the Essence Connecticut brings a mellow and elegant character to the E.P. Carrillo lineup. It features an Ecuadorian Connecticut wrapper, a Honduran Criollo 98 binder, and a blend of Honduran and Dominican fillers. The result is a smooth and balanced cigar with notes of cream, hay, light pepper, and subtle almond.\nRolled at Agroindustrias Diadema in Honduras, it offers a refined draw and clean finish that make it a perfect pick for those who enjoy Connecticut cigars with a little more depth. Available in Robusto, and Toro sizes, each in 24-count boxes.",
@@ -9860,10 +9874,10 @@
     "Strength_Profile": "Medium-Full",
     "Sizes": [
       {
-        "Size": "Robusto",
-        "Barcode": "810194080005",
+        "Size": "Toro",
+        "Barcode": "810194080029",
         "In_Stock": true,
-        "Price": "13.25"
+        "Price": "14.85"
       },
       {
         "Size": "Gordo",
@@ -9915,5 +9929,263 @@
     "description": "Crafted in collaboration with A.J. Fernandez, Wabi Sabi is a limited-edition offshoot of the original Kintsugi line. It’s rolled in Nicaragua and offered in a single 6 x 52 toro,  boxed in runs of just 1,500 so when it’s gone, it’s gone. Inspired by the Japanese concept of Wabi Sabi, finding beauty in imperfection, this cigar isn’t about chasing perfection. It’s about honoring character, balance, and craftsmanship.\nA worthy addition for collectors and regulars alike.",
     "slug": "alec-bradley-kintsugi-wabi-sabi",
     "Date Added": "2025-08-01"
+  },
+  {
+    "Cigar Brand": "Alec Bradley",
+    "Cigar Name": "Do Not Disturb",
+    "Wrapper": "Ecuadorian Connecticut",
+    "Binder": "Dominican Criollo",
+    "Filler": "Dominican, Mexican",
+    "Flavor_Profile": "Earth, Hay, Tea, Spice",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674163169",
+        "In_Stock": true,
+        "Price": "9.60"
+      }
+    ],
+    "description": "This one’s your invitation to pause and soak in a moment of calm. Handmade at La Isla in the Dominican Republic, Do Not Disturb opens smooth and grounded. Think earthy notes, fresh hay, and a whisper of tea, with a gentle spice that grows on you as it goes. It evolves steadily, rewarding quiet moments with thoughtful flavor.",
+    "slug": "alec-bradley-do-not-disturb",
+    "Date Added": "2025-08-07"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Surplus",
+    "Wrapper": "Honduran Shade",
+    "Binder": "Ecuadorian Sumatra",
+    "Filler": "Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674166542",
+        "In_Stock": true,
+        "Price": "2.35"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "689674166573",
+        "In_Stock": true,
+        "Price": "2.55"
+      }
+    ],
+    "description": "The CAO Surplus Shade delivers a smooth, budget-friendly smoke wrapped in a silky Honduran Connecticut leaf over an Ecuadorian Sumatra binder and Dominican Olor long-fillers. Balanced and creamy with just enough flavor to keep things interesting, it’s a dependable everyday cigar that proves great value doesn’t have to mean cutting corners.",
+    "slug": "cao-surplus",
+    "Date Added": "2025-08-08"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Surplus Maduro",
+    "Wrapper": "Mexican San Andres",
+    "Binder": "Ecuadorian Sumatra",
+    "Filler": "Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674166450",
+        "In_Stock": true,
+        "Price": "2.35"
+      },
+      {
+        "Size": "Gigante",
+        "Barcode": "689674166511",
+        "In_Stock": true,
+        "Price": "3.10"
+      }
+    ],
+    "description": "The CAO Surplus Maduro delivers bold flavor at a budget-friendly price, featuring a dark Mexican San Andrés wrapper over an Ecuadorian Sumatra binder and Dominican Olor long-fillers. Medium-bodied with rich cocoa and spice notes, it’s a satisfying everyday cigar that proves big taste doesn’t have to break the bank.",
+    "slug": "cao-surplus-maduro",
+    "Date Added": "2025-08-08"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Surplus Sweet",
+    "Wrapper": "Ecuadorian Sumatra",
+    "Binder": "Ecuadorian Sumatra",
+    "Filler": "Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674166665",
+        "In_Stock": true,
+        "Price": "2.95"
+      }
+    ],
+    "description": "The CAO Surplus Sweet combines an Ecuadorian Sumatran wrapper with an Ecuadorian Sumatra binder and Dominican Olor long-fillers, topped with a sweetened cap. Mild to medium-bodied with a smooth, approachable flavor, it’s an easygoing everyday smoke with a hint of sweetness to keep things interesting.",
+    "slug": "cao-surplus-sweet",
+    "Date Added": "2025-08-08"
+  },
+  {
+    "Cigar Brand": "Cohiba",
+    "Cigar Name": "Rubicon",
+    "Wrapper": "Ecuadorian Habana",
+    "Binder": "American Broadleaf",
+    "Filler": "Dominican Piloto, Honduran La Entrada and Jamastran, Nicaraguan",
+    "Flavor_Profile": "Black Pepper, Cedar, Spice",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674167068",
+        "In_Stock": true,
+        "Price": "9.75"
+      }
+    ],
+    "description": "The Cohiba Rubicon is a medium-bodied cigar crafted at Honduras’s HATSA factory with an Ecuadorian Habano wrapper, a U.S. binder, and select tobaccos from Honduras, Nicaragua, and the Dominican Republic. Offering rich notes of cocoa, roasted nuts, earthy spice, and natural sweetness, it invites you to cross the Rubicon into the rare territory of a Cohiba priced under ten dollars.",
+    "slug": "cohiba-rubicon",
+    "Date Added": "2025-08-08"
+  },
+  {
+    "Cigar Brand": "Alec Bradley",
+    "Cigar Name": "Chunk Maduro",
+    "Wrapper": "Mexican Maduro",
+    "Binder": "Honduran Jamastran",
+    "Filler": "Dominican Piloto, Nicaraguan Estelli",
+    "Flavor_Profile": "Cocoa, Molasses, Nuttiness, Cedar, Pepper",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "XL 4x60",
+        "Barcode": "689674157199",
+        "In_Stock": true,
+        "Price": "6.20"
+      }
+    ],
+    "description": "The Alec Bradley Chunk Maduro is a medium-bodied powerhouse rolled at the HATSA factory in Honduras. It pairs a dark Mexican Maduro wrapper with a Honduran Jamastrán binder and a blend of Dominican Piloto Cubano and Nicaraguan tobaccos. Expect waves of cocoa, molasses, cedar, nutty undertones, and a touch of pepper in every rich, satisfying draw.",
+    "slug": "alec-bradley-chunk-maduro",
+    "Date Added": "2025-08-21"
+  },
+  {
+    "Cigar Brand": "Camacho",
+    "Cigar Name": "Ecuador",
+    "Wrapper": "Ecuador Habano",
+    "Binder": "Brazilian",
+    "Filler": "Honduran, Dominican",
+    "Flavor_Profile": "Pepper, Floral, Citrus",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "7623500196016",
+        "In_Stock": true,
+        "Price": "10.90"
+      }
+    ],
+    "description": "Camacho  Ecuador is a bold, medium‑to‑full smoke wrapped in rich Ecuadorian Habano, built on a pepper‑driven Brazilian Mata Fina binder and layered with Honduran and Dominican filler, including rare Pelo de Oro, for a spicy, earthy flavor with hints of leather, citrus, and floral nuance that punches well above its price point.",
+    "slug": "camacho-ecuador",
+    "Date Added": "2025-08-21"
+  },
+  {
+    "Cigar Brand": "Camacho",
+    "Cigar Name": "Broadleaf",
+    "Wrapper": "Honduran Broadleaf",
+    "Binder": "Honduran",
+    "Filler": "Dominican, Honduran",
+    "Flavor_Profile": "Leather, Pepper, Fruity Sweetness",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "7623500507843",
+        "In_Stock": true,
+        "Price": "10.90"
+      }
+    ],
+    "description": "Camacho Broadleaf is a bold expression from Camacho that showcases a rugged Honduran Broadleaf wrapper over a Honduran binder with Dominican and Honduran long-fillers. Medium to full in body, it delivers the kind of rich, uncompromising character the brand is known for, making it a solid choice for smokers who want depth and strength without pretense.",
+    "slug": "camacho-broadleaf",
+    "Date Added": "2025-08-21"
+  },
+  {
+    "Cigar Brand": "Alec Bradley",
+    "Cigar Name": "Chunk Shade",
+    "Wrapper": "Honduran Shade",
+    "Binder": "American Broadleaf",
+    "Filler": "Dominican, Honduran, Nicaraguan",
+    "Flavor_Profile": "Tea, Hay, Toast",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "4 x 60",
+        "Barcode": "689674166856",
+        "In_Stock": true,
+        "Price": "6.50"
+      }
+    ],
+    "description": "Alec Bradley Chunk Shade brings that stout, chunky format you know and love in the Chunk family but with a smoother side. It’s wrapped in Honduran grown Connecticut Shade, built with a U.S. Broadleaf binder, and filled with a balanced blend of Dominican, Honduran, and Nicaraguan tobaccos made at the HATSA factory in Honduras. It’s easygoing yet bold, perfect for kicking back at any time.",
+    "slug": "alec-bradley-chunk-shade",
+    "Date Added": "2025-08-28"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Gold",
+    "Wrapper": "Ecuadorian Connecticut",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Nut, Earth, Pepper, Cocoa",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "652125002423",
+        "In_Stock": true,
+        "Price": "11.10"
+      },
+      {
+        "Size": "Corona Gorda",
+        "Barcode": "652125002522",
+        "In_Stock": true,
+        "Price": "11.40"
+      }
+    ],
+    "description": "CAO Gold is the cigar that first helped put CAO on the map and it hasn’t lost its shine. Wrapped in a silky Ecuadorian Connecticut leaf, built on a Nicaraguan binder and long-fillers, it settles right in the mellow to medium range. Rated in the 90s, it’s smooth, balanced, and dependable, with a brightness that makes it an easy go-to anytime.",
+    "slug": "cao-gold",
+    "Date Added": "2025-08-29"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Zocalo",
+    "Wrapper": "Mexican San Andres Morron",
+    "Binder": "Cameroon",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Nicaraguan",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674125068",
+        "In_Stock": true,
+        "Price": "11.20"
+      }
+    ],
+    "description": "CAO Zócalo brings a bold, authentically Mexican twist to the CAO lineup with its dark San Andrés Morrón wrapper atop a Cameroon binder and Nicaraguan long-fillers. Medium-Full in body and deeply flavorful, it’s the brand’s first cigar to feature a Mexican wrapper, giving smokers a rich, earthy experience with a touch of sweetness.",
+    "slug": "cao-zocalo",
+    "Date Added": "2025-08-29"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Columbia",
+    "Wrapper": "Honduran Jamastran",
+    "Binder": "Cameroon",
+    "Filler": "Brazilian, Columbian",
+    "Flavor_Profile": "Salty, Nuts, Coffee, Sweet",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "6 1/4 x 52 (Magdalena)",
+        "Barcode": "689674069959",
+        "In_Stock": true,
+        "Price": "11.10"
+      }
+    ],
+    "description": "CAO Colombia is CAO’s boldest world-blending adventure yet. It’s the first cigar in their lineup to showcase Colombian grown Ica Mazinga tobacco, a Cuban seed taken to the remote mountains of Colombia and perfected over 15 years, wrapped in a smooth Honduran Jamastrán leaf, secured with a Cameroon binder, and blended with Brazilian and Colombian long-fillers. It’s a mellow to medium-bodied smoke with unique character and smooth delivery, and an unexpected find at this price point",
+    "slug": "cao-columbia",
+    "Date Added": "2025-08-29"
   }
 ]
