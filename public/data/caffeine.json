@@ -151,5 +151,22 @@
         "Product Name": "Orange Spice",
         "slug": "orange-spice",
         "Type": "Tea"
+    },
+    {
+        "Product Name": "Cultivate Sumatra",
+        "Type":"Coffee",
+        "Roast": "Dark",
+        "slug": "cultivate-sumatra"
+    },
+    {
+        "Product Name": "Cultivate Honduras",
+        "Type":"Coffee",
+        "Roast":"Medium",
+        "slug":"cultivate-honduras"
+    },
+    {
+        "Product Name":"Cultivate Decaf",
+        "Type":"Coffee",
+        "slug":"cultivate-decaf"
     }
 ]
