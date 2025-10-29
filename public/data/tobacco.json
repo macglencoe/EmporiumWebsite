@@ -228,5 +228,14 @@
         "Family": "American Aromatic",
         "slug": "almost-heaven",
         "description": "Our most popular blend-smooth burning Golden Leaf Cavendish mixed with fire cured blends and our special ingredient to produce a flavorful, mild, pleasant aroma."
+    },
+    {
+        "Tobacco Name": "Sunrinse Select",
+        "Tobacco Brand": "Rivertown Tobacco Works",
+        "Components": [
+            "Golden Virginia"
+        ],
+        "Family": "Virginia",
+        "slug":"sunrise-select"
     }
 ]
