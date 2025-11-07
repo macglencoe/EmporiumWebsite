@@ -12,7 +12,7 @@
         "Size": "Toro",
         "Barcode": "7427025678329",
         "In_Stock": true,
-        "Price": "16.70"
+        "Price": "17.50"
       }
     ],
     "slug": "aganorsa-anniversario-corojo"
@@ -108,7 +108,7 @@
         "Size": "Super Toro",
         "Barcode": "7426824777318",
         "In_Stock": true,
-        "Price": "8.50"
+        "Price": "9.00"
       }
     ],
     "slug": "aganorsa-jfr-corojo"
@@ -258,7 +258,7 @@
         "Size": "Toro",
         "Barcode": "7427025678565",
         "In_Stock": true,
-        "Price": "10.85"
+        "Price": "11.00"
       }
     ],
     "slug": "aganorsa-valadacion-corojo"
@@ -276,7 +276,7 @@
         "Size": "Toro",
         "Barcode": "7427025678541",
         "In_Stock": true,
-        "Price": "10.90"
+        "Price": "12.20"
       }
     ],
     "slug": "aganorsa-valadacion-maduro"
@@ -758,13 +758,13 @@
         "Size": "Robusto",
         "Barcode": "851350003902",
         "In_Stock": true,
-        "Price": "9.00"
+        "Price": "9.50"
       },
       {
         "Size": "Toro",
         "Barcode": "851350003889",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.00"
       }
     ],
     "slug": "aj-fernandez-san-lotano-requim"
@@ -812,7 +812,7 @@
         "Size": "Toro",
         "Barcode": "851350003964",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.00"
       }
     ],
     "slug": "aj-fernandez-san-lotano-requim-maduro"
@@ -1036,7 +1036,7 @@
         "Size": "Toro",
         "Barcode": "843182100249",
         "In_Stock": true,
-        "Price": "8.85"
+        "Price": "9.35"
       }
     ],
     "slug": "arturo-fuente-8-5-8-sungrown",
@@ -1169,7 +1169,7 @@
         "Size": "Corona",
         "Barcode": "843182100362",
         "In_Stock": true,
-        "Price": "3.60"
+        "Price": "3.75"
       }
     ],
     "slug": "arturo-fuente-breva-natural",
@@ -1443,7 +1443,7 @@
         "Size": "Belicoso",
         "Barcode": "843182121305",
         "In_Stock": true,
-        "Price": "14.95"
+        "Price": "15.75"
       }
     ],
     "slug": "arturo-fuente-don-carlos",
@@ -1499,7 +1499,7 @@
         "Size": "Corona",
         "Barcode": "843182121688",
         "In_Stock": true,
-        "Price": "12.25"
+        "Price": "12.95"
       }
     ],
     "slug": "arturo-fuente-don-carlos-no-3",
@@ -1518,7 +1518,7 @@
         "Size": "Robusto",
         "Barcode": "843182121824",
         "In_Stock": false,
-        "Price": "20.10"
+        "Price": "21.25"
       }
     ],
     "slug": "arturo-fuente-don-carlos-personal-reserve",
@@ -1650,7 +1650,7 @@
         "Size": "Corona",
         "Barcode": "843182101116",
         "In_Stock": true,
-        "Price": "4.30"
+        "Price": "4.45"
       }
     ],
     "slug": "arturo-fuente-fuente-curly-head-maduro-deluxe",
@@ -1957,7 +1957,7 @@
         "Size": "Torpedo",
         "Barcode": "843182100645",
         "In_Stock": true,
-        "Price": "9.45"
+        "Price": "10.10"
       }
     ],
     "slug": "arturo-fuente-queen-b-sungrown"
@@ -2193,7 +2193,7 @@
         "Size": "Toro",
         "Barcode": "819577011810",
         "In_Stock": true,
-        "Price": "14.85"
+        "Price": "15.80"
       }
     ],
     "slug": "ashton-ashton"
@@ -2385,7 +2385,7 @@
         "Size": "Robusto",
         "Barcode": "7423825002067",
         "In_Stock": true,
-        "Price": "6.30"
+        "Price": "6.60"
       },
       {
         "Size": "Toro",
@@ -2958,7 +2958,7 @@
         "Size": "Corona",
         "Barcode": "689674114192",
         "In_Stock": true,
-        "Price": "9.85"
+        "Price": "10.50"
       },
       {
         "Size": "Robusto",
@@ -3030,7 +3030,13 @@
         "Size": "Toro",
         "Barcode": "652125004519",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "11.70"
+      },
+      {
+        "Size": "Robusto",
+        "In_Stock": true,
+        "Price": "11.20",
+        "Barcode": "652125004410"
       }
     ],
     "slug": "cao-l-anniversaire-cameroon"
@@ -4658,7 +4664,7 @@
         "Size": "Toro",
         "Barcode": "689674151142",
         "In_Stock": true,
-        "Price": "10.50"
+        "Price": "11.00"
       },
       {
         "Size": "Robusto",
@@ -5078,7 +5084,7 @@
         "Size": "Toro",
         "Barcode": "689674155195",
         "In_Stock": true,
-        "Price": "8.15"
+        "Price": "8.50"
       }
     ],
     "slug": "hoyo-de-monterrey-hoyo-oscuro"
@@ -5176,7 +5182,7 @@
         "Size": "Robusto",
         "Barcode": "76622025318",
         "In_Stock": true,
-        "Price": "8.80"
+        "Price": "9.15"
       },
       {
         "Size": "Toro",
@@ -5218,7 +5224,7 @@
         "Size": "Robusto",
         "Barcode": "76622025356",
         "In_Stock": true,
-        "Price": "8.50"
+        "Price": "9.15"
       },
       {
         "Size": "Toro",
@@ -5260,13 +5266,13 @@
         "Size": "Robusto",
         "Barcode": "76622025301",
         "In_Stock": true,
-        "Price": "8.05"
+        "Price": "8.50"
       },
       {
         "Size": "Toro",
         "Barcode": "76622025202",
         "In_Stock": true,
-        "Price": "8.90"
+        "Price": "9.25"
       },
       {
         "Size": "Gordo",
@@ -5326,7 +5332,7 @@
         "Size": "Toro",
         "Barcode": "76622097209",
         "In_Stock": true,
-        "Price": "9.55"
+        "Price": "10.00"
       }
     ],
     "slug": "j-c-newman-cuesta-rey-no-60"
@@ -5813,7 +5819,7 @@
         "Size": "Toro",
         "Barcode": "76622160378",
         "In_Stock": true,
-        "Price": "8.90"
+        "Price": "9.60"
       }
     ],
     "slug": "j-c-newman-la-unica-600-connecticut"
@@ -5849,7 +5855,7 @@
         "Size": "Robusto",
         "Barcode": "76622040335",
         "In_Stock": true,
-        "Price": "8.40"
+        "Price": "8.75"
       }
     ],
     "slug": "j-c-newman-la-unica-connecticut"
@@ -5991,7 +5997,7 @@
         "Size": "Corona",
         "Barcode": "819577015078",
         "In_Stock": true,
-        "Price": "7.30"
+        "Price": "8.00"
       }
     ],
     "slug": "la-aroma-de-cuba-connecticut-corona"
@@ -7918,40 +7924,10 @@
         "Size": "Robusto",
         "Barcode": "76622027022",
         "In_Stock": true,
-        "Price": "8.40"
+        "Price": "8.80"
       }
     ],
     "slug": "perla-del-mar-shade"
-  },
-  {
-    "Cigar Brand": "Perla Del Mar",
-    "Cigar Name": "Toro",
-    "Wrapper": "Connecticut Shade",
-    "Binder": "Nicaraguan",
-    "Filler": "Nicaraguan",
-    "Flavor_Profile": "",
-    "Strength_Profile": "Mild-Medium",
-    "Sizes": [
-      {
-        "Size": "Toro",
-        "Barcode": "76622027039",
-        "In_Stock": true,
-        "Price": "9.20"
-      },
-      {
-        "Size": "Toro",
-        "Barcode": "76622027350",
-        "In_Stock": true,
-        "Price": "9.20"
-      },
-      {
-        "Size": "Toro",
-        "Barcode": "76622072305",
-        "In_Stock": true,
-        "Price": "9.20"
-      }
-    ],
-    "slug": "perla-del-mar-toro"
   },
   {
     "Cigar Brand": "Punch",
@@ -8044,7 +8020,7 @@
         "Size": "Toro",
         "Barcode": "689674116554",
         "In_Stock": true,
-        "Price": "6.65"
+        "Price": "6.85"
       },
       {
         "Size": "Gordo",
@@ -8684,7 +8660,7 @@
         "Size": "Toro",
         "Barcode": "819577011407",
         "In_Stock": true,
-        "Price": "10.65"
+        "Price": "10.85"
       }
     ],
     "slug": "san-cristobal-quintessence-epicure"
@@ -8702,7 +8678,7 @@
         "Size": "Toro",
         "Barcode": "819577010936",
         "In_Stock": true,
-        "Price": "10.60"
+        "Price": "11.85"
       }
     ],
     "slug": "san-cristobal-revelation-legend"
@@ -8858,7 +8834,7 @@
         "Size": "Rothschild",
         "Barcode": "71610854208",
         "In_Stock": true,
-        "Price": "7.00"
+        "Price": "8.35"
       }
     ],
     "slug": "st-louis-rey-st-louis-rey"
@@ -8912,13 +8888,13 @@
         "Size": "Toro",
         "Barcode": "7623500431704",
         "In_Stock": true,
-        "Price": "7.35"
+        "Price": "8.50"
       },
       {
         "Size": "Robusto",
         "Barcode": "7623500431698",
         "In_Stock": true,
-        "Price": "7.20"
+        "Price": "7.95"
       }
     ],
     "slug": "zino-zino"
@@ -9160,7 +9136,7 @@
         "Size": "Toro",
         "Barcode": "689674160731",
         "In_Stock": true,
-        "Price": "7.45"
+        "Price": "7.65"
       }
     ],
     "slug": "cao-fasa-sombra",
@@ -9632,7 +9608,7 @@
         "Size": "Toro",
         "Barcode": "689674160427",
         "In_Stock": true,
-        "Price": "8.15"
+        "Price": "8.50"
       }
     ],
     "description": "The latest addition to Hoyo's core lineup, the Shade, is a Honduran puro crafted entirely from Honduran tobaccos. It features a shade grown wrapper cultivated in Honduras, paired with Honduran binder and filler, delivering a mellow to medium-bodied profile. ",
@@ -10162,6 +10138,12 @@
         "Barcode": "689674125068",
         "In_Stock": true,
         "Price": "11.20"
+      },
+      {
+        "Size": "Gigante",
+        "In_Stock": true,
+        "Price": "12.25",
+        "Barcode": "689674125099"
       }
     ],
     "description": "CAO Zócalo brings a bold, authentically Mexican twist to the CAO lineup with its dark San Andrés Morrón wrapper atop a Cameroon binder and Nicaraguan long-fillers. Medium-Full in body and deeply flavorful, it’s the brand’s first cigar to feature a Mexican wrapper, giving smokers a rich, earthy experience with a touch of sweetness.",
