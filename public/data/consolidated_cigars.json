@@ -347,12 +347,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": "7429457990925",
+        "Barcode": "810194080258",
         "In_Stock": true,
-        "Price": "11.20"
+        "Price": "11.15"
       }
     ],
-    "slug": "aj-fernandez-bella-artes-rojita"
+    "slug": "aj-fernandez-bella-artes-rojita",
+    "description": "AJ Fernandez Bella Artes is a refined medium plus cigar built around a Rojita hybrid wrapper, a Nicaraguan binder, and a mix of Nicaraguan and Honduran fillers. The profile opens with cream, light spice, and a subtle floral note that sets a smooth tone from the start.\nAs it burns, the flavor develops into soft cinnamon, cocoa, and a gentle sweetness over a steady earthy core. The construction is dependable and the strength stays balanced, making Bella Artes a strong option for smokers who want depth and complexity without heavy power."
   },
   {
     "Cigar Brand": "AJ Fernandez",
@@ -662,9 +663,16 @@
         "Barcode": "7426824785429",
         "In_Stock": true,
         "Price": "9.55"
+      },
+      {
+        "Size": "Belicoso",
+        "Barcode": "851350000963",
+        "In_Stock": true,
+        "Price": "9.30"
       }
     ],
-    "slug": "aj-fernandez-new-world-oscuro"
+    "slug": "aj-fernandez-new-world-oscuro",
+    "description": "AJ Fernandez New World Oscuro is one of the blends that put AJ on the map as a modern powerhouse in cigar making. Developed with his father, Ismael Fernandez, this cigar was created to honor the history of tobacco in the Americas and became an instant hit when it launched. The red box has become a familiar sight in humidors, known for offering serious value without cutting corners on craftsmanship.\nThe blend is built around all Nicaraguan tobaccos, including a dark oscuro wrapper that gives the cigar its signature richness and depth. New World Oscuro is known for dependable construction and a bold profile that helped solidify AJ’s reputation for producing high quality Nicaraguan cigars at accessible prices. It remains one of the core lines that introduced many smokers to his style of blending."
   },
   {
     "Cigar Brand": "AJ Fernandez",
@@ -927,6 +935,12 @@
         "Barcode": "815337015470",
         "In_Stock": true,
         "Price": "6.40"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "815337015487",
+        "In_Stock": true,
+        "Price": "7.30"
       }
     ],
     "slug": "alec-bradley-project-40"
@@ -2194,9 +2208,16 @@
         "Barcode": "819577011810",
         "In_Stock": true,
         "Price": "15.80"
+      },
+      {
+        "Size": "Churchill",
+        "Barcode": "819577011773",
+        "In_Stock": true,
+        "Price": "15.50"
       }
     ],
-    "slug": "ashton-ashton"
+    "slug": "ashton-ashton",
+    "description": "Ashton Classic has been a benchmark in premium cigars since the early 1980s, created by Philadelphia tobacconist Robert Levin and produced by the Fuente family in the Dominican Republic. The blend was designed to set a standard for consistency and elegance at a time when the premium cigar market was still taking shape, and it quickly became one of the most recognized names in the industry.\nFor decades, Ashton Classic has held its place as a dependable choice for new and seasoned smokers alike, known for its careful construction and long running partnership between Levin and the Fuentes. It remains one of the flagship lines that helped define modern Dominican cigar making and continues to represent the traditional side of premium cigars."
   },
   {
     "Cigar Brand": "Ashton",
@@ -5886,9 +5907,16 @@
         "Barcode": "76622013254",
         "In_Stock": false,
         "Price": "20.95"
+      },
+      {
+        "Size": "Torpedo",
+        "Barcode": "076622013209",
+        "In_Stock": true,
+        "Price": "21.50"
       }
     ],
-    "slug": "j-c-newman-the-american"
+    "slug": "j-c-newman-the-american",
+    "description": "JC Newman The American is one of the most meaningful projects in modern cigar making, built as a tribute to the history of the Newman family and the early days of the US cigar industry. Produced entirely in the historic El Reloj factory in Tampa, the cigar was created to revive the tradition of a fully American made premium cigar at a time when that idea had almost disappeared. Every component comes from the United States, from the tobaccos to the boxes to the bands, making it a direct link to the era when Tampa was the heart of American cigar production.\nThe blend features a Florida Sun Grown wrapper, a Connecticut Broadleaf binder, and filler grown in Connecticut and Pennsylvania. This structure showcases the range and character of American tobaccos while honoring the craftsmanship that kept the Newman company alive for more than a century. The American has earned a place as a flagship product not because of strength or trend chasing, but because it preserves a piece of cigar history that few companies have the ability or the will to recreate today."
   },
   {
     "Cigar Brand": "J.C. Newman",
@@ -7498,9 +7526,16 @@
         "Barcode": "814539011785",
         "In_Stock": true,
         "Price": "8.35"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "814539011839",
+        "In_Stock": true,
+        "Price": "10.45"
       }
     ],
-    "slug": "oliva-serie-o"
+    "slug": "oliva-serie-o",
+    "description": "Oliva Series O is one of the cornerstone blends that helped establish Oliva as a major name in Nicaraguan cigars. Built on a traditional Cuban seed concept, the line was created to highlight classic Nicaraguan tobaccos and the family’s long history of growing and blending. For many smokers, Series O is the cigar that introduced them to Oliva and showed what the brand could do with straightforward craftsmanship and honest, well aged leaf.\nThe cigar is known for dependable construction, a steady burn, and the kind of balance that keeps it in regular rotation for both new and seasoned smokers. Series O has been on shelves for years and continues to hold its place as a reliable, heritage line within the Oliva portfolio, offering a familiar experience that reflects the company’s roots."
   },
   {
     "Cigar Brand": "Oliva",
@@ -7563,6 +7598,11 @@
         "Size": "Toro",
         "In_Stock": true,
         "Price": "18.30"
+      },
+      {
+        "Size": "Gordo",
+        "In_Stock": true,
+        "Price": "22.25"
       }
     ],
     "slug": "oliva-serie-v-melanio-maduro"
@@ -10169,5 +10209,225 @@
     "description": "CAO Colombia is CAO’s boldest world-blending adventure yet. It’s the first cigar in their lineup to showcase Colombian grown Ica Mazinga tobacco, a Cuban seed taken to the remote mountains of Colombia and perfected over 15 years, wrapped in a smooth Honduran Jamastrán leaf, secured with a Cameroon binder, and blended with Brazilian and Colombian long-fillers. It’s a mellow to medium-bodied smoke with unique character and smooth delivery, and an unexpected find at this price point",
     "slug": "cao-columbia",
     "Date Added": "2025-08-29"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Flavours Moontrance",
+    "Wrapper": "Cameroon",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Fruit, Cream, Vanilla",
+    "Strength_Profile": "Mild",
+    "Sizes": [
+      {
+        "Size": "Corona",
+        "Barcode": "652125207354",
+        "In_Stock": true,
+        "Price": "10.75"
+      }
+    ],
+    "description": "CAO Flavours Moontrance is a mellow, aromatic blend built on smooth Dominican fillers with a naturally sweet Cameroon wrapper. The infusion leans into bourbon vanilla, peach, and a touch of fruit liqueur, giving the cold draw a soft mix of cream and stone fruit.\nOnce lit, the profile settles into gentle vanilla, light spice from the Cameroon leaf, and a mild caramel finish. The room note is inviting and noticeably sweet, which makes Moontrance an easy pick for new smokers or anyone who wants a relaxed, flavorful change of pace.",
+    "slug": "cao-flavours-moontrance",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Flavours Cherrybomb",
+    "Wrapper": "Cameroon",
+    "Binder": "Connnecticut Broadleaf",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Sweet, Cherry, Vanilla, Sweetness",
+    "Strength_Profile": "Mild",
+    "Sizes": [
+      {
+        "Size": "Corona",
+        "Barcode": "689674052494",
+        "In_Stock": true,
+        "Price": "10.75"
+      }
+    ],
+    "description": "CAO Flavours Cherry Bomb brings a bright cherry aroma with mellow Dominican fillers and a smooth Cameroon wrapper. The infusion mixes wild cherry, black cherry, and a touch of vanilla, giving the cold draw a sweet and creamy start.\nOnce lit, the flavor moves through rich cherry, soft vanilla, and a light woodiness from the Cameroon leaf. The smoke stays sweet and approachable, which makes Cherry Bomb an easy pick for anyone who wants a fun, flavored option.\n",
+    "slug": "cao-flavours-cherrybomb",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "Arturo Fuente",
+    "Cigar Name": "Exquisitos Maduro",
+    "Wrapper": "Connecticut Broadleaf",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Sweetness, Coffee, Vanilla",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Petite Corona",
+        "In_Stock": true,
+        "Price": "3.25",
+        "Barcode": "843182101468"
+      }
+    ],
+    "description": "rturo Fuente Exquisitos Maduro is one of the quiet workhorses of the Fuente portfolio, a small cigar with a long family history behind it. Rolled in the Dominican Republic, it represents the classic Fuente approach to craftsmanship in a size that has been popular for decades with smokers who want something quick without sacrificing quality. The line has been around long enough to earn a loyal following, especially among fans of traditional handmade cigars.\nThe Maduro version uses a dark wrapper that gives the cigar its signature look and adds a touch of old world character. Exquisitos Maduro is known for consistent construction, dependable draw, and the kind of everyday reliability that has kept Fuente at the center of the premium cigar world for generations. It remains a staple for anyone who appreciates a shorter handmade cigar with a pedigree.",
+    "slug": "arturo-fuente-exquisitos-maduro",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "Macanudo",
+    "Cigar Name": "Emissary France",
+    "Wrapper": "Ecuadorian Habano",
+    "Binder": "Connecticut Broadleaf",
+    "Filler": "Brazilian, Dominican, French, USA",
+    "Flavor_Profile": "Fruit, Sweetness, Floral, Breadiness",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674161721",
+        "In_Stock": true,
+        "Price": "17.35"
+      }
+    ],
+    "description": "Macanudo Emissary France is a premium release designed to highlight rare French-grown tobacco from the Mugron River Valley, between Bordeaux and the Spanish border. The line is a part of Macanudo’s Emissary sub-brand, which focuses on unique European leaf and blends offering elevated complexity. \nBlended from tobaccos aged four to ten years and backed by craftsmanship from the STG Danlí factory in Honduras, Emissary France uses a 10-year aged Ecuadorian Habano wrapper, a 10-year aged U.S. Broadleaf binder, and filler leaves including Dominican Piloto, U.S. Broadleaf, Brazilian Arapiraca and the French leaf that gives the cigar its distinction.\nEmissary France is positioned in the medium to medium-full strength range, offering an experience that appeals to seasoned smokers who appreciate thoughtful blending and nuanced leaf origins. \n",
+    "slug": "macanudo-emissary-france",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "La Flor Dominicana",
+    "Cigar Name": "Cabinet Oscar Natural L-250",
+    "Wrapper": "Ecuador Sumatra Oscuro",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Pepper, Leather, Earth, Raisin",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Robusto l-250",
+        "Barcode": "7460644702846",
+        "In_Stock": true,
+        "Price": "10.35"
+      }
+    ],
+    "description": "La Flor Dominicana Cabinet Oscuro Natural comes from the period when Litto Gomez was shaping LFD into a serious Dominican brand with its own voice. The Cabinet series was meant to show what well aged Dominican tobacco could do when treated with patience and restraint. It carried a richer profile than most Dominican cigars of its time, but it wasn’t built to overpower. Instead, it highlighted the depth and character of the tobaccos Gomez was cultivating as he developed the identity that would eventually define LFD.\nThe blend uses Dominican filler and binder with a naturally dark, oily wrapper that gives the cigar its name. Cabinet Oscuro Natural has stayed in circulation for years because it represents an early chapter in LFD’s evolution, before the rise of the full strength Ligero lines. It shows the brand’s roots in careful fermentation, consistent construction, and the desire to push Dominican tobacco toward new expressions. For many smokers, it remains one of the blends that explains how LFD became the company it is today.",
+    "slug": "la-flor-dominicana-cabinet-oscar-natural-l250",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "La Flor Dominicana",
+    "Cigar Name": "Dl Digger Maduro",
+    "Wrapper": "Maduro",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Pepper, Earth, Leather",
+    "Strength_Profile": "Full",
+    "Sizes": [
+      {
+        "Size": "Double Churchill",
+        "Barcode": "7460644702471",
+        "In_Stock": true,
+        "Price": "15.45"
+      }
+    ],
+    "description": "La Flor Dominicana Double Ligero Digger Maduro comes from the era when LFD was redefining what full strength Dominican cigars could be. Litto Gomez built the Double Ligero line to showcase the raw power and depth of his estate-grown Dominican ligero, and the Digger became the oversized symbol of that philosophy. It was designed for smokers who wanted a long, unapologetically strong cigar and a clear example of how far Dominican tobacco could be pushed without losing structure or complexity.\nThe Maduro version uses a dark, well-fermented wrapper that adds extra richness to the already bold blend. Despite its size and nicotine strength, the Digger Maduro has earned a loyal following because it delivers what the Double Ligero line promised from the start: a showcase of Dominican potency backed by solid construction and slow, steady combustion. It remains one of LFD’s most recognizable cigars and a touchstone for anyone exploring the stronger side of modern Dominican blending.",
+    "slug": "la-flor-dominicana-dl-digger-maduro",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "La Flor Dominicana",
+    "Cigar Name": "Dl Digger Natural",
+    "Wrapper": "Ecuador Sumatra",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Pepper, Leather, Earth",
+    "Strength_Profile": "Full",
+    "Sizes": [
+      {
+        "Size": "Double Churchill",
+        "Barcode": "7460644702488",
+        "In_Stock": true,
+        "Price": "15.00"
+      }
+    ],
+    "description": "La Flor Dominicana Double Ligero Digger Natural is part of the chapter where Litto Gomez pushed Dominican tobaccos into territory few brands were exploring at the time. The Double Ligero line was built to highlight strength, showing what could be done with heavy doses of estate-grown ligero from the La Canela farm. The Digger became the outsized expression of that idea, a cigar created for smokers who wanted both intensity and an extended smoking session.\nThe Natural version uses a well aged sun-grown wrapper that keeps the focus on the core ligero-driven blend. It shows the raw power and earthy depth that made the Double Ligero series a landmark for full strength Dominican cigars, while still carrying the steady burn and robust construction LFD built its name on. The Digger Natural remains one of the clearest examples of how LFD blended boldness with craftsmanship during its rise.",
+    "slug": "la-flor-dominicana-dl-digger-natural",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "La Flor Dominicana",
+    "Cigar Name": "DL Chisel Natural",
+    "Wrapper": "Ecuadorian Sungrown",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Pepper, Leather, Spice, Cedar",
+    "Strength_Profile": "Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "7460644702280",
+        "In_Stock": true,
+        "Price": "11.85"
+      }
+    ],
+    "description": "La Flor Dominicana Double Ligero Chisel Natural represents one of the most notable moments in modern cigar design. The Chisel shape was created by Litto Gomez and became the first cigar shape to receive a United States patent, showing how LFD was experimenting with form at the same time it was redefining strength. Paired with the Double Ligero blend, the Chisel demonstrated how focused airflow and concentrated smoke output could amplify the character of Dominican ligero grown at the La Canela farm.\nThe Natural version uses a sun grown wrapper that keeps the spotlight on the core Dominican tobaccos that built the Double Ligero name. It reflects the original idea behind the line, which was to show the power and depth that carefully cultivated ligero can offer while maintaining solid construction and a steady burn. The Chisel Natural remains one of LFD’s signature cigars because it captures both the creativity and the intensity that shaped the brand’s early rise.",
+    "slug": "la-flor-dominicana-dl-chisel-natural",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "Avo",
+    "Cigar Name": "Synchro South American Ritmo",
+    "Wrapper": "Ecuador Habano",
+    "Binder": "Mexican",
+    "Filler": "Brazilian, Honduran, Nicaraguan, Peruvian",
+    "Flavor_Profile": "Coffee, Nuts, Oak, Chocolate",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "2305500355536",
+        "In_Stock": true,
+        "Price": "15.60"
+      }
+    ],
+    "description": "AVO Syncro South America Ritmo was created to explore the influence of South American growing regions within the AVO portfolio, which had long been known for its Dominican roots. The blend pulls from a wide geographic range, but its identity is grounded in the tobaccos of Brazil and Peru, reflecting the richer, earthier profiles that come from those soils. Ritmo was part of the larger Syncro series that experimented with cross-regional blending and marked a more adventurous chapter for the brand after decades of traditional Dominican style.\nThe cigar uses an aged Ecuadorian wrapper with a supporting cast of Brazilian, Peruvian, Nicaraguan, Dominican, and Honduran fillers. This broad composition was meant to show how different South American and Central American varieties interact when brought together with intention. Ritmo has remained a staple in the AVO lineup because it highlights the brand’s willingness to step outside conventional boundaries and introduce smokers to regions that do not often take center stage in premium cigars.",
+    "slug": "avo-synchro-south-american-ritmo",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "Avo",
+    "Cigar Name": "Classic",
+    "Wrapper": "Connecticut",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Creamy, Smooth",
+    "Strength_Profile": "Mild",
+    "Sizes": [
+      {
+        "Size": "Toro No. 2",
+        "Barcode": "7623500244458",
+        "In_Stock": true,
+        "Price": "13.65"
+      }
+    ],
+    "description": "AVO Classic is the blend that introduced most smokers to the world of Avo Uvezian, the Armenian pianist turned cigar maker whose partnership with Hendrik Kelner shaped decades of Dominican cigar craftsmanship. Released in the late 1980s, the line was designed to offer an elegant, approachable style built on precision and consistency. It quickly became one of the defining Dominican cigars of its era and helped establish AVO as a brand centered on refinement rather than intensity.\nThe blend relies on aged Dominican tobaccos wrapped in smooth Connecticut Shade, reflecting the traditional techniques that Kelner and Uvezian favored. AVO Classic has stayed in continuous production because it captures the spirit of the brand’s early philosophy: balance, reliability, and a dedication to quality over trends. It remains one of the clearest examples of how AVO laid its foundation and why the name continues to hold weight among smokers who appreciate classic Dominican cigars.",
+    "slug": "avo-classic",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "Alec Bradley",
+    "Cigar Name": "Black Market",
+    "Wrapper": "Maduro",
+    "Binder": "Sumatra",
+    "Filler": "Honduran, Indonesian, Nicaraguan, Panamanian",
+    "Flavor_Profile": "Spice, Pepper, Peat",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "815337011892",
+        "In_Stock": true,
+        "Price": "12.50"
+      }
+    ],
+    "description": "Alec Bradley Black Market is one of the cigars that pushed the brand into wider recognition in the early 2010s. Released during a period when Alec Bradley was experimenting with bolder, less traditional profiles, Black Market stood out with its unusual banding, darker aesthetic, and willingness to showcase heavier tobaccos. It quickly became a staple in humidors across the country and helped solidify Alec Bradley as a company willing to take risks at a time when many brands were staying on familiar ground.\nThe blend uses a Nicaraguan wrapper over a Honduran binder with filler from Panama and Honduras. The inclusion of Panamanian leaf is part of what made this cigar notable, since that region is rarely used in premium blends and adds a distinct character that set Black Market apart from its competitors. The cigar has remained a long running line in the Alec Bradley portfolio because it represents a turning point for the company, showing how creative sourcing and a willingness to break from tradition could earn a lasting place in the market.\n",
+    "slug": "alec-bradley-black-market",
+    "Date Added": "2025-11-14"
   }
 ]
