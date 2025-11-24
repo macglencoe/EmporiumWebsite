@@ -43,6 +43,12 @@ const CigarCatalog = (props) => {
 
   // All unique sizes for filtering
   const uniqueSizes = [...new Set(props.data.flatMap(obj => obj.Sizes.map(size => size.Size)))].sort((a, b) => a.localeCompare(b));
+  const totalCigars = props.data.reduce((sum, cigar) => {
+    if (Array.isArray(cigar.Sizes) && cigar.Sizes.length > 0) {
+      return sum + cigar.Sizes.length;
+    }
+    return sum + 1;
+  }, 0);
 
   const pageSize = 10;
   const totalPages = Math.ceil(props.data.length / pageSize);
@@ -71,7 +77,7 @@ const CigarCatalog = (props) => {
 
         featuredStats={[
           {
-            title: `${props.data.length} Cigars`,
+            title: `${totalCigars} Cigars`,
             subtitle: "in our catalog",
             description: "We offer the largest selection of premium cigars in Berkeley County, carefully curated for enthusiasts and connoisseurs alike.",
           },
@@ -235,4 +241,3 @@ const CigarCatalog = (props) => {
 }
 
 export default CigarCatalog
-
