@@ -98,7 +98,7 @@ export default function Layout(props) {
 
           <main
             id="content"
-            className="min-h-screen flex flex-col gap-[5px] w-full flex-1 relative "
+            className="min-h-screen flex flex-col w-full flex-1 relative "
           >
             <Analytics />
             {props.children}
