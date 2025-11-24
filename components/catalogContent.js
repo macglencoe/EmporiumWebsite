@@ -130,6 +130,35 @@ const CatalogContent = (props) => {
     const totalPages = Math.ceil(props.data.length / pageSize);
     const [currentPage, setCurrentPage] = useState(1);
     const featuredStats = Array.isArray(props.featuredStats) ? props.featuredStats.filter(Boolean) : [];
+    const isQueryValueEmpty = (value) => {
+        if (value == null) {
+            return true;
+        }
+        if (Array.isArray(value)) {
+            return value.every((item) => isQueryValueEmpty(item));
+        }
+        return String(value).trim() === '';
+    };
+    const getFirstNonEmptyValue = (value) => {
+        if (Array.isArray(value)) {
+            const usableValue = value.find((item) => !isQueryValueEmpty(item));
+            return usableValue !== undefined ? getFirstNonEmptyValue(usableValue) : '';
+        }
+        if (value == null) {
+            return '';
+        }
+        return String(value).trim();
+    };
+    const searchQueryValue = router.query?.search;
+    const onlySearchHasValue = !isQueryValueEmpty(searchQueryValue) &&
+        Object.entries(router.query ?? {}).every(([key, value]) =>
+            key === 'search' ||
+            key === 'page' ||
+            isQueryValueEmpty(value)
+        );
+    const emptyResultsMessage = onlySearchHasValue
+        ? `Sorry, we couldn't find anything called "${getFirstNonEmptyValue(searchQueryValue)}"`
+        : "Sorry, we couldn't find what you were looking for";
 
     useEffect(() => {
         if (router.query.page) {
@@ -149,63 +178,74 @@ const CatalogContent = (props) => {
     }
     return (
         <section className="catalog-content-container">
-            {featuredStats.length > 0 && (
-                <div className="featured-stats-grid" aria-label="Catalog highlights">
-                    {featuredStats.map((stat, index) => (
-                        <article
-                            key={`${stat?.title ?? 'stat'}-${index}`}
-                            className="bg-secondary2 text-primary2 p-3 m-1 w-fit border-double border-8 border-primary1"
-                        >
-                            {stat?.title && (
-                                <h2 className="tracking-wider uppercase font-inter font-bold text-3xl">{stat.title}</h2>
-                            )}
-                            {stat?.subtitle && (
-                                <span className="font-medium text-xl font-inter uppercase tracking-wide text-primary1">{stat.subtitle}</span>
-                            )}
-                            {stat?.description && (
-                                <p className="mt-2">{stat.description}</p>
-                            )}
-                        </article>
-                    ))}
+
+            {props.data?.length > 0 &&
+                <>
+                    {featuredStats.length > 0 && (
+                        <div className="featured-stats-grid" aria-label="Catalog highlights">
+                            {featuredStats.map((stat, index) => (
+                                <article
+                                    key={`${stat?.title ?? 'stat'}-${index}`}
+                                    className="bg-secondary2 text-primary2 p-3 m-1 w-fit border-double border-8 border-primary1"
+                                >
+                                    {stat?.title && (
+                                        <h2 className="tracking-wider uppercase font-inter font-bold text-3xl">{stat.title}</h2>
+                                    )}
+                                    {stat?.subtitle && (
+                                        <span className="font-medium text-xl font-inter uppercase tracking-wide text-primary1">{stat.subtitle}</span>
+                                    )}
+                                    {stat?.description && (
+                                        <p className="mt-2">{stat.description}</p>
+                                    )}
+                                </article>
+                            ))}
+                        </div>
+                    )}
+                    <Pagination
+                        totalPages={totalPages}
+                        currentPage={currentPage}
+                        handlePageChange={handlePageChange}
+                    />
+
+
+
+                    <div className="catalog-container40">
+                        {
+                            currentPageData.map((item) => (
+                                props.cardSettings.title(item) !== '' &&
+                                <CatalogCard
+
+                                    image={props.cardSettings.image ? props.cardSettings.image(item) : null}
+                                    secondaryTitle={props.cardSettings.secondaryTitle ? props.cardSettings.secondaryTitle(item) : null}
+                                    title={props.cardSettings.title(item)}
+
+                                    data={props.cardSettings.data(item)}
+                                    href={props.cardSettings.href(item)}
+
+                                    buttonText={props.cardSettings.buttonText ? props.cardSettings.buttonText(item) : null}
+                                    sizes={props.cardSettings.sizes ? props.cardSettings.sizes(item) : null}
+                                    barcode={props.cardSettings.barcode ? props.cardSettings.barcode(item) : null}
+
+                                    description={props.cardSettings.description ? props.cardSettings.description(item) : null}
+                                />
+                            ))
+                        }
+                    </div>
+                    <Pagination
+                        totalPages={totalPages}
+                        currentPage={currentPage}
+                        handlePageChange={handlePageChange}
+                        showReturnTop={true}
+                    />
+                </>
+            }
+            {props.data?.length == 0 &&
+                <div className="flex-1 w-full flex flex-col items-center py-20">
+                    <span className="text-3xl">{emptyResultsMessage}</span>
                 </div>
-            )}
-            <Pagination
-                totalPages={totalPages}
-                currentPage={currentPage}
-                handlePageChange={handlePageChange}
-            />
+            }
 
-            
 
-            <div className="catalog-container40">
-                {
-                    currentPageData.map((item) => (
-                        props.cardSettings.title(item) !== '' &&
-                        <CatalogCard
-
-                            image={props.cardSettings.image ? props.cardSettings.image(item) : null}
-                            secondaryTitle={props.cardSettings.secondaryTitle ? props.cardSettings.secondaryTitle(item) : null}
-                            title={props.cardSettings.title(item)}
-
-                            data={props.cardSettings.data(item)}
-                            href={props.cardSettings.href(item)}
-
-                            buttonText={props.cardSettings.buttonText ? props.cardSettings.buttonText(item) : null}
-                            sizes={props.cardSettings.sizes ? props.cardSettings.sizes(item) : null}
-                            barcode={props.cardSettings.barcode ? props.cardSettings.barcode(item) : null}
-
-                            description={props.cardSettings.description ? props.cardSettings.description(item) : null}
-                        />
-                    ))
-                }
-            </div>
-
-            <Pagination
-                totalPages={totalPages}
-                currentPage={currentPage}
-                handlePageChange={handlePageChange}
-                showReturnTop={true}
-            />
 
             <style jsx>
                 {`
