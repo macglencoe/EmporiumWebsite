@@ -14,7 +14,7 @@ import Layout from '../../components/layout'
 import CatalogCard from '../../components/catalogCard'
 import Catalog from '../../components/catalog'
 import Filters from '../../components/filters'
-import { PiCurrencyDollar, PiCurrencyDollarBold, PiCurrencyDollarFill, PiGauge, PiGaugeBold, PiGaugeFill, PiLeaf, PiLeafBold, PiLeafFill, PiRuler } from 'react-icons/pi'
+import { PiCurrencyDollar, PiCurrencyDollarBold, PiCurrencyDollarFill, PiFire, PiGauge, PiGaugeBold, PiGaugeFill, PiLeaf, PiLeafBold, PiLeafFill, PiRuler } from 'react-icons/pi'
 import { type } from 'jquery'
 
 
@@ -173,7 +173,7 @@ const CigarCatalog = (props) => {
                   },
                 item['Strength_Profile'] && 
                   {
-                    icon: PiGauge,
+                    icon: PiFire,
                     value: item['Strength_Profile'],
                     label: 'Strength',
                     type: 'hidden-label strength-gauge'
