@@ -57,49 +57,52 @@ export default function Layout(props) {
           <Directory />
         </header>
 
-        <div className="bg-primary1 flex w-full">
+        <div className="bg-primary1 flex w-full items-stretch">
           <div
             className={clsx(
-              'hidden md:flex flex-col gap-1 bg-secondary2 w-[300px] flex-none transition-transform duration-500',
+              'hidden md:flex w-[300px] flex-none transition-transform duration-500 items-start',
               isActive ? 'translate-x-0' : '-translate-x-72'
             )}
           >
-            <Fragment>{props.sidebarChildren}</Fragment>
+            <aside className="flex flex-col gap-1 bg-secondary2 w-full sticky top-35 self-start">
+              <Fragment>{props.sidebarChildren}</Fragment>
 
-            <div className="hidden md:block">
-              <Contact />
-            </div>
-
-            <a
-              href="#fb-skip"
-              tabIndex={0}
-              className="absolute left-0 top-full h-8 transform -translate-y-full transition-transform duration-300 focus:translate-y-0"
-            >
-              <div className="flex p-4 font-bold bg-white text-black">
-                Skip Facebook Embed
+              <div className="hidden md:block">
+                <Contact />
               </div>
-            </a>
 
-            <iframe
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FKing-Street-Coffee-Tobacco-Emporium-100063496593967%2F&tabs=timeline&width=300&height=1000&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-              width="300"
-              height="1000"
-              className="border-none"
-              scrolling="no"
-              frameBorder="0"
-              allowFullScreen
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              id="fb-embed"
-            />
-            <div id="fb-skip" />
+              <a
+                href="#fb-skip"
+                tabIndex={0}
+                className="absolute left-0 top-full h-8 transform -translate-y-full transition-transform duration-300 focus:translate-y-0"
+              >
+                <div className="flex p-4 font-bold bg-white text-black">
+                  Skip Facebook Embed
+                </div>
+              </a>
+
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FKing-Street-Coffee-Tobacco-Emporium-100063496593967%2F&tabs=timeline&width=300&height=1000&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+                width="300"
+                height="1000"
+                className="border-none"
+                scrolling="no"
+                frameBorder="0"
+                allowFullScreen
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                id="fb-embed"
+              />
+              <div id="fb-skip" />
+            </aside>
           </div>
 
           <main
             id="content"
-            className="flex-1 flex flex-col gap-[5px] w-full relative self-start "
+            className="min-h-screen flex flex-col gap-[5px] w-full flex-1 relative "
           >
             <Analytics />
             {props.children}
+            <div className='flex-1 ' />
             <Footer />
           </main>
         </div>

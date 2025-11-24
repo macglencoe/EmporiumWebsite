@@ -50,7 +50,7 @@ const CigarPage = (props) => {
         <title>{cigar['Cigar Brand']} {cigar['Cigar Name']}</title>
       </Head>
       <Layout>
-        <div className='bg-primary2'>
+        <div className='bg-primary2 h-full'>
           <ProductPage description={cigar.description}>
             <ProductSideContent>
               <ProductImage
