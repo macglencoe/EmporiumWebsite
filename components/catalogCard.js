@@ -145,11 +145,11 @@ function DataField({ label, icon, value, type }) {
                 {label && !hideLabel && <span>{label}</span>}
             </span>
             {isTags ? (
-                <div className="flex flex-wrap justify-start gap-2 flex-1">
+                <div className="flex flex-wrap justify-start gap-2 flex-1 font-inter">
                     {value.split(',').map((tag, tagIndex) => (
                         <span
                             key={tagIndex}
-                            className="bg-primary1/30 text-secondary1 border border-primary1/40 px-2 py-1 rounded text-xs font-bold"
+                            className="bg-primary1/30 text-secondary1 border border-primary1/40 px-2 py-1 rounded text-xs font-medium"
                         >
                             {tag}
                         </span>
@@ -166,7 +166,7 @@ function DataField({ label, icon, value, type }) {
 
 function StrengthGauge({ activeIndex, value }) {
     return (
-        <div className="flex items-center gap-2 h-full">
+        <div className="flex items-center gap-2 h-full font-inter">
             <div className="flex items-center gap-1" aria-label={`Strength ${value}`}>
                 {STRENGTH_LEVELS.map((level, index) => (
                     <div
