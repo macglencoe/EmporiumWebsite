@@ -151,13 +151,13 @@ function DataField({ label, icon, value, type }) {
     const showGauge = isStrengthGauge && strengthIndex !== -1;
     const tagList = normalizedValue ? normalizedValue.split(',').map(tag => tag.trim()).filter(Boolean) : [];
     const containerLayout = (isTags && !hideLabel)
-        ? 'flex flex-col items-start'
-        : 'flex items-start justify-between';
+        ? 'flex flex-col items-between'
+        : 'flex items-start justify-start';
     return (
         <div className={`${containerLayout} border-b border-dashed border-primary1 py-2 mx-5 gap-y-1 space-x-3`}>
-            <dt className={`font-semibold flex items-center gap-2 my-1 w-fit ${hideLabel ? 'sr-only' : ''}`}>
+            <dt className={`font-semibold flex items-center gap-2 my-1 w-fit`}>
                 {IconComponent && <IconComponent className="w-4.5 h-4.5 text-secondary1/70" aria-hidden="true" focusable="false" />}
-                <span>{labelText}</span>
+                <span className={`${hideLabel ? 'sr-only' : ''}`}>{labelText}</span>
             </dt>
             {isTags ? (
                 <dd className="flex flex-wrap justify-start gap-2 flex-1 font-inter" aria-label={`${labelText} tags`}>
