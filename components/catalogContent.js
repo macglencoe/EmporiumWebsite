@@ -181,47 +181,6 @@ const CatalogContent = (props) => {
 
             {props.data?.length > 0 &&
                 <>
-                    {featuredStats.length > 0 && (
-                        <div className="featured-stats-grid" aria-label="Catalog highlights">
-                            {featuredStats.map((stat, index) => (
-                                <article
-                                    key={`${stat?.title ?? 'stat'}-${index}`}
-                                    className="bg-secondary2 text-primary2 p-3 m-1 w-fit border-double border-8 border-primary1"
-                                >
-                                    {stat?.title && (
-                                        <h2 className="tracking-wider uppercase font-inter font-bold text-3xl">{stat.title}</h2>
-                                    )}
-                                    {stat?.subtitle && (
-                                        <span className="font-medium text-xl font-inter uppercase tracking-wide text-primary1">{stat.subtitle}</span>
-                                    )}
-                                    {stat?.description && (
-                                        <p className="mt-2">{stat.description}</p>
-                                    )}
-                                </article>
-                            ))}
-                        </div>
-                    )}
-
-                    <div id='search'>
-                        <form onSubmit={(e) => {
-                            e.preventDefault();
-                            props.handleSearchChange({ target: { value: props.searchInput } });
-                            props.setSearchInput('');
-                        }}
-                            className='bg-primary2 flex flex-row items-center max-w-3xl mx-auto border-6 border-primary1 border-double'>
-                            <input
-                                type="search"
-                                value={props.searchInput}
-                                onChange={(e) => props.setSearchInput(e.target.value)}
-                                placeholder="Search..."
-                                className="flex-1 p-3"
-                            />
-                            <button aria-label='Search' type="submit" className='cursor-pointer'>
-                                <PiMagnifyingGlassBold size={30} />
-
-                            </button>
-                        </form>
-                    </div>
                     <Pagination
                         totalPages={totalPages}
                         currentPage={currentPage}
@@ -258,32 +217,6 @@ const CatalogContent = (props) => {
                         handlePageChange={handlePageChange}
                         showReturnTop={true}
                     />
-                </>
-            }
-            {props.data?.length == 0 &&
-                <>
-                    <div id='search'>
-                        <form onSubmit={(e) => {
-                            e.preventDefault();
-                            props.handleSearchChange({ target: { value: props.searchInput } });
-                        }}
-                            className='bg-primary2 flex flex-row items-center max-w-3xl mx-auto border-6 border-primary1 border-double'>
-                            <input
-                                type="search"
-                                value={props.searchInput}
-                                onChange={(e) => props.setSearchInput(e.target.value)}
-                                placeholder="Search..."
-                                className="flex-1 p-3"
-                            />
-                            <button aria-label='Search' type="submit" className='cursor-pointer'>
-                                <PiMagnifyingGlassBold size={30} />
-
-                            </button>
-                        </form>
-                    </div>
-                    <div className="flex-1 w-full flex flex-col items-center py-20">
-                        <span className="text-3xl">{emptyResultsMessage}</span>
-                    </div>
                 </>
             }
 

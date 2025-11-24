@@ -14,7 +14,7 @@ import Layout from '../../components/layout'
 import CatalogCard from '../../components/catalogCard'
 import Catalog from '../../components/catalog'
 import Filters from '../../components/filters'
-import { PiCurrencyDollar, PiCurrencyDollarBold, PiCurrencyDollarFill, PiFire, PiGauge, PiGaugeBold, PiGaugeFill, PiLeaf, PiLeafBold, PiLeafFill, PiRuler } from 'react-icons/pi'
+import { PiCurrencyDollar, PiCurrencyDollarBold, PiCurrencyDollarFill, PiFactory, PiFactoryFill, PiFire, PiFireFill, PiGauge, PiGaugeBold, PiGaugeFill, PiLeaf, PiLeafBold, PiLeafFill, PiRuler, PiRulerFill } from 'react-icons/pi'
 import { type } from 'jquery'
 
 
@@ -100,24 +100,28 @@ const CigarCatalog = (props) => {
             label: "Brand",
             values: uniqueBrands,
             defaultValue: "All Brands",
+            icon: PiFactoryFill
           },
           {
             name: "Wrapper",
             label: "Wrapper",
             values: uniqueWrappers,
             defaultValue: "Any Wrapper",
+            icon: PiLeafFill
           },
           {
             name: "Strength_Profile",
             label: "Strength",
             values: uniqueStrengths,
             defaultValue: "Any Strength",
+            icon: PiFireFill
           },
           {
             name: "Sizes",
             label: "Size",
             values: uniqueSizes,
             defaultValue: "Any Size",
+            icon: PiRulerFill
           }
 
         ]}
