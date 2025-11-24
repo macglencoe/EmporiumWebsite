@@ -2,6 +2,8 @@ import Link from 'next/link';
 import JsBarcode from 'jsbarcode';
 import { useEffect, useRef } from 'react';
 
+const STRENGTH_LEVELS = ['Mild', 'Mild-Medium', 'Medium', 'Medium-Full', 'Full'];
+
 const CatalogCard = ({
     href,
     image,
@@ -124,17 +126,25 @@ const CatalogCard = ({
 
 function DataField({ label, icon, value, type }) {
     const IconComponent = icon;
+    const typeString = String(type || '');
+    const hideLabel = typeString.includes('hidden-label');
+    const isTags = typeString.includes('tags');
+    const isStrengthGauge = typeString.includes('strength-gauge');
+    const normalizedValue = value === undefined || value === null ? '' : String(value).trim();
+    const strengthIndex = STRENGTH_LEVELS.findIndex(
+        level => level.toLowerCase() === normalizedValue.toLowerCase()
+    );
+    const showGauge = isStrengthGauge && strengthIndex !== -1;
     return (
         <div className="flex justify-between border-b border-dashed border-primary1 py-2 mx-5 items-start space-x-3 gap-y-1" style={{
-            justifyContent: String(type).includes('hidden-label') ? 'start'
-            : 'between',
-            flexDirection: (!String(type).includes('hidden-label') && String(type).includes('tags')) ? 'column' : 'row'
+            justifyContent: hideLabel ? 'flex-start' : 'space-between',
+            flexDirection: (!hideLabel && isTags) ? 'column' : 'row'
         }}>
             <span className='font-semibold flex items-center gap-2 my-1 w-fit'>
                 {icon && <IconComponent className="w-4.5 h-4.5 text-secondary1/70" />}
-                {label && !String(type).includes('hidden-label') && <span>{label}</span>}
+                {label && !hideLabel && <span>{label}</span>}
             </span>
-            {String(type).includes('tags') ? (
+            {isTags ? (
                 <div className="flex flex-wrap justify-start gap-2 flex-1">
                     {value.split(',').map((tag, tagIndex) => (
                         <span
@@ -145,11 +155,30 @@ function DataField({ label, icon, value, type }) {
                         </span>
                     ))}
                 </div>
+            ) : showGauge ? (
+                <StrengthGauge activeIndex={strengthIndex} value={normalizedValue} />
             ) : (
                 <span className="text-right">{value}</span>
             )}
         </div>
     )
+}
+
+function StrengthGauge({ activeIndex, value }) {
+    return (
+        <div className="flex items-center gap-2 h-full">
+            <div className="flex items-center gap-1" aria-label={`Strength ${value}`}>
+                {STRENGTH_LEVELS.map((level, index) => (
+                    <div
+                        key={level}
+                        className={`h-2 w-6 rounded-full transition-colors duration-200 ${index <= activeIndex ? 'bg-primary1' : 'bg-primary1/20'}`}
+                        title={level}
+                    />
+                ))}
+            </div>
+            <span className="text-xs text-secondary2 whitespace-nowrap">{value}</span>
+        </div>
+    );
 }
 
 export default CatalogCard;

@@ -157,7 +157,7 @@ const CigarCatalog = (props) => {
                     icon: PiGauge,
                     value: item['Strength_Profile'],
                     label: 'Strength',
-                    type: 'hidden-label'
+                    type: 'hidden-label strength-gauge'
                   },
                 router.query['Display Price'] === 'true' &&
                 item['Price'] &&
