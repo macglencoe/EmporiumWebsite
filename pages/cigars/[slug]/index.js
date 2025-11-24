@@ -14,6 +14,7 @@ import ProductPage, {
   Disclaimer,
   Navigation,
 } from '../../../components/productPage';
+import { PiFactory, PiFactoryBold, PiFire, PiFireBold, PiGrainsBold, PiGrainsDuotone, PiLeaf, PiLeafBold, PiLeafDuotone, PiLeafFill } from 'react-icons/pi';
 
 export const getStaticPaths = async () => {
   const cigars = await import('../../../public/data/consolidated_cigars.json');
@@ -86,11 +87,11 @@ const CigarPage = (props) => {
               />
               <ProductInfoFields
                 fields={[
-                  { name: "Brand", value: cigar['Cigar Brand'] },
-                  { name: "Wrapper", value: cigar['Wrapper'] },
-                  { name: "Binder", value: cigar['Binder'] },
-                  { name: "Filler", value: cigar['Filler'] },
-                  { name: "Strength", value: cigar['Strength_Profile'] },
+                  { name: "Brand", value: cigar['Cigar Brand'], icon: PiFactory },
+                  { name: "Wrapper", value: cigar['Wrapper'], icon: PiLeaf },
+                  { name: "Binder", value: cigar['Binder'], icon: PiLeafDuotone },
+                  { name: "Filler", value: cigar['Filler'], icon: PiLeafFill },
+                  { name: "Strength", value: cigar['Strength_Profile'], icon: PiFire },
                 ]}
               />
   

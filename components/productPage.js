@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { handleLocationClick } from '../utils/location';
 import { handlePhoneClick } from '../utils/phone';
-import { PiArrowLeftBold, PiArrowRightBold, PiCaretRight, PiCaretRightBold, PiMapPinBold, PiPhoneBold, PiShareFatBold } from 'react-icons/pi';
+import { PiArrowLeftBold, PiArrowRightBold, PiCaretRight, PiCaretRightBold, PiMapPinBold, PiPhoneBold, PiRuler, PiRulerBold, PiShareFatBold } from 'react-icons/pi';
 
 const buildShareUrl = (router) => {
   if (typeof window !== 'undefined' && window.location) {
@@ -179,13 +179,16 @@ export const ProductInfoFields = ({ fields = [] }) => {
       {visible.map((field) => (
         <article
           key={field.name}
-          className="bg-primary1/10 rounded-xl p-4 shadow-sm text-secondary1 flex flex-col gap-1"
+          className="bg-primary1/10 rounded-xl p-3 shadow-sm text-secondary1 flex flex-row gap-1 items-start"
         >
-          <p className="uppercase tracking-[0.1em] text-xs text-secondary2 font-semibold">{field.name}</p>
-          {field.markout && field.markout !== field.value && (
-            <span className="line-through text-secondary2 text-sm">{field.markout}</span>
-          )}
-          <p className="text-xl font-bold">{field.value}</p>
+          {field.icon && <field.icon size={25} className="mr-2" />}
+          <div className='flex flex-col gap-1 p-1'>
+            <p className="uppercase tracking-[0.1em] text-xs text-secondary2 font-semibold">{field.name}</p>
+            {field.markout && field.markout !== field.value && (
+              <span className="line-through text-secondary2 text-sm">{field.markout}</span>
+            )}
+            <p className="text-xl font-bold">{field.value}</p>
+          </div>
         </article>
       ))}
     </section>
@@ -208,7 +211,11 @@ export const ProductSizeChart = ({ sizes = [], allCigarSizes = {} }) => {
   return (
     <section className="bg-primary1/20 rounded-xl shadow-md p-4 space-y-3 text-secondary1">
       <div className="flex items-center justify-between gap-2 flex-wrap">
-        <p className="uppercase tracking-[0.12em] text-xs text-secondary2 font-semibold">Available sizes</p>
+        <span className='flex flex-row gap-2 items-center'>
+          <PiRuler size={25} />
+          <p className="uppercase tracking-[0.12em] text-xs text-secondary2 font-semibold">Available sizes</p>
+          
+        </span>
         <p className="text-secondary2 text-xs">Measurements shown where available.</p>
       </div>
       <ul className="space-y-2">
