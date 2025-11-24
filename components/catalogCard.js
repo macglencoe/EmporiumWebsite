@@ -158,7 +158,7 @@ function DataField({ label, icon, value, type }) {
             ) : showGauge ? (
                 <StrengthGauge activeIndex={strengthIndex} value={normalizedValue} />
             ) : (
-                <span className="text-right">{value}</span>
+                <span className="text-right flex items-center h-full">{value}</span>
             )}
         </div>
     )
