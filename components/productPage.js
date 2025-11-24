@@ -157,7 +157,7 @@ export const ProductTitle = ({ children, breadcrumbs = [], meta, description }) 
           </ol>
         </nav>
       )}
-      <h2 className="text-3xl sm:text-4xl font-bold leading-tight" style={{ fontFamily: 'serif' }}>
+      <h2 className="text-3xl sm:text-4xl font-bold leading-tight italic" style={{ fontFamily: 'serif' }}>
         {children}
       </h2>
       {meta && <p className="text-secondary2 font-semibold">{meta}</p>}
