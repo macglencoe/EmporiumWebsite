@@ -269,45 +269,48 @@ const Catalog = (props) => {
                     {props.title ?? "Catalog"}
                 </PageTitle1>
                 {props.notices}
+                <div className='px-3 py-2 shadow-xl border-b-3 border-double border-secondary2/50 bg-primary2/30'>
+                    {featuredStats.length > 0 && (
+                                <div className="w-full grid gap-2 mb-1" aria-label="Catalog highlights" style={{
+                                    gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))"
+                                }}>
+                                    {featuredStats.map((stat, index) => (
+                                        <article
+                                            key={`${stat?.title ?? 'stat'}-${index}`}
+                                            className="text-primary2 p-3 m-1 w-fit border-8 border-double border-secondary2 relative h-70 flex flex-col justify-end overflow-hidden"
+                                        >
+                                            
+                                            {stat.backdrop && 
+                                                <div className='absolute inset-0 z-10'>
+                                                    <Image layout='fill' className="object-cover" src={stat.backdrop} priority={index === 0} />
+                                                    <div className='absolute inset-0 bg-gradient-to-b from-secondary2/40 via-secondary2/90 to-secondary2'  />
+                                                    
+                                                </div>
+                                            }
+                                            
+                                            {stat?.title && (
+                                                <h2 className="tracking-wider uppercase font-inter font-bold text-3xl z-[11]">{stat.title}</h2>
+                                            )}
+                                            {stat?.subtitle && (
+                                                <span className="font-medium text-xl font-inter uppercase tracking-wide text-primary1 z-[11]">{stat.subtitle}</span>
+                                            )}
+                                            {stat?.description && (
+                                                <p className="mt-2 z-[11]">{stat.description}</p>
+                                            )}
+                                        </article>
+                                    ))}
+                                </div>
+                            )}
+                </div>
                 <div className="catalog-container31">
 
 
 
-                    <div className="w-full space-y-4 py-4">
+                    <div className="w-full space-y-4 py-4 px-2">
 
-                        {featuredStats.length > 0 && (
-                            <div className="w-full grid gap-2 mb-1" aria-label="Catalog highlights" style={{
-                                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))"
-                            }}>
-                                {featuredStats.map((stat, index) => (
-                                    <article
-                                        key={`${stat?.title ?? 'stat'}-${index}`}
-                                        className="text-primary2 p-3 m-1 w-fit border-8 border-double border-secondary2 relative h-70 flex flex-col justify-end overflow-hidden"
-                                    >
-                                        
-                                        {stat.backdrop && 
-                                            <div className='absolute inset-0 z-10'>
-                                                <Image layout='fill' className="object-cover" src={stat.backdrop} priority={index === 0} />
-                                                <div className='absolute inset-0 bg-gradient-to-b from-secondary2/40 via-secondary2/90 to-secondary2'  />
-                                                
-                                            </div>
-                                        }
-                                        
-                                        {stat?.title && (
-                                            <h2 className="tracking-wider uppercase font-inter font-bold text-3xl z-[11]">{stat.title}</h2>
-                                        )}
-                                        {stat?.subtitle && (
-                                            <span className="font-medium text-xl font-inter uppercase tracking-wide text-primary1 z-[11]">{stat.subtitle}</span>
-                                        )}
-                                        {stat?.description && (
-                                            <p className="mt-2 z-[11]">{stat.description}</p>
-                                        )}
-                                    </article>
-                                ))}
-                            </div>
-                        )}
+                        
 
-                        <div className='mt-20' id='search'>
+                        <div className='mt-10' id='search'>
                             <form onSubmit={(e) => {
                                 e.preventDefault();
                                 handleSearchChange({ target: { value: searchInput } });
