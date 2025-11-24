@@ -315,7 +315,7 @@ export const Navigation = ({ prev, next, href, nameField }) => {
   if (!prev && !next) return null;
 
   return (
-    <nav className="grid gap-3 sm:grid-cols-2 mt-3" aria-label="Product pagination">
+    <nav className="p-6 grid gap-3 sm:grid-cols-2 mt-3" aria-label="Product pagination">
       {prev && prev[nameField] && (
         <Link href={`..${href}/${prev.slug}`}>
           <a className="group flex items-center justify-start gap-3 bg-primary1/20 hover:bg-primary1/10 rounded-xl p-3 shadow-sm hover:-translate-y-0.5 transition text-secondary1">
