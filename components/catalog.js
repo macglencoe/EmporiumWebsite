@@ -12,6 +12,7 @@ import Layout from './layout';
 import Filters from './filters';
 import { track } from '@vercel/analytics';
 import { PiCaretDownBold, PiCaretDownFill, PiMagnifyingGlassBold, PiXCircleBold, PiXCircleFill } from 'react-icons/pi';
+import Image from 'next/image';
 
 
 export const getStaticProps = async () => {
@@ -281,16 +282,25 @@ const Catalog = (props) => {
                                 {featuredStats.map((stat, index) => (
                                     <article
                                         key={`${stat?.title ?? 'stat'}-${index}`}
-                                        className="bg-secondary2 text-primary2 p-3 m-1 w-fit border-double border-8 border-primary1"
+                                        className="text-primary2 p-3 m-1 w-fit border-8 border-double border-secondary2 relative h-70 flex flex-col justify-end overflow-hidden"
                                     >
+                                        
+                                        {stat.backdrop && 
+                                            <div className='absolute inset-0 z-10'>
+                                                <Image layout='fill' className="object-cover" src={stat.backdrop} priority={index === 0} />
+                                                <div className='absolute inset-0 bg-gradient-to-b from-secondary2/40 via-secondary2/90 to-secondary2'  />
+                                                
+                                            </div>
+                                        }
+                                        
                                         {stat?.title && (
-                                            <h2 className="tracking-wider uppercase font-inter font-bold text-3xl">{stat.title}</h2>
+                                            <h2 className="tracking-wider uppercase font-inter font-bold text-3xl z-[11]">{stat.title}</h2>
                                         )}
                                         {stat?.subtitle && (
-                                            <span className="font-medium text-xl font-inter uppercase tracking-wide text-primary1">{stat.subtitle}</span>
+                                            <span className="font-medium text-xl font-inter uppercase tracking-wide text-primary1 z-[11]">{stat.subtitle}</span>
                                         )}
                                         {stat?.description && (
-                                            <p className="mt-2">{stat.description}</p>
+                                            <p className="mt-2 z-[11]">{stat.description}</p>
                                         )}
                                     </article>
                                 ))}

@@ -80,16 +80,19 @@ const CigarCatalog = (props) => {
             title: `${totalCigars} Cigars`,
             subtitle: "in our catalog",
             description: "We offer the largest selection of premium cigars in Berkeley County, carefully curated for enthusiasts and connoisseurs alike.",
+            backdrop: "https://images.unsplash.com/photo-1679419860565-a812136bdef7?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           },
           {
             title: `${uniqueBrands.length} Brands`,
             subtitle: "to choose from",
             description: "Discover cigars from a diverse range of brands, each offering unique flavors and experiences.",
+            backdrop: "https://images.unsplash.com/photo-1749842839766-8b71630a627d?q=80&w=1930&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           },
           {
             title: `${uniqueSizes.length} Sizes`,
             subtitle: "available",
             description: "Find cigars in various sizes to suit your preferences, from robustos to churchills and more.",
+            backdrop: "https://images.unsplash.com/photo-1749842484608-a8ac079988f0?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           },
           
         ]}
