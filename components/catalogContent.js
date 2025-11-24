@@ -122,12 +122,14 @@ function Pagination({ totalPages, currentPage, handlePageChange, showReturnTop =
  * @param {Array} [props.cardSettings.data] - The data to be displayed on the card.
  * @param {string} [props.cardSettings.data.title] - The title of the data.
  * @param {string} [props.cardSettings.data.value] - The value of the data.
+ * @param {Array} [props.featuredStats] - Optional highlighted stats to show above the catalog results.
  */
 const CatalogContent = (props) => {
     const router = useRouter();
     const pageSize = 20;
     const totalPages = Math.ceil(props.data.length / pageSize);
     const [currentPage, setCurrentPage] = useState(1);
+    const featuredStats = Array.isArray(props.featuredStats) ? props.featuredStats.filter(Boolean) : [];
 
     useEffect(() => {
         if (router.query.page) {
@@ -147,11 +149,33 @@ const CatalogContent = (props) => {
     }
     return (
         <section className="catalog-content-container">
+            {featuredStats.length > 0 && (
+                <div className="featured-stats-grid" aria-label="Catalog highlights">
+                    {featuredStats.map((stat, index) => (
+                        <article
+                            key={`${stat?.title ?? 'stat'}-${index}`}
+                            className="bg-secondary2 text-primary2 p-3 m-1 w-fit border-double border-8 border-primary1"
+                        >
+                            {stat?.title && (
+                                <h2 className="tracking-wider uppercase font-inter font-bold text-3xl">{stat.title}</h2>
+                            )}
+                            {stat?.subtitle && (
+                                <span className="font-medium text-xl font-inter uppercase tracking-wide text-primary1">{stat.subtitle}</span>
+                            )}
+                            {stat?.description && (
+                                <p className="mt-2">{stat.description}</p>
+                            )}
+                        </article>
+                    ))}
+                </div>
+            )}
             <Pagination
                 totalPages={totalPages}
                 currentPage={currentPage}
                 handlePageChange={handlePageChange}
             />
+
+            
 
             <div className="catalog-container40">
                 {
@@ -219,6 +243,55 @@ const CatalogContent = (props) => {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
           }
+        .featured-stats-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
+            margin-bottom: 1.5rem;
+        }
+        .featured-stat-card {
+            position: relative;
+            padding: 14px 16px;
+            border: 3px double var(--dl-color-theme-primary1);
+            background: linear-gradient(135deg, rgba(232, 169, 21, 0.08), rgba(104, 84, 65, 0.5));
+            background-color: var(--dl-color-theme-secondary1);
+            color: var(--dl-color-theme-primary2);
+            box-shadow: 0 8px 14px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            isolation: isolate;
+        }
+        .featured-stat-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(232, 169, 21, 0.25), transparent 45%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .featured-stat-card > * {
+            position: relative;
+            z-index: 1;
+        }
+        .featured-stat-subtitle {
+            margin: 0;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            font-weight: 700;
+            color: var(--dl-color-theme-primary2);
+        }
+        .featured-stat-title {
+            margin: 4px 0;
+            font-size: 1.6em;
+            font-weight: 800;
+            color: var(--dl-color-theme-primary1);
+        }
+        .featured-stat-description {
+            margin: 0;
+            font-size: 0.95em;
+            color: var(--dl-color-theme-primary2);
+        }
         @media (max-width: 680px) {
             .catalog-container40 {
                 grid-template-columns: 1;

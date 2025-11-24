@@ -40,6 +40,7 @@ export const getStaticProps = async () => {
  * @param {string} props.description - description for the catalog page.
  * @param {string} props.title - Title for the catalog page.
  * @param {Array} props.notices - Notices to be displayed on the catalog page.
+ * @param {Array} [props.featuredStats] - Highlighted stats to display under the pagination.
  * @param {string} props.defaultSort - The default sort option.
  * 
  * Accessibility: 
@@ -341,6 +342,7 @@ const Catalog = (props) => {
                         <CatalogContent
                             data={sortedItems}
                             cardSettings={props.cardSettings}
+                            featuredStats={props.featuredStats}
 
                         ></CatalogContent>
                     </div>

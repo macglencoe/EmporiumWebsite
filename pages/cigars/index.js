@@ -69,6 +69,25 @@ const CigarCatalog = (props) => {
         title="Cigar Catalog"
         description="Our selection of cigars from a wide array of premium brands, available for purchase in-store."
 
+        featuredStats={[
+          {
+            title: `${props.data.length} Cigars`,
+            subtitle: "in our catalog",
+            description: "We offer the largest selection of premium cigars in Berkeley County, carefully curated for enthusiasts and connoisseurs alike.",
+          },
+          {
+            title: `${uniqueBrands.length} Brands`,
+            subtitle: "to choose from",
+            description: "Discover cigars from a diverse range of brands, each offering unique flavors and experiences.",
+          },
+          {
+            title: `${uniqueSizes.length} Sizes`,
+            subtitle: "available",
+            description: "Find cigars in various sizes to suit your preferences, from robustos to churchills and more.",
+          },
+          
+        ]}
+
         filters={[
           {
             name: "Cigar Brand",
