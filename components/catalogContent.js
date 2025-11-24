@@ -2,7 +2,7 @@ import clsx from "clsx";
 import CatalogCard from "./catalogCard";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import { PiArrowLeftBold, PiArrowRightBold, PiArrowUpBold } from "react-icons/pi";
+import { PiArrowLeftBold, PiArrowRightBold, PiArrowUpBold, PiMagnifyingGlassBold } from "react-icons/pi";
 
 function Pagination({ totalPages, currentPage, handlePageChange, showReturnTop = false }) {
     return (
@@ -201,6 +201,27 @@ const CatalogContent = (props) => {
                             ))}
                         </div>
                     )}
+
+                    <div id='search'>
+                        <form onSubmit={(e) => {
+                            e.preventDefault();
+                            props.handleSearchChange({ target: { value: props.searchInput } });
+                            props.setSearchInput('');
+                        }}
+                            className='bg-primary2 flex flex-row items-center max-w-3xl mx-auto border-6 border-primary1 border-double'>
+                            <input
+                                type="search"
+                                value={props.searchInput}
+                                onChange={(e) => props.setSearchInput(e.target.value)}
+                                placeholder="Search..."
+                                className="flex-1 p-3"
+                            />
+                            <button aria-label='Search' type="submit" className='cursor-pointer'>
+                                <PiMagnifyingGlassBold size={30} />
+
+                            </button>
+                        </form>
+                    </div>
                     <Pagination
                         totalPages={totalPages}
                         currentPage={currentPage}
@@ -240,9 +261,30 @@ const CatalogContent = (props) => {
                 </>
             }
             {props.data?.length == 0 &&
-                <div className="flex-1 w-full flex flex-col items-center py-20">
-                    <span className="text-3xl">{emptyResultsMessage}</span>
-                </div>
+                <>
+                    <div id='search'>
+                        <form onSubmit={(e) => {
+                            e.preventDefault();
+                            props.handleSearchChange({ target: { value: props.searchInput } });
+                        }}
+                            className='bg-primary2 flex flex-row items-center max-w-3xl mx-auto border-6 border-primary1 border-double'>
+                            <input
+                                type="search"
+                                value={props.searchInput}
+                                onChange={(e) => props.setSearchInput(e.target.value)}
+                                placeholder="Search..."
+                                className="flex-1 p-3"
+                            />
+                            <button aria-label='Search' type="submit" className='cursor-pointer'>
+                                <PiMagnifyingGlassBold size={30} />
+
+                            </button>
+                        </form>
+                    </div>
+                    <div className="flex-1 w-full flex flex-col items-center py-20">
+                        <span className="text-3xl">{emptyResultsMessage}</span>
+                    </div>
+                </>
             }
 
 

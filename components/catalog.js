@@ -87,6 +87,9 @@ const Catalog = (props) => {
                     router.query[filter.name] = '';
                 }
             });
+            if (router.query.search) {
+                setSearchInput(router.query.search)
+            }
         }
     }, [router.isReady]);
 
@@ -227,32 +230,6 @@ const Catalog = (props) => {
                     </>
 
                 }
-
-                headerChildren={
-                    <>
-                        <div className='searchbar-container' id='header-search'>
-                            <form onSubmit={(e) => {
-                                e.preventDefault();
-                                handleSearchChange({ target: { value: searchInput } });
-                                setSearchInput('');
-                            }}
-                                className='searchbar'>
-                                <input
-                                    type="search"
-                                    value={searchInput}
-                                    onChange={(e) => setSearchInput(e.target.value)}
-                                    placeholder="Search..."
-                                />
-                                <button aria-label='Search' type="submit" className='search-button'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960" width="32px" fill="var(--dl-color-theme-secondary1)">
-                                        <path d="M790.67-89.33 525-354.33q-29 21.95-68.14 34.64Q417.72-307 372-307q-116.11 0-196.89-80.83-80.78-80.84-80.78-195.5 0-114.67 80.84-195.5Q256-859.67 371-859.67q115 0 195.5 80.84Q647-698 647-583.23q0 45.23-12.33 83.4-12.34 38.16-35.67 70.16L865.67-164l-75 74.67Zm-419.1-322.34q71.93 0 121.35-50 49.41-50 49.41-121.66 0-71.67-49.51-121.67-49.52-50-121.25-50-72.29 0-122.43 50T199-583.33q0 71.66 50.04 121.66t122.53 50Z" />
-                                    </svg>
-
-                                </button>
-                            </form>
-                        </div>
-                    </>
-                }
             >
                 <PageTitle1 description={props.description}>
                     {props.title ?? "Catalog"}
@@ -343,6 +320,9 @@ const Catalog = (props) => {
                             data={sortedItems}
                             cardSettings={props.cardSettings}
                             featuredStats={props.featuredStats}
+                            searchInput={searchInput}
+                            setSearchInput={setSearchInput}
+                            handleSearchChange={handleSearchChange}
 
                         ></CatalogContent>
                     </div>
