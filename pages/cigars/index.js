@@ -14,6 +14,8 @@ import Layout from '../../components/layout'
 import CatalogCard from '../../components/catalogCard'
 import Catalog from '../../components/catalog'
 import Filters from '../../components/filters'
+import { PiCurrencyDollar, PiCurrencyDollarBold, PiCurrencyDollarFill, PiGauge, PiGaugeBold, PiGaugeFill, PiLeaf, PiLeafBold, PiLeafFill, PiRuler } from 'react-icons/pi'
+import { type } from 'jquery'
 
 
 export const getStaticProps = async () => {
@@ -143,27 +145,64 @@ const CigarCatalog = (props) => {
           data: (item) => {
             return (
               [
-                item['Wrapper'] && ['Wrapper', item['Wrapper']],
-                item['Strength_Profile'] && ['Strength', item['Strength_Profile']],
+                item['Wrapper'] && 
+                  {
+                    icon: PiLeaf,
+                    value: item['Wrapper'],
+                    label: 'Wrapper',
+                    type: 'hidden-label'
+                  },
+                item['Strength_Profile'] && 
+                  {
+                    icon: PiGauge,
+                    value: item['Strength_Profile'],
+                    label: 'Strength',
+                    type: 'hidden-label'
+                  },
                 router.query['Display Price'] === 'true' &&
                 item['Price'] &&
-                ['Price', item['Price']]
+                  {
+                    label: 'Price',
+                    icon: PiCurrencyDollar,
+                    value: item['Price'],
+                    type: 'hidden-label'
+                  },
+                item['Sizes'] && item['Sizes'].length > 0 &&
+                  {
+                    label: 'Sizes',
+                    type: 'tags hidden-label',
+                    icon: PiRuler,
+                    value:
+                      item['Sizes']
+                        .slice(0, 3)
+                        .map(sizeObj => sizeObj.Size)
+                        .join(', ')
+                        +
+                        (item['Sizes'].length > 3 ? ', +' + (item['Sizes'].length - 3) : '')
+                },
+                item['Flavor_Profile'] &&
+                  {
+                    label: 'Flavor Notes',
+                    value: item['Flavor_Profile'],
+                    type: 'tags'
+                  },
+                
               ]
             )
           },
           href: (item) => {
             return ('/cigars/' + item.slug)
           },
-          sizes: (item) => {
-            return (
-              item.Sizes
-            )
-          },
           barcode: (item) => {
             if (router.query['Display Barcode'] === 'true') {
               return (item['Barcode'])
             }
-          }
+          },
+          description: (item) => {
+            return (
+              item['description']
+            )
+          },
         }}
 
       />

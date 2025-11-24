@@ -50,12 +50,15 @@ const CatalogCard = ({
                         </div>
                     )}
 
-                    {/* Title Block */}
-                    <div className="p-4 text-center flex flex-col justify-center">
-                        <h3 className="text-secondary1 text-xl font-bold leading-tight" style={{ fontFamily: 'serif' }}>
-                            <div className="text-sm italic text-secondary2 font-light mb-1">{secondaryTitle}</div>
-                            <div className="uppercase">{name} {title}</div>
-                        </h3>
+                    <div className='p-4 flex-row justify-between items-start'>
+                        {/* Title Block */}
+                        <div className="p-4 flex flex-col text-start">
+                            <h3 className="text-secondary1 text-xl font-bold leading-tight" style={{ fontFamily: 'serif' }}>
+                                <div className="uppercase">{name} {title}</div>
+                                <div className="text-sm italic text-secondary2 font-light mb-1">{secondaryTitle}</div>
+                            </h3>
+                        </div>
+                        {/* top right corner space for future use (like price) */}
                     </div>
 
                     {/* Description (if no image) */}
@@ -67,13 +70,17 @@ const CatalogCard = ({
 
                     {/* Field Data */}
                     {(Array.isArray(data) ? data : [])
-                        .filter(field => Array.isArray(field) && field.length >= 2 && field[1])
-                        .map(([label, value], index) => (
-                            <div key={index} className="flex justify-between border-b border-dashed border-primary1 py-2 mx-5">
-                                <span className="font-semibold">{label}</span>
-                                <span className="text-right">{value}</span>
-                            </div>
-                        ))}
+                        .filter(field => field && field.value)
+                        .map((field, index) => (
+                            <DataField
+                                key={index}
+                                label={field.label}
+                                value={field.value}
+                                icon={field.icon}
+                                type={field.type}
+                            />
+                        ))
+                    }
 
 
                     {/* Barcode */}
@@ -114,5 +121,35 @@ const CatalogCard = ({
         </Link>
     );
 };
+
+function DataField({ label, icon, value, type }) {
+    const IconComponent = icon;
+    return (
+        <div className="flex justify-between border-b border-dashed border-primary1 py-2 mx-5 items-start space-x-3 gap-y-1" style={{
+            justifyContent: String(type).includes('hidden-label') ? 'start'
+            : 'between',
+            flexDirection: (!String(type).includes('hidden-label') && String(type).includes('tags')) ? 'column' : 'row'
+        }}>
+            <span className='font-semibold flex items-center gap-2 my-1 w-fit'>
+                {icon && <IconComponent className="w-4.5 h-4.5 text-secondary1/70" />}
+                {label && !String(type).includes('hidden-label') && <span>{label}</span>}
+            </span>
+            {String(type).includes('tags') ? (
+                <div className="flex flex-wrap justify-start gap-2 flex-1">
+                    {value.split(',').map((tag, tagIndex) => (
+                        <span
+                            key={tagIndex}
+                            className="bg-primary1/30 text-secondary1 border border-primary1/40 px-2 py-1 rounded text-xs font-bold"
+                        >
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+            ) : (
+                <span className="text-right">{value}</span>
+            )}
+        </div>
+    )
+}
 
 export default CatalogCard;
