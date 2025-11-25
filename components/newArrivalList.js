@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import CigarCard from './cigarCard';
+import CatalogCard from './catalogCard';
+import { PiCalendar, PiFire, PiLeaf, PiRuler } from 'react-icons/pi';
 
 export const getStaticProps = async () => {
     const data = await import('../public/data/consolidated_cigars.json');
@@ -13,12 +15,12 @@ export const getStaticProps = async () => {
 
 export const NewArrivalList = ({ cigars }) => {
     const [hoveredCigar, setHoveredCigar] = useState(null);
-    
+
     const newCigars = (cigars || [])
         .filter(cigar => cigar["Date Added"])
         .sort((a, b) => new Date(b["Date Added"]) - new Date(a["Date Added"]))
         .slice(0, 3);
-    
+
     return (
         <section className="relative py-20 px-6 bg-gradient-to-r from-primary2/30 via-primary2/50 to-primary2/30">
             {/* Subtle Geometric Pattern */}
@@ -32,7 +34,7 @@ export const NewArrivalList = ({ cigars }) => {
                     backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px'
                 }}></div>
             </div>
-            
+
             <div className="relative max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16">
@@ -40,8 +42,8 @@ export const NewArrivalList = ({ cigars }) => {
                         <div className="flex items-center justify-center mb-4">
                             <div className="hidden md:block w-8 h-px bg-secondary2/70"></div>
                             <div className="mx-4 w-2 h-2 bg-secondary2/70 rounded-full"></div>
-                            <h1 className="text-5xl md:text-6xl font-bold text-secondary2 mx-6" 
-                                style={{ 
+                            <h1 className="text-5xl md:text-6xl font-bold text-secondary2 mx-6"
+                                style={{
                                     fontFamily: 'serif',
                                     textShadow: '1px 1px 3px rgba(0,0,0,0.2)'
                                 }}>
@@ -56,11 +58,59 @@ export const NewArrivalList = ({ cigars }) => {
                 {/* Cigars Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {newCigars.map((cigar, index) => (
-                        <CigarCard
-                            key={index}
-                            cigar={cigar}
-                            title={"New"}
-                            showFlavors={false}
+                        <CatalogCard
+                            title={cigar["Cigar Name"]}
+                            secondaryTitle={cigar["Cigar Brand"]}
+                            data={[
+                                cigar["Date Added"] &&
+                                {
+                                    icon: PiCalendar,
+                                    value: cigar["Date Added"]
+                                        ? new Date(cigar["Date Added"]).toLocaleDateString('en-US', {
+                                            month: 'long',
+                                            day: 'numeric',
+                                            year: 'numeric'
+                                        })
+                                        : undefined,
+                                    label: "Last Updated",
+                                    type: 'hidden-label'
+                                },
+                                cigar["Wrapper"] &&
+                                {
+                                    icon: PiLeaf,
+                                    value: cigar['Wrapper'],
+                                    label: 'Wrapper',
+                                    type: 'hidden-label'
+                                },
+                                cigar['Strength_Profile'] &&
+                                {
+                                    icon: PiFire,
+                                    value: cigar['Strength_Profile'],
+                                    label: 'Strength',
+                                    type: 'hidden-label strength-gauge'
+                                },
+                                cigar['Sizes'] && cigar['Sizes'].length > 0 &&
+                                {
+                                    label: 'Sizes',
+                                    type: 'tags hidden-label',
+                                    icon: PiRuler,
+                                    value:
+                                        cigar['Sizes']
+                                            .slice(0, 3)
+                                            .map(sizeObj => sizeObj.Size)
+                                            .join(', ')
+                                        +
+                                        (cigar['Sizes'].length > 3 ? ', +' + (cigar['Sizes'].length - 3) : '')
+                                },
+                                cigar['Flavor_Profile'] &&
+                                {
+                                    label: 'Flavor Notes',
+                                    value: cigar['Flavor_Profile'],
+                                    type: 'tags'
+                                },
+                            ]}
+                            href={'/cigars/' + cigar?.slug}
+                            description={cigar?.description}
                         />
                     ))}
                 </div>
