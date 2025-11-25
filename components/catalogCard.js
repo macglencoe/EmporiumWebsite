@@ -15,6 +15,7 @@ const CatalogCard = ({
     buttonText,
     description,
     sizes = [],
+    flag
 }) => {
     const canvasRef = useRef(null);
 
@@ -46,6 +47,11 @@ const CatalogCard = ({
                     <div className="bg-gradient-to-br from-primary2/80 via-primary2 to-primary2/90 border-2 border-primary1 rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
                     {/* Decorative Inner Frame */}
                         <div className="absolute inset-3 border border-primary1/40 rounded-lg pointer-events-none opacity-60" aria-hidden="true"></div>
+
+                    {/* Flag */}
+                    {flag &&
+                        <span className='absolute left-5 -translate-y-1/2 py-1 px-4 bg-secondary2 rounded-full font-bold text-primary2 tracking-wider text-sm'>{flag}</span>
+                    }
 
                     {/* Image */}
                         {image && (
