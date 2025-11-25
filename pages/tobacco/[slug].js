@@ -54,44 +54,46 @@ const TobaccoPage = (props) => {
         <title>{tobacco['Tobacco Name']}</title>
       </Head>
       <Layout>
-        <ProductPage description={tobacco.description}>
-          <ProductSideContent>
-            {tobacco.Components &&
-              <StringBubbleList
-              title="Components"
-                            data={tobacco.Components}
-                            />}
-                            <InteractionPanel
-                                title={tobacco["Tobacco Name"]}
-                                text={"Check out this pipe tobacco from King Street Emporium!"}
-                                />
-                    </ProductSideContent>
-                    <ProductMainContent>
-                        <ProductTitle
-                            breadcrumbs={[
-                                { label: 'Home', href: '/' },
-                                { label: 'Tobacco', href: '/tobacco' },
-                                { label: tobacco['Tobacco Brand'] }
-                            ]}
-                            meta={tobacco['Family']}
-                        >
-                            {tobacco["Tobacco Name"]}
-                        </ProductTitle>
-                        <ProductInfoFields
-                            fields={[
-                                {name: "Brand", value: tobacco['Tobacco Brand']},
-                                {name: "Family", value: tobacco['Family']}
-                            ]}
-                        />
-          </ProductMainContent>
-        </ProductPage>
-        <Navigation
-          prev={props.prev}
-          next={props.next}
-          href="/tobacco"
-          nameField="Tobacco Name"
-        />
-                <Disclaimer />
+        <div className="bg-primary2 h-full">
+            <ProductPage description={tobacco.description}>
+              <ProductSideContent>
+                {tobacco.Components &&
+                  <StringBubbleList
+                  title="Components"
+                                data={tobacco.Components}
+                                />}
+                                <InteractionPanel
+                                    title={tobacco["Tobacco Name"]}
+                                    text={"Check out this pipe tobacco from King Street Emporium!"}
+                                    />
+                        </ProductSideContent>
+                        <ProductMainContent>
+                            <ProductTitle
+                                breadcrumbs={[
+                                    { label: 'Home', href: '/' },
+                                    { label: 'Tobacco', href: '/tobacco' },
+                                    { label: tobacco['Tobacco Brand'] }
+                                ]}
+                                meta={tobacco['Family']}
+                            >
+                                {tobacco["Tobacco Name"]}
+                            </ProductTitle>
+                            <ProductInfoFields
+                                fields={[
+                                    {name: "Brand", value: tobacco['Tobacco Brand']},
+                                    {name: "Family", value: tobacco['Family']}
+                                ]}
+                            />
+              </ProductMainContent>
+            </ProductPage>
+            <Navigation
+              prev={props.prev}
+              next={props.next}
+              href="/tobacco"
+              nameField="Tobacco Name"
+            />
+                    <Disclaimer />
+        </div>
       </Layout>
     </>
   )

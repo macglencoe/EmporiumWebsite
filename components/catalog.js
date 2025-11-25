@@ -229,86 +229,51 @@ const Catalog = (props) => {
 
     return (
         <>
-            <Layout
-                sidebarChildren={
-
-                    <>
-                        <div className="catalog-container39">
-                            <label for="sort" className="catalog-sorty-by">Sort By:</label>
-                            <select id="sort" value={sortOption} onChange={handleSortChange} className="catalog-select">
-
-                                {
-                                    props.sortOptions.map((option) => (
-                                        <option key={option.value} value={option.value}>{option.label}</option>
-                                    ))
-                                }
-                            </select>
-                        </div>
-                        {
-                            props.auxiliarySearchBars && props.auxiliarySearchBars.length > 0 && props.auxiliarySearchBars[0] !== false &&
-                            props.auxiliarySearchBars.map((auxSearch) => (
-                                <input
-                                    type="search"
-                                    name={auxSearch.query}
-                                    value={auxSearchQueries[auxSearch.name]}
-                                    onChange={handleAuxSearchChange}
-                                    placeholder={auxSearch.label + '...'}
-                                    style={{
-                                        margin: '10px',
-                                    }}
-                                />
-                            ))
-                        }
-
-                        <Filters filters={props.filters} />
-                    </>
-
-                }
-            >
+            <Layout>
                 <PageTitle1 description={props.description}>
                     {props.title ?? "Catalog"}
                 </PageTitle1>
                 {props.notices}
-                <div className='px-3 py-2 shadow-xl border-b-3 border-double border-secondary2/50 bg-primary2/30'>
-                    {featuredStats.length > 0 && (
-                                <div className="w-full grid gap-2 mb-1" aria-label="Catalog highlights" style={{
-                                    gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))"
-                                }}>
-                                    {featuredStats.map((stat, index) => (
-                                        <article
-                                            key={`${stat?.title ?? 'stat'}-${index}`}
-                                            className="text-primary2 p-3 m-1 w-fit border-8 border-double border-secondary2 relative h-70 flex flex-col justify-end overflow-hidden"
-                                        >
-                                            
-                                            {stat.backdrop && 
-                                                <div className='absolute inset-0 z-10'>
-                                                    <Image layout='fill' className="object-cover" src={stat.backdrop} priority={index === 0} />
-                                                    <div className='absolute inset-0 bg-gradient-to-b from-secondary2/40 via-secondary2/90 to-secondary2'  />
-                                                    
-                                                </div>
-                                            }
-                                            
-                                            {stat?.title && (
-                                                <h2 className="tracking-wider uppercase font-inter font-bold text-3xl z-[11]">{stat.title}</h2>
-                                            )}
-                                            {stat?.subtitle && (
-                                                <span className="font-medium text-xl font-inter uppercase tracking-wide text-primary1 z-[11]">{stat.subtitle}</span>
-                                            )}
-                                            {stat?.description && (
-                                                <p className="mt-2 z-[11]">{stat.description}</p>
-                                            )}
-                                        </article>
-                                    ))}
-                                </div>
-                            )}
-                </div>
+                {featuredStats.length > 0 && (
+                    <div className='px-3 py-2 shadow-xl border-b-3 border-double border-secondary2/50 bg-primary2/30'>
+                        <div className="w-full grid gap-2 mb-1" aria-label="Catalog highlights" style={{
+                            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))"
+                        }}>
+                            {featuredStats.map((stat, index) => (
+                                <article
+                                    key={`${stat?.title ?? 'stat'}-${index}`}
+                                    className="text-primary2 p-3 m-1 w-fit border-8 border-double border-secondary2 relative h-70 flex flex-col justify-end overflow-hidden"
+                                >
+
+                                    {stat.backdrop &&
+                                        <div className='absolute inset-0 z-10'>
+                                            <Image layout='fill' className="object-cover" src={stat.backdrop} priority={index === 0} />
+                                            <div className='absolute inset-0 bg-gradient-to-b from-secondary2/40 via-secondary2/90 to-secondary2' />
+
+                                        </div>
+                                    }
+
+                                    {stat?.title && (
+                                        <h2 className="tracking-wider uppercase font-inter font-bold text-3xl z-[11]">{stat.title}</h2>
+                                    )}
+                                    {stat?.subtitle && (
+                                        <span className="font-medium text-xl font-inter uppercase tracking-wide text-primary1 z-[11]">{stat.subtitle}</span>
+                                    )}
+                                    {stat?.description && (
+                                        <p className="mt-2 z-[11]">{stat.description}</p>
+                                    )}
+                                </article>
+                            ))}
+                        </div>
+                    </div>
+                )}
                 <div className="catalog-container31">
 
 
 
                     <div className="w-full space-y-4 py-4 px-2">
 
-                        
+
 
                         <div className='mt-10' id='search'>
                             <form onSubmit={(e) => {
@@ -405,7 +370,7 @@ const Catalog = (props) => {
                                                     className='group'
                                                     aria-label={'Clear ' + filterValue + 'Filter for ' + filterKey}
                                                 >
-                                                    <PiXCircleFill size={25} className='group-hover:scale-110 opacity-50 group-hover:opacity-100 text-[var(--negative)]'/>
+                                                    <PiXCircleFill size={25} className='group-hover:scale-110 opacity-50 group-hover:opacity-100 text-[var(--negative)]' />
                                                 </button>
                                             </div>
                                         )
