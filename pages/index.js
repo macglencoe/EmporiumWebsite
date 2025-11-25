@@ -99,29 +99,29 @@ const Catalog = (props) => {
 
         <Featured cigars={props.data} />
 
-        <div className='divider'></div>
 
+        <div className='flex flex-col gap-2 py-2 w-full border-t-4 border-b-4 border-primary2/20' style={{
+          boxShadow: "0 0 50px 0px rgba(0,0,0,0.5)"
+        }}>
+          <ShopSuggestions
+            title="Cigars"
+            items={[
+              { href: "/cigars/brands", label: "Brand" },
+              { href: "/cigars/strengths", label: "Strength" },
+              { href: "/cigars/wrappers", label: "Wrapper" },
+              { href: "/cigars/sizes", label: "Size" },
+            ]}
+          />
+          <ShopSuggestions
+            title="Pipe Tobacco"
+            items={[
+              { href: "/tobacco/brands", label: "Brand" },
+              { href: "/tobacco/components", label: "Component" },
+              { href: "/tobacco/families", label: "Family" },
+            ]}
+          />
+        </div>
 
-        <ShopSuggestions
-          title="Cigars"
-          items={[
-            { href: "/cigars/brands", label: "Brand" },
-            { href: "/cigars/strengths", label: "Strength" },
-            { href: "/cigars/wrappers", label: "Wrapper" },
-            { href: "/cigars/sizes", label: "Size" },
-          ]}
-        />
-        <div className='divider'></div>
-        <ShopSuggestions
-          title="Pipe Tobacco"
-          items={[
-            { href: "/tobacco/brands", label: "Brand" },
-            { href: "/tobacco/components", label: "Component" },
-            { href: "/tobacco/families", label: "Family" },
-          ]}
-        />
-
-        <div className='divider'></div>
 
 
         <NewArrivalList cigars={props.data} />

@@ -3,13 +3,13 @@ import Link from "next/link"
 const ShopSuggestions = (props) => {
   return (
     <>
-      <div className="beveled-box w-full max-w-5xl mx-auto my-2 bg-secondary2">
+      <div className="beveled-box w-full max-w-5xl mx-auto my-2 bg-primary2/50">
         <div className="beveled-box-inner"></div>
         <div className="flex flex-col p-2 justify-center">
           <div className="flex items-center justify-center text-center flex-wrap">
-            <h1 className="text-3xl md:text-5xl m-6 font-normal text-primary2">
+            <h1 className="text-3xl md:text-5xl m-6 font-normal text-secondary1">
               Search&nbsp;
-              <b className="font-bold text-primary1 uppercase">{props.title}</b>
+              <b className="font-bold text-secondary2 uppercase">{props.title}</b>
               &nbsp;by:
             </h1>
           </div>
@@ -24,7 +24,7 @@ const ShopSuggestions = (props) => {
                   aria-label={`Search ${props.title} by ${item.label}`}
                   className="w-full group"
                 >
-                  <button className="beveled-button w-full p-4 transition-transform hover:scale-105 shadow-md font-bold text-lg uppercase bg-primary1 text-secondary1 cursor-pointer">
+                  <button className="beveled-button w-full p-4 transition-transform hover:scale-105 shadow-md font-bold text-lg uppercase bg-primary1/30 text-secondary1 cursor-pointer">
                     {item.label}
                   </button>
                 </Link>
@@ -92,7 +92,7 @@ const ShopSuggestions = (props) => {
           content: "";
           position: absolute;
           inset: 4px;
-          background-color: var(--dl-color-theme-secondary1);
+          background: linear-gradient(143deg,rgba(255, 204, 18, 1) -150%, var(--dl-color-theme-primary2) 50%, rgba(255, 204, 18, 1) 250%);
           clip-path: polygon(
             16px 0,
             calc(100% - 16px) 0,
@@ -136,6 +136,7 @@ const ShopSuggestions = (props) => {
             0 16px
           );
         }
+          
       `}</style>
     </>
   );
