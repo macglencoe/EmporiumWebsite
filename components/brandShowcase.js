@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -16,7 +17,7 @@ export default function BrandShowcase() {
       name: "J.C. Newman",
       href: "/cigars?Cigar+Brand=J.C.+Newman",
       logo: "/jcn-logo.png",
-      category: "Heritage Cigars",
+      category: "Premium Cigars",
       description: "America's oldest family-owned premium cigar maker"
     },
     {
@@ -36,41 +37,38 @@ export default function BrandShowcase() {
   ];
 
   return (
-    <section className="relative py-16 px-6 bg-gradient-to-br from-secondary2/50 via-primary2/30 to-secondary2/50">
-      {/* Vintage Pattern Overlay */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, #000 2px, transparent 2px),
-                           radial-gradient(circle at 75% 75%, #000 1px, transparent 1px)`,
-          backgroundSize: '40px 40px'
-        }}></div>
+    <section className="relative py-16 px-6 bg-gradient-to-br from-primary2/50 via-primary2/30 to-primary2/50">
+      {/* Subtle Backdrop */}
+      <div className="absolute inset-0">
+        <Image layout='fill' className="object-cover opacity-15" src="https://images.unsplash.com/photo-1613406046246-f8f921afa142?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        <div className='absolute inset-0' style={{
+          boxShadow: "inset 0 0 400px -300px black"
+        }} />
       </div>
       
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-block relative">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary2 mb-2" 
+            <h1 className="text-4xl md:text-5xl font-bold text-secondary2 mb-2" 
                 style={{ 
                   fontFamily: 'serif',
-                  textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
                   letterSpacing: '0.05em'
                 }}>
               We are proud to carry your
             </h1>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary2 italic mb-4"
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary2 italic mb-4"
                 style={{ 
                   fontFamily: 'serif',
-                  textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
                 }}>
               favorite brands
             </h2>
             
             {/* Decorative Line */}
             <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-16 h-px bg-primary2"></div>
-              <div className="w-3 h-3 bg-primary2 rotate-45"></div>
-              <div className="w-16 h-px bg-primary2"></div>
+              <div className="w-16 h-px bg-secondary2"></div>
+              <div className="w-3 h-3 bg-secondary2 rotate-45"></div>
+              <div className="w-16 h-px bg-secondary2"></div>
             </div>
           </div>
         </div>
@@ -87,7 +85,7 @@ export default function BrandShowcase() {
               <Link href={brand.href}>
                 <a className="block relative">
                   {/* Card Container */}
-                  <div className="relative h-72 transition-all duration-300 group-hover:-translate-y-1 bg-primary2 bg-gradient-to-br from-secondary2/20 via-primary1/10 to-secondary2/20"
+                  <div className="relative h-72 transition-all duration-300 group-hover:-translate-y-1 bg-primary2 bg-gradient-to-br from-primary1/10 via-secondary1/20 to-primary1/10"
                        style={{
                          border: '3px solid #8B4513',
                          borderRadius: '8px',
@@ -144,6 +142,9 @@ export default function BrandShowcase() {
               </Link>
             </div>
           ))}
+        </div>
+        <div className='mx-auto flex flex-col items-center mt-10'>
+          <span className='w-full text-center text-2xl text-secondary2 font-medium'>And many more!</span>
         </div>
       </div>
     </section>
