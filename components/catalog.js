@@ -257,7 +257,7 @@ const Catalog = (props) => {
                                         <h2 className="tracking-wider uppercase font-inter font-bold text-3xl z-[11]">{stat.title}</h2>
                                     )}
                                     {stat?.subtitle && (
-                                        <span className="font-medium text-xl font-inter uppercase tracking-wide text-primary1 z-[11]">{stat.subtitle}</span>
+                                        <span className="font-bold text-xl italic uppercase tracking-wide text-primary1 z-[11]">{stat.subtitle}</span>
                                     )}
                                     {stat?.description && (
                                         <p className="mt-2 z-[11]">{stat.description}</p>
