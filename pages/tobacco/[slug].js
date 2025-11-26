@@ -1,14 +1,14 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
 import ProductPage, {
-  InteractionPanel,
-  StringBubbleList,
-  ProductSideContent,
-  ProductMainContent,
-  ProductTitle,
-  ProductInfoFields,
-  Disclaimer,
-  Navigation,
+    InteractionPanel,
+    StringBubbleList,
+    ProductSideContent,
+    ProductMainContent,
+    ProductTitle,
+    ProductInfoFields,
+    Disclaimer,
+    Navigation,
 } from '../../components/productPage';
 
 
@@ -51,22 +51,11 @@ const TobaccoPage = (props) => {
     return (
         <>
             <Head>
-        <title>{tobacco['Tobacco Name']}</title>
-      </Head>
-      <Layout>
-        <div className="bg-primary2 h-full">
-            <ProductPage description={tobacco.description}>
-              <ProductSideContent>
-                {tobacco.Components &&
-                  <StringBubbleList
-                  title="Components"
-                                data={tobacco.Components}
-                                />}
-                                <InteractionPanel
-                                    title={tobacco["Tobacco Name"]}
-                                    text={"Check out this pipe tobacco from King Street Emporium!"}
-                                    />
-                        </ProductSideContent>
+                <title>{tobacco['Tobacco Name']}</title>
+            </Head>
+            <Layout>
+                <div className="bg-primary2 h-full">
+                    <ProductPage description={tobacco.description}>
                         <ProductMainContent>
                             <ProductTitle
                                 breadcrumbs={[
@@ -80,23 +69,34 @@ const TobaccoPage = (props) => {
                             </ProductTitle>
                             <ProductInfoFields
                                 fields={[
-                                    {name: "Brand", value: tobacco['Tobacco Brand']},
-                                    {name: "Family", value: tobacco['Family']}
+                                    { name: "Brand", value: tobacco['Tobacco Brand'] },
+                                    { name: "Family", value: tobacco['Family'] }
                                 ]}
                             />
-              </ProductMainContent>
-            </ProductPage>
-            <Navigation
-              prev={props.prev}
-              next={props.next}
-              href="/tobacco"
-              nameField="Tobacco Name"
-            />
+                        </ProductMainContent>
+                        <ProductSideContent>
+                            {tobacco.Components &&
+                                <StringBubbleList
+                                    title="Components"
+                                    data={tobacco.Components}
+                                />}
+                            <InteractionPanel
+                                title={tobacco["Tobacco Name"]}
+                                text={"Check out this pipe tobacco from King Street Emporium!"}
+                            />
+                        </ProductSideContent>
+                    </ProductPage>
+                    <Navigation
+                        prev={props.prev}
+                        next={props.next}
+                        href="/tobacco"
+                        nameField="Tobacco Name"
+                    />
                     <Disclaimer />
-        </div>
-      </Layout>
-    </>
-  )
+                </div>
+            </Layout>
+        </>
+    )
 }
 
 export default TobaccoPage

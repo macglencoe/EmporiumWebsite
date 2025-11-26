@@ -52,22 +52,6 @@ const CigarPage = (props) => {
       <Layout>
         <div className='bg-primary2 h-full'>
           <ProductPage description={cigar.description}>
-            <ProductSideContent>
-              <ProductImage
-                src={cigar.image}
-                fallbackSearch={encodeURIComponent(cigar['Cigar Brand'] + ' ' + cigar['Cigar Name'])}
-              />
-              <ProductSizeChart
-                sizes={cigar.Sizes}
-                allCigarSizes={cigarSizes}
-              />
-              {cigar['Flavor_Profile'] && <StringBubbleList title="Flavor"
-                data={cigar['Flavor_Profile'].split(', ')}
-              >
-  
-              </StringBubbleList>
-              }
-            </ProductSideContent>
             <ProductMainContent>
               <ProductTitle
                 breadcrumbs={[
@@ -96,6 +80,22 @@ const CigarPage = (props) => {
               />
   
             </ProductMainContent>
+            <ProductSideContent>
+              <ProductImage
+                src={cigar.image}
+                fallbackSearch={encodeURIComponent(cigar['Cigar Brand'] + ' ' + cigar['Cigar Name'])}
+              />
+              <ProductSizeChart
+                sizes={cigar.Sizes}
+                allCigarSizes={cigarSizes}
+              />
+              {cigar['Flavor_Profile'] && <StringBubbleList title="Flavor"
+                data={cigar['Flavor_Profile'].split(', ')}
+              >
+  
+              </StringBubbleList>
+              }
+            </ProductSideContent>
           </ProductPage>
           <Navigation
             prev={props.prev}
