@@ -5,13 +5,12 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import Data from '../public/data/consolidated_cigars.json';
 
-import Footer32 from './footer32';
 import Contact from './contact';
 import Directory from './directory';
 import Ksman from './ksman';
 import { useRouter } from 'next/router';
 import { Analytics } from '@vercel/analytics/react';
-import { Footer } from './footer';
+import Footer from './footer';
 
 export default function Layout(props) {
   const router = useRouter();
