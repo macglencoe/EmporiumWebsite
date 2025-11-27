@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { PiFactoryDuotone, PiStorefront, PiStorefrontDuotone } from 'react-icons/pi';
 import Link from 'next/link';
 import TitleCrest from '../../components/titleCrest';
+import BasicSection from '../../components/basicSection';
 
 export const getStaticProps = async () => {
     const data = await import('../../public/data/pipes.json');
@@ -73,23 +74,6 @@ const PipeCatalog = (props) => {
     )
 }
 export default PipeCatalog
-
-
-function BasicSection({ backdropSrc, title, titleIcon, children, ...props }) {
-    return (
-        <section className='relative bg-primary2/50 py-8 flex flex-col gap-5' {...props}>
-            {/* backdrop */}
-            <div className='absolute inset-0'>
-                <Image layout='fill' className="object-cover opacity-15" src={backdropSrc} />
-                <div className='absolute inset-0' style={{
-                    boxShadow: "inset 0 0 400px -300px black"
-                }} />
-            </div>
-            <TitleCrest icon={titleIcon}>{title}</TitleCrest>
-            {children}
-        </section>
-    )
-}
 
 function BasicImage({ src, alt }) {
     return (
