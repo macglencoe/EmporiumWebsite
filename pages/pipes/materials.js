@@ -3,8 +3,6 @@ import Head from 'next/head'
 import Script from 'next/script'
 import Link from 'next/link'
 import Data from "../../public/data/pipes.json"
-
-import Footer32 from '../../components/footer32'
 import Contact from '../../components/contact'
 import Directory from '../../components/directory'
 import Ksman from '../../components/ksman'
