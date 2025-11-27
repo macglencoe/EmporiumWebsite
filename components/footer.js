@@ -80,9 +80,9 @@ function Hours() {
           <div className="text-xs uppercase tracking-widest text-primary2/70">
             <span>MON-SAT</span>
           </div>
-          <div className='flex flex-col rounded overflow-hidden text-right'>
-            <span className='bg-primary1 text-secondary1 p-1'>10:00AM</span>
-            <span className='bg-primary2 text-secondary2 p-1'>6:00PM</span>
+          <div className='flex flex-col rounded overflow-hidden text-right font-semibold'>
+            <span className='bg-primary1 text-secondary1 py-1 px-2'>10:00AM</span>
+            <span className='bg-primary2 text-secondary2 py-1 px-2'>6:00PM</span>
           </div>
         </div>
         <div className="flex items-center justify-between gap-4 text-base font-inter">
