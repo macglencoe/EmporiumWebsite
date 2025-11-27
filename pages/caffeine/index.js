@@ -2,6 +2,7 @@ import Layout from '../../components/layout';
 import Catalog from '../../components/catalog';
 import Head from 'next/head';
 import PageTitle1 from '../../components/pagetitle1';
+import Image from 'next/image';
 
 export const getStaticProps = async () => {
     const data = await import('../../public/data/caffeine.json');
@@ -12,20 +13,28 @@ export const getStaticProps = async () => {
     }
 }
 
+function CaffeineHero({ count }) {
+    return (
+        <div className='border-9 border-double border-primary1/30 bg-secondary2 relative text-primary2 py-5 m-3'>
+            {/* Backdrop */}
+            <div className='absolute inset-0 z-10 opacity-30'>
+                <Image layout='fill' className="object-cover" src="https://images.unsplash.com/photo-1433891248364-3ce993ff0e92?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </div>
+            <div className='max-w-5xl mx-auto flex flex-row flex-wrap gap-5 z-20 relative'>
+                {/* Left column */}
+                <div className='flex-2'>
+                    <p className='text-lg'>Browse our selection of coffee and tea at The King Street Emporium, available to be enjoyed fresh in-store, or purchased by weight</p>
+                </div>
+                {/* Right column */}
+                <div className='flex-1 text-right'>
+                    <p className='text-5xl font-black'>{count} options</p>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 const CaffeineCatalog = (props) => {
-
-    
-    const uniqueRoasts = [...new Set(props.data
-        .map(item => item['Roast'])
-        .filter(roast => roast != null)
-        .map(roast => roast.trim())
-    )];
-
-    const uniqueOrigins = [...new Set(props.data
-        .map(item => item['Origin'])
-        .filter(origin => origin != null)
-        .map(origin => origin.trim())
-    )];
 
     return (
         <>
@@ -34,6 +43,9 @@ const CaffeineCatalog = (props) => {
         </Head>
         <Layout>
             <PageTitle1>Coffee & Tea</PageTitle1>
+            <CaffeineHero count={
+                props.data?.length
+            } />
 
             <div className='content-container'>
                 <section id='coffee'>
@@ -140,52 +152,7 @@ const CaffeineCatalog = (props) => {
                     }
                 `}
             </style>
-            {/* <Catalog
-                data={props.data}
-
-                title="Coffee & Tea"
-                subtitle="We have a wide selection of coffee and loose-leaf tea, available for purchase in-store"
-
-                filters={[
-                    {
-                        name:"Roast",
-                        label: "Roast",
-                        values: uniqueRoasts,
-                        defaultValue: "All Roasts"
-                    },
-                    {
-                        name: "Origin",
-                        label: "Origin",
-                        values: uniqueOrigins,
-                        defaultValue: "Any Origin"
-                    }
-                ]}
-                sortOptions={[
-                    {value: "Product Name", label: "Name"}
-                ]}
-                defaultSort="Product Name"
-
-                cardSettings={{
-                    title: (item) => {
-                        return (item['Product Name'])
-                    },
-
-                    data: (item) => {
-                        return (
-                            [
-                            item['Type'] && ['Type', item['Type']],
-                            item['Roast'] && ['Roast', item['Roast']],
-                            item['Origin'] && ['Origin', item['Origin']]]
-                        )
-                    },
-                    href: (item) => {
-                        return('/caffeine/'+item.slug)
-                    },
-                    buttonText: (item) => {return("See More")}
-
-                }}
             
-            /> */}
         </>
     )
 }
