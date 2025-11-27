@@ -27,7 +27,7 @@ const navLinks = [
 ];
 
 const hours = [
-  { day: 'Mon - Sat', time: '10:00 AM – 6:00 PM' },
+  { day: 'Mon - Sat', time: '10:00 AM - 6:00 PM' },
   { day: 'Sunday', time: 'Closed' },
 ];
 
@@ -72,6 +72,30 @@ const ContactRow = ({ icon, label, href, children }) => {
   );
 };
 
+function Hours() {
+  return (
+    <div className="space-y-3 rounded-xl border border-primary1/10 bg-secondary2/20 p-3 text-primary2">
+        <div className="flex items-center justify-between gap-4 text-base font-inter">
+          <div className="text-xs uppercase tracking-widest text-primary2/70">
+            <span>MON-SAT</span>
+          </div>
+          <div className='flex flex-col rounded overflow-hidden text-right'>
+            <span className='bg-primary1 text-secondary1 p-1'>10:00AM</span>
+            <span className='bg-primary2 text-secondary2 p-1'>6:00PM</span>
+          </div>
+        </div>
+        <div className="flex items-center justify-between gap-4 text-base font-inter">
+          <div className="text-xs uppercase tracking-widest text-primary2/70">
+            <span>SUNDAY</span>
+          </div>
+          <span className={`font-semibold text-right text-secondary2 uppercase tracking-wide`}>
+            Closed
+          </span>
+        </div>
+    </div>
+  )
+}
+
 export default function Footer() {
   return (
     <footer className="mt-12 bg-secondary1 text-primary2 border-t-8 border-secondary2">
@@ -112,27 +136,7 @@ export default function Footer() {
                 320 W King Street<br />
                 Martinsburg, WV 25401
               </ContactRow>
-              <div className="space-y-3 rounded-xl border border-primary1/10 bg-secondary2/20 p-3 text-primary2">
-              {hours.map(slot => (
-                <div
-                  key={slot.day}
-                  className="flex items-center justify-between gap-4 text-base font-inter"
-                >
-                  <div className="flex items-center gap-3 text-primary2/80 justify-start">
-                    <span>{slot.day}</span>
-                  </div>
-                  <span
-                    className={`font-semibold text-right ${
-                      slot.time === 'Closed'
-                        ? 'text-secondary2 uppercase tracking-wide'
-                        : 'text-primary2'
-                    }`}
-                  >
-                    {slot.time}
-                  </span>
-                </div>
-              ))}
-            </div>
+              <Hours />
             </div>
           </div>
 
@@ -161,19 +165,19 @@ export default function Footer() {
             </h3>
             <span className="block h-0.5 w-12 bg-primary1/60" />
             <ContactRow
-                icon={<PiPhoneFill size={22} />}
-                label="Phone"
-                href={URLs.telephone}
-              >
-                (304) 264-9130
-              </ContactRow>
-              <ContactRow
-                icon={<PiEnvelopeSimpleFill size={22} />}
-                label="Email"
-                href={URLs.email}
-              >
-                <p className='text-xs'>kingstreetemporium@gmail.com</p>
-              </ContactRow>
+              icon={<PiPhoneFill size={22} />}
+              label="Phone"
+              href={URLs.telephone}
+            >
+              (304) 264-9130
+            </ContactRow>
+            <ContactRow
+              icon={<PiEnvelopeSimpleFill size={22} />}
+              label="Email"
+              href={URLs.email}
+            >
+              <p className='text-xs'>kingstreetemporium@gmail.com</p>
+            </ContactRow>
           </div>
         </div>
       </div>
