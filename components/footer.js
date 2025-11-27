@@ -75,6 +75,7 @@ const ContactRow = ({ icon, label, href, children }) => {
 function Hours() {
   return (
     <div className="space-y-3 rounded-xl border border-primary1/10 bg-secondary2/20 p-3 text-primary2">
+      <span className='text-xs uppercase tracking-widest text-primary2/70 font-bold font-inter'>Hours</span>
         <div className="flex items-center justify-between gap-4 text-base font-inter">
           <div className="text-xs uppercase tracking-widest text-primary2/70">
             <span>MON-SAT</span>
