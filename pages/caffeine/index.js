@@ -138,63 +138,65 @@ const CaffeineCatalog = (props) => {
                     props.data?.length
                 } />
 
-                <BasicSection
-                    backdropSrc="https://images.unsplash.com/photo-1606486544554-164d98da4889?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    title="Coffee"
-                    titleIcon={PiCoffeeBeanDuotone}
-                >
-                    <div className='grid gap-3 px-3' style={{
-                        gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))"
-                    }}>
-                        {props.data
-                            .filter(item => item['Type'] === 'Coffee')
-                            .map(item =>
-                                <CaffeineCard
-                                    title={item['Product Name']}
-                                    icon={PiCoffeeBeanDuotone}
-                                    flag={item.Roast && item.Roast + " Roast"}
-                                    colors={
-                                        item.Roast == "Light" ? cardColors.light :
-                                        item.Roast == "Medium" ? cardColors.medium :
-                                        item.Roast == "Dark" || item.Roast == "Extra-Dark" ? cardColors.dark :
-                                        cardColors.medium
-                                    }
-                                />
-                            )
-    
-                        }
-                    </div>
-                </BasicSection>
-
-                <BasicSection
-                    backdropSrc="https://images.unsplash.com/photo-1543060895-03f57478a710?q=80&w=689&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    title="Tea"
-                    titleIcon={PiLeafDuotone}
-                >
-                    <div className='grid gap-3 px-3' style={{
-                        gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))"
-                    }}>
-                        { props.data
-                            .filter(item => item['Type'] === 'Tea')
-                            .map(item =>
-                                <CaffeineCard
-                                    title={item['Product Name']}
-                                    icon={PiLeafDuotone}
-                                    data={[
-                                        item['Origin'] != null &&
-                                        {
-                                            key: "Origin",
-                                            value: item['Origin'],
-                                            icon: PiGlobeHemisphereEastDuotone
+                <div className='flex flex-col gap-2'>
+                    <BasicSection
+                        backdropSrc="https://images.unsplash.com/photo-1606486544554-164d98da4889?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        title="Coffee"
+                        titleIcon={PiCoffeeBeanDuotone}
+                    >
+                        <div className='grid gap-3 px-3' style={{
+                            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))"
+                        }}>
+                            {props.data
+                                .filter(item => item['Type'] === 'Coffee')
+                                .map(item =>
+                                    <CaffeineCard
+                                        title={item['Product Name']}
+                                        icon={PiCoffeeBeanDuotone}
+                                        flag={item.Roast && item.Roast + " Roast"}
+                                        colors={
+                                            item.Roast == "Light" ? cardColors.light :
+                                            item.Roast == "Medium" ? cardColors.medium :
+                                            item.Roast == "Dark" || item.Roast == "Extra-Dark" ? cardColors.dark :
+                                            cardColors.medium
                                         }
-                                    ]}
-                                    colors={cardColors.tea}
-                                />
-                            )
-
-                        }
-                    </div>
-                </BasicSection>
+                                    />
+                                )
+        
+                            }
+                        </div>
+                    </BasicSection>
+    
+                    <BasicSection
+                        backdropSrc="https://images.unsplash.com/photo-1543060895-03f57478a710?q=80&w=689&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        title="Tea"
+                        titleIcon={PiLeafDuotone}
+                    >
+                        <div className='grid gap-3 px-3' style={{
+                            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))"
+                        }}>
+                            { props.data
+                                .filter(item => item['Type'] === 'Tea')
+                                .map(item =>
+                                    <CaffeineCard
+                                        title={item['Product Name']}
+                                        icon={PiLeafDuotone}
+                                        data={[
+                                            item['Origin'] != null &&
+                                            {
+                                                key: "Origin",
+                                                value: item['Origin'],
+                                                icon: PiGlobeHemisphereEastDuotone
+                                            }
+                                        ]}
+                                        colors={cardColors.tea}
+                                    />
+                                )
+    
+                            }
+                        </div>
+                    </BasicSection>
+                </div>
 
                 <div className='content-container'>
                     <section id='coffee'>
