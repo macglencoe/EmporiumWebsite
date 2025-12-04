@@ -4233,7 +4233,7 @@
     "Wrapper": "Ecuador Sumatra",
     "Binder": "Honduran",
     "Filler": "Honduran",
-    "Flavor_Profile": "Easily paired with any beverage.",
+    "Flavor_Profile": "Cedar, Earth, Leather",
     "Strength_Profile": "Medium",
     "Sizes": [
       {
@@ -4247,9 +4247,16 @@
         "Barcode": "689674138488",
         "In_Stock": true,
         "Price": "5.70"
+      },
+      {
+        "Barcode": "689674138518",
+        "Size": "Flor De Llanza 6x54",
+        "In_Stock": true,
+        "Price": "8.35"
       }
     ],
-    "slug": "el-rey-del-mundo-natural"
+    "slug": "el-rey-del-mundo-natural",
+    "description": "El Rey del Mundo is one of the oldest names in premium cigars, tracing its roots back to Cuba in the 1880s and later finding new life in Honduras after the revolution. The modern Honduran production carries forward that legacy, maintaining the brand’s connection to traditional craftsmanship and long-aged tobacco. For decades, El Rey del Mundo has represented the old school style of cigar making, built on patience, consistency, and genuine flavor.\nThe Natural version highlights Honduran and Nicaraguan tobaccos wrapped in a smooth Ecuadorian Sumatra leaf. The result is a cigar that captures the essence of the brand’s classic approach, offering a refined balance of wood, spice, and soft sweetness. El Rey del Mundo Natural remains a favorite among traditionalists who value heritage, honest construction, and the timeless art of slow, careful blending."
   },
   {
     "Cigar Brand": "El Rey Del Mundo",
@@ -10429,5 +10436,129 @@
     "description": "Alec Bradley Black Market is one of the cigars that pushed the brand into wider recognition in the early 2010s. Released during a period when Alec Bradley was experimenting with bolder, less traditional profiles, Black Market stood out with its unusual banding, darker aesthetic, and willingness to showcase heavier tobaccos. It quickly became a staple in humidors across the country and helped solidify Alec Bradley as a company willing to take risks at a time when many brands were staying on familiar ground.\nThe blend uses a Nicaraguan wrapper over a Honduran binder with filler from Panama and Honduras. The inclusion of Panamanian leaf is part of what made this cigar notable, since that region is rarely used in premium blends and adds a distinct character that set Black Market apart from its competitors. The cigar has remained a long running line in the Alec Bradley portfolio because it represents a turning point for the company, showing how creative sourcing and a willingness to break from tradition could earn a lasting place in the market.\n",
     "slug": "alec-bradley-black-market",
     "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "J.C. Newman",
+    "Cigar Name": "Sarzedas",
+    "Wrapper": "Ecuadorian Shade",
+    "Binder": "Nicaraguan, Dominican",
+    "Filler": "Nicaraguan, Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "076622345218",
+        "In_Stock": true,
+        "Price": "9.25"
+      },
+      {
+        "Size": "Corona",
+        "Barcode": "076622345119",
+        "In_Stock": true,
+        "Price": "8.25"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "076622345317",
+        "In_Stock": true,
+        "Price": "10.00"
+      },
+      {
+        "Size": "Churchill",
+        "Barcode": "076622345416",
+        "In_Stock": true,
+        "Price": "10.60"
+      }
+    ],
+    "description": "Sarzedas is a true revival. The name dates back to 1900, when JC Newman first rolled the line and marketed it as “The Aromatic Cigar.” The company reintroduced it in 2025, once again tying modern production to its early history. Rolled at JC Newman’s PENSA factory in Estelí, Nicaragua, Sarzedas bridges the company’s Tampa roots with the craftsmanship of its contemporary Nicaraguan operation.\nThe blend was designed as a flavorful, balanced cigar rather than a niche project. Created by Rich Dolak, JC Newman’s longtime operations vice president, it uses an Ecuadorian Shade wrapper over Dominican and Nicaraguan binder and filler. The result is a smooth, aromatic cigar that honors the brand’s origins while offering the refinement and consistency expected from JC Newman today.",
+    "slug": "jc-newman-sarzedas",
+    "Date Added": "2025-12-04"
+  },
+  {
+    "Cigar Brand": "La Aroma De Cuba",
+    "Cigar Name": "Mi Amor",
+    "Wrapper": "Mexican San Andres",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Earth, Cocoa, Espresso, Spice",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Magnifico",
+        "Barcode": "819577010202",
+        "In_Stock": true,
+        "Price": "10.95"
+      }
+    ],
+    "description": "La Aroma de Cuba Mi Amor is one of the cornerstone collaborations between José “Pepin” Garcia and Ashton, created to give the La Aroma line a bolder, more modern identity. Produced at the My Father factory in Estelí, Nicaragua, it marked the moment when the brand shifted from its Cuban heritage revival toward being recognized for serious Nicaraguan craftsmanship. The name Mi Amor, meaning “my love,” reflects both the personal pride behind the project and the passion that defines Garcia’s blending style.\nThe cigar uses a dark Mexican San Andrés wrapper over Nicaraguan binder and filler, creating a rich yet balanced profile that helped make it one of the most awarded cigars in the La Aroma portfolio. Mi Amor remains a defining example of how the partnership between Ashton and the Garcias successfully combined heritage branding with the power and depth of Nicaraguan tobacco. It continues to stand as one of the most respected lines in modern premium cigar making.",
+    "slug": "la-aroma-de-cuba-mi-amor",
+    "Date Added": "2025-12-04"
+  },
+  {
+    "Cigar Brand": "C.L.E.",
+    "Cigar Name": "25th Anniversary",
+    "Wrapper": "Honduran",
+    "Binder": "Honduran",
+    "Filler": "Honduran",
+    "Flavor_Profile": "Dark Chocolate, Espresso, Cinnamon, Earth, Pepper",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "54x6",
+        "Barcode": "860003528525",
+        "In_Stock": true,
+        "Price": "20.85"
+      }
+    ],
+    "description": "CLE 25th Anniversary celebrates not only a milestone but the legacy of Christian Eiroa, whose family history in Honduran tobacco stretches back generations. The cigar honors the same philosophy that built Eiroa’s reputation with Camacho in the 1990s and continues to define CLE today: meticulous cultivation, patient fermentation, and blending that reflects authenticity rather than trend. It represents the culmination of years spent refining the use of Honduran tobaccos, which remain at the core of the brand’s identity.\nRolled at the CLE factory in Danlí, Honduras, the 25th Anniversary showcases the full expression of the Eiroa family’s work with Corojo seed tobacco. The result is a cigar that balances strength and depth while maintaining the signature smoothness CLE has built its name on. It is a celebration of heritage and craftsmanship, a statement piece that captures why CLE remains one of the few brands carrying forward the classic Honduran tradition at the highest level.",
+    "slug": "cle-25th-anniversary",
+    "Date Added": "2025-12-04"
+  },
+  {
+    "Cigar Brand": "Eiroa",
+    "Cigar Name": "Eiroa Classic",
+    "Wrapper": "Honduran",
+    "Binder": "Honduran",
+    "Filler": "Honduran",
+    "Flavor_Profile": "Leather, Pepper, Cocoa, Coffee, Cream",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "854185004861",
+        "In_Stock": true,
+        "Price": "15.75"
+      },
+      {
+        "Size": "60x6",
+        "Barcode": "854185004908",
+        "In_Stock": true,
+        "Price": "18.10"
+      }
+    ],
+    "description": "Eiroa Classic is the cigar that reintroduced Christian Eiroa’s signature blending style after the launch of CLE, connecting back to the traditions that made his family name synonymous with Honduran tobacco. Produced at the Aladino factory in Danlí, the Classic embodies the heritage of the Eiroa family’s work with authentic Corojo seed, cultivated for generations on their farms. It reflects the old-school Honduran profile that put Eiroa on the map while showing the refinement and precision that define his newer lines.\nThe blend highlights Corojo’s natural sweetness, structure, and depth without relying on power alone. Every detail, from fermentation to rolling, follows the family’s exacting standards, ensuring consistency that has become a CLE hallmark. Eiroa Classic serves as both a return to roots and a continuation of a legacy, offering smokers a taste of the same authenticity that shaped modern Honduran cigar making.",
+    "slug": "eiroa-eiroa-classic",
+    "Date Added": "2025-12-04"
+  },
+  {
+    "Cigar Brand": "Eiroa",
+    "Cigar Name": "The First 20 Years",
+    "Wrapper": "Honduran Maduro",
+    "Binder": "Honduran",
+    "Filler": "Honduran",
+    "Flavor_Profile": "Dark Chocolate, Espresso, Spice, Nuts, Earth",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "855374008455",
+        "In_Stock": true,
+        "Price": "18.30"
+      }
+    ],
+    "description": "Eiroa The First 20 Years Maduro marks a milestone in Christian Eiroa’s career, celebrating two decades of his work in premium cigar making. The line honors both his family’s long history in Honduras and his personal evolution as a blender. Built entirely from Honduran tobaccos grown on the Eiroa family’s farms, it reflects the pride of a brand that continues to champion authentic Corojo cultivation and the craftsmanship that has defined the Eiroa name for generations.\nThe Maduro version uses a dark, well-fermented Honduran wrapper that deepens the blend’s natural sweetness and adds a layer of richness without overwhelming the palate. Construction is tight, the draw is deliberate, and the flavor progression showcases the complexity of properly aged Corojo leaf. Eiroa The First 20 Years Maduro stands as both a personal statement from its creator and a benchmark for what modern Honduran cigars can achieve when tradition and precision meet.",
+    "slug": "eiroa-the-first-20-years",
+    "Date Added": "2025-12-04"
   }
 ]
