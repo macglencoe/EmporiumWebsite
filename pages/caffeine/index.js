@@ -86,7 +86,7 @@ function CaffeineCard({
         <article className={
                 clsx(
                     `bg-primary2 max-w-md flex flex-col gap-1 p-3 rounded-xl relative`+' '+className+' '+
-                    `bg-linear-to-br ${colors.from} ${colors.to} ${colors.fg}`
+                    `bg-linear-to-br ${colors.from} ${colors.to} ${colors.fg} ${colors.border} border-2`
                 )}
                 {...props}>
             <IconComponent className="w-6 h-6 ml-2" />
