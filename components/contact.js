@@ -6,7 +6,7 @@ import { handleLocationClick } from '../utils/location'
 import { handlePhoneClick } from '../utils/phone'
 import { handleEmailClick } from '../utils/email'
 import Link from 'next/link'
-import { PiDoorFill, PiDoorOpenFill, PiEnvelopeFill, PiEnvelopeSimpleDuotone, PiEnvelopeSimpleFill, PiNavigationArrowFill, PiPhoneFill } from 'react-icons/pi'
+import { PiClockBold, PiDoorFill, PiDoorOpenFill, PiEnvelopeSimpleFill, PiNavigationArrowFill, PiPhoneFill } from 'react-icons/pi'
 
 const ContactLink = (props) => {
     return (
@@ -108,7 +108,6 @@ const Hours = (props) => {
         return () => clearInterval(timer);
     }, []);
 
-    const days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
     const currentDayIndex = currentTime.getDay();
 
     useEffect(() => {
@@ -119,183 +118,59 @@ const Hours = (props) => {
             props.openDays.includes(currentDayIndex));
     }, [currentTime]);
 
-    const formatTime = (date) => {
-        let hours = date.getHours();
-        let minutes = date.getMinutes();
-        const ampm = hours >= 12 ? 'PM' : 'AM';
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        minutes = minutes < 10 ? '0' + minutes : minutes;
-        return `${hours}:${minutes} ${ampm}`
-    }
+    const hoursDescription = 'Open Monday through Saturday from 10 a.m. to 6 p.m.; closed on Sunday.';
 
     return (
         <>
-            <div className="catalog-hours">
-                <div className="catalog-container79 weekday-container">
-                    {days.map((day, index) => (
-                        <div key={index} className={
-                            `
-                                text-center bg-transparent border-b-2 pb-1
-                            ` + ` ` +
-                            `${props.openDays.includes(index) ? `
-                                ` : `
-                                !border-b-0
-                            `}` + ` ` +
-                            `${index === currentDayIndex ? `
-                                !text-primary1 font-bold
-                                !border-primary1
-                            `: `
-                            text-center text-primary2
-                            !bg-transparent
-                            border-primary2
-                            `}`
-                                    /* This is where open days are set */}>
-                            <span>{day}</span>
-                        </div>
-                    ))}
-                </div>
-                <div className="catalog-container87">
-                    <span className="catalog-text248 flex flex-row items-center gap-2">
-                        <PiDoorOpenFill size={28} />
-                        {props.openingTime > 12 ? props.openingTime - 12 : props.openingTime}{props.openingTime < 12 ? 'AM' : 'PM'}
-                    </span>
-                    <span className="catalog-text249">
-                        <span>-</span>
-                        <br></br>
-                    </span>
-                    <span className="catalog-text252 flex flex-row items-center gap-2">
-                        <PiDoorFill size={28} />
-                        {props.closingTime > 12 ? props.closingTime - 12 : props.closingTime}{props.closingTime < 12 ? 'AM' : 'PM'}
-                    </span>
-                </div>
-                <div className="catalog-container88 flex flex-row !items-center">
-                    <div className="catalog-container89">
-                        <span className="catalog-text253 flex flex-row items-center gap-3">{isOpen ? "Open Now" : "Closed"} </span>
+            <div
+                className='
+                    bg-secondary1 p-2 rounded-md w-full font-inter
+                    grid grid-cols-3 grid-rows-3
+                    overflow-hidden
+                '
+                style={{
+                    gridTemplateColumns: 'auto 0 auto',
+                    gridTemplateRows: '1fr 1fr 1.5fr',
+                }}
+                role="group"
+                aria-label="Store hours"
+                aria-describedby="hours-description"
+            >
+                <span id="hours-description" className='sr-only'>{hoursDescription}</span>
+                <span className='text-primary2 font-bold text-md uppercase tracking-wider text-center py-1'>Mon - Sat</span>
+                <span className='relative border-r-2 border-primary1' aria-hidden="true">
+                    <PiClockBold size={35} className='
+                    text-primary1 bg-secondary1
+                    absolute
+                    left-1/2 bottom-0
+                    -translate-x-1/2 translate-y-1/2
+                ' focusable="false" aria-hidden="true"/>
+                </span>
+                <span className='text-primary2 font-bold text-md uppercase tracking-wider text-center py-1'>Sunday</span>
 
-                    </div>
-                    <span className="catalog-text254">
-                        <span>{formatTime(currentTime)}</span>
-                        <br></br>
-                    </span>
-                </div>
+                <span className='text-primary2/80 text-md uppercase tracking-wider text-center py-1'>10am - 6pm</span>
+                <span className='border-r-2 border-primary1'/>
+                <span className='text-primary2/80 text-md uppercase tracking-wider text-center py-1'>Closed</span>
+                
+                <span
+                    className='text-primary2 font-bold text-md uppercase tracking-wider text-center py-1 col-span-3 flex justify-center items-center gap-2 pt-2'
+                    role="status"
+                    aria-live="polite"
+                    aria-atomic="true"
+                >
+                    {isOpen ? (
+                        <>
+                            <PiDoorOpenFill size={24} className='inline text-primary1' aria-hidden="true" focusable="false" />
+                            Open Now
+                        </>
+                    ) : (
+                        <>
+                            <PiDoorFill size={24} className='inline text-primary1' aria-hidden="true" focusable="false" />
+                            Closed Now
+                        </> 
+                    )   }
+                </span>
             </div>
-            <style jsx>
-                {`
-                span {
-                    font-family: 'Inter';
-                }
-.catalog-hours {
-    gap: var(--dl-space-space-halfunit);
-    flex: 0 0 auto;
-    width: 100%;
-    display: flex;
-    padding: var(--dl-space-space-halfunit);
-    align-items: flex-start;
-    border-radius: var(--dl-radius-radius-radius8);
-    flex-direction: column;
-    background-color: var(--dl-color-theme-secondary1);
-}
-.catalog-container79 {
-    flex: 0 0 auto;
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-gap: 2px;
-    border-color: var(--dl-color-theme-secondary1);
-    border-width: 2px;
-    background-color: var(--dl-color-theme-secondary1);
-    grid-template-columns: auto auto auto auto auto auto auto;
-}
-.weekday-active-day {
-    flex: initial;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.weekday-open {
-    background-color: var(--dl-color-theme-primary1)
-}
-.weekday-active-day span {
-    fill: var(--dl-color-theme-primary2);
-    color: var(--dl-color-theme-primary2);
-    font-style: normal;
-    font-weight: 700;
-}
-.catalog-container87 {
-    flex: 0 0 auto;
-    width: 100%;
-    height: auto;
-    display: flex;
-    padding-left: var(--dl-space-space-unit);
-    padding-right: var(--dl-space-space-unit);
-    justify-content: space-between;
-}
-.catalog-text248 {
-    fill: var(--dl-color-theme-primary2);
-    color: var(--dl-color-theme-primary2);
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-}
-.catalog-text249 {
-    fill: var(--dl-color-theme-primary2);
-    color: var(--dl-color-theme-primary2);
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-}
-.catalog-text252 {
-    fill: var(--dl-color-theme-primary2);
-    color: var(--dl-color-theme-primary2);
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-}
-.catalog-container88 {
-    gap: var(--dl-space-space-halfunit);
-    flex: 0 0 auto;
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-self: flex-start;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-.catalog-container89 {
-    flex: 1;
-    width: auto;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    border-radius: var(--dl-radius-radius-radius4);
-    justify-content: center;
-    background-image: linear-gradient(
-    270deg,
-    rgba(232, 168, 21, 0) 0%,
-    rgb(232, 168, 21) 98%
-    );
-    padding: 5px;
-}
-.catalog-text253 {
-    color: var(--dl-color-theme-primary2);
-    font-style: normal;
-    font-weight: 700;
-    font-family: 'Playfair';
-    font-style: italic;
-}
-.catalog-text254 {
-    fill: var(--dl-color-theme-primary2);
-    color: var(--dl-color-theme-primary2);
-    font-size: 25px;
-    font-style: normal;
-    text-align: center;
-    font-weight: 700;
-}
-
-                `}
-            </style>
         </>
     )
 }
@@ -391,10 +266,21 @@ const Contact = (props) => {
     height: auto;
     display: flex;
     padding: var(--dl-space-space-halfunit);
-    align-items: flex-start;
-    flex-direction: column;
-    background-color: var(--dl-color-theme-secondary2);
-    }
+                align-items: flex-start;
+                flex-direction: column;
+                background-color: var(--dl-color-theme-secondary2);
+                }
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
 .location-container:hover span {
     text-decoration: underline;
 }
