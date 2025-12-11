@@ -126,13 +126,13 @@ const TobaccoCatalog = (props) => {
                         title: `${props.data?.length} Blends`,
                         subtitle: "To browse",
                         description: "Love pipe tobacco? We have plenty! Look through our collection online, or try them out in-person!",
-                        backdrop: "https://images.unsplash.com/photo-1648045871892-190682e2e952?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        backdrop: "/tobacco-jars.jpg"
                     },
                     {
                         title: 'Your favorite brands',
                         subtitle: 'And our own blends',
                         description: "While we mostly sell our own blends made in-house, we are proud to sell Cornell & Diehl, Lane, and more!",
-                        backdrop: "https://images.unsplash.com/photo-1620195904529-5188933063e7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        backdrop: "/tobacco-tins.jpg"
                     }
                 ]}
 

@@ -26,7 +26,7 @@ export const NewArrivalList = ({ cigars }) => {
         <section className="relative py-20 px-6 bg-gradient-to-r from-primary2/30 via-primary2/50 to-primary2/30">
             {/* Subtle Backdrop */}
             <div className="absolute inset-0">
-                <Image layout='fill' className="object-cover opacity-15" src="https://images.unsplash.com/photo-1679419860191-278d0720bc1b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                <Image layout='fill' className="object-cover opacity-15" src="/humidor-side.jpg" />
                 <div className='absolute inset-0' style={{
                     boxShadow: "inset 0 0 400px -300px black"
                 }} />
