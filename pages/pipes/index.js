@@ -60,12 +60,54 @@ const PipeCatalog = (props) => {
                         </div>
                     </BasicSection>
                     <BasicSection backdropSrc='/corn-cob-pipes.png' title='Corn Cob Pipes' titleIcon={PiStorefrontDuotone} id='corn-cob-pipes'>
-                        <p className='text-center text-xl'>Come check out our selection of Missouri Meerschaum Corn Cob pipes in various shapes and sizes!</p>
-                        <BasicImage src='/corn-cob-pipes.png' alt="Corn Cob Pipes Display Case" />
+                        <div className='grid md:grid-cols-2 gap-6 items-center max-w-6xl mx-auto'>
+                            <div className='space-y-3'>
+                                <div className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary1/30 text-secondary2 text-sm font-semibold w-fit'>
+                                    Everyday good-smoke option
+                                </div>
+                                <p className='text-secondary1 text-lg leading-relaxed'>
+                                    Missouri Meerschaum cobs in classic shapes, plus short-stem pocket pipes. Great for new smokers or a reliable knockaround pipe.
+                                </p>
+                                <ul className='space-y-2 text-secondary1 font-inter'>
+                                    <li className='flex items-start gap-2'>
+                                        <span className='mt-1 h-2 w-2 rounded-full bg-primary1'></span>
+                                        <span>Filters and filterless options on hand</span>
+                                    </li>
+                                    <li className='flex items-start gap-2'>
+                                        <span className='mt-1 h-2 w-2 rounded-full bg-primary1'></span>
+                                        <span>Replacement stems, pipe cleaners, and cob tools stocked nearby</span>
+                                    </li>
+                                    <li className='flex items-start gap-2'>
+                                        <span className='mt-1 h-2 w-2 rounded-full bg-primary1'></span>
+                                        <span>Easy to pair with our bulk aromatics for a starter bundle</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <BasicImage src='/corn-cob-pipes.png' alt="Corn Cob Pipes Display Case" />
+                        </div>
                     </BasicSection>
                     <BasicSection backdropSrc='/estate-pipes.png' title='Estate Pipes' titleIcon={PiStorefrontDuotone} id='estate-pipes'>
-                        <p className='text-center text-xl'>We have a large collection of restored estate pipes. Come find your perfect match!</p>
-                        <BasicImage src='/estate-pipes.png' alt="Estate Pipes Display Case" />
+                        <div className='grid md:grid-cols-2 gap-6 items-center max-w-6xl mx-auto'>
+                            <BasicImage src='/estate-pipes.png' alt="Estate Pipes Display Case" />
+                            <div className='space-y-3'>
+                                <div className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary1 text-primary2 text-sm font-semibold w-fit'>
+                                    Curated & cleaned in-house
+                                </div>
+                                <p className='text-secondary1 text-lg leading-relaxed'>
+                                    Estate pipes are hand-selected, restored, sanitized, and ready to smoke.
+                                </p>
+                                <ul className='space-y-2 text-secondary1 font-inter'>
+                                    <li className='flex items-start gap-2'>
+                                        <span className='mt-1 h-2 w-2 rounded-full bg-primary1'></span>
+                                        <span>Variety of shapes and sizes to choose from</span>
+                                    </li>
+                                    <li className='flex items-start gap-2'>
+                                        <span className='mt-1 h-2 w-2 rounded-full bg-primary1'></span>
+                                        <span>Priced to make collecting approachable</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </BasicSection>
                 </div>
 
