@@ -56,14 +56,14 @@ function CaffeineHero({ count }) {
             <div className='absolute inset-0 z-[0] opacity-30'>
                 <Image layout='fill' className="object-cover" src="https://images.unsplash.com/photo-1433891248364-3ce993ff0e92?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
             </div>
-            <div className='max-w-5xl mx-auto flex flex-row flex-wrap gap-5 z-[2] relative'>
+            <div className='max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center flex-wrap gap-5 z-[2] relative'>
                 {/* Left column */}
                 <div className='flex-2'>
-                    <p className='text-lg'>Browse our selection of coffee and tea at The King Street Emporium, available to be enjoyed fresh in-store, or purchased by weight</p>
+                    <p className='text-md tracking-wide leading-relaxed md:text-lg'>Browse our selection of coffee and tea at The King Street Emporium, available to be enjoyed fresh in-store, or purchased by weight</p>
                 </div>
                 {/* Right column */}
                 <div className='flex-1 text-right'>
-                    <p className='text-5xl font-black'>{count} options</p>
+                    <p className='text-3xl md:text-5xl font-black'>{count} options</p>
                 </div>
             </div>
         </div>
