@@ -12,6 +12,7 @@ import { handleLocationClick } from '../utils/location'
 import NewArrivalList from '../components/newArrivalList'
 import Featured from '../components/featured'
 import BrandShowcase from '../components/brandShowcase'
+import Staff from '../components/staff'
 
 export const getStaticProps = async () => {
   const data = await import('../public/data/consolidated_cigars.json');
@@ -175,47 +176,7 @@ const Catalog = (props) => {
 
 
 
-        <section className='staff-section bg-primary2/10 py-16 px-6'>
-          <div className='max-w-6xl mx-auto'>
-            <div className='text-center mb-12'>
-              <h1 id='staff' className='text-4xl md:text-5xl font-bold text-secondary2 uppercase mb-4'>Meet Our Staff</h1>
-              <div className='h-1 w-16 bg-secondary2 mx-auto mb-6'></div>
-            </div>
-            
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto'>
-              <div className='staff-card group'>
-                <div className='staff-card-inner'>
-                  <div className='staff-image-wrapper'>
-                    <div className='staff-image-container'>
-                      <img alt="Edward Trout" src='/edtrout.jpg' className='staff-photo' />
-                      <div className='staff-overlay'></div>
-                    </div>
-                  </div>
-                  <div className='staff-content'>
-                    <h2 className='staff-name'>Edward Trout</h2>
-                    <p className='staff-title'>Sole Proprietor</p>
-                    <div className='staff-divider'></div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className='staff-card group'>
-                <div className='staff-card-inner'>
-                  <div className='staff-image-wrapper'>
-                    <div className='staff-image-container'>
-                      <img alt="Ted McDonald" src='/tedmcdonald.jpg' className='staff-photo' />
-                    </div>
-                  </div>
-                  <div className='staff-content'>
-                    <h2 className='staff-name'>Ted McDonald</h2>
-                    <p className='staff-title'>Master Tobacconist</p>
-                    <div className='staff-divider'></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Staff />
 
 
 
