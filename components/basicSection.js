@@ -12,7 +12,7 @@ export default function BasicSection({ backdropSrc, title, titleIcon, children, 
                 }} />
             </div>
             <TitleCrest icon={titleIcon}>{title}</TitleCrest>
-            <div className="z-[1] max-w-5xl mx-auto">{children}</div>
+            <div className="z-[1] max-w-5xl mx-auto w-full">{children}</div>
         </section>
     )
 }
