@@ -12,7 +12,7 @@
         "Size": "Toro",
         "Barcode": "7427025678329",
         "In_Stock": true,
-        "Price": "16.70"
+        "Price": "17.50"
       }
     ],
     "slug": "aganorsa-anniversario-corojo"
@@ -108,7 +108,7 @@
         "Size": "Super Toro",
         "Barcode": "7426824777318",
         "In_Stock": true,
-        "Price": "8.50"
+        "Price": "9.00"
       }
     ],
     "slug": "aganorsa-jfr-corojo"
@@ -258,7 +258,7 @@
         "Size": "Toro",
         "Barcode": "7427025678565",
         "In_Stock": true,
-        "Price": "10.85"
+        "Price": "11.00"
       }
     ],
     "slug": "aganorsa-valadacion-corojo"
@@ -276,7 +276,7 @@
         "Size": "Toro",
         "Barcode": "7427025678541",
         "In_Stock": true,
-        "Price": "10.90"
+        "Price": "12.20"
       }
     ],
     "slug": "aganorsa-valadacion-maduro"
@@ -347,12 +347,13 @@
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": "7429457990925",
+        "Barcode": "810194080258",
         "In_Stock": true,
-        "Price": "11.20"
+        "Price": "11.15"
       }
     ],
-    "slug": "aj-fernandez-bella-artes-rojita"
+    "slug": "aj-fernandez-bella-artes-rojita",
+    "description": "AJ Fernandez Bella Artes is a refined medium plus cigar built around a Rojita hybrid wrapper, a Nicaraguan binder, and a mix of Nicaraguan and Honduran fillers. The profile opens with cream, light spice, and a subtle floral note that sets a smooth tone from the start.\nAs it burns, the flavor develops into soft cinnamon, cocoa, and a gentle sweetness over a steady earthy core. The construction is dependable and the strength stays balanced, making Bella Artes a strong option for smokers who want depth and complexity without heavy power."
   },
   {
     "Cigar Brand": "AJ Fernandez",
@@ -365,7 +366,7 @@
     "Sizes": [
       {
         "Size": "Corona",
-        "Barcode": "7426824785146",
+        "Barcode": "810194080913",
         "In_Stock": true,
         "Price": "10.60"
       }
@@ -409,13 +410,13 @@
         "Size": "Toro",
         "Barcode": "7426824785894",
         "In_Stock": true,
-        "Price": "12.75"
+        "Price": "13.35"
       },
       {
         "Size": "Robusto",
         "Barcode": "7426824785887",
         "In_Stock": true,
-        "Price": "11.65"
+        "Price": "12.20"
       },
       {
         "Size": "Perfecto",
@@ -583,7 +584,7 @@
         "Size": "Corona",
         "Barcode": "7429457491460",
         "In_Stock": true,
-        "Price": "6.80"
+        "Price": "7.20"
       }
     ],
     "slug": "aj-fernandez-new-world-cameroon"
@@ -607,7 +608,7 @@
         "Size": "Toro",
         "Barcode": "851350001960",
         "In_Stock": true,
-        "Price": "9.00"
+        "Price": "9.10"
       },
       {
         "Size": "Perfecto",
@@ -662,9 +663,16 @@
         "Barcode": "7426824785429",
         "In_Stock": true,
         "Price": "9.55"
+      },
+      {
+        "Size": "Belicoso",
+        "Barcode": "851350000963",
+        "In_Stock": true,
+        "Price": "9.30"
       }
     ],
-    "slug": "aj-fernandez-new-world-oscuro"
+    "slug": "aj-fernandez-new-world-oscuro",
+    "description": "AJ Fernandez New World Oscuro is one of the blends that put AJ on the map as a modern powerhouse in cigar making. Developed with his father, Ismael Fernandez, this cigar was created to honor the history of tobacco in the Americas and became an instant hit when it launched. The red box has become a familiar sight in humidors, known for offering serious value without cutting corners on craftsmanship.\nThe blend is built around all Nicaraguan tobaccos, including a dark oscuro wrapper that gives the cigar its signature richness and depth. New World Oscuro is known for dependable construction and a bold profile that helped solidify AJ’s reputation for producing high quality Nicaraguan cigars at accessible prices. It remains one of the core lines that introduced many smokers to his style of blending."
   },
   {
     "Cigar Brand": "AJ Fernandez",
@@ -758,13 +766,13 @@
         "Size": "Robusto",
         "Barcode": "851350003902",
         "In_Stock": true,
-        "Price": "9.00"
+        "Price": "9.50"
       },
       {
         "Size": "Toro",
         "Barcode": "851350003889",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.00"
       }
     ],
     "slug": "aj-fernandez-san-lotano-requim"
@@ -812,7 +820,7 @@
         "Size": "Toro",
         "Barcode": "851350003964",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.00"
       }
     ],
     "slug": "aj-fernandez-san-lotano-requim-maduro"
@@ -848,7 +856,7 @@
         "Size": "Toro",
         "Barcode": "815337018457",
         "In_Stock": true,
-        "Price": "12.30"
+        "Price": "13.00"
       },
       {
         "Size": "Robusto",
@@ -927,6 +935,12 @@
         "Barcode": "815337015470",
         "In_Stock": true,
         "Price": "6.40"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "815337015487",
+        "In_Stock": true,
+        "Price": "7.30"
       }
     ],
     "slug": "alec-bradley-project-40"
@@ -980,7 +994,7 @@
         "Size": "Toro",
         "Barcode": "815337012110",
         "In_Stock": true,
-        "Price": "7.95"
+        "Price": "8.90"
       }
     ],
     "slug": "alec-bradley-american-sungrown"
@@ -998,7 +1012,7 @@
         "Size": "Toro",
         "Barcode": "843182100072",
         "In_Stock": true,
-        "Price": "8.20"
+        "Price": "8.70"
       }
     ],
     "slug": "arturo-fuente-8-5-8-maduro",
@@ -1017,7 +1031,7 @@
         "Size": "Toro",
         "Barcode": "843182100096",
         "In_Stock": true,
-        "Price": "8.20"
+        "Price": "8.70"
       }
     ],
     "slug": "arturo-fuente-8-5-8-natural",
@@ -1036,7 +1050,7 @@
         "Size": "Toro",
         "Barcode": "843182100249",
         "In_Stock": true,
-        "Price": "8.85"
+        "Price": "9.35"
       }
     ],
     "slug": "arturo-fuente-8-5-8-sungrown",
@@ -1150,7 +1164,7 @@
         "Size": "Corona",
         "Barcode": "843182100348",
         "In_Stock": true,
-        "Price": "3.60"
+        "Price": "3.75"
       }
     ],
     "slug": "arturo-fuente-breva-maduro",
@@ -1169,7 +1183,7 @@
         "Size": "Corona",
         "Barcode": "843182100362",
         "In_Stock": true,
-        "Price": "3.60"
+        "Price": "3.75"
       }
     ],
     "slug": "arturo-fuente-breva-natural",
@@ -1246,7 +1260,7 @@
         "Size": "Toro",
         "Barcode": "843182100423",
         "In_Stock": true,
-        "Price": "5.60"
+        "Price": "5.80"
       }
     ],
     "slug": "arturo-fuente-cazadores",
@@ -1265,7 +1279,7 @@
         "Size": "Rothschild",
         "Barcode": "843182100577",
         "In_Stock": true,
-        "Price": "8.00"
+        "Price": "8.50"
       }
     ],
     "slug": "arturo-fuente-chateau-fuente-maduro",
@@ -1284,7 +1298,7 @@
         "Size": "Rothschild",
         "Barcode": "843182100607",
         "In_Stock": true,
-        "Price": "8.00"
+        "Price": "8.50"
       }
     ],
     "slug": "arturo-fuente-chateau-fuente-natural",
@@ -1323,7 +1337,7 @@
         "Size": "Robusto",
         "Barcode": "843182100690",
         "In_Stock": true,
-        "Price": "8.00"
+        "Price": "8.50"
       }
     ],
     "slug": "arturo-fuente-chateau-fuente-sungrown",
@@ -1399,7 +1413,7 @@
         "Size": "Torpedo",
         "Barcode": "843182100485",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.10"
       }
     ],
     "slug": "arturo-fuente-cuban-belicoso",
@@ -1418,7 +1432,7 @@
         "Size": "Robusto",
         "Barcode": "843182101185",
         "In_Stock": true,
-        "Price": "3.90"
+        "Price": "4.05"
       }
     ],
     "slug": "arturo-fuente-curly-head-natural",
@@ -1443,7 +1457,7 @@
         "Size": "Belicoso",
         "Barcode": "843182121305",
         "In_Stock": true,
-        "Price": "14.95"
+        "Price": "15.75"
       }
     ],
     "slug": "arturo-fuente-don-carlos",
@@ -1462,7 +1476,7 @@
         "Size": "Gordito",
         "Barcode": "843182122111",
         "In_Stock": true,
-        "Price": "13.65"
+        "Price": "14.15"
       }
     ],
     "slug": "arturo-fuente-don-carlos-eye-of-the-bull",
@@ -1499,7 +1513,7 @@
         "Size": "Corona",
         "Barcode": "843182121688",
         "In_Stock": true,
-        "Price": "12.25"
+        "Price": "12.95"
       }
     ],
     "slug": "arturo-fuente-don-carlos-no-3",
@@ -1518,7 +1532,7 @@
         "Size": "Robusto",
         "Barcode": "843182121824",
         "In_Stock": false,
-        "Price": "20.10"
+        "Price": "21.25"
       }
     ],
     "slug": "arturo-fuente-don-carlos-personal-reserve",
@@ -1537,7 +1551,7 @@
         "Size": "Toro",
         "Barcode": "843182101307",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.10"
       }
     ],
     "slug": "arturo-fuente-double-chateau-maduro",
@@ -1556,7 +1570,7 @@
         "Size": "Toro",
         "Barcode": "843182101338",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.10"
       }
     ],
     "slug": "arturo-fuente-double-chateau-natural",
@@ -1575,7 +1589,7 @@
         "Size": "Toro",
         "Barcode": "843182101406",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.10"
       }
     ],
     "slug": "arturo-fuente-double-chateau-sungrown",
@@ -1650,7 +1664,7 @@
         "Size": "Corona",
         "Barcode": "843182101116",
         "In_Stock": true,
-        "Price": "4.30"
+        "Price": "4.45"
       }
     ],
     "slug": "arturo-fuente-fuente-curly-head-maduro-deluxe",
@@ -1669,7 +1683,7 @@
         "Size": "Belicoso",
         "Barcode": "843182100508",
         "In_Stock": true,
-        "Price": "12.00"
+        "Price": "12.80"
       }
     ],
     "slug": "arturo-fuente-fuente-king-b-sungrown",
@@ -1778,7 +1792,7 @@
         "Size": "Perfecto",
         "Barcode": "843182122333",
         "In_Stock": true,
-        "Price": "8.80"
+        "Price": "9.10"
       }
     ],
     "slug": "arturo-fuente-hemingway-best-seller-natural"
@@ -1832,7 +1846,7 @@
         "Size": "Perfecto",
         "Barcode": "843182122548",
         "In_Stock": true,
-        "Price": "7.90"
+        "Price": "8.20"
       }
     ],
     "slug": "arturo-fuente-hemingway-short-story-natural"
@@ -1957,7 +1971,7 @@
         "Size": "Torpedo",
         "Barcode": "843182100645",
         "In_Stock": true,
-        "Price": "9.45"
+        "Price": "10.10"
       }
     ],
     "slug": "arturo-fuente-queen-b-sungrown"
@@ -2066,7 +2080,7 @@
         "Size": "Churchill",
         "Barcode": "843182102366",
         "In_Stock": true,
-        "Price": "11.60"
+        "Price": "12.35"
       }
     ],
     "slug": "arturo-fuente-royal-salute-sungrown"
@@ -2084,7 +2098,7 @@
         "Size": "Churchill",
         "Barcode": "843182100829",
         "In_Stock": true,
-        "Price": "9.10"
+        "Price": "9.70"
       }
     ],
     "slug": "arturo-fuente-sellecion-dor"
@@ -2138,7 +2152,7 @@
         "Size": "Perfecto",
         "Barcode": "843182122722",
         "In_Stock": true,
-        "Price": "19.00"
+        "Price": "20.25"
       }
     ],
     "slug": "arturo-fuente-untold-story-maduro"
@@ -2193,10 +2207,17 @@
         "Size": "Toro",
         "Barcode": "819577011810",
         "In_Stock": true,
-        "Price": "14.85"
+        "Price": "15.80"
+      },
+      {
+        "Size": "Churchill",
+        "Barcode": "819577011773",
+        "In_Stock": true,
+        "Price": "15.50"
       }
     ],
-    "slug": "ashton-ashton"
+    "slug": "ashton-ashton",
+    "description": "Ashton Classic has been a benchmark in premium cigars since the early 1980s, created by Philadelphia tobacconist Robert Levin and produced by the Fuente family in the Dominican Republic. The blend was designed to set a standard for consistency and elegance at a time when the premium cigar market was still taking shape, and it quickly became one of the most recognized names in the industry.\nFor decades, Ashton Classic has held its place as a dependable choice for new and seasoned smokers alike, known for its careful construction and long running partnership between Levin and the Fuentes. It remains one of the flagship lines that helped define modern Dominican cigar making and continues to represent the traditional side of premium cigars."
   },
   {
     "Cigar Brand": "Ashton",
@@ -2307,7 +2328,7 @@
         "Size": "Robusto",
         "Barcode": "819577012534",
         "In_Stock": true,
-        "Price": "19.85"
+        "Price": "17.10"
       }
     ],
     "slug": "ashton-vsg-pegasus"
@@ -2325,7 +2346,7 @@
         "Size": "Toro",
         "Barcode": "819577012657",
         "In_Stock": true,
-        "Price": "17.10"
+        "Price": "19.85"
       }
     ],
     "slug": "ashton-vsg-wizard"
@@ -2385,13 +2406,13 @@
         "Size": "Robusto",
         "Barcode": "7423825002067",
         "In_Stock": true,
-        "Price": "6.30"
+        "Price": "6.60"
       },
       {
         "Size": "Toro",
         "Barcode": "7423825002043",
         "In_Stock": true,
-        "Price": "6.50"
+        "Price": "6.90"
       }
     ],
     "slug": "baccarat-baccarat"
@@ -2553,7 +2574,7 @@
         "Size": "80 x6",
         "Barcode": "854185004946",
         "In_Stock": true,
-        "Price": "13.90"
+        "Price": "14.80"
       }
     ],
     "slug": "c-l-e-asylum-13"
@@ -2577,7 +2598,7 @@
         "Size": "Toro",
         "Barcode": "855374008592",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.45"
       }
     ],
     "slug": "c-l-e-asylum-insidious"
@@ -2721,13 +2742,13 @@
         "Size": "Toro",
         "Barcode": "7623500175226",
         "In_Stock": true,
-        "Price": "10.30"
+        "Price": "10.90"
       },
       {
         "Size": "Robusto",
         "Barcode": "7623500175219",
         "In_Stock": true,
-        "Price": "9.80"
+        "Price": "10.40"
       }
     ],
     "slug": "camacho-connecticut"
@@ -2745,7 +2766,7 @@
         "Size": "Toro",
         "Barcode": "7623500175394",
         "In_Stock": true,
-        "Price": "9.30"
+        "Price": "10.90"
       },
       {
         "Size": "Robusto",
@@ -2754,7 +2775,8 @@
         "Price": "8.80"
       }
     ],
-    "slug": "camacho-corojo"
+    "slug": "camacho-corojo",
+    "description": "Camacho Corojo delivers full-bodied satisfaction built entirely from Honduran Corojo, from the robust fifth-priming wrapper to the binder and long-filler blend grown in the Jamastrán Valley’s sun-drenched fields to echo the original Cuban terroir. Aged, well-constructed, and rich in character, it’s the classic Camacho experience wrapped up in a bold, dependable smoke perfect for daily enjoyment."
   },
   {
     "Cigar Brand": "Camacho",
@@ -2811,7 +2833,7 @@
         "Size": "Toro",
         "Barcode": "7623500430646",
         "In_Stock": true,
-        "Price": "9.80"
+        "Price": "10.90"
       }
     ],
     "slug": "camacho-nicaragua"
@@ -2853,7 +2875,7 @@
         "Size": "Toro",
         "Barcode": "652125016116",
         "In_Stock": true,
-        "Price": "10.60"
+        "Price": "11.20"
       }
     ],
     "slug": "cao-americas"
@@ -2896,7 +2918,7 @@
         "Size": "Toro",
         "Barcode": "689674140566",
         "In_Stock": true,
-        "Price": "10.70"
+        "Price": "11.50"
       }
     ],
     "slug": "cao-bx3"
@@ -2914,10 +2936,17 @@
         "Size": "Toro",
         "Barcode": "689674154969",
         "In_Stock": true,
-        "Price": "7.45"
+        "Price": "7.65"
+      },
+      {
+        "Size": "Gordo",
+        "Barcode": "689674155010",
+        "In_Stock": true,
+        "Price": "8.70"
       }
     ],
-    "slug": "cao-fasa-noche"
+    "slug": "cao-fasa-noche",
+    "hidden": false
   },
   {
     "Cigar Brand": "CAO",
@@ -2932,7 +2961,7 @@
         "Size": "Toro",
         "Barcode": "689674155065",
         "In_Stock": false,
-        "Price": "7.45"
+        "Price": "7.65"
       }
     ],
     "slug": "cao-fasa-sol"
@@ -2950,16 +2979,22 @@
         "Size": "Corona",
         "Barcode": "689674114192",
         "In_Stock": true,
-        "Price": "9.85"
+        "Price": "10.50"
       },
       {
         "Size": "Robusto",
-        "Barcode": "689674062875",
+        "Barcode": "689674062868",
         "In_Stock": true,
-        "Price": "11.65"
+        "Price": "12.80"
       },
       {
-        "Size": "Toro",
+        "Size": "Gordo",
+        "Barcode": "689674062875",
+        "In_Stock": true,
+        "Price": "13.60"
+      },
+      {
+        "Size": "7x70 (Big Block)",
         "Barcode": "689674062882",
         "In_Stock": true,
         "Price": "14.30"
@@ -2998,7 +3033,7 @@
         "Size": "Toro",
         "Barcode": "652125011012",
         "In_Stock": true,
-        "Price": "10.45"
+        "Price": "11.50"
       }
     ],
     "slug": "cao-italia"
@@ -3016,7 +3051,13 @@
         "Size": "Toro",
         "Barcode": "652125004519",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "11.70"
+      },
+      {
+        "Size": "Robusto",
+        "In_Stock": true,
+        "Price": "11.20",
+        "Barcode": "652125004410"
       }
     ],
     "slug": "cao-l-anniversaire-cameroon"
@@ -3052,7 +3093,7 @@
         "Size": "Toro",
         "Barcode": "652125000214",
         "In_Stock": true,
-        "Price": "11.65"
+        "Price": "12.80"
       }
     ],
     "slug": "cao-mx2"
@@ -3154,7 +3195,7 @@
         "Size": "Toro",
         "Barcode": "689674090786",
         "In_Stock": true,
-        "Price": "15.80"
+        "Price": "16.20"
       }
     ],
     "slug": "cohiba-blue-dot",
@@ -3335,7 +3376,7 @@
         "Size": "Gigante",
         "Barcode": "689674160670",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "9.70"
       }
     ],
     "slug": "diesel-vintage-maduro"
@@ -3365,7 +3406,7 @@
         "Size": "Toro",
         "Barcode": "689674154693",
         "In_Stock": true,
-        "Price": "8.50"
+        "Price": "8.70"
       }
     ],
     "slug": "diesel-vintage-natural"
@@ -3563,7 +3604,7 @@
         "Size": "Toro",
         "Barcode": "818578013892",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "11.00"
       }
     ],
     "slug": "drew-estate-deadwood-fat-bottom-betty"
@@ -3581,7 +3622,7 @@
         "Size": "Toro",
         "Barcode": "818578018521",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.50"
       }
     ],
     "slug": "drew-estate-deadwood-leather-rose"
@@ -3599,7 +3640,7 @@
         "Size": "Robusto",
         "Barcode": "876742005098",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.00"
       }
     ],
     "slug": "drew-estate-deadwood-sweet-jane"
@@ -3617,13 +3658,13 @@
         "Size": "Robusto",
         "Barcode": "818578010907",
         "In_Stock": true,
-        "Price": "2.80"
+        "Price": "2.85"
       },
       {
         "Size": "Robusto",
         "Barcode": "818578010860",
         "In_Stock": true,
-        "Price": "2.80"
+        "Price": "3.25"
       }
     ],
     "slug": "drew-estate-factory-smoke"
@@ -3785,7 +3826,7 @@
         "Size": "Toro",
         "Barcode": "876742001823",
         "In_Stock": false,
-        "Price": "8.50"
+        "Price": "9.80"
       },
       {
         "Size": "Gordo",
@@ -4018,7 +4059,7 @@
         "Size": "Robusto",
         "Barcode": "811167022909",
         "In_Stock": true,
-        "Price": "9.80"
+        "Price": "10.05"
       },
       {
         "Size": "Toro",
@@ -4042,13 +4083,13 @@
         "Size": "Toro",
         "Barcode": "811167020820",
         "In_Stock": true,
-        "Price": "13.25"
+        "Price": "10.60"
       },
       {
         "Size": "Robusto",
         "Barcode": "811167020806",
         "In_Stock": true,
-        "Price": "13.00"
+        "Price": "10.40"
       }
     ],
     "slug": "e-p-carrillo-la-historia",
@@ -4085,7 +4126,7 @@
         "Size": "Toro",
         "Barcode": "811167020189",
         "In_Stock": true,
-        "Price": "9.55"
+        "Price": "9.95"
       }
     ],
     "slug": "e-p-carrillo-new-wave-connecticut-brilliantes"
@@ -4139,7 +4180,7 @@
         "Size": "Toro",
         "Barcode": "811167021711",
         "In_Stock": true,
-        "Price": "13.90"
+        "Price": "14.40"
       },
       {
         "Size": "Lonsdale",
@@ -4151,7 +4192,7 @@
     "slug": "e-p-carrillo-pledge"
   },
   {
-    "Cigar Brand": "Eiroia",
+    "Cigar Brand": "Eiroa",
     "Cigar Name": "The First 20",
     "Wrapper": "Honduran",
     "Binder": "Honduran",
@@ -4192,7 +4233,7 @@
     "Wrapper": "Ecuador Sumatra",
     "Binder": "Honduran",
     "Filler": "Honduran",
-    "Flavor_Profile": "Easily paired with any beverage.",
+    "Flavor_Profile": "Cedar, Earth, Leather",
     "Strength_Profile": "Medium",
     "Sizes": [
       {
@@ -4206,9 +4247,16 @@
         "Barcode": "689674138488",
         "In_Stock": true,
         "Price": "5.70"
+      },
+      {
+        "Barcode": "689674138518",
+        "Size": "Flor De Llanza 6x54",
+        "In_Stock": true,
+        "Price": "8.35"
       }
     ],
-    "slug": "el-rey-del-mundo-natural"
+    "slug": "el-rey-del-mundo-natural",
+    "description": "El Rey del Mundo is one of the oldest names in premium cigars, tracing its roots back to Cuba in the 1880s and later finding new life in Honduras after the revolution. The modern Honduran production carries forward that legacy, maintaining the brand’s connection to traditional craftsmanship and long-aged tobacco. For decades, El Rey del Mundo has represented the old school style of cigar making, built on patience, consistency, and genuine flavor.\nThe Natural version highlights Honduran and Nicaraguan tobaccos wrapped in a smooth Ecuadorian Sumatra leaf. The result is a cigar that captures the essence of the brand’s classic approach, offering a refined balance of wood, spice, and soft sweetness. El Rey del Mundo Natural remains a favorite among traditionalists who value heritage, honest construction, and the timeless art of slow, careful blending."
   },
   {
     "Cigar Brand": "El Rey Del Mundo",
@@ -4223,7 +4271,7 @@
         "Size": "RobustoLarga",
         "Barcode": "689674124672",
         "In_Stock": true,
-        "Price": "7.20"
+        "Price": "7.60"
       },
       {
         "Size": "Robusto",
@@ -4644,13 +4692,13 @@
         "Size": "Toro",
         "Barcode": "689674151142",
         "In_Stock": true,
-        "Price": "10.50"
+        "Price": "11.00"
       },
       {
         "Size": "Robusto",
         "Barcode": "689674151111",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "10.25"
       }
     ],
     "slug": "forged-johnny-tobacconaut",
@@ -4687,7 +4735,7 @@
         "Size": "Toro",
         "Barcode": "689674157618",
         "In_Stock": false,
-        "Price": "10.00"
+        "Price": "10.25"
       }
     ],
     "slug": "forged-los-statos-deluxe-connecticut"
@@ -4860,7 +4908,7 @@
         "Size": "Toro",
         "Barcode": "810138033913",
         "In_Stock": true,
-        "Price": "11.75"
+        "Price": "12.30"
       },
       {
         "Size": "Robusto",
@@ -4890,13 +4938,13 @@
         "Size": "Robusto",
         "Barcode": "810141022270",
         "In_Stock": true,
-        "Price": "8.20"
+        "Price": "8.80"
       },
       {
         "Size": "Toro",
         "Barcode": "810141020771",
         "In_Stock": true,
-        "Price": "8.80"
+        "Price": "9.45"
       }
     ],
     "slug": "gran-habano-connecticut-1"
@@ -4950,7 +4998,7 @@
         "Size": "Toro",
         "Barcode": "810138034477",
         "In_Stock": true,
-        "Price": "6.90"
+        "Price": "7.40"
       }
     ],
     "slug": "gran-habano-g-a-r-american-standard"
@@ -5022,7 +5070,7 @@
         "Size": "Churchill",
         "Barcode": "689674028604",
         "In_Stock": true,
-        "Price": "11.65"
+        "Price": "9.30"
       }
     ],
     "slug": "hoyo-de-monterrey-excalibur-claro-no-1"
@@ -5058,13 +5106,13 @@
         "Size": "Rothschild",
         "Barcode": "689674155164",
         "In_Stock": true,
-        "Price": "6.35"
+        "Price": "6.50"
       },
       {
         "Size": "Toro",
         "Barcode": "689674155195",
         "In_Stock": true,
-        "Price": "7.95"
+        "Price": "8.50"
       }
     ],
     "slug": "hoyo-de-monterrey-hoyo-oscuro"
@@ -5088,7 +5136,7 @@
         "Size": "Toro",
         "Barcode": "689674155324",
         "In_Stock": true,
-        "Price": "7.95"
+        "Price": "8.15"
       }
     ],
     "slug": "hoyo-de-monterrey-hoyo-rojo",
@@ -5113,7 +5161,7 @@
         "Size": "Double Toro",
         "Barcode": "76622028005",
         "In_Stock": true,
-        "Price": "19.85"
+        "Price": "20.95"
       },
       {
         "Size": "Salomones",
@@ -5162,7 +5210,7 @@
         "Size": "Robusto",
         "Barcode": "76622025318",
         "In_Stock": true,
-        "Price": "8.80"
+        "Price": "9.15"
       },
       {
         "Size": "Toro",
@@ -5204,7 +5252,7 @@
         "Size": "Robusto",
         "Barcode": "76622025356",
         "In_Stock": true,
-        "Price": "8.50"
+        "Price": "9.15"
       },
       {
         "Size": "Toro",
@@ -5228,7 +5276,7 @@
         "Size": "Gordo",
         "Barcode": "076622025455",
         "In_Stock": true,
-        "Price": "10.85"
+        "Price": "10.50"
       }
     ],
     "slug": "j-c-newman-brickhouse-maduro-mighty-mighty"
@@ -5246,13 +5294,13 @@
         "Size": "Robusto",
         "Barcode": "76622025301",
         "In_Stock": true,
-        "Price": "8.05"
+        "Price": "8.80"
       },
       {
         "Size": "Toro",
         "Barcode": "76622025202",
         "In_Stock": true,
-        "Price": "8.90"
+        "Price": "9.25"
       },
       {
         "Size": "Gordo",
@@ -5312,7 +5360,7 @@
         "Size": "Toro",
         "Barcode": "76622097209",
         "In_Stock": true,
-        "Price": "9.55"
+        "Price": "10.00"
       }
     ],
     "slug": "j-c-newman-cuesta-rey-no-60"
@@ -5330,7 +5378,7 @@
         "Size": "Robusto",
         "Barcode": "76622097100",
         "In_Stock": true,
-        "Price": "8.75"
+        "Price": "9.40"
       }
     ],
     "slug": "j-c-newman-cuesta-rey-no-7"
@@ -5417,7 +5465,7 @@
         "Size": "Robusto",
         "Barcode": "76622097421",
         "In_Stock": true,
-        "Price": "15.30"
+        "Price": "15.90"
       }
     ],
     "slug": "j-c-newman-diamond-crown-5"
@@ -5435,7 +5483,7 @@
         "Size": "Robusto",
         "Barcode": "76622097551",
         "In_Stock": true,
-        "Price": "15.30"
+        "Price": "15.90"
       }
     ],
     "slug": "j-c-newman-diamond-crown-maduro-5"
@@ -5769,7 +5817,7 @@
         "Size": "Robusto",
         "Barcode": "76622099807",
         "In_Stock": true,
-        "Price": "15.40"
+        "Price": "15.95"
       },
       {
         "Size": "Corona",
@@ -5799,7 +5847,7 @@
         "Size": "Toro",
         "Barcode": "76622160378",
         "In_Stock": true,
-        "Price": "8.90"
+        "Price": "9.60"
       }
     ],
     "slug": "j-c-newman-la-unica-600-connecticut"
@@ -5835,7 +5883,7 @@
         "Size": "Robusto",
         "Barcode": "76622040335",
         "In_Stock": true,
-        "Price": "8.40"
+        "Price": "8.75"
       }
     ],
     "slug": "j-c-newman-la-unica-connecticut"
@@ -5866,9 +5914,16 @@
         "Barcode": "76622013254",
         "In_Stock": false,
         "Price": "20.95"
+      },
+      {
+        "Size": "Torpedo",
+        "Barcode": "076622013209",
+        "In_Stock": true,
+        "Price": "21.50"
       }
     ],
-    "slug": "j-c-newman-the-american"
+    "slug": "j-c-newman-the-american",
+    "description": "JC Newman The American is one of the most meaningful projects in modern cigar making, built as a tribute to the history of the Newman family and the early days of the US cigar industry. Produced entirely in the historic El Reloj factory in Tampa, the cigar was created to revive the tradition of a fully American made premium cigar at a time when that idea had almost disappeared. Every component comes from the United States, from the tobaccos to the boxes to the bands, making it a direct link to the era when Tampa was the heart of American cigar production.\nThe blend features a Florida Sun Grown wrapper, a Connecticut Broadleaf binder, and filler grown in Connecticut and Pennsylvania. This structure showcases the range and character of American tobaccos while honoring the craftsmanship that kept the Newman company alive for more than a century. The American has earned a place as a flagship product not because of strength or trend chasing, but because it preserves a piece of cigar history that few companies have the ability or the will to recreate today."
   },
   {
     "Cigar Brand": "J.C. Newman",
@@ -5977,7 +6032,7 @@
         "Size": "Corona",
         "Barcode": "819577015078",
         "In_Stock": true,
-        "Price": "7.30"
+        "Price": "8.00"
       }
     ],
     "slug": "la-aroma-de-cuba-connecticut-corona"
@@ -6161,7 +6216,7 @@
         "Size": "Churchill",
         "Barcode": "819577010424",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "10.15"
       }
     ],
     "slug": "la-aroma-de-cuba-la-aroma-de-cuba-el-jefe"
@@ -6360,7 +6415,7 @@
         "Size": "Toro",
         "Barcode": "7460644702310",
         "In_Stock": true,
-        "Price": "11.35"
+        "Price": "13.25"
       }
     ],
     "slug": "la-flor-dominicana-dl-chisel-maduro"
@@ -6484,7 +6539,7 @@
         "Size": "Churchill",
         "Barcode": "7460644702372",
         "In_Stock": true,
-        "Price": "12.30"
+        "Price": "16.10"
       }
     ],
     "slug": "la-flor-dominicana-especiales-oscuro-natural"
@@ -6661,7 +6716,7 @@
         "Size": "Churchill Grande",
         "Barcode": "689674046691",
         "In_Stock": true,
-        "Price": "13.80"
+        "Price": "14.30"
       },
       {
         "Size": "Toro Grande",
@@ -6685,7 +6740,7 @@
         "Size": "Gordo",
         "Barcode": "689674046707",
         "In_Stock": true,
-        "Price": "13.80"
+        "Price": "14.30"
       }
     ],
     "slug": "la-gloria-cubana-serie-r-maduro"
@@ -6839,24 +6894,6 @@
       }
     ],
     "slug": "la-palina-nicaraguan-oscuro"
-  },
-  {
-    "Cigar Brand": "Macanudo",
-    "Cigar Name": "Bourbon",
-    "Wrapper": "Ecuadorian Shade",
-    "Binder": "Ecuadorian",
-    "Filler": "Dominican",
-    "Flavor_Profile": "Old-Fashioned w/o the glass:  Bourbon, Cherry, Bitters",
-    "Strength_Profile": "Mild-Medium",
-    "Sizes": [
-      {
-        "Size": "Toro",
-        "Barcode": "689674100713",
-        "In_Stock": true,
-        "Price": "9.90"
-      }
-    ],
-    "slug": "macanudo-bourbon"
   },
   {
     "Cigar Brand": "Macanudo",
@@ -7033,7 +7070,7 @@
         "Size": "Toro",
         "Barcode": "689674093541",
         "In_Stock": true,
-        "Price": "9.55"
+        "Price": "10.00"
       },
       {
         "Size": "Gordo",
@@ -7159,7 +7196,7 @@
         "Size": "Toro",
         "Barcode": "71610930025",
         "In_Stock": true,
-        "Price": "13.30"
+        "Price": "13.75"
       },
       {
         "Size": "Churchill",
@@ -7317,7 +7354,7 @@
   {
     "Cigar Brand": "Odyssey",
     "Cigar Name": "Sweet tip",
-    "Wrapper": "Maduro",
+    "Wrapper": "Shade",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Rich, Creamy and sweet",
@@ -7327,7 +7364,7 @@
         "Size": "Toro",
         "Barcode": "689674104896",
         "In_Stock": true,
-        "Price": "3.00"
+        "Price": "3.25"
       }
     ],
     "slug": "odyssey-sweet-tip"
@@ -7351,7 +7388,7 @@
         "Size": "Toro",
         "Barcode": "814539011556",
         "In_Stock": true,
-        "Price": "10.75"
+        "Price": "12.10"
       }
     ],
     "slug": "oliva-connecticut-reserve"
@@ -7393,13 +7430,13 @@
         "Size": "Toro",
         "Barcode": "814539015059",
         "In_Stock": true,
-        "Price": "8.90"
+        "Price": "9.20"
       },
       {
         "Size": "Robusto",
         "Barcode": "814539015035",
         "In_Stock": true,
-        "Price": "8.60"
+        "Price": "8.85"
       }
     ],
     "slug": "oliva-gilberto-oliva-reserva-blanc"
@@ -7453,7 +7490,7 @@
         "Size": "Toro",
         "Barcode": "814539011648",
         "In_Stock": true,
-        "Price": "8.40"
+        "Price": "8.60"
       }
     ],
     "slug": "oliva-serie-g"
@@ -7496,9 +7533,16 @@
         "Barcode": "814539011785",
         "In_Stock": true,
         "Price": "8.35"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "814539011839",
+        "In_Stock": true,
+        "Price": "10.45"
       }
     ],
-    "slug": "oliva-serie-o"
+    "slug": "oliva-serie-o",
+    "description": "Oliva Series O is one of the cornerstone blends that helped establish Oliva as a major name in Nicaraguan cigars. Built on a traditional Cuban seed concept, the line was created to highlight classic Nicaraguan tobaccos and the family’s long history of growing and blending. For many smokers, Series O is the cigar that introduced them to Oliva and showed what the brand could do with straightforward craftsmanship and honest, well aged leaf.\nThe cigar is known for dependable construction, a steady burn, and the kind of balance that keeps it in regular rotation for both new and seasoned smokers. Series O has been on shelves for years and continues to hold its place as a reliable, heritage line within the Oliva portfolio, offering a familiar experience that reflects the company’s roots."
   },
   {
     "Cigar Brand": "Oliva",
@@ -7513,7 +7557,7 @@
         "Size": "Double Robusto",
         "Barcode": "814539011433",
         "In_Stock": true,
-        "Price": "10.40"
+        "Price": "12.00"
       },
       {
         "Size": "Double Toro",
@@ -7560,7 +7604,12 @@
       {
         "Size": "Toro",
         "In_Stock": true,
-        "Price": "17.80"
+        "Price": "18.30"
+      },
+      {
+        "Size": "Gordo",
+        "In_Stock": true,
+        "Price": "22.25"
       }
     ],
     "slug": "oliva-serie-v-melanio-maduro"
@@ -7594,7 +7643,7 @@
       {
         "Size": "Toro",
         "In_Stock": true,
-        "Price": "17.80"
+        "Price": "18.30"
       }
     ],
     "slug": "oliva-serie-v-melanio-toro"
@@ -7647,7 +7696,7 @@
       {
         "Size": "Robusto",
         "In_Stock": true,
-        "Price": "17.90"
+        "Price": "19.20"
       }
     ],
     "slug": "padron-1926-natural"
@@ -7664,7 +7713,7 @@
       {
         "Size": "Toro",
         "In_Stock": true,
-        "Price": "16.60"
+        "Price": "18.30"
       }
     ],
     "slug": "padron-1964-maduro"
@@ -7681,7 +7730,7 @@
       {
         "Size": "Robusto",
         "In_Stock": true,
-        "Price": "8.95"
+        "Price": "9.40"
       }
     ],
     "slug": "padron-2000-maduro"
@@ -7698,7 +7747,7 @@
       {
         "Size": "Robusto",
         "In_Stock": true,
-        "Price": "8.95"
+        "Price": "9.40"
       }
     ],
     "slug": "padron-2000-natural"
@@ -7715,7 +7764,7 @@
       {
         "Size": "Toro",
         "In_Stock": true,
-        "Price": "9.30"
+        "Price": "10.30"
       }
     ],
     "slug": "padron-3000-maduro"
@@ -7887,7 +7936,7 @@
         "Size": "Toro",
         "Barcode": "76622072305",
         "In_Stock": true,
-        "Price": "9.20"
+        "Price": "9.95"
       }
     ],
     "slug": "perla-del-mar-corojo"
@@ -7922,40 +7971,10 @@
         "Size": "Robusto",
         "Barcode": "76622027022",
         "In_Stock": true,
-        "Price": "8.40"
+        "Price": "8.80"
       }
     ],
     "slug": "perla-del-mar-shade"
-  },
-  {
-    "Cigar Brand": "Perla Del Mar",
-    "Cigar Name": "Toro",
-    "Wrapper": "Connecticut Shade",
-    "Binder": "Nicaraguan",
-    "Filler": "Nicaraguan",
-    "Flavor_Profile": "",
-    "Strength_Profile": "Mild-Medium",
-    "Sizes": [
-      {
-        "Size": "Toro",
-        "Barcode": "76622027039",
-        "In_Stock": true,
-        "Price": "9.20"
-      },
-      {
-        "Size": "Toro",
-        "Barcode": "76622027350",
-        "In_Stock": true,
-        "Price": "9.20"
-      },
-      {
-        "Size": "Toro",
-        "Barcode": "76622072305",
-        "In_Stock": true,
-        "Price": "9.20"
-      }
-    ],
-    "slug": "perla-del-mar-toro"
   },
   {
     "Cigar Brand": "Punch",
@@ -7970,7 +7989,7 @@
         "Size": "Churchill",
         "Barcode": "689674029212",
         "In_Stock": true,
-        "Price": "7.95"
+        "Price": "8.75"
       }
     ],
     "slug": "punch-after-dinner"
@@ -8048,7 +8067,7 @@
         "Size": "Toro",
         "Barcode": "689674116554",
         "In_Stock": true,
-        "Price": "6.45"
+        "Price": "6.85"
       },
       {
         "Size": "Gordo",
@@ -8150,7 +8169,7 @@
         "Size": "Corona",
         "Barcode": "689674023678",
         "In_Stock": true,
-        "Price": "5.15"
+        "Price": "5.70"
       }
     ],
     "slug": "punch-punch-elite"
@@ -8168,7 +8187,7 @@
         "Size": "Corona",
         "Barcode": "689674029342",
         "In_Stock": true,
-        "Price": "5.15"
+        "Price": "5.70"
       }
     ],
     "slug": "punch-punch-elite-maduro"
@@ -8323,25 +8342,25 @@
         "Size": "Double Robusto",
         "Barcode": "76622773004",
         "In_Stock": true,
-        "Price": "3.20"
+        "Price": "3.40"
       },
       {
         "Size": "Double Grande",
         "Barcode": "76622773202",
         "In_Stock": true,
-        "Price": "4.00"
+        "Price": "4.10"
       },
       {
         "Size": "Double Toro",
         "Barcode": "76622773103",
         "In_Stock": true,
-        "Price": "3.10"
+        "Price": "3.50"
       },
       {
         "Size": "Double Churchill",
         "Barcode": "76622773301",
         "In_Stock": true,
-        "Price": "3.35"
+        "Price": "3.80"
       }
     ],
     "slug": "quorum-havana-q"
@@ -8586,7 +8605,7 @@
         "Size": "Robusto",
         "Barcode": "76452351182",
         "In_Stock": true,
-        "Price": "9.00"
+        "Price": "9.30"
       },
       {
         "Size": "Toro",
@@ -8688,7 +8707,7 @@
         "Size": "Toro",
         "Barcode": "819577011407",
         "In_Stock": true,
-        "Price": "10.65"
+        "Price": "10.85"
       }
     ],
     "slug": "san-cristobal-quintessence-epicure"
@@ -8706,7 +8725,7 @@
         "Size": "Toro",
         "Barcode": "819577010936",
         "In_Stock": true,
-        "Price": "10.60"
+        "Price": "11.85"
       }
     ],
     "slug": "san-cristobal-revelation-legend"
@@ -8844,7 +8863,7 @@
         "Size": "Rothschild",
         "Barcode": "71610854215",
         "In_Stock": true,
-        "Price": "7.00"
+        "Price": "8.25"
       }
     ],
     "slug": "st-louis-rey-maduro"
@@ -8862,7 +8881,7 @@
         "Size": "Rothschild",
         "Barcode": "71610854208",
         "In_Stock": true,
-        "Price": "7.00"
+        "Price": "8.35"
       }
     ],
     "slug": "st-louis-rey-st-louis-rey"
@@ -8880,7 +8899,7 @@
         "Size": "Gordo",
         "Barcode": "71610854918",
         "In_Stock": true,
-        "Price": "8.00"
+        "Price": "9.50"
       }
     ],
     "slug": "st-louis-rey-titan"
@@ -8916,13 +8935,13 @@
         "Size": "Toro",
         "Barcode": "7623500431704",
         "In_Stock": true,
-        "Price": "7.35"
+        "Price": "8.50"
       },
       {
         "Size": "Robusto",
         "Barcode": "7623500431698",
         "In_Stock": true,
-        "Price": "7.20"
+        "Price": "7.95"
       }
     ],
     "slug": "zino-zino"
@@ -9066,7 +9085,7 @@
         "Size": "Toro",
         "Barcode": "689674161189",
         "In_Stock": true,
-        "Price": "9.55"
+        "Price": "9.80"
       }
     ],
     "slug": "la-gloria-cubana-los-gloriosos",
@@ -9087,7 +9106,7 @@
       {
         "Size": "Toro",
         "Barcode": "689674162209",
-        "Price": "9.75",
+        "Price": "10.00",
         "In_Stock": true
       }
     ],
@@ -9164,7 +9183,7 @@
         "Size": "Toro",
         "Barcode": "689674160731",
         "In_Stock": true,
-        "Price": "7.45"
+        "Price": "7.65"
       }
     ],
     "slug": "cao-fasa-sombra",
@@ -9326,7 +9345,7 @@
         "Size": "Robusto",
         "Barcode": "689674161585",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "10.50"
       }
     ],
     "slug": "macanudo-m-vanilla-bourbon",
@@ -9364,7 +9383,7 @@
         "Size": "Robusto",
         "Barcode": "689674100713",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "10.50"
       }
     ],
     "slug": "macanudo-m-bourbon",
@@ -9383,7 +9402,7 @@
         "Size": "Robusto",
         "Barcode": "689674161486",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "10.50"
       }
     ],
     "slug": "macanudo-m-honey",
@@ -9402,7 +9421,7 @@
         "Size": "Robusto",
         "Barcode": "689674161530",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "10.50"
       }
     ],
     "slug": "macanudo-m-irish-cream",
@@ -9439,7 +9458,7 @@
       {
         "Size": "Toro",
         "In_Stock": true,
-        "Price": "16.95"
+        "Price": "17.90"
       }
     ],
     "slug": "foundation-highclere-castle-victorian",
@@ -9502,7 +9521,7 @@
         "Size": "Robusto",
         "Barcode": "652125006414",
         "In_Stock": true,
-        "Price": "10.45"
+        "Price": "11.10"
       }
     ],
     "slug": "cao-brazilia-go",
@@ -9521,7 +9540,7 @@
         "Size": "Toro",
         "Barcode": "689674159285",
         "In_Stock": true,
-        "Price": "9.55"
+        "Price": "9.80"
       }
     ],
     "description": "The Partagás y Nada Más is a medium-bodied cigar that delivers refined character and classic Cuban-inspired flavor. True to its name, which means \"Partagás and nothing more,\" this cigar focuses on balance, tradition, and pure tobacco enjoyment. Expect notes of earth, cedar, and black pepper with a hint of sweetness that lingers just enough to keep each draw interesting. Smooth in strength but rich in flavor, it is ideal for those who enjoy complexity without overwhelming intensity.\nPerfect for seasoned smokers seeking subtlety or newcomers ready to explore the world of premium cigars. This is Partagás in its purest form.",
@@ -9588,7 +9607,7 @@
         "Size": "Toro",
         "Barcode": "659657570178",
         "In_Stock": true,
-        "Price": ""
+        "Price": "9.60"
       }
     ],
     "description": "Two masters, one blend. This cigar delivers a bold, refined profile with notes of toasted oak, baking spice, and a subtle molasses sweetness. It’s a meeting of minds and the result is nothing short of exceptional",
@@ -9636,7 +9655,7 @@
         "Size": "Toro",
         "Barcode": "689674160427",
         "In_Stock": true,
-        "Price": "8.15"
+        "Price": "8.50"
       }
     ],
     "description": "The latest addition to Hoyo's core lineup, the Shade, is a Honduran puro crafted entirely from Honduran tobaccos. It features a shade grown wrapper cultivated in Honduras, paired with Honduran binder and filler, delivering a mellow to medium-bodied profile. ",
@@ -9701,5 +9720,845 @@
     "description": "The Chillin' Moose by Foundry Tobacco Co. is a medium-bodied cigar that offers a complex blend of tobaccos from five countries. It features a Connecticut Habano Rosado wrapper, an Ecuadorian Sumatra binder, and a filler blend of Nicaraguan, Dominican, U.S. Broadleaf, and Mexican San Andrés tobaccos",
     "slug": "foundry-chillin-moose",
     "Date Added": "2025-06-05"
+  },
+  {
+    "Cigar Brand": "Asylum 13",
+    "Cigar Name": "Medulla Maduro",
+    "Wrapper": "San Andres Maduro",
+    "Binder": "Corojo",
+    "Filler": "Corojo",
+    "Flavor_Profile": "Black Pepper, Leather, Espresso, Earth",
+    "Strength_Profile": "Full",
+    "Sizes": [
+      {
+        "Size": "6x60",
+        "Barcode": "855374008073",
+        "In_Stock": true,
+        "Price": "11.50"
+      }
+    ],
+    "description": "The Medulla Maduro takes everything people loved about the original and wraps it in a rich San Andrés Maduro leaf. Rolled at CLE’s factory in Honduras, this cigar stays true to its roots with bold Honduran Corojo filler and binder. The maduro wrapper adds a deeper sweetness and a touch of spice, bringing out notes of dark chocolate, leather, espresso, earth, and black pepper.",
+    "slug": "asylum-13-medulla-maduro",
+    "Date Added": "2025-06-12"
+  },
+  {
+    "Cigar Brand": "Eiroa",
+    "Cigar Name": "Jamastran",
+    "Wrapper": "Honduran Corojo",
+    "Binder": "Honduran Corojo",
+    "Filler": "Honduran Corojo",
+    "Flavor_Profile": "Peanuts, Herbal, Floral, Chocolate, Peppermint",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "860000439688",
+        "In_Stock": true,
+        "Price": "18.00"
+      },
+      {
+        "Size": "11/18 (Toro)",
+        "Barcode": "860001302509",
+        "In_Stock": true,
+        "Price": "19.50"
+      }
+    ],
+    "description": "The Eiroa Jamastran is a bold showcase of Honduran craftsmanship, built entirely from tobaccos grown in the Jamastran Valley. This puro offers a clean, focused expression of the Corojo leaf that put Christian Eiroa’s name on the map.\n\nIf you want to taste what Honduran tobacco can do on its own, this is the benchmark.",
+    "slug": "eiroa-jamastran",
+    "Date Added": "2025-06-12"
+  },
+  {
+    "Cigar Brand": "Arturo Fuente",
+    "Cigar Name": "2021 Unnamed Reserve",
+    "Wrapper": "Rosado Sungrown",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Pepper, Cedar, Cream",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Corona Gorda",
+        "In_Stock": true,
+        "Price": "13.60"
+      }
+    ],
+    "description": "A rare annual release from Arturo Fuente’s Unnamed Reserve series, the 2021 edition comes in a 5 ¾ by 48 corona gorda that was rolled in 2016 and released five years later. It features a sun grown Rosado wrapper over Dominican binder and filler, all produced at Tabacalera A. Fuente y Cia. Only 1,000 boxes of 20 were made.\nThis cigar shows off classic Fuente craftsmanship with a smooth draw, even burn, and refined construction. Each stick comes in cellophane and a cedar sleeve marked ProduXion 2016, nodding to the early aging that sets this release apart.\nIdeal for collectors or anyone who appreciates pedigree, patience, and a quiet sense of excellence.",
+    "slug": "arturo-fuente-2021-unnamed-reserve",
+    "Date Added": "2025-06-12"
+  },
+  {
+    "Cigar Brand": "E.P. Carrillo",
+    "Cigar Name": "Essence Connecticut",
+    "Wrapper": "Ecuadorian Connecticut",
+    "Binder": "Honduran Criollo 98",
+    "Filler": "Honduras, Dominican",
+    "Flavor_Profile": "Cream, Hay, Cedar, Almond",
+    "Strength_Profile": "Mild",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "811167023067",
+        "In_Stock": true,
+        "Price": "10.05"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "811167023081",
+        "In_Stock": true,
+        "Price": "11.15"
+      }
+    ],
+    "description": "The fourth release in the Essence Series, the Essence Connecticut brings a mellow and elegant character to the E.P. Carrillo lineup. It features an Ecuadorian Connecticut wrapper, a Honduran Criollo 98 binder, and a blend of Honduran and Dominican fillers. The result is a smooth and balanced cigar with notes of cream, hay, light pepper, and subtle almond.\nRolled at Agroindustrias Diadema in Honduras, it offers a refined draw and clean finish that make it a perfect pick for those who enjoy Connecticut cigars with a little more depth. Available in Robusto, and Toro sizes, each in 24-count boxes.",
+    "slug": "ep-carrillo-essence-connecticut",
+    "Date Added": "2025-06-18"
+  },
+  {
+    "Cigar Brand": "E.P. Carrillo",
+    "Cigar Name": "Endure",
+    "Wrapper": "Cameroon",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Floral, Baking spice, Nuttiness, Pepper",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "811167023029",
+        "In_Stock": true,
+        "Price": "21.20"
+      }
+    ],
+    "description": "The E.P. Carrillo Endure is a return to tradition with a rare Meerapfel-grown Cameroon wrapper that hasn’t been featured in a Perez-Carrillo blend for decades. This is a cigar built on legacy, combining a smooth and flavorful exterior with a Nicaraguan core that brings both strength and finesse.\nMedium to full in body, it offers natural sweetness, floral touches, baking spice, and earthy depth, rounded out by a peppery finish and just a hint of nuttiness. Each puff tells a story of resilience and craftsmanship.\nRolled at Tabacalera La Alianza in the Dominican Republic, the Endure is available in box-pressed Robusto and Toro sizes, both packaged in 10-count boxes. A Corona Gorda is set to join the line soon.\n",
+    "slug": "ep-carrillo-endure",
+    "Date Added": "2025-06-18"
+  },
+  {
+    "Cigar Brand": "Gurkha",
+    "Cigar Name": "Volition America",
+    "Wrapper": "Connecticut",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan, Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Mild",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "810136292589",
+        "In_Stock": true,
+        "Price": "13.80"
+      }
+    ],
+    "description": "Volition America by Gurkha is a patriotic cigar line crafted in partnership with the Folds of Honor Foundation. Each 6x54 Toro comes in one of three blends—Maduro, Habano, or Connecticut—offering options from bold to mild. The cigars are made in Nicaragua with a Nicaraguan binder and a mix of Nicaraguan and Dominican fillers. Every box of 13 cigars symbolizes the 13 folds of the American flag, and 13% of proceeds go toward educational scholarships for families of fallen or disabled military members and first responders.",
+    "slug": "gurkha-volition-america",
+    "Date Added": "2025-06-26"
+  },
+  {
+    "Cigar Brand": "Gurkha",
+    "Cigar Name": "Volition America Habano",
+    "Wrapper": "Habano",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan, Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "810136292619",
+        "In_Stock": true,
+        "Price": "13.80"
+      }
+    ],
+    "description": "Volition America by Gurkha is a patriotic cigar line crafted in partnership with the Folds of Honor Foundation. Each 6x54 Toro comes in one of three blends—Maduro, Habano, or Connecticut—offering options from bold to mild. The cigars are made in Nicaragua with a Nicaraguan binder and a mix of Nicaraguan and Dominican fillers. Every box of 13 cigars symbolizes the 13 folds of the American flag, and 13% of proceeds go toward educational scholarships for families of fallen or disabled military members and first responders.",
+    "slug": "gurkha-volition-america-habano",
+    "Date Added": "2025-06-26"
+  },
+  {
+    "Cigar Brand": "Gurkha",
+    "Cigar Name": "Volition America Maduro",
+    "Wrapper": "Maduro",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan, Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {}
+    ],
+    "description": "Volition America by Gurkha is a patriotic cigar line crafted in partnership with the Folds of Honor Foundation. Each 6x54 Toro comes in one of three blends—Maduro, Habano, or Connecticut—offering options from bold to mild. The cigars are made in Nicaragua with a Nicaraguan binder and a mix of Nicaraguan and Dominican fillers. Every box of 13 cigars symbolizes the 13 folds of the American flag, and 13% of proceeds go toward educational scholarships for families of fallen or disabled military members and first responders.",
+    "slug": "gurkha-volition-america-maduro",
+    "Date Added": "2025-06-26"
+  },
+  {
+    "Cigar Brand": "AJ Fernandez",
+    "Cigar Name": "New World Decinio",
+    "Wrapper": "Mexican San Andres",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan, Honduran",
+    "Flavor_Profile": "Cocoa, Black Pepper, Coffee",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "810194080029",
+        "In_Stock": true,
+        "Price": "14.85"
+      },
+      {
+        "Size": "Gordo",
+        "Barcode": "810194080043",
+        "In_Stock": true,
+        "Price": "15.90"
+      }
+    ],
+    "description": "Marking ten years since the original New World debuted, the Decenio is A.J. Fernandez’s way of celebrating the line that helped put his name on the map. Made at the San Lotano factory in Ocotál, Nicaragua, this anniversary blend brings refinement without losing the punch that New World fans expect.\nThe flavor profile leans rich and savory. Expect notes of dark chocolate, espresso, and black pepper, layered over hints of mesquite and a tangy sweetness that lingers. The result is a balanced, complex smoke that stays interesting from first light to final inch.",
+    "slug": "aj-fernandez-new-world-decinio",
+    "Date Added": "2025-07-03"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Stokk",
+    "Wrapper": "Ecuadorian Sumatra",
+    "Binder": "US Broadleaf",
+    "Filler": "Nicaraguan Esteli, Honduran La Entrada, Dominican Piloto & Andullo, Cyprian Latakia",
+    "Flavor_Profile": "Smokey, Tangey",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Belicoso",
+        "Barcode": "689674166986",
+        "In_Stock": true,
+        "Price": "14.10"
+      }
+    ],
+    "description": "Crafted in partnership with legendary Danish brand Peter Stokkebye, CAO Stock captures the Scandinavian spirit. Blending oak-cured Cyprian pipe tobacco with a complex Andullo-aged Dominican leaf, CAO Stock delivers a smoking experience to match CAO's quest for rare and unique tobaccos.",
+    "slug": "cao-stokk",
+    "Date Added": "2025-08-01"
+  },
+  {
+    "Cigar Brand": "Alec Bradley",
+    "Cigar Name": "Kintsugi Wabi Sabi",
+    "Wrapper": "Ecuadorian  Habano",
+    "Binder": "Mexican San Andrean",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674163381",
+        "In_Stock": true,
+        "Price": "13.60"
+      }
+    ],
+    "description": "Crafted in collaboration with A.J. Fernandez, Wabi Sabi is a limited-edition offshoot of the original Kintsugi line. It’s rolled in Nicaragua and offered in a single 6 x 52 toro,  boxed in runs of just 1,500 so when it’s gone, it’s gone. Inspired by the Japanese concept of Wabi Sabi, finding beauty in imperfection, this cigar isn’t about chasing perfection. It’s about honoring character, balance, and craftsmanship.\nA worthy addition for collectors and regulars alike.",
+    "slug": "alec-bradley-kintsugi-wabi-sabi",
+    "Date Added": "2025-08-01"
+  },
+  {
+    "Cigar Brand": "Alec Bradley",
+    "Cigar Name": "Do Not Disturb",
+    "Wrapper": "Ecuadorian Connecticut",
+    "Binder": "Dominican Criollo",
+    "Filler": "Dominican, Mexican",
+    "Flavor_Profile": "Earth, Hay, Tea, Spice",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674163169",
+        "In_Stock": true,
+        "Price": "9.60"
+      }
+    ],
+    "description": "This one’s your invitation to pause and soak in a moment of calm. Handmade at La Isla in the Dominican Republic, Do Not Disturb opens smooth and grounded. Think earthy notes, fresh hay, and a whisper of tea, with a gentle spice that grows on you as it goes. It evolves steadily, rewarding quiet moments with thoughtful flavor.",
+    "slug": "alec-bradley-do-not-disturb",
+    "Date Added": "2025-08-07"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Surplus",
+    "Wrapper": "Honduran Shade",
+    "Binder": "Ecuadorian Sumatra",
+    "Filler": "Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674166542",
+        "In_Stock": true,
+        "Price": "2.35"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "689674166573",
+        "In_Stock": true,
+        "Price": "2.55"
+      }
+    ],
+    "description": "The CAO Surplus Shade delivers a smooth, budget-friendly smoke wrapped in a silky Honduran Connecticut leaf over an Ecuadorian Sumatra binder and Dominican Olor long-fillers. Balanced and creamy with just enough flavor to keep things interesting, it’s a dependable everyday cigar that proves great value doesn’t have to mean cutting corners.",
+    "slug": "cao-surplus",
+    "Date Added": "2025-08-08"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Surplus Maduro",
+    "Wrapper": "Mexican San Andres",
+    "Binder": "Ecuadorian Sumatra",
+    "Filler": "Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674166450",
+        "In_Stock": true,
+        "Price": "2.35"
+      },
+      {
+        "Size": "Gigante",
+        "Barcode": "689674166511",
+        "In_Stock": true,
+        "Price": "3.10"
+      }
+    ],
+    "description": "The CAO Surplus Maduro delivers bold flavor at a budget-friendly price, featuring a dark Mexican San Andrés wrapper over an Ecuadorian Sumatra binder and Dominican Olor long-fillers. Medium-bodied with rich cocoa and spice notes, it’s a satisfying everyday cigar that proves big taste doesn’t have to break the bank.",
+    "slug": "cao-surplus-maduro",
+    "Date Added": "2025-08-08"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Surplus Sweet",
+    "Wrapper": "Ecuadorian Sumatra",
+    "Binder": "Ecuadorian Sumatra",
+    "Filler": "Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674166665",
+        "In_Stock": true,
+        "Price": "2.95"
+      }
+    ],
+    "description": "The CAO Surplus Sweet combines an Ecuadorian Sumatran wrapper with an Ecuadorian Sumatra binder and Dominican Olor long-fillers, topped with a sweetened cap. Mild to medium-bodied with a smooth, approachable flavor, it’s an easygoing everyday smoke with a hint of sweetness to keep things interesting.",
+    "slug": "cao-surplus-sweet",
+    "Date Added": "2025-08-08"
+  },
+  {
+    "Cigar Brand": "Cohiba",
+    "Cigar Name": "Rubicon",
+    "Wrapper": "Ecuadorian Habana",
+    "Binder": "American Broadleaf",
+    "Filler": "Dominican Piloto, Honduran La Entrada and Jamastran, Nicaraguan",
+    "Flavor_Profile": "Black Pepper, Cedar, Spice",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674167068",
+        "In_Stock": true,
+        "Price": "9.75"
+      }
+    ],
+    "description": "The Cohiba Rubicon is a medium-bodied cigar crafted at Honduras’s HATSA factory with an Ecuadorian Habano wrapper, a U.S. binder, and select tobaccos from Honduras, Nicaragua, and the Dominican Republic. Offering rich notes of cocoa, roasted nuts, earthy spice, and natural sweetness, it invites you to cross the Rubicon into the rare territory of a Cohiba priced under ten dollars.",
+    "slug": "cohiba-rubicon",
+    "Date Added": "2025-08-08"
+  },
+  {
+    "Cigar Brand": "Alec Bradley",
+    "Cigar Name": "Chunk Maduro",
+    "Wrapper": "Mexican Maduro",
+    "Binder": "Honduran Jamastran",
+    "Filler": "Dominican Piloto, Nicaraguan Estelli",
+    "Flavor_Profile": "Cocoa, Molasses, Nuttiness, Cedar, Pepper",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "XL 4x60",
+        "Barcode": "689674157199",
+        "In_Stock": true,
+        "Price": "6.20"
+      }
+    ],
+    "description": "The Alec Bradley Chunk Maduro is a medium-bodied powerhouse rolled at the HATSA factory in Honduras. It pairs a dark Mexican Maduro wrapper with a Honduran Jamastrán binder and a blend of Dominican Piloto Cubano and Nicaraguan tobaccos. Expect waves of cocoa, molasses, cedar, nutty undertones, and a touch of pepper in every rich, satisfying draw.",
+    "slug": "alec-bradley-chunk-maduro",
+    "Date Added": "2025-08-21"
+  },
+  {
+    "Cigar Brand": "Camacho",
+    "Cigar Name": "Ecuador",
+    "Wrapper": "Ecuador Habano",
+    "Binder": "Brazilian",
+    "Filler": "Honduran, Dominican",
+    "Flavor_Profile": "Pepper, Floral, Citrus",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "7623500196016",
+        "In_Stock": true,
+        "Price": "10.90"
+      }
+    ],
+    "description": "Camacho  Ecuador is a bold, medium‑to‑full smoke wrapped in rich Ecuadorian Habano, built on a pepper‑driven Brazilian Mata Fina binder and layered with Honduran and Dominican filler, including rare Pelo de Oro, for a spicy, earthy flavor with hints of leather, citrus, and floral nuance that punches well above its price point.",
+    "slug": "camacho-ecuador",
+    "Date Added": "2025-08-21"
+  },
+  {
+    "Cigar Brand": "Camacho",
+    "Cigar Name": "Broadleaf",
+    "Wrapper": "Honduran Broadleaf",
+    "Binder": "Honduran",
+    "Filler": "Dominican, Honduran",
+    "Flavor_Profile": "Leather, Pepper, Fruity Sweetness",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "7623500507843",
+        "In_Stock": true,
+        "Price": "10.90"
+      }
+    ],
+    "description": "Camacho Broadleaf is a bold expression from Camacho that showcases a rugged Honduran Broadleaf wrapper over a Honduran binder with Dominican and Honduran long-fillers. Medium to full in body, it delivers the kind of rich, uncompromising character the brand is known for, making it a solid choice for smokers who want depth and strength without pretense.",
+    "slug": "camacho-broadleaf",
+    "Date Added": "2025-08-21"
+  },
+  {
+    "Cigar Brand": "Alec Bradley",
+    "Cigar Name": "Chunk Shade",
+    "Wrapper": "Honduran Shade",
+    "Binder": "American Broadleaf",
+    "Filler": "Dominican, Honduran, Nicaraguan",
+    "Flavor_Profile": "Tea, Hay, Toast",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "4 x 60",
+        "Barcode": "689674166856",
+        "In_Stock": true,
+        "Price": "6.50"
+      }
+    ],
+    "description": "Alec Bradley Chunk Shade brings that stout, chunky format you know and love in the Chunk family but with a smoother side. It’s wrapped in Honduran grown Connecticut Shade, built with a U.S. Broadleaf binder, and filled with a balanced blend of Dominican, Honduran, and Nicaraguan tobaccos made at the HATSA factory in Honduras. It’s easygoing yet bold, perfect for kicking back at any time.",
+    "slug": "alec-bradley-chunk-shade",
+    "Date Added": "2025-08-28"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Gold",
+    "Wrapper": "Ecuadorian Connecticut",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Nut, Earth, Pepper, Cocoa",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "652125002423",
+        "In_Stock": true,
+        "Price": "11.10"
+      },
+      {
+        "Size": "Corona Gorda",
+        "Barcode": "652125002522",
+        "In_Stock": true,
+        "Price": "11.40"
+      }
+    ],
+    "description": "CAO Gold is the cigar that first helped put CAO on the map and it hasn’t lost its shine. Wrapped in a silky Ecuadorian Connecticut leaf, built on a Nicaraguan binder and long-fillers, it settles right in the mellow to medium range. Rated in the 90s, it’s smooth, balanced, and dependable, with a brightness that makes it an easy go-to anytime.",
+    "slug": "cao-gold",
+    "Date Added": "2025-08-29"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Zocalo",
+    "Wrapper": "Mexican San Andres Morron",
+    "Binder": "Cameroon",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Nicaraguan",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674125068",
+        "In_Stock": true,
+        "Price": "11.20"
+      },
+      {
+        "Size": "Gigante",
+        "In_Stock": true,
+        "Price": "12.25",
+        "Barcode": "689674125099"
+      }
+    ],
+    "description": "CAO Zócalo brings a bold, authentically Mexican twist to the CAO lineup with its dark San Andrés Morrón wrapper atop a Cameroon binder and Nicaraguan long-fillers. Medium-Full in body and deeply flavorful, it’s the brand’s first cigar to feature a Mexican wrapper, giving smokers a rich, earthy experience with a touch of sweetness.",
+    "slug": "cao-zocalo",
+    "Date Added": "2025-08-29"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Columbia",
+    "Wrapper": "Honduran Jamastran",
+    "Binder": "Cameroon",
+    "Filler": "Brazilian, Columbian",
+    "Flavor_Profile": "Salty, Nuts, Coffee, Sweet",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "6 1/4 x 52 (Magdalena)",
+        "Barcode": "689674069959",
+        "In_Stock": true,
+        "Price": "11.10"
+      }
+    ],
+    "description": "CAO Colombia is CAO’s boldest world-blending adventure yet. It’s the first cigar in their lineup to showcase Colombian grown Ica Mazinga tobacco, a Cuban seed taken to the remote mountains of Colombia and perfected over 15 years, wrapped in a smooth Honduran Jamastrán leaf, secured with a Cameroon binder, and blended with Brazilian and Colombian long-fillers. It’s a mellow to medium-bodied smoke with unique character and smooth delivery, and an unexpected find at this price point",
+    "slug": "cao-columbia",
+    "Date Added": "2025-08-29"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Flavours Moontrance",
+    "Wrapper": "Cameroon",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Fruit, Cream, Vanilla",
+    "Strength_Profile": "Mild",
+    "Sizes": [
+      {
+        "Size": "Corona",
+        "Barcode": "652125207354",
+        "In_Stock": true,
+        "Price": "10.75"
+      }
+    ],
+    "description": "CAO Flavours Moontrance is a mellow, aromatic blend built on smooth Dominican fillers with a naturally sweet Cameroon wrapper. The infusion leans into bourbon vanilla, peach, and a touch of fruit liqueur, giving the cold draw a soft mix of cream and stone fruit.\nOnce lit, the profile settles into gentle vanilla, light spice from the Cameroon leaf, and a mild caramel finish. The room note is inviting and noticeably sweet, which makes Moontrance an easy pick for new smokers or anyone who wants a relaxed, flavorful change of pace.",
+    "slug": "cao-flavours-moontrance",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "CAO",
+    "Cigar Name": "Flavours Cherrybomb",
+    "Wrapper": "Cameroon",
+    "Binder": "Connnecticut Broadleaf",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Sweet, Cherry, Vanilla, Sweetness",
+    "Strength_Profile": "Mild",
+    "Sizes": [
+      {
+        "Size": "Corona",
+        "Barcode": "689674052494",
+        "In_Stock": true,
+        "Price": "10.75"
+      }
+    ],
+    "description": "CAO Flavours Cherry Bomb brings a bright cherry aroma with mellow Dominican fillers and a smooth Cameroon wrapper. The infusion mixes wild cherry, black cherry, and a touch of vanilla, giving the cold draw a sweet and creamy start.\nOnce lit, the flavor moves through rich cherry, soft vanilla, and a light woodiness from the Cameroon leaf. The smoke stays sweet and approachable, which makes Cherry Bomb an easy pick for anyone who wants a fun, flavored option.\n",
+    "slug": "cao-flavours-cherrybomb",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "Arturo Fuente",
+    "Cigar Name": "Exquisitos Maduro",
+    "Wrapper": "Connecticut Broadleaf",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Sweetness, Coffee, Vanilla",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Petite Corona",
+        "In_Stock": true,
+        "Price": "3.25",
+        "Barcode": "843182101468"
+      }
+    ],
+    "description": "rturo Fuente Exquisitos Maduro is one of the quiet workhorses of the Fuente portfolio, a small cigar with a long family history behind it. Rolled in the Dominican Republic, it represents the classic Fuente approach to craftsmanship in a size that has been popular for decades with smokers who want something quick without sacrificing quality. The line has been around long enough to earn a loyal following, especially among fans of traditional handmade cigars.\nThe Maduro version uses a dark wrapper that gives the cigar its signature look and adds a touch of old world character. Exquisitos Maduro is known for consistent construction, dependable draw, and the kind of everyday reliability that has kept Fuente at the center of the premium cigar world for generations. It remains a staple for anyone who appreciates a shorter handmade cigar with a pedigree.",
+    "slug": "arturo-fuente-exquisitos-maduro",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "Macanudo",
+    "Cigar Name": "Emissary France",
+    "Wrapper": "Ecuadorian Habano",
+    "Binder": "Connecticut Broadleaf",
+    "Filler": "Brazilian, Dominican, French, USA",
+    "Flavor_Profile": "Fruit, Sweetness, Floral, Breadiness",
+    "Strength_Profile": "Medium",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674161721",
+        "In_Stock": true,
+        "Price": "17.35"
+      }
+    ],
+    "description": "Macanudo Emissary France is a premium release designed to highlight rare French-grown tobacco from the Mugron River Valley, between Bordeaux and the Spanish border. The line is a part of Macanudo’s Emissary sub-brand, which focuses on unique European leaf and blends offering elevated complexity. \nBlended from tobaccos aged four to ten years and backed by craftsmanship from the STG Danlí factory in Honduras, Emissary France uses a 10-year aged Ecuadorian Habano wrapper, a 10-year aged U.S. Broadleaf binder, and filler leaves including Dominican Piloto, U.S. Broadleaf, Brazilian Arapiraca and the French leaf that gives the cigar its distinction.\nEmissary France is positioned in the medium to medium-full strength range, offering an experience that appeals to seasoned smokers who appreciate thoughtful blending and nuanced leaf origins. \n",
+    "slug": "macanudo-emissary-france",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "La Flor Dominicana",
+    "Cigar Name": "Cabinet Oscar Natural L-250",
+    "Wrapper": "Ecuador Sumatra Oscuro",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Pepper, Leather, Earth, Raisin",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Robusto l-250",
+        "Barcode": "7460644702846",
+        "In_Stock": true,
+        "Price": "10.35"
+      }
+    ],
+    "description": "La Flor Dominicana Cabinet Oscuro Natural comes from the period when Litto Gomez was shaping LFD into a serious Dominican brand with its own voice. The Cabinet series was meant to show what well aged Dominican tobacco could do when treated with patience and restraint. It carried a richer profile than most Dominican cigars of its time, but it wasn’t built to overpower. Instead, it highlighted the depth and character of the tobaccos Gomez was cultivating as he developed the identity that would eventually define LFD.\nThe blend uses Dominican filler and binder with a naturally dark, oily wrapper that gives the cigar its name. Cabinet Oscuro Natural has stayed in circulation for years because it represents an early chapter in LFD’s evolution, before the rise of the full strength Ligero lines. It shows the brand’s roots in careful fermentation, consistent construction, and the desire to push Dominican tobacco toward new expressions. For many smokers, it remains one of the blends that explains how LFD became the company it is today.",
+    "slug": "la-flor-dominicana-cabinet-oscar-natural-l250",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "La Flor Dominicana",
+    "Cigar Name": "Dl Digger Maduro",
+    "Wrapper": "Maduro",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Pepper, Earth, Leather",
+    "Strength_Profile": "Full",
+    "Sizes": [
+      {
+        "Size": "Double Churchill",
+        "Barcode": "7460644702471",
+        "In_Stock": true,
+        "Price": "15.45"
+      }
+    ],
+    "description": "La Flor Dominicana Double Ligero Digger Maduro comes from the era when LFD was redefining what full strength Dominican cigars could be. Litto Gomez built the Double Ligero line to showcase the raw power and depth of his estate-grown Dominican ligero, and the Digger became the oversized symbol of that philosophy. It was designed for smokers who wanted a long, unapologetically strong cigar and a clear example of how far Dominican tobacco could be pushed without losing structure or complexity.\nThe Maduro version uses a dark, well-fermented wrapper that adds extra richness to the already bold blend. Despite its size and nicotine strength, the Digger Maduro has earned a loyal following because it delivers what the Double Ligero line promised from the start: a showcase of Dominican potency backed by solid construction and slow, steady combustion. It remains one of LFD’s most recognizable cigars and a touchstone for anyone exploring the stronger side of modern Dominican blending.",
+    "slug": "la-flor-dominicana-dl-digger-maduro",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "La Flor Dominicana",
+    "Cigar Name": "Dl Digger Natural",
+    "Wrapper": "Ecuador Sumatra",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Pepper, Leather, Earth",
+    "Strength_Profile": "Full",
+    "Sizes": [
+      {
+        "Size": "Double Churchill",
+        "Barcode": "7460644702488",
+        "In_Stock": true,
+        "Price": "15.00"
+      }
+    ],
+    "description": "La Flor Dominicana Double Ligero Digger Natural is part of the chapter where Litto Gomez pushed Dominican tobaccos into territory few brands were exploring at the time. The Double Ligero line was built to highlight strength, showing what could be done with heavy doses of estate-grown ligero from the La Canela farm. The Digger became the outsized expression of that idea, a cigar created for smokers who wanted both intensity and an extended smoking session.\nThe Natural version uses a well aged sun-grown wrapper that keeps the focus on the core ligero-driven blend. It shows the raw power and earthy depth that made the Double Ligero series a landmark for full strength Dominican cigars, while still carrying the steady burn and robust construction LFD built its name on. The Digger Natural remains one of the clearest examples of how LFD blended boldness with craftsmanship during its rise.",
+    "slug": "la-flor-dominicana-dl-digger-natural",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "La Flor Dominicana",
+    "Cigar Name": "DL Chisel Natural",
+    "Wrapper": "Ecuadorian Sungrown",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Pepper, Leather, Spice, Cedar",
+    "Strength_Profile": "Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "7460644702280",
+        "In_Stock": true,
+        "Price": "11.85"
+      }
+    ],
+    "description": "La Flor Dominicana Double Ligero Chisel Natural represents one of the most notable moments in modern cigar design. The Chisel shape was created by Litto Gomez and became the first cigar shape to receive a United States patent, showing how LFD was experimenting with form at the same time it was redefining strength. Paired with the Double Ligero blend, the Chisel demonstrated how focused airflow and concentrated smoke output could amplify the character of Dominican ligero grown at the La Canela farm.\nThe Natural version uses a sun grown wrapper that keeps the spotlight on the core Dominican tobaccos that built the Double Ligero name. It reflects the original idea behind the line, which was to show the power and depth that carefully cultivated ligero can offer while maintaining solid construction and a steady burn. The Chisel Natural remains one of LFD’s signature cigars because it captures both the creativity and the intensity that shaped the brand’s early rise.",
+    "slug": "la-flor-dominicana-dl-chisel-natural",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "Avo",
+    "Cigar Name": "Synchro South American Ritmo",
+    "Wrapper": "Ecuador Habano",
+    "Binder": "Mexican",
+    "Filler": "Brazilian, Honduran, Nicaraguan, Peruvian",
+    "Flavor_Profile": "Coffee, Nuts, Oak, Chocolate",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "2305500355536",
+        "In_Stock": true,
+        "Price": "15.60"
+      }
+    ],
+    "description": "AVO Syncro South America Ritmo was created to explore the influence of South American growing regions within the AVO portfolio, which had long been known for its Dominican roots. The blend pulls from a wide geographic range, but its identity is grounded in the tobaccos of Brazil and Peru, reflecting the richer, earthier profiles that come from those soils. Ritmo was part of the larger Syncro series that experimented with cross-regional blending and marked a more adventurous chapter for the brand after decades of traditional Dominican style.\nThe cigar uses an aged Ecuadorian wrapper with a supporting cast of Brazilian, Peruvian, Nicaraguan, Dominican, and Honduran fillers. This broad composition was meant to show how different South American and Central American varieties interact when brought together with intention. Ritmo has remained a staple in the AVO lineup because it highlights the brand’s willingness to step outside conventional boundaries and introduce smokers to regions that do not often take center stage in premium cigars.",
+    "slug": "avo-synchro-south-american-ritmo",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "Avo",
+    "Cigar Name": "Classic",
+    "Wrapper": "Connecticut",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Creamy, Smooth",
+    "Strength_Profile": "Mild",
+    "Sizes": [
+      {
+        "Size": "Toro No. 2",
+        "Barcode": "7623500244458",
+        "In_Stock": true,
+        "Price": "13.65"
+      }
+    ],
+    "description": "AVO Classic is the blend that introduced most smokers to the world of Avo Uvezian, the Armenian pianist turned cigar maker whose partnership with Hendrik Kelner shaped decades of Dominican cigar craftsmanship. Released in the late 1980s, the line was designed to offer an elegant, approachable style built on precision and consistency. It quickly became one of the defining Dominican cigars of its era and helped establish AVO as a brand centered on refinement rather than intensity.\nThe blend relies on aged Dominican tobaccos wrapped in smooth Connecticut Shade, reflecting the traditional techniques that Kelner and Uvezian favored. AVO Classic has stayed in continuous production because it captures the spirit of the brand’s early philosophy: balance, reliability, and a dedication to quality over trends. It remains one of the clearest examples of how AVO laid its foundation and why the name continues to hold weight among smokers who appreciate classic Dominican cigars.",
+    "slug": "avo-classic",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "Alec Bradley",
+    "Cigar Name": "Black Market",
+    "Wrapper": "Maduro",
+    "Binder": "Sumatra",
+    "Filler": "Honduran, Indonesian, Nicaraguan, Panamanian",
+    "Flavor_Profile": "Spice, Pepper, Peat",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "815337011892",
+        "In_Stock": true,
+        "Price": "12.50"
+      }
+    ],
+    "description": "Alec Bradley Black Market is one of the cigars that pushed the brand into wider recognition in the early 2010s. Released during a period when Alec Bradley was experimenting with bolder, less traditional profiles, Black Market stood out with its unusual banding, darker aesthetic, and willingness to showcase heavier tobaccos. It quickly became a staple in humidors across the country and helped solidify Alec Bradley as a company willing to take risks at a time when many brands were staying on familiar ground.\nThe blend uses a Nicaraguan wrapper over a Honduran binder with filler from Panama and Honduras. The inclusion of Panamanian leaf is part of what made this cigar notable, since that region is rarely used in premium blends and adds a distinct character that set Black Market apart from its competitors. The cigar has remained a long running line in the Alec Bradley portfolio because it represents a turning point for the company, showing how creative sourcing and a willingness to break from tradition could earn a lasting place in the market.\n",
+    "slug": "alec-bradley-black-market",
+    "Date Added": "2025-11-14"
+  },
+  {
+    "Cigar Brand": "J.C. Newman",
+    "Cigar Name": "Sarzedas",
+    "Wrapper": "Ecuadorian Shade",
+    "Binder": "Nicaraguan, Dominican",
+    "Filler": "Nicaraguan, Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Mild-Medium",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "076622345218",
+        "In_Stock": true,
+        "Price": "9.25"
+      },
+      {
+        "Size": "Corona",
+        "Barcode": "076622345119",
+        "In_Stock": true,
+        "Price": "8.25"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "076622345317",
+        "In_Stock": true,
+        "Price": "10.00"
+      },
+      {
+        "Size": "Churchill",
+        "Barcode": "076622345416",
+        "In_Stock": true,
+        "Price": "10.60"
+      }
+    ],
+    "description": "Sarzedas is a true revival. The name dates back to 1900, when JC Newman first rolled the line and marketed it as “The Aromatic Cigar.” The company reintroduced it in 2025, once again tying modern production to its early history. Rolled at JC Newman’s PENSA factory in Estelí, Nicaragua, Sarzedas bridges the company’s Tampa roots with the craftsmanship of its contemporary Nicaraguan operation.\nThe blend was designed as a flavorful, balanced cigar rather than a niche project. Created by Rich Dolak, JC Newman’s longtime operations vice president, it uses an Ecuadorian Shade wrapper over Dominican and Nicaraguan binder and filler. The result is a smooth, aromatic cigar that honors the brand’s origins while offering the refinement and consistency expected from JC Newman today.",
+    "slug": "jc-newman-sarzedas",
+    "Date Added": "2025-12-04"
+  },
+  {
+    "Cigar Brand": "La Aroma De Cuba",
+    "Cigar Name": "Mi Amor",
+    "Wrapper": "Mexican San Andres",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Earth, Cocoa, Espresso, Spice",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Magnifico",
+        "Barcode": "819577010202",
+        "In_Stock": true,
+        "Price": "10.95"
+      }
+    ],
+    "description": "La Aroma de Cuba Mi Amor is one of the cornerstone collaborations between José “Pepin” Garcia and Ashton, created to give the La Aroma line a bolder, more modern identity. Produced at the My Father factory in Estelí, Nicaragua, it marked the moment when the brand shifted from its Cuban heritage revival toward being recognized for serious Nicaraguan craftsmanship. The name Mi Amor, meaning “my love,” reflects both the personal pride behind the project and the passion that defines Garcia’s blending style.\nThe cigar uses a dark Mexican San Andrés wrapper over Nicaraguan binder and filler, creating a rich yet balanced profile that helped make it one of the most awarded cigars in the La Aroma portfolio. Mi Amor remains a defining example of how the partnership between Ashton and the Garcias successfully combined heritage branding with the power and depth of Nicaraguan tobacco. It continues to stand as one of the most respected lines in modern premium cigar making.",
+    "slug": "la-aroma-de-cuba-mi-amor",
+    "Date Added": "2025-12-04"
+  },
+  {
+    "Cigar Brand": "C.L.E.",
+    "Cigar Name": "25th Anniversary",
+    "Wrapper": "Honduran",
+    "Binder": "Honduran",
+    "Filler": "Honduran",
+    "Flavor_Profile": "Dark Chocolate, Espresso, Cinnamon, Earth, Pepper",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "54x6",
+        "Barcode": "860003528525",
+        "In_Stock": true,
+        "Price": "20.85"
+      }
+    ],
+    "description": "CLE 25th Anniversary celebrates not only a milestone but the legacy of Christian Eiroa, whose family history in Honduran tobacco stretches back generations. The cigar honors the same philosophy that built Eiroa’s reputation with Camacho in the 1990s and continues to define CLE today: meticulous cultivation, patient fermentation, and blending that reflects authenticity rather than trend. It represents the culmination of years spent refining the use of Honduran tobaccos, which remain at the core of the brand’s identity.\nRolled at the CLE factory in Danlí, Honduras, the 25th Anniversary showcases the full expression of the Eiroa family’s work with Corojo seed tobacco. The result is a cigar that balances strength and depth while maintaining the signature smoothness CLE has built its name on. It is a celebration of heritage and craftsmanship, a statement piece that captures why CLE remains one of the few brands carrying forward the classic Honduran tradition at the highest level.",
+    "slug": "cle-25th-anniversary",
+    "Date Added": "2025-12-04"
+  },
+  {
+    "Cigar Brand": "Eiroa",
+    "Cigar Name": "Eiroa Classic",
+    "Wrapper": "Honduran",
+    "Binder": "Honduran",
+    "Filler": "Honduran",
+    "Flavor_Profile": "Leather, Pepper, Cocoa, Coffee, Cream",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "854185004861",
+        "In_Stock": true,
+        "Price": "15.75"
+      },
+      {
+        "Size": "60x6",
+        "Barcode": "854185004908",
+        "In_Stock": true,
+        "Price": "18.10"
+      }
+    ],
+    "description": "Eiroa Classic is the cigar that reintroduced Christian Eiroa’s signature blending style after the launch of CLE, connecting back to the traditions that made his family name synonymous with Honduran tobacco. Produced at the Aladino factory in Danlí, the Classic embodies the heritage of the Eiroa family’s work with authentic Corojo seed, cultivated for generations on their farms. It reflects the old-school Honduran profile that put Eiroa on the map while showing the refinement and precision that define his newer lines.\nThe blend highlights Corojo’s natural sweetness, structure, and depth without relying on power alone. Every detail, from fermentation to rolling, follows the family’s exacting standards, ensuring consistency that has become a CLE hallmark. Eiroa Classic serves as both a return to roots and a continuation of a legacy, offering smokers a taste of the same authenticity that shaped modern Honduran cigar making.",
+    "slug": "eiroa-eiroa-classic",
+    "Date Added": "2025-12-04"
+  },
+  {
+    "Cigar Brand": "Eiroa",
+    "Cigar Name": "The First 20 Years",
+    "Wrapper": "Honduran Maduro",
+    "Binder": "Honduran",
+    "Filler": "Honduran",
+    "Flavor_Profile": "Dark Chocolate, Espresso, Spice, Nuts, Earth",
+    "Strength_Profile": "Medium-Full",
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "855374008455",
+        "In_Stock": true,
+        "Price": "18.30"
+      }
+    ],
+    "description": "Eiroa The First 20 Years Maduro marks a milestone in Christian Eiroa’s career, celebrating two decades of his work in premium cigar making. The line honors both his family’s long history in Honduras and his personal evolution as a blender. Built entirely from Honduran tobaccos grown on the Eiroa family’s farms, it reflects the pride of a brand that continues to champion authentic Corojo cultivation and the craftsmanship that has defined the Eiroa name for generations.\nThe Maduro version uses a dark, well-fermented Honduran wrapper that deepens the blend’s natural sweetness and adds a layer of richness without overwhelming the palate. Construction is tight, the draw is deliberate, and the flavor progression showcases the complexity of properly aged Corojo leaf. Eiroa The First 20 Years Maduro stands as both a personal statement from its creator and a benchmark for what modern Honduran cigars can achieve when tradition and precision meet.",
+    "slug": "eiroa-the-first-20-years",
+    "Date Added": "2025-12-04"
   }
 ]
