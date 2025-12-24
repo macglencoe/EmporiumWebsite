@@ -27,7 +27,7 @@ const About = (props) => {
                     title="Our Store"
                     titleIcon={PiStorefrontDuotone}
                 >
-                    <div className='flex flex-row gap-4 items-stretch'>
+                    <div className='flex flex-col-reverse md:flex-row gap-4 items-stretch'>
                         <div>
                             <span className='text-2xl tracking-wide text-center max-w-5xl mx-auto w-fit font-semibold'>The King Street Coffee & Tobacco Emporium</span>
                             <BasicParagraph className='mt-5 font-medium'>
@@ -49,13 +49,15 @@ const About = (props) => {
                                 Regular updates about closings, events, offers, and more can be found on our <a href='https://www.facebook.com/people/King-Street-Coffee-Tobacco-Emporium/100063496593967/?ref=embed_page'>Facebook page</a>.
                             </BasicParagraph>
                         </div>
-                        <Image
-                            src="/ks-storefront.jpg"
-                            alt="King Street Coffee & Tobacco Emporium storefront"
-                            width={600}
-                            height={700}
-                            className="rounded-lg mx-auto my-5 object-cover"
-                        />
+                        <div className='p-4 md:p-0 mx-auto my-auto'>
+                            <Image
+                                src="/ks-storefront.jpg"
+                                alt="King Street Coffee & Tobacco Emporium storefront"
+                                width={600}
+                                height={700}
+                                className="rounded-lg object-cover"
+                            />
+                        </div>
                         {/* TODO: Take a new photo of the store */}
                     </div>
                 </BasicSection>
