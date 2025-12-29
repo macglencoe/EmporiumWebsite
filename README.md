@@ -8,10 +8,10 @@ The site serves as both a digital catalog and a place for store updates, giving 
 
 # Features
 
-## 🗂️ Product Catalog  
+## Product Catalog  
 Browse an organized collection of cigars, pipes, pipe tobacco, coffee, and tea. Each listing includes images, brand details, flavor notes, and strength profiles.
 
-## 🛠️ Content Management System (CMS)  
+## Content Management System (CMS)  
 A custom CMS gives staff full control over the site’s content:
 
 - Add, update, or remove products  
@@ -19,10 +19,10 @@ A custom CMS gives staff full control over the site’s content:
 - Preview and validate changes before they go live  
 - All edits are version-controlled via GitHub and automatically deployed through Vercel—no developer needed.
 
-## 📍 Store Info & Updates  
+## Store Info & Updates  
 Store hours, location, and contact details are easy to find. The homepage also pulls live updates from Facebook, so customers can stay in the loop about events and new arrivals.
 
-## 👓 Accessibility & Simplicity  
+## Accessibility & Simplicity  
 Built with ease-of-use in mind. Clear fonts, simple layouts, and intuitive navigation ensure that anyone can find what they need.
 
 ---
