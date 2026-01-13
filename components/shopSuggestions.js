@@ -1,113 +1,145 @@
 import Link from "next/link"
 
-
 const ShopSuggestions = (props) => {
   return (
     <>
-      <region className='shop-suggestions-container'>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'start',
-          flexWrap: 'wrap',
-          flexDirection: 'row'
-        }}>
-          <h1>Search&nbsp;
-          <b>{props.title}</b>
-          &nbsp;by:</h1>
-        </div>
-
-        <div className='shop-suggestions' >
-          {
-            props.items.map((item, index) => (
-              <Link href={item.href} key={index} >
-                <a tabIndex={0} aria-label={'Search' + props.title + 'By' + item.label}>
-                  <button className="shop-suggestions-card">
-                    <span>{item.label}</span>
+      <div className="beveled-box w-full max-w-5xl mx-auto my-2 bg-primary2/50">
+        <div className="beveled-box-inner"></div>
+        <div className="flex flex-col p-2 justify-center">
+          <div className="flex items-center justify-center text-center flex-wrap">
+            <h1 className="text-3xl md:text-5xl m-6 font-normal text-secondary1">
+              Search&nbsp;
+              <b className="font-bold text-secondary2 uppercase">{props.title}</b>
+              &nbsp;by:
+            </h1>
+          </div>
+  
+          <div className="w-full p-6">
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-center w-full">
+              {props.items.map((item, index) => (
+                <Link
+                  href={item.href}
+                  key={index}
+                  tabIndex={0}
+                  aria-label={`Search ${props.title} by ${item.label}`}
+                  className="w-full group"
+                >
+                  <button className="beveled-button w-full p-4 transition-transform hover:scale-105 shadow-md font-bold text-lg uppercase bg-primary1/30 text-secondary1 cursor-pointer">
+                    {item.label}
                   </button>
-                </a>
-              </Link>
-            ))
-          }
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
-      </region>
-      <style jsx>
-        {`
+      </div>
 
-        h1 {
-          font-size: 2em;
-          font-weight: normal;
-          font-style: italic;
+      <style jsx>{`
+        .beveled-box {
+          clip-path: polygon(
+            16px 0,
+            calc(100% - 16px) 0,
+            100% 16px,
+            100% calc(100% - 16px),
+            calc(100% - 16px) 100%,
+            16px 100%,
+            0 calc(100% - 16px),
+            0 16px
+          );
+          -webkit-clip-path: polygon(
+            16px 0,
+            calc(100% - 16px) 0,
+            100% 16px,
+            100% calc(100% - 16px),
+            calc(100% - 16px) 100%,
+            16px 100%,
+            0 calc(100% - 16px),
+            0 16px
+          );
+          position: relative;
         }
-        h1 b {
-          font-variant: small-caps;
-          font-weight: bold;
-          color: var(--dl-color-theme-secondary1);
+        .beveled-box > .flex {
+          position: relative;
+          z-index: 1;
         }
-                .shop-suggestions-container {
-          display: flex;
-          flex-direction: column;
-          gap: 1em;
-          padding: 10px;
-          align-items: start;;
-          justify-content: center;
-          width: 100%;
+        .beveled-box > .beveled-box-inner {
+          content: "";
+          position: absolute;
+          inset: 5px;
+          background-color: var(--dl-color-theme-primary1);
+          clip-path: polygon(
+            16px 0,
+            calc(100% - 16px) 0,
+            100% 16px,
+            100% calc(100% - 16px),
+            calc(100% - 16px) 100%,
+            16px 100%,
+            0 calc(100% - 16px),
+            0 16px
+          );
+          -webkit-clip-path: polygon(
+            16px 0,
+            calc(100% - 16px) 0,
+            100% 16px,
+            100% calc(100% - 16px),
+            calc(100% - 16px) 100%,
+            16px 100%,
+            0 calc(100% - 16px),
+            0 16px
+          );
         }
-        
-        .shop-suggestions-container a {
-          width: 100%;
+        .beveled-box > .beveled-box-inner::before {
+          content: "";
+          position: absolute;
+          inset: 4px;
+          background: linear-gradient(143deg,rgba(255, 204, 18, 1) -150%, var(--dl-color-theme-primary2) 50%, rgba(255, 204, 18, 1) 250%);
+          clip-path: polygon(
+            16px 0,
+            calc(100% - 16px) 0,
+            100% 16px,
+            100% calc(100% - 16px),
+            calc(100% - 16px) 100%,
+            16px 100%,
+            0 calc(100% - 16px),
+            0 16px
+          );
+          -webkit-clip-path: polygon(
+            16px 0,
+            calc(100% - 16px) 0,
+            100% 16px,
+            100% calc(100% - 16px),
+            calc(100% - 16px) 100%,
+            16px 100%,
+            0 calc(100% - 16px),
+            0 16px
+          );
         }
-          .shop-suggestions {
-          display: flex;
-          flex-direction: row;
-          gap: 1em;
-          padding: 10px;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
+        .beveled-button {
+          clip-path: polygon(
+            16px 0,
+            calc(100% - 16px) 0,
+            100% 16px,
+            100% calc(100% - 16px),
+            calc(100% - 16px) 100%,
+            16px 100%,
+            0 calc(100% - 16px),
+            0 16px
+          );
+          -webkit-clip-path: polygon(
+            16px 0,
+            calc(100% - 16px) 0,
+            100% 16px,
+            100% calc(100% - 16px),
+            calc(100% - 16px) 100%,
+            16px 100%,
+            0 calc(100% - 16px),
+            0 16px
+          );
         }
-
-        .shop-suggestions-card {
-          border: 3px solid var(--dl-color-theme-secondary2);
-          padding: 20px;
-          cursor: pointer;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.3s ease-out;
-        }
-        .shop-suggestions-card > span {
-          font-size: 20px;
-          font-weight: 700;
-          text-transform: uppercase;
-          transition: all 0.3s ease-out;
-            color: var(--dl-color-theme-secondary2);
-        }
-        a:hover .shop-suggestions-card,
-        a:focus .shop-suggestions-card{
-            outline: none;
-          transform: translateY(-10px);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
-        }
-        a:hover .shop-suggestions-card > span,
-        a:focus .shop-suggestions-card > span {
-          color: var(--dl-color-theme-secondary1);
-        }
-        @media (max-width: 1200px) {
-          .shop-suggestions {
-            flex-direction: column;
-            }
-        }
-        @media (max-width: 680px) {
-          .shop-suggestions-card > span {
-            color: var(--dl-color-theme-secondary1);
-          }
-        }
-                `}
-      </style>
+          
+      `}</style>
     </>
-  )
-}
+  );
+};
 
-export default ShopSuggestions
+export default ShopSuggestions;

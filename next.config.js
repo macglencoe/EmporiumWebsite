@@ -23,6 +23,7 @@ module.exports = {
     ],
     trailingSlash: true,
     getStaticProps: true,
-    
-    
+    images: {
+        domains: ['images.unsplash.com'],
+    }
 }

@@ -23,14 +23,16 @@ const CatalogFilter = (props) => {
     return (
         <>
 
-            <div className="select-wrap">
-                <label for={props.name+" filter"}>{props.label}</label>
+            <div className="bg-primary1/30 pr-2 w-full relative">
+                <label className="text-[10px] uppercase px-[5px] absolute top-[5px] font-medium" for={props.name+" filter"}>{props.label}</label>
+                {props.icon && <props.icon size={25} className="absolute left-[6px] bottom-[7px] text-primary1"/>}
                 <select 
                     id={props.name+" filter"}
                     name={props.name} 
                     onChange={handleFilterChange} 
                     value={selectedFilter}
                     tabIndex={props.inactive ? -1 : 0}
+                    className="h-[50px] pl-8 px-2 pt-2 w-full"
                 >
                     <option value="">{props.defaultValue}</option>
                     {props.values.map(brand => (
@@ -115,8 +117,7 @@ const Filters = (props) => {
 
     return (
         <>
-            <div data-thq="accordion-content" className="filters-containers">
-                <div className="catalog-container32">
+                <div className="w-full flex gap-3 p-2 align-start flex-col bg-primary2">
 
                     {props.filters &&
                         props.filters.map((filter) => (
@@ -127,12 +128,12 @@ const Filters = (props) => {
                                 defaultValue={filter.defaultValue}
                                 handleFilterChange={handleFilterChange}
                                 inactive={props.inactive}
+                                icon={filter.icon}
                             />
                         ))
                     }
 
                 </div>
-            </div>
             <style jsx>
                 {`
 .filters-containers {

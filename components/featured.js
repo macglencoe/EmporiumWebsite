@@ -1,216 +1,149 @@
 import React, { useEffect, useState } from 'react'
+import Link from 'next/link'
+import CigarCard from './cigarCard';
+import CatalogCard from './catalogCard';
+import { PiCalendar, PiFire, PiLeaf, PiMicrophone, PiRuler } from 'react-icons/pi';
+import Image from 'next/image';
 
-const AttributeSpan = ({ item }) => {
-    return (
-        <>
-            <div className='attributes'>
-                {[
-                    item['Strength_Profile'],
-                    '•',
-                    item['Wrapper'],
-                    '•',
-                    item['Sizes'].length > 1 ? item['Sizes'].length + ' Sizes' : item['Sizes'][0].Size
-                ].filter(Boolean).map((item, index) => (
-                    <span key={index}>{item}</span>
-                ))}
-            </div>
-            <style jsx>
-                {`
-                .attributes {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 0.5em;
-                    align-items: center;
-                    justify-content: center;
-                }
-                `}
-            </style>
-        </>
-    )
-}
 
-const FlavorList = ({ flavorString }) => {
-    return (
-        <>
-            <div className='flavor-list'>
-                {flavorString.split(',').map((item, index) => (
-                    <span key={index}>{item}</span>
-                ))}
-            </div>
-            <style jsx>
-                {`
-                .flavor-list {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 0.5em;
-                    justify-content: center;
-                    align-items: center;
-                }
-                .flavor-list span {
-                    font-style: italic;
-                    font-weight: bold;
-                    background-color: var(--dl-color-theme-secondary2);
-                    padding: 0.5em;
-                    color: var(--dl-color-theme-primary2);
-                    border-radius: 5px;
-                    margin: 0.5em;
-                }
-                `}
-            </style>
-        </>
-    )
-}
 
 export const Featured = ({ cigars }) => {
-    const [feature_Week, setFeature_Week] = useState([]);
-    const [feature_Eds_Pick, setFeature_Eds_Pick] = useState([]);
-    const [feature_Teds_Pick, setFeature_Teds_Pick] = useState([]);
-    const [feature_StickFigures, setFeature_StickFigures] = useState([]);
+  const [featureEdsPick, setFeatureEdsPick] = useState()
+  const [featureTedsPick, setFeatureTedsPick] = useState()
+  const [featureStickFigures, setFeatureStickFigures] = useState()
+  const [features, setFeatures] = useState([])
 
-    useEffect(() => {
-        setFeature_Eds_Pick(cigars.filter(cigar => cigar['featured_Eds_Pick']).sort((a, b) => new Date(b['featured_Eds_Pick']) - new Date(a['featured_Eds_Pick'])));
-        setFeature_Teds_Pick(cigars.filter(cigar => cigar['featured_Teds_Pick']).sort((a, b) => new Date(b['featured_Teds_Pick']) - new Date(a['featured_Teds_Pick'])));
-        setFeature_StickFigures(cigars.filter(cigar => cigar['featured_StickFigures']).sort((a, b) => new Date(b['featured_StickFigures']) - new Date(a['featured_StickFigures'])));
-    }, [cigars])
-
-    return (
-        <>
-            <div className='featured'>
-                    <div className='background'></div>
-                <h1>Featured Cigars</h1>
-                <div className="spread">
-                    {feature_Eds_Pick.length > 0 &&
-                        <div className='feature eds-Pick'>
-                            <h2>Ed's Pick</h2>
-                            <p className='date'><b>{feature_Eds_Pick[0]['featured_Eds_Pick']}</b></p>
-                            <p className='cigarTitle'><a href={'/cigars/' + feature_Eds_Pick[0]['slug']}><i>{feature_Eds_Pick[0]['Cigar Brand']} </i>{feature_Eds_Pick[0]['Cigar Name']}</a></p>
-                            <AttributeSpan item={feature_Eds_Pick[0]} />
-                            <FlavorList flavorString={feature_Eds_Pick[0]['Flavor_Profile']} />
-                        </div>}
-                    {feature_Teds_Pick.length > 0 &&
-                        <div className='feature teds-Pick'>
-                            <h2>Ted's Pick</h2>
-                            <p className='date'><b>{feature_Teds_Pick[0]['featured_Teds_Pick']}</b></p>
-                            <p className='cigarTitle'><a href={'/cigars/' + feature_Teds_Pick[0]['slug']}><i>{feature_Teds_Pick[0]['Cigar Brand']} </i>{feature_Teds_Pick[0]['Cigar Name']}</a></p>
-                            <AttributeSpan item={feature_Teds_Pick[0]} />
-                            <FlavorList flavorString={feature_Teds_Pick[0]['Flavor_Profile']} />
-
-                        </div>}
-                    {feature_StickFigures.length > 0 &&
-                        <div className='feature stickFigures'>
-                            <h2>On <a href='https://open.spotify.com/show/0xpAdXeTXnnh30J0HEVmoz'>The Stick Figures Podcast</a></h2>
-                            <p className='date'><b>{feature_StickFigures[0]['featured_StickFigures']}</b></p>
-                            <p className='cigarTitle'><a href={'/cigars/' + feature_StickFigures[0]['slug']}><i>{feature_StickFigures[0]['Cigar Brand']} </i>{feature_StickFigures[0]['Cigar Name']}</a></p>
-                            <AttributeSpan item={feature_StickFigures[0]} />
-                            <FlavorList flavorString={feature_StickFigures[0]['Flavor_Profile']} />
-                        </div>}
-
-                </div>
-            </div>
-            <style jsx>
-                {`
-        .feature {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            padding: 20px;
-            border-radius: 10px;
-            flex: 0.5 1 min-content;
-            min-width: 300px;
-            margin: 5px;
-            gap: 0.5em;
-            overflow: hidden;
-            z-index: 1;
-            background-color: var(--dl-color-theme-primary2);
-            transition: all 0.3s ease-in-out;
-            background-image: radial-gradient(circle at center, transparent 20%, var(--dl-color-theme-primary1) 500%);
-            flex: 1;
-        }
-        .feature::before, .feature::after {
-            content: '';
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: var(--dl-color-theme-primary1);
-            z-index: 1;
-            transform: scaleX(0);
-            transition: transform 0.3s ease-in-out;
-        }
-        .feature:hover::before, .feature:hover::after {
-            transform: scaleX(1);
-
-        }
-        .feature:hover {
-            scale: 1.05;
-        }
-        .feature:hover a {
-            text-decoration-color: var(--dl-color-theme-secondary2);
-        }
-            
-        
-        .feature > * {
-            text-align: center;
-        }
-        .feature a {
-            text-decoration: underline;
-            text-decoration-color: var(--dl-color-theme-primary1);
-        }
-        .feature .date {
-            font-family: Inter;
-            color: var(--dl-color-theme-secondary2);
-        }
-        .feature .cigarTitle {
-            margin: 10px;
-            font-size: 1.6em;
-            font-weight: bold;
-            font-family: Playfair;
-
-        }
-
-
-        .spread {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            width: 100%;
-            gap: 1em;
-        }
-        .featured {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            gap: 1em;
-            position: relative;;
-            background-color: var(--dl-color-theme-primary2);
-            overflow: hidden;
-        }
-        .featured .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-            background-size: cover;
-            opacity: 0.3;
-            transition: all 0.3s ease-in-out;
-
-        }
-        .featured h1 {
-            text-align: center;
-            z-index: 1;
-        }
-
-
-            `}
-            </style>
-        </>
+  useEffect(() => {
+    setFeatureEdsPick(
+      cigars
+        .filter(cigar => cigar['featured_Eds_Pick'])
+        .sort((a, b) => new Date(b['featured_Eds_Pick']) - new Date(a['featured_Eds_Pick']))[0]
     )
-}
+    setFeatureTedsPick(
+      cigars
+        .filter(cigar => cigar['featured_Teds_Pick'])
+        .sort((a, b) => new Date(b['featured_Teds_Pick']) - new Date(a['featured_Teds_Pick']))[0]
+    )
+    setFeatureStickFigures(
+      cigars
+        .filter(cigar => cigar['featured_StickFigures'])
+        .sort((a, b) => new Date(b['featured_StickFigures']) - new Date(a['featured_StickFigures']))[0]
+    )
+  }, [cigars])
+
+  useEffect(() => {
+    setFeatures([
+      featureEdsPick &&
+      {
+        title: "Ed's Pick",
+        cigar: featureEdsPick,
+        date: featureEdsPick["featured_Eds_Pick"]
+      },
+      featureTedsPick &&
+      {
+        title: "Ted's Pick",
+        cigar: featureTedsPick,
+        date: featureTedsPick["featured_Teds_Pick"]
+      },
+      featureStickFigures &&
+      {
+        title: "Stick Figures Podcast",
+        cigar: featureStickFigures,
+        date: featureStickFigures["featured_StickFigures"]
+      }
+    ])
+  }, [featureEdsPick, featureStickFigures, featureTedsPick])
+
+  return (
+    <section className="relative py-20 px-6 bg-gradient-to-r from-primary2/30 via-primary2/50 to-primary2/30 overflow-hidden">
+      {/* Subtle Backdrop */}
+      <div className="absolute inset-0">
+        <Image layout='fill' className="object-cover opacity-15" src="/premium-cigars.jpg" />
+        <div className='absolute inset-0' style={{
+          boxShadow: "inset 0 0 400px -300px black"
+        }} />
+      </div>
+      <div className="relative max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <div className="inline-block relative">
+            <div className="flex items-center justify-center mb-4">
+              <div className="hidden md:block w-8 h-px bg-secondary2/70"></div>
+              <div className="mx-4 w-2 h-2 bg-secondary2/70 rounded-full"></div>
+              <h1 className="text-5xl md:text-6xl font-bold text-secondary2 mx-6" style={{ fontFamily: 'serif', textShadow: '1px 1px 3px rgba(0,0,0,0.2)' }}>
+                Featured Cigars
+              </h1>
+              <div className="mx-4 w-2 h-2 bg-secondary2/70 rounded-full"></div>
+              <div className="hidden md:block w-8 h-px bg-secondary2/70"></div>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {features?.map((item, index) => {
+            if (item && item.cigar) return (
+              <CatalogCard
+                flag={item.title}
+                title={item.cigar["Cigar Name"]}
+                secondaryTitle={item.cigar["Cigar Brand"]}
+                data={[
+                  item.date &&
+                  {
+                    icon: PiCalendar,
+                    value: item.date
+                      ? new Date(item.date).toLocaleDateString('en-US', {
+                        month: 'long',
+                        day: 'numeric',
+                        year: 'numeric'
+                      })
+                      : undefined,
+                    label: "Last Updated",
+                    type: 'hidden-label'
+                  },
+                  item.cigar["Wrapper"] &&
+                  {
+                    icon: PiLeaf,
+                    value: item.cigar['Wrapper'],
+                    label: 'Wrapper',
+                    type: 'hidden-label'
+                  },
+                  item.cigar['Strength_Profile'] &&
+                  {
+                    icon: PiFire,
+                    value: item.cigar['Strength_Profile'],
+                    label: 'Strength',
+                    type: 'hidden-label strength-gauge'
+                  },
+                  item.cigar['Sizes'] && item.cigar['Sizes'].length > 0 &&
+                  {
+                    label: 'Sizes',
+                    type: 'tags hidden-label',
+                    icon: PiRuler,
+                    value:
+                      item.cigar['Sizes']
+                        .slice(0, 3)
+                        .map(sizeObj => sizeObj.Size)
+                        .join(', ')
+                      +
+                      (item.cigar['Sizes'].length > 3 ? ', +' + (item.cigar['Sizes'].length - 3) : '')
+                  },
+                  item.cigar['Flavor_Profile'] &&
+                  {
+                    label: 'Flavor Notes',
+                    value: item.cigar['Flavor_Profile'],
+                    type: 'tags'
+                  },
+                ]}
+                href={'/cigars/' + item.cigar?.slug}
+                description={item.cigar?.description}
+              />
+            )
+          })
+
+          }
+        </div>
+      </div>
+    </section>
+  );
+};
+
 
 export default Featured

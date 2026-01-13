@@ -1,13 +1,20 @@
 import cigarSizes from '../../../public/data/cigarsizes.json';
-import Head from 'next/head'
+import Head from 'next/head';
 import Layout from '../../../components/layout';
-import PageTitle1 from '../../../components/pagetitle1';
-import ProductPage, { InteractionPanel, Navigation, PodcastLink, ShareButton, StringBubbleList } from '../../../components/productPage';
-import { ProductImage, ProductSideContent } from '../../../components/productPage';
-import { ProductSizeChart, ProductBasicInfo } from '../../../components/productPage';
-import { ProductMainContent, ProductTitle } from '../../../components/productPage';
-import { ProductInfoFields, ProductCallOrVisitButtons } from '../../../components/productPage';
-import { Disclaimer } from '../../../components/productPage';
+import ProductPage, {
+  InteractionPanel,
+  PodcastLink,
+  StringBubbleList,
+  ProductImage,
+  ProductSideContent,
+  ProductSizeChart,
+  ProductMainContent,
+  ProductTitle,
+  ProductInfoFields,
+  Disclaimer,
+  Navigation,
+} from '../../../components/productPage';
+import { PiFactory, PiFactoryBold, PiFire, PiFireBold, PiGrainsBold, PiGrainsDuotone, PiLeaf, PiLeafBold, PiLeafDuotone, PiLeafFill } from 'react-icons/pi';
 
 export const getStaticPaths = async () => {
   const cigars = await import('../../../public/data/consolidated_cigars.json');
@@ -43,58 +50,67 @@ const CigarPage = (props) => {
         <title>{cigar['Cigar Brand']} {cigar['Cigar Name']}</title>
       </Head>
       <Layout>
-        <PageTitle1
-          subtitle={cigar ? cigar['Cigar Name'] : "Data not found"}
-          next={props.next}
-          prev={props.prev}
-          href="/cigars"
-          nameField="Cigar Name"
-        >Cigar Information</PageTitle1>
-        <ProductPage
-          description={cigar.description}
-        >
-          <ProductSideContent>
-            <ProductImage
-              src={cigar.image}
-              fallbackSearch={encodeURIComponent(cigar['Cigar Brand'] + ' ' + cigar['Cigar Name'])}
-            />
-            <ProductSizeChart
-              sizes={cigar.Sizes}
-              allCigarSizes={cigarSizes}
-            />
-            {cigar['Flavor_Profile'] && <StringBubbleList title="Flavor"
-              data={cigar['Flavor_Profile'].split(', ')}
-            >
-
-            </StringBubbleList>
-            }
-          </ProductSideContent>
-          <ProductMainContent>
-            <ProductInfoFields
-              fields={[
-                { name: "Brand", value: cigar['Cigar Brand'] },
-                { name: "Wrapper", value: cigar['Wrapper'] },
-                { name: "Binder", value: cigar['Binder'] },
-                { name: "Filler", value: cigar['Filler'] },
-                { name: "Strength", value: cigar['Strength_Profile'] },
-              ]}
-            />
-            <InteractionPanel
+        <div className='bg-primary2 h-full'>
+          <ProductPage description={cigar.description}>
+            <ProductMainContent>
+              <ProductTitle
+                breadcrumbs={[
+                  { label: 'Home', href: '/' },
+                  { label: 'Cigars', href: '/cigars' },
+                  { label: cigar.slug }
+                ]}
+                meta={"By " + cigar['Cigar Brand']}
+                description={cigar.description}
+              >
+                {cigar['Cigar Name']}
+              </ProductTitle>
+              <InteractionPanel
                 image={cigar.image}
                 title={cigar['Cigar Name']}
-                description={"Check out this cigar from King Street Emporium!"}
-            />
-
-          </ProductMainContent>
-        </ProductPage>
-
-        {cigar['Podcast_Link'] && <PodcastLink url={cigar['Podcast_Link']} />}
-        
-        <Disclaimer />
+                text={"Check out this cigar from King Street Emporium!"}
+              />
+              <ProductInfoFields
+                fields={[
+                  { name: "Brand", value: cigar['Cigar Brand'], icon: PiFactory },
+                  { name: "Wrapper", value: cigar['Wrapper'], icon: PiLeaf },
+                  { name: "Binder", value: cigar['Binder'], icon: PiLeafDuotone },
+                  { name: "Filler", value: cigar['Filler'], icon: PiLeafFill },
+                  { name: "Strength", value: cigar['Strength_Profile'], icon: PiFire },
+                ]}
+              />
+  
+            </ProductMainContent>
+            <ProductSideContent>
+              <ProductImage
+                src={cigar.image}
+                fallbackSearch={encodeURIComponent(cigar['Cigar Brand'] + ' ' + cigar['Cigar Name'])}
+              />
+              <ProductSizeChart
+                sizes={cigar.Sizes}
+                allCigarSizes={cigarSizes}
+              />
+              {cigar['Flavor_Profile'] && <StringBubbleList title="Flavor"
+                data={cigar['Flavor_Profile'].split(', ')}
+              >
+  
+              </StringBubbleList>
+              }
+            </ProductSideContent>
+          </ProductPage>
+          <Navigation
+            prev={props.prev}
+            next={props.next}
+            href="/cigars"
+            nameField="Cigar Name"
+          />
+  
+          {cigar['Podcast_Link'] && <PodcastLink url={cigar['Podcast_Link']} />}
+          
+          <Disclaimer />
+        </div>
       </Layout>
     </>
   );
 };
 
 export default CigarPage;
-

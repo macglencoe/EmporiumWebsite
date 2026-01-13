@@ -1,6 +1,7 @@
 import Layout from '../../components/layout';
 import Catalog from '../../components/catalog';
 import Head from 'next/head';
+import { PiApproximateEquals, PiDiamondsFour, PiDiamondsFourFill, PiFactory, PiFactoryFill, PiTreeStructure, PiTreeStructureFill } from 'react-icons/pi';
 
 export const getStaticProps = async () => {
     const data = await import('../../public/data/tobacco.json');
@@ -42,25 +43,29 @@ const TobaccoCatalog = (props) => {
                 data={props.data}
 
                 title="Tobacco"
+                description='Our collection of pipe tobacco blends, available for purchase and sampling in-store'
 
                 filters={[
                     {
                         name:"Tobacco Brand",
                         label: "Brand",
                         values: uniqueBrands,
-                        defaultValue: "All Brands"
+                        defaultValue: "All Brands",
+                        icon: PiFactoryFill
                     },
                     {
                         name: "Components",
                         label: "Components",
                         values: uniqueComponents,
                         defaultValue: "Any Components",
+                        icon: PiDiamondsFourFill
                     },
                     {
                         name: "Family",
                         label: "Family",
                         values: uniqueFamilies,
-                        defaultValue: "All Families"
+                        defaultValue: "All Families",
+                        icon: PiTreeStructureFill
                     }
                 ]}
                 sortOptions={[
@@ -73,21 +78,40 @@ const TobaccoCatalog = (props) => {
                         return (item['Tobacco Name'])
                     },
                     data: (item) => {
-                        return (
-                            [item['Family'] && ['Family', item['Family']],
-                            item['Cut'] && ['Cut', item['Cut']],
-                            item['Tobacco Brand'] && ['Brand', item['Tobacco Brand']]]
+                        return ( [
+                            item['Tobacco Brand'] &&
+                                {
+                                    value: item['Tobacco Brand'],
+                                    label: 'Brand',
+                                    type: 'hidden-label',
+                                    icon: PiFactory
+                                },
+                            item['Family'] &&
+                                {
+                                    value: item['Family'],
+                                    label: 'Family',
+                                    type: 'hidden-label',
+                                    icon: PiTreeStructure
+                                },
+                            item['Cut'] &&
+                                {
+                                    value: item['Cut'],
+                                    label: 'Cut',
+                                    type: 'hidden-label',
+                                    icon: PiApproximateEquals
+                                }, 
+                            item['Components'] && Array.isArray(item['Components']) &&
+                                {
+                                    value: item['Components'].join(', '),
+                                    label: 'Components',
+                                    type: 'tags hidden-label',
+                                    icon: PiDiamondsFour
+                                }
+                            ]
                         )
                     },
                     href: (item) => {
                         return('/tobacco/'+item.slug)
-                    },
-                    buttonText: (item) => {
-                        return(
-                            item["Components"] && item["Components"].length > 1 ?
-                                item["Components"].length + ' Components' :
-                                item["Components"]
-                        )
                     },
 
                     description: (item) => {
@@ -97,6 +121,20 @@ const TobaccoCatalog = (props) => {
                     }
 
                 }}
+                featuredStats={[
+                    {
+                        title: `${props.data?.length} Blends`,
+                        subtitle: "To browse",
+                        description: "Love pipe tobacco? We have plenty! Look through our collection online, or try them out in-person!",
+                        backdrop: "/tobacco-jars.jpg"
+                    },
+                    {
+                        title: 'Your favorite brands',
+                        subtitle: 'And our own blends',
+                        description: "While we mostly sell our own blends made in-house, we are proud to sell Cornell & Diehl, Lane, and more!",
+                        backdrop: "/tobacco-tins.jpg"
+                    }
+                ]}
 
                 
             

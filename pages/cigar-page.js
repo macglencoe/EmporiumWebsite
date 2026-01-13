@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react'
 import Head from 'next/head'
 
-import Footer32 from '../components/footer32'
-
 const CigarPage = (props) => {
   return (
     <>
@@ -228,51 +226,6 @@ const CigarPage = (props) => {
                   </div>
                 </div>
               </div>
-              <Footer32
-                link1={
-                  <Fragment>
-                    <span className="cigar-page-text162">About Us</span>
-                  </Fragment>
-                }
-                link2={
-                  <Fragment>
-                    <span className="cigar-page-text163">Shop</span>
-                  </Fragment>
-                }
-                link3={
-                  <Fragment>
-                    <span className="cigar-page-text164">Events</span>
-                  </Fragment>
-                }
-                link4={
-                  <Fragment>
-                    <span className="cigar-page-text165">Contact Us</span>
-                  </Fragment>
-                }
-                link5={
-                  <Fragment>
-                    <span className="cigar-page-text166">Visit Us</span>
-                  </Fragment>
-                }
-                termsLink={
-                  <Fragment>
-                    <span className="cigar-page-text167">
-                      Terms and Conditions
-                    </span>
-                  </Fragment>
-                }
-                cookiesLink={
-                  <Fragment>
-                    <span className="cigar-page-text168">Cookies Policy</span>
-                  </Fragment>
-                }
-                privacyLink={
-                  <Fragment>
-                    <span className="cigar-page-text169">Privacy Policy</span>
-                  </Fragment>
-                }
-                rootClassName="footer32root-class-name2"
-              ></Footer32>
             </div>
           </div>
           <div className="cigar-page-container51 sidebar">

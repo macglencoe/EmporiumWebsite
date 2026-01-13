@@ -11,6 +11,8 @@ import PageTitle1 from './pagetitle1';
 import Layout from './layout';
 import Filters from './filters';
 import { track } from '@vercel/analytics';
+import { PiCaretDownBold, PiCaretDownFill, PiMagnifyingGlassBold, PiXCircleBold, PiXCircleFill } from 'react-icons/pi';
+import Image from 'next/image';
 
 
 export const getStaticProps = async () => {
@@ -37,23 +39,55 @@ export const getStaticProps = async () => {
  * @param {Array} props.sortOptions - The options available for sorting the catalog.
  * @param {Array} props.auxiliarySearchBars - Auxiliary search bars for additional searches.
  * @param {Object} props.cardSettings - Settings for rendering catalog cards.
- * @param {string} props.subtitle - Subtitle for the catalog page.
+ * @param {string} props.description - description for the catalog page.
  * @param {string} props.title - Title for the catalog page.
  * @param {Array} props.notices - Notices to be displayed on the catalog page.
+ * @param {Array} [props.featuredStats] - Highlighted stats to display under the pagination.
  * @param {string} props.defaultSort - The default sort option.
  * 
  * Accessibility: 
  * - The component uses semantic HTML elements and aria attributes to improve accessibility.
- */
+*/
 
 const Catalog = (props) => {
 
+    const router = useRouter();
     const [sortOption, setSortOption] = useState(props.defaultSort);
     const [filtersOpen, setFiltersOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+    const featuredStats = Array.isArray(props.featuredStats) ? props.featuredStats.filter(Boolean) : [];
+
+    const isQueryValueEmpty = (value) => {
+        if (value == null) {
+            return true;
+        }
+        if (Array.isArray(value)) {
+            return value.every((item) => isQueryValueEmpty(item));
+        }
+        return String(value).trim() === '';
+    };
+    const getFirstNonEmptyValue = (value) => {
+        if (Array.isArray(value)) {
+            const usableValue = value.find((item) => !isQueryValueEmpty(item));
+            return usableValue !== undefined ? getFirstNonEmptyValue(usableValue) : '';
+        }
+        if (value == null) {
+            return '';
+        }
+        return String(value).trim();
+    };
+    const searchQueryValue = router.query?.search;
+    const onlySearchHasValue = !isQueryValueEmpty(searchQueryValue) &&
+        Object.entries(router.query ?? {}).every(([key, value]) =>
+            key === 'search' ||
+            key === 'page' ||
+            isQueryValueEmpty(value)
+        );
+    const emptyResultsMessage = onlySearchHasValue
+        ? `Sorry, we couldn't find anything called "${getFirstNonEmptyValue(searchQueryValue)}"`
+        : "Sorry, we couldn't find what you were looking for";
 
     // Set filters based on query parameters
-    const router = useRouter();
 
     const handleOpenFilters = (event) => {
         setFiltersOpen((prev) => !prev)
@@ -72,7 +106,8 @@ const Catalog = (props) => {
         });
         track("Used Filters", {
             filter: event.target.name,
-            value: event.target.value});
+            value: event.target.value
+        });
     };
 
     useEffect(() => {
@@ -86,6 +121,9 @@ const Catalog = (props) => {
                     router.query[filter.name] = '';
                 }
             });
+            if (router.query.search) {
+                setSearchInput(router.query.search)
+            }
         }
     }, [router.isReady]);
 
@@ -191,87 +229,87 @@ const Catalog = (props) => {
 
     return (
         <>
-            <Layout
-                sidebarChildren={
+            <Layout>
+                <PageTitle1 description={props.description}>
+                    {props.title ?? "Catalog"}
+                </PageTitle1>
+                {props.notices}
+                {featuredStats.length > 0 && (
+                    <div className='px-3 py-2 shadow-xl border-b-3 border-double border-secondary2/50 bg-primary2/30'>
+                        <div className="w-full grid gap-2 mb-1" aria-label="Catalog highlights" style={{
+                            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))"
+                        }}>
+                            {featuredStats.map((stat, index) => (
+                                <article
+                                    key={`${stat?.title ?? 'stat'}-${index}`}
+                                    className="text-primary2 p-3 m-1 w-fit border-8 border-double border-secondary2 relative h-70 flex flex-col justify-end overflow-hidden"
+                                >
 
-                    <>
-                        <div className="catalog-container39">
-                            <label for="sort" className="catalog-sorty-by">Sort By:</label>
-                            <select id="sort" value={sortOption} onChange={handleSortChange} className="catalog-select">
+                                    {stat.backdrop &&
+                                        <div className='absolute inset-0 z-10'>
+                                            <Image layout='fill' className="object-cover" src={stat.backdrop} priority={index === 0} />
+                                            <div className='absolute inset-0 bg-gradient-to-b from-secondary2/40 via-secondary2/90 to-secondary2' />
 
-                                {
-                                    props.sortOptions.map((option) => (
-                                        <option key={option.value} value={option.value}>{option.label}</option>
-                                    ))
-                                }
-                            </select>
+                                        </div>
+                                    }
+
+                                    {stat?.title && (
+                                        <h2 className="tracking-wider uppercase font-inter font-bold text-3xl z-[11]">{stat.title}</h2>
+                                    )}
+                                    {stat?.subtitle && (
+                                        <span className="font-bold text-xl italic uppercase tracking-wide text-primary1 z-[11]">{stat.subtitle}</span>
+                                    )}
+                                    {stat?.description && (
+                                        <p className="mt-2 z-[11]">{stat.description}</p>
+                                    )}
+                                </article>
+                            ))}
                         </div>
-                        {
-                            props.auxiliarySearchBars && props.auxiliarySearchBars.length > 0 && props.auxiliarySearchBars[0] !== false &&
-                            props.auxiliarySearchBars.map((auxSearch) => (
-                                <input
-                                    type="search"
-                                    name={auxSearch.query}
-                                    value={auxSearchQueries[auxSearch.name]}
-                                    onChange={handleAuxSearchChange}
-                                    placeholder={auxSearch.label + '...'}
-                                    style={{
-                                        margin: '10px',
-                                    }}
-                                />
-                            ))
-                        }
+                    </div>
+                )}
+                <div className="catalog-container31">
 
-                        <Filters filters={props.filters} />
-                    </>
 
-                }
 
-                headerChildren={
-                    <>
-                        <div className='searchbar-container' id='header-search'>
+                    <div className="w-full space-y-4 py-4 px-2">
+
+
+
+                        <div className='mt-10' id='search'>
                             <form onSubmit={(e) => {
                                 e.preventDefault();
                                 handleSearchChange({ target: { value: searchInput } });
-                                setSearchInput('');
                             }}
-                                className='searchbar'>
+                                className='bg-primary2 flex flex-row items-center max-w-3xl mx-auto border-6 border-primary1/50 border-double'>
                                 <input
                                     type="search"
                                     value={searchInput}
                                     onChange={(e) => setSearchInput(e.target.value)}
                                     placeholder="Search..."
+                                    className="flex-1 p-3"
                                 />
-                                <button aria-label='Search' type="submit" className='search-button'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960" width="32px" fill="var(--dl-color-theme-secondary1)">
-                                        <path d="M790.67-89.33 525-354.33q-29 21.95-68.14 34.64Q417.72-307 372-307q-116.11 0-196.89-80.83-80.78-80.84-80.78-195.5 0-114.67 80.84-195.5Q256-859.67 371-859.67q115 0 195.5 80.84Q647-698 647-583.23q0 45.23-12.33 83.4-12.34 38.16-35.67 70.16L865.67-164l-75 74.67Zm-419.1-322.34q71.93 0 121.35-50 49.41-50 49.41-121.66 0-71.67-49.51-121.67-49.52-50-121.25-50-72.29 0-122.43 50T199-583.33q0 71.66 50.04 121.66t122.53 50Z" />
-                                    </svg>
+                                <button aria-label='Search' type="submit" className='cursor-pointer px-3'>
+                                    <PiMagnifyingGlassBold size={30} />
 
                                 </button>
                             </form>
                         </div>
-                    </>
-                }
-            >
-                <PageTitle1 subtitle={props.subtitle}>
-                    {props.title ?? "Catalog"}
-                </PageTitle1>
-                {props.notices}
-                <div className="catalog-container31">
 
-                    <div className="catalog-container38">
-                        {isMobile && (
+                        <div className='max-w-3xl mx-auto border-6 border-primary1/50 border-double bg-primary2'>
 
-
-                            <div className="filter-header-container">
-                                <span onClick={handleOpenFilters}>Filter & Sort</span>
-                                <div onClick={handleOpenFilters}></div>
+                            <div className="group flex flex-row items-center justify-between px-3"
+                                onClick={handleOpenFilters}
+                                style={{
+                                    borderBottom: filtersOpen ? 'solid var(--dl-color-theme-primary2)' : ''
+                                }}
+                            >
+                                <span className='py-3' onClick={handleOpenFilters}>Filter & Sort</span>
                                 <button
                                     name='Toggle Filters'
                                     aria-label='Toggle Filters'
                                     onClick={handleOpenFilters}
                                     style={{
-                                        transform: filtersOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                                        transform: filtersOpen ? 'scaleY(-100%)' : 'scaleY(100%)',
                                         transition: 'transform 0.2s ease-in-out',
                                     }}
                                     aria-expanded={filtersOpen}
@@ -279,61 +317,72 @@ const Catalog = (props) => {
                                     tabIndex={!isMobile ? -1 : 0}
 
                                 >
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-328 225-583h510L480-328Z" /></svg>
+                                    <PiCaretDownFill size={24} />
                                 </button>
                             </div>
-                        )}
-                        {isMobile && (
 
-                            <div className="filter-sort-container"
-                                style={{
-                                    width: '100%',
-                                    transform: filtersOpen ? 'scaleY(1)' : 'scaleY(0)',
-                                    transition: 'transform 0.2s ease-in-out',
-                                    height: filtersOpen ? 'auto' : '0',
-                                    transformOrigin: 'top',
-                                    flexDirection: 'column',
-                                }}>
-                                <div className='sort-container'>
-                                    <label for="sort" className="catalog-sorty-by">Sort By:</label>
-                                    <select
-                                        id="sort"
-                                        value={sortOption}
-                                        onChange={handleSortChange}
-                                        className="catalog-select"
-                                        tabIndex={!isMobile ? -1 : 0}
-                                    >
+                            {filtersOpen && (
 
-                                        {
-                                            props.sortOptions.map((option) => (
-                                                <option
-                                                    key={option.value}
-                                                    value={option.value}
-                                                >{option.label}</option>
-                                            ))
-                                        }
-                                    </select>
+                                <div className="p-2 "
+                                    style={{
+                                        width: '100%',
+                                        transform: filtersOpen ? 'scaleY(1)' : 'scaleY(0)',
+                                        transition: 'transform 0.2s ease-in-out',
+                                        height: filtersOpen ? 'auto' : '0',
+                                        transformOrigin: 'top',
+                                        flexDirection: 'column',
+                                        borderTop: "solid var(--dl-color-theme-primary2)"
+                                    }}>
+                                    <div className='text-secondary1 p-2'>
+                                        <label for="sort" className="tracking-wide uppercase font-semibold mr-2">Sort By:</label>
+                                        <select
+                                            id="sort"
+                                            value={sortOption}
+                                            onChange={handleSortChange}
+                                            className="px-2 py-1 bg-primary1/40"
+                                            tabIndex={!isMobile ? -1 : 0}
+                                        >
+
+                                            {
+                                                props.sortOptions.map((option) => (
+                                                    <option
+                                                        key={option.value}
+                                                        value={option.value}
+                                                    >{option.label}</option>
+                                                ))
+                                            }
+                                        </select>
+                                    </div>
+                                    <Filters filters={props.filters} />
                                 </div>
-                                <Filters filters={props.filters} inactive={window.innerWidth >= 680} />
-                            </div>
-                        )}
+                            )}
 
-                        {Object.keys(router.query).some(key => key !== 'page' && router.query[key] !== '') &&
-                            <div className="filter-bubble-container">
-                                {Object.entries(router.query).map(([filterKey, filterValue]) => (
-                                    filterValue !== '' && filterKey !== 'page' && (
-                                        <div className="filter-bubble" key={filterKey}>
-                                            <span className="filter-bubble-name">{filterKey}: {filterValue}</span>
-                                            <button onClick={() => handleFilterChange({ target: { name: filterKey, value: '' } })}
-                                                className='filter-bubble-button'
-                                                aria-label={'Clear ' + filterValue + 'Filter for ' + filterKey}
-                                            >
-                                                <span className="filter-bubble-x">x</span>
-                                            </button>
-                                        </div>
-                                    )
-                                ))}
-                                <span>Returned <b style={{ color: 'var(--dl-color-theme-primary1)' }}>{sortedItems.length}</b> results</span>
+                            {Object.keys(router.query).some(key => key !== 'page' && router.query[key] !== '') &&
+                                <div className='font-inter p-2 flex flex-row flex-wrap gap-2 items-center'>
+                                    {Object.entries(router.query).map(([filterKey, filterValue]) => (
+                                        filterValue !== '' && filterKey !== 'page' && (
+                                            <div className='bg-primary1/20 flex flex-row items-stretch gap-2 justify-between w-fit py-1 px-2 border border-primary1/50 rounded-2xl' key={filterKey}>
+                                                <div className='flex flex-col'>
+                                                    <span className='font-bold text-xs tracking-wide'>{String(filterKey).toUpperCase()}</span>
+                                                    <span className='font-medium'>"{filterValue}" </span>
+                                                </div>
+                                                <button onClick={() => handleFilterChange({ target: { name: filterKey, value: '' } })}
+                                                    className='group'
+                                                    aria-label={'Clear ' + filterValue + 'Filter for ' + filterKey}
+                                                >
+                                                    <PiXCircleFill size={25} className='group-hover:scale-110 opacity-50 group-hover:opacity-100 text-[var(--negative)]' />
+                                                </button>
+                                            </div>
+                                        )
+                                    ))}
+                                    <span>Returned <b className='text-primary1'>{sortedItems.length}</b> results</span>
+                                </div>
+                            }
+                        </div>
+
+                        {sortedItems.length == 0 &&
+                            <div className="flex-1 w-full flex flex-col items-center py-20">
+                                <span className="text-3xl">{emptyResultsMessage}</span>
                             </div>
                         }
 
@@ -341,6 +390,10 @@ const Catalog = (props) => {
                         <CatalogContent
                             data={sortedItems}
                             cardSettings={props.cardSettings}
+                            featuredStats={props.featuredStats}
+                            searchInput={searchInput}
+                            setSearchInput={setSearchInput}
+                            handleSearchChange={handleSearchChange}
 
                         ></CatalogContent>
                     </div>
@@ -359,7 +412,6 @@ const Catalog = (props) => {
             background-color: var(--dl-color-theme-secondary2);
         }
         .filter-header-container {
-            display: none;
             flex-direction: row;
             background-color: var(--dl-color-theme-secondary2);
             width: 100%;
@@ -378,7 +430,6 @@ const Catalog = (props) => {
             border-bottom: 2px solid var(--dl-color-theme-primary2);
         }
         filter-sort-container {
-            display: none;
             flex-direction: column;
             gap: 10px;
             padding: 10px;

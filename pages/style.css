@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --dl-size-size-large: 144px;
   --dl-size-size-small: 48px;
@@ -42,6 +44,15 @@
 
 }
 
+@theme {
+  --color-primary1: var(--dl-color-theme-primary1);
+  --color-primary2: var(--dl-color-theme-primary2);
+  --color-secondary1: var(--dl-color-theme-secondary1);
+  --color-secondary2: var(--dl-color-theme-secondary2);
+  --color-neutral-dark: var(--dl-color-theme-neutral-dark);
+  --color-neutral-light: var(--dl-color-theme-neutral-light);
+}
+
 @font-face {
   font-family: "Playfair";
   src: url(../public/fonts/PlayfairDisplay-VariableFont_wght.ttf);
@@ -53,6 +64,14 @@
   font-style: italic;
 }
 
+/* addons */
+.small-caps {
+  font-variant: small-caps;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
 
 html {
   font-family: "Playfair";
