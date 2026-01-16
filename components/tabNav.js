@@ -10,11 +10,16 @@ const TabNav = ({ tabs = [], initialTab, onChange }) => {
   }, [initialTab, active]);
 
   return (
-    <div className="tabnav">
+    <div className="flex flex-row justify-evenly items-stretch h-10">
       {tabs.map((tab) => (
         <button
           key={tab.id}
-          className={tab.id === active ? "active" : ""}
+          className={`
+            w-full border-amber-900 rounded-t-2xl
+            font-bold uppercase
+            ` + (tab.id === active ?
+              "border-x-4 border-t-4" :
+              "border-b-4 shadow-[inset_0_-18px_15px_-15px_rgb(0_0_0_/_0.18)]")}
           onClick={() => {
             setActive(tab.id);
             onChange?.(tab.id);
