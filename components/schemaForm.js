@@ -1,13 +1,14 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useForm, FormProvider, Controller, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { buildSchemaArtifacts } from "../utils/schemaMapper";
+import TabNav from "./tabNav";
 
 /**
  * Basic react-hook-form wrapper that consumes the UI schema and Zod mapper.
  * Renders simple inputs for common field types; extend as needed.
  */
-const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, initialValues = {} }) => {
+const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, initialValues = {}, tabs: tabsProp }) => {
   const { zodSchema, defaults } = useMemo(() => buildSchemaArtifacts(uiSchema), [uiSchema]);
 
   const mergedDefaults = useMemo(
@@ -34,22 +35,48 @@ const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, init
   }, [mergedDefaults, methods]);
 
   const properties = uiSchema?.properties || {};
+  const tabs = useMemo(() => deriveTabs(properties, tabsProp), [properties, tabsProp]);
+  const [activeTab, setActiveTab] = useState(tabs[0]?.id || "metadata");
+
+  useEffect(() => {
+    if (tabs.length && !tabs.find((t) => t.id === activeTab)) {
+      setActiveTab(tabs[0]?.id);
+    }
+  }, [tabs, activeTab]);
 
   return (
     <FormProvider {...methods}>
       <form onSubmit={handleSubmit(onSubmit)} className="schema-form">
-        {renderField
-          ? renderField({ control, register, errors, schema: uiSchema })
-          : Object.entries(properties).map(([name, field]) => (
-              <Field
-                key={name}
-                name={name}
-                field={field}
-                control={control}
-                register={register}
-                error={errors[name]}
-              />
-            ))}
+        <TabNav
+          tabs={tabs}
+          initialTab={activeTab}
+          onChange={setActiveTab}
+        />
+
+        <div className="tab-panels">
+          {tabs.map((tab) => {
+            const entries = Object.entries(properties).filter(([name, field]) => tab.filter(name, field));
+            return (
+              <section key={tab.id} style={{
+                display: activeTab == tab.id ? "block" : "none"
+              }}>
+                {renderField
+                  ? renderField({ control, register, errors, schema: uiSchema, tab: tab.id })
+                  : entries.map(([name, field]) => (
+                      <Field
+                        key={name}
+                        name={name}
+                        field={field}
+                        control={control}
+                        register={register}
+                        error={errors[name]}
+                      />
+                    ))}
+                {!entries.length && <p>No fields in this tab.</p>}
+              </section>
+            );
+          })}
+        </div>
 
         {children}
       </form>
@@ -165,6 +192,31 @@ const normalizeType = (type) => {
   const baseType = types.find((t) => t && t !== "null") || "any";
   return { baseType };
 };
+
+const deriveTabs = (properties, tabsProp) => {
+  if (Array.isArray(tabsProp) && tabsProp.length > 0) {
+    return tabsProp;
+  }
+
+  const sectionMap = new Map();
+  Object.entries(properties).forEach(([name, field]) => {
+    const section = sectionOf(field);
+    if (!sectionMap.has(section)) {
+      sectionMap.set(section, {
+        id: section,
+        label: capitalize(section),
+        filter: (n, f) => sectionOf(f) === section,
+      });
+    }
+  });
+
+  return Array.from(sectionMap.values());
+};
+
+const sectionOf = (field) =>
+  field?.ui?.section || (normalizeType(field.type).baseType === "array" ? "sizes" : "metadata");
+
+const capitalize = (str = "") => str.charAt(0).toUpperCase() + str.slice(1);
 
 const buildDefaultsForItem = (properties = {}) =>
   Object.entries(properties).reduce((acc, [key, field]) => {
