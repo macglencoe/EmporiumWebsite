@@ -4,10 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { buildSchemaArtifacts } from "../utils/schemaMapper";
 import TabNav from "./tabNav";
 
-/**
- * Basic react-hook-form wrapper that consumes the UI schema and Zod mapper.
- * Renders simple inputs for common field types; extend as needed.
- */
 const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, initialValues = {}, tabs: tabsProp }) => {
   const { zodSchema, defaults } = useMemo(() => buildSchemaArtifacts(uiSchema), [uiSchema]);
 
@@ -46,7 +42,10 @@ const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, init
 
   return (
     <FormProvider {...methods}>
-      <form onSubmit={handleSubmit(onSubmit)} className="schema-form">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="schema-form p-6 space-y-6"
+      >
         <TabNav
           tabs={tabs}
           initialTab={activeTab}
@@ -57,9 +56,10 @@ const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, init
           {tabs.map((tab) => {
             const entries = Object.entries(properties).filter(([name, field]) => tab.filter(name, field));
             return (
-              <section key={tab.id} style={{
-                display: activeTab == tab.id ? "block" : "none"
-              }}>
+              <section
+                key={tab.id}
+                className={`${activeTab === tab.id ? "block" : "hidden"} space-y-4`}
+              >
                 {renderField
                   ? renderField({ control, register, errors, schema: uiSchema, tab: tab.id })
                   : entries.map(([name, field]) => (
@@ -104,22 +104,30 @@ const Field = ({ name, field, control, register, error }) => {
 
   if (baseType === "boolean") {
     return (
-      <label className="form-field">
-        <input type="checkbox" {...register(name)} />
-        <span>{label}</span>
-        {description && <small>{description}</small>}
-        {error && <span className="error">{error.message}</span>}
-      </label>
+      <div className="space-y-1">
+        <label className="flex items-center gap-2 text-sm font-medium ">
+          <input type="checkbox" {...register(name)} className="h-4 w-4 text-amber-600 border-gray-300 rounded" />
+          {label}
+        </label>
+        {description && <p className="text-sm ">{description}</p>}
+        {error && <p className="text-sm text-red-600">{error.message}</p>}
+      </div>
     );
   }
 
   if (inputType === "textarea") {
     return (
-      <div className="form-field">
-        <label htmlFor={name}>{label}</label>
-        <textarea id={name} rows={field?.ui?.rows || 3} {...register(name)} placeholder={field?.ui?.placeholder} />
-        {description && <small>{description}</small>}
-        {error && <span className="error">{error.message}</span>}
+      <div className="space-y-1">
+        <label htmlFor={name} className="text-sm font-semibold">{label}</label>
+        <textarea
+          id={name}
+          rows={field?.ui?.rows || 3}
+          {...register(name)}
+          placeholder={field?.ui?.placeholder}
+          className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-300 text-gray-900"
+        />
+        {description && <p className="text-sm ">{description}</p>}
+        {error && <p className="text-sm text-red-600">{error.message}</p>}
       </div>
     );
   }
@@ -130,8 +138,8 @@ const Field = ({ name, field, control, register, error }) => {
     const step = field?.ui?.range?.step ?? 1;
 
     return (
-      <div className="form-field">
-        <label htmlFor={name}>{label}</label>
+      <div className="space-y-1">
+        <label htmlFor={name} className="text-sm font-semibold text-gray-800">{label}</label>
         <Controller
           name={name}
           control={control}
@@ -147,13 +155,14 @@ const Field = ({ name, field, control, register, error }) => {
                   max={max}
                   step={step}
                   value={activePos}
+                  className="w-full accent-amber-600"
                   onChange={(event) => {
                     const pos = Number(event.target.value);
                     const match = field.ui.options.find((opt) => opt.pos === pos);
                     controllerField.onChange(match ? match.value : null);
                   }}
                 />
-                <div className="range-labels">
+                <div className="range-labels flex justify-between text-xs text-gray-600">
                   {field.ui.options.map((opt) => (
                     <span key={opt.pos}>{opt.label}</span>
                   ))}
@@ -162,8 +171,8 @@ const Field = ({ name, field, control, register, error }) => {
             );
           }}
         />
-        {description && <small>{description}</small>}
-        {error && <span className="error">{error.message}</span>}
+        {description && <p className="text-sm ">{description}</p>}
+        {error && <p className="text-sm text-red-600">{error.message}</p>}
       </div>
     );
   }
@@ -172,17 +181,18 @@ const Field = ({ name, field, control, register, error }) => {
   const typeAttr = inputType === "date" || field?.format === "date" ? "date" : "text";
 
   return (
-    <div className="form-field">
-      <label htmlFor={name}>{label}</label>
+    <div className="space-y-1">
+      <label htmlFor={name} className="text-sm font-semibold text-gray-800">{label}</label>
       <input
         id={name}
         type={typeAttr}
         {...register(name)}
         placeholder={field?.ui?.placeholder}
         autoComplete="off"
+        className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-300 text-gray-900"
       />
-      {description && <small>{description}</small>}
-      {error && <span className="error">{error.message}</span>}
+      {description && <p className="text-sm ">{description}</p>}
+      {error && <p className="text-sm text-red-600">{error.message}</p>}
     </div>
   );
 };
@@ -247,10 +257,19 @@ const ArrayFieldset = ({ name, field, control, register, error }) => {
   const addItem = () => append(buildDefaultsForItem(itemProps));
 
   return (
-    <div className="form-field array-field">
-      <label>{label}</label>
+      <div className="space-y-2">
+        <div className="flex items-center justify-between">
+          <label className="text-sm font-semibold text-gray-800">{label}</label>
+          <button
+            type="button"
+            onClick={addItem}
+            className="inline-flex items-center px-3 py-2 text-sm font-semibold text-white bg-amber-600 hover:bg-amber-700 rounded-md shadow-sm"
+          >
+            Add Entry
+          </button>
+        </div>
       {fields.map((item, idx) => (
-        <div key={item.id} className="array-item">
+        <div key={item.id} className="array-item rounded-md border border-gray-200 bg-gray-50 p-3 space-y-2 shadow-sm">
           {Object.entries(itemProps).map(([childName, childField]) => {
             const childLabel = childField?.ui?.label || childName;
             const childType = normalizeType(childField.type).baseType;
@@ -259,13 +278,14 @@ const ArrayFieldset = ({ name, field, control, register, error }) => {
             const childError = error?.[idx]?.[childName];
 
             return (
-              <div key={childName} className="array-field-row">
-                <label>{childLabel}</label>
+              <div key={childName} className="array-field-row space-y-1">
+                <label className="text-sm font-medium text-gray-800">{childLabel}</label>
                 {childType === "boolean" ? (
                   <input
                     type="checkbox"
                     {...register(`${name}.${idx}.${childName}`)}
                     defaultChecked={!!item[childName]}
+                    className="h-4 w-4 text-amber-600 border-gray-300 rounded"
                   />
                 ) : (
                   <input
@@ -273,22 +293,24 @@ const ArrayFieldset = ({ name, field, control, register, error }) => {
                     {...register(`${name}.${idx}.${childName}`)}
                     defaultValue={item[childName] ?? ""}
                     placeholder={childField?.ui?.placeholder}
+                    className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-300 text-gray-900"
                   />
                 )}
-                {childError && <span className="error">{childError.message}</span>}
+                {childError && <p className="text-sm text-red-600">{childError.message}</p>}
               </div>
             );
           })}
-          <button type="button" onClick={() => remove(idx)} className="standard-button">
+          <button
+            type="button"
+            onClick={() => remove(idx)}
+            className="inline-flex items-center px-3 py-2 text-sm font-semibold text-white bg-red-500 hover:bg-red-600 rounded-md"
+          >
             Delete Entry
           </button>
         </div>
       ))}
-      <button type="button" onClick={addItem} className="standard-button">
-        Add Entry
-      </button>
-      {description && <small>{description}</small>}
-      {error && typeof error.message === "string" && <span className="error">{error.message}</span>}
+      {description && <p className="text-sm ">{description}</p>}
+      {error && typeof error.message === "string" && <p className="text-sm text-red-600">{error.message}</p>}
     </div>
   );
 };
