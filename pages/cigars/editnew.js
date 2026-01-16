@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import Layout from "../../components/layout";
 import PageTitle1 from "../../components/pagetitle1";
-import { use, useEffect, useState } from "react";
-import CrudForm from "../../components/crudForm";
-import Toolbar from "../../components/toolbar";
-import cigarFields from "../../public/data/cigar-fields.json"
+import { useEffect, useMemo, useState } from "react";
+import SchemaForm from "../../components/schemaForm";
+import uiSchema from "../../public/data/cigar.ui.schema.json";
+import { buildSchemaArtifacts } from "../../utils/schemaMapper";
 
 export const getStaticProps = async () => {
     const cigarsData = await import('../../public/data/consolidated_cigars.json');
@@ -14,39 +14,27 @@ export const getStaticProps = async () => {
 
 const EditNewCigarPage = (props) => {
     const router = useRouter();
+
     const slug = router.query.slug;
 
-    const [cigarLocalData, setCigarLocalData] = useState({});
+    const [cigarLocalData, setCigarLocalData] = useState(null);
     const [allCigarData, setAllCigarData] = useState(props.data);
 
-    
-    const sizeFields = {
-        "Size": "",
-        "Barcode": "",
-        "In_Stock": "",
-        "Price": ""
-    }
-
-    const originalData = {
-        'Cigar Brand': "",
-        'Cigar Name': "",
-        'Wrapper': "",
-        'Binder': "",
-        'Filler': "",
-        "Flavor_Profile": "",
-        "Strength_Profile": "",
-        "Sizes": [{}]
-    }
+    const { defaults } = useMemo(() => buildSchemaArtifacts(uiSchema), []);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            pullTempData();
-            if (localStorage.getItem('originData_cigars')) {
-                setAllCigarData(JSON.parse(localStorage.getItem('originData_cigars')));
+            const temp = pullTempData();
+            if (!temp) {
+                setCigarLocalData(defaults);
+            }
+            const origin = localStorage.getItem('originData_cigars');
+            if (origin) {
+                setAllCigarData(JSON.parse(origin));
             }
         }
 
-    }, [router.query.slug]);
+    }, [router.query.slug, defaults]);
 
     /**
      * Pulls the current cigar data from local storage and updates the state.
@@ -54,17 +42,19 @@ const EditNewCigarPage = (props) => {
      * @function
      */
     const pullTempData = () => {
-        if (typeof window !== 'undefined') {
-            const tempData = JSON.parse(localStorage.getItem('tempData_cigars'));
-            const firstCigarWithSameSlug = tempData.find((cigar) => cigar.slug === router.query.slug);
+        if (typeof window === 'undefined') return null;
+        const tempData = JSON.parse(localStorage.getItem('tempData_cigars') || "[]");
+        const firstCigarWithSameSlug = tempData.find((cigar) => cigar.slug === router.query.slug);
 
-            // if slug matches a cigar in original data, do not set cigarLocalData
-            // this is because the user is editing a new cigar, not an existing one
-            if (!allCigarData.find((cigar) => cigar.slug === slug)) {
+        // if slug matches a cigar in original data, do not set cigarLocalData
+        // this is because the user is editing a new cigar, not an existing one
+        if (!allCigarData.find((cigar) => cigar.slug === slug)) {
+            if (firstCigarWithSameSlug) {
                 setCigarLocalData(firstCigarWithSameSlug);
-                return firstCigarWithSameSlug;
             }
+            return firstCigarWithSameSlug;
         }
+        return null;
     }
     /**
      * Pulls all cigar data from local storage and updates the state.
@@ -72,7 +62,7 @@ const EditNewCigarPage = (props) => {
      * @returns {Array<Object>} - The array of cigar data
      */
     const pullAllTempData = () => {
-        const tempData = JSON.parse(localStorage.getItem('tempData_cigars'));
+        const tempData = JSON.parse(localStorage.getItem('tempData_cigars') || "[]");
         setAllCigarData(tempData);
         return tempData;
     }
@@ -115,20 +105,20 @@ const EditNewCigarPage = (props) => {
             alert('Slug already exists. Please choose a different name.');
             return;
         }
-        localData['slug'] = generateSlug(localData);
+        const updated = { ...localData, slug: generateSlug(localData) };
 
         // Load the temp data from local storage
         // If it doesn't exist, alert the user and return without saving
-        let tempData = JSON.parse(localStorage.getItem('tempData_cigars'));
+        let tempData = JSON.parse(localStorage.getItem('tempData_cigars') || "[]");
         if (!tempData) {
             alert('No temp data found. Please report this error.');
             return;
         }
         // Find the index of the item in the temporary data that has the same slug as the data we're trying to save.
         // If it doesn't exist, alert the user and return without saving.
-        const index = tempData.findIndex(item => item.slug === localData.slug);
+        const index = tempData.findIndex(item => item.slug === updated.slug);
         if (index !== -1) {
-            tempData[index] = localData;
+            tempData[index] = updated;
         } else {
             alert('Index not found. Please report this error.');
             return;
@@ -153,7 +143,7 @@ const EditNewCigarPage = (props) => {
      */
 
     const deleteCigar = () => {
-        const tempData = JSON.parse(localStorage.getItem('tempData_cigars'));
+        const tempData = JSON.parse(localStorage.getItem('tempData_cigars') || "[]");
         const index = tempData.findIndex(item => item.slug === router.query.slug);
         if (index !== -1) {
             tempData.splice(index, 1);
@@ -187,24 +177,16 @@ const EditNewCigarPage = (props) => {
                 </div>
                 <PageTitle1 subtitle="This form is for editing a new cigar, not an existing one">Edit New Cigar</PageTitle1>
 
-                <CrudForm
-                    pullTempData={pullTempData}
-                    pullAllTempData={pullAllTempData}
-                    dataFields={cigarFields}
-                    dataOriginal={originalData}
-                    onMetadataChange={(e) => {
-                        setCigarLocalData({ ...cigarLocalData, [e.target.name]: e.target.value });
-                    }}
-                    onMetadataRevert={(e) => {
-                        setCigarLocalData({ ...cigarLocalData, [e.target.name]: cigarFields[e.target.name] });
-                    }}
-                    arrayFields={{
-                        'Sizes': sizeFields
-                    }}
-                    generateSlug={generateSlug}
-                    isSlugUnique={isSlugUnique}
+                <SchemaForm
+                    key={slug}
+                    uiSchema={uiSchema}
+                    initialValues={cigarLocalData}
                     onSubmit={saveChanges}
-                ></CrudForm>
+                >
+                    <div className="tools">
+                        <button type="submit" className="standard-button">Save Changes</button>
+                    </div>
+                </SchemaForm>
 
             </Layout>
             <style jsx>{`
