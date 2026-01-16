@@ -68,7 +68,7 @@ const Layout = (props) => {
         </header>
 
 
-        <div className="catalog-container11 container">
+        <div className="catalog-container11 w-full flex items-stretch">
           <div className={`catalog-container73 sidebar${isActive ? ' collapsed' : ''}`}>
 
             <Fragment>
