@@ -209,15 +209,9 @@ const getRegisterOptions = (field = {}) => {
   const { baseType, allowNull } = normalizeType(field.type);
   const isDate = field?.format === "date" || field?.ui?.input === "date";
 
-  if (isDate) {
+  if (isDate || (allowNull && baseType === "string")) {
     return {
-      setValueAs: (v) => (v === "" ? null : v),
-    };
-  }
-
-  if (allowNull && baseType === "string") {
-    return {
-      setValueAs: (v) => (v === "" ? null : v),
+      setValueAs: (v) => (v === "" ? undefined : v),
     };
   }
 

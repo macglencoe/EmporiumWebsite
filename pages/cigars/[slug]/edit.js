@@ -103,13 +103,14 @@ const EditCigarPage = (props) => {
      */
 
     const isSlugUnique = (localData) => {
-        if (localData) {
-            const slugExists = allCigarsLocalData.some((cigar) =>
-                (cigar.slug !== localData.slug && cigar.slug === generateSlug(localData)) ||
-                (cigar['new-slug'] && cigar['new-slug'] === generateSlug(localData))
-            );
-            return !slugExists;
-        }
+        if (!localData) return true;
+        const targetSlug = generateSlug(localData);
+        return !allCigarsLocalData.some((cigar) => {
+            // ignore the current record (by original or pending new slug)
+            const isSameRecord = cigar.slug === localData.slug || cigar['new-slug'] === localData.slug;
+            if (isSameRecord) return false;
+            return cigar.slug === targetSlug || cigar['new-slug'] === targetSlug;
+        });
     }
 
     /**
@@ -119,6 +120,26 @@ const EditCigarPage = (props) => {
      * @param {Object} localData - The local cigar data to be saved.
      * @returns {void}
      */
+    const pruneEmpty = (value) => {
+        if (Array.isArray(value)) {
+            return value.map(pruneEmpty);
+        }
+        if (value && typeof value === "object") {
+            const result = {};
+            Object.entries(value).forEach(([k, v]) => {
+                const cleaned = pruneEmpty(v);
+                if (cleaned !== undefined) {
+                    result[k] = cleaned;
+                }
+            });
+            return result;
+        }
+        if (value === "" || value === null || value === undefined) {
+            return undefined;
+        }
+        return value;
+    };
+
     const saveChanges = (localData) => {
         // Before saving changes, check if the slug generated from the new data is unique.
         // If it's not, alert the user and return without saving.
@@ -128,19 +149,21 @@ const EditCigarPage = (props) => {
         }
 
         // The slug is unique, so generate a new slug from the new data.
-        const updated = { ...localData, 'new-slug': generateSlug(localData) };
+        const currentSlug = localData.slug || props.cigar.slug;
+        const newSlug = generateSlug(localData);
+        const updated = pruneEmpty({ ...localData, slug: currentSlug, 'new-slug': newSlug });
 
         // Load the temporary data from local storage.
         // If it doesn't exist, use the original data from the database.
         let tempData = JSON.parse(localStorage.getItem('tempData_cigars') || "[]");
-        if (!tempData) {
-            tempData = props.data;
+        if (!Array.isArray(tempData)) {
+            tempData = props.data || [];
             localStorage.setItem('tempData_cigars', JSON.stringify(tempData));
         }
 
         // Find the index of the item in the temporary data that has the same slug as the data we're trying to save.
         // If it doesn't exist, add it to the temporary data.
-        const index = tempData.findIndex(item => item.slug === localData.slug);
+        const index = tempData.findIndex(item => item.slug === currentSlug);
         if (index !== -1) {
             // Replace the item in the temporary data with the new data.
             tempData[index] = updated;
@@ -149,30 +172,34 @@ const EditCigarPage = (props) => {
             tempData.push(updated);
         }
 
+        const targetIndex = index === -1 ? tempData.length - 1 : index;
         // Remove any non-objects from the Sizes array.
         // This is because the Sizes array is an array of objects, and we want to make sure it stays that way.
         // If someone manually edits the local storage, they might accidentally add a non-object to the Sizes array.
         // This line removes any non-objects from the Sizes array, so we can be sure that the Sizes array is always an array of objects.
-        if (tempData[index].Sizes) { tempData[index].Sizes = tempData[index].Sizes.filter(size => typeof size === 'object'); }
+        if (tempData[targetIndex]?.Sizes) {
+            tempData[targetIndex].Sizes = tempData[targetIndex].Sizes.filter(size => typeof size === 'object');
+        }
 
         // Save the temporary data to local storage.
         localStorage.setItem('tempData_cigars', JSON.stringify(tempData));
-        router.push('/cigars/' + localData['slug']);
+        router.push('/cigars/' + currentSlug);
     }
     const saveChangesSingle = (slug, updates) => {
         let tempData = JSON.parse(localStorage.getItem('tempData_cigars') || "[]");
-        if (!tempData) {
-            tempData = props.data;
+        if (!Array.isArray(tempData)) {
+            tempData = props.data || [];
             localStorage.setItem('tempData_cigars', JSON.stringify(tempData));
         }
 
         const index = tempData.findIndex(item => item.slug === slug);
         if (index !== -1) {
-            for (const key in updates) {
-                if (updates[key] === null) {
+            const cleanedUpdates = pruneEmpty(updates);
+            for (const key in cleanedUpdates) {
+                if (cleanedUpdates[key] === undefined) {
                     delete tempData[index][key];
                 } else {
-                    tempData[index][key] = updates[key];
+                    tempData[index][key] = cleanedUpdates[key];
                 }
             }
             localStorage.setItem('tempData_cigars', JSON.stringify(tempData));
