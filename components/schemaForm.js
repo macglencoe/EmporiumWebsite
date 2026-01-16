@@ -89,6 +89,7 @@ const Field = ({ name, field, control, register, error }) => {
   const label = field?.ui?.label || name;
   const description = field?.ui?.description;
   const inputType = field?.ui?.input || "text";
+  const registerOptions = getRegisterOptions(field);
 
   if (baseType === "array" && field.items?.type === "object") {
     return (
@@ -122,7 +123,7 @@ const Field = ({ name, field, control, register, error }) => {
         <textarea
           id={name}
           rows={field?.ui?.rows || 3}
-          {...register(name)}
+          {...register(name, registerOptions)}
           placeholder={field?.ui?.placeholder}
           className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-300 text-gray-900"
         />
@@ -186,7 +187,7 @@ const Field = ({ name, field, control, register, error }) => {
       <input
         id={name}
         type={typeAttr}
-        {...register(name)}
+        {...register(name, registerOptions)}
         placeholder={field?.ui?.placeholder}
         autoComplete="off"
         className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-300 text-gray-900"
@@ -199,8 +200,28 @@ const Field = ({ name, field, control, register, error }) => {
 
 const normalizeType = (type) => {
   const types = Array.isArray(type) ? type : [type];
+  const allowNull = types.includes("null");
   const baseType = types.find((t) => t && t !== "null") || "any";
-  return { baseType };
+  return { baseType, allowNull };
+};
+
+const getRegisterOptions = (field = {}) => {
+  const { baseType, allowNull } = normalizeType(field.type);
+  const isDate = field?.format === "date" || field?.ui?.input === "date";
+
+  if (isDate) {
+    return {
+      setValueAs: (v) => (v === "" ? null : v),
+    };
+  }
+
+  if (allowNull && baseType === "string") {
+    return {
+      setValueAs: (v) => (v === "" ? null : v),
+    };
+  }
+
+  return undefined;
 };
 
 const deriveTabs = (properties, tabsProp) => {
@@ -276,6 +297,7 @@ const ArrayFieldset = ({ name, field, control, register, error }) => {
             const inputType =
               childField?.ui?.input === "date" || childField?.format === "date" ? "date" : "text";
             const childError = error?.[idx]?.[childName];
+            const childRegisterOptions = getRegisterOptions(childField);
 
             return (
               <div key={childName} className="array-field-row space-y-1">
@@ -290,7 +312,7 @@ const ArrayFieldset = ({ name, field, control, register, error }) => {
                 ) : (
                   <input
                     type={inputType}
-                    {...register(`${name}.${idx}.${childName}`)}
+                    {...register(`${name}.${idx}.${childName}`, childRegisterOptions)}
                     defaultValue={item[childName] ?? ""}
                     placeholder={childField?.ui?.placeholder}
                     className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-300 text-gray-900"
