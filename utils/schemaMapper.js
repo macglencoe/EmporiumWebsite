@@ -19,6 +19,13 @@ export const buildSchemaArtifacts = (uiSchema) => {
   return { zodSchema, defaults };
 };
 
+export const normalizeType = (type) => {
+  const types = Array.isArray(type) ? type : [type];
+  const allowNull = types.includes("null");
+  const baseType = types.find((t) => t && t !== "null") || types[0] || "any";
+  return { allowNull, baseType };
+};
+
 const mapPropertiesToZod = (properties) =>
   Object.entries(properties).reduce((shape, [key, field]) => {
     shape[key] = buildFieldSchema(field);
@@ -107,14 +114,7 @@ const applyArrayValidation = (schema, validation = {}) => {
   return next;
 };
 
-const normalizeType = (type) => {
-  const types = Array.isArray(type) ? type : [type];
-  const allowNull = types.includes("null");
-  const baseType = types.find((t) => t && t !== "null") || types[0] || "any";
-  return { allowNull, baseType };
-};
-
-const buildDefaultsForProperties = (properties) =>
+export const buildDefaultsForProperties = (properties) =>
   Object.entries(properties).reduce((acc, [key, field]) => {
     const value = buildDefaultValue(field);
     if (value !== undefined) {
@@ -123,7 +123,7 @@ const buildDefaultsForProperties = (properties) =>
     return acc;
   }, {});
 
-const buildDefaultValue = (field = {}) => {
+export const buildDefaultValue = (field = {}) => {
   if (Object.prototype.hasOwnProperty.call(field, "default")) {
     return field.default;
   }

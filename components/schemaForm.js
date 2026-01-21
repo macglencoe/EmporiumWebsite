@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useForm, FormProvider, Controller, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { buildSchemaArtifacts } from "../utils/schemaMapper";
+import { buildSchemaArtifacts, buildDefaultValue, normalizeType } from "../utils/schemaMapper";
 import TabNav from "./tabNav";
 
 const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, initialValues = {}, tabs: tabsProp }) => {
@@ -198,13 +198,6 @@ const Field = ({ name, field, control, register, error }) => {
   );
 };
 
-const normalizeType = (type) => {
-  const types = Array.isArray(type) ? type : [type];
-  const allowNull = types.includes("null");
-  const baseType = types.find((t) => t && t !== "null") || "any";
-  return { baseType, allowNull };
-};
-
 const getRegisterOptions = (field = {}) => {
   const { baseType, allowNull } = normalizeType(field.type);
   const isDate = field?.format === "date" || field?.ui?.input === "date";
@@ -243,23 +236,6 @@ const sectionOf = (field) =>
 
 const capitalize = (str = "") => str.charAt(0).toUpperCase() + str.slice(1);
 
-const buildDefaultsForItem = (properties = {}) =>
-  Object.entries(properties).reduce((acc, [key, field]) => {
-    if (Object.prototype.hasOwnProperty.call(field, "default")) {
-      acc[key] = field.default;
-      return acc;
-    }
-    const { baseType } = normalizeType(field.type);
-    if (baseType === "boolean") {
-      acc[key] = false;
-    } else if (baseType === "array") {
-      acc[key] = [];
-    } else {
-      acc[key] = "";
-    }
-    return acc;
-  }, {});
-
 const ArrayFieldset = ({ name, field, control, register, error }) => {
   const itemProps = field.items?.properties || {};
   const label = field?.ui?.label || name;
@@ -269,7 +245,7 @@ const ArrayFieldset = ({ name, field, control, register, error }) => {
     name,
   });
 
-  const addItem = () => append(buildDefaultsForItem(itemProps));
+  const addItem = () => append(buildDefaultValue(field.items || {}) ?? {});
 
   return (
       <div className="space-y-2">
