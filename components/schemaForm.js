@@ -85,101 +85,128 @@ const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, init
 };
 
 const Field = ({ name, field, control, register, error }) => {
+  const rendererKey = pickType(field);
+  const Renderer = FIELD_RENDERERS[rendererKey] || TextField;
+  return (
+    <Renderer
+      name={name}
+      field={field}
+      control={control}
+      register={register}
+      error={error}
+    />
+  );
+};
+
+const FIELD_RENDERERS = {
+  boolean: BooleanField,
+  textarea: TextareaField,
+  range: RangeField,
+  "array-object": ArrayObjectField,
+  text: TextField,
+};
+
+const pickType = (field = {}) => {
   const { baseType } = normalizeType(field.type);
+  const inputType = field?.ui?.input;
+
+  if (baseType === "boolean") return "boolean";
+  if (baseType === "array" && field.items?.type === "object") return "array-object";
+  if (inputType === "textarea") return "textarea";
+  if (inputType === "mapped-range" && Array.isArray(field?.ui?.options)) return "range";
+
+  return "text";
+};
+
+const BooleanField = ({ name, field, register, error }) => {
   const label = field?.ui?.label || name;
   const description = field?.ui?.description;
-  const inputType = field?.ui?.input || "text";
+
+  return (
+    <div className="space-y-1">
+      <label className="flex items-center gap-2 text-sm font-medium ">
+        <input type="checkbox" {...register(name)} className="h-4 w-4 text-amber-600 border-gray-300 rounded" />
+        {label}
+      </label>
+      {description && <p className="text-sm ">{description}</p>}
+      {error && <p className="text-sm text-red-600">{error.message}</p>}
+    </div>
+  );
+};
+
+const TextareaField = ({ name, field, register, error }) => {
+  const label = field?.ui?.label || name;
+  const description = field?.ui?.description;
   const registerOptions = getRegisterOptions(field);
 
-  if (baseType === "array" && field.items?.type === "object") {
-    return (
-      <ArrayFieldset
-        name={name}
-        field={field}
-        control={control}
-        register={register}
-        error={error}
+  return (
+    <div className="space-y-1">
+      <label htmlFor={name} className="text-sm font-semibold">{label}</label>
+      <textarea
+        id={name}
+        rows={field?.ui?.rows || 3}
+        {...register(name, registerOptions)}
+        placeholder={field?.ui?.placeholder}
+        className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-300 text-gray-900"
       />
-    );
-  }
+      {description && <p className="text-sm ">{description}</p>}
+      {error && <p className="text-sm text-red-600">{error.message}</p>}
+    </div>
+  );
+};
 
-  if (baseType === "boolean") {
-    return (
-      <div className="space-y-1">
-        <label className="flex items-center gap-2 text-sm font-medium ">
-          <input type="checkbox" {...register(name)} className="h-4 w-4 text-amber-600 border-gray-300 rounded" />
-          {label}
-        </label>
-        {description && <p className="text-sm ">{description}</p>}
-        {error && <p className="text-sm text-red-600">{error.message}</p>}
-      </div>
-    );
-  }
+const RangeField = ({ name, field, control, error }) => {
+  const label = field?.ui?.label || name;
+  const description = field?.ui?.description;
+  const min = field?.ui?.range?.min ?? 0;
+  const max = field?.ui?.range?.max ?? field.ui.options.length - 1;
+  const step = field?.ui?.range?.step ?? 1;
 
-  if (inputType === "textarea") {
-    return (
-      <div className="space-y-1">
-        <label htmlFor={name} className="text-sm font-semibold">{label}</label>
-        <textarea
-          id={name}
-          rows={field?.ui?.rows || 3}
-          {...register(name, registerOptions)}
-          placeholder={field?.ui?.placeholder}
-          className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-300 text-gray-900"
-        />
-        {description && <p className="text-sm ">{description}</p>}
-        {error && <p className="text-sm text-red-600">{error.message}</p>}
-      </div>
-    );
-  }
+  return (
+    <div className="space-y-1">
+      <label htmlFor={name} className="text-sm font-semibold text-gray-800">{label}</label>
+      <Controller
+        name={name}
+        control={control}
+        render={({ field: controllerField }) => {
+          const activePos =
+            field.ui.options.find((opt) => opt.value === controllerField.value)?.pos ?? field.ui.options[0]?.pos ?? 0;
+          return (
+            <>
+              <input
+                id={name}
+                type="range"
+                min={min}
+                max={max}
+                step={step}
+                value={activePos}
+                className="w-full accent-amber-600"
+                onChange={(event) => {
+                  const pos = Number(event.target.value);
+                  const match = field.ui.options.find((opt) => opt.pos === pos);
+                  controllerField.onChange(match ? match.value : null);
+                }}
+              />
+              <div className="range-labels flex justify-between text-xs text-gray-600">
+                {field.ui.options.map((opt) => (
+                  <span key={opt.pos}>{opt.label}</span>
+                ))}
+              </div>
+            </>
+          );
+        }}
+      />
+      {description && <p className="text-sm ">{description}</p>}
+      {error && <p className="text-sm text-red-600">{error.message}</p>}
+    </div>
+  );
+};
 
-  if (inputType === "mapped-range" && Array.isArray(field?.ui?.options)) {
-    const min = field?.ui?.range?.min ?? 0;
-    const max = field?.ui?.range?.max ?? field.ui.options.length - 1;
-    const step = field?.ui?.range?.step ?? 1;
-
-    return (
-      <div className="space-y-1">
-        <label htmlFor={name} className="text-sm font-semibold text-gray-800">{label}</label>
-        <Controller
-          name={name}
-          control={control}
-          render={({ field: controllerField }) => {
-            const activePos =
-              field.ui.options.find((opt) => opt.value === controllerField.value)?.pos ?? field.ui.options[0]?.pos ?? 0;
-            return (
-              <>
-                <input
-                  id={name}
-                  type="range"
-                  min={min}
-                  max={max}
-                  step={step}
-                  value={activePos}
-                  className="w-full accent-amber-600"
-                  onChange={(event) => {
-                    const pos = Number(event.target.value);
-                    const match = field.ui.options.find((opt) => opt.pos === pos);
-                    controllerField.onChange(match ? match.value : null);
-                  }}
-                />
-                <div className="range-labels flex justify-between text-xs text-gray-600">
-                  {field.ui.options.map((opt) => (
-                    <span key={opt.pos}>{opt.label}</span>
-                  ))}
-                </div>
-              </>
-            );
-          }}
-        />
-        {description && <p className="text-sm ">{description}</p>}
-        {error && <p className="text-sm text-red-600">{error.message}</p>}
-      </div>
-    );
-  }
-
-  // Fallback: text/date/price/etc. all use a basic input element
-  const typeAttr = inputType === "date" || field?.format === "date" ? "date" : "text";
+const TextField = ({ name, field, register, error }) => {
+  const label = field?.ui?.label || name;
+  const description = field?.ui?.description;
+  const registerOptions = getRegisterOptions(field);
+  const typeAttr = field?.ui?.input === "date" || field?.format === "date" ? "date" : "text";
 
   return (
     <div className="space-y-1">
@@ -198,45 +225,7 @@ const Field = ({ name, field, control, register, error }) => {
   );
 };
 
-const getRegisterOptions = (field = {}) => {
-  const { baseType, allowNull } = normalizeType(field.type);
-  const isDate = field?.format === "date" || field?.ui?.input === "date";
-
-  if (isDate || (allowNull && baseType === "string")) {
-    return {
-      setValueAs: (v) => (v === "" ? undefined : v),
-    };
-  }
-
-  return undefined;
-};
-
-const deriveTabs = (properties, tabsProp) => {
-  if (Array.isArray(tabsProp) && tabsProp.length > 0) {
-    return tabsProp;
-  }
-
-  const sectionMap = new Map();
-  Object.entries(properties).forEach(([name, field]) => {
-    const section = sectionOf(field);
-    if (!sectionMap.has(section)) {
-      sectionMap.set(section, {
-        id: section,
-        label: capitalize(section),
-        filter: (n, f) => sectionOf(f) === section,
-      });
-    }
-  });
-
-  return Array.from(sectionMap.values());
-};
-
-const sectionOf = (field) =>
-  field?.ui?.section || (normalizeType(field.type).baseType === "array" ? "sizes" : "metadata");
-
-const capitalize = (str = "") => str.charAt(0).toUpperCase() + str.slice(1);
-
-const ArrayFieldset = ({ name, field, control, register, error }) => {
+const ArrayObjectField = ({ name, field, control, register, error }) => {
   const itemProps = field.items?.properties || {};
   const label = field?.ui?.label || name;
   const description = field?.ui?.description;
@@ -306,5 +295,43 @@ const ArrayFieldset = ({ name, field, control, register, error }) => {
     </div>
   );
 };
+
+function getRegisterOptions(field = {}) {
+  const { baseType, allowNull } = normalizeType(field.type);
+  const isDate = field?.format === "date" || field?.ui?.input === "date";
+
+  if (isDate || (allowNull && baseType === "string")) {
+    return {
+      setValueAs: (v) => (v === "" ? undefined : v),
+    };
+  }
+
+  return undefined;
+}
+
+const deriveTabs = (properties, tabsProp) => {
+  if (Array.isArray(tabsProp) && tabsProp.length > 0) {
+    return tabsProp;
+  }
+
+  const sectionMap = new Map();
+  Object.entries(properties).forEach(([name, field]) => {
+    const section = sectionOf(field);
+    if (!sectionMap.has(section)) {
+      sectionMap.set(section, {
+        id: section,
+        label: capitalize(section),
+        filter: (n, f) => sectionOf(f) === section,
+      });
+    }
+  });
+
+  return Array.from(sectionMap.values());
+};
+
+const sectionOf = (field) =>
+  field?.ui?.section || (normalizeType(field.type).baseType === "array" ? "sizes" : "metadata");
+
+const capitalize = (str = "") => str.charAt(0).toUpperCase() + str.slice(1);
 
 export default SchemaForm;
