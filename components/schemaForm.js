@@ -118,7 +118,7 @@ const pickType = (field = {}) => {
   return "text";
 };
 
-const BooleanField = ({ name, field, register, error }) => {
+function BooleanField({ name, field, register, error }) {
   const label = field?.ui?.label || name;
   const description = field?.ui?.description;
 
@@ -132,9 +132,9 @@ const BooleanField = ({ name, field, register, error }) => {
       {error && <p className="text-sm text-red-600">{error.message}</p>}
     </div>
   );
-};
+}
 
-const TextareaField = ({ name, field, register, error }) => {
+function TextareaField({ name, field, register, error }) {
   const label = field?.ui?.label || name;
   const description = field?.ui?.description;
   const registerOptions = getRegisterOptions(field);
@@ -153,9 +153,9 @@ const TextareaField = ({ name, field, register, error }) => {
       {error && <p className="text-sm text-red-600">{error.message}</p>}
     </div>
   );
-};
+}
 
-const RangeField = ({ name, field, control, error }) => {
+function RangeField({ name, field, control, error }) {
   const label = field?.ui?.label || name;
   const description = field?.ui?.description;
   const min = field?.ui?.range?.min ?? 0;
@@ -200,9 +200,9 @@ const RangeField = ({ name, field, control, error }) => {
       {error && <p className="text-sm text-red-600">{error.message}</p>}
     </div>
   );
-};
+}
 
-const TextField = ({ name, field, register, error }) => {
+function TextField({ name, field, register, error }) {
   const label = field?.ui?.label || name;
   const description = field?.ui?.description;
   const registerOptions = getRegisterOptions(field);
@@ -223,9 +223,9 @@ const TextField = ({ name, field, register, error }) => {
       {error && <p className="text-sm text-red-600">{error.message}</p>}
     </div>
   );
-};
+}
 
-const ArrayObjectField = ({ name, field, control, register, error }) => {
+function ArrayObjectField({ name, field, control, register, error }) {
   const itemProps = field.items?.properties || {};
   const label = field?.ui?.label || name;
   const description = field?.ui?.description;
@@ -294,7 +294,7 @@ const ArrayObjectField = ({ name, field, control, register, error }) => {
       {error && typeof error.message === "string" && <p className="text-sm text-red-600">{error.message}</p>}
     </div>
   );
-};
+}
 
 function getRegisterOptions(field = {}) {
   const { baseType, allowNull } = normalizeType(field.type);
