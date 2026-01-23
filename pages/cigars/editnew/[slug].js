@@ -3,11 +3,11 @@ import { useRouter } from "next/router";
 import Layout from "../../../components/layout";
 import PageTitle1 from "../../../components/pagetitle1";
 import SchemaForm from "../../../components/schemaForm";
+import { SlugPreview } from "../../../components/schemaForm";
 import uiSchema from "../../../public/data/cigar.ui.schema.json";
 import { buildSchemaArtifacts } from "../../../utils/schemaMapper";
 import { buildCigarSuggestions } from "../../../utils/suggestions";
 import { useDraftItem } from "../../../hooks/useDraftItem";
-import { useSlugPreview } from "../../../hooks/useSlugPreview";
 
 const STORAGE_KEY = "tempData_cigars";
 
@@ -102,6 +102,7 @@ const EditNewCigarPage = () => {
           generateSlug={generateSlug}
           isSlugUnique={isSlugUnique}
           fallbackSlug={slug}
+          baseRoute="www.kingstreetemporium.com/cigars"
         />
         <div className="tools">
           <button type="submit" className="standard-button">Save Changes</button>
@@ -136,22 +137,5 @@ const EditNewCigarPage = () => {
   );
 };
 
-const SlugPreview = ({ generateSlug, isSlugUnique, fallbackSlug }) => {
-  const { slug, unique } = useSlugPreview({ generateSlug, isSlugUnique });
-  const displaySlug = slug || fallbackSlug || "";
-
-  return (
-    <div className="slug-preview">
-      <p>Preview URL slug:</p>
-      <strong style={{ color: unique ? "green" : "red" }}>{displaySlug || "(none yet)"}</strong>
-      {!unique && <p className="slug-warning">Slug already exists. Please choose a different name.</p>}
-      {unique && displaySlug && (
-        <p className="slug-success">
-          Once committed: {`www.kingstreetemporium.com/cigars/${displaySlug}`}
-        </p>
-      )}
-    </div>
-  );
-};
 
 export default EditNewCigarPage;

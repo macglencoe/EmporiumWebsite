@@ -3,6 +3,7 @@ import { useForm, FormProvider, Controller, useFieldArray, useFormContext, useWa
 import { zodResolver } from "@hookform/resolvers/zod";
 import { buildSchemaArtifacts, buildDefaultValue, normalizeType } from "../utils/schemaMapper";
 import TabNav from "./tabNav";
+import { useSlugPreview } from "../hooks/useSlugPreview";
 
 const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, initialValues = {}, tabs: tabsProp, suggestions = {} }) => {
   const { zodSchema, defaults } = useMemo(() => buildSchemaArtifacts(uiSchema), [uiSchema]);
@@ -365,6 +366,31 @@ function ArrayObjectField({ name, field, control, register, error }) {
     </div>
   );
 }
+
+export const SlugPreview = ({ generateSlug, isSlugUnique, fallbackSlug, baseRoute }) => {
+  const { slug, unique } = useSlugPreview({ generateSlug, isSlugUnique });
+  const displaySlug = slug || fallbackSlug;
+
+  return (
+    <div className="bg-white/50 rounded-md border-2 border-amber-200 p-3">
+      <p className="font-semibold text-lg">Preview URL slug:</p>
+      <p>
+        <strong className="font-inter" style={{ color: unique && displaySlug && displaySlug !== "-" ? "green" : "red" }}>
+          {
+            (displaySlug && displaySlug !== "-") 
+            ? displaySlug : "(none yet)"
+          }
+        </strong>
+      </p>
+      {!unique && <p className="text-sm text-red-600">Slug already exists. Please choose a different name.</p>}
+      {unique && displaySlug && displaySlug !== "-" && (
+        <p className="text-sm">
+          <b>Once committed:</b> {`${baseRoute}/${displaySlug}`}
+        </p>
+      )}
+    </div>
+  );
+};
 
 function getRegisterOptions(field = {}) {
   const { baseType, allowNull } = normalizeType(field.type);
