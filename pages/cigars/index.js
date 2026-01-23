@@ -173,9 +173,9 @@ const CigarCatalog = (props) => {
           },
           href: (item) => {
             // Redirect to the "edit new" page for cigars added in this session.
-            // This identifies cigars by query parameters because static paths are generated only during the build process.
+            // This identifies cigars by client-side dynamic routing because static paths are generated only during the build process.
             if (!props.data.some(dataItem => dataItem.slug === item.slug)) {
-              return ('/cigars/editnew?slug=' + item.slug)
+              return (`/cigars/editnew/${item.slug}`)
             }
             return ('/cigars/' + item.slug)
           },
