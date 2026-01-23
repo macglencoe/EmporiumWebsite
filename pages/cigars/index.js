@@ -51,20 +51,22 @@ const CigarCatalog = (props) => {
 
   const router = useRouter();
 
+  const safeData = Array.isArray(tempData) ? tempData : [];
+
   // All unique brands for filtering
-  const uniqueBrands = [...new Set((tempData).map(item => item['Cigar Brand'].trim()))];
+  const uniqueBrands = [...new Set(safeData.map(item => (item['Cigar Brand'] || '').trim()))];
 
   // All unique wrappers for filtering
-  const uniqueWrappers = [...new Set((tempData).map(item => item['Wrapper'].trim()))];
+  const uniqueWrappers = [...new Set(safeData.map(item => (item['Wrapper'] || '').trim()))];
 
   // All unique strengths for filtering
-  const uniqueStrengths = [...new Set((tempData).map(item => item['Strength_Profile'].trim()))];
+  const uniqueStrengths = [...new Set(safeData.map(item => (item['Strength_Profile'] || '').trim()))];
 
   // All unique sizes for filtering
-  const uniqueSizes = [...new Set(tempData.flatMap(obj => obj.Sizes.map(size => size.Size)))].sort((a, b) => a.localeCompare(b));
+  const uniqueSizes = [...new Set(safeData.flatMap(obj => (obj.Sizes || []).map(size => size.Size)))].sort((a, b) => a.localeCompare(b));
 
   const pageSize = 10;
-  const totalPages = Math.ceil(tempData.length / pageSize);
+  const totalPages = Math.ceil(safeData.length / pageSize);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
@@ -73,7 +75,7 @@ const CigarCatalog = (props) => {
     }
   }, [router.query.page]);
 
-  const currentPageData = tempData.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+  const currentPageData = safeData.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
   // ^^ This all needs to go to Catalog.js :(
 
