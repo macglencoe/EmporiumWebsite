@@ -112,9 +112,10 @@ export const useDraftItem = ({
 
       const currentSlug = item.slug || slug;
       const newSlug = generateSlug(item);
+      const targetSlug = currentSlug || newSlug;
       const updated = pruneEmpty({
         ...item,
-        slug: currentSlug,
+        slug: targetSlug,
         "new-slug": newSlug,
       });
 
@@ -123,7 +124,9 @@ export const useDraftItem = ({
         tempData = allItems || [];
       }
 
-      const index = tempData.findIndex((entry) => entry.slug === currentSlug);
+      const index = tempData.findIndex(
+        (entry) => entry.slug === currentSlug || entry.slug === targetSlug
+      );
       if (index !== -1) {
         tempData[index] = updated;
       } else {
