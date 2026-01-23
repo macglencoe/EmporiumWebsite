@@ -88,13 +88,15 @@ const Field = ({ name, field, control, register, error }) => {
   const rendererKey = pickType(field);
   const Renderer = FIELD_RENDERERS[rendererKey] || TextField;
   return (
-    <Renderer
-      name={name}
-      field={field}
-      control={control}
-      register={register}
-      error={error}
-    />
+    <div className="border-t-4 border-amber-900">
+      <Renderer
+        name={name}
+        field={field}
+        control={control}
+        register={register}
+        error={error}
+      />
+    </div>
   );
 };
 
@@ -124,7 +126,7 @@ function BooleanField({ name, field, register, error }) {
 
   return (
     <div className="space-y-1">
-      <label className="flex items-center gap-2 text-sm font-medium ">
+      <label className="flex items-center gap-2 text-lg font-medium ">
         <input type="checkbox" {...register(name)} className="h-4 w-4 text-amber-600 border-gray-300 rounded" />
         {label}
       </label>
@@ -141,7 +143,7 @@ function TextareaField({ name, field, register, error }) {
 
   return (
     <div className="space-y-1">
-      <label htmlFor={name} className="text-sm font-semibold">{label}</label>
+      <label htmlFor={name} className="text-lg font-semibold">{label}</label>
       <textarea
         id={name}
         rows={field?.ui?.rows || 3}
@@ -164,7 +166,7 @@ function RangeField({ name, field, control, error }) {
 
   return (
     <div className="space-y-1">
-      <label htmlFor={name} className="text-sm font-semibold text-gray-800">{label}</label>
+      <label htmlFor={name} className="text-lg font-semibold text-gray-800">{label}</label>
       <Controller
         name={name}
         control={control}
@@ -210,7 +212,7 @@ function TextField({ name, field, register, error }) {
 
   return (
     <div className="space-y-1">
-      <label htmlFor={name} className="text-sm font-semibold text-gray-800">{label}</label>
+      <label htmlFor={name} className="text-lg font-semibold text-gray-800">{label}</label>
       <input
         id={name}
         type={typeAttr}
@@ -239,7 +241,7 @@ function ArrayObjectField({ name, field, control, register, error }) {
   return (
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <label className="text-sm font-semibold text-gray-800">{label}</label>
+          <label className="text-lg font-semibold text-gray-800">{label}</label>
           <button
             type="button"
             onClick={addItem}
@@ -260,7 +262,7 @@ function ArrayObjectField({ name, field, control, register, error }) {
 
             return (
               <div key={childName} className="array-field-row space-y-1">
-                <label className="text-sm font-medium text-gray-800">{childLabel}</label>
+                <label className="text-lg font-medium text-gray-800">{childLabel}</label>
                 {childType === "boolean" ? (
                   <input
                     type="checkbox"
