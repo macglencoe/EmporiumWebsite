@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { buildSchemaArtifacts, buildDefaultValue, normalizeType } from "../utils/schemaMapper";
 import TabNav from "./tabNav";
 import { useSlugPreview } from "../hooks/useSlugPreview";
+import { PiArrowUUpLeftDuotone, PiCheckCircleDuotone } from "react-icons/pi";
 
 const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, initialValues = {}, tabs: tabsProp, suggestions = {} }) => {
   const { zodSchema, defaults } = useMemo(() => buildSchemaArtifacts(uiSchema), [uiSchema]);
@@ -391,6 +392,21 @@ export const SlugPreview = ({ generateSlug, isSlugUnique, fallbackSlug, baseRout
     </div>
   );
 };
+
+export const FormButtons = ({ onClickRevert }) => {
+  return (
+    <div className="flex flex-row space-x-3">
+      <button id="submit" type="submit" className="bg-amber-900 text-amber-50 px-3 py-2 font-semibold rounded-md flex items-center">
+        <PiCheckCircleDuotone className="inline mr-2 text-2xl" />
+        Submit
+      </button>
+      <button id="revert" type="button" onClick={onClickRevert} className="bg-amber-50 text-amber-900 px-3 py-2 font-semibold rounded-md flex items-center">
+        <PiArrowUUpLeftDuotone className="inline mr-2 text-2xl" />
+        Revert
+      </button>
+    </div>
+  )
+}
 
 function getRegisterOptions(field = {}) {
   const { baseType, allowNull } = normalizeType(field.type);

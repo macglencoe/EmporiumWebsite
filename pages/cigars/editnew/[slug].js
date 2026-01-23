@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/router";
 import Layout from "../../../components/layout";
 import PageTitle1 from "../../../components/pagetitle1";
-import SchemaForm from "../../../components/schemaForm";
+import SchemaForm, { FormButtons } from "../../../components/schemaForm";
 import { SlugPreview } from "../../../components/schemaForm";
 import uiSchema from "../../../public/data/cigar.ui.schema.json";
 import { buildSchemaArtifacts } from "../../../utils/schemaMapper";
@@ -104,16 +104,7 @@ const EditNewCigarPage = () => {
           fallbackSlug={slug}
           baseRoute="www.kingstreetemporium.com/cigars"
         />
-        <div className="tools">
-          <button type="submit" className="standard-button">Save Changes</button>
-          <button
-            type="button"
-            className="standard-button"
-            onClick={() => setDraft(initialDraft || defaults)}
-          >
-            Revert All
-          </button>
-        </div>
+        <FormButtons onClickRevert={() => setDraft(initialDraft || defaults)} />
       </SchemaForm>
 
       <style jsx>{`

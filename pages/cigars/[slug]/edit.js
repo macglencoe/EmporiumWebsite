@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useRouter } from "next/router";
 import Layout from "../../../components/layout";
-import SchemaForm from "../../../components/schemaForm";
+import SchemaForm, { FormButtons } from "../../../components/schemaForm";
 import { SlugPreview } from "../../../components/schemaForm";
 import uiSchema from "../../../public/data/cigar.ui.schema.json";
 import { buildSchemaArtifacts } from "../../../utils/schemaMapper";
@@ -77,17 +77,7 @@ const EditCigarPage = ({ cigar, allCigars }) => {
           fallbackSlug={cigar.slug}
           baseRoute="www.kingstreetemporium.com/cigars"
         />
-        <div className="tools">
-          <button id="submit" type="submit" className="standard-button">Submit</button>
-          <button
-            id="revert"
-            type="button"
-            className="standard-button"
-            onClick={() => setDraft({ ...defaults, ...cigar })}
-          >
-            Revert All
-          </button>
-        </div>
+        <FormButtons onClickRevert={() => setDraft({ ...defaults, ...cigar})}/>
       </SchemaForm>
     </Layout>
   );
