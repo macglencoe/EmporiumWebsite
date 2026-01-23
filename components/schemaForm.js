@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
-import { useForm, FormProvider, Controller, useFieldArray } from "react-hook-form";
+import { useForm, FormProvider, Controller, useFieldArray, useFormContext, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { buildSchemaArtifacts, buildDefaultValue, normalizeType } from "../utils/schemaMapper";
 import TabNav from "./tabNav";
 
-const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, initialValues = {}, tabs: tabsProp }) => {
+const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, initialValues = {}, tabs: tabsProp, suggestions = {} }) => {
   const { zodSchema, defaults } = useMemo(() => buildSchemaArtifacts(uiSchema), [uiSchema]);
 
   const mergedDefaults = useMemo(
@@ -70,6 +70,7 @@ const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, init
                         control={control}
                         register={register}
                         error={errors[name]}
+                        suggestions={suggestions}
                       />
                     ))}
                 {!entries.length && <p>No fields in this tab.</p>}
@@ -84,7 +85,7 @@ const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, init
   );
 };
 
-const Field = ({ name, field, control, register, error }) => {
+const Field = ({ name, field, control, register, error, suggestions }) => {
   const rendererKey = pickType(field);
   const Renderer = FIELD_RENDERERS[rendererKey] || TextField;
   return (
@@ -95,6 +96,7 @@ const Field = ({ name, field, control, register, error }) => {
         control={control}
         register={register}
         error={error}
+        suggestions={suggestions}
       />
     </div>
   );
@@ -105,6 +107,7 @@ const FIELD_RENDERERS = {
   textarea: TextareaField,
   range: RangeField,
   "array-object": ArrayObjectField,
+  autosuggest: AutosuggestField,
   text: TextField,
 };
 
@@ -112,6 +115,7 @@ const pickType = (field = {}) => {
   const { baseType } = normalizeType(field.type);
   const inputType = field?.ui?.input;
 
+  if (field?.ui?.autosuggest) return "autosuggest";
   if (baseType === "boolean") return "boolean";
   if (baseType === "array" && field.items?.type === "object") return "array-object";
   if (inputType === "textarea") return "textarea";
@@ -221,6 +225,70 @@ function TextField({ name, field, register, error }) {
         autoComplete="off"
         className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-300 text-gray-900"
       />
+      {description && <p className="text-sm ">{description}</p>}
+      {error && <p className="text-sm text-red-600">{error.message}</p>}
+    </div>
+  );
+}
+
+function AutosuggestField({ name, field, register, error, control, suggestions }) {
+  const label = field?.ui?.label || name;
+  const description = field?.ui?.description;
+  const registerOptions = getRegisterOptions(field);
+  const { setValue } = useFormContext();
+  const value = useWatch({ control, name }) || "";
+  const options = Array.isArray(suggestions?.[name]) ? suggestions[name].filter(Boolean) : [];
+
+  const filtered = useMemo(() => {
+    if (!value) return options;
+    return options.filter((opt) => opt.toLowerCase().includes(String(value).toLowerCase()));
+  }, [options, value]);
+
+  const applyValue = (next) => {
+    if (typeof next === "string") {
+      setValue(name, next, { shouldValidate: true, shouldTouch: true });
+    }
+  };
+
+  return (
+    <div className="space-y-1">
+      <label htmlFor={name} className="text-lg font-semibold text-gray-800">{label}</label>
+      <input
+        id={name}
+        type="text"
+        {...register(name, registerOptions)}
+        placeholder={field?.ui?.placeholder}
+        autoComplete="off"
+        className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-300 text-gray-900"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && filtered[0]) {
+            e.preventDefault();
+            applyValue(filtered[0]);
+          }
+        }}
+      />
+      {filtered.length > 0 && (
+        <div className="autocomplete flex items-center gap-2 bg-amber-50 rounded px-2 py-1 border border-amber-200">
+          <select
+            className="flex-1 bg-transparent outline-none"
+            onChange={(e) => applyValue(e.target.value)}
+            value={filtered[0]}
+          >
+            {filtered.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+          <button
+            type="button"
+            className="text-xs font-semibold text-amber-700"
+            onClick={() => applyValue(filtered[0])}
+          >
+            Select (Enter)
+          </button>
+        </div>
+      )}
       {description && <p className="text-sm ">{description}</p>}
       {error && <p className="text-sm text-red-600">{error.message}</p>}
     </div>

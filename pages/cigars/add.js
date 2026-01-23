@@ -4,6 +4,7 @@ import Layout from "../../components/layout";
 import SchemaForm from "../../components/schemaForm";
 import uiSchema from "../../public/data/cigar.ui.schema.json";
 import { buildSchemaArtifacts } from "../../utils/schemaMapper";
+import { buildCigarSuggestions } from "../../utils/suggestions";
 import { useDraftItem } from "../../hooks/useDraftItem";
 import { useSlugPreview } from "../../hooks/useSlugPreview";
 
@@ -33,6 +34,11 @@ const AddCigarPage = (props) => {
     allItems: props.data || [],
   });
 
+  const suggestions = useMemo(
+    () => buildCigarSuggestions(props.data || []),
+    [props.data]
+  );
+
   const handleSubmit = (values) => {
     const result = saveDraft(values);
     if (result?.error === "slug-conflict") {
@@ -47,6 +53,7 @@ const AddCigarPage = (props) => {
       <SchemaForm
         uiSchema={uiSchema}
         initialValues={draft}
+        suggestions={suggestions}
         onSubmit={handleSubmit}
       >
         <SlugPreview
