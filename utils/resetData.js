@@ -41,22 +41,22 @@ export const resetData = async () => {
         /* const response = await fetch(
             `https://raw.githubusercontent.com/macglencoe/EmporiumWebsite/${recentDataCommitSha}/public/data/consolidated_cigars.json`
         ); */
-        const response =  await fetch(
-            `/api/files/${encodeURIComponent('public/data/consolidated_cigars.json')}?sha=${recentDataCommitSha}`
-        )
-        if (!response.ok) {
-            throw new Error('Failed to fetch data');
-        }
+        const cigars = await fetchCigars(recentDataCommitSha);
+        const tobacco = await fetchTobacco(recentDataCommitSha)
 
-        console.log(response);
+        /* Temporary Data */
 
-        const data = await response.json();
+        localStorage.setItem('tempData_cigars', JSON.stringify(cigars));
+        localStorage.setItem('tempData_tobacco', JSON.stringify(tobacco));
 
-        localStorage.setItem('tempData_cigars', JSON.stringify(data));
         localStorage.setItem('tempData_sha', recentDataCommitSha);
         localStorage.setItem('tempData_message', dataCommits[0].commit.message);
 
-        localStorage.setItem('originData_cigars', JSON.stringify(data));
+        /* Original Data */
+
+        localStorage.setItem('originData_cigars', JSON.stringify(cigars));
+        localStorage.setItem('originData_tobacco', JSON.stringify(tobacco));
+        
         localStorage.setItem('originData_sha', recentDataCommitSha);
         localStorage.setItem('originData_message', dataCommits[0].commit.message);
 
@@ -66,6 +66,26 @@ export const resetData = async () => {
         console.error('Error fetching data:', error);
         return "Error fetching data. See console for details.";
     }
+}
+
+async function fetchCigars(commitSha) {
+    const response = await fetch(
+        `api/files/${encodeURIComponent('public/data/consolidated_cigars.json')}?sha=${commitSha}`
+    )
+    if (!response.ok) {
+        throw new Error('Failed to fetch cigar data:', response);
+    }
+    return response.json();
+}
+
+async function fetchTobacco(commitSha) {
+    const response = await fetch(
+        `api/files/${encodeURIComponent('public/data/tobacco.json')}?sha=${commitSha}`
+    )
+    if (!response.ok) {
+        throw new Error('Failed to fetch pipe tobacco data');
+    }
+    return response.json();
 }
 
 export default resetData
