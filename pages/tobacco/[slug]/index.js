@@ -1,16 +1,14 @@
 import Head from "next/head"
-import Layout from "../../components/layout"
-import PageTitle1 from "../../components/pagetitle1";
-import ProductPage, { Navigation, StringBubbleList } from '../../components/productPage';
-import { ProductImage, ProductSideContent } from '../../components/productPage';
-import { ProductSizeChart, ProductBasicInfo } from '../../components/productPage';
-import { ProductMainContent, ProductTitle } from '../../components/productPage';
-import { ProductInfoFields, ProductCallOrVisitButtons } from '../../components/productPage';
-import { Disclaimer } from '../../components/productPage';
+import Layout from "../../../components/layout"
+import PageTitle1 from "../../../components/pagetitle1";
+import ProductPage, { Navigation, StringBubbleList } from '../../../components/productPage';
+import { ProductImage, ProductSideContent } from '../../../components/productPage';
+import { ProductMainContent, ProductTitle } from '../../../components/productPage';
+import { ProductInfoFields, ProductCallOrVisitButtons } from '../../../components/productPage';
 
 
 export const getStaticPaths = async () => {
-    const tobacco = await import('../../public/data/tobacco.json');
+    const tobacco = await import('../../../public/data/tobacco.json');
     const data = await tobacco.default;
     const paths = data.map((tobacco) => ({
         params: { slug: tobacco.slug },
@@ -19,7 +17,7 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-    const tobaccoData = await import('../../public/data/tobacco.json');
+    const tobaccoData = await import('../../../public/data/tobacco.json');
     const data = await tobaccoData.default;
     const tobaccoIndex = data.findIndex((tobacco) => tobacco.slug === params.slug);
     const tobacco = data[tobaccoIndex];
