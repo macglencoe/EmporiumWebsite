@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { buildSchemaArtifacts, buildDefaultValue, normalizeType } from "../utils/schemaMapper";
 import TabNav from "./tabNav";
 import { useSlugPreview } from "../hooks/useSlugPreview";
-import { PiArrowUUpLeftDuotone, PiCheckCircleDuotone } from "react-icons/pi";
+import { PiArrowUUpLeftDuotone, PiCheckCircleDuotone, PiPlusCircleDuotone, PiPlusCircleFill, PiXCircleFill, PiXDuotone, PiXFill } from "react-icons/pi";
 
 const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, initialValues = {}, tabs: tabsProp, suggestions = {} }) => {
   const { zodSchema, defaults } = useMemo(() => buildSchemaArtifacts(uiSchema), [uiSchema]);
@@ -111,6 +111,7 @@ const FIELD_RENDERERS = {
   "array-object": ArrayObjectField,
   autosuggest: AutosuggestField,
   text: TextField,
+  "array-string": ArrayStringField
 };
 
 const pickType = (field = {}) => {
@@ -120,6 +121,7 @@ const pickType = (field = {}) => {
   if (field?.ui?.autosuggest) return "autosuggest";
   if (baseType === "boolean") return "boolean";
   if (baseType === "array" && field.items?.type === "object") return "array-object";
+  else if (baseType === "array" && field.items?.type === "string") return "array-string";
   if (inputType === "textarea") return "textarea";
   if (inputType === "mapped-range" && Array.isArray(field?.ui?.options)) return "range";
 
@@ -366,6 +368,66 @@ function ArrayObjectField({ name, field, control, register, error }) {
       {error && typeof error.message === "string" && <p className="text-sm text-red-600">{error.message}</p>}
     </div>
   );
+}
+
+function ArrayStringField({name, field, control, register, error}) {
+  const items = field.items || {}
+  const label = field?.ui?.label || name;
+  const itemLabel = items?.ui?.label || "Item"
+  const description = field?.ui?.description;
+  const placeholder = items?.ui?.placeholder;
+  const registerOptions = getRegisterOptions(items);
+  const { fields, append, remove } = useFieldArray({
+    control,
+    name
+  });
+
+  const addItem = () => append(buildDefaultValue(items) ?? "");
+
+  return (
+    <div className="space-y-2">
+      <div className="flex items-center justify-between">
+        <label className="text-lg font-semibold text-gray-800">{label}</label>
+        <button
+          type="button"
+          onClick={addItem}
+          className="inline-flex items-center px-3 py-2 text-sm font-semibold text-white bg-amber-600 hover:bg-amber-700 rounded-md shadow-sm"
+        >
+          <PiPlusCircleFill className="text-lg mr-1" />
+          Add {itemLabel}
+        </button>
+      </div>
+      {fields.map((item, idx) => {
+        const itemError = error?.[idx];
+        const defaultValue = typeof item === "string" ? item : item?.value ?? "";
+
+        return (
+          <div key={item.id} className="flex flex-row flex-wrap rounded-md overflow-hidden">
+            <div className="space-y-1 flex-1">
+              <input
+                type="text"
+                {...register(`${name}.${idx}`, registerOptions)}
+                defaultValue={defaultValue}
+                placeholder={placeholder}
+                className="w-full bg-white px-3 py-2 text-gray-900"
+              />
+              {itemError && <p className="text-sm text-red-600">{itemError.message}</p>}
+            </div>
+            <button
+              type="button"
+              onClick={() => remove(idx)}
+              className="inline-flex items-center px-3 py-2 text-sm font-semibold text-white bg-red-500 hover:bg-red-600"
+            >
+              <PiXCircleFill className="text-lg mr-1"/>
+              Delete {itemLabel}
+            </button>
+          </div>
+        );
+      })}
+      {description && <p className="text-sm ">{description}</p>}
+      {error && typeof error.message === "string" && <p className="text-sm text-red-600">{error.message}</p>}
+    </div>
+  )
 }
 
 export const SlugPreview = ({ generateSlug, isSlugUnique, fallbackSlug, baseRoute }) => {
