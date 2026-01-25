@@ -70,7 +70,7 @@ export const resetData = async () => {
 
 async function fetchCigars(commitSha) {
     const response = await fetch(
-        `api/files/${encodeURIComponent('public/data/consolidated_cigars.json')}?sha=${commitSha}`
+        `/api/files/${encodeURIComponent('public/data/consolidated_cigars.json')}?sha=${commitSha}`
     )
     if (!response.ok) {
         throw new Error('Failed to fetch cigar data:', response);
@@ -80,7 +80,7 @@ async function fetchCigars(commitSha) {
 
 async function fetchTobacco(commitSha) {
     const response = await fetch(
-        `api/files/${encodeURIComponent('public/data/tobacco.json')}?sha=${commitSha}`
+        `/api/files/${encodeURIComponent('public/data/tobacco.json')}?sha=${commitSha}`
     )
     if (!response.ok) {
         throw new Error('Failed to fetch pipe tobacco data');
