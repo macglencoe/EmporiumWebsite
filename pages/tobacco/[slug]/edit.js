@@ -1,6 +1,11 @@
 import { useRouter } from "next/router";
 import { useMemo } from "react";
-import { buildSchemaArtifacts } from "../../../utils/schemaMapper";
+import { buildSchemaArtifacts, normalizeType } from "../../../utils/schemaMapper";
+import uiSchema from "../../../public/data/tobacco.ui.schema.json"
+import { useDraftItem } from "../../../hooks/useDraftItem";
+import Layout from "../../../components/layout";
+import { buildTobaccoSuggestions } from "../../../utils/suggestions";
+import SchemaForm from "../../../components/schemaForm";
 
 export const getStaticPaths = async () => {
     const tobaccos = await import("../../../public/data/tobacco.json");
@@ -27,7 +32,61 @@ const EditTobaccoPage = ({ tobacco, allTobacco }) => {
         return <div>Tobacco Not Found</div>
     }
     
-    return <div>{tobacco.slug}</div>
+    const { defaults } = useMemo(() => buildSchemaArtifacts(uiSchema), [])
+    const {
+        draft,
+        setDraft,
+        saveDraft,
+        isSlugUnique,
+        generateSlug,
+    } = useDraftItem({
+        slug: tobacco.slug,
+        defaults,
+        initialItem: tobacco,
+        allItems: allTobacco || []
+    });
+
+    const suggestions = useMemo(
+        () => buildTobaccoSuggestions(allTobacco || []),
+        [allTobacco]
+    )
+
+    const handleSubmit = (values) => {
+        const result = saveDraft(values);
+        if(result?.error === 'slug-conflict') {
+            alert("Slug already exists. Please choose a different name.");
+            return;
+        }
+        const targetSlug = values.slug || tobacco.slug;
+        router.push(uiSchema.slugBasePath + '/' + targetSlug)
+    }
+
+    return (
+        <Layout>
+            <SchemaForm
+                key={tobacco.slug}
+                uiSchema={uiSchema}
+                initialValues={draft}
+                suggestions={suggestions}
+                onSubmit={handleSubmit}
+                tabs={[
+                    {
+                        id: "metadata",
+                        label: "METADATA",
+                        filter: (n, f) => sectionOf(f) === "metadata"
+                    },
+                    {
+                        id: "components",
+                        label: "COMPONENTS",
+                        filter: (n, f) => sectionOf(f) === "components"
+                    }
+                ]}
+            >
+            </SchemaForm>
+        </Layout>
+    )
 }
+
+const sectionOf = (field) => (field?.ui?.section || "")
 
 export default EditTobaccoPage
