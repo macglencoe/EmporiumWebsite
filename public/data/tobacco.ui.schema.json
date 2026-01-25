@@ -1,0 +1,84 @@
+{
+    "entityLabel": "Tobacco",
+    "slugBasePath": "/tobacco",
+    "type": "object",
+    "properties": {
+        "Tobacco Name": {
+            "type": "string",
+            "default": "",
+            "validation": {
+                "required": true,
+                "minLength": 2
+            },
+            "ui": {
+                "label": "Name",
+                "autosuggest": false,
+                "placeholder": "Enter tobacco name",
+                "input": "text",
+                "description": "e.g., Greg's Mix",
+                "section": "metadata"
+            }
+        },
+        "Tobacco Brand": {
+            "type": "string",
+            "default": "",
+            "validation": {
+                "required": true,
+                "minLength": 2
+            },
+            "ui": {
+                "label": "Brand",
+                "autosuggest": true,
+                "placeholder": "Enter tobacco brand",
+                "input": "text",
+                "description": "e.g., Cornell & Diehl"
+            }
+        },
+        "Family": {
+            "type": ["string", "null"],
+            "default": null,
+            "ui": {
+                "label": "Family",
+                "autosuggest": true,
+                "placeholder": "Enter tobacco family",
+                "input": "text",
+                "description": "e.g., American Aromatic",
+                "section": "metadata"
+            }
+        },
+        "description": {
+            "type": ["string", "null"],
+            "default": null,
+            "validation": {
+                "required": false,
+                "maxLength": 2000
+            },
+            "ui": {
+                "label": "Description",
+                "input": "textarea",
+                "rows": 4,
+                "description": "This will be displayed at the top of the product's page",
+                "section": "metadata"
+            }
+        },
+        "Components": {
+            "type": "array",
+            "default": [],
+            "items": {
+                "type": "string",
+                "default": "",
+                "ui": {
+                    "label": "Component",
+                    "placeholder": "Enter Component",
+                    "input": "text",
+                    "description": "e.g. Burley/Black Cavendish/Virginia",
+                    "section": "components"
+                }
+            },
+            "ui": {
+                "section": "sizes",
+                "label": "Components"
+            }
+        }
+    }
+}
