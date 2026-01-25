@@ -5,7 +5,7 @@ import uiSchema from "../../../public/data/tobacco.ui.schema.json"
 import { useDraftItem } from "../../../hooks/useDraftItem";
 import Layout from "../../../components/layout";
 import { buildTobaccoSuggestions } from "../../../utils/suggestions";
-import SchemaForm, { SlugPreview } from "../../../components/schemaForm";
+import SchemaForm, { FormButtons, SlugPreview } from "../../../components/schemaForm";
 
 export const getStaticPaths = async () => {
     const tobaccos = await import("../../../public/data/tobacco.json");
@@ -44,6 +44,8 @@ const EditTobaccoPage = ({ tobacco, allTobacco }) => {
         defaults,
         initialItem: tobacco,
         allItems: allTobacco || [],
+        storageKey: "tempData_tobacco",
+        originKey: "originData_tobacco",
         slugFields: ["Tobacco Name"]
     });
 
@@ -89,6 +91,7 @@ const EditTobaccoPage = ({ tobacco, allTobacco }) => {
                     fallbackSlug={tobacco.slug}
                     baseRoute="www.kingstreetemporium.com/tobacco"
                 />
+                <FormButtons onClickRevert={() => setDraft({ ...defaults, ...tobacco })}/>
             </SchemaForm>
         </Layout>
     )
