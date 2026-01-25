@@ -31,7 +31,8 @@
                 "autosuggest": true,
                 "placeholder": "Enter tobacco brand",
                 "input": "text",
-                "description": "e.g., Cornell & Diehl"
+                "description": "e.g., Cornell & Diehl",
+                "section": "metadata"
             }
         },
         "Family": {
@@ -76,7 +77,7 @@
                 }
             },
             "ui": {
-                "section": "sizes",
+                "section": "components",
                 "label": "Components"
             }
         }
