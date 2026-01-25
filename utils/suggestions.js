@@ -1,6 +1,6 @@
-export const buildCigarSuggestions = (items = []) => {
-  const dedupe = (arr) => Array.from(new Set(arr.filter(Boolean)));
+const dedupe = (arr) => Array.from(new Set(arr.filter(Boolean)));
 
+export const buildCigarSuggestions = (items = []) => {
   return {
     "Cigar Brand": dedupe(items.map((i) => i["Cigar Brand"])),
     Wrapper: dedupe(items.map((i) => i["Wrapper"])),
@@ -10,3 +10,10 @@ export const buildCigarSuggestions = (items = []) => {
     ),
   };
 };
+
+export const buildTobaccoSuggestions = (items = []) => {
+  return {
+    "Tobacco Brand": dedupe(items.map((i) => i["Tobacco Brand"])),
+    Family: dedupe(items.map((i) => i["Family"])),
+  }
+}
