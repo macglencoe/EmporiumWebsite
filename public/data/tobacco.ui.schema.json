@@ -16,7 +16,8 @@
                 "placeholder": "Enter tobacco name",
                 "input": "text",
                 "description": "e.g., Greg's Mix",
-                "section": "metadata"
+                "section": "metadata",
+                "isTitle": true
             }
         },
         "Tobacco Brand": {

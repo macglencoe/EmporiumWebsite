@@ -5,7 +5,10 @@ import ProductPage, { Navigation, StringBubbleList } from '../../../components/p
 import { ProductImage, ProductSideContent } from '../../../components/productPage';
 import { ProductMainContent, ProductTitle } from '../../../components/productPage';
 import { ProductInfoFields, ProductCallOrVisitButtons } from '../../../components/productPage';
-
+import { useRouter } from "next/router";
+import { SchemaProductPage } from "../../../components/schemaProductPage";
+import uiSchema from "../../../public/data/tobacco.ui.schema.json"
+import { useEffect, useState } from "react";
 
 export const getStaticPaths = async () => {
     const tobacco = await import('../../../public/data/tobacco.json');
@@ -36,12 +39,35 @@ export const getStaticProps = async ({ params }) => {
 
 
 const TobaccoPage = (props) => {
+    const router = useRouter();
 
+    
     const tobacco = props.tobacco;
     if (!tobacco) {
         return <Layout><PageTitle1>Tobacco not found</PageTitle1></Layout>
     }
+    
+    const [tempData, setTempData] = useState(tobacco);
+    const [originData, setOriginData] = useState(tobacco);
 
+    const pullTempData = () => {
+        const localTempData = JSON.parse(localStorage.getItem('tempData_tobacco'));
+        const firstTobaccoWithSameSlug = localTempData.find((tobacco) => tobacco.slug === originData.slug);
+        setTempData(firstTobaccoWithSameSlug)
+    }
+
+    const pullOriginData = () => {
+        const localOriginData = JSON.parse(localStorage.getItem('originData_tobacco'));
+        const firstTobaccoWithSameSlug = localOriginData.find((tobacco) => tobacco.slug === originData.slug);
+        setOriginData(firstTobaccoWithSameSlug)
+    }
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            pullTempData();
+            pullOriginData();
+        }
+    }, [])
 
     return (
         <>
@@ -49,7 +75,24 @@ const TobaccoPage = (props) => {
                 <title>{tobacco['Tobacco Name']}</title>
             </Head>
             <Layout>
-                <PageTitle1
+                <SchemaProductPage
+                    uiSchema={uiSchema}
+                    data={tempData}
+                    originalData={originData}
+                    sections={[
+                        {
+                            id: "metadata",
+                            label: "METADATA",
+                            filter: (n, f) => sectionOf(f) === "metadata"
+                        },
+                        {
+                            id: "components",
+                            label: "COMPONENTS",
+                            filter: (n, f) => sectionOf(f) === "components"
+                        }
+                    ]}
+                ></SchemaProductPage>
+                {/* <PageTitle1
                     subtitle={tobacco['Tobacco Name']}
                     href="/tobacco"
                     prev={props.prev}
@@ -76,10 +119,12 @@ const TobaccoPage = (props) => {
                             ]}
                         />
                     </ProductMainContent>
-                </ProductPage>
+                </ProductPage> */}
             </Layout>
         </>
     )
 }
+
+const sectionOf = (field) => (field?.ui?.section || "")
 
 export default TobaccoPage
