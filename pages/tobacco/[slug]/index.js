@@ -9,6 +9,8 @@ import { useRouter } from "next/router";
 import { SchemaProductPage } from "../../../components/schemaProductPage";
 import uiSchema from "../../../public/data/tobacco.ui.schema.json"
 import { useEffect, useState } from "react";
+import Toolbar from "../../../components/toolbar";
+import { PiArrowUUpLeftBold, PiPencilSimpleBold, PiTrashSimpleBold } from "react-icons/pi";
 
 export const getStaticPaths = async () => {
     const tobacco = await import('../../../public/data/tobacco.json');
@@ -41,12 +43,12 @@ export const getStaticProps = async ({ params }) => {
 const TobaccoPage = (props) => {
     const router = useRouter();
 
-    
+
     const tobacco = props.tobacco;
     if (!tobacco) {
         return <Layout><PageTitle1>Tobacco not found</PageTitle1></Layout>
     }
-    
+
     const [tempData, setTempData] = useState(tobacco);
     const [originData, setOriginData] = useState(tobacco);
 
@@ -75,6 +77,22 @@ const TobaccoPage = (props) => {
                 <title>{tobacco['Tobacco Name']}</title>
             </Head>
             <Layout>
+                <Toolbar
+                    links={[
+                        {
+                            label: "Edit", href: router.asPath + '/edit',
+                            icon: <PiPencilSimpleBold size={26} />
+                        },
+                        {
+                            label: 'Delete', href: router.asPath + '/delete',
+                            icon: <PiTrashSimpleBold size={26} />
+                        },
+                        {
+                            label: 'Revert', href: router.asPath + '/edit?tab=submit-section#revert',
+                            icon: <PiArrowUUpLeftBold size={26} />
+                        }
+                    ]}
+                />
                 <SchemaProductPage
                     uiSchema={uiSchema}
                     data={tempData}
