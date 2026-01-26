@@ -23,11 +23,12 @@ export const SchemaProductPage = ({
                         key={section.id}
                         className="space-y-4 py-3 px-2 border-2 border-amber-900 rounded-lg shadow-lg bg-amber-50/30 min-w-96 flex-1"
                     >
+                        <h1 className="tracking-wider font-semibold text-2xl">{section.label || section.id}</h1>
                         {entries.map(([name, field]) => {
                             const value = data[name] || null;
                             const original = originalData[name] || null;
 
-                            return (
+                            if (value || original) return (
                                 <Display
                                     name={name}
                                     field={field}
@@ -65,7 +66,9 @@ const DISPLAY_RENDERERS = {
     text: TextDisplay,
     title: TitleDisplay,
     "text-large": LargeTextDisplay,
-    "array-string": ArrayStringDisplay
+    "array-string": ArrayStringDisplay,
+    "array-object": ArrayObjectDisplay,
+    "boolean": BooleanDisplay
 }
 
 const pickType = (field = {}) => {
@@ -140,6 +143,32 @@ function TitleDisplay({ name, field, value, original }) {
     </h2>
 }
 
+function BooleanDisplay({ name, field, value, original }) {
+    const label = field?.ui?.label || name;
+
+    const readBool = (boolean) => {
+        return boolean ? "Yes" : "No"
+    }
+    return (
+        <div className="space-y-1">
+            <dt className="text-lg font-semibold">{label}</dt>
+            <dd>
+                {
+                    original === value ? readBool(value) :
+                        original === null ?
+                            <div className="flex items-center">
+                                <PiPlusBold className="text-green-600 mr-1 inline-block" />{readBool(value)}
+                            </div> :
+                            <>
+                                <strike aria-hidden>{readBool(original)}</strike><br />{readBool(value)}
+                            </>
+                }
+            </dd>
+
+        </div>
+    )
+}
+
 function ArrayStringDisplay({ name, field, value, original }) {
     const itemsSchema = field.items || {}
     const label = field?.ui?.label || name;
@@ -160,14 +189,14 @@ function ArrayStringDisplay({ name, field, value, original }) {
                             <li className={`
                                 py-0.5 px-2 rounded-md flex items-center border border-amber-900/20 shadow-md
                                 ${isNew ? 'bg-green-600/40' :
-                                isRemoved ? 'bg-red-600/40 line-through' :
-                                'bg-amber-900/30'
+                                    isRemoved ? 'bg-red-600/40 line-through' :
+                                        'bg-amber-900/30'
                                 }
                                 `
                             }>
-                                {isNew ? 
-                                <PiPlusBold className="text-green-700 mr-1"/> :
-                                null}
+                                {isNew ?
+                                    <PiPlusBold className="text-green-700 mr-1" /> :
+                                    null}
                                 {String(item)}
                             </li>
                         )
@@ -175,6 +204,45 @@ function ArrayStringDisplay({ name, field, value, original }) {
                     }
                 </ul>
             </dd>
+        </div>
+    )
+}
+
+function ArrayObjectDisplay({ name, field, value, original }) {
+    const itemProps = field.items?.properties || {};
+    const label = field?.ui?.label || name;
+    const items = Array.isArray(value) ? value : []
+    const originalItems = Array.isArray(original) ? original : [];
+
+    return (
+        <div className="space-y-2">
+            <label className="text-lg font-semibold">{label}</label>
+            {items.map((item, idx) => {
+                const originalItem = originalItems[idx] || item;
+                return (
+                    <div key={idx} className="rounded-md border border-amber-900/30 bg-amber-100/30 p-3 space-y-2 shadow-sm flex flex-row gap-2 flex-wrap justify-between">
+                        {Object.entries(itemProps).map(([childName, childField]) => {
+                            const childLabel = childField?.ui?.label || childName;
+                            const childType = normalizeType(childField.type).baseType;
+                            const childValue = item[childName] || null;
+                            const childOriginal = originalItem[childName] || null;
+
+                            return (
+                                <div className="!m-0">
+                                    <Display
+                                        name={childName}
+                                        field={childField}
+                                        value={childValue}
+                                        original={childOriginal}
+                                    />
+                                </div>
+                            )
+                        })}
+                    </div>
+                )
+            })
+
+            }
         </div>
     )
 }
