@@ -71,6 +71,30 @@ const TobaccoPage = (props) => {
         }
     }, [])
 
+    const restoreTobacco = () => {
+        const localTempData = JSON.parse(localStorage.getItem('tempData_tobacco'));
+        localStorage.setItem('tempData_tobacco',JSON.stringify(
+            [...localTempData, originData],
+            null, 4
+        ));
+        window.location.reload();
+    }
+
+    if (!tempData) {
+        if (originData) return (
+            <Layout>
+                <p>This tobacco item has been deleted:</p>
+                <pre>{JSON.stringify(originData, null, 4)}</pre>
+                <button onClick={restoreTobacco}>Restore?</button>
+            </Layout>
+        )
+        return (
+            <Layout>
+                <p>This tobacco item was empty for an unidentifiable reason.<br/>It is recommended to reset data to fix this</p>
+            </Layout>
+        )
+    }
+
     return (
         <>
             <Head>
