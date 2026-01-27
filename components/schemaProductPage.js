@@ -13,36 +13,43 @@ export const SchemaProductPage = ({
     const sections = useMemo(() => sectionsProp, [properties, sectionsProp]);
 
     return (
-
-
-        <div className="flex flex-row flex-wrap gap-2">
-            {sections.map((section) => {
-                const entries = Object.entries(properties).filter(([name, field]) => section.filter(name, field))
-                return (
-                    <section
-                        key={section.id}
-                        className="space-y-4 py-3 px-2 border-2 border-amber-900 rounded-lg shadow-lg bg-amber-50/30 min-w-96 flex-1"
-                    >
-                        <h1 className="tracking-wider font-semibold text-2xl">{section.label || section.id}</h1>
-                        {entries.map(([name, field]) => {
-                            const value = data[name] || null;
-                            const original = originalData[name] || null;
-
-                            if (value || original) return (
-                                <Display
-                                    name={name}
-                                    field={field}
-                                    original={original}
-                                    value={value}
-                                />
-                            )
-                        })
-
-                        }
-                    </section>
-                )
-            })}
-        </div>
+        <>
+            <div className="flex flex-row flex-wrap gap-2">
+                {sections.map((section) => {
+                    const entries = Object.entries(properties).filter(([name, field]) => section.filter(name, field))
+                    return (
+                        <section
+                            key={section.id}
+                            className="space-y-4 py-3 px-2 border-2 border-amber-900 rounded-lg shadow-lg bg-amber-50/30 min-w-96 flex-1"
+                        >
+                            <h1 className="tracking-wider font-semibold text-2xl">{section.label || section.id}</h1>
+                            {entries.map(([name, field]) => {
+                                const value = data[name] || null;
+                                const original = originalData[name] || null;
+    
+                                if (value || original) return (
+                                    <Display
+                                        name={name}
+                                        field={field}
+                                        original={original}
+                                        value={value}
+                                    />
+                                )
+                            })
+    
+                            }
+                        </section>
+                    )
+                })}
+            </div>
+            {data._clientId &&
+                <SmallTextDisplay
+                    name="ID"
+                    original={data._clientId}
+                    value={data._clientId}
+                />
+            }
+        </>
     )
 }
 
@@ -141,6 +148,31 @@ function TitleDisplay({ name, field, value, original }) {
                 </>
         }
     </h2>
+}
+
+function SmallTextDisplay({ name, field, value, original }) {
+    const label = field?.ui?.label || name;
+
+    return (
+        <div className="space-y-0.5 my-2">
+            <p className="flex flex-row flex-wrap items-center gap-1">
+                <dt className="text-xs font-semibold">{label}:</dt>
+                <dd className="text-xs">
+                    {
+                        original === value ? value :
+                            original === null ?
+                                <div className="flex items-center">
+                                    <PiPlusBold className="text-green-600 mr-1 inline-block" />{value}
+                                </div> :
+                                <>
+                                    <strike aria-hidden>{original}</strike><br />{value}
+                                </>
+                    }
+                </dd>
+            </p>
+
+        </div>
+    )
 }
 
 function BooleanDisplay({ name, field, value, original }) {
