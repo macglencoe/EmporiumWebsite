@@ -16,7 +16,8 @@
                 "placeholder": "Enter cigar name",
                 "input": "text",
                 "description": "e.g., Cazadores",
-                "section": "metadata"
+                "section": "metadata",
+                "showInCatalog": true
             }
         },
         "Cigar Brand": {
@@ -32,7 +33,8 @@
                 "placeholder": "Enter cigar brand",
                 "input": "text",
                 "description": "e.g., J.C. Newman.",
-                "section": "metadata"
+                "section": "metadata",
+                "showInCatalog": true
             }
         },
         "Wrapper": {
@@ -44,7 +46,8 @@
                 "placeholder": "Enter wrapper",
                 "input": "text",
                 "description": "e.g., Connecticut Shade",
-                "section": "metadata"
+                "section": "metadata",
+                "showInCatalog": true
             }
         },
         "Binder": {
@@ -257,7 +260,11 @@
                     }
                 }
             },
-            "ui": { "section": "sizes", "label": "Sizes / Prices" }
+            "ui": { 
+                "section": "sizes",
+                "label": "Sizes / Prices",
+                "showInCatalog": true
+            }
         }
     }
 }

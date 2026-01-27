@@ -11,6 +11,7 @@ import PageTitle1 from './pagetitle1';
 import Layout from './layout';
 import Filters from './filters';
 import { track } from '@vercel/analytics';
+import SchemaCatalog from './schemaCatalog';
 
 
 export const getStaticProps = async () => {
@@ -336,6 +337,12 @@ const Catalog = (props) => {
                                 <span>Returned <b style={{ color: 'var(--dl-color-theme-primary1)' }}>{sortedItems.length}</b> results</span>
                             </div>
                         }
+
+                        <SchemaCatalog
+                            tempData={props.tempData}
+                            originData={props.originData}
+                            uiSchema={props.uiSchema}
+                        />
 
 
                         <CatalogContent

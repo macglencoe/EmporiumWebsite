@@ -17,7 +17,8 @@
                 "input": "text",
                 "description": "e.g., Greg's Mix",
                 "section": "metadata",
-                "isTitle": true
+                "isTitle": true,
+                "showInCatalog": true
             }
         },
         "Tobacco Brand": {
@@ -33,7 +34,8 @@
                 "placeholder": "Enter tobacco brand",
                 "input": "text",
                 "description": "e.g., Cornell & Diehl",
-                "section": "metadata"
+                "section": "metadata",
+                "showInCatalog": true
             }
         },
         "Family": {
@@ -45,7 +47,8 @@
                 "placeholder": "Enter tobacco family",
                 "input": "text",
                 "description": "e.g., American Aromatic",
-                "section": "metadata"
+                "section": "metadata",
+                "showInCatalog": true
             }
         },
         "description": {
@@ -79,7 +82,8 @@
             },
             "ui": {
                 "section": "components",
-                "label": "Components"
+                "label": "Components",
+                "showInCatalog": true
             }
         }
     }
