@@ -50,7 +50,6 @@ export const resetData = async () => {
 
 
         /* Temporary Data */
-
         localStorage.setItem('tempData_cigars', JSON.stringify(cigarsWithIds));
         localStorage.setItem('tempData_tobacco', JSON.stringify(tobaccoWithIds));
 
@@ -58,9 +57,8 @@ export const resetData = async () => {
         localStorage.setItem('tempData_message', dataCommits[0].commit.message);
 
         /* Original Data */
-
-        localStorage.setItem('originData_cigars', JSON.stringify(cigars));
-        localStorage.setItem('originData_tobacco', JSON.stringify(tobacco));
+        localStorage.setItem('originData_cigars', JSON.stringify(cigarsWithIds));
+        localStorage.setItem('originData_tobacco', JSON.stringify(tobaccoWithIds));
         
         localStorage.setItem('originData_sha', recentDataCommitSha);
         localStorage.setItem('originData_message', dataCommits[0].commit.message);
