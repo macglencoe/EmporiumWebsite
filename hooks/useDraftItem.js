@@ -30,6 +30,14 @@ const pruneEmpty = (value) => {
   return value;
 };
 
+const makeClientId = () => {
+  const cryptoObj = globalThis.crypto;
+  if (cryptoObj?.randomUUID) {
+    return cryptoObj.randomUUID();
+  }
+  return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+};
+
 export const useDraftItem = ({
   slug,
   defaults = {},
@@ -113,27 +121,33 @@ export const useDraftItem = ({
       const currentSlug = item.slug || slug;
       const newSlug = generateSlug(item);
       const targetSlug = currentSlug || newSlug;
-      const updated = pruneEmpty({
-        ...item,
-        slug: targetSlug,
-        "new-slug": newSlug,
-      });
 
       let tempData = parseJson(localStorage.getItem(storageKey), []);
       if (!Array.isArray(tempData)) {
         tempData = allItems || [];
       }
 
-      const index = tempData.findIndex(
+      const existingIndex = tempData.findIndex(
         (entry) => entry.slug === currentSlug || entry.slug === targetSlug
       );
-      if (index !== -1) {
-        tempData[index] = updated;
+      const existing = existingIndex !== -1 ? tempData[existingIndex] : null;
+      const clientId =
+        item._clientId || existing?._clientId || makeClientId();
+
+      const updated = pruneEmpty({
+        ...item,
+        _clientId: clientId,
+        slug: targetSlug,
+        "new-slug": newSlug,
+      });
+
+      if (existingIndex !== -1) {
+        tempData[existingIndex] = updated;
       } else {
         tempData.push(updated);
       }
 
-      const targetIndex = index === -1 ? tempData.length - 1 : index;
+      const targetIndex = existingIndex === -1 ? tempData.length - 1 : existingIndex;
       const maybeClean =
         cleanItem ||
         ((value) => {
