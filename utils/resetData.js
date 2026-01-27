@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import ensureClientIds from './ensureClientIds'
 export const resetData = async () => {
     if (typeof window == 'undefined') {
         console.log("undefined window");
@@ -43,11 +43,16 @@ export const resetData = async () => {
         ); */
         const cigars = await fetchCigars(recentDataCommitSha);
         const tobacco = await fetchTobacco(recentDataCommitSha)
+        
+        /* Assign client-side UUIDS for matching */
+        const cigarsWithIds = ensureClientIds(cigars);
+        const tobaccoWithIds = ensureClientIds(tobacco);
+
 
         /* Temporary Data */
 
-        localStorage.setItem('tempData_cigars', JSON.stringify(cigars));
-        localStorage.setItem('tempData_tobacco', JSON.stringify(tobacco));
+        localStorage.setItem('tempData_cigars', JSON.stringify(cigarsWithIds));
+        localStorage.setItem('tempData_tobacco', JSON.stringify(tobaccoWithIds));
 
         localStorage.setItem('tempData_sha', recentDataCommitSha);
         localStorage.setItem('tempData_message', dataCommits[0].commit.message);
