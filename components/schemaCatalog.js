@@ -210,24 +210,26 @@ function AmountField({ name, field, temp, original }) {
 
 const Pagination = ({ totalPages, currentPage, handlePageChange }) => {
     return (
-        <nav>
-            <span><b>Page:</b></span>
-            {Array.from({ length: totalPages }, (_, i) => (
-                <a>
-                    <button
-                        key={i + 1}
-                        id={`page-${i + 1}`}
-                        className={i + 1 === currentPage ? 'page-active' : ''}
-                        onClick={() => handlePageChange(i + 1)}
-                        aria-label={`Page ${i + 1}`}
-                        aria-current={i + 1 === currentPage ? 'page' : undefined}
-                    >
-                        {i + 1}
-                    </button>
-                </a>
-            )
-            )}
-        </nav>
+        <div className="w-full flex justify-center">
+            <nav className="py-2 px-5 min-w-64 my-4 bg-amber-100 rounded-full flex flex-row justify-center items-center gap-2" style={{
+                fontFamily: 'Inter'
+            }}>
+                <span><b>Page:</b></span>
+                {Array.from({ length: totalPages }, (_, i) => (
+                        <button
+                            key={i + 1}
+                            id={`page-${i + 1}`}
+                            className={'p-2 min-w-10 flex-1 h-full rounded-full flex items-center justify-center'+' '+(i + 1 === currentPage ? 'bg-amber-400' : '')}
+                            onClick={() => handlePageChange(i + 1)}
+                            aria-label={`Page ${i + 1}`}
+                            aria-current={i + 1 === currentPage ? 'page' : undefined}
+                        >
+                            {i + 1}
+                        </button>
+                )
+                )}
+            </nav>
+        </div>
     )
 }
 
