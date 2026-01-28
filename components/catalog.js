@@ -370,13 +370,6 @@ const Catalog = (props) => {
                             mergedData={sortedItems}
                             uiSchema={props.uiSchema}
                         />
-
-
-                        <CatalogContent
-                            data={sortedItems}
-                            cardSettings={props.cardSettings}
-
-                        ></CatalogContent>
                     </div>
                 </div>
             </Layout>
