@@ -3,11 +3,13 @@ import { useRouter } from "next/router";
 import React from "react";
 import { useEffect, useState } from "react";
 import { PiPlusBold } from "react-icons/pi";
+import mergeData from "../utils/mergeData";
 
 
 const SchemaCatalog = ({
     tempData = [],
     originData = [],
+    mergedData = [],
     uiSchema,
 }) => {
     if (!uiSchema) return null;
@@ -15,7 +17,7 @@ const SchemaCatalog = ({
     const router = useRouter();
     const pageSize = 20;
     const totalPages = Math.ceil(
-        tempData.length / pageSize
+        mergedData.length / pageSize
     )
 
     const [currentPage, setCurrentPage] = useState(1);
@@ -25,7 +27,7 @@ const SchemaCatalog = ({
         if (pageQuery) setCurrentPage(parseInt(pageQuery));
     }, [router.query.page])
 
-    const currentPageData = tempData.slice((currentPage - 1) * pageSize, currentPage * pageSize)
+    const currentPageData = mergedData.slice((currentPage - 1) * pageSize, currentPage * pageSize)
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
@@ -34,24 +36,6 @@ const SchemaCatalog = ({
             top: 0,
             behavior: 'smooth'
         })
-    }
-
-    const buildMergedData = (tempData = [], originData = []) => {
-        const byId = new Map()
-
-        for (const origin of originData) {
-            if (!origin?._clientId) continue;
-            byId.set(origin._clientId, { temp: null, origin });
-        }
-
-        for (const temp of tempData) {
-            if (!temp?._clientId) continue;
-            const prev = byId.get(temp._clientId) || { temp: null, origin: null };
-            byId.set(temp._clientId, { ...prev, temp });
-        }
-
-        return Array.from(byId.values())
-
     }
 
     const buildDisplayFields = (uiSchema) => {
@@ -65,7 +49,6 @@ const SchemaCatalog = ({
         }, []);
     }
 
-    const mergedData = buildMergedData(tempData, originData)
     const displayFields = buildDisplayFields(uiSchema);
 
     return (
@@ -77,7 +60,7 @@ const SchemaCatalog = ({
             />
 
             <table className="w-full border-separate border-spacing-y-2 border-spacing-x-0.5 overflow-hidden">
-                {displayFields.length > 0 && mergedData.map((item, idx) => {
+                {displayFields.length > 0 && currentPageData.map((item, idx) => {
     
                     // derive item name
                     const itemNameKey = displayFields.find((field) => {
