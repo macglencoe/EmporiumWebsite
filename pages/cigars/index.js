@@ -15,6 +15,8 @@ import CatalogCard from '../../components/catalogCard'
 import Catalog from '../../components/catalog'
 import Filters from '../../components/filters'
 import setLocalData from '../../utils/setLocalData'
+import mergeData from '../../utils/mergeData'
+import uiSchema from '../../public/data/cigar.ui.schema.json'
 
 
 export const getStaticProps = async () => {
@@ -31,22 +33,23 @@ const CigarCatalog = (props) => {
   //CMS
 
 
-  const [tempData, setTempData] = useState(props.data);
-  const [originData, setOriginData] = useState(props.data);
-
-  const pullTempData = () => {
-    setTempData(JSON.parse(localStorage.getItem('tempData_cigars')));
-  }
+  const [tempData, setTempData] = useState([]);
+  const [originData, setOriginData] = useState([]);
+  const [mergedData, setMergedData] = useState([]);
 
   useEffect(() => {
     // pull from localstorage on page load
-    if (window !== 'undefined') {
-      pullTempData();
-      if (localStorage.getItem('originData_cigars')) {
-        setOriginData(JSON.parse(localStorage.getItem('originData_cigars')));
-      }
+    if (window !== undefined) {
+      setTempData(JSON.parse(localStorage.getItem('tempData_cigars')));
+      setOriginData(JSON.parse(localStorage.getItem('originData_cigars')));
     }
   }, []);
+
+  useEffect(() => {
+    if (tempData?.length > 0 && originData?.length > 0) {
+      setMergedData(mergeData(tempData, originData));
+    }
+  }, [tempData, originData])
 
 
   const router = useRouter();
@@ -86,6 +89,9 @@ const CigarCatalog = (props) => {
       </Head>
       <Catalog
         data={tempData}
+
+        mergedData={mergedData}
+        uiSchema={uiSchema}
 
         title="Cigar Catalog"
         subtitle="Our selection of cigars from a wide array of premium brands, available for purchase in-store."

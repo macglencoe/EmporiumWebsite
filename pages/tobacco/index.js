@@ -28,7 +28,7 @@ const TobaccoCatalog = (props) => {
     }, [])
 
     useEffect(() => {
-        if (tempData?.length > 0 && tempData?.length > 0) {
+        if (tempData?.length > 0 && originData?.length > 0) {
             setMergedData(mergeData(tempData, originData));
         }
     }, [tempData, originData])

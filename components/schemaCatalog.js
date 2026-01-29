@@ -66,7 +66,7 @@ const SchemaCatalog = ({
                     const itemNameKey = displayFields.find((field) => {
                         field.field?.ui?.isTitle
                     })?.key || displayFields[0].key
-                    const itemName = item.temp[itemNameKey] || item.origin[itemNameKey]
+                    const itemName = item.temp ? item.temp[itemNameKey] : item.origin[itemNameKey]
                     return (
                         <ProductRow
                             name={itemName}
@@ -94,11 +94,11 @@ const ProductRow = ({ name, fields, temp, origin }) => {
             {fields.map((f) => {
                 const key = f.key;
                 const field = f.field;
-                const childTemp = temp[key]
+                const childTemp = temp ? temp[key] : null
                 const childOrigin = origin[key]
                 
                 // link to product
-                const href = `${router.asPath}/${
+                const href = `${router.pathname}/${
                     origin.slug ?? 'editNew/'+temp.slug
                 }`
 
@@ -210,8 +210,7 @@ function AmountField({ name, field, temp, original }) {
 
 const Pagination = ({ totalPages, currentPage, handlePageChange }) => {
     return (
-        <div className="w-full flex justify-center">
-            <nav className="py-2 px-5 min-w-64 my-4 bg-amber-100 rounded-full flex flex-row justify-center items-center gap-2" style={{
+            <nav className="mx-auto py-2 px-5 min-w-64 my-4 bg-amber-100 flex flex-row flex-wrap justify-center items-center gap-1" style={{
                 fontFamily: 'Inter'
             }}>
                 <span><b>Page:</b></span>
@@ -229,7 +228,6 @@ const Pagination = ({ totalPages, currentPage, handlePageChange }) => {
                 )
                 )}
             </nav>
-        </div>
     )
 }
 
