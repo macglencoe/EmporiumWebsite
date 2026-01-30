@@ -87,8 +87,9 @@ const SchemaCatalog = ({
 const ProductRow = ({ name, fields, temp, origin }) => {
     const router = useRouter();
     return (
-        <tr className="bg-amber-50/30
-            hover:translate-x-1.5 transition-all duration-100" style={{
+        <tr className={`hover:translate-x-1.5 transition-all duration-100` + ' ' +
+            (temp == null && origin ? `bg-red-500/50` : `bg-amber-50/30`)
+            } style={{
                 boxShadow: "-10px 0 0px rgba(0,0,0,0.4)"
              }}>
             {fields.map((f) => {
