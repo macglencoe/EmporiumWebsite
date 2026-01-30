@@ -73,6 +73,15 @@ const SchemaCatalog = ({
             </div>
 
             <table className="w-full border-separate border-spacing-y-2 border-spacing-x-0.5 overflow-hidden">
+                <thead>
+                    <tr>
+                        {displayFields.map((f) => {
+                            return (
+                                <td className="bg-amber-900 p-2 font-semibold text-amber-200">{f.field?.ui?.label || 'unknown'}</td>
+                            )
+                        })}
+                    </tr>
+                </thead>
                 {displayFields.length > 0 && currentPageData.map((item, idx) => {
     
                     // derive item name
@@ -182,7 +191,7 @@ const pickType = (field) => {
 function TextField({ name, field, temp, original }) {
     return (
         <div>
-            <dt className="font-semibold">{field.ui?.label}</dt>
+            {/* <dt className="font-semibold">{field.ui?.label}</dt> */}
             <dd>
                 {
                     temp === original ? temp :
@@ -204,7 +213,7 @@ function TextField({ name, field, temp, original }) {
 function AmountField({ name, field, temp, original }) {
     if (Array.isArray(temp) || Array.isArray(original)) return (
         <div>
-            <dt className="font-semibold">{field.ui?.label}</dt>
+            {/* <dt className="font-semibold">{field.ui?.label}</dt> */}
             <dd className="font-mono">
                 {
                     temp?.length === original?.length ? temp?.length :
