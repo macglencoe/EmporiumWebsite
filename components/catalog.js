@@ -203,6 +203,12 @@ const Catalog = (props) => {
 
         if (aHasTemp !== bHasTemp) return aHasTemp ? -1 : 1;
 
+        if (aHasTemp && bHasTemp) {
+            const aIsNew = a.origin == null;
+            const bIsNew = b.origin == null;
+            if (aIsNew !== bIsNew) return aIsNew ? -1 : 1;
+        }
+
         const aSource = aHasTemp ? a.temp : a.origin;
         const bSource = bHasTemp ? b.temp : b.origin;
 

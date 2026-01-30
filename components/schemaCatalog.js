@@ -88,7 +88,11 @@ const ProductRow = ({ name, fields, temp, origin }) => {
     const router = useRouter();
     return (
         <tr className={`hover:translate-x-1.5 transition-all duration-100` + ' ' +
-            (temp == null && origin ? `bg-red-500/50` : `bg-amber-50/30`)
+            (  
+                temp == null && origin ? `bg-red-500/50` :
+                origin == null && temp ? `bg-green-500/50` :
+                `bg-amber-50/30`
+            )
             } style={{
                 boxShadow: "-10px 0 0px rgba(0,0,0,0.4)"
              }}>
@@ -96,11 +100,11 @@ const ProductRow = ({ name, fields, temp, origin }) => {
                 const key = f.key;
                 const field = f.field;
                 const childTemp = temp ? temp[key] : null
-                const childOrigin = origin[key]
+                const childOrigin = origin ? origin[key] : null
                 
                 // link to product
                 const href = `${router.pathname}/${
-                    origin.slug ?? 'editNew/'+temp.slug
+                    origin ? origin.slug : 'editnew/'+temp.slug
                 }`
 
 
