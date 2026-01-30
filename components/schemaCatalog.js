@@ -227,26 +227,90 @@ function AmountField({ name, field, temp, original }) {
 
 
 const Pagination = ({ totalPages, currentPage, handlePageChange }) => {
+    if (!totalPages || totalPages <= 1) return null;
+
+    const clampedCurrent = Math.min(Math.max(currentPage, 1), totalPages);
+
+    const goToPage = (page) => {
+        if (page < 1 || page > totalPages || page === clampedCurrent) return;
+        handlePageChange(page);
+    };
+
+    const getPageList = () => {
+        const pages = new Set([1, totalPages]);
+        for (let i = clampedCurrent - 2; i <= clampedCurrent + 2; i++) {
+            if (i > 1 && i < totalPages) pages.add(i);
+        }
+        const sorted = Array.from(pages).sort((a, b) => a - b);
+        const output = [];
+        for (let i = 0; i < sorted.length; i++) {
+            if (i > 0 && sorted[i] - sorted[i - 1] > 1) {
+                output.push("ellipsis");
+            }
+            output.push(sorted[i]);
+        }
+        return output;
+    };
+
+    const buttonBase =
+        "px-3 py-2 min-w-9 rounded-full flex items-center justify-center text-sm font-semibold transition-colors";
+    const buttonInactive = "bg-amber-200/70 hover:bg-amber-300 text-amber-900";
+    const buttonActive = "bg-amber-400 text-amber-900";
+    const buttonDisabled = "opacity-50 cursor-not-allowed";
+
     return (
-            <nav className="py-2 px-5 min-w-64 my-4 bg-amber-100 flex flex-row flex-wrap justify-center items-center gap-1" style={{
-                fontFamily: 'Inter'
-            }}>
-                <span><b>Page:</b></span>
-                {Array.from({ length: totalPages }, (_, i) => (
-                        <button
-                            key={i + 1}
-                            id={`page-${i + 1}`}
-                            className={'p-2 min-w-10 flex-1 h-full rounded-full flex items-center justify-center'+' '+(i + 1 === currentPage ? 'bg-amber-400' : '')}
-                            onClick={() => handlePageChange(i + 1)}
-                            aria-label={`Page ${i + 1}`}
-                            aria-current={i + 1 === currentPage ? 'page' : undefined}
-                        >
-                            {i + 1}
-                        </button>
-                )
-                )}
-            </nav>
-    )
+        <nav
+            className="py-2 px-5 min-w-64 my-4 bg-amber-100 flex flex-row flex-wrap justify-center items-center gap-1"
+            style={{ fontFamily: 'Inter' }}
+            aria-label="Pagination"
+        >
+            <span className="text-sm font-semibold whitespace-nowrap mr-2">
+                Page {clampedCurrent} of {totalPages}
+            </span>
+            <button
+                type="button"
+                className={`${buttonBase} ${buttonInactive} ${clampedCurrent === 1 ? buttonDisabled : ""}`}
+                onClick={() => goToPage(clampedCurrent - 1)}
+                aria-label="Previous page"
+                disabled={clampedCurrent === 1}
+            >
+                Prev
+            </button>
+            {getPageList().map((entry, index) => {
+                if (entry === "ellipsis") {
+                    return (
+                        <span key={`ellipsis-${index}`} className="px-2 text-amber-900">
+                            ...
+                        </span>
+                    );
+                }
+                const page = entry;
+                const isActive = page === clampedCurrent;
+                return (
+                    <button
+                        key={page}
+                        id={`page-${page}`}
+                        type="button"
+                        className={`${buttonBase} ${isActive ? buttonActive : buttonInactive}`}
+                        onClick={() => goToPage(page)}
+                        aria-label={`Page ${page}`}
+                        aria-current={isActive ? 'page' : undefined}
+                    >
+                        {page}
+                    </button>
+                );
+            })}
+            <button
+                type="button"
+                className={`${buttonBase} ${buttonInactive} ${clampedCurrent === totalPages ? buttonDisabled : ""}`}
+                onClick={() => goToPage(clampedCurrent + 1)}
+                aria-label="Next page"
+                disabled={clampedCurrent === totalPages}
+            >
+                Next
+            </button>
+        </nav>
+    );
 }
 
 export default SchemaCatalog;
