@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import { useEffect, useState } from "react";
-import { PiPlusBold } from "react-icons/pi";
+import { PiPlusBold, PiPlusCircleBold } from "react-icons/pi";
 import mergeData from "../utils/mergeData";
 
 
@@ -53,11 +53,24 @@ const SchemaCatalog = ({
 
     return (
         <section className="w-full space-y-2">
-            <Pagination
-                totalPages={totalPages}
-                currentPage={currentPage}
-                handlePageChange={handlePageChange}
-            />
+            <div className="flex px-3 flex-row gap-2 justify-between w-full items-center">
+                <Pagination
+                    totalPages={totalPages}
+                    currentPage={currentPage}
+                    handlePageChange={handlePageChange}
+                />
+                <Link
+                    href={router.pathname + "/add"}
+                    className=""
+                >
+                    <a className="whitespace-nowrap px-3 py-2 flex items-center text-lg font-semibold bg-amber-900 hover:bg-amber-800 text-amber-200 rounded-md h-fit"
+                        style={{fontFamily: 'Inter'}}
+                    >
+                        <PiPlusCircleBold  className="inline mr-1"/>
+                        Add New
+                    </a>
+                </Link>
+            </div>
 
             <table className="w-full border-separate border-spacing-y-2 border-spacing-x-0.5 overflow-hidden">
                 {displayFields.length > 0 && currentPageData.map((item, idx) => {
@@ -215,7 +228,7 @@ function AmountField({ name, field, temp, original }) {
 
 const Pagination = ({ totalPages, currentPage, handlePageChange }) => {
     return (
-            <nav className="mx-auto py-2 px-5 min-w-64 my-4 bg-amber-100 flex flex-row flex-wrap justify-center items-center gap-1" style={{
+            <nav className="py-2 px-5 min-w-64 my-4 bg-amber-100 flex flex-row flex-wrap justify-center items-center gap-1" style={{
                 fontFamily: 'Inter'
             }}>
                 <span><b>Page:</b></span>
