@@ -15,7 +15,7 @@ const SchemaCatalog = ({
     if (!uiSchema) return null;
 
     const router = useRouter();
-    const pageSize = 20;
+    const pageSize = 40;
     const totalPages = Math.ceil(
         mergedData.length / pageSize
     )
