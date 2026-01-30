@@ -67,6 +67,30 @@ const CigarPage = (props) => {
   }, []);
   console.log(cigarLocalData);
 
+  const restoreCigar = () => {
+          const localTempData = JSON.parse(localStorage.getItem('tempData_cigars'));
+          localStorage.setItem('tempData_cigars',JSON.stringify(
+              [...localTempData, cigarOriginData],
+              null, 4
+          ));
+          window.location.reload();
+      }
+  
+      if (!cigarLocalData) {
+          if (cigarOriginData) return (
+              <Layout>
+                  <p>This cigar has been deleted:</p>
+                  <pre>{JSON.stringify(cigarOriginData, null, 4)}</pre>
+                  <button onClick={restoreCigar}>Restore?</button>
+              </Layout>
+          )
+          return (
+              <Layout>
+                  <p>This cigar was empty for an unidentifiable reason.<br/>It is recommended to reset data to fix this</p>
+              </Layout>
+          )
+      }
+
   return (
     <>
       <Head>
