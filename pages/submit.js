@@ -3,6 +3,8 @@ import Layout from '../components/layout'
 import PageTitle1 from '../components/pagetitle1';
 import { diffJson } from 'diff';
 import Notice from '../components/notice';
+import mergeData from '../utils/mergeData'
+import { PiSpinnerBold } from 'react-icons/pi';
 
 
 
@@ -41,59 +43,53 @@ export const SubmitPage = (props) => {
 
     const [localData, setLocalData] = useState(props.data);
     const [originData, setOriginData] = useState(props.data);
+    const [mergedData, setMergedData] = useState([]);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            if (!localStorage.getItem('tempData_cigars')) {
-                localStorage.setItem('tempData_cigars', JSON.stringify(props.data));
-            }
-            setLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
-            if (!localStorage.getItem('originData_cigars')) {
-                localStorage.setItem('originData_cigars', JSON.stringify(props.data));
-            }
-            setOriginData(JSON.parse(localStorage.getItem('originData_cigars')));
-            // fetch all commits
-            fetch(`/api/commits?branch=cms`).then(response => response.json()).then(data => setAllCommits(data));
-            // fetch only commits touching cigar data file
-            fetch(`/api/commits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}&branch=cms`).then(response => response.json()).then(data => setDataCommits(data));
-
-            setCurrentCommitSha(localStorage.getItem('tempData_sha') ?? 'No Sha Found');
-            setCurrentCommitMessage(localStorage.getItem('tempData_message') ?? 'No Message Found');
+            // pull and build merged data
+            setMergedData(
+                mergeFromLocal('tempData_cigars', 'originData_cigars', props.data)
+            )
+            // sync commit metadata from remote and local
+            syncCommits();
         }
     }, []);
-    useEffect(() => {
-        getDiff();
-    }, [localData]);
+
+    /* useEffect(() => {
+        if (localData && originData) {
+            setMergedData(mergeData(localData, originData))
+        }
+    }, [localData, originData]) */
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            // fetch all commits
-            fetch(`/api/commits?branch=cms`).then(response => response.json()).then(data => setAllCommits(data));
-            // fetch only commits touching cigar data file
-            fetch(`/api/commits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}&branch=cms`).then(response => response.json()).then(data => setDataCommits(data));
+        // generate diff from merged data
+        setDiff(generateDiff(mergedData))
+    }, [mergedData]);
 
-            // get current commit
-            setCurrentCommitSha(localStorage.getItem('tempData_sha') ?? 'No Sha Found');
-            setCurrentCommitMessage(localStorage.getItem('tempData_message') ?? 'No Message Found');
-        }, 5000);
+    useEffect(() => {
+        // sync commit metadata every 60s
+        const interval = setInterval(() => syncCommits(), 60000);
         return () => clearInterval(interval);
     }, []);
 
     useEffect(() => {
+        // when allCommits changes, update sha tracking
         if (allCommits.length > 0) {
             setRecentAllCommitSha(allCommits[0].sha);
         }
     }, [allCommits])
 
     useEffect(() => {
+        // when dataCommits changes, update sha tracking
         if (dataCommits.length > 0) {
             setRecentDataCommitSha(dataCommits[0].sha);
         }
     }, [dataCommits])
 
     const [defaultCommitMessage, setDefaultCommitMessage] = useState('');
-    // update default commit message
     useEffect(() => {
+        // update default commit message every second
         const interval = setInterval(() => {
             setDefaultCommitMessage(`CMS Commit - ${new Date().toLocaleString()}`);
         }, 1000);
@@ -102,6 +98,63 @@ export const SubmitPage = (props) => {
 
     // commit message from user input
     const [customCommitMessage, setCustomCommitMessage] = useState('');
+
+    const [syncStatus, setSyncStatus] = useState('');
+
+    useEffect(() => 
+        // update sync status when relevant metadata changes
+        setSyncStatus(getSyncStatus()),
+        [recentDataCommitSha, currentCommitSha, recentAllCommitSha])
+
+
+
+    /**
+     * Pull temp and origin from localStorage, then merge
+     * @param {string} tempKey
+     * @param {string} originKey
+     * @param {Object[]} defaultData
+     * @returns {any} Merged data
+     */
+    const mergeFromLocal = (tempKey, originKey, defaultData) => {
+        const tempData = pullLocalJSON(tempKey, defaultData);
+        const originData = pullLocalJSON(originKey, defaultData);
+        return mergeData(tempData, originData);
+    }
+
+    /**
+     * Pull key from localStorage, and initialize if necessary with default data
+     * @param {string} key
+     * @param {Object[]} defaultData
+     * @returns {any} 
+     */
+    const pullLocalJSON = (key, defaultData) => {
+        let data = JSON.parse(localStorage.getItem(key));
+        if (!data) {
+            data = defaultData;
+            localStorage.setItem(data);
+        }
+        return data;
+    }
+
+    const syncCommits = () => {
+        // fetch all commits
+        fetch(`/api/commits?branch=cms`).then(response =>
+            response.json()
+        ).then(data => 
+            setAllCommits(data)
+        )
+        
+        // fetch only commits touching data files
+        fetch(`/api/commits?path=${encodeURIComponent('public/data')}&branch=cms`).then(response =>
+            response.json()
+        ).then(data =>
+            setDataCommits(data)
+        )
+
+        // get currently loaded commit metadata
+        setCurrentCommitSha(localStorage.getItem('tempData_sha') ?? 'No Sha Found');
+        setCurrentCommitMessage(localStorage.getItem('tempData_message') ?? 'No Message Found')
+    }
 
 
 
@@ -202,6 +255,46 @@ export const SubmitPage = (props) => {
         setDiff(tempDiff)
     };
 
+    
+    /**
+     * Will deprecate getDiff()
+     */
+    const generateDiff = ( mergedData ) => {
+        const tempDiff = [];
+        mergedData.map((item, index) => {
+            if(!item.origin || JSON.stringify(item.origin) !== JSON.stringify(item.temp)) {
+                // assume here that "new-slug" has already been mutated into "slug"
+                const diff = diffJson(item.origin, item.temp)
+                tempDiff.push([...diff]);
+            }
+        })
+        return tempDiff;
+    }
+
+    /**
+     * Determine sync status from SHA equivalence
+     * @returns {('same'|'server-ahead'|'building'|'local-ahead')}
+     */
+    const getSyncStatus = () => {
+        switch (recentDataCommitSha) {
+            case currentCommitSha:
+                /* Case 1: Local commit is the same as recent data commit */
+                return "same";
+            case process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA:
+                /* Case 2: Server commit is ahead of local commit */
+                return "server-ahead";
+            default:
+                if (currentCommitSha !== recentAllCommitSha)
+                    /* Case 3: Loading state - local, build, and fetched commits are out-of-sync */
+                    return "building"
+                else 
+                    /* Case 4: Current commit is ahead of the last data commit */
+                    return (
+                    "local-ahead"
+                )
+        }
+    }
+
     return (
         <>
             <Layout>
@@ -231,27 +324,20 @@ export const SubmitPage = (props) => {
                             )}
                             <td className='equivalence'>
                                 <div>
-                                    {/* Case 1: Local commit is the same as recent data commit */}
-                                    {recentDataCommitSha === currentCommitSha && <p>=</p>}
+                                    
+                                    {syncStatus == 'same' && <p>=</p>}
 
-                                    {/* Case 2: Loading state - local, build, and fetched commits are out-of-sync */}
-                                    {recentDataCommitSha !== currentCommitSha &&
-                                        recentDataCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
-                                        currentCommitSha !== recentAllCommitSha && (
+                                    
+                                    {syncStatus == 'building' && (
                                             <svg className='loading' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
                                                 <path d="M320-160h320v-120q0-66-47-113t-113-47q-66 0-113 47t-47 113v120Zm160-360q66 0 113-47t47-113v-120H320v120q0 66 47 113t113 47ZM160-80v-80h80v-120q0-61 28.5-114.5T348-480q-51-32-79.5-85.5T240-680v-120h-80v-80h640v80h-80v120q0 61-28.5 114.5T612-480q51 32 79.5 85.5T720-280v120h80v80H160Z" />
                                             </svg>
                                         )
                                     }
 
-                                    {/* Case 3: Current commit is ahead of the last data commit */}
-                                    {recentDataCommitSha !== currentCommitSha &&
-                                        recentDataCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
-                                        currentCommitSha === recentAllCommitSha && <p>&lt;</p>}
+                                    {syncStatus == 'local-ahead' && <p>&lt;</p>}
 
-                                    {/* Case 4: Server commit is ahead of local commit */}
-                                    {recentDataCommitSha !== currentCommitSha &&
-                                        recentDataCommitSha === process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA && (
+                                    {syncStatus == 'server-ahead' && (
                                             <a href='.'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                                                     <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z" />
@@ -271,32 +357,22 @@ export const SubmitPage = (props) => {
                     <tfoot>
                         <tr>
                             <td colSpan={3}>
-                                { // Loading state
-                                    recentDataCommitSha !== currentCommitSha &&
-                                    recentDataCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
-                                    currentCommitSha !== recentAllCommitSha &&
-                                    currentCommitSha !== "Unknown" &&
+                                { syncStatus == 'building' &&
                                     <>
                                         <p>This most likely means your changes are still being fetched. Wait a few seconds, and if you still see this message, please <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>check the build status</a>.</p>
                                     </>
                                 }
-                                { // Local commit is up to date
-                                    recentDataCommitSha === currentCommitSha &&
+                                { syncStatus == 'same' &&
                                     <>
                                         <p>Commit is up to date, and <b>you are able to submit changes</b></p>
                                     </>
                                 }
-                                { // Current commit is ahead of the last data commit
-                                    recentDataCommitSha !== currentCommitSha &&
-                                    recentDataCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
-                                    currentCommitSha === recentAllCommitSha &&
+                                { syncStatus == 'local-ahead' &&
                                     <>
                                         <p>Commit is ahead of the last data commit, and <b>you are able to submit changes</b></p>
                                     </>
                                 }
-                                { // Server commit is ahead of local commit
-                                    recentDataCommitSha !== currentCommitSha &&
-                                    recentDataCommitSha === process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
+                                { syncStatus == 'server-ahead' &&
                                     <>
                                         <p>Server commit is ahead of local commit. <br></br>This means the site hasn't had the chance to update the local data yet. Try <a href='.'>refreshing the page</a></p>
                                         <p>In the meantime, <b>you won't be able to submit changes</b></p>
@@ -304,7 +380,7 @@ export const SubmitPage = (props) => {
 
                                 }
                                 {
-                                    currentCommitSha === "Unknown" &&
+                                    syncStatus == '' &&
                                     <>
                                         <p>Unable to determine if commits are up to date.</p>
                                         <p>This most likely means you are running a local instance</p>
