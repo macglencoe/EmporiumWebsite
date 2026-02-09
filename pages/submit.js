@@ -148,8 +148,8 @@ export const SubmitPage = (props) => {
      * @returns {any} Merged data
      */
     const mergeFromLocal = (tempKey, originKey, defaultData) => {
-        const tempData = pullLocalJSON(tempKey, defaultData);
-        const originData = pullLocalJSON(originKey, defaultData);
+        const tempData = normalizeData(pullLocalJSON(tempKey, defaultData));
+        const originData = normalizeData(pullLocalJSON(originKey, defaultData));
         return mergeData(tempData, originData);
     }
 
@@ -188,15 +188,36 @@ export const SubmitPage = (props) => {
         setCurrentCommitMessage(localStorage.getItem('tempData_message') ?? 'No Message Found')
     }
 
+    const normalizeEntry = (entry) => {
+        const temp = { ...entry };
+        
+        // replace slug with new-slug, then remove new-slug
+        if (temp['new-slug']) {
+            temp.slug = temp['new-slug'];
+            delete temp['new-slug'];
+        }
+
+        return temp;
+    }
+
+    const normalizeData = (data) => {
+        return data.map(entry => normalizeEntry(entry));
+    }
+
+    const stripId = (entry) => {
+        const temp = {...entry};
+        delete temp['_clientId'];
+        return temp;
+    }
+
+    const stripIds = (data) => data.map(entry => stripId(entry))
+
 
 
     const commitToGit = async (commitData, branch, message) => {
         try {
-            // strip out the CMS-only field
-            const editedData = commitData.map(item => {
-                const { 'new-slug': _, ...rest } = item;
-                return rest;
-            });
+            // strip out the CMS-only IDs
+            const editedData = stripIds(commitData)
 
             // build URL
             const filePath = encodeURIComponent('public/data/consolidated_cigars.json');
@@ -296,7 +317,9 @@ export const SubmitPage = (props) => {
         mergedData.map((item, index) => {
             if(!item.origin || JSON.stringify(item.origin) !== JSON.stringify(item.temp)) {
                 // assume here that "new-slug" has already been mutated into "slug"
-                const diff = diffJson(item.origin, item.temp)
+                const origin = item.origin ? stripId(item.origin): null;
+                const temp = item.temp ? stripId(item.temp) : null
+                const diff = diffJson(origin, temp)
                 tempDiff.push([...diff]);
             }
         })
