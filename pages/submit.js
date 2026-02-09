@@ -19,6 +19,38 @@ export const getStaticProps = async () => {
     };
 };
 
+export const Diff = ({ diff, titleKey }) => {
+    if (Array.isArray(diff))
+        return (
+            <div className='bg-amber-100 rounded-md w-full overflow-hidden'>
+                {diff.map((diffObjectLines, objectIndex) => {
+                    const escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+                    const line = diffObjectLines.find((diffLine) => diffLine.value.includes(titleKey));
+                    const regex = new RegExp(`"${escapeRegExp(titleKey)}"\\s*:\\s*"([^"]+)"`);
+                    const match = line?.value.match(regex);
+                    const title = match?.[1];
+                    return (
+                        <div className='p-2 border-t-2 border-dotted border-amber-300 first:border-none'>
+                            <h3 className='text-xl mb-3'>{title}</h3>
+
+                            {diffObjectLines.map((diffLine, i) => {
+                                if (diffLine.removed || diffLine.added) {
+                                    if (diffLine.value !== 'null') { // guard against "null" in new or deleted cigars
+                                        return (
+                                            <pre className={diffLine.added ? 'bg-green-400/50' : diffLine.removed ? 'bg-red-400/50' : ''}>{diffLine.value}</pre>
+                                        )
+                                    }
+                                }
+                            })}
+                        </div>
+                    )
+                })}
+            </div>
+        )
+    else return null;
+}
+
 
 
 
@@ -405,30 +437,7 @@ export const SubmitPage = (props) => {
                             </div>
                         </div>
                     }
-                    {diff &&
-                        <div className='diff-container'>
-                            {diff.map((diffObjectLines, objectIndex) => {
-                                console.log(diffObjectLines);
-                                return (
-                                    <div className='diff-split'>
-                                        {diffObjectLines.find((diffLine) => diffLine.value.includes('Cigar Name')) &&
-                                            <div>
-                                                <h3>{diffObjectLines.find((diffLine) => diffLine.value.includes('Cigar Name')).value.match(/"Cigar Name":\s*"([^"]+)"/)[1]}</h3>
-                                            </div>
-                                        }
-
-                                        {diffObjectLines.map((diffLine, i) => {
-                                            if (diffLine.removed || diffLine.added) {
-                                                return (
-                                                    <pre className={diffLine.added ? 'line-new' : diffLine.removed ? 'line-old' : ''}>{diffLine.value}</pre>
-                                                )
-                                            }
-                                        })}
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    }
+                    <Diff diff={diff} titleKey={"Cigar Name"} />
                 </div>
 
                 <div className='section-header'>
