@@ -9,8 +9,8 @@ export const resetData = async () => {
     const dataCommits = [];
 
     try {
-        console.log("Fetch commit: consolidated_cigars.json, branch: cms")
-        const response = await fetch(`/api/commits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}&branch=cms&per_page=1`);
+        console.log("Fetch commit: consolidated_cigars.json, branch:", process.env.NEXT_PUBLIC_BASE_BRANCH || 'cms')
+        const response = await fetch(`/api/commits?path=${encodeURIComponent('public/data')}&branch=${process.env.NEXT_PUBLIC_BASE_BRANCH || 'cms'}&per_page=1`);
         if (!response.ok) {
             throw new Error('Failed to fetch data commits');
         }

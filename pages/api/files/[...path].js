@@ -56,7 +56,7 @@ export default async function handler(req, res) {
   // === PUT: create or update file ===
   if (req.method === 'PUT') {
     try {
-      const { content, message, branch = 'main' } = req.body;
+      const { content, message, branch = process.env.NEXT_PUBLIC_BASE_BRANCH || 'main' } = req.body;
 
       if (typeof content !== 'string' || !message) {
         return res.status(400).json({ message: 'content (string) and message are required' });

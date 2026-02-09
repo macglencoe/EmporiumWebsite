@@ -178,14 +178,14 @@ export const SubmitPage = (props) => {
 
     const syncCommits = () => {
         // fetch all commits
-        fetch(`/api/commits?branch=cms`).then(response =>
+        fetch(`/api/commits?branch=${process.env.NEXT_PUBLIC_BASE_BRANCH || 'cms'}`).then(response =>
             response.json()
         ).then(data => 
             setAllCommits(data)
         )
         
         // fetch only commits touching data files
-        fetch(`/api/commits?path=${encodeURIComponent('public/data')}&branch=cms`).then(response =>
+        fetch(`/api/commits?path=${encodeURIComponent('public/data')}&branch=${process.env.NEXT_PUBLIC_BASE_BRANCH || 'cms'}`).then(response =>
             response.json()
         ).then(data =>
             setDataCommits(data)
