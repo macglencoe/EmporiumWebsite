@@ -19,10 +19,11 @@ export const getStaticProps = async () => {
     };
 };
 
-export const Diff = ({ diff, titleKey }) => {
+export const Diff = ({ diff, titleKey, title }) => {
     if (Array.isArray(diff))
         return (
             <div className='bg-amber-100 rounded-md w-full overflow-hidden'>
+                <h2 className='text-2xl p-2 bg-amber-200'>{title}</h2>
                 {diff.map((diffObjectLines, objectIndex) => {
                     const escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
@@ -56,14 +57,15 @@ export const Diff = ({ diff, titleKey }) => {
 
 export const SubmitPage = (props) => {
     const audioRef = useRef();
-    const [diff, setDiff] = useState([]);
+    const [cigarDiff, setCigarDiff] = useState([]);
+    const [tobaccoDiff, setTobaccoDiff] = useState([]);
     const [responseConsole, setResponseConsole] = useState([]);
     const [currentCommitSha, setCurrentCommitSha] = useState('');
     const [currentCommitMessage, setCurrentCommitMessage] = useState('');
     // all commits
     const [allCommits, setAllCommits] = useState([]);
     const [recentAllCommitSha, setRecentAllCommitSha] = useState('');
-    // only commits touching cigar data file
+    // only commits touching data file(s)
     const [dataCommits, setDataCommits] = useState([]);
     const [recentDataCommitSha, setRecentDataCommitSha] = useState('');
 
@@ -75,13 +77,18 @@ export const SubmitPage = (props) => {
 
     const [localData, setLocalData] = useState(props.data);
     const [originData, setOriginData] = useState(props.data);
-    const [mergedData, setMergedData] = useState([]);
+    const [mergedCigarData, setMergedCigarData] = useState([]);
+
+    const [mergedTobaccoData, setMergedTobaccoData] = useState([]);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
             // pull and build merged data
-            setMergedData(
+            setMergedCigarData(
                 mergeFromLocal('tempData_cigars', 'originData_cigars', props.data)
+            )
+            setMergedTobaccoData(
+                mergeFromLocal('tempData_tobacco', 'originData_tobacco', [] /*TODO*/)
             )
             // sync commit metadata from remote and local
             syncCommits();
@@ -96,8 +103,9 @@ export const SubmitPage = (props) => {
 
     useEffect(() => {
         // generate diff from merged data
-        setDiff(generateDiff(mergedData))
-    }, [mergedData]);
+        setCigarDiff(generateDiff(mergedCigarData))
+        setTobaccoDiff(generateDiff(mergedTobaccoData))
+    }, [mergedCigarData]);
 
     useEffect(() => {
         // sync commit metadata every 60s
@@ -305,7 +313,7 @@ export const SubmitPage = (props) => {
                 tempDiff.push([...diffJson(originalCigar, "")]);
             }
         })
-        setDiff(tempDiff)
+        setCigarDiff(tempDiff)
     };
 
     
@@ -448,7 +456,7 @@ export const SubmitPage = (props) => {
                 </table>
                 <div className='submit-container'>
                     <p><b>Please inspect your changes carefully.</b></p>
-                    {diff.length === 0 &&
+                    {cigarDiff.length === 0 &&
                         <div className='diff-container'>
                             <div className='diff-split'>
                                 <h3>No changes detected</h3>
@@ -460,7 +468,8 @@ export const SubmitPage = (props) => {
                             </div>
                         </div>
                     }
-                    <Diff diff={diff} titleKey={"Cigar Name"} />
+                    <Diff diff={cigarDiff} titleKey={"Cigar Name"} title="Cigars"/>
+                    <Diff diff={tobaccoDiff} titleKey={"Tobacco Name"} title="Pipe Tobacco"/>
                 </div>
 
                 <div className='section-header'>
@@ -491,7 +500,7 @@ export const SubmitPage = (props) => {
                                     }])
                                     return
                                 }
-                                if (diff.length === 0) {
+                                if (cigarDiff.length === 0) {
                                     setResponseConsole([...responseConsole, {
                                         time: new Date().toLocaleString(),
                                         status: 400,
