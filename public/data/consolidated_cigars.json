@@ -5040,19 +5040,32 @@
     "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/6VL46MFWPc83NznP7CMqvb?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
   },
   {
-    "Cigar Brand": "H. Upmann",
     "Cigar Name": "1844 Vintage Cameroon",
+    "Cigar Brand": "H. Upmann",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican, Nicaraguan, Peruvian",
     "Flavor_Profile": "Chestnuts, Cashews, Coffee Beans, Sweet Spices",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "71610516366",
         "In_Stock": true,
         "Price": "10.00"
+      },
+      {
+        "Size": "Robusto",
+        "Barcode": "1234",
+        "In_Stock": true,
+        "Price": "8.15"
       }
     ],
     "slug": "h-upmann-1844-vintage-cameroon"
