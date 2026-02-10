@@ -222,14 +222,14 @@ export const SubmitPage = (props) => {
 
 
 
-    const commitToGit = async (commitData, branch, message) => {
+    const commitToGit = async (commitData, branch, message, filePath) => {
         try {
             // strip out the CMS-only IDs
             const editedData = stripIds(commitData)
 
             // build URL
-            const filePath = encodeURIComponent('public/data/consolidated_cigars.json');
-            const url = `/api/files/${filePath}`;
+            const filePathEncoded = encodeURIComponent(filePath);
+            const url = `/api/files/${filePathEncoded}`;
 
             // enqueue “standby”
             setResponseConsole(c => [
@@ -289,6 +289,79 @@ export const SubmitPage = (props) => {
             ]);
         }
     };
+
+    const handleCommit = (e) => {
+
+        if (e.currentTarget.textContent == "Commit") {
+            // Confirmation
+            e.currentTarget.textContent = "Are you sure?";
+            e.currentTarget.style.backgroundColor = "var(--negative)";
+        } else {
+            // reset text and color after confirmation
+            e.currentTarget.textContent = "Commit";
+            e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
+
+            const branchesString = process.env.NEXT_PUBLIC_COMMIT_TO
+            const branches = branchesString ? branchesString.split(',').map(item => item.trim()) : null;
+            if (!branches || branches.length === 0) {
+                setResponseConsole([...responseConsole, {
+                    time: new Date().toLocaleString(),
+                    status: 500,
+                    statusText: "Internal Server Error",
+                    ok: false,
+                    message: "Missing environment configuration. Please contact the developer"
+                }])
+                return
+            }
+
+
+            if (syncStatus == 'server-ahead') {
+                setResponseConsole([...responseConsole, {
+                    time: new Date().toLocaleString(),
+                    status: 400,
+                    statusText: "Bad Request",
+                    ok: false,
+                    message: "Cannot commit when local base is not up-to-date"
+                }])
+                return
+            }
+            if (syncStatus == 'building') {
+                setResponseConsole([...responseConsole, {
+                    time: new Date().toLocaleString(),
+                    status: 503,
+                    statusText: "Service Unavailable",
+                    ok: false,
+                    message: "Cannot commit while still in the process of deploying changes."
+                }])
+                return
+            }
+            if (cigarDiff.length === 0 && tobaccoDiff.length === 0) {
+                setResponseConsole([...responseConsole, {
+                    time: new Date().toLocaleString(),
+                    status: 400,
+                    statusText: "Bad Request",
+                    ok: false,
+                    message: "No changes detected"
+                }])
+                return
+            }
+            
+            for (const branch of branches) {
+                if (cigarDiff.length > 0) {
+                    const localCigarData = JSON.parse(localStorage.getItem('tempData_cigars'));
+                    
+                    commitToGit(localCigarData, branch, customCommitMessage === "" ? defaultCommitMessage : customCommitMessage, 'public/data/consolidated_cigars.json')
+                }
+                if (tobaccoDiff.length > 0) {
+                    const localTobaccoData = JSON.parse(localStorage.getItem('tempData_tobacco'));
+
+                    commitToGit(localTobaccoData, branch, customCommitMessage === "" ? defaultCommitMessage : customCommitMessage, 'public/data/tobacco.json')
+                }
+            }
+
+
+        }
+    }
 
 
     const getDiff = () => {
@@ -420,22 +493,22 @@ export const SubmitPage = (props) => {
                     <tfoot>
                         <tr>
                             <td colSpan={3}>
-                                { syncStatus == 'building' &&
+                                {syncStatus == 'building' &&
                                     <>
                                         <p>This most likely means your changes are still being fetched. Wait a few seconds, and if you still see this message, please <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>check the build status</a>.</p>
                                     </>
                                 }
-                                { syncStatus == 'same' &&
+                                {syncStatus == 'same' &&
                                     <>
                                         <p>Commit is up to date, and <b>you are able to submit changes</b></p>
                                     </>
                                 }
-                                { syncStatus == 'local-ahead' &&
+                                {syncStatus == 'local-ahead' &&
                                     <>
                                         <p>Commit is ahead of the last data commit, and <b>you are able to submit changes</b></p>
                                     </>
                                 }
-                                { syncStatus == 'server-ahead' &&
+                                {syncStatus == 'server-ahead' &&
                                     <>
                                         <p>Server commit is ahead of local commit. <br></br>This means the site hasn't had the chance to update the local data yet. Try <a href='.'>refreshing the page</a></p>
                                         <p>In the meantime, <b>you won't be able to submit changes</b></p>
@@ -450,6 +523,19 @@ export const SubmitPage = (props) => {
                                         <b>You are not able to submit changes</b>
                                     </>
                                 }
+
+                                <table className='text-xs mt-2' style={{
+                                    fontFamily: "monospace"
+                                }}>
+                                    <tr>
+                                        <th>Syncing data from:</th>
+                                        <td>{process.env.NEXT_PUBLIC_BASE_BRANCH}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pushing changes to:</th>
+                                        <td>{process.env.NEXT_PUBLIC_COMMIT_TO}</td>
+                                    </tr>
+                                </table>
                             </td>
                         </tr>
                     </tfoot>
@@ -479,43 +565,7 @@ export const SubmitPage = (props) => {
 
                 <div>
                     <div className='commit-dialog'>
-                        <button /* disabled */ className='commit-button' onClick={(e) => {
-                            if (e.currentTarget.textContent == "Commit") {
-                                e.currentTarget.textContent = "Are you sure?";
-                                e.currentTarget.style.backgroundColor = "var(--negative)";
-                                play();
-                            } else {
-                                e.currentTarget.textContent = "Commit";
-                                e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
-                                if (
-                                    currentCommitSha !== recentDataCommitSha
-                                    && currentCommitSha !== recentAllCommitSha
-                                ) {
-                                    setResponseConsole([...responseConsole, {
-                                        time: new Date().toLocaleString(),
-                                        status: 400,
-                                        statusText: "Bad Request",
-                                        ok: false,
-                                        message: "Cannot commit when current commit is not up to date"
-                                    }])
-                                    return
-                                }
-                                if (cigarDiff.length === 0) {
-                                    setResponseConsole([...responseConsole, {
-                                        time: new Date().toLocaleString(),
-                                        status: 400,
-                                        statusText: "Bad Request",
-                                        ok: false,
-                                        message: "No changes detected"
-                                    }])
-                                    return
-                                }
-                                const branches = ['cms', 'main'];
-                                for (const branch of branches) {
-                                    commitToGit(localData, branch, customCommitMessage === "" ? defaultCommitMessage : customCommitMessage);
-                                }
-                            }
-                        }}
+                        <button /* disabled */ className='commit-button' onClick={handleCommit}
                             onBlur={(e) => {
                                 if (e.currentTarget.textContent == "Are you sure?") {
                                     e.currentTarget.textContent = "Commit";
