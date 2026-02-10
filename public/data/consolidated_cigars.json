@@ -8503,13 +8503,12 @@
     "slug": "rock-a-feller-vintage-maduro"
   },
   {
-    "Cigar Brand": "Rocky Patel",
     "Cigar Name": "10 Year Sumatran",
+    "Cigar Brand": "Rocky Patel",
     "Wrapper": "Ecuadorian Sumatran",
-    "Binder": "Dominican",
+    "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
-    "Flavor_Profile": "",
-    "Strength_Profile": "",
+    "hidden": false,
     "Sizes": [
       {
         "Size": "Toro",
