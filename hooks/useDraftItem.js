@@ -10,24 +10,35 @@ const parseJson = (raw, fallback) => {
   }
 };
 
-const pruneEmpty = (value) => {
-  if (Array.isArray(value)) {
-    return value.map(pruneEmpty);
+const isEmptyValue = (value) => value === "" || value === null || value === undefined;
+
+const applyDefaults = (value, defaultsValue) => {
+  if (Array.isArray(defaultsValue)) {
+    if (!Array.isArray(value)) {
+      return defaultsValue;
+    }
+    if (value.length === 0 && defaultsValue.length > 0) {
+      return defaultsValue;
+    }
+    return value;
   }
-  if (value && typeof value === "object") {
-    const result = {};
-    Object.entries(value).forEach(([k, v]) => {
-      const cleaned = pruneEmpty(v);
-      if (cleaned !== undefined) {
-        result[k] = cleaned;
+
+  if (defaultsValue && typeof defaultsValue === "object") {
+    const base =
+      value && typeof value === "object" && !Array.isArray(value) ? value : {};
+    const next = { ...base };
+    Object.entries(defaultsValue).forEach(([key, defVal]) => {
+      const current = base[key];
+      if (isEmptyValue(current)) {
+        next[key] = defVal;
+      } else if (defVal && typeof defVal === "object") {
+        next[key] = applyDefaults(current, defVal);
       }
     });
-    return result;
+    return next;
   }
-  if (value === "" || value === null || value === undefined) {
-    return undefined;
-  }
-  return value;
+
+  return isEmptyValue(value) ? defaultsValue : value;
 };
 
 const makeClientId = () => {
@@ -134,12 +145,15 @@ export const useDraftItem = ({
       const clientId =
         item._clientId || existing?._clientId || makeClientId();
 
-      const updated = pruneEmpty({
-        ...item,
-        _clientId: clientId,
-        slug: targetSlug,
-        "new-slug": newSlug,
-      });
+      const updated = applyDefaults(
+        {
+          ...item,
+          _clientId: clientId,
+          slug: targetSlug,
+          "new-slug": newSlug,
+        },
+        defaults
+      );
 
       if (existingIndex !== -1) {
         tempData[existingIndex] = updated;
@@ -166,7 +180,7 @@ export const useDraftItem = ({
 
       return { currentSlug, newSlug };
     },
-    [allItems, cleanItem, generateSlug, isSlugUnique, slug, storageKey]
+    [allItems, cleanItem, defaults, generateSlug, isSlugUnique, slug, storageKey]
   );
 
   const revertDraft = useCallback(() => {

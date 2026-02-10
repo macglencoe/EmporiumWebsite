@@ -156,8 +156,8 @@ export const SubmitPage = (props) => {
      * @returns {any} Merged data
      */
     const mergeFromLocal = (tempKey, originKey, defaultData) => {
-        const tempData = normalizeData(pullLocalJSON(tempKey, defaultData));
-        const originData = normalizeData(pullLocalJSON(originKey, defaultData));
+        const tempData = coerceSlugs(pullLocalJSON(tempKey, defaultData));
+        const originData = coerceSlugs(pullLocalJSON(originKey, defaultData));
         return mergeData(tempData, originData);
     }
 
@@ -196,7 +196,9 @@ export const SubmitPage = (props) => {
         setCurrentCommitMessage(localStorage.getItem('tempData_message') ?? 'No Message Found')
     }
 
-    const normalizeEntry = (entry) => {
+    /* -- Data manipulation helpers -- */
+
+    const coerceSlug = (entry) => {
         const temp = { ...entry };
         
         // replace slug with new-slug, then remove new-slug
@@ -208,8 +210,8 @@ export const SubmitPage = (props) => {
         return temp;
     }
 
-    const normalizeData = (data) => {
-        return data.map(entry => normalizeEntry(entry));
+    const coerceSlugs = (data) => {
+        return data.map(entry => coerceSlug(entry));
     }
 
     const stripId = (entry) => {
@@ -219,6 +221,10 @@ export const SubmitPage = (props) => {
     }
 
     const stripIds = (data) => data.map(entry => stripId(entry))
+
+    const coerceAndStrip = (data) => data.map(entry => stripId(coerceSlug(entry)))
+
+    /* -- -- */
 
 
 
@@ -349,13 +355,17 @@ export const SubmitPage = (props) => {
             for (const branch of branches) {
                 if (cigarDiff.length > 0) {
                     const localCigarData = JSON.parse(localStorage.getItem('tempData_cigars'));
+
+                    const edited = coerceAndStrip(localCigarData);
                     
-                    commitToGit(localCigarData, branch, customCommitMessage === "" ? defaultCommitMessage : customCommitMessage, 'public/data/consolidated_cigars.json')
+                    commitToGit(edited, branch, customCommitMessage === "" ? defaultCommitMessage : customCommitMessage, 'public/data/consolidated_cigars.json')
                 }
                 if (tobaccoDiff.length > 0) {
                     const localTobaccoData = JSON.parse(localStorage.getItem('tempData_tobacco'));
 
-                    commitToGit(localTobaccoData, branch, customCommitMessage === "" ? defaultCommitMessage : customCommitMessage, 'public/data/tobacco.json')
+                    const edited = coerceAndStrip(localTobaccoData);
+
+                    commitToGit(edited, branch, customCommitMessage === "" ? defaultCommitMessage : customCommitMessage, 'public/data/tobacco.json')
                 }
             }
 

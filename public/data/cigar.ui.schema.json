@@ -39,7 +39,7 @@
         },
         "Wrapper": {
             "type": ["string", "null"],
-            "default": null,
+            "default": "",
             "ui": {
                 "label": "Wrapper",
                 "autosuggest": true,
@@ -52,7 +52,7 @@
         },
         "Binder": {
             "type": ["string", "null"],
-            "default": null,
+            "default": "",
             "ui": {
                 "label": "Binder",
                 "autosuggest": true,
@@ -64,7 +64,7 @@
         },
         "Filler": {
             "type": ["string", "null"],
-            "default": null,
+            "default": "",
             "ui": {
                 "label": "Filler",
                 "autosuggest": true,
@@ -76,7 +76,7 @@
         },
         "Flavor_Profile": {
             "type": ["string", "null"],
-            "default": null,
+            "default": "",
             "ui": {
                 "label": "Flavor Profile",
                 "autosuggest": false,
@@ -87,21 +87,21 @@
             }
         },
         "Strength_Profile": {
-            "type": ["string", "null"],
+            "type": "string",
             "enum": [
-                null,
+                "",
                 "Mild",
                 "Mild-Medium",
                 "Medium",
                 "Medium-Full",
                 "Full"
             ],
-            "default": null,
+            "default": "",
             "ui": {
                 "label": "Strength",
                 "input": "mapped-range",
                 "options": [
-                    { "pos": 0, "value": null, "label": "N/A"},
+                    { "pos": 0, "value": "", "label": "N/A"},
                     { "pos": 1, "value": "Mild", "label": "Mild"},
                 { "pos": 2, "value": "Mild-Medium", "label": "Mild-Medium"},
                 { "pos": 3, "value": "Medium", "label": "Medium"},

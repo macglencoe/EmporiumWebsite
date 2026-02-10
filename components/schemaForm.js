@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useForm, FormProvider, Controller, useFieldArray, useFormContext, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { buildSchemaArtifacts, buildDefaultValue, normalizeType } from "../utils/schemaMapper";
+import { applySchemaDefaults, buildSchemaArtifacts, buildDefaultValue, normalizeType } from "../utils/schemaMapper";
 import TabNav from "./tabNav";
 import { useSlugPreview } from "../hooks/useSlugPreview";
 import { PiArrowUUpLeftDuotone, PiCheckCircleDuotone, PiPlusCircleDuotone, PiPlusCircleFill, PiXCircleFill, PiXDuotone, PiXFill } from "react-icons/pi";
@@ -45,7 +45,7 @@ const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, init
   return (
     <FormProvider {...methods}>
       <form
-        onSubmit={handleSubmit(onSubmit)}
+        onSubmit={handleSubmit((values) => onSubmit(applySchemaDefaults(uiSchema, values)))}
         className="schema-form p-6 space-y-6"
       >
         <TabNav

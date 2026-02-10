@@ -123,6 +123,8 @@ export const buildDefaultsForProperties = (properties) =>
     return acc;
   }, {});
 
+const isEmptyValue = (value) => value === "" || value === null || value === undefined;
+
 export const buildDefaultValue = (field = {}) => {
   if (Object.prototype.hasOwnProperty.call(field, "default")) {
     return field.default;
@@ -151,4 +153,44 @@ export const buildDefaultValue = (field = {}) => {
   }
 
   return undefined;
+};
+
+const applyFieldDefaults = (field = {}, value) => {
+  const { baseType } = normalizeType(field.type);
+
+  if (baseType === "object") {
+    if (isEmptyValue(value)) {
+      return buildDefaultValue(field);
+    }
+    const raw =
+      value && typeof value === "object" && !Array.isArray(value) ? value : {};
+    const props = field.properties || {};
+    const next = { ...raw };
+    Object.entries(props).forEach(([key, childField]) => {
+      next[key] = applyFieldDefaults(childField, raw[key]);
+    });
+    return next;
+  }
+
+  if (baseType === "array") {
+    if (!Array.isArray(value)) {
+      return buildDefaultValue(field);
+    }
+    if (value.length === 0 && Object.prototype.hasOwnProperty.call(field, "default")) {
+      return field.default;
+    }
+    const itemField = field.items || {};
+    return value.map((item) => applyFieldDefaults(itemField, item));
+  }
+
+  if (isEmptyValue(value)) {
+    return buildDefaultValue(field);
+  }
+
+  return value;
+};
+
+export const applySchemaDefaults = (schema, value) => {
+  if (!schema || typeof schema !== "object") return value;
+  return applyFieldDefaults(schema, value);
 };
