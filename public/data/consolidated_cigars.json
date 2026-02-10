@@ -8505,7 +8505,7 @@
   {
     "Cigar Name": "10 Year Sumatran",
     "Cigar Brand": "Rocky Patel",
-    "Wrapper": "Ecuadorian Sungrown Rosado",
+    "Wrapper": "Ecuadorian Sumatran",
     "Binder": "Dominican",
     "Filler": "Nicaraguan",
     "hidden": false,
@@ -8517,8 +8517,7 @@
         "Price": "11.50"
       }
     ],
-    "slug": "rocky-patel-10-year-sumatran",
-    "new-slug": "rocky-patel-10-year-sumatran"
+    "slug": "rocky-patel-10-year-sumatran"
   },
   {
     "Cigar Brand": "Rocky Patel",
