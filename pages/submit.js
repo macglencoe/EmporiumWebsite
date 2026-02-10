@@ -238,15 +238,11 @@ export const SubmitPage = (props) => {
             const url = `/api/files/${filePathEncoded}`;
 
             // enqueue “standby”
-            setResponseConsole(c => [
-                ...c,
-                {
-                    time: new Date().toLocaleString(),
-                    status: 'standby',
-                    statusText: 'Waiting…',
-                    ok: true
-                }
-            ]);
+            pushResponseConsole(
+                'standby',
+                "Waiting...",
+                ok = true
+            );
 
             // fire PUT
             const response = await fetch(url, {
@@ -269,33 +265,28 @@ export const SubmitPage = (props) => {
             console.log(payload);
 
             // update console with result or error
-            setResponseConsole(c => [
-                ...c,
-                {
-                    time: new Date().toLocaleString(),
-                    status: response.status,
-                    statusText: response.statusText,
-                    ok: response.ok,
-                    ...(response.ok
-                        ? { message: payload.message, commitData: payload.result }
-                        : { error: payload.error })
-                }
-            ]);
+            pushResponseConsole(
+                response.status,
+                response.statusText,
+                response.ok,
+                ...(response.ok
+                    ? { message: payload.message, commitData: payload.result}
+                    : { error: payload.error }
+                )
+            );
         }
         catch (err) {
             console.error(err);
-            setResponseConsole(c => [
-                ...c,
-                {
-                    time: new Date().toLocaleString(),
-                    statusText: 'error',
-                    ok: false,
-                    message: err.message
-                }
-            ]);
+            pushResponseConsole(
+                response.status || 500,
+                response.statusText || 'error',
+                ok = false,
+                err.message
+            )
         }
     };
 
+    
     const handleCommit = (e) => {
 
         if (e.currentTarget.textContent == "Commit") {
@@ -310,45 +301,41 @@ export const SubmitPage = (props) => {
             const branchesString = process.env.NEXT_PUBLIC_COMMIT_TO
             const branches = branchesString ? branchesString.split(',').map(item => item.trim()) : null;
             if (!branches || branches.length === 0) {
-                setResponseConsole([...responseConsole, {
-                    time: new Date().toLocaleString(),
-                    status: 500,
-                    statusText: "Internal Server Error",
-                    ok: false,
-                    message: "Missing environment configuration. Please contact the developer"
-                }])
+                pushResponseConsole(
+                    500,
+                    "Internal Server Error",
+                    ok = false,
+                    "Missing environment configuration. Please contact the developer"
+                );
                 return
             }
 
 
             if (syncStatus == 'server-ahead') {
-                setResponseConsole([...responseConsole, {
-                    time: new Date().toLocaleString(),
-                    status: 400,
-                    statusText: "Bad Request",
-                    ok: false,
-                    message: "Cannot commit when local base is not up-to-date"
-                }])
+                pushResponseConsole(
+                    400,
+                    "Bad Request",
+                    ok = false,
+                    "Cannot commit when local base is not up-to-date"
+                );
                 return
             }
             if (syncStatus == 'building') {
-                setResponseConsole([...responseConsole, {
-                    time: new Date().toLocaleString(),
-                    status: 503,
-                    statusText: "Service Unavailable",
-                    ok: false,
-                    message: "Cannot commit while still in the process of deploying changes."
-                }])
+                pushResponseConsole(
+                    503,
+                    "Service Unavailable",
+                    ok = false,
+                    "Cannot commit while still in the process of deploying changes"
+                );
                 return
             }
             if (cigarDiff.length === 0 && tobaccoDiff.length === 0) {
-                setResponseConsole([...responseConsole, {
-                    time: new Date().toLocaleString(),
-                    status: 400,
-                    statusText: "Bad Request",
-                    ok: false,
-                    message: "No changes detected"
-                }])
+                pushResponseConsole(
+                    400,
+                    statusText = "Bad Request",
+                    ok = false,
+                    message = "No changes detected"
+                );
                 return
             }
             
@@ -439,6 +426,20 @@ export const SubmitPage = (props) => {
                     "local-ahead"
                 )
         }
+    }
+
+    const pushResponseConsole = (status, statusText, ok, message) => {
+        if (!status || !statusText) {
+            throw new Error("Status and statusText are required for console entries");
+        }
+        setResponseConsole([...responseConsole, {
+            time: new Date().toLocaleString(),
+            status,
+            statusText,
+            ok,
+            message
+        }]);
+        return;
     }
 
     return (
