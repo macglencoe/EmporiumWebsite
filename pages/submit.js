@@ -2,9 +2,9 @@ import { use, useEffect, useRef, useState } from 'react';
 import Layout from '../components/layout'
 import PageTitle1 from '../components/pagetitle1';
 import { diffJson } from 'diff';
-import Notice from '../components/notice';
 import mergeData from '../utils/mergeData'
 import { PiSpinnerBold } from 'react-icons/pi';
+import Link from 'next/link';
 
 
 
@@ -74,9 +74,6 @@ export const SubmitPage = (props) => {
             audioRef.current.play();
         }
     }
-
-    const [localData, setLocalData] = useState(props.data);
-    const [originData, setOriginData] = useState(props.data);
     const [mergedCigarData, setMergedCigarData] = useState([]);
 
     const [mergedTobaccoData, setMergedTobaccoData] = useState([]);
@@ -94,12 +91,6 @@ export const SubmitPage = (props) => {
             syncCommits();
         }
     }, []);
-
-    /* useEffect(() => {
-        if (localData && originData) {
-            setMergedData(mergeData(localData, originData))
-        }
-    }, [localData, originData]) */
 
     useEffect(() => {
         // generate diff from merged data
@@ -143,7 +134,7 @@ export const SubmitPage = (props) => {
 
     useEffect(() => 
         // update sync status when relevant metadata changes
-        setSyncStatus(getSyncStatus()),
+        setSyncStatus(evaluateSyncState()),
         [recentDataCommitSha, currentCommitSha, recentAllCommitSha])
 
 
@@ -361,40 +352,12 @@ export const SubmitPage = (props) => {
     }
 
 
-    const getDiff = () => {
-        const tempDiff = [];
-        localData.map((cigar, index) => {
-            const originalCigar = originData.find((originalCigar) => originalCigar.slug === cigar.slug)
-                ?? ""; // if the cigar doesn't exist in the original data, return an empty string
-            const newCigar = { ...cigar };
-
-
-            if (!originalCigar || JSON.stringify(originalCigar) !== JSON.stringify(newCigar)) {
-                newCigar.slug = cigar['new-slug'];
-                delete newCigar['new-slug'];
-
-                tempDiff.push([...diffJson(originalCigar, newCigar)]);
-            }
-
-        })
-        // Get deleted cigars
-        originData.map((originalCigar) => {
-            if (!localData.find((cigar) => cigar.slug === originalCigar.slug)) {
-                tempDiff.push([...diffJson(originalCigar, "")]);
-            }
-        })
-        setCigarDiff(tempDiff)
-    };
-
     
-    /**
-     * Will deprecate getDiff()
-     */
     const generateDiff = ( mergedData ) => {
         const tempDiff = [];
         mergedData.map((item, index) => {
             if(!item.origin || JSON.stringify(item.origin) !== JSON.stringify(item.temp)) {
-                // assume here that "new-slug" has already been mutated into "slug"
+                // assume here that "new-slug" has already been coerced into "slug"
                 const origin = item.origin ? stripId(item.origin): null;
                 const temp = item.temp ? stripId(item.temp) : null
                 const diff = diffJson(origin, temp)
@@ -403,12 +366,7 @@ export const SubmitPage = (props) => {
         })
         return tempDiff;
     }
-
-    /**
-     * Determine sync status from SHA equivalence
-     * @returns {('same'|'server-ahead'|'building'|'local-ahead')}
-     */
-    const getSyncStatus = () => {
+    const evaluateSyncState = () => {
         switch (recentDataCommitSha) {
             case currentCommitSha:
                 /* Case 1: Local commit is the same as recent data commit */
@@ -557,11 +515,7 @@ export const SubmitPage = (props) => {
                         <div className='diff-container'>
                             <div className='diff-split'>
                                 <h3>No changes detected</h3>
-                                <p>To make changes, select a cigar in the <a href="/cigars">Catalog</a> and click "Edit", or <a href="/cigars/add">create a new cigar</a>.</p>
-                                <div className='diff-button-container'>
-                                    <label htmlFor="diff">Changes not showing up?</label>
-                                    <button id='get-diff' onClick={getDiff}>Force Get Diff</button>
-                                </div>
+                                <p>To make changes, select a product in the <Link href="/cigars"><a>cigar</a></Link> or <Link href="/tobacco"><a>tobacco</a></Link> catalogs and click "Edit", or click "Add New" within the catalog to create a new product.</p>
                             </div>
                         </div>
                     }
