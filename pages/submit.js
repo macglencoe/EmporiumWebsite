@@ -96,7 +96,7 @@ export const SubmitPage = (props) => {
         // generate diff from merged data
         setCigarDiff(generateDiff(mergedCigarData))
         setTobaccoDiff(generateDiff(mergedTobaccoData))
-    }, [mergedCigarData]);
+    }, [mergedCigarData, mergedTobaccoData]);
 
     useEffect(() => {
         // sync commit metadata every 60s
@@ -162,7 +162,7 @@ export const SubmitPage = (props) => {
         let data = JSON.parse(localStorage.getItem(key));
         if (!data) {
             data = defaultData;
-            localStorage.setItem(data);
+            localStorage.setItem(key, JSON.stringify(defaultData));
         }
         return data;
     }
@@ -511,7 +511,7 @@ export const SubmitPage = (props) => {
                 </table>
                 <div className='submit-container'>
                     <p><b>Please inspect your changes carefully.</b></p>
-                    {cigarDiff.length === 0 &&
+                    {cigarDiff.length === 0 && tobaccoDiff.length === 0 &&
                         <div className='diff-container'>
                             <div className='diff-split'>
                                 <h3>No changes detected</h3>

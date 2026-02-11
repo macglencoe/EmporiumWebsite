@@ -125,7 +125,7 @@ const TobaccoPage = (props) => {
                         {
                             id: "metadata",
                             label: "METADATA",
-                            filter: (n, f) => sectionOf(f) === "metadata"
+                            filter: (n, f) => sectionOf(f) === "metadata" || sectionOf(f) === "image"
                         },
                         {
                             id: "components",

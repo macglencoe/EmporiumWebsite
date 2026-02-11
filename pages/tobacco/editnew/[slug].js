@@ -48,7 +48,7 @@ const EditNewTobaccoPage = () => {
 
     const handleSubmit = (values) => {
         const results = saveDraft(values);
-        if (results?.error === "slug conflict") {
+        if (results?.error === "slug-conflict") {
             alert("Slug already exists. Please choose a different name");
             return;
         }
