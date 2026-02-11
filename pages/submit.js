@@ -20,7 +20,7 @@ export const getStaticProps = async () => {
 };
 
 export const Diff = ({ diff, titleKey, title }) => {
-    if (Array.isArray(diff))
+    if (Array.isArray(diff) && diff.length > 0)
         return (
             <div className='bg-amber-100 rounded-md w-full overflow-hidden'>
                 <h2 className='text-2xl p-2 bg-amber-200'>{title}</h2>
