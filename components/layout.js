@@ -14,7 +14,7 @@ import Toolbar from './toolbar'
 import setLocalData from '../utils/setLocalData'
 import DataUpdate from './dataUpdate'
 import { Footer } from './footer'
-import { PiBarcodeBold, PiGitCommitBold, PiPlusCircleBold, PiTableBold } from 'react-icons/pi'
+import { PiBarcodeBold, PiExportBold, PiGitCommitBold, PiPlusCircleBold, PiTableBold } from 'react-icons/pi'
 
 const Layout = (props) => {
   const router = useRouter();
@@ -89,9 +89,9 @@ const Layout = (props) => {
                     icon: <PiBarcodeBold size={26}/>,
                   },
                   {
-                    href: '/cigars/dense', label: 'Dense Catalog',
-                    icon: <PiTableBold size={26}/>,
-                    newExpiration: new Date("2025-06-21T00:00:00")
+                    href: '/export', label: 'Export Data',
+                    icon: <PiExportBold size={26}/>,
+                    newExpiration: new Date("2026-02-21T00:00:00")
                   }
                 ]}
                 style={{ backgroundColor: 'var(--dl-color-theme-secondary1)' }}
