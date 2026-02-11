@@ -85,6 +85,16 @@
                 "label": "Components",
                 "showInCatalog": true
             }
+        },
+        "image": {
+            "type": ["string", "null"],
+            "default": null,
+            "ui": {
+                "label": "Image",
+                "input": "image",
+                "description": "Upload a product image for this tobacco.",
+                "section": "image"
+            }
         }
     }
 }

@@ -265,6 +265,16 @@
                 "label": "Sizes / Prices",
                 "showInCatalog": true
             }
+        },
+        "image": {
+            "type": ["string", "null"],
+            "default": null,
+            "ui": {
+                "label": "Image",
+                "input": "image",
+                "description": "Upload a product image for this cigar.",
+                "section": "image"
+            }
         }
     }
 }

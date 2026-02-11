@@ -5,6 +5,9 @@ import { applySchemaDefaults, buildSchemaArtifacts, buildDefaultValue, normalize
 import TabNav from "./tabNav";
 import { useSlugPreview } from "../hooks/useSlugPreview";
 import { PiArrowUUpLeftDuotone, PiCheckCircleDuotone, PiPlusCircleDuotone, PiPlusCircleFill, PiXCircleFill, PiXDuotone, PiXFill } from "react-icons/pi";
+import ImageUpload from "./imageUpload";
+import ImageDelete from "./imageDelete";
+import Notice from "./notice";
 
 const SchemaForm = ({ uiSchema, onSubmit = () => {}, children, renderField, initialValues = {}, tabs: tabsProp, suggestions = {} }) => {
   const { zodSchema, defaults } = useMemo(() => buildSchemaArtifacts(uiSchema), [uiSchema]);
@@ -111,7 +114,8 @@ const FIELD_RENDERERS = {
   "array-object": ArrayObjectField,
   autosuggest: AutosuggestField,
   text: TextField,
-  "array-string": ArrayStringField
+  "array-string": ArrayStringField,
+  image: ImageField
 };
 
 const pickType = (field = {}) => {
@@ -122,6 +126,7 @@ const pickType = (field = {}) => {
   if (baseType === "boolean") return "boolean";
   if (baseType === "array" && field.items?.type === "object") return "array-object";
   else if (baseType === "array" && field.items?.type === "string") return "array-string";
+  if (inputType === "image") return "image";
   if (inputType === "textarea") return "textarea";
   if (inputType === "mapped-range" && Array.isArray(field?.ui?.options)) return "range";
 
@@ -208,6 +213,144 @@ function RangeField({ name, field, control, error }) {
       />
       {description && <p className="text-sm ">{description}</p>}
       {error && <p className="text-sm text-red-600">{error.message}</p>}
+    </div>
+  );
+}
+
+function ImageField({ name, field, register, control, error }) {
+  const label = field?.ui?.label || name;
+  const description = field?.ui?.description;
+  const { setValue } = useFormContext();
+  const imageUrl = useWatch({ control, name }) || null;
+  const fileNameField = field?.ui?.fileNameField || "slug";
+  const fileNameValue = useWatch({ control, name: fileNameField });
+  const fallbackName = typeof label === "string"
+    ? label.toLowerCase().replace(/\s+/g, "-")
+    : name;
+  const fileName = field?.ui?.fileName || fileNameValue || fallbackName || "image";
+
+  const [loading, setLoading] = useState(false);
+  const [loadingDelete, setLoadingDelete] = useState(false);
+  const [fileSize, setFileSize] = useState(0);
+  const [finalFileSize, setFinalFileSize] = useState(0);
+
+  const getFinalFileSize = async (url) => {
+    try {
+      const response = await fetch(url);
+      const blob = await response.blob();
+      const fileSizeInKB = (blob.size / 1024).toFixed(2);
+      setFinalFileSize(fileSizeInKB);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  useEffect(() => {
+    if (imageUrl) {
+      getFinalFileSize(imageUrl);
+    } else {
+      setFinalFileSize(0);
+    }
+  }, [imageUrl]);
+
+  const onImageUploadSuccess = (url) => {
+    setLoading(false);
+    setValue(name, url, { shouldValidate: true, shouldTouch: true });
+    getFinalFileSize(url);
+  };
+
+  const onImageDeleteSuccess = () => {
+    setValue(name, null, { shouldValidate: true, shouldTouch: true });
+    setFinalFileSize(0);
+  };
+
+  const handleDeleteImage = async (url) => {
+    setLoadingDelete(true);
+    if (!url) {
+      alert("No URL to delete found. Please report this");
+      setLoadingDelete(false);
+      return;
+    }
+
+    const response = await fetch(`/api/images?url=${encodeURIComponent(url)}`, {
+      method: "DELETE",
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      console.log("Image Deleted Successfully");
+      onImageDeleteSuccess();
+    } else {
+      console.error("Deletion failed: ", data.message);
+    }
+    setLoadingDelete(false);
+  };
+
+  const onImageUpload = (fileSizeInKb = null) => {
+    if (imageUrl) {
+      alert("Former image will now be deleted");
+      handleDeleteImage(imageUrl);
+    }
+    setLoading(true);
+    setFileSize(fileSizeInKb);
+  };
+
+  return (
+    <div className="space-y-2">
+      <label className="text-lg font-semibold text-gray-800">{label}</label>
+      <input type="hidden" {...register(name, getRegisterOptions(field))} />
+      <div className="image-upload-container">
+        <ImageUpload
+          image={imageUrl}
+          fileName={fileName}
+          onImageUpload={onImageUpload}
+          onImageUploadSuccess={onImageUploadSuccess}
+        />
+        {loading && <Notice type="loading">Uploading {fileSize} KB...</Notice>}
+        {loadingDelete && <Notice type="loading">Deleting former image...</Notice>}
+        {imageUrl && (
+          <div className="url">
+            {finalFileSize > 0 && <p>Final file size: {finalFileSize} KB</p>}
+            <img src={imageUrl} alt={`${label} image`} />
+            <p>URL: {imageUrl}</p>
+            <a href={imageUrl} target="_blank" rel="noopener noreferrer">Open in new tab</a>
+            <ImageDelete url={imageUrl} handleDeleteImage={handleDeleteImage} />
+          </div>
+        )}
+      </div>
+      {description && <p className="text-sm ">{description}</p>}
+      {error && <p className="text-sm text-red-600">{error.message}</p>}
+      <style jsx>{`
+        .image-upload-container {
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+        }
+        .image-upload-container .url {
+          padding: 0.5em 1em;
+          background-color: var(--dl-color-theme-primary2);
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1em;
+        }
+        .image-upload-container .url p {
+          padding: 0.5em;
+        }
+        .image-upload-container .url a {
+          padding: 0.5em 1em;
+          font-family: Inter;
+          color: var(--dl-color-theme-secondary1);
+          background-color: var(--dl-color-theme-primary1);
+          border-radius: 5px;
+          font-weight: bold;
+        }
+        .image-upload-container .url img {
+          max-height: 300px;
+        }
+      `}</style>
     </div>
   );
 }

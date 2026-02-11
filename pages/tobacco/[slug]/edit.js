@@ -82,6 +82,11 @@ const EditTobaccoPage = ({ tobacco, allTobacco }) => {
                         id: "components",
                         label: "COMPONENTS",
                         filter: (n, f) => sectionOf(f) === "components"
+                    },
+                    {
+                        id: "image",
+                        label: "IMAGE",
+                        filter: (n, f) => sectionOf(f) === "image"
                     }
                 ]}
             >

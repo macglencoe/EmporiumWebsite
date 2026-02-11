@@ -74,7 +74,7 @@ export const ImageUpload = (props) => {
             <div className="container">
                 {selectedFile && <img src={URL.createObjectURL(selectedFile)} alt="Selected" />}
                 <input type="file" onChange={handleFileChange} />
-                <button onClick={handleUpload}>Upload</button>
+                <button type="button" onClick={handleUpload}>Upload</button>
                 {error && <Notice header="Error" type="error">{error}</Notice>}
 
                 {

@@ -75,7 +75,8 @@ const DISPLAY_RENDERERS = {
     "text-large": LargeTextDisplay,
     "array-string": ArrayStringDisplay,
     "array-object": ArrayObjectDisplay,
-    "boolean": BooleanDisplay
+    image: ImageDisplay,
+    "boolean": BooleanDisplay,
 }
 
 const pickType = (field = {}) => {
@@ -88,6 +89,7 @@ const pickType = (field = {}) => {
 
     if (inputType === "textarea") return "text-large"
     if (inputType === "mapped-range" && Array.isArray(field?.ui?.options)) return "range"
+    if (inputType === "image") return "image"
     if (inputType === "text" && field?.ui?.isTitle) return "title"
 
     return "text";
@@ -275,6 +277,24 @@ function ArrayObjectDisplay({ name, field, value, original }) {
             })
 
             }
+        </div>
+    )
+}
+
+function ImageDisplay({ name, field, value, original }) {
+    const label = field?.ui?.label || name;
+
+    return (
+        <div className="space-y-1">
+            <dt className="text-lg font-semibold">{label}</dt>
+            <dd>
+                {
+                    value ? <img src={value} alt={label} className="max-h-64 object-contain" /> :
+                        original ? <img src={original} alt={label} className="max-h-64 object-contain opacity-50" /> :
+                            <span>No image</span>
+                }
+            </dd>
+
         </div>
     )
 }
