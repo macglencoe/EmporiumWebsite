@@ -66,6 +66,18 @@
                 "section": "metadata"
             }
         },
+        "Sale Form": {
+            "type": ["string", "null"],
+            "enum": ["Bulk", "Tin"],
+            "default": null,
+            "ui": {
+                "label": "Sale Form",
+                "input": "select",
+                "description": "How is this tobacco sold?",
+                "section": "metadata",
+                "showInCatalog": true
+            }
+        },
         "Components": {
             "type": "array",
             "default": [],

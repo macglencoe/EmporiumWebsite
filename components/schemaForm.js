@@ -115,6 +115,7 @@ const FIELD_RENDERERS = {
   autosuggest: AutosuggestField,
   text: TextField,
   "array-string": ArrayStringField,
+  select: SelectField,
   image: ImageField
 };
 
@@ -128,6 +129,7 @@ const pickType = (field = {}) => {
   else if (baseType === "array" && field.items?.type === "string") return "array-string";
   if (inputType === "image") return "image";
   if (inputType === "textarea") return "textarea";
+  if (inputType === "select" && field.enum) return "select";
   if (inputType === "mapped-range" && Array.isArray(field?.ui?.options)) return "range";
 
   return "text";
@@ -143,6 +145,29 @@ function BooleanField({ name, field, register, error }) {
         <input type="checkbox" {...register(name)} className="h-4 w-4 text-amber-600 border-gray-300 rounded" />
         {label}
       </label>
+      {description && <p className="text-sm ">{description}</p>}
+      {error && <p className="text-sm text-red-600">{error.message}</p>}
+    </div>
+  );
+}
+
+function SelectField({ name, field, register, error }) {
+  const label = field?.ui?.label || name;
+  const description = field?.ui?.description;
+  const options = field?.enum || [];
+
+  return (
+    <div className="space-y-1">
+      <label htmlFor={name} className="text-lg font-semibold">{label}</label>
+      <select
+        id={name}
+        {...register(name)}
+        className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-300 text-gray-900"
+      >
+        {options.map((option) => (
+          <option key={option} value={option}>{option}</option>
+        ))}
+      </select>
       {description && <p className="text-sm ">{description}</p>}
       {error && <p className="text-sm text-red-600">{error.message}</p>}
     </div>
