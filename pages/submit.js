@@ -120,9 +120,10 @@ export const SubmitPage = (props) => {
 
     const [defaultCommitMessage, setDefaultCommitMessage] = useState('');
     useEffect(() => {
+        const prefix = process.env.NEXT_PUBLIC_COMMIT_MESSAGE_PREFIX || 'CMS Commit';
         // update default commit message every second
         const interval = setInterval(() => {
-            setDefaultCommitMessage(`CMS Commit - ${new Date().toLocaleString()}`);
+            setDefaultCommitMessage(`${prefix} - ${new Date().toLocaleString()}`);
         }, 1000);
         return () => clearInterval(interval);
     }, []);
