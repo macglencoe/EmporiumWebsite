@@ -85,7 +85,7 @@ const Layout = (props) => {
                     icon: <PiPlusCircleBold size={26}/>
                   },
                   {
-                    href: '/cigars/barcodeSearch', label: 'Point of Sale',
+                    href: '/cigars/barcodeSearch', label: 'Price Lookup',
                     icon: <PiBarcodeBold size={26}/>,
                   },
                   {
