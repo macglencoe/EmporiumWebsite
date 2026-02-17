@@ -12,7 +12,7 @@ export const ImageDelete = (props) => {
     return (
         <>
         <div>
-            <button onClick={handleDeleteImage}>Delete Image</button>
+            <button type="button" onClick={handleDeleteImage}>Delete Image</button>
             {loading && <Notice type="loading">Deleting image from server...</Notice>}
             <p><b>Notice:</b> If the image was uploaded in the last 5 minutes, it will still appear as the product's image until you upload a new one</p>
         </div>

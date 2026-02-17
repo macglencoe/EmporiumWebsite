@@ -2,7 +2,9 @@ import { use, useEffect, useRef, useState } from 'react';
 import Layout from '../components/layout'
 import PageTitle1 from '../components/pagetitle1';
 import { diffJson } from 'diff';
-import Notice from '../components/notice';
+import mergeData from '../utils/mergeData'
+import { PiSpinnerBold } from 'react-icons/pi';
+import Link from 'next/link';
 
 
 
@@ -17,19 +19,53 @@ export const getStaticProps = async () => {
     };
 };
 
+export const Diff = ({ diff, titleKey, title }) => {
+    if (Array.isArray(diff) && diff.length > 0)
+        return (
+            <div className='bg-amber-100 rounded-md w-full overflow-hidden'>
+                <h2 className='text-2xl p-2 bg-amber-200'>{title}</h2>
+                {diff.map((diffObjectLines, objectIndex) => {
+                    const escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+                    const line = diffObjectLines.find((diffLine) => diffLine.value.includes(titleKey));
+                    const regex = new RegExp(`"${escapeRegExp(titleKey)}"\\s*:\\s*"([^"]+)"`);
+                    const match = line?.value.match(regex);
+                    const title = match?.[1];
+                    return (
+                        <div className='p-2 border-t-2 border-dotted border-amber-300 first:border-none'>
+                            <h3 className='text-xl mb-3'>{title}</h3>
+
+                            {diffObjectLines.map((diffLine, i) => {
+                                if (diffLine.removed || diffLine.added) {
+                                    if (diffLine.value !== 'null') { // guard against "null" in new or deleted cigars
+                                        return (
+                                            <pre className={diffLine.added ? 'bg-green-400/50' : diffLine.removed ? 'bg-red-400/50' : ''}>{diffLine.value}</pre>
+                                        )
+                                    }
+                                }
+                            })}
+                        </div>
+                    )
+                })}
+            </div>
+        )
+    else return null;
+}
+
 
 
 
 export const SubmitPage = (props) => {
     const audioRef = useRef();
-    const [diff, setDiff] = useState([]);
+    const [cigarDiff, setCigarDiff] = useState([]);
+    const [tobaccoDiff, setTobaccoDiff] = useState([]);
     const [responseConsole, setResponseConsole] = useState([]);
     const [currentCommitSha, setCurrentCommitSha] = useState('');
     const [currentCommitMessage, setCurrentCommitMessage] = useState('');
     // all commits
     const [allCommits, setAllCommits] = useState([]);
     const [recentAllCommitSha, setRecentAllCommitSha] = useState('');
-    // only commits touching cigar data file
+    // only commits touching data file(s)
     const [dataCommits, setDataCommits] = useState([]);
     const [recentDataCommitSha, setRecentDataCommitSha] = useState('');
 
@@ -38,64 +74,56 @@ export const SubmitPage = (props) => {
             audioRef.current.play();
         }
     }
+    const [mergedCigarData, setMergedCigarData] = useState([]);
 
-    const [localData, setLocalData] = useState(props.data);
-    const [originData, setOriginData] = useState(props.data);
+    const [mergedTobaccoData, setMergedTobaccoData] = useState([]);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            if (!localStorage.getItem('tempData_cigars')) {
-                localStorage.setItem('tempData_cigars', JSON.stringify(props.data));
-            }
-            setLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
-            if (!localStorage.getItem('originData_cigars')) {
-                localStorage.setItem('originData_cigars', JSON.stringify(props.data));
-            }
-            setOriginData(JSON.parse(localStorage.getItem('originData_cigars')));
-            // fetch all commits
-            fetch(`/api/commits?branch=cms`).then(response => response.json()).then(data => setAllCommits(data));
-            // fetch only commits touching cigar data file
-            fetch(`/api/commits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}&branch=cms`).then(response => response.json()).then(data => setDataCommits(data));
-
-            setCurrentCommitSha(localStorage.getItem('tempData_sha') ?? 'No Sha Found');
-            setCurrentCommitMessage(localStorage.getItem('tempData_message') ?? 'No Message Found');
+            // pull and build merged data
+            setMergedCigarData(
+                mergeFromLocal('tempData_cigars', 'originData_cigars', props.data)
+            )
+            setMergedTobaccoData(
+                mergeFromLocal('tempData_tobacco', 'originData_tobacco', [] /*TODO*/)
+            )
+            // sync commit metadata from remote and local
+            syncCommits();
         }
     }, []);
-    useEffect(() => {
-        getDiff();
-    }, [localData]);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            // fetch all commits
-            fetch(`/api/commits?branch=cms`).then(response => response.json()).then(data => setAllCommits(data));
-            // fetch only commits touching cigar data file
-            fetch(`/api/commits?path=${encodeURIComponent('public/data/consolidated_cigars.json')}&branch=cms`).then(response => response.json()).then(data => setDataCommits(data));
+        // generate diff from merged data
+        setCigarDiff(generateDiff(mergedCigarData))
+        setTobaccoDiff(generateDiff(mergedTobaccoData))
+    }, [mergedCigarData, mergedTobaccoData]);
 
-            // get current commit
-            setCurrentCommitSha(localStorage.getItem('tempData_sha') ?? 'No Sha Found');
-            setCurrentCommitMessage(localStorage.getItem('tempData_message') ?? 'No Message Found');
-        }, 5000);
+    useEffect(() => {
+        // sync commit metadata every 60s
+        const interval = setInterval(() => syncCommits(), 60000);
         return () => clearInterval(interval);
     }, []);
 
     useEffect(() => {
+        // when allCommits changes, update sha tracking
         if (allCommits.length > 0) {
             setRecentAllCommitSha(allCommits[0].sha);
         }
     }, [allCommits])
 
     useEffect(() => {
+        // when dataCommits changes, update sha tracking
         if (dataCommits.length > 0) {
             setRecentDataCommitSha(dataCommits[0].sha);
         }
     }, [dataCommits])
 
     const [defaultCommitMessage, setDefaultCommitMessage] = useState('');
-    // update default commit message
     useEffect(() => {
+        const prefix = process.env.NEXT_PUBLIC_COMMIT_MESSAGE_PREFIX || 'CMS Commit';
+        // update default commit message every second
         const interval = setInterval(() => {
-            setDefaultCommitMessage(`CMS Commit - ${new Date().toLocaleString()}`);
+            setDefaultCommitMessage(`${prefix} - ${new Date().toLocaleString()}`);
         }, 1000);
         return () => clearInterval(interval);
     }, []);
@@ -103,30 +131,110 @@ export const SubmitPage = (props) => {
     // commit message from user input
     const [customCommitMessage, setCustomCommitMessage] = useState('');
 
+    const [syncStatus, setSyncStatus] = useState('');
+
+    useEffect(() => 
+        // update sync status when relevant metadata changes
+        setSyncStatus(evaluateSyncState()),
+        [recentDataCommitSha, currentCommitSha, recentAllCommitSha])
 
 
-    const commitToGit = async (commitData, branch, message) => {
+
+    /**
+     * Pull temp and origin from localStorage, then merge
+     * @param {string} tempKey
+     * @param {string} originKey
+     * @param {Object[]} defaultData
+     * @returns {any} Merged data
+     */
+    const mergeFromLocal = (tempKey, originKey, defaultData) => {
+        const tempData = coerceSlugs(pullLocalJSON(tempKey, defaultData));
+        const originData = coerceSlugs(pullLocalJSON(originKey, defaultData));
+        return mergeData(tempData, originData);
+    }
+
+    /**
+     * Pull key from localStorage, and initialize if necessary with default data
+     * @param {string} key
+     * @param {Object[]} defaultData
+     * @returns {any} 
+     */
+    const pullLocalJSON = (key, defaultData) => {
+        let data = JSON.parse(localStorage.getItem(key));
+        if (!data) {
+            data = defaultData;
+            localStorage.setItem(key, JSON.stringify(defaultData));
+        }
+        return data;
+    }
+
+    const syncCommits = () => {
+        // fetch all commits
+        fetch(`/api/commits?branch=${process.env.NEXT_PUBLIC_BASE_BRANCH || 'cms'}`).then(response =>
+            response.json()
+        ).then(data => 
+            setAllCommits(data)
+        )
+        
+        // fetch only commits touching data files
+        fetch(`/api/commits?path=${encodeURIComponent('public/data')}&branch=${process.env.NEXT_PUBLIC_BASE_BRANCH || 'cms'}`).then(response =>
+            response.json()
+        ).then(data =>
+            setDataCommits(data)
+        )
+
+        // get currently loaded commit metadata
+        setCurrentCommitSha(localStorage.getItem('tempData_sha') ?? 'No Sha Found');
+        setCurrentCommitMessage(localStorage.getItem('tempData_message') ?? 'No Message Found')
+    }
+
+    /* -- Data manipulation helpers -- */
+
+    const coerceSlug = (entry) => {
+        const temp = { ...entry };
+        
+        // replace slug with new-slug, then remove new-slug
+        if (temp['new-slug']) {
+            temp.slug = temp['new-slug'];
+            delete temp['new-slug'];
+        }
+
+        return temp;
+    }
+
+    const coerceSlugs = (data) => {
+        return data.map(entry => coerceSlug(entry));
+    }
+
+    const stripId = (entry) => {
+        const temp = {...entry};
+        delete temp['_clientId'];
+        return temp;
+    }
+
+    const stripIds = (data) => data.map(entry => stripId(entry))
+
+    const coerceAndStrip = (data) => data.map(entry => stripId(coerceSlug(entry)))
+
+    /* -- -- */
+
+
+
+    const commitToGit = async (commitData, branch, message, filePath) => {
         try {
-            // strip out the CMS-only field
-            const editedData = commitData.map(item => {
-                const { 'new-slug': _, ...rest } = item;
-                return rest;
-            });
+            // strip out the CMS-only IDs
+            const editedData = stripIds(commitData)
 
             // build URL
-            const filePath = encodeURIComponent('public/data/consolidated_cigars.json');
-            const url = `/api/files/${filePath}`;
+            const filePathEncoded = encodeURIComponent(filePath);
+            const url = `/api/files/${filePathEncoded}`;
 
             // enqueue “standby”
-            setResponseConsole(c => [
-                ...c,
-                {
-                    time: new Date().toLocaleString(),
-                    status: 'standby',
-                    statusText: 'Waiting…',
-                    ok: true
-                }
-            ]);
+            pushResponseConsole(
+                'standby',
+                "Waiting...",
+                ok = true
+            );
 
             // fire PUT
             const response = await fetch(url, {
@@ -149,58 +257,149 @@ export const SubmitPage = (props) => {
             console.log(payload);
 
             // update console with result or error
-            setResponseConsole(c => [
-                ...c,
-                {
-                    time: new Date().toLocaleString(),
-                    status: response.status,
-                    statusText: response.statusText,
-                    ok: response.ok,
-                    ...(response.ok
-                        ? { message: payload.message, commitData: payload.result }
-                        : { error: payload.error })
-                }
-            ]);
+            pushResponseConsole(
+                response.status,
+                response.statusText,
+                response.ok,
+                ...(response.ok
+                    ? { message: payload.message, commitData: payload.result}
+                    : { error: payload.error }
+                )
+            );
         }
         catch (err) {
             console.error(err);
-            setResponseConsole(c => [
-                ...c,
-                {
-                    time: new Date().toLocaleString(),
-                    statusText: 'error',
-                    ok: false,
-                    message: err.message
-                }
-            ]);
+            pushResponseConsole(
+                response.status || 500,
+                response.statusText || 'error',
+                ok = false,
+                err.message
+            )
         }
     };
 
+    
+    const handleCommit = (e) => {
 
-    const getDiff = () => {
+        if (e.currentTarget.textContent == "Commit") {
+            // Confirmation
+            e.currentTarget.textContent = "Are you sure?";
+            e.currentTarget.style.backgroundColor = "var(--negative)";
+        } else {
+            // reset text and color after confirmation
+            e.currentTarget.textContent = "Commit";
+            e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
+
+            const branchesString = process.env.NEXT_PUBLIC_COMMIT_TO
+            const branches = branchesString ? branchesString.split(',').map(item => item.trim()) : null;
+            if (!branches || branches.length === 0) {
+                pushResponseConsole(
+                    500,
+                    "Internal Server Error",
+                    ok = false,
+                    "Missing environment configuration. Please contact the developer"
+                );
+                return
+            }
+
+
+            if (syncStatus == 'server-ahead') {
+                pushResponseConsole(
+                    400,
+                    "Bad Request",
+                    ok = false,
+                    "Cannot commit when local base is not up-to-date"
+                );
+                return
+            }
+            if (syncStatus == 'building') {
+                pushResponseConsole(
+                    503,
+                    "Service Unavailable",
+                    ok = false,
+                    "Cannot commit while still in the process of deploying changes"
+                );
+                return
+            }
+            if (cigarDiff.length === 0 && tobaccoDiff.length === 0) {
+                pushResponseConsole(
+                    400,
+                    statusText = "Bad Request",
+                    ok = false,
+                    message = "No changes detected"
+                );
+                return
+            }
+            
+            for (const branch of branches) {
+                if (cigarDiff.length > 0) {
+                    const localCigarData = JSON.parse(localStorage.getItem('tempData_cigars'));
+
+                    const edited = coerceAndStrip(localCigarData);
+                    
+                    commitToGit(edited, branch, customCommitMessage === "" ? defaultCommitMessage : customCommitMessage, 'public/data/consolidated_cigars.json')
+                }
+                if (tobaccoDiff.length > 0) {
+                    const localTobaccoData = JSON.parse(localStorage.getItem('tempData_tobacco'));
+
+                    const edited = coerceAndStrip(localTobaccoData);
+
+                    commitToGit(edited, branch, customCommitMessage === "" ? defaultCommitMessage : customCommitMessage, 'public/data/tobacco.json')
+                }
+            }
+
+
+        }
+    }
+
+
+    
+    const generateDiff = ( mergedData ) => {
         const tempDiff = [];
-        localData.map((cigar, index) => {
-            const originalCigar = originData.find((originalCigar) => originalCigar.slug === cigar.slug)
-                ?? ""; // if the cigar doesn't exist in the original data, return an empty string
-            const newCigar = { ...cigar };
-
-
-            if (!originalCigar || JSON.stringify(originalCigar) !== JSON.stringify(newCigar)) {
-                newCigar.slug = cigar['new-slug'];
-                delete newCigar['new-slug'];
-
-                tempDiff.push([...diffJson(originalCigar, newCigar)]);
-            }
-
-        })
-        // Get deleted cigars
-        originData.map((originalCigar) => {
-            if (!localData.find((cigar) => cigar.slug === originalCigar.slug)) {
-                tempDiff.push([...diffJson(originalCigar, "")]);
+        mergedData.map((item, index) => {
+            if(!item.origin || JSON.stringify(item.origin) !== JSON.stringify(item.temp)) {
+                // assume here that "new-slug" has already been coerced into "slug"
+                const origin = item.origin ? stripId(item.origin): null;
+                const temp = item.temp ? stripId(item.temp) : null
+                const diff = diffJson(origin, temp)
+                tempDiff.push([...diff]);
             }
         })
-        setDiff(tempDiff)
-    };
+        return tempDiff;
+    }
+    const evaluateSyncState = () => {
+        switch (recentDataCommitSha) {
+            case currentCommitSha:
+                /* Case 1: Local commit is the same as recent data commit */
+                return "same";
+            case process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA:
+                /* Case 2: Server commit is ahead of local commit */
+                return "server-ahead";
+            default:
+                if (currentCommitSha !== recentAllCommitSha)
+                    /* Case 3: Loading state - local, build, and fetched commits are out-of-sync */
+                    return "building"
+                else 
+                    /* Case 4: Current commit is ahead of the last data commit */
+                    return (
+                    "local-ahead"
+                )
+        }
+    }
+
+    const pushResponseConsole = (status, statusText, ok, message) => {
+        if (!status || !statusText) {
+            throw new Error("Status and statusText are required for console entries");
+        }
+        setResponseConsole([...responseConsole, {
+            time: new Date().toLocaleString(),
+            status,
+            statusText,
+            ok,
+            message
+        }]);
+        return;
+    }
 
     return (
         <>
@@ -231,27 +430,20 @@ export const SubmitPage = (props) => {
                             )}
                             <td className='equivalence'>
                                 <div>
-                                    {/* Case 1: Local commit is the same as recent data commit */}
-                                    {recentDataCommitSha === currentCommitSha && <p>=</p>}
+                                    
+                                    {syncStatus == 'same' && <p>=</p>}
 
-                                    {/* Case 2: Loading state - local, build, and fetched commits are out-of-sync */}
-                                    {recentDataCommitSha !== currentCommitSha &&
-                                        recentDataCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
-                                        currentCommitSha !== recentAllCommitSha && (
+                                    
+                                    {syncStatus == 'building' && (
                                             <svg className='loading' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
                                                 <path d="M320-160h320v-120q0-66-47-113t-113-47q-66 0-113 47t-47 113v120Zm160-360q66 0 113-47t47-113v-120H320v120q0 66 47 113t113 47ZM160-80v-80h80v-120q0-61 28.5-114.5T348-480q-51-32-79.5-85.5T240-680v-120h-80v-80h640v80h-80v120q0 61-28.5 114.5T612-480q51 32 79.5 85.5T720-280v120h80v80H160Z" />
                                             </svg>
                                         )
                                     }
 
-                                    {/* Case 3: Current commit is ahead of the last data commit */}
-                                    {recentDataCommitSha !== currentCommitSha &&
-                                        recentDataCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
-                                        currentCommitSha === recentAllCommitSha && <p>&lt;</p>}
+                                    {syncStatus == 'local-ahead' && <p>&lt;</p>}
 
-                                    {/* Case 4: Server commit is ahead of local commit */}
-                                    {recentDataCommitSha !== currentCommitSha &&
-                                        recentDataCommitSha === process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA && (
+                                    {syncStatus == 'server-ahead' && (
                                             <a href='.'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                                                     <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z" />
@@ -271,32 +463,22 @@ export const SubmitPage = (props) => {
                     <tfoot>
                         <tr>
                             <td colSpan={3}>
-                                { // Loading state
-                                    recentDataCommitSha !== currentCommitSha &&
-                                    recentDataCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
-                                    currentCommitSha !== recentAllCommitSha &&
-                                    currentCommitSha !== "Unknown" &&
+                                {syncStatus == 'building' &&
                                     <>
                                         <p>This most likely means your changes are still being fetched. Wait a few seconds, and if you still see this message, please <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>check the build status</a>.</p>
                                     </>
                                 }
-                                { // Local commit is up to date
-                                    recentDataCommitSha === currentCommitSha &&
+                                {syncStatus == 'same' &&
                                     <>
                                         <p>Commit is up to date, and <b>you are able to submit changes</b></p>
                                     </>
                                 }
-                                { // Current commit is ahead of the last data commit
-                                    recentDataCommitSha !== currentCommitSha &&
-                                    recentDataCommitSha !== process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
-                                    currentCommitSha === recentAllCommitSha &&
+                                {syncStatus == 'local-ahead' &&
                                     <>
                                         <p>Commit is ahead of the last data commit, and <b>you are able to submit changes</b></p>
                                     </>
                                 }
-                                { // Server commit is ahead of local commit
-                                    recentDataCommitSha !== currentCommitSha &&
-                                    recentDataCommitSha === process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA &&
+                                {syncStatus == 'server-ahead' &&
                                     <>
                                         <p>Server commit is ahead of local commit. <br></br>This means the site hasn't had the chance to update the local data yet. Try <a href='.'>refreshing the page</a></p>
                                         <p>In the meantime, <b>you won't be able to submit changes</b></p>
@@ -304,55 +486,42 @@ export const SubmitPage = (props) => {
 
                                 }
                                 {
-                                    currentCommitSha === "Unknown" &&
+                                    syncStatus == '' &&
                                     <>
                                         <p>Unable to determine if commits are up to date.</p>
                                         <p>This most likely means you are running a local instance</p>
                                         <b>You are not able to submit changes</b>
                                     </>
                                 }
+
+                                <table className='text-xs mt-2' style={{
+                                    fontFamily: "monospace"
+                                }}>
+                                    <tr>
+                                        <th>Syncing data from:</th>
+                                        <td>{process.env.NEXT_PUBLIC_BASE_BRANCH}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pushing changes to:</th>
+                                        <td>{process.env.NEXT_PUBLIC_COMMIT_TO}</td>
+                                    </tr>
+                                </table>
                             </td>
                         </tr>
                     </tfoot>
                 </table>
                 <div className='submit-container'>
                     <p><b>Please inspect your changes carefully.</b></p>
-                    {diff.length === 0 &&
+                    {cigarDiff.length === 0 && tobaccoDiff.length === 0 &&
                         <div className='diff-container'>
                             <div className='diff-split'>
                                 <h3>No changes detected</h3>
-                                <p>To make changes, select a cigar in the <a href="/cigars">Catalog</a> and click "Edit", or <a href="/cigars/add">create a new cigar</a>.</p>
-                                <div className='diff-button-container'>
-                                    <label htmlFor="diff">Changes not showing up?</label>
-                                    <button id='get-diff' onClick={getDiff}>Force Get Diff</button>
-                                </div>
+                                <p>To make changes, select a product in the <Link href="/cigars"><a>cigar</a></Link> or <Link href="/tobacco"><a>tobacco</a></Link> catalogs and click "Edit", or click "Add New" within the catalog to create a new product.</p>
                             </div>
                         </div>
                     }
-                    {diff &&
-                        <div className='diff-container'>
-                            {diff.map((diffObjectLines, objectIndex) => {
-                                console.log(diffObjectLines);
-                                return (
-                                    <div className='diff-split'>
-                                        {diffObjectLines.find((diffLine) => diffLine.value.includes('Cigar Name')) &&
-                                            <div>
-                                                <h3>{diffObjectLines.find((diffLine) => diffLine.value.includes('Cigar Name')).value.match(/"Cigar Name":\s*"([^"]+)"/)[1]}</h3>
-                                            </div>
-                                        }
-
-                                        {diffObjectLines.map((diffLine, i) => {
-                                            if (diffLine.removed || diffLine.added) {
-                                                return (
-                                                    <pre className={diffLine.added ? 'line-new' : diffLine.removed ? 'line-old' : ''}>{diffLine.value}</pre>
-                                                )
-                                            }
-                                        })}
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    }
+                    <Diff diff={cigarDiff} titleKey={"Cigar Name"} title="Cigars"/>
+                    <Diff diff={tobaccoDiff} titleKey={"Tobacco Name"} title="Pipe Tobacco"/>
                 </div>
 
                 <div className='section-header'>
@@ -362,43 +531,7 @@ export const SubmitPage = (props) => {
 
                 <div>
                     <div className='commit-dialog'>
-                        <button /* disabled */ className='commit-button' onClick={(e) => {
-                            if (e.currentTarget.textContent == "Commit") {
-                                e.currentTarget.textContent = "Are you sure?";
-                                e.currentTarget.style.backgroundColor = "var(--negative)";
-                                play();
-                            } else {
-                                e.currentTarget.textContent = "Commit";
-                                e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
-                                if (
-                                    currentCommitSha !== recentDataCommitSha
-                                    && currentCommitSha !== recentAllCommitSha
-                                ) {
-                                    setResponseConsole([...responseConsole, {
-                                        time: new Date().toLocaleString(),
-                                        status: 400,
-                                        statusText: "Bad Request",
-                                        ok: false,
-                                        message: "Cannot commit when current commit is not up to date"
-                                    }])
-                                    return
-                                }
-                                if (diff.length === 0) {
-                                    setResponseConsole([...responseConsole, {
-                                        time: new Date().toLocaleString(),
-                                        status: 400,
-                                        statusText: "Bad Request",
-                                        ok: false,
-                                        message: "No changes detected"
-                                    }])
-                                    return
-                                }
-                                const branches = ['cms', 'main'];
-                                for (const branch of branches) {
-                                    commitToGit(localData, branch, customCommitMessage === "" ? defaultCommitMessage : customCommitMessage);
-                                }
-                            }
-                        }}
+                        <button /* disabled */ className='commit-button' onClick={handleCommit}
                             onBlur={(e) => {
                                 if (e.currentTarget.textContent == "Are you sure?") {
                                     e.currentTarget.textContent = "Commit";

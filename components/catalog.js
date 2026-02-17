@@ -11,6 +11,7 @@ import PageTitle1 from './pagetitle1';
 import Layout from './layout';
 import Filters from './filters';
 import { track } from '@vercel/analytics';
+import SchemaCatalog from './schemaCatalog';
 
 
 export const getStaticProps = async () => {
@@ -51,6 +52,8 @@ const Catalog = (props) => {
     const [sortOption, setSortOption] = useState(props.defaultSort);
     const [filtersOpen, setFiltersOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+
+    const mergedData = props.mergedData || [];
 
     // Set filters based on query parameters
     const router = useRouter();
@@ -122,51 +125,68 @@ const Catalog = (props) => {
 
 
 
-    const filteredItems = [...props.data].filter((item) => {
+    const filteredItems = [...mergedData].filter((item) => {
+
+        const filterLogic = (filter, v) =>
+            Array.isArray(item[v][filter.name])
+                ? typeof item[v][filter.name][0] === 'string'
+                    ? item[v][filter.name] != null &&
+                    item[v][filter.name].includes(router.query[filter.name])
+                    : item[v][filter.name] != null &&
+                    item[v][filter.name].some(obj =>
+                        Object.values(obj).some(val =>
+                            String(val).toLowerCase().includes(router.query[filter.name].toLowerCase())
+                        )
+                    )
+                : item[v][filter.name] != null &&
+                item[v][filter.name].toLowerCase() === router.query[filter.name].toLowerCase()
+
+
         if (router.isReady) {
             props.filters.map(filter => {
                 if (!router.query[filter.name]) {
                     router.query[filter.name] = '';
+                    // TODO: this is stupid, why do this? 
                 }
             });
-            console.log(props.filters);
+            return props.filters.every(filter =>
+                router.query[filter.name] == '' ||
+                // if temp is not null, use temp for filtering. otherwise, use origin
+                (item.temp != null ? filterLogic(filter, 'temp') : filterLogic(filter, 'origin'))
 
-            return (
-                props.filters.every(filter =>
-                    router.query[filter.name] == '' ||
-                    (Array.isArray(item[filter.name])
-                        ? typeof item[filter.name][0] === 'string'
-                            ? item[filter.name] != null && item[filter.name].includes(router.query[filter.name])
-                            : item[filter.name] != null && item[filter.name].some(obj => Object.values(obj).some(val => String(val).toLowerCase().includes(router.query[filter.name].toLowerCase())))
-                        : item[filter.name] != null && item[filter.name].toLowerCase() == (router.query[filter.name].toLowerCase()))
-                )
             )
-
         }
     })
 
 
 
     const searchedItems = filteredItems.filter((item) => {
+        const searchLogic = (v) => Object.values(item[v]).some(value =>
+            Array.isArray(value) ?
+                value.some(val =>
+                    typeof val === 'object' ?
+                        Object.values(val).some(v => String(v).toLowerCase().includes(router.query.search ? router.query.search.toLowerCase() : ''))
+                        : String(val).toLowerCase().includes(router.query.search ? router.query.search.toLowerCase() : '')
+                ) :
+                String(value).toLowerCase().includes(router.query.search ? router.query.search.toLowerCase() : '')
+        );
         if (router.isReady) {
-            return Object.values(item).some(value =>
-                Array.isArray(value) ?
-                    value.some(val =>
-                        typeof val === 'object' ?
-                            Object.values(val).some(v => String(v).toLowerCase().includes(router.query.search ? router.query.search.toLowerCase() : ''))
-                            : String(val).toLowerCase().includes(router.query.search ? router.query.search.toLowerCase() : '')
-                    ) :
-                    String(value).toLowerCase().includes(router.query.search ? router.query.search.toLowerCase() : '')
-            );
+            if (item.temp !== null)
+                return searchLogic('temp');
+            else 
+                return searchLogic('origin');
         }
     });
 
     const auxSearchedItems = searchedItems.filter((item) => {
-        if (props.auxiliarySearchBars) {
+        // deprecated, not using aux searchbars anymore
+        /* if (props.auxiliarySearchBars) {
             return auxSearchQueries.every(query =>
                 query.value === '' || String(item[query.name]).toLowerCase() === query.value.toLowerCase()
             );
-        } else return searchedItems
+        } else return searchedItems */
+        
+        return searchedItems
     })
 
     // Testing for unique barcodes
@@ -177,14 +197,27 @@ const Catalog = (props) => {
 
 
     const sortedItems = [...auxSearchedItems].sort((a, b) => {
-
         const sortOptionProp = props.sortOptions.find(option => option.value === sortOption);
+        const aHasTemp = a.temp != null;
+        const bHasTemp = b.temp != null;
 
+        if (aHasTemp !== bHasTemp) return aHasTemp ? -1 : 1;
+
+        if (aHasTemp && bHasTemp) {
+            const aIsNew = a.origin == null;
+            const bIsNew = b.origin == null;
+            if (aIsNew !== bIsNew) return aIsNew ? -1 : 1;
+        }
+
+        const aSource = aHasTemp ? a.temp : a.origin;
+        const bSource = bHasTemp ? b.temp : b.origin;
 
         if (sortOptionProp.quantity) {
-            return b[sortOption].length - a[sortOption].length
-        } else
-            return String(a[sortOption]).localeCompare(String(b[sortOption]));
+            const aLen = Array.isArray(aSource?.[sortOption]) ? aSource[sortOption].length : 0;
+            const bLen = Array.isArray(bSource?.[sortOption]) ? bSource[sortOption].length : 0;
+            return bLen - aLen;
+        }
+        return String(aSource?.[sortOption] ?? '').localeCompare(String(bSource?.[sortOption] ?? ''));
     })
 
 
@@ -337,12 +370,12 @@ const Catalog = (props) => {
                             </div>
                         }
 
-
-                        <CatalogContent
-                            data={sortedItems}
-                            cardSettings={props.cardSettings}
-
-                        ></CatalogContent>
+                        <SchemaCatalog
+                            tempData={props.tempData} // may need removed
+                            originData={props.originData} // this too
+                            mergedData={sortedItems}
+                            uiSchema={props.uiSchema}
+                        />
                     </div>
                 </div>
             </Layout>

@@ -102,6 +102,7 @@ li {
     flex-direction: row;
     align-items: center;
     position: relative;
+    border-radius: 5px;
 }
 li a {
     font-family: Inter;

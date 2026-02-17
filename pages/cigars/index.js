@@ -15,6 +15,8 @@ import CatalogCard from '../../components/catalogCard'
 import Catalog from '../../components/catalog'
 import Filters from '../../components/filters'
 import setLocalData from '../../utils/setLocalData'
+import mergeData from '../../utils/mergeData'
+import uiSchema from '../../public/data/cigar.ui.schema.json'
 
 
 export const getStaticProps = async () => {
@@ -31,40 +33,43 @@ const CigarCatalog = (props) => {
   //CMS
 
 
-  const [tempData, setTempData] = useState(props.data);
-  const [originData, setOriginData] = useState(props.data);
-
-  const pullTempData = () => {
-    setTempData(JSON.parse(localStorage.getItem('tempData_cigars')));
-  }
+  const [tempData, setTempData] = useState([]);
+  const [originData, setOriginData] = useState([]);
+  const [mergedData, setMergedData] = useState([]);
 
   useEffect(() => {
     // pull from localstorage on page load
-    if (window !== 'undefined') {
-      pullTempData();
-      if (localStorage.getItem('originData_cigars')) {
-        setOriginData(JSON.parse(localStorage.getItem('originData_cigars')));
-      }
+    if (window !== undefined) {
+      setTempData(JSON.parse(localStorage.getItem('tempData_cigars')));
+      setOriginData(JSON.parse(localStorage.getItem('originData_cigars')));
     }
   }, []);
+
+  useEffect(() => {
+    if (tempData?.length > 0 && originData?.length > 0) {
+      setMergedData(mergeData(tempData, originData));
+    }
+  }, [tempData, originData])
 
 
   const router = useRouter();
 
+  const safeData = Array.isArray(tempData) ? tempData : [];
+
   // All unique brands for filtering
-  const uniqueBrands = [...new Set((tempData).map(item => item['Cigar Brand'].trim()))];
+  const uniqueBrands = [...new Set(safeData.map(item => (item['Cigar Brand'] || '').trim()))];
 
   // All unique wrappers for filtering
-  const uniqueWrappers = [...new Set((tempData).map(item => item['Wrapper'].trim()))];
+  const uniqueWrappers = [...new Set(safeData.map(item => (item['Wrapper'] || '').trim()))];
 
   // All unique strengths for filtering
-  const uniqueStrengths = [...new Set((tempData).map(item => item['Strength_Profile'].trim()))];
+  const uniqueStrengths = [...new Set(safeData.map(item => (item['Strength_Profile'] || '').trim()))];
 
   // All unique sizes for filtering
-  const uniqueSizes = [...new Set(tempData.flatMap(obj => obj.Sizes.map(size => size.Size)))].sort((a, b) => a.localeCompare(b));
+  const uniqueSizes = [...new Set(safeData.flatMap(obj => (obj.Sizes || []).map(size => size.Size)))].sort((a, b) => a.localeCompare(b));
 
   const pageSize = 10;
-  const totalPages = Math.ceil(tempData.length / pageSize);
+  const totalPages = Math.ceil(safeData.length / pageSize);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
@@ -73,7 +78,7 @@ const CigarCatalog = (props) => {
     }
   }, [router.query.page]);
 
-  const currentPageData = tempData.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+  const currentPageData = safeData.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
   // ^^ This all needs to go to Catalog.js :(
 
@@ -84,6 +89,9 @@ const CigarCatalog = (props) => {
       </Head>
       <Catalog
         data={tempData}
+
+        mergedData={mergedData}
+        uiSchema={uiSchema}
 
         title="Cigar Catalog"
         subtitle="Our selection of cigars from a wide array of premium brands, available for purchase in-store."
@@ -171,9 +179,9 @@ const CigarCatalog = (props) => {
           },
           href: (item) => {
             // Redirect to the "edit new" page for cigars added in this session.
-            // This identifies cigars by query parameters because static paths are generated only during the build process.
+            // This identifies cigars by client-side dynamic routing because static paths are generated only during the build process.
             if (!props.data.some(dataItem => dataItem.slug === item.slug)) {
-              return ('/cigars/editnew?slug=' + item.slug)
+              return (`/cigars/editnew/${item.slug}`)
             }
             return ('/cigars/' + item.slug)
           },

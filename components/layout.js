@@ -14,7 +14,7 @@ import Toolbar from './toolbar'
 import setLocalData from '../utils/setLocalData'
 import DataUpdate from './dataUpdate'
 import { Footer } from './footer'
-import { PiBarcodeBold, PiGitCommitBold, PiPlusCircleBold, PiTableBold } from 'react-icons/pi'
+import { PiBarcodeBold, PiExportBold, PiGitCommitBold, PiPlusCircleBold, PiTableBold } from 'react-icons/pi'
 
 const Layout = (props) => {
   const router = useRouter();
@@ -68,7 +68,7 @@ const Layout = (props) => {
         </header>
 
 
-        <div className="catalog-container11 container">
+        <div className="catalog-container11 w-full flex items-stretch">
           <div className={`catalog-container73 sidebar${isActive ? ' collapsed' : ''}`}>
 
             <Fragment>
@@ -85,13 +85,13 @@ const Layout = (props) => {
                     icon: <PiPlusCircleBold size={26}/>
                   },
                   {
-                    href: '/cigars/barcodeSearch', label: 'Point of Sale',
+                    href: '/cigars/barcodeSearch', label: 'Price Lookup',
                     icon: <PiBarcodeBold size={26}/>,
                   },
                   {
-                    href: '/cigars/dense', label: 'Dense Catalog',
-                    icon: <PiTableBold size={26}/>,
-                    newExpiration: new Date("2025-06-21T00:00:00")
+                    href: '/export', label: 'Export Data',
+                    icon: <PiExportBold size={26}/>,
+                    newExpiration: new Date("2026-02-21T00:00:00")
                   }
                 ]}
                 style={{ backgroundColor: 'var(--dl-color-theme-secondary1)' }}

@@ -1,560 +1,86 @@
-import { useEffect, useState } from 'react';
-import Layout from '../../../components/layout';
-import setLocalData from '../../../utils/setLocalData';
-import { useRouter } from 'next/router';
-import CrudForm from '../../../components/crudForm';
-import { type } from 'jquery';
-import cigarFields from '../../../public/data/cigar-fields.json'
-
+import { useMemo } from "react";
+import { useRouter } from "next/router";
+import Layout from "../../../components/layout";
+import SchemaForm, { FormButtons } from "../../../components/schemaForm";
+import { SlugPreview } from "../../../components/schemaForm";
+import uiSchema from "../../../public/data/cigar.ui.schema.json";
+import { buildSchemaArtifacts } from "../../../utils/schemaMapper";
+import { buildCigarSuggestions } from "../../../utils/suggestions";
+import { useDraftItem } from "../../../hooks/useDraftItem";
 
 export const getStaticPaths = async () => {
-    const cigars = await import('../../../public/data/consolidated_cigars.json');
-    const data = await cigars.default;
-    const paths = data.map((cigar) => ({
-        params: { slug: cigar.slug },
-    }));
-    return { paths, fallback: false };
-}
+  const cigars = await import("../../../public/data/consolidated_cigars.json");
+  const data = await cigars.default;
+  const paths = data.map((cigar) => ({
+    params: { slug: cigar.slug },
+  }));
+  return { paths, fallback: false };
+};
 
 export const getStaticProps = async ({ params }) => {
-    const cigarsData = await import('../../../public/data/consolidated_cigars.json');
-    const data = await cigarsData.default;
-    const cigarIndex = data.findIndex((cigar) => cigar.slug === params.slug);
-    const cigar = data[cigarIndex];
-    const prevCigar = cigarIndex > 0 ? data[cigarIndex - 1] : null;
-    const nextCigar = cigarIndex + 1 < data.length ? data[cigarIndex + 1] : null;
-    return { props: { cigar, next: nextCigar, prev: prevCigar, allCigars: data } };
-}
+  const cigarsData = await import("../../../public/data/consolidated_cigars.json");
+  const data = await cigarsData.default;
+  const cigarIndex = data.findIndex((cigar) => cigar.slug === params.slug);
+  const cigar = data[cigarIndex];
+  const prevCigar = cigarIndex > 0 ? data[cigarIndex - 1] : null;
+  const nextCigar = cigarIndex + 1 < data.length ? data[cigarIndex + 1] : null;
+  return { props: { cigar, next: nextCigar, prev: prevCigar, allCigars: data } };
+};
 
-const EditCigarPage = (props) => {
-    const router = useRouter();
-    if (!props.cigar) {
-        return <div>Cigar not found</div>;
+const EditCigarPage = ({ cigar, allCigars }) => {
+  const router = useRouter();
+  if (!cigar) {
+    return <div>Cigar not found</div>;
+  }
+
+  const { defaults } = useMemo(() => buildSchemaArtifacts(uiSchema), []);
+  const {
+    draft,
+    setDraft,
+    saveDraft,
+    isSlugUnique,
+    generateSlug,
+  } = useDraftItem({
+    slug: cigar.slug,
+    defaults,
+    initialItem: cigar,
+    allItems: allCigars || [],
+  });
+
+  const suggestions = useMemo(
+    () => buildCigarSuggestions(allCigars || []),
+    [allCigars]
+  );
+
+  const handleSubmit = (values) => {
+    const result = saveDraft(values);
+    if (result?.error === "slug-conflict") {
+      alert("Slug already exists. Please choose a different name.");
+      return;
     }
-
-    const [cigarLocalData, setCigarLocalData] = useState(props.cigar);
-    const [cigarOriginData, setCigarOriginData] = useState(props.cigar);
-    const [allCigarsLocalData, setAllCigarsLocalData] = useState(props.allCigars);
-
-    /* const cigarFields = {
-        'Cigar Brand': "",
-        'Cigar Name': "",
-        'Wrapper': "",
-        'Binder': "",
-        'Filler': "",
-        "Flavor_Profile": "",
-        "Strength_Profile": "",
-        "Sizes": [{}]
-        // 'slug': "", // slug is generated from the cigar name, added afterwards
-    } */
-
-
-
-    const sizeFields = {
-        "Size": "",
-        "Barcode": "",
-        "In_Stock": "",
-        "Price": ""
-    }
-
-    useEffect(() => {
-        // --- May need deprecated soon --- //
-        setLocalData(props.allCigars);
-        // ----------------------------- //
-        if (typeof window !== 'undefined') {
-            pullTempData();
-            pullOriginData();
-            setAllCigarsLocalData(JSON.parse(localStorage.getItem('tempData_cigars')));
-        }
-    }, []);
-
-    /**
-     * Pulls the current cigar data from local storage and updates the state.
-     * If the cigar doesn't exist in local storage, does nothing.
-     * @function
-     */
-    const pullTempData = () => {
-        const tempData = JSON.parse(localStorage.getItem('tempData_cigars'));
-        const firstCigarWithSameSlug = tempData.find((cigar) => props.cigar.slug === cigar.slug);
-        setCigarLocalData(firstCigarWithSameSlug);
-        return firstCigarWithSameSlug;
-    }
-
-    const pullOriginData = () => {
-        const tempData = JSON.parse(localStorage.getItem('originData_cigars'));
-        const firstCigarWithSameSlug = tempData.find((cigar) => props.cigar.slug === cigar.slug);
-        return firstCigarWithSameSlug;
-    }
-
-
-    /**
-     * Pulls all cigar data from local storage
-     * @returns {Array<Object>} - The array of cigar data
-     */
-    const pullAllTempData = () => {
-        return JSON.parse(localStorage.getItem('tempData_cigars'));
-    }
-
-    /**
-     * Generates a slug from the given local cigar data.
-     * The slug is generated by concatenating the cigar brand and name, converting to lower case, removing non-alphanumeric and whitespace characters, and replacing multiple spaces with a single hyphen.
-     * @param {Object} localData - The local cigar data
-     * @returns {String} - The slug
-     */
-    const generateSlug = (localData) => {
-        if (localData) {
-            const slug = (localData['Cigar Brand'] + ' ' + localData['Cigar Name']).toLowerCase().replace(/[^a-z0-9\s]/gi, '').replace(/\s+/g, '-');
-            return slug;
-        }
-    }
-
-    /**
-     * Checks if the slug generated from the given local cigar data is unique among all cigars.
-     * The slug is considered unique if no other cigar has the same slug.
-     * @param {Object} localData - The local cigar data
-     * @returns {Boolean} - True if the slug is unique, false otherwise
-     */
-
-    const isSlugUnique = (localData) => {
-        if (localData) {
-            const slugExists = allCigarsLocalData.some((cigar) => cigar.slug !== localData.slug && cigar.slug === generateSlug(localData));
-            return !slugExists;
-        }
-    }
-
-    /**
-     * Saves changes to the local cigar data.
-     * Before saving changes, checks if the slug generated from the new data is unique.
-     * If it's not, alerts the user and returns without saving.
-     * @param {Object} localData - The local cigar data to be saved.
-     * @returns {void}
-     */
-    const saveChanges = (localData) => {
-        // Before saving changes, check if the slug generated from the new data is unique.
-        // If it's not, alert the user and return without saving.
-        if (!isSlugUnique(localData)) {
-            alert('Slug already exists. Please choose a different name.');
-            return;
-        }
-
-        // The slug is unique, so generate a new slug from the new data.
-        localData['new-slug'] = generateSlug(localData);
-
-        // Load the temporary data from local storage.
-        // If it doesn't exist, use the original data from the database.
-        let tempData = JSON.parse(localStorage.getItem('tempData_cigars'));
-        if (!tempData) {
-            tempData = props.data;
-            localStorage.setItem('tempData_cigars', JSON.stringify(tempData));
-        }
-
-        // Find the index of the item in the temporary data that has the same slug as the data we're trying to save.
-        // If it doesn't exist, add it to the temporary data.
-        const index = tempData.findIndex(item => item.slug === localData.slug);
-        if (index !== -1) {
-            // Replace the item in the temporary data with the new data.
-            tempData[index] = localData;
-        } else {
-            // Add the new data to the temporary data.
-            tempData.push(localData);
-        }
-
-        // Remove any non-objects from the Sizes array.
-        // This is because the Sizes array is an array of objects, and we want to make sure it stays that way.
-        // If someone manually edits the local storage, they might accidentally add a non-object to the Sizes array.
-        // This line removes any non-objects from the Sizes array, so we can be sure that the Sizes array is always an array of objects.
-        if (tempData[index].Sizes) { tempData[index].Sizes = tempData[index].Sizes.filter(size => typeof size === 'object'); }
-
-        // Save the temporary data to local storage.
-        localStorage.setItem('tempData_cigars', JSON.stringify(tempData));
-        router.push('/cigars/' + localData['slug']);
-    }
-    const saveChangesSingle = (slug, updates) => {
-        let tempData = JSON.parse(localStorage.getItem('tempData_cigars'));
-        if (!tempData) {
-            tempData = props.data;
-            localStorage.setItem('tempData_cigars', JSON.stringify(tempData));
-        }
-
-        const index = tempData.findIndex(item => item.slug === slug);
-        if (index !== -1) {
-            for (const key in updates) {
-                if (updates[key] === null) {
-                    delete tempData[index][key];
-                } else {
-                    tempData[index][key] = updates[key];
-                }
-            }
-            localStorage.setItem('tempData_cigars', JSON.stringify(tempData));
-        }
-    }
-
-    return (
-        <>
-            <Layout>
-                <CrudForm
-                    pullTempData={pullTempData}
-                    pullAllTempData={pullAllTempData}
-                    dataFields={cigarFields}
-                    dataOriginal={cigarOriginData}
-                    onMetadataChange={(e) => {
-                        setCigarLocalData({ ...cigarLocalData, [e.target.name]: e.target.value })
-                    }}
-                    onMetadataRevert={(e) => {
-                        setCigarLocalData({ ...cigarLocalData, [e.target.name]: cigarOriginData[e.target.name] })
-                    }}
-                    arrayFields={{
-                        "Sizes": sizeFields
-                    }}
-                    generateSlug={generateSlug}
-                    isSlugUnique={isSlugUnique}
-                    onSubmit={saveChanges}
-                    onSubmitSingle={saveChangesSingle}
-                >
-
-                </CrudForm>
-                {/* <section>
-                    <div>
-                        <h2>Metadata</h2>
-                        {
-                            Object.keys(cigarFields).map((key, index) => {
-                                if (typeof cigarFields[key] === "string")
-                                    return (
-                                        <InputField
-                                            label={key}
-                                            value={cigarLocalData[key]}
-                                            original={props.cigar[key]}
-                                            onChange={(e) => {
-                                                setCigarLocalData({ ...cigarLocalData, [key]: e.target.value })
-                                            }}
-                                            onRevert={(e) => {
-                                                setCigarLocalData({ ...cigarLocalData, [key]: props.cigar[key] })
-                                            }}
-                                            rows={
-                                                key == "Flavor_Profile" ? 5 : 1
-                                            }
-                                        ></InputField>
-                                    );
-                            })
-                        }
-                    </div>
-                    <div>
-                        {Object.keys(cigarFields).map((key, index) => {
-
-                            if (Array.isArray(cigarFields[key]))
-                                if (key === "Sizes")
-                                    return (
-                                        <>
-                                            <h2>{key}</h2>
-                                            <div id="sizes">
-                                                {cigarLocalData.Sizes.map((size, sizeIndex) => {
-                                                    return (
-                                                        <div key={index} className="l2 sizeBlock">
-                                                            <h3>Size {sizeIndex + 1}</h3>
-                                                            {Object.keys(sizeFields).map((key, index) => {
-                                                                return (
-                                                                    <InputField
-                                                                        label={key}
-                                                                        value={cigarLocalData.Sizes[sizeIndex][key]}
-                                                                        original={props.cigar.Sizes[sizeIndex]?.[key]}
-                                                                        onChange={(e) => {
-                                                                            const updatedSizes = [...cigarLocalData.Sizes];
-                                                                            updatedSizes[sizeIndex][key] = e.target.value;
-                                                                            setCigarLocalData({ ...cigarLocalData, Sizes: updatedSizes });
-                                                                        }}
-                                                                        onRevert={(e) => {
-                                                                            setCigarLocalData({ ...cigarLocalData, Sizes: [...cigarLocalData.Sizes.map((size, index) => index === sizeIndex ? { ...size, [key]: props.cigar.Sizes?.[sizeIndex]?.[key] || "" } : size)] })
-                                                                        }}
-                                                                    >
-                                                                    </InputField>
-
-                                                                );
-                                                            }
-                                                            )}
-                                                            <div className='size-tools'>
-                                                                <button id='remove-size' type="button"
-                                                                    onClick={(e) => {
-                                                                        if (e.currentTarget.textContent === "Remove Size") {
-                                                                            e.currentTarget.textContent = "Are you sure?";
-                                                                            e.currentTarget.style.backgroundColor = "rgba(255, 89, 0, 1)";
-                                                                        } else {
-                                                                            const updatedSizes = [...cigarLocalData.Sizes];
-                                                                            updatedSizes[sizeIndex] = "DELETED";
-                                                                            setCigarLocalData({ ...cigarLocalData, Sizes: updatedSizes });
-                                                                            e.currentTarget.textContent = "Remove Size";
-                                                                            e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
-                                                                        }
-                                                                    }}
-                                                                    onBlur={(e) => {
-                                                                        if (e.currentTarget.textContent === "Are you sure?") {
-                                                                            e.currentTarget.textContent = "Remove Size";
-                                                                            e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
-                                                                        }
-                                                                    }}>
-                                                                    Remove Size
-                                                                </button>
-                                                            </div>
-
-                                                        </div>
-                                                    );
-                                                })}
-                                            <div className="l2">
-                                                <button id='add-size' type="button" onClick={() => {
-                                                    const updatedSizes = [...cigarLocalData.Sizes];
-                                                    updatedSizes.push({ ...sizeFields });
-                                                    setCigarLocalData({ ...cigarLocalData, Sizes: updatedSizes });
-                                                }}>
-                                                    Add Size
-                                                </button>
-                                            </div>
-                                        </div >
-                                                    </>
-                                    )
-
-                        })
-                        }
-                        <div className='slug-container'>
-                            <h2>Slug</h2>
-                            <p>
-                                A slug is a unique identifier for cigars on the website.
-                                It is generated based on the cigar's name and brand.<br></br>
-                                In order for a cigar to have its own address, the slug must be unique.
-                            </p>
-                            <label>Current Slug:</label>
-                            <b style={{
-                                color: isSlugUnique(cigarLocalData) ? 'green' : 'red'
-                            }}>{generateSlug(cigarLocalData)}</b>
-                            {
-                                !isSlugUnique(cigarLocalData) &&
-                                <p style={{
-                                    color: 'red'
-                                }}>Slug already exists. Please choose a different name.</p>
-                            }
-                            {
-                                isSlugUnique(cigarLocalData) &&
-                                <>
-                                    <p style={{
-                                        color: 'green'
-                                    }}>Slug is unique.</p>
-                                    <label>Once committed, this cigar's URL will be:</label>
-                                    <b>{`www.kingstreetemporium.com/cigars/${generateSlug(cigarLocalData)}`}</b>
-                                </>
-                            }
-                        </div>
-                        <div className='tools'>
-
-                            <button id='submit'
-                                onClick={
-                                    (e) => {
-                                        saveChanges();
-                                        router.push(`/cigars/${props.cigar.slug}/`);
-                                    }
-                                }
-                            >Submit</button>
-                            <button id='revert'
-                                onClick={(e) => {
-                                    let numChanges = 0;
-                                    Object.keys(cigarLocalData).forEach((key) => {
-                                        if (cigarLocalData[key] !== props.cigar[key] && key !== "slug") {
-                                            numChanges += 1;
-                                        }
-                                    });
-                                    if (confirm(`Are you sure you want to revert ${numChanges} field(s) to original?`)) {
-                                        revertToOriginal();
-                                    }
-                                }}>Revert All</button>
-                        </div>
-                    </div>
-                </section> */}
-            </Layout>
-            <style jsx>
-                {`
-.l2 {
-    margin: 1em;
-}
-
-div#sizes {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1em;
-}
-
-.sizeBlock {
-    background-color: var(--dl-color-theme-primary2);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.sizeBlock h3 {
-    font-weight: bold;
-    font-size: 1.2em;
-    background-color: var(--dl-color-theme-secondary2);
-    padding: 10px;
-    font-family: Inter;
-    color: var(--dl-color-theme-primary2);
-
-}
-
-button#remove-size {
-    background-color: var(--dl-color-theme-secondary2);
-    color: var(--dl-color-theme-primary1);
-    cursor: pointer;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    border: none;
-    font-weight: bold;
-}
-
-button#remove-size:hover {
-    color: var(--dl-color-theme-primary2);
-}
-
-button#add-size {
-    background-color: var(--dl-color-theme-secondary2);
-    color: var(--dl-color-theme-primary1);
-    cursor: pointer;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-div.size-tools {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 10px;
-    border-top: 3px solid var(--dl-color-theme-secondary2);
-}
-
-div.slug-container b {
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 1.2em;
-    background-color: var(--dl-color-theme-primary2);
-    width: fit-content;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-div.slug-container p {
-    line-height: 2em;
-    border-left: 3px solid var(--dl-color-theme-secondary2);
-    padding-left: 10px;
-}
-
-div.slug-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    padding: 10px;
-}
-
-div.tools {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5em;
-    padding: 10px;
-    border-top: 3px solid var(--dl-color-theme-secondary2);
-}
-
-div.tools button {
-    background-color: var(--dl-color-theme-secondary2);
-    color: var(--dl-color-theme-primary1);
-    cursor: pointer;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-div.tools button:hover {
-    color: var(--dl-color-theme-primary2);
-}
-
-section {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-
-
-.inputField {
-    margin: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-}
-
-.inputField label {
-    font-weight: bold;
-    font-size: 1.2em;
-    padding-top: 0.2em;
-    width: 100%;
-    border-top: 3px solid var(--dl-color-theme-secondary2);
-
-}
-
-.inputField input {
-    padding: 0.5em;
-    width: 100%;
-    grid-column: 1 / -1;
-    grid-row: 2;
-    border-bottom: 3px solid var(--dl-color-theme-primary1);
-}
-
-
-
-.inputField input:focus {
-    outline: none
-}
-
-.inputField > div:focus-within {
-    outline: 3px solid var(--dl-color-theme-secondary2);
-}
-
-.inputField > div {
-    border-radius: 5px;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: auto 1fr;
-}
-.inputField > div button {
-    background-color: var(--dl-color-theme-secondary2);
-    color: var(--dl-color-theme-primary1);
-    cursor: pointer;
-    grid-row: 1;
-}
-.inputField > div strike {
-    width: 100%;
-    padding: 0.5em;
-    background-color: var(--dl-color-theme-primary2);
-    border-bottom: 3px solid var(--dl-color-theme-secondary2);
-}
-
-
-
-
-
-.inputField:not(.changed) > div button, 
-.inputField:not(.changed) > div strike {
-    display: none;
-}
-
-
-
-
-
-
-
-
-
-#Cigar_Brand {
-    margin: 1em;
-}
-                `}
-            </style>
-        </>
-    )
-}
-
-export default EditCigarPage
+    const targetSlug = values.slug || cigar.slug;
+    router.push("/cigars/" + targetSlug);
+  };
+
+  return (
+    <Layout>
+      <SchemaForm
+        key={cigar.slug}
+        uiSchema={uiSchema}
+        initialValues={draft}
+        suggestions={suggestions}
+        onSubmit={handleSubmit}
+      >
+        <SlugPreview
+          generateSlug={generateSlug}
+          isSlugUnique={isSlugUnique}
+          fallbackSlug={cigar.slug}
+          baseRoute="www.kingstreetemporium.com/cigars"
+        />
+        <FormButtons onClickRevert={() => setDraft({ ...defaults, ...cigar})}/>
+      </SchemaForm>
+    </Layout>
+  );
+};
+
+export default EditCigarPage;

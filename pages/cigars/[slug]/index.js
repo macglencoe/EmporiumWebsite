@@ -1,26 +1,13 @@
 import React, { Fragment, useState, useEffect, use } from 'react'
 import { useRouter } from 'next/router';
-import Data from '../../../public/data/consolidated_cigars.json';
-import cigarSizes from '../../../public/data/cigarsizes.json';
 
 import Head from 'next/head'
-
-import Footer32 from '../../../components/footer32'
-import Contact from '../../../components/contact'
-import Directory from '../../../components/directory';
-import Ksman from '../../../components/ksman'
-import Link from 'next/link';
 import Layout from '../../../components/layout';
-import PageTitle1 from '../../../components/pagetitle1';
-import ProductPage, { InteractionPanel, Navigation, PodcastLink, ShareButton, StringBubbleList } from '../../../components/productPage';
-import { ProductImage, ProductSideContent } from '../../../components/productPage';
-import { ProductSizeChart, ProductBasicInfo } from '../../../components/productPage';
-import { ProductMainContent, ProductTitle } from '../../../components/productPage';
-import { ProductInfoFields, ProductCallOrVisitButtons } from '../../../components/productPage';
-import { Disclaimer } from '../../../components/productPage';
 import setLocalData from '../../../utils/setLocalData';
 import Toolbar from '../../../components/toolbar';
 import { PiArrowUUpLeft, PiArrowUUpLeftBold, PiPencilSimpleBold, PiTrashSimpleBold } from 'react-icons/pi';
+import { SchemaProductPage } from '../../../components/schemaProductPage';
+import uiSchema from '../../../public/data/cigar.ui.schema.json'
 
 export const getStaticPaths = async () => {
   const cigars = await import('../../../public/data/consolidated_cigars.json');
@@ -80,6 +67,30 @@ const CigarPage = (props) => {
   }, []);
   console.log(cigarLocalData);
 
+  const restoreCigar = () => {
+          const localTempData = JSON.parse(localStorage.getItem('tempData_cigars'));
+          localStorage.setItem('tempData_cigars',JSON.stringify(
+              [...localTempData, cigarOriginData],
+              null, 4
+          ));
+          window.location.reload();
+      }
+  
+      if (!cigarLocalData) {
+          if (cigarOriginData) return (
+              <Layout>
+                  <p>This cigar has been deleted:</p>
+                  <pre>{JSON.stringify(cigarOriginData, null, 4)}</pre>
+                  <button onClick={restoreCigar}>Restore?</button>
+              </Layout>
+          )
+          return (
+              <Layout>
+                  <p>This cigar was empty for an unidentifiable reason.<br/>It is recommended to reset data to fix this</p>
+              </Layout>
+          )
+      }
+
   return (
     <>
       <Head>
@@ -102,59 +113,30 @@ const CigarPage = (props) => {
             }
           ]}
         />
-        <PageTitle1
-          subtitle={cigarLocalData ? cigarLocalData['Cigar Name'] : "Data not found"}
-          next={props.next}
-          prev={props.prev}
-          href="/cigars"
-          nameField="Cigar Name"
-        >Cigar Information</PageTitle1>
-        <ProductPage
-          description={cigarLocalData.description}
-        >
-          <ProductSideContent>
-            <ProductImage
-              src={cigarLocalData.image}
-              fallbackSearch={encodeURIComponent(cigarOriginData['Cigar Brand'] + ' ' + cigarOriginData['Cigar Name'])}
-            />
-            <ProductSizeChart
-              sizes={cigarLocalData.Sizes}
-              allCigarSizes={cigarSizes}
-            />
-            {cigarOriginData['Flavor_Profile'] && <StringBubbleList title="Flavor"
-              data={cigarOriginData['Flavor_Profile'].split(', ')}
-            >
-
-            </StringBubbleList>
+        <SchemaProductPage
+          uiSchema={uiSchema}
+          data={cigarLocalData}
+          originalData={cigarOriginData}
+          sections={[
+            {
+              id: "metadata",
+              label: "METADATA",
+              filter: (n, f) => sectionOf(f) === "metadata" || sectionOf(f) === "image"
+            },
+            {
+              id: "sizes",
+              label: "SIZES / PRICES",
+              filter: (n, f) => sectionOf(f) === "sizes"
             }
-          </ProductSideContent>
-          <ProductMainContent>
-            <ProductInfoFields
-              fields={[
-                { name: "Brand", value: cigarLocalData['Cigar Brand'], markout: cigarOriginData['Cigar Brand'] },
-                { name: "Wrapper", value: cigarLocalData['Wrapper'], markout: cigarOriginData['Wrapper'] },
-                { name: "Binder", value: cigarLocalData['Binder'], markout: cigarOriginData['Binder'] },
-                { name: "Filler", value: cigarLocalData['Filler'], markout: cigarOriginData['Filler'] },
-                { name: "Strength", value: cigarLocalData['Strength_Profile'], markout: cigarOriginData['Strength_Profile'] },
-              ]}
-            />
-            <InteractionPanel
-                image={cigarLocalData.image}
-                title={cigarLocalData['Cigar Name']}
-                description={"Check out this cigar from King Street Emporium!"}
-            />
-
-          </ProductMainContent>
-        </ProductPage>
-        { cigarLocalData['Podcast_Link'] &&
-          <PodcastLink url={cigarLocalData['Podcast_Link']}></PodcastLink>
-        }
-        <Disclaimer />
+          ]}
+        />
       </Layout>
 
     </>
   );
 };
+
+const sectionOf = (field) => (field?.ui?.section || "")
 
 export default CigarPage;
 

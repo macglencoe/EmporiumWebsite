@@ -4,7 +4,7 @@ export default async function handler(req, res) {
         return res.status(405).json({ message: "Only GET requests are allowed." });
     }
 
-    const { per_page = 5, page = 1, branch = "main", path } = req.query;
+    const { per_page = 5, page = 1, branch = process.env.NEXT_PUBLIC_BASE_BRANCH || "main", path } = req.query;
 
     const owner = 'macglencoe';
     const repo = 'EmporiumWebsite';

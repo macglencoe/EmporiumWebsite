@@ -1,6 +1,9 @@
 import Layout from '../../components/layout';
 import Catalog from '../../components/catalog';
 import Head from 'next/head';
+import uiSchema from '../../public/data/tobacco.ui.schema.json'
+import { useEffect, useState } from 'react';
+import mergeData from '../../utils/mergeData';
 
 export const getStaticProps = async () => {
     const data = await import('../../public/data/tobacco.json');
@@ -12,6 +15,23 @@ export const getStaticProps = async () => {
 }
 
 const TobaccoCatalog = (props) => {
+
+    const [tempData, setTempData] = useState([]);
+    const [originData, setOriginData] = useState([]);
+    const [mergedData, setMergedData] = useState([])
+
+    useEffect(() => {
+        if (window !== undefined) {
+            setTempData(JSON.parse(localStorage.getItem('tempData_tobacco')));
+            setOriginData(JSON.parse(localStorage.getItem('originData_tobacco')));
+        }
+    }, [])
+
+    useEffect(() => {
+        if (tempData?.length > 0 && originData?.length > 0) {
+            setMergedData(mergeData(tempData, originData));
+        }
+    }, [tempData, originData])
 
     const uniqueBrands = [...new Set(props.data
         .map(item => item['Tobacco Brand'])
@@ -40,6 +60,9 @@ const TobaccoCatalog = (props) => {
         </Head>
             <Catalog
                 data={props.data}
+                
+                mergedData={mergedData}
+                uiSchema={uiSchema}
 
                 title="Tobacco"
 

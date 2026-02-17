@@ -1,0 +1,112 @@
+{
+    "entityLabel": "Tobacco",
+    "slugBasePath": "/tobacco",
+    "type": "object",
+    "properties": {
+        "Tobacco Name": {
+            "type": "string",
+            "default": "",
+            "validation": {
+                "required": true,
+                "minLength": 2
+            },
+            "ui": {
+                "label": "Name",
+                "autosuggest": false,
+                "placeholder": "Enter tobacco name",
+                "input": "text",
+                "description": "e.g., Greg's Mix",
+                "section": "metadata",
+                "isTitle": true,
+                "showInCatalog": true
+            }
+        },
+        "Tobacco Brand": {
+            "type": "string",
+            "default": "",
+            "validation": {
+                "required": true,
+                "minLength": 2
+            },
+            "ui": {
+                "label": "Brand",
+                "autosuggest": true,
+                "placeholder": "Enter tobacco brand",
+                "input": "text",
+                "description": "e.g., Cornell & Diehl",
+                "section": "metadata",
+                "showInCatalog": true
+            }
+        },
+        "Family": {
+            "type": ["string", "null"],
+            "default": null,
+            "ui": {
+                "label": "Family",
+                "autosuggest": true,
+                "placeholder": "Enter tobacco family",
+                "input": "text",
+                "description": "e.g., American Aromatic",
+                "section": "metadata",
+                "showInCatalog": true
+            }
+        },
+        "description": {
+            "type": ["string", "null"],
+            "default": null,
+            "validation": {
+                "required": false,
+                "maxLength": 2000
+            },
+            "ui": {
+                "label": "Description",
+                "input": "textarea",
+                "rows": 4,
+                "description": "This will be displayed at the top of the product's page",
+                "section": "metadata"
+            }
+        },
+        "Sale Form": {
+            "type": ["string", "null"],
+            "enum": ["Bulk", "Tin"],
+            "default": null,
+            "ui": {
+                "label": "Sale Form",
+                "input": "select",
+                "description": "How is this tobacco sold?",
+                "section": "metadata",
+                "showInCatalog": true
+            }
+        },
+        "Components": {
+            "type": "array",
+            "default": [],
+            "items": {
+                "type": "string",
+                "default": "",
+                "ui": {
+                    "label": "Component",
+                    "placeholder": "Enter Component",
+                    "input": "text",
+                    "description": "e.g. Burley/Black Cavendish/Virginia",
+                    "section": "components"
+                }
+            },
+            "ui": {
+                "section": "components",
+                "label": "Components",
+                "showInCatalog": true
+            }
+        },
+        "image": {
+            "type": ["string", "null"],
+            "default": null,
+            "ui": {
+                "label": "Image",
+                "input": "image",
+                "description": "Upload a product image for this tobacco.",
+                "section": "image"
+            }
+        }
+    }
+}
