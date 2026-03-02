@@ -4553,13 +4553,20 @@
     "slug": "esteban-carrera-the-devils-hand"
   },
   {
-    "Cigar Brand": "Esteban Carrera",
     "Cigar Name": "10 Anos",
+    "Cigar Brand": "Esteban Carrera",
     "Wrapper": "San Andres",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Cocoa",
     "Strength_Profile": "Medium-Full",
+    "description": "Built to celebrate a decade in the game, the 10 Años is everything Esteban Carreras does well. Bold, smooth, and no wasted motion. It’s wrapped in a dark Mexican San Andrés leaf over Nicaraguan binder and filler, delivering a medium to full-bodied profile that leans hard into coffee and cocoa. Think rich, steady flavor without the usual flash. No fancy box needed, just a cigar that proves ten years wasn’t wasted.",
+    "Date Added": "2023-06-02",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -4568,8 +4575,8 @@
         "Price": "12.30"
       }
     ],
-    "slug": "esteban-carrera-10-anos",
-    "description": "Built to celebrate a decade in the game, the 10 Años is everything Esteban Carreras does well. Bold, smooth, and no wasted motion. It’s wrapped in a dark Mexican San Andrés leaf over Nicaraguan binder and filler, delivering a medium to full-bodied profile that leans hard into coffee and cocoa. Think rich, steady flavor without the usual flash. No fancy box needed, just a cigar that proves ten years wasn’t wasted."
+    "image": null,
+    "slug": "esteban-carrera-10-anos"
   },
   {
     "Cigar Brand": "FLVR",
