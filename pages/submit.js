@@ -233,7 +233,7 @@ export const SubmitPage = (props) => {
             pushResponseConsole(
                 'standby',
                 "Waiting...",
-                ok = true
+                true
             );
 
             // fire PUT
@@ -261,18 +261,16 @@ export const SubmitPage = (props) => {
                 response.status,
                 response.statusText,
                 response.ok,
-                ...(response.ok
-                    ? { message: payload.message, commitData: payload.result}
-                    : { error: payload.error }
-                )
+                response.ok ? payload.message : payload.error,
+                { payload }
             );
         }
         catch (err) {
             console.error(err);
             pushResponseConsole(
-                response.status || 500,
-                response.statusText || 'error',
-                ok = false,
+                500,
+                'error',
+                false,
                 err.message
             )
         }
@@ -296,7 +294,7 @@ export const SubmitPage = (props) => {
                 pushResponseConsole(
                     500,
                     "Internal Server Error",
-                    ok = false,
+                    false,
                     "Missing environment configuration. Please contact the developer"
                 );
                 return
@@ -307,7 +305,7 @@ export const SubmitPage = (props) => {
                 pushResponseConsole(
                     400,
                     "Bad Request",
-                    ok = false,
+                    false,
                     "Cannot commit when local base is not up-to-date"
                 );
                 return
@@ -316,7 +314,7 @@ export const SubmitPage = (props) => {
                 pushResponseConsole(
                     503,
                     "Service Unavailable",
-                    ok = false,
+                    false,
                     "Cannot commit while still in the process of deploying changes"
                 );
                 return
@@ -324,9 +322,9 @@ export const SubmitPage = (props) => {
             if (cigarDiff.length === 0 && tobaccoDiff.length === 0) {
                 pushResponseConsole(
                     400,
-                    statusText = "Bad Request",
-                    ok = false,
-                    message = "No changes detected"
+                    "Bad Request",
+                    false,
+                    "No changes detected"
                 );
                 return
             }
@@ -387,16 +385,17 @@ export const SubmitPage = (props) => {
         }
     }
 
-    const pushResponseConsole = (status, statusText, ok, message) => {
+    const pushResponseConsole = (status, statusText, ok, message, extra = {}) => {
         if (!status || !statusText) {
             throw new Error("Status and statusText are required for console entries");
         }
-        setResponseConsole([...responseConsole, {
+        setResponseConsole((current) => [...current, {
             time: new Date().toLocaleString(),
             status,
             statusText,
             ok,
-            message
+            message,
+            ...extra
         }]);
         return;
     }
