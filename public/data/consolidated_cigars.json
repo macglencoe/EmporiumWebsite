@@ -590,13 +590,20 @@
     "slug": "aj-fernandez-new-world-cameroon"
   },
   {
-    "Cigar Brand": "AJ Fernandez",
     "Cigar Name": "New World Connecticut",
+    "Cigar Brand": "AJ Fernandez",
     "Wrapper": "Connecticut Shade",
     "Binder": "Mexican, San Andres",
     "Filler": "Brazilian, Nicaraguan",
     "Flavor_Profile": "Cream, Light Spice, Cedar",
     "Strength_Profile": "Mild-Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -606,9 +613,9 @@
       },
       {
         "Size": "Toro",
-        "Barcode": "851350001960",
+        "Barcode": "810194081736",
         "In_Stock": true,
-        "Price": "9.10"
+        "Price": "9.70"
       },
       {
         "Size": "Perfecto",
@@ -617,6 +624,7 @@
         "Price": "8.80"
       }
     ],
+    "image": null,
     "slug": "aj-fernandez-new-world-connecticut"
   },
   {
@@ -675,29 +683,36 @@
     "description": "AJ Fernandez New World Oscuro is one of the blends that put AJ on the map as a modern powerhouse in cigar making. Developed with his father, Ismael Fernandez, this cigar was created to honor the history of tobacco in the Americas and became an instant hit when it launched. The red box has become a familiar sight in humidors, known for offering serious value without cutting corners on craftsmanship.\nThe blend is built around all Nicaraguan tobaccos, including a dark oscuro wrapper that gives the cigar its signature richness and depth. New World Oscuro is known for dependable construction and a bold profile that helped solidify AJ’s reputation for producing high quality Nicaraguan cigars at accessible prices. It remains one of the core lines that introduced many smokers to his style of blending."
   },
   {
-    "Cigar Brand": "AJ Fernandez",
     "Cigar Name": "Puro Especial",
+    "Cigar Brand": "AJ Fernandez",
     "Wrapper": "Nicaraguan Habano",
     "Binder": "Habano, Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Nuts, Sweet",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/0WBuwDKz5N5H4NhmImJJNR?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": "7429457091073",
+        "Barcode": "810194081132",
         "In_Stock": true,
         "Price": "10.00"
       },
       {
         "Size": "Toro",
-        "Barcode": "7429457091080",
+        "Barcode": "810194081118",
         "In_Stock": true,
         "Price": "10.60"
       },
       {
         "Size": "Gordo",
-        "Barcode": "7429457291299",
+        "Barcode": "810194081057",
         "In_Stock": true,
         "Price": "11.15"
       },
@@ -708,8 +723,8 @@
         "Price": "9.45"
       }
     ],
-    "slug": "aj-fernandez-puro-especial",
-    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/0WBuwDKz5N5H4NhmImJJNR?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+    "image": null,
+    "slug": "aj-fernandez-puro-especial"
   },
   {
     "Cigar Brand": "AJ Fernandez",
@@ -754,13 +769,20 @@
     "slug": "aj-fernandez-san-lotano-bull"
   },
   {
-    "Cigar Brand": "AJ Fernandez",
     "Cigar Name": "San Lotano Requim",
+    "Cigar Brand": "AJ Fernandez",
     "Wrapper": "Nicaraguan Habano",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Wood, Leather, Spice",
     "Strength_Profile": "Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -772,9 +794,10 @@
         "Size": "Toro",
         "Barcode": "851350003889",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "10.10"
       }
     ],
+    "image": null,
     "slug": "aj-fernandez-san-lotano-requim"
   },
   {
@@ -802,17 +825,24 @@
     "slug": "aj-fernandez-san-lotano-requim-connecticut"
   },
   {
-    "Cigar Brand": "AJ Fernandez",
     "Cigar Name": "San Lotano Requim Maduro",
+    "Cigar Brand": "AJ Fernandez",
     "Wrapper": "San Andres Maduro",
     "Binder": "Honduran Broadleaf",
     "Filler": "Honduran, Nicaraguan",
     "Flavor_Profile": "Chocolate, Slightly sweet, Creamy",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": "851350003988",
+        "Barcode": "810194080791",
         "In_Stock": true,
         "Price": "9.50"
       },
@@ -823,6 +853,7 @@
         "Price": "10.00"
       }
     ],
+    "image": null,
     "slug": "aj-fernandez-san-lotano-requim-maduro"
   },
   {
@@ -1344,23 +1375,30 @@
     "description": "Wrapped in an Ecuadorian Sun Grown leaf over Dominican binder and filler, this cigar delivers a medium-bodied profile with notes of cedar, leather, and a hint of spice. The wrapper adds a touch of natural sweetness, enhancing the overall balance. Consistent construction and a smooth draw make it a reliable choice for those seeking a flavorful yet approachable smoke."
   },
   {
-    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Chateau Royal Salute Maduro",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Connecticut Broadleaf Maduro",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Toast, Cocoa, Coffee bean",
     "Strength_Profile": "Medium",
+    "description": "The Royal Salute Maduro comes wrapped in dark Connecticut Broadleaf over Dominican binder and filler, offering a medium-bodied profile with notes of cocoa, espresso, and a hint of spice. Bold in size but easy in character, it’s a natural fit for those who prefer a longer smoke without the intensity to match.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro Grande",
         "Barcode": "843182102328",
         "In_Stock": true,
-        "Price": "11.10"
+        "Price": "12.30"
       }
     ],
-    "slug": "arturo-fuente-chateau-royal-salute-maduro",
-    "description": "The Royal Salute Maduro comes wrapped in dark Connecticut Broadleaf over Dominican binder and filler, offering a medium-bodied profile with notes of cocoa, espresso, and a hint of spice. Bold in size but easy in character, it’s a natural fit for those who prefer a longer smoke without the intensity to match."
+    "image": null,
+    "slug": "arturo-fuente-chateau-royal-salute-maduro"
   },
   {
     "Cigar Brand": "Arturo Fuente",
@@ -2238,21 +2276,29 @@
     "slug": "ashton-ashton-maduro-no-10"
   },
   {
-    "Cigar Brand": "Ashton",
     "Cigar Name": "Cabinet",
+    "Cigar Brand": "Ashton",
     "Wrapper": "Connecticut Shade",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Smooth and creamy",
     "Strength_Profile": "Mild-Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "819577011636",
         "In_Stock": true,
-        "Price": "18.35"
+        "Price": "19.40"
       }
     ],
+    "image": null,
     "slug": "ashton-cabinet"
   },
   {
@@ -2924,13 +2970,20 @@
     "slug": "cao-bx3"
   },
   {
-    "Cigar Brand": "CAO",
     "Cigar Name": "Fasa Noche",
+    "Cigar Brand": "CAO",
     "Wrapper": "Us Broadleaf Maduro",
     "Binder": "Cameroon",
     "Filler": "Dominican, Nicaraguan",
     "Flavor_Profile": "Espresso, Dark Chocolate, Chili Powder",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -2940,13 +2993,13 @@
       },
       {
         "Size": "Gordo",
-        "Barcode": "689674155010",
+        "Barcode": "6896741550102",
         "In_Stock": true,
         "Price": "8.70"
       }
     ],
-    "slug": "cao-fasa-noche",
-    "hidden": false
+    "image": null,
+    "slug": "cao-fasa-noche"
   },
   {
     "Cigar Brand": "CAO",
@@ -4680,13 +4733,20 @@
     "slug": "forged-chillin-moose"
   },
   {
-    "Cigar Brand": "Room 101",
     "Cigar Name": "Johnny Tobacconaut",
+    "Cigar Brand": "Room 101",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Mexican",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Butter, Cinnamon, pepper",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/443R2O6H9UhWDIbjDxGXJv?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -4698,11 +4758,11 @@
         "Size": "Robusto",
         "Barcode": "689674151111",
         "In_Stock": true,
-        "Price": "10.25"
+        "Price": "10.50"
       }
     ],
-    "slug": "forged-johnny-tobacconaut",
-    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/443R2O6H9UhWDIbjDxGXJv?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+    "image": null,
+    "slug": "room-101-johnny-tobacconaut"
   },
   {
     "Cigar Brand": "Forged",
@@ -5058,21 +5118,29 @@
     "slug": "h-upmann-1844-vintage-cameroon"
   },
   {
-    "Cigar Brand": "Hoyo De Monterrey",
     "Cigar Name": "Excalibur Claro No. 1",
+    "Cigar Brand": "Hoyo De Monterrey",
     "Wrapper": "Connecticut Shade",
     "Binder": "Connecticut Broadleaf",
     "Filler": "Dominican, Nicaraguan, Honduran",
     "Flavor_Profile": "Fresh toast, Mild coffee, Oak, Creamy head",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Churchill",
         "Barcode": "689674028604",
         "In_Stock": true,
-        "Price": "9.30"
+        "Price": "12.40"
       }
     ],
+    "image": null,
     "slug": "hoyo-de-monterrey-excalibur-claro-no-1"
   },
   {
@@ -5264,22 +5332,30 @@
     "slug": "j-c-newman-brickhouse-maduro"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Brickhouse Maduro Mighty Mighty",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Brazilian Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Spicy, Rich hints of sweetness",
     "Strength_Profile": "Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Gordo",
         "Barcode": "076622025455",
         "In_Stock": true,
-        "Price": "10.50"
+        "Price": "11.30"
       }
     ],
-    "slug": "j-c-newman-brickhouse-maduro-mighty-mighty"
+    "image": null,
+    "slug": "jc-newman-brickhouse-maduro-mighty-mighty"
   },
   {
     "Cigar Brand": "J.C. Newman",
@@ -5733,22 +5809,30 @@
     "slug": "j-c-newman-house-handmade-maduro-6x54"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "House Handmade Maduro 6x60",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Brazilian Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Salt & Pepper, Florals, Caramel",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "76622026551",
         "In_Stock": true,
-        "Price": "5.90"
+        "Price": "6.65"
       }
     ],
-    "slug": "j-c-newman-house-handmade-maduro-6x60"
+    "image": null,
+    "slug": "jc-newman-house-handmade-maduro-6x60"
   },
   {
     "Cigar Brand": "J.C. Newman",
@@ -5835,22 +5919,30 @@
     "slug": "j-c-newman-julius-caesar"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "La Unica #600 Connecticut",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Connecticut Shade",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Nuts, Cream, Fruit",
     "Strength_Profile": "Mild",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "76622160378",
         "In_Stock": true,
-        "Price": "9.60"
+        "Price": "9.95"
       }
     ],
-    "slug": "j-c-newman-la-unica-600-connecticut"
+    "image": null,
+    "slug": "jc-newman-la-unica-600-connecticut"
   },
   {
     "Cigar Brand": "J.C. Newman",
@@ -6633,21 +6725,29 @@
     "Podcast_Link": "https://open.spotify.com/episode/1qqfx0OPG3qQr0zPPE7xVb?si=rvtcGJTDQFK1nLReZuvz1A"
   },
   {
-    "Cigar Brand": "La Flor Dominicana",
     "Cigar Name": "DL 700 Maduro",
+    "Cigar Brand": "La Flor Dominicana",
     "Wrapper": "Habano Maduro",
     "Binder": "Dominican Ligero",
     "Filler": "Dominican Ligero",
     "Flavor_Profile": "Pepper, Earth, Leather, Complex, and Full Bodied",
     "Strength_Profile": "Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Gordo",
         "Barcode": "7460644702396",
         "In_Stock": true,
-        "Price": "11.90"
+        "Price": "12.50"
       }
     ],
+    "image": null,
     "slug": "la-flor-dominicana-dl-700-maduro"
   },
   {
@@ -6944,21 +7044,29 @@
     "slug": "macanudo-cafe"
   },
   {
-    "Cigar Brand": "Macanudo",
     "Cigar Name": "Espresso and Cream",
+    "Cigar Brand": "Macanudo",
     "Wrapper": "Indonesian",
     "Binder": "Philippine",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Cedar, Earth, Spice",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "689674127727",
         "In_Stock": true,
-        "Price": "10.50"
+        "Price": "10.75"
       }
     ],
+    "image": null,
     "slug": "macanudo-espresso-and-cream"
   },
   {
@@ -7770,20 +7878,29 @@
     "slug": "padron-3000-maduro"
   },
   {
-    "Cigar Brand": "Padron",
     "Cigar Name": "3000 Natural",
+    "Cigar Brand": "Padron",
     "Wrapper": "Nicaraguan",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Smooth and creamy.",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
+        "Barcode": null,
         "In_Stock": true,
-        "Price": "9.30"
+        "Price": "10.30"
       }
     ],
+    "image": null,
     "slug": "padron-3000-natural"
   },
   {
@@ -8503,21 +8620,29 @@
     "slug": "rock-a-feller-vintage-maduro"
   },
   {
-    "Cigar Brand": "Rocky Patel",
     "Cigar Name": "10 Year Sumatran",
+    "Cigar Brand": "Rocky Patel",
     "Wrapper": "Ecuadorian Sumatran",
     "Binder": "Dominican",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "",
     "Strength_Profile": "",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "846261000393",
         "In_Stock": true,
-        "Price": "11.50"
+        "Price": "12.50"
       }
     ],
+    "image": null,
     "slug": "rocky-patel-10-year-sumatran"
   },
   {
@@ -8677,21 +8802,29 @@
     "slug": "romeo-y-julieta-reserva-real-red-box"
   },
   {
-    "Cigar Brand": "San Cristobal",
     "Cigar Name": "Elegances Imperial",
+    "Cigar Brand": "San Cristobal",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Oak, Pepper, Earth, Coffee, Cream",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "819577010783",
         "In_Stock": true,
-        "Price": "10.15"
+        "Price": "11.65"
       }
     ],
+    "image": null,
     "slug": "san-cristobal-elegances-imperial"
   },
   {
@@ -9095,24 +9228,36 @@
     "description": "This cigar is more than just a solid smoke, it marks the return of Ernesto Pérez-Carrillo to the brand he helped build. Los Gloriosos brings his signature touch back into the fold with an Ecuadorian Habano wrapper and a Nicaraguan/ Dominican blend underneath. Medium to full-bodied with a steady mix of earth, espresso, and a little pepper, it’s balanced and bold.  A welcome return, and one that earns its place in any humidor."
   },
   {
-    "Cigar Brand": "El Rey Del Mundo",
     "Cigar Name": "Appointment",
+    "Cigar Brand": "El Rey Del Mundo",
     "Wrapper": "Honduran Cameroon Seed",
     "Binder": "Connecticut Broadleaf",
     "Filler": "Ecuadorian, Nicaraguan",
     "Flavor_Profile": "Pepper, Cream, Sweet Herbs",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": "2025-04-17",
+    "hidden": false,
+    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/4EAp2iq53hOdjWHbTb6Dnm?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "689674162209",
-        "Price": "10.00",
-        "In_Stock": true
+        "In_Stock": true,
+        "Price": "10.00"
+      },
+      {
+        "Size": "Robusto ",
+        "Barcode": "689674162179",
+        "In_Stock": true,
+        "Price": "9.50"
       }
     ],
-    "slug": "el-rey-del-mundo-appointment",
-    "Date Added": "2025-04-17",
-    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/4EAp2iq53hOdjWHbTb6Dnm?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+    "image": null,
+    "slug": "el-rey-del-mundo-appointment"
   },
   {
     "Cigar Brand": "Casa Cuba",
@@ -9295,23 +9440,36 @@
     "Date Added": "2025-04-17"
   },
   {
-    "Cigar Brand": "E.P. Carrillo",
     "Cigar Name": "Essence Maduro",
+    "Cigar Brand": "E.P. Carrillo",
     "Wrapper": "Mexican San Andres",
     "Binder": "Honduran",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Spice, Cocoa, Sweetness",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": "2025-04-17",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
         "Barcode": "811167022831",
         "In_Stock": true,
-        "Price": "9.80"
+        "Price": "10.05"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "811167022848",
+        "In_Stock": true,
+        "Price": "11.15"
       }
     ],
-    "slug": "ep-carrillo-essence-maduro",
-    "Date Added": "2025-04-17"
+    "image": null,
+    "slug": "ep-carrillo-essence-maduro"
   },
   {
     "Cigar Brand": "Montecristo",
@@ -9333,61 +9491,82 @@
     "Date Added": "2025-04-17"
   },
   {
-    "Cigar Brand": "Macanudo",
     "Cigar Name": "M Vanilla Bourbon",
+    "Cigar Brand": "Macanudo",
     "Wrapper": "Cameroon",
     "Binder": "Honduran",
     "Filler": "Dominican",
     "Flavor_Profile": "Vanilla, Bourbon, Toasted Oak",
     "Strength_Profile": "Mild-Medium",
+    "description": null,
+    "Date Added": "2025-04-17",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
         "Barcode": "689674161585",
         "In_Stock": true,
-        "Price": "10.50"
+        "Price": "10.75"
       }
     ],
-    "slug": "macanudo-m-vanilla-bourbon",
-    "Date Added": "2025-04-17"
+    "image": null,
+    "slug": "macanudo-m-vanilla-bourbon"
   },
   {
-    "Cigar Brand": "Macanudo",
     "Cigar Name": "M Coffee",
+    "Cigar Brand": "Macanudo",
     "Wrapper": "Indonesian",
     "Binder": "Philippine",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Cream, Cedar, Spice",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": "2025-04-17",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "689674095941",
         "In_Stock": true,
-        "Price": "10.50"
+        "Price": "10.85"
       }
     ],
-    "slug": "macanudo-m-coffee",
-    "Date Added": "2025-04-17"
+    "image": null,
+    "slug": "macanudo-m-coffee"
   },
   {
-    "Cigar Brand": "Macanudo",
     "Cigar Name": "M Bourbon",
+    "Cigar Brand": "Macanudo",
     "Wrapper": "Ecuadorian Shade",
     "Binder": "Ecuadorian",
     "Filler": "Dominican",
     "Flavor_Profile": "Bourbon, Cherry, Bitters",
     "Strength_Profile": "Mild-Medium",
+    "description": null,
+    "Date Added": "2025-04-17",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
         "Barcode": "689674100713",
         "In_Stock": true,
-        "Price": "10.50"
+        "Price": "10.75"
       }
     ],
-    "slug": "macanudo-m-bourbon",
-    "Date Added": "2025-04-17"
+    "image": null,
+    "slug": "macanudo-m-bourbon"
   },
   {
     "Cigar Brand": "Macanudo",
