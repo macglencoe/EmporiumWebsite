@@ -10046,24 +10046,36 @@
     "Date Added": "2025-08-08"
   },
   {
-    "Cigar Brand": "Cohiba",
     "Cigar Name": "Rubicon",
+    "Cigar Brand": "Cohiba",
     "Wrapper": "Ecuadorian Habana",
     "Binder": "American Broadleaf",
     "Filler": "Dominican Piloto, Honduran La Entrada and Jamastran, Nicaraguan",
     "Flavor_Profile": "Black Pepper, Cedar, Spice",
     "Strength_Profile": "Medium",
+    "description": "The Cohiba Rubicon is a medium-bodied cigar crafted at Honduras’s HATSA factory with an Ecuadorian Habano wrapper, a U.S. binder, and select tobaccos from Honduras, Nicaragua, and the Dominican Republic. Offering rich notes of cocoa, roasted nuts, earthy spice, and natural sweetness, it invites you to cross the Rubicon into the rare territory of a Cohiba priced under ten dollars.",
+    "Date Added": "2025-08-08",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "689674167068",
         "In_Stock": true,
         "Price": "9.75"
+      },
+      {
+        "Size": "Robusto",
+        "Barcode": "689674167037",
+        "In_Stock": true,
+        "Price": "9.20"
       }
     ],
-    "description": "The Cohiba Rubicon is a medium-bodied cigar crafted at Honduras’s HATSA factory with an Ecuadorian Habano wrapper, a U.S. binder, and select tobaccos from Honduras, Nicaragua, and the Dominican Republic. Offering rich notes of cocoa, roasted nuts, earthy spice, and natural sweetness, it invites you to cross the Rubicon into the rare territory of a Cohiba priced under ten dollars.",
-    "slug": "cohiba-rubicon",
-    "Date Added": "2025-08-08"
+    "image": null,
+    "slug": "cohiba-rubicon"
   },
   {
     "Cigar Brand": "Alec Bradley",
