@@ -4259,13 +4259,20 @@
     "description": "El Rey del Mundo is one of the oldest names in premium cigars, tracing its roots back to Cuba in the 1880s and later finding new life in Honduras after the revolution. The modern Honduran production carries forward that legacy, maintaining the brand’s connection to traditional craftsmanship and long-aged tobacco. For decades, El Rey del Mundo has represented the old school style of cigar making, built on patience, consistency, and genuine flavor.\nThe Natural version highlights Honduran and Nicaraguan tobaccos wrapped in a smooth Ecuadorian Sumatra leaf. The result is a cigar that captures the essence of the brand’s classic approach, offering a refined balance of wood, spice, and soft sweetness. El Rey del Mundo Natural remains a favorite among traditionalists who value heritage, honest construction, and the timeless art of slow, careful blending."
   },
   {
-    "Cigar Brand": "El Rey Del Mundo",
     "Cigar Name": "Oscuro",
+    "Cigar Brand": "El Rey Del Mundo",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Honduran",
     "Filler": "Honduran",
     "Flavor_Profile": "Rich spicy flavor",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "RobustoLarga",
@@ -4278,8 +4285,15 @@
         "Barcode": "689674124641",
         "In_Stock": true,
         "Price": "6.00"
+      },
+      {
+        "Size": "Gordo",
+        "Barcode": "689674124733",
+        "In_Stock": true,
+        "Price": "9.10"
       }
     ],
+    "image": null,
     "slug": "el-rey-del-mundo-oscuro"
   },
   {
