@@ -7908,13 +7908,20 @@
     "slug": "partagas-cortado"
   },
   {
-    "Cigar Brand": "Partagas",
     "Cigar Name": "Valle Verde",
+    "Cigar Brand": "Partagas",
     "Wrapper": "San Andres",
     "Binder": "Cameroon",
     "Filler": "Nicaraguan, Mexican",
     "Flavor_Profile": "Earth, Black Pepper, Brown Sugar, Spice",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -7926,7 +7933,7 @@
         "Size": "Toro",
         "Barcode": "689674148876",
         "In_Stock": true,
-        "Price": "9.00"
+        "Price": "11.85"
       },
       {
         "Size": "Churchill",
@@ -7935,6 +7942,7 @@
         "Price": "10.10"
       }
     ],
+    "image": null,
     "slug": "partagas-valle-verde"
   },
   {
