@@ -1,12 +1,19 @@
 [
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "Anniversario Corojo",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Corojo",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Complex and Rich",
     "Strength_Profile": "Medium-Full",
+    "description": "Aganorsa is one of the largest tobacco growers in Central America, farming across three of Nicaragua's primary growing regions: Estelí, Condega, and Jalapa. What separates the brand from most is vertical integration at a level few companies can claim. They grow the tobacco, age it, and roll it themselves, which means every cigar bearing the Aganorsa name is built entirely from leaf they cultivated on their own land. The Aniversario Corojo is the clearest expression of that philosophy. Originally introduced in 2013 under the Casa Fernandez name to celebrate the company's 35th anniversary, it was rebranded as the Aganorsa Leaf Aniversario when the company consolidated under its farm name. The blend is a Nicaraguan puro from start to finish, anchored by a Corojo 99 wrapper grown in the Jalapa Valley and aged five years before rolling. Each cigar is handcrafted by master Cuban rollers at the company's boutique factory in Miami and blended specifically for each size, including a box-pressed Lancero that is one of the more unusual offerings in the line. It is a cigar built on the premise that the farm tells the story better than anything else can.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -15,16 +22,24 @@
         "Price": "17.50"
       }
     ],
+    "image": null,
     "slug": "aganorsa-anniversario-corojo"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "Anniversario Maduro",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Corojo Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Black pepper, earth, wood, sweetness",
     "Strength_Profile": "Full",
+    "description": "In 1997, Eduardo Fernandez moved to Nicaragua with a specific goal: to recreate the character of Cuban tobacco using Cuban seeds, Cuban agronomists, and the fertile growing regions of northern Nicaragua. He built Aganorsa into one of the largest tobacco operations in Central America, farming across Jalapa, Condega, and Estelí and supplying leaf to some of the most respected names in the industry. The Aniversario Maduro is one of the clearest expressions of what that operation produces on its own terms. Originally introduced as a small-batch limited release under the Casa Fernandez name, it moved into regular production after consistently strong demand, which is not a guarantee for anything in the Aniversario series. The blend is a Nicaraguan puro built entirely from Aganorsa-grown leaf, wrapped in the company's proprietary shade-grown Corojo Maduro, a leaf that begins as the same Cuban-seed Corojo grown in Jalapa and is then fermented to a darker, richer character. Each cigar is handcrafted at the company's boutique factory in Miami by master Cuban rollers and rolled in box-pressed sizes specifically blended for each vitola.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -33,6 +48,7 @@
         "Price": "16.45"
       }
     ],
+    "image": null,
     "slug": "aganorsa-anniversario-maduro"
   },
   {
@@ -54,13 +70,20 @@
     "slug": "aganorsa-cerberus"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "JFR Connecticut",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Connecticut Shade",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Sweet cedar, Florals, Buttered crackers, Cream, Honey",
     "Strength_Profile": "Medium",
+    "description": "JFR stands for Just for Retailers, which tells you everything about where the line started. When Aganorsa launched it in 2005, the idea was straightforward: get premium, farm-grown Nicaraguan tobacco into brick and mortar shops at a price that didn't require a special occasion to justify. The brand became one of Aganorsa's best sellers and has held that position for twenty years. The Connecticut is the line's most approachable expression, pairing a silky Ecuadorian Connecticut shade wrapper with Aganorsa's own Nicaraguan binder and long-filler tobaccos grown across Estelí, Condega, and Jalapa. Connecticut cigars built on Aganorsa leaf have a tendency to behave differently than most in the category, carrying more backbone from the Nicaraguan core than the wrapper would suggest. Each cigar is finished with a pigtail cap and a tucked foot, both signatures of the Aganorsa Leaf rolling style. For a Connecticut wrapper smoke made with some of the most sought after Nicaraguan tobacco in the industry, the price point remains one of the better values on any tobacconist's shelf.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -75,16 +98,24 @@
         "Price": "8.75"
       }
     ],
+    "image": null,
     "slug": "aganorsa-jfr-connecticut"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "JFR Connecticut Jr.",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Connecticut Shade",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Sweet cedar, Florals, Buttered crackers, Cream, Honey",
     "Strength_Profile": "Medium",
+    "description": "JFR stands for Just for Retailers, which tells you everything about where the line started. When Aganorsa launched it in 2005, the idea was straightforward: get premium, farm-grown Nicaraguan tobacco into brick and mortar shops at a price that didn't require a special occasion to justify. The brand became one of Aganorsa's best sellers and has held that position for twenty years. The Connecticut is the line's most approachable expression, pairing a silky Ecuadorian Connecticut shade wrapper with Aganorsa's own Nicaraguan binder and long-filler tobaccos grown across Estelí, Condega, and Jalapa. Connecticut cigars built on Aganorsa leaf have a tendency to behave differently than most in the category, carrying more backbone from the Nicaraguan core than the wrapper would suggest. Each cigar is finished with a pigtail cap and a tucked foot, both signatures of the Aganorsa Leaf rolling style. For a Connecticut wrapper smoke made with some of the most sought after Nicaraguan tobacco in the industry, the price point remains one of the better values on any tobacconist's shelf.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -93,16 +124,24 @@
         "Price": "6.60"
       }
     ],
+    "image": null,
     "slug": "aganorsa-jfr-connecticut-jr"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "JFR Corojo",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Nicaraguan Corojo",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Cream, Leather, White pepper, Cedar, Earth",
     "Strength_Profile": "Medium",
+    "description": "The JFR line was built on a simple premise: take tobacco from one of the most respected growing operations in Nicaragua and put it in a cigar that doesn't require a premium price to justify. When Aganorsa launched it in 2005 under the name Just for Retailers, it was initially sold exclusively through brick and mortar shops as a way to give independent tobacconists something worth talking about. The Corojo is the most direct expression of what Aganorsa's farms produce. It is a Nicaraguan puro from the ground up, using a Cuban-seed Corojo 99 wrapper grown on the Fernandez family's own land alongside Nicaraguan binder and long-filler tobaccos cultivated under Cuban agricultural methods by Cuban-trained farmers. Aganorsa's Corojo leaf carries a reputation well beyond the brands that bear the company's own name, showing up in highly regarded cigars from other manufacturers who source from their farms. In the JFR, you get that same tobacco at a fraction of what those cigars typically cost. Each cigar is finished with the line's signature pigtail cap and a closed foot, both hallmarks of the Aganorsa rolling style.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Super Toro",
@@ -111,6 +150,7 @@
         "Price": "9.00"
       }
     ],
+    "image": null,
     "slug": "aganorsa-jfr-corojo"
   },
   {
@@ -132,13 +172,20 @@
     "slug": "aganorsa-jfr-hombre-limbre"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "JFR Junior",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Nicaraguan Corojo",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Spice, Pepper Earth, Coffee, Chocolate, Leather",
     "Strength_Profile": "Medium-Full",
+    "description": "The JFR line was built on a simple premise: take tobacco from one of the most respected growing operations in Nicaragua and put it in a cigar that doesn't require a premium price to justify. When Aganorsa launched it in 2005 under the name Just for Retailers, it was initially sold exclusively through brick and mortar shops as a way to give independent tobacconists something worth talking about. The Corojo is the most direct expression of what Aganorsa's farms produce. It is a Nicaraguan puro from the ground up, using a Cuban-seed Corojo 99 wrapper grown on the Fernandez family's own land alongside Nicaraguan binder and long-filler tobaccos cultivated under Cuban agricultural methods by Cuban-trained farmers. Aganorsa's Corojo leaf carries a reputation well beyond the brands that bear the company's own name, showing up in highly regarded cigars from other manufacturers who source from their farms. In the JFR, you get that same tobacco at a fraction of what those cigars typically cost. Each cigar is finished with the line's signature pigtail cap and a closed foot, both hallmarks of the Aganorsa rolling style.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Corona",
@@ -147,6 +194,7 @@
         "Price": "6.60"
       }
     ],
+    "image": null,
     "slug": "aganorsa-jfr-junior"
   },
   {
@@ -168,13 +216,20 @@
     "slug": "aganorsa-jfr-lunactic-maduro"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "JFR Maduro",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Mexican San Andres",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Earth, Mineral, Cedar, Cocoa, Pepper",
     "Strength_Profile": "Medium-Full",
+    "description": "The JFR Maduro completes the trilogy of wrapper options in the line Aganorsa launched in 2005 as Just for Retailers, and it is arguably where the value proposition of the brand makes the strongest argument for itself. Aganorsa grows their own proprietary maduro leaf on farms they have operated in Nicaragua for nearly three decades, using Cuban-seed tobacco cultivated under the same agricultural practices that defined Cuban growing before the embargo scattered that knowledge across Central America. The result is a maduro that comes from the ground up rather than being achieved through aggressive fermentation of whatever wrapper leaf was available. Underneath it sits the same all-Nicaraguan binder and long-filler tobaccos that run through every JFR, sourced entirely from Aganorsa's own farms across Estelí, Condega, and Jalapa. Like the rest of the line, each cigar is finished at the Tabacalera Tropical factory in Estelí with a tucked foot and pigtail cap, both signatures of the Aganorsa rolling style. A fully Nicaraguan maduro built on farm-grown tobacco from one of the most respected growers in the industry, at a price that makes it a realistic everyday smoke rather than a special occasion one.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Super Toro",
@@ -183,16 +238,24 @@
         "Price": "9.00"
       }
     ],
+    "image": null,
     "slug": "aganorsa-jfr-maduro"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "JFR XT Corojo",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Corojo",
     "Binder": "Nicaraguan",
     "Filler": "Nicaragua",
     "Flavor_Profile": "",
     "Strength_Profile": "Medium-Full",
+    "description": "The JFR XT Corojo is what happens when a brand with a decade of goodwill behind it decides to push further. Casa Fernandez introduced the XT line at the 2014 IPCPR trade show as a deliberate step up from the standard JFR, built with more strength and body as the stated goal and a soft box press to distinguish it on the shelf. The blend is a Nicaraguan puro from start to finish, using an Aganorsa Corojo wrapper grown in the Jalapa Valley alongside Nicaraguan binder and long-filler tobaccos from the same family-owned farms in Jalapa and Estelí that supply some of the most respected names in the industry. The XT sizes run large, topping out at a 7 x 70, which mirrors the scale the JFR Lunatic line made its name on. Each cigar is finished with the line's signature pigtail cap and closed foot and comes in boxes of 24. For a box pressed, farm grown Nicaraguan Corojo puro at the price point JFR consistently delivers, it is a cigar that earns its place in the lineup rather than just filling one.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -201,16 +264,24 @@
         "Price": "9.50"
       }
     ],
+    "image": null,
     "slug": "aganorsa-jfr-xt-corojo"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "JFR XT Maduro",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaragua",
     "Flavor_Profile": "",
     "Strength_Profile": "Medium-Full",
+    "description": "The JFR XT Maduro shares its origins with the XT Corojo, both introduced at the 2014 IPCPR trade show as a box-pressed evolution of the standard JFR line with more strength and body built into the blend. Where the two cigars diverge is the wrapper. Rather than reaching for Aganorsa's own Nicaraguan Corojo leaf, the XT Maduro is finished in a Mexican San Andrés wrapper, grown in the volcanic soils of Veracruz and fermented to a dark, oily character that behaves differently than a maduro leaf produced from the same seed elsewhere. Underneath it sits the same all-Nicaraguan binder and long-filler tobaccos from Aganorsa's farms in Jalapa and Estelí that run through everything in the JFR line, cultivated using Cuban-seed tobacco and Cuban agricultural methods that the Fernandez family brought with them when they built the operation from the ground up. The soft box press, pigtail cap, and closed foot are all consistent with the rest of the XT series. Available in the same oversized ring gauges the JFR brand built its reputation on, and packed in boxes of 24.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -219,6 +290,7 @@
         "Price": "9.50"
       }
     ],
+    "image": null,
     "slug": "aganorsa-jfr-xt-maduro"
   },
   {
@@ -246,13 +318,20 @@
     "slug": "aganorsa-new-cuba-superior"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "Valadacion Corojo",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Corojo",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Leather, Wood, Spice",
     "Strength_Profile": "Medium-Full",
+    "description": "The La Validacion Corojo has been around longer than the Aganorsa Leaf name on the box. It was originally sold under the Casa Fernandez Aganorsa label before the company consolidated its brand identity and retired the Casa Fernandez name entirely. The blend did not change with the rebrand. What changed was the name, and that name carries a meaning worth knowing. \"Validacion\" is Spanish for validation, a term borrowed from Paul Palmer, president of Aganorsa Leaf, who uses it to describe the act of trying and confirming the quality of a cigar rather than simply smoking it. Every cigar in the line goes through a rigorous internal quality control process before release, and the name is a direct reference to that standard. The Corojo is a Nicaraguan puro built entirely from tobacco grown on Aganorsa's own farms, wrapped in a dark, reddish Corojo leaf over a Nicaraguan binder and long filler tobaccos from those same fields. It comes in 15-count boxes and is available in four wrapper variations alongside the Corojo. For a puro carrying that kind of quality control behind it at this price point, it remains one of the more honest propositions in the Aganorsa lineup.\n",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -261,16 +340,24 @@
         "Price": "11.00"
       }
     ],
+    "image": null,
     "slug": "aganorsa-valadacion-corojo"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "Valadacion Maduro",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Oily, Spice, Pepper",
     "Strength_Profile": "Medium-Full",
+    "description": "The La Validacion Maduro shares its origin story with every other cigar in the line. Originally released under the Casa Fernandez Aganorsa label, it carried the same blend through the company's full rebrand to the Aganorsa Leaf name without any changes to the tobacco inside. The name Validacion comes from Paul Palmer, president of Aganorsa Leaf, who used the word to describe the process of genuinely confirming a cigar's quality rather than simply lighting one up. That standard applies to every wrapper variation in the series before it leaves the factory. Where the Maduro distinguishes itself from its Corojo counterpart is the wrapper, which on this cigar is Aganorsa's own proprietary maduro leaf, grown on the company's Nicaraguan farms from Cuban seed tobacco and fermented to a darker character. The binder and long filler tobaccos underneath are all Nicaraguan, all grown on Aganorsa's land across Estelí, Condega, and Jalapa. It comes in 15-count boxes alongside three other wrapper variations in the Validacion series. A fully Nicaraguan maduro puro from one of the largest tobacco growing operations in Central America, at a price that does not ask much of you to find out whether it earns its name.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -279,16 +366,24 @@
         "Price": "12.20"
       }
     ],
+    "image": null,
     "slug": "aganorsa-valadacion-maduro"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "Validacaion Connecticut",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Ecuadorian Connecticut Shade",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Hickory, Notes of almond, Dried fruit",
     "Strength_Profile": "Medium",
+    "description": "The La Validacion Connecticut rounds out the approachable end of the Validacion series, offering the same quality control standard and the same all Nicaraguan core in a wrapper that asks less of the smoker upfront. Like every cigar in the line, it started life under the Casa Fernandez Aganorsa label and carried the identical blend through the company's full transition to the Aganorsa Leaf name. The name itself comes from Paul Palmer, president of Aganorsa Leaf, who used the word validacion to describe the act of genuinely confirming a cigar's quality rather than simply going through the motions of smoking one. The Connecticut swaps the Corojo and Maduro wrappers of its siblings for a silky Ecuadorian Connecticut shade leaf, making it the only cigar in the four wrapper Validacion series that steps outside Nicaragua for its cover leaf. Everything underneath remains consistent with the rest of the line, Nicaraguan binder and long filler tobaccos grown entirely on Aganorsa's own farms across Estelí, Condega, and Jalapa using Cuban seed tobacco and Cuban agricultural methods. It comes in 15-count boxes. For a smoker who wants access to Aganorsa's farm grown Nicaraguan tobacco under a wrapper that eases the entry point, the Connecticut makes that case without apology.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": "https://open.spotify.com/episode/7ceEF3mxMYiW0JtVkHmKAt?si=qD-ZynerSe-KiC3QEpx02g",
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -297,8 +392,8 @@
         "Price": "9.50"
       }
     ],
-    "slug": "aganorsa-validacaion-connecticut",
-    "Podcast_Link": "https://open.spotify.com/episode/7ceEF3mxMYiW0JtVkHmKAt?si=qD-ZynerSe-KiC3QEpx02g"
+    "image": null,
+    "slug": "aganorsa-validacaion-connecticut"
   },
   {
     "Cigar Brand": "Aganorsa",
@@ -5054,13 +5149,20 @@
     "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/6VL46MFWPc83NznP7CMqvb?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
   },
   {
-    "Cigar Brand": "H. Upmann",
     "Cigar Name": "1844 Vintage Cameroon",
+    "Cigar Brand": "H. Upmann",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican, Nicaraguan, Peruvian",
     "Flavor_Profile": "Chestnuts, Cashews, Coffee Beans, Sweet Spices",
     "Strength_Profile": "Medium",
+    "description": "Hermann Upmann was a German banker who moved to Havana in 1844 and began producing cigars, eventually building one of the most respected names in the industry. When the Dominican-made H. Upmann line launched in the 1970s, it carried an African Cameroon wrapper as its signature leaf, and that wrapper became central to how the brand was understood by a generation of smokers. The cigar boom of the mid-1990s changed that. Tobacco shortages forced a switch to an Indonesian wrapper, and while the cigar remained solid, something had been lost. The Vintage Cameroon is the correction. Altadis secured and aged high-grade Cameroon leaf over many years specifically to bring this blend back, pairing it with a Nicaraguan binder and long-filler tobaccos from the Dominican Republic, Nicaragua, and Peru. The inclusion of Peruvian leaf is unusual enough to be worth noting on its own. Made in the Dominican Republic, the Vintage Cameroon earned a 92 rating from Cigar Aficionado and has been one of the more quietly consistent cigars in the H. Upmann portfolio ever since.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -5069,6 +5171,7 @@
         "Price": "10.00"
       }
     ],
+    "image": null,
     "slug": "h-upmann-1844-vintage-cameroon"
   },
   {
@@ -7818,13 +7921,20 @@
     "slug": "padron-7000-natural"
   },
   {
-    "Cigar Brand": "Partagas",
     "Cigar Name": "1845",
+    "Cigar Brand": "Partagas",
     "Wrapper": "Cameroon",
     "Binder": "Mexican",
     "Filler": "Dominican",
     "Flavor_Profile": "Hint of toast, Hint of nuts",
     "Strength_Profile": "Medium",
+    "description": "Partagas was founded in Havana in 1845 by Don Jaime Partagas, but the brand's most consequential chapters were written by Ramón Cifuentes and his son, who built it into the leading Cuban cigar of its era. When Castro nationalized Cuba's tobacco industry in 1961, Cifuentes fled the island. Seventeen years later, after spending years sourcing tobacco and searching for a wrapper leaf worthy of the name, he relaunched Partagas in the Dominican Republic. The wrapper he landed on was African Cameroon, grown along the fourth parallel in Central West Africa where the climate produces a leaf unlike anything grown elsewhere. Cifuentes was specific about it: he would not restart Partagas until he found a wrapper he believed in, and Cameroon was the answer. That same Cameroon leaf, paired with Dominican Piloto Cubano and Mexican San Andrés filler and a Mexican San Andrés binder, is what sits in the yellow box today. It has been on shelves since 1978, earned a 92 rating from Cigar Aficionado, and remains one of the most honest value propositions in the premium cigar market.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -7839,6 +7949,7 @@
         "Price": "12.00"
       }
     ],
+    "image": null,
     "slug": "partagas-1845"
   },
   {
@@ -8615,13 +8726,20 @@
     "slug": "rocky-patel-vintage-connecticut"
   },
   {
-    "Cigar Brand": "Romeo Y Julieta",
     "Cigar Name": "1875 (Gold Box)",
-    "Wrapper": "Connecticut, Nicaraguan",
+    "Cigar Brand": "Romeo Y Julieta",
+    "Wrapper": "Indonesian TBN",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Cedar, Earth",
     "Strength_Profile": "Medium",
+    "description": "Romeo y Julieta was founded in Havana in 1875 by Inocencio Alvarez and Manin Garcia, named after Shakespeare's most enduring love story. The brand quickly became one of Cuba's most celebrated, eventually earning a reputation that stretched well beyond the island. After the Cuban embargo cut American access to the original, Altadis relaunched the brand in the Dominican Republic, where it has been produced ever since at Tabacalera de Garcia, the largest premium cigar factory in the world. The 1875 line is the flagship of that Dominican legacy. It uses an Indonesian shade-grown TBN wrapper over a Dominican binder and a blend of Dominican long-filler tobaccos, producing a consistently medium-bodied cigar that has earned a 92 rating from Cigar Aficionado and holds the distinction of being one of the best-selling premium cigars in the world. The blend was developed by the Grupo de Maestros, the same team of master blenders behind Montecristo and H. Upmann. For a cigar carrying that much history and that many credentials, it remains one of the more approachable and honestly priced smokes on any shelf.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -8636,6 +8754,7 @@
         "Price": "9.45"
       }
     ],
+    "image": null,
     "slug": "romeo-y-julieta-1875-gold-box"
   },
   {
