@@ -7915,7 +7915,7 @@
     "Filler": "Nicaraguan, Mexican",
     "Flavor_Profile": "Earth, Black Pepper, Brown Sugar, Spice",
     "Strength_Profile": "Medium-Full",
-    "description": null,
+    "description": "Partagas is one of the oldest cigar brands in the world, tracing its roots back to 1845 in Havana. For most of that history, the brand built its reputation on Cameroon leaf, which became so closely associated with the Partagas name that it is essentially synonymous with it. The Valle Verde keeps that tradition intact by using a vintage 2015 Cameroon as the binder, but breaks new ground everywhere else. Named for the Green Valley growing region in the state of Veracruz, Mexico, this cigar marks the first time a Partagas has ever been released with a Mexican San Andrés wrapper. The Valle Verde region sits at elevation along the Gulf of Mexico, where a cooler climate and volcanic soil produce a lighter-colored San Andrés leaf that behaves differently than the dark, heavy wrappers the variety is typically known for. The filler rounds out the blend with additional Mexican San Andrés alongside Nicaraguan tobaccos from Jalapa and Estelí, all from the 2020 harvest. Rolled at the HATSA factory in Danlí, Honduras, it is a medium-bodied cigar that earns its place in the Partagas lineup.",
     "Date Added": null,
     "hidden": false,
     "Podcast_Link": null,
@@ -10684,5 +10684,31 @@
     ],
     "image": null,
     "slug": "bolivar-anniversario"
+  },
+  {
+    "Cigar Name": "Black Label",
+    "Cigar Brand": "Partagas",
+    "Wrapper": "Connecticut Broadleaf",
+    "Binder": "Dominican",
+    "Filler": "Dominican, Nicaraguan",
+    "Flavor_Profile": "Rich, Earthy, Nutty",
+    "Strength_Profile": "Full",
+    "description": "Partagas Black Label is the product of a decade of work. Master blender Daniel Nuez and his team spent ten years developing the Medio Tiempo wrapper that defines this cigar, a Cuban-seed leaf harvested only after it has been allowed to age on the stalk roughly fifty percent longer than a standard wrapper leaf. The result is a darker, heavier, and richer leaf that looks like a maduro but is naturally grown to that color without any additional fermentation. Underneath it sits a sun-grown La Vega Especial binder from the Dominican Republic and a filler blend of Nicaraguan Ligero and Dominican Piloto Cubano Ligero, both chosen specifically for the depth and weight they contribute to a blend that was built to be full-bodied from the ground up. Made in the Dominican Republic, the Black Label earned a 90 rating from Cigar Aficionado and was named Best of the Best by Robb Report in 2002. It is the kind of cigar the Partagas name was built on, and it has not changed.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674029137",
+        "In_Stock": true,
+        "Price": "12.90"
+      }
+    ],
+    "image": null,
+    "slug": "partagas-black-label"
   }
 ]
