@@ -10586,5 +10586,69 @@
     "description": "Eiroa The First 20 Years Maduro marks a milestone in Christian Eiroa’s career, celebrating two decades of his work in premium cigar making. The line honors both his family’s long history in Honduras and his personal evolution as a blender. Built entirely from Honduran tobaccos grown on the Eiroa family’s farms, it reflects the pride of a brand that continues to champion authentic Corojo cultivation and the craftsmanship that has defined the Eiroa name for generations.\nThe Maduro version uses a dark, well-fermented Honduran wrapper that deepens the blend’s natural sweetness and adds a layer of richness without overwhelming the palate. Construction is tight, the draw is deliberate, and the flavor progression showcases the complexity of properly aged Corojo leaf. Eiroa The First 20 Years Maduro stands as both a personal statement from its creator and a benchmark for what modern Honduran cigars can achieve when tradition and precision meet.",
     "slug": "eiroa-the-first-20-years",
     "Date Added": "2025-12-04"
+  },
+  {
+    "Cigar Name": "Egg Roll XL",
+    "Cigar Brand": "Punch",
+    "Wrapper": "US Broadleaf",
+    "Binder": "Ecuadorian Sumatran",
+    "Filler": "Columbian, Dominican, Mexican, American",
+    "Flavor_Profile": "Sweetness, Earth, Spice",
+    "Strength_Profile": "Medium-Full",
+    "description": "The Punch Egg Roll XL is the supersized return of a cigar that earned its following the honest way: it was good enough that people kept asking for more. The original Egg Roll debuted in 2019 as part of Punch's ongoing series of food-themed limited releases, a lineage that includes Chop Suey, Kung Pow!, and Spring Roll. The XL keeps the same blend intact, a Connecticut Broadleaf wrapper over an Ecuadorian Sumatra binder with fillers from Colombia, Mexico, the Dominican Republic, and the United States, but bumps the size from a 4.5 x 50 to a full 6 x 60 Gigante, complete with the shaggy foot that became part of the original's identity. Rolled at General Cigar's HATSA factory in Danlí, Honduras, it arrives packaged in a Chinese takeout container as a nod to the 2026 Lunar New Year and the Year of the Horse. At under nine dollars a stick, it punches well above its price point and won't be around once the limited run is gone.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Gordo",
+        "Barcode": "689674167273",
+        "In_Stock": true,
+        "Price": "8.60"
+      }
+    ],
+    "image": null,
+    "slug": "punch-egg-roll-xl"
+  },
+  {
+    "Cigar Name": "Flathead Speedshop",
+    "Cigar Brand": "CAO",
+    "Wrapper": "Ecuador Habano",
+    "Binder": "Mexican San Andres",
+    "Filler": "Dominican, Nicaraguan",
+    "Flavor_Profile": "Earth, Hay, Wood, Nuts",
+    "Strength_Profile": "Medium",
+    "description": "The CAO Flathead Speed Shop is a new expression of CAO's best-selling line, built for the smoker who wants the Flathead character without the full strength. The original Flathead earned a 95 rating from Cigar Aficionado and a reputation as one of the boldest box-pressed cigars on the market, inspired by American hot rod culture down to its engine-block packaging and squared-off head. Speed Shop takes that same identity and refines it, dialing back the strength while keeping everything else that made Flathead worth talking about. Rolled at the STG Estelí factory in Nicaragua, it uses an Ecuadorian Habano wrapper over a Mexican San Andrés binder with fillers from Nicaragua and the Dominican Republic. The result is a medium-bodied cigar that still carries the Flathead DNA, built for daily smoking rather than the occasional occasion. It comes in red and white boxes designed to evoke vintage garage culture, and at under twelve dollars across all three sizes, it is one of the more accessible entries in the CAO catalog.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "6x60 Carb",
+        "Barcode": "689674171959",
+        "In_Stock": true,
+        "Price": "10.60"
+      },
+      {
+        "Size": "6.5x54 Crankshaft",
+        "Barcode": "689674171928",
+        "In_Stock": true,
+        "Price": "9.50"
+      },
+      {
+        "Size": "7x70 Big Block",
+        "Barcode": "689674171980",
+        "In_Stock": true,
+        "Price": "11.65"
+      }
+    ],
+    "image": null,
+    "slug": "cao-flathead-speedshop"
   }
 ]
