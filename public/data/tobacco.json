@@ -230,5 +230,19 @@
     ],
     "image": null,
     "slug": "almost-heaven"
+  },
+  {
+    "Tobacco Name": "American Delite",
+    "Tobacco Brand": "Gawith Hoggarth",
+    "Family": "Aromatic",
+    "description": "Gawith Hoggarth has been making pipe tobacco in Kendal, in the Lake District of northwest England, since 1887, with roots in the trade going back to 1792. The company built its reputation on blends that adhere to the strict purity standards that governed British tobacco production through the 19th and 20th centuries, standards that limited how much flavoring could be added and prevented lower quality leaf from being masked under heavy toppings. American Delite is a deliberate departure from that tradition. The blend was designed specifically to emulate the style of old American pipe tobaccos, a category that operated under no such restrictions and produced a generation of richly flavored aromatics that became what many smokers think of when they picture a pipe. The result is a ribbon cut blend of Virginia, Burley, and Black Cavendish finished with vanilla, caramel, and fruit toppings, made by a company that normally does not work this way. It is one of the more approachable blends in the Gawith Hoggarth catalog and one of the few that plays directly to the aromatic smoker rather than the traditional one.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Virginia",
+      "Burley",
+      "Cavendish"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1772831343612-image-IkCa1BwVSrVJ1rqKhStZMLkPkVSBDs.jpeg",
+    "slug": "american-delite"
   }
 ]
