@@ -10650,5 +10650,31 @@
     ],
     "image": null,
     "slug": "cao-flathead-speedshop"
+  },
+  {
+    "Cigar Name": "Anniversario",
+    "Cigar Brand": "Bolivar",
+    "Wrapper": "Ecuadorian Habano",
+    "Binder": "Brazilian Arapiraca",
+    "Filler": "Paraguayan, Columbian, Argentinian, Brazilian",
+    "Flavor_Profile": "",
+    "Strength_Profile": "",
+    "description": "The Bolivar brand has been producing cigars since 1901, named for Simón Bolívar, the Venezuelan general who liberated much of South America from Spanish rule. The connection between the brand and the continent has always been more than symbolic, given that the countries Bolívar freed became the same regions the cigar industry has drawn from for generations. The Bolivar Aniversario makes that connection explicit. Built entirely from South American tobaccos sourced across five countries, including the rarely used growing regions of Argentina and Paraguay alongside more established origins in Ecuador, Brazil, and Colombia, this cigar represents something the brand has never done before. It is a celebration of over 130 years in the industry and a tribute to the land that made the brand worth celebrating. Tobaccos from Argentina and Paraguay almost never appear in premium cigar blends, and their inclusion here is a statement about how seriously Forged Cigar took this release.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674169277",
+        "In_Stock": true,
+        "Price": "10.85"
+      }
+    ],
+    "image": null,
+    "slug": "bolivar-anniversario"
   }
 ]
