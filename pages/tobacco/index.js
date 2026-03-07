@@ -1,7 +1,7 @@
 import Layout from '../../components/layout';
 import Catalog from '../../components/catalog';
 import Head from 'next/head';
-import { PiApproximateEquals, PiDiamondsFour, PiDiamondsFourFill, PiFactory, PiFactoryFill, PiTreeStructure, PiTreeStructureFill } from 'react-icons/pi';
+import { PiApproximateEquals, PiDiamondsFour, PiDiamondsFourFill, PiFactory, PiFactoryFill, PiPackage, PiTreeStructure, PiTreeStructureFill } from 'react-icons/pi';
 
 export const getStaticProps = async () => {
     const data = await import('../../public/data/tobacco.json');
@@ -93,12 +93,12 @@ const TobaccoCatalog = (props) => {
                                     type: 'hidden-label',
                                     icon: PiTreeStructure
                                 },
-                            item['Cut'] &&
+                            item['Sale Form'] &&
                                 {
-                                    value: item['Cut'],
-                                    label: 'Cut',
+                                    value: item['Sale Form'],
+                                    label: 'Sale Form',
                                     type: 'hidden-label',
-                                    icon: PiApproximateEquals
+                                    icon: PiPackage
                                 }, 
                             item['Components'] && Array.isArray(item['Components']) &&
                                 {

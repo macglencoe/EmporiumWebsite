@@ -70,7 +70,8 @@ const TobaccoPage = (props) => {
                             <ProductInfoFields
                                 fields={[
                                     { name: "Brand", value: tobacco['Tobacco Brand'] },
-                                    { name: "Family", value: tobacco['Family'] }
+                                    { name: "Family", value: tobacco['Family'] },
+                                    { name: "Sale Form", value: tobacco['Sale Form'] },
                                 ]}
                             />
                         </ProductMainContent>
