@@ -9,6 +9,7 @@ import ProductPage, {
     ProductInfoFields,
     Disclaimer,
     Navigation,
+    ProductImage,
 } from '../../components/productPage';
 
 
@@ -64,6 +65,7 @@ const TobaccoPage = (props) => {
                                     { label: tobacco['Tobacco Brand'] }
                                 ]}
                                 meta={tobacco['Family']}
+                                description={tobacco.description}
                             >
                                 {tobacco["Tobacco Name"]}
                             </ProductTitle>
@@ -76,6 +78,10 @@ const TobaccoPage = (props) => {
                             />
                         </ProductMainContent>
                         <ProductSideContent>
+                            <ProductImage
+                                src={tobacco.image}
+                                fallbackSearch={encodeURIComponent(tobacco['Tobacco Brand'] + ' ' + tobacco['Tobacco Name'])}
+                            />
                             {tobacco.Components &&
                                 <StringBubbleList
                                     title="Components"
