@@ -319,5 +319,173 @@
     ],
     "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1772834704332-image-cmEQ1ai0rFwpdVxPW1zfM6JagJnyuL.jpeg",
     "slug": "st-james-flake"
+  },
+  {
+    "Tobacco Name": "Yorktown",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Virginia",
+    "description": "Yorktown is notable for a production method that is unique in the Cornell and Diehl lineup. Red Virginia and bright Virginia are combined, stoved together, and then restoved, a double stoving process that concentrates and caramelizes the natural sugars in the leaf in a way a single pass cannot achieve. Straight red Virginia is then added to that base to preserve some of the raw sweetness alongside the toasted depth the stoving develops. The result is a pure Virginia ribbon with a naturally complex character, toasty and sweet without any toppings or casings to get it there. It is also one of the better blends in the catalog for aging, with longtime cellared examples holding up well over decades.\n",
+    "Sale Form": "Tin",
+    "Components": [
+      "Bright Virinia",
+      "Red Virginia"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773347078680-image-inS3UEqunxnnEjpOLnUvfrHotbhI4Q.jpeg",
+    "slug": "yorktown"
+  },
+  {
+    "Tobacco Name": "Manhattan Afternoon",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Virginia",
+    "description": "Manhattan Afternoon is part of Cornell and Diehl's Simply Elegant series, a line built on the premise that the best tobaccos need the least help. The blend is golden Virginia leaf pressed into flakes and finished with a single drop of honey, and that is the entire recipe. No additional leaf types, no layered toppings, nothing competing with the natural sweetness the Virginia brings on its own. The honey sits lightly on the blend, more of an accent than a flavoring, and the flake cut slows the burn down and keeps the smoke cool enough that the leaf can speak without interference. It is a mild tobacco by any measure, approachable for newer pipe smokers and honest enough to satisfy experienced ones who occasionally want something uncomplicated in the rotation.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Golden Virginia"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773347297011-image-vqSl2cgdj2KsWrnhx1arpw3fsM2d7V.jpeg",
+    "slug": "manhattan-afternoon"
+  },
+  {
+    "Tobacco Name": "Opening Night",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Virginia",
+    "description": "Opening Night is part of Cornell and Diehl's Simply Elegant series, a line built on the premise that the best tobaccos need the least done to them. The blend is a pressed Virginia flake built on two leaves that pull in different directions and balance each other out. Red Virginia brings depth, earthiness, and a natural spice that some smokers mistake for Perique on first acquaintance. Bright Virginia brings sweetness and a lighter, grassier character that keeps the red from getting heavy. No casing, no topping, no additional leaf types. The interaction between those two Virginias is the entire recipe. It arrives with enough moisture to benefit from a short drying period before packing and rewards a slow cadence once lit. Reviewers who have cellared it report that the two leaves continue to integrate over time in a way that makes the blend noticeably smoother after a year or more in the tin. A clean, unadulterated Virginia flake that has developed a quiet but loyal following.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Red Virginia",
+      "Bright Virginia"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773347931304-opening-night-edShaPtHyjnTY0NJNCCEIwjatmQDM0.jpeg",
+    "slug": "opening-night"
+  },
+  {
+    "Tobacco Name": "Red Carpet",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Virginia Perique",
+    "description": "Red Carpet is part of Cornell and Diehl's Simply Elegant series and sits in the Virginia/Perique category, built on red Virginia as its foundation rather than the brighter, sweeter leaf that drives most of the blends alongside it in the lineup. Red Virginia brings more depth and earthiness than its bright counterpart, and the Perique pressed alongside it adds the peppery, dark fruit character the category is known for. The flakes are lightly pressed and can break down toward a ribbon in the tin, which makes packing easier for those who prefer not to rub out. Like most Virginia/Perique blends it benefits from a patient cadence and improves noticeably with tin age. One point of historical note: older tins listed Izmir as a component, but when Cornell and Diehl merged with Laudisi Enterprises in 2014, head blender Jeremy Reeves located the original handwritten recipe and confirmed that Izmir was never part of the blend. The labels were corrected. What is in the tin now is what was always intended.\n",
+    "Sale Form": "Tin",
+    "Components": [
+      "Red Virginia",
+      "Perique"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773348217067-image-eGjXFOgIILB8fRlqH0mm0mBXaYpVXj.jpeg",
+    "slug": "red-carpet"
+  },
+  {
+    "Tobacco Name": "Sunday Picnic",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Virginia Perique",
+    "description": "Sunday Picnic is part of Cornell and Diehl's Simply Elegant series and sits one step removed from Red Carpet, its closest neighbor in the lineup. The distinction is the Virginia base. Red Carpet is built on red Virginia, with its deeper, earthier, more robust character. Sunday Picnic uses golden bright Virginia instead, which is sweeter and lighter by nature. Both include Perique, but Sunday Picnic also brings in Izmir Turkish leaf, a sun-cured Oriental from the Aegean that adds a floral, slightly tangy quality that pushes the blend past straight VaPer territory into something with more dimension. The flakes are lightly pressed and easy to prepare in whatever way you prefer. It ages well, with the Izmir becoming better integrated over time in the tin.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Golden Virginia",
+      "Perique",
+      "Izmir Turkish"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773349144465-image-gbnnj1gNT6F3xbgaz5PDQbTUWPYics.jpeg",
+    "slug": "sunday-picnic"
+  },
+  {
+    "Tobacco Name": "Haunted Bookshop",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Burley",
+    "description": "Haunted Bookshop takes its name from the 1919 novel by Christopher Morley, a story about a second hand bookshop in Brooklyn that doubles as a refuge for people who love books more than the world outside them. The blend was created by the late Bob Runowski, one of Cornell and Diehl's most beloved blenders, and carries his sensibility throughout. It is a Burley forward ribbon cut with red Virginia added for sweetness and a touch of Perique for depth and pepper. Burley is an air cured leaf that brings a natural nuttiness and earthy weight that flue cured Virginias cannot replicate, and it is the dominant voice in this blend. The Perique is present but restrained, doing more to enhance the Burley's character than assert itself independently. It is a straightforward, unfussy smoke that has developed a loyal following among Burley enthusiasts and those who find most Virginia blends too sweet for daily use. For a blend named after a novel about quiet pleasures and comfortable rooms, it delivers exactly what the name suggests.\n",
+    "Sale Form": "Tin",
+    "Components": [
+      "Burley",
+      "Red Virginia",
+      "Perique"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773349566876-image-SaUTUjTR3NhMaLUSCtV8vQZtvpt4em.jpeg",
+    "slug": "haunted-bookshop"
+  },
+  {
+    "Tobacco Name": "Montford Point Marine",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Burley",
+    "description": "In 1941, Executive Order 8802 prohibited racial discrimination in the defense industry and armed forces. The following year, Camp Montford Point at Camp Lejeune in North Carolina became the first training depot for Black Marine recruits. More than 20,000 men trained there by 1949, earning their place in the Corps at a time when the institution itself was still working out what equality was supposed to look like in practice. Congress awarded the Montford Point Marines a Congressional Gold Medal in 2012.\nMontford Point Marine is the fourth entry in Cornell and Diehl's Black Servicemen Series, a line of blends created as explicit tributes to African American military service. The blend is built around dark fired Burley, which distinguishes it immediately from the standard Burley base of something like Haunted Bookshop. Dark firing is a curing process that uses low smoldering hardwood smoke over days or weeks, producing a leaf with considerably more depth and body than air cured Burley alone. Perique and Latakia complete the trio, adding their respective contributions of spice and campfire smoke. The result is a full, natural tobacco blend with no casing and no flavoring, carrying the same straightforward character as the men it honors. Ribbon cut. Medium full strength.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Dark Fired Burley",
+      "Perique",
+      "Latakia"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773350184549-image-j06HpZa769UJ4sIszgrCUUY3HbFXEi.jpeg",
+    "slug": "montford-point-marine"
+  },
+  {
+    "Tobacco Name": "Buffalo Soldier",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Virginia, Latakia",
+    "description": "Buffalo Soldier is the first entry in Cornell and Diehl's Black Servicemen Series, and the history behind the name stretches back further than any other blend in the line. After the Civil War, Congress established four all Black regiments of the U.S. Army: the 9th and 10th Cavalry and the 24th and 25th Infantry. They served on the western frontier for decades, fighting in campaigns from the southern plains to Cuba, and earned a reputation for discipline and tenacity that their commanders frequently put on record. The name Buffalo Soldiers was given to them by the Native American tribes they encountered, and the regiments wore it with pride. They served with distinction through two world wars before the Army desegregated in 1948.\nThe blend is built on a Virginia base rather than the dark fired Burley that anchors Montford Point Marine, which gives it a noticeably different character within the same series. Latakia and Perique appear in measured proportion, the Latakia providing its characteristic campfire smoke and the Perique its spice, but neither overwhelms the sweetness of the Virginia underneath. It is a well balanced, medium strength ribbon cut that wears its components lightly enough to be described as an all day smoke. No flavoring, no casing.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Virginia",
+      "Perique",
+      "Latakia"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773350422082-image-KuH17IqdBNynPltmco6a8JgledkjAg.jpeg",
+    "slug": "buffalo-soldier"
+  },
+  {
+    "Tobacco Name": "Milk & Honey",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Virginia Cavendish (base)",
+    "description": "Milk and Honey, or Halav U'Duash in Hebrew, is part of the Hebraica Series, a line of blends with an unusual origin. William Serad, a longtime collaborator of Cornell and Diehl founder Craig Tarler and the blender behind Red Carpet and Cross-Eyed Cricket, was friends with rabbi Ira Stone. Stone had particular tastes in pipe tobacco, favoring Burley, Oriental, and Perique mixtures, and asked Serad to put some blends together for him. Those blends became the Hebraica Series. Rabbi Stone named each one, drawing on the language and spirituality of Jewish tradition. Halav U'Duash, the biblical phrase for a land flowing with milk and honey, gives this blend both its name and its orientation.\nThe construction is a generous one. Black and red Virginia Cavendish form the base, with rough cut Burley and dark fired Kentucky adding body and earthiness, Middle Eastern Oriental leaf contributing its characteristic dry and slightly tangy character, and a touch of Perique rounding out the back end. Light aromatic toppings are present but applied sparingly. This smokes closer to a natural tobacco blend than a traditional aromatic, with the components doing more work than the flavoring. Ribbon cut, mild to medium strength.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Red Virginia Cavendish",
+      "Black Virginia Cavendish",
+      "Burley",
+      "Dark Fired Kentucky",
+      "Orientals"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773351020646-image-fa7Jj1BQxLNTz9LsRdFDucN2E0vdb9.jpeg",
+    "slug": "milk-honey"
+  },
+  {
+    "Tobacco Name": "Gates of Light",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Burley Virginia",
+    "description": "Gates of Light, or Sha'are Orah in Hebrew, takes its name from a thirteenth century text by Rabbi Joseph ben Abraham Gikatilla, one of the foundational works in the history of Kabbalah. The book explores the mystical names of God and their relationship to the structure of creation, and it remains in print and in serious study more than seven hundred years after it was written. Rabbi Ira Stone, the friend of blender William Serad whose preferences inspired the entire Hebraica Series, chose the name for this blend.\nThe construction sits closer to the natural tobacco tradition than Milk and Honey does. Cube cut Burley and stoved red Virginias form the base, with stoved referring to a controlled heat process that deepens and sweetens the Virginia leaf before blending. Oriental leaf and Perique round out the blend, the Orientals adding their dry, slightly tangy character and the Perique contributing spice and depth. No aromatic toppings, no casing. The cube cut encourages a slower, cooler smoke than ribbon and rewards a patient cadence. Medium strength.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Burley",
+      "Red Virginia",
+      "Turkish",
+      "Perique"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773351470539-image-zBy6zo4TazsFyryxh08i6wm3c3mZlQ.jpeg",
+    "slug": "gates-of-light"
+  },
+  {
+    "Tobacco Name": "Morning Light",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Oriental",
+    "description": "Morning Light, or Boker Or in Hebrew, is part of the Hebraica Series created by blender William Serad for his friend Rabbi Ira Stone. The name in Hebrew carries a specific resonance: Boker Or is the moment of first light before the sun crests the horizon, distinct from full daylight, a threshold rather than an arrival. Stone drew on that precision when naming this blend.\nThe construction leads with Oriental leaf rather than Virginia, which sets it apart from most of the other blends in the series. Rich Orientals form the base alongside stoved red Virginias, with bold Perique and sweetened black Cavendish completing the blend. The Orientals are the primary voice here, dry and complex in the way that Middle Eastern leaf tends to be, with the stoved Virginia providing sweetness underneath and the Perique adding its characteristic spice and depth. The black Cavendish softens the overall profile without pushing it toward aromatic territory. Ribbon cut, medium strength, no flavoring. Rewards a slow cadence.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Orientals",
+      "Perique",
+      "Red Virginia",
+      "Black Cavendish"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773351703491-image-VI7WCSazAmgMLIeUgDGmFrrhDxR6WU.jpeg",
+    "slug": "morning-light"
+  },
+  {
+    "Tobacco Name": "Cross Eyed Cricket",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "English Aromatic",
+    "description": "Cross-Eyed Cricket is one of William Serad's best known creations and one of the more cheerfully unclassifiable blends in the Cornell and Diehl catalog. Cornell and Diehl's own description invites the question directly: English or aromatic? Take your pick.\nThe construction starts with unsweetened black Cavendish as the base, which is an unusual anchor for a blend that also contains Turkish leaf, Latakia, and Perique. That combination of components reads like an English blend. The rum punch topping is what complicates the category, applied lightly enough that the natural tobacco character remains the dominant experience but present enough to sweeten the room note and round off any rougher edges. The Latakia contributes its familiar campfire smoke, the Turkish adds a dry earthiness, and the Perique brings spice from the back. The Cavendish underneath keeps the overall profile smooth and accessible. Ribbon cut, mild to medium strength. A blend that tends to win over aromatic smokers who are curious about English tobaccos, and English smokers who do not mind a little sweetness in the room.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Black Cavendish",
+      "Turkish",
+      "Latakia",
+      "Perique"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773351892862-image-7xnpEDVMnzQRg9U9nGnYkkB8OdOg9O.jpeg",
+    "slug": "cross-eyed-cricket"
   }
 ]
