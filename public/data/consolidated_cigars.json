@@ -3814,13 +3814,20 @@
     "slug": "drew-estate-nica-rustica-adobe"
   },
   {
-    "Cigar Brand": "Drew Estate",
     "Cigar Name": "Nica Rustica Broadleaf",
+    "Cigar Brand": "Drew Estate",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Mexican San Andres",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Spice, Coffee",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -3832,9 +3839,10 @@
         "Size": "Gordo",
         "Barcode": "818578019382",
         "In_Stock": true,
-        "Price": "9.35"
+        "Price": "10.00"
       }
     ],
+    "image": null,
     "slug": "drew-estate-nica-rustica-broadleaf"
   },
   {
