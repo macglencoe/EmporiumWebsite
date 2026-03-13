@@ -487,5 +487,215 @@
     ],
     "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773351892862-image-7xnpEDVMnzQRg9U9nGnYkkB8OdOg9O.jpeg",
     "slug": "cross-eyed-cricket"
+  },
+  {
+    "Tobacco Name": "Comfort",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Virginia Perique",
+    "description": "Comfort is part of the Serenity Series, a line developed by William Serad in collaboration with Cornell and Diehl around a simple premise: a tobacco you can smoke all day without thinking too hard about it. That is a harder thing to achieve than it sounds.\nThe blend puts Perique at the center rather than the edges, pairing it with bright Virginias and adding cube cut Burley and black Cavendish for body and smoothness. The Virginia brings natural sweetness, the Burley keeps things grounded, and the Cavendish smooths the draw without pushing the blend toward aromatic territory. The Perique runs through it all, spicy and consistent from light to ash. Fine ribbon cut, cool burning, easy to pack. No flavoring. Medium strength.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Bright Virginia",
+      "Perique",
+      "Burley",
+      "Black Cavendish"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773431451024-comfort-42qViFHyl5fyo4IDITENvfpGAFpWKy.jpeg",
+    "slug": "comfort"
+  },
+  {
+    "Tobacco Name": "Consolation",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "English",
+    "description": "Consolation is the Latakia entry in the Serenity Series, the four blend line developed by William Serad in collaboration with Cornell and Diehl around the goal of all day accessibility. Where Comfort puts Perique at the center, Consolation brings Latakia and Turkish leaf into the mix, making it the series entry most likely to appeal to English blend smokers.\nThe components are Latakia, Turkish, and bright Virginias, balanced with black Cavendish and cube cut Burley. The cube cut is worth understanding: Burley leaves are pressed together into a dense block and sliced into small cubes, which gives the leaf the compressed density of an unbroken flake while remaining easy to pack directly into the bowl. Head blender Jeremy Reeves has described the result as gravity feeding into the pipe with just a light tap to settle. The Latakia in Consolation is present but restrained, doing its work without dominating the profile. The Cavendish softens the overall character and adds a mild sweetness at the finish. Mild to medium strength. A reasonable entry point for smokers curious about Latakia who are not ready for a full English blend.\n",
+    "Sale Form": "Tin",
+    "Components": [
+      "Latakia",
+      "Turkish",
+      "Bright Virginia",
+      "Black Cavendish",
+      "Burley"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773432010388-image-ysAlIN56JrFXohKlbbObfYC89jRFUJ.jpeg",
+    "slug": "consolation"
+  },
+  {
+    "Tobacco Name": "Reverie",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "English Aromatic",
+    "description": "Reverie is the aromatic entry in the Serenity Series, the four blend line developed by William Serad in collaboration with Cornell and Diehl. Where Consolation is a straightforward English and Comfort centers on Perique, Reverie splits the difference between English and aromatic in a way that tends to divide opinion cleanly along those same lines.\nThe base is black Cavendish and cube cut Burley, with soft contributions from Perique, Latakia, and Turkish providing nuance rather than structure. A hazelnut topping is applied sparingly, present enough to register in the tin note and the room note without pulling the blend fully into aromatic territory. The natural tobacco character of the Burley and the English components remains the dominant experience for most of the bowl. It is a mild to medium smoke designed for accessibility rather than intensity, and it occupies the same all day territory as the rest of the series. A reasonable entry point for aromatic smokers curious about English components, or English smokers who do not mind a light topping.\n",
+    "Sale Form": "Tin",
+    "Components": [
+      "Black Cavendish",
+      "Burley",
+      "Perique",
+      "Latakia",
+      "Turkish"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773432737542-image-JInjKJjQoUoU3Mvv9ezKLfydwbJm3R.jpeg",
+    "slug": "reverie"
+  },
+  {
+    "Tobacco Name": "Briar Fox",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Burley",
+    "description": "Briar Fox is the personal blend of the late Peter Heeschen, a well regarded Danish pipe maker whose work is still sought by collectors. Heeschen brought the recipe to Cornell and Diehl, and the blend has remained in their catalog as one of the more quietly enduring entries in the lineup.\nThe construction is straightforward: Virginias and Burley pressed into a crumble cake, no flavoring, no casing, no additional leaf types. The crumble cake size requires breaking apart before packing but comes apart easily, and the compressed form concentrates the natural tobacco character in a way that rewards patience. The blend is known for building gradually across the bowl, starting clean and gaining complexity and spice toward the finish. It is frequently used as a pipe break-in tobacco for this reason, smoking consistently across different bowl shapes and sizes without demanding close attention. Ages well, with longtime enthusiasts noting that a year or more in the tin meaningfully improves the experience. Mild to medium strength.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Burley",
+      "Virginia"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773432901965-image-HCQxkFKfWK5vWlVztU4fA5sIvnNg1x.jpeg",
+    "slug": "briar-fox"
+  },
+  {
+    "Tobacco Name": "Blue Ridge",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Virginia",
+    "description": "Blue Ridge is part of the Appalachian Trail series, a line of Cornell and Diehl blends tied to the landscapes of the American Southeast. The Blue Ridge Mountains run from Georgia through Virginia and into southern Pennsylvania, forming the eastern spine of the Appalachians and the western boundary of the Shenandoah Valley. The tobacco grown across that region, particularly the red Virginias of the Virginia Piedmont and the burley fields of the Carolina highlands, has a long history in American pipe tobacco.\nThe blend puts stoved red Virginias at the center, with black Cavendish, Turkish leaf, and Louisiana Perique in supporting roles. Stoving is a controlled heat process that deepens the Virginia leaf and brings out a darker, more complex character than flue curing alone produces. The Turkish adds its dry, slightly tangy contribution, the Perique provides spice, and the black Cavendish smooths the overall texture and slows the burn. No flavoring, no casing. Ribbon cut, medium strength. A Virginia forward blend with enough complexity from its supporting components to hold attention across the bowl.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Red Virginia",
+      "Black Cavendish",
+      "Turkish",
+      "Perique"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773433103175-image-4LlN7ruUiXqJvKmV9CUHPp14I11Fxl.jpeg",
+    "slug": "blue-ridge"
+  },
+  {
+    "Tobacco Name": "Stovepipe",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Virginia Aromatic",
+    "description": "Stovepipe is the fifth entry in the Appalachian Trail series and the aromatic among them. The name lands with a particular weight in this context. The stovepipe hat is inseparable from Abraham Lincoln, who was born in a log cabin in Kentucky and whose early life was spent along the Appalachian frontier. The cast iron stove itself was a fixture of mountain homesteads throughout the region, the center of warmth and cooking through long winters in the highlands.\nThe blend builds on bright and red Virginias as the base, with dark Burley, black Cavendish, and Perique adding body and spice. Cocoa, caramel, and vanilla toppings are applied with a light hand, present enough to sweeten the room note and round the profile without masking the natural tobacco character underneath. The Virginia and Burley do most of the work while the toppings serve as accent rather than foundation. Ribbon cut, mild to medium strength.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Bright Virginia",
+      "Red Virginia",
+      "Perique",
+      "Burley",
+      "Black Cavendish"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773433369496-image-kPqSbBkRZKfduPD1LfjraXt2dcLGhl.jpeg",
+    "slug": "stovepipe"
+  },
+  {
+    "Tobacco Name": "String Duster",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Virginia",
+    "description": "String Duster is the fourth entry in the Appalachian Trail series, and the name is a piece of Appalachian vernacular worth knowing. A string duster is a fiddle, the instrument at the center of the old time music tradition that developed in the mountain communities of the southern highlands. The fiddle carried everything in that tradition: dance tunes, ballads, laments, the whole social fabric of a community that gathered around it. Calling a tobacco a string duster is a particular kind of compliment.\nThe blend puts red and bright Virginias at the center, with Turkish leaf adding its dry and slightly tangy character alongside. Rum and maple toppings are applied lightly, present enough to sweeten the room note without pulling the blend fully into aromatic territory. The Virginia does the structural work while the toppings and the Turkish serve as accent. Ready rubbed cut, mild to medium strength. One of the more approachable entries in the series for smokers who lean toward lightly topped Virginias.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Red Virginia",
+      "Bright Virginia",
+      "Turkish"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773433623914-image-lHRUOkiS1rSTvsZ54PIJesH8K4B7aD.jpeg",
+    "slug": "string-duster"
+  },
+  {
+    "Tobacco Name": "Virginia Cream",
+    "Tobacco Brand": "G.L. Pease",
+    "Family": "Virginia Aromatic",
+    "description": "Gregory Pease began his career at Drucquer and Sons, the legendary San Francisco tobacconist that closed in 1987, where he absorbed the craft of blending before launching his own line in 2000. The G.L. Pease line is manufactured by Cornell and Diehl in South Carolina, though the recipes and the brand belong entirely to Pease. The Virginia Cream is one of the more unusual entries in his catalog, a deliberate departure from the predominantly English and Balkan blends he is best known for.\nThe blend centers on red and golden flue cured Virginias, with dark fired Kentucky, black Cavendish, and Perique as supporting components. A vanilla and bourbon topping is applied with considerable restraint, present throughout the bowl from first light to finish without overwhelming the natural tobacco character underneath. It burns clean and leaves the pipe free of ghost flavors, which is notably rare for a topped blend. Ribbon cut, medium strength. A lightly aromatic Virginia for smokers who want a touch of sweetness without sacrificing the quality of the leaf doing the work underneath it.\n",
+    "Sale Form": "Tin",
+    "Components": [
+      "Virginia",
+      "Perique",
+      "Dark Fired Kentucky",
+      "Black Cavendish"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773433991183-image-80E45JqL9e81EpOcnboQa73oLPxVQi.jpeg",
+    "slug": "virginia-cream"
+  },
+  {
+    "Tobacco Name": "Penny Farthing",
+    "Tobacco Brand": "G.L. Pease",
+    "Family": "Virginia Perique",
+    "description": "The penny farthing was the high wheeled bicycle of the 1870s and 1880s, named for the disproportion between its enormous front wheel and small rear one, the penny being the larger coin and the farthing the smaller. It was fast, impractical, and required considerable skill to ride without pitching headfirst over the handlebars. It belongs to an era of Victorian ingenuity and a certain blithe disregard for personal safety that the G.L. Pease Old London Series evokes throughout its lineup.\nPenny Farthing is the first shag cut blend in the G.L. Pease range, a distinction Gregory Pease spent considerable time getting right. Shag is a fine cut running approximately 32 cuts per inch, historically associated with British pipe tobacco traditions and hand rolling. The blend is bright and red Virginias with Louisiana Perique and a touch of dark fired Kentucky. The shag cut packs easily and lights readily but burns faster than ribbon or flake and rewards a slow, deliberate cadence. Medium to full strength.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Bright Virginia",
+      "Red Virginia",
+      "Perique",
+      "Dark Fired Kentucky"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773434416143-image-yJ5wb4Yp6Eq3EwvXgd5jSCGT8nZQPN.jpeg",
+    "slug": "penny-farthing"
+  },
+  {
+    "Tobacco Name": "Ellipsis Flake",
+    "Tobacco Brand": "G.L. Pease",
+    "Family": "Virginia",
+    "description": "An ellipsis is the punctuation of the unfinished thought, the trailing pause that implies more than it states. It is a fitting name for the fourth entry in the G.L. Pease Zeitgeist Collection, a series Pease describes as a celebration of avant garde and rebellious themes of the modern era. Each blend in the collection is oriented around a particular cultural or artistic idea rather than a geographic or historical reference.\nThe blend is built on Virginias as the foundation, with Oriental leaf, Perique, white Burley, and black Cavendish as supporting components. The Orientals and Perique share the condimental role without Latakia present to define the profile, which places Ellipsis in a relatively rare category of Virginia blends where those two leaf types work alongside each other rather than one serving as a background note to the other. Pease's stated inspiration was surrealism and the musical concept of the tritone, the interval composers once called the devil's interval for its unresolved tension. The blend is pressed and cut into flakes. Medium strength and body. Ages well.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Virginia",
+      "Izmir Turkish",
+      "Perique",
+      "Burley"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773435501199-image-VE5Qhva6CeOj4g5YPzJLKH8vXlJL4G.jpeg",
+    "slug": "ellipsis-flake"
+  },
+  {
+    "Tobacco Name": "Windjammer",
+    "Tobacco Brand": "G.L. Pease",
+    "Family": "Virginia Perique",
+    "description": "A windjammer is a large sailing cargo vessel, the kind that spent weeks or months at sea before steam made them obsolete. The navy flake tradition that Windjammer draws from has a similar age to it, pressed Virginia and Perique cakes finished with rum being among the oldest forms of prepared pipe tobacco, carried in the pockets of sailors and dockworkers through the nineteenth century.\nGregory Pease's version builds on ripe Virginias and a generous measure of Perique, with Burley added for body and nuttiness and unflavored toasted black Cavendish serving as a binding element that helps the flavors adhere across the bowl. Dark rum ties the components together and adds a layer of sweetness without pulling the blend into aromatic territory. The whole mixture is pressed into a cake and cut into flakes. It is a full palate blend that rewards slow smoking and ages exceptionally well. Medium to full strength.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Virginia",
+      "Perique",
+      "Burley",
+      "Black Cavendish"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773435756035-image-SoibQGbUFLLJTWGSjRbZHaL7ZhOfNF.jpeg",
+    "slug": "windjammer"
+  },
+  {
+    "Tobacco Name": "Chelsea Morning",
+    "Tobacco Brand": "G.L. Pease",
+    "Family": "English",
+    "description": "Chelsea Morning is part of the G.L. Pease Old London Series, a line built around the neighborhoods and character of Victorian London. Chelsea was the bohemian quarter, home to artists, writers, and a particular kind of unhurried morning that the blend's name evokes directly.\nThe components are red and bright Virginias, fragrant Oriental leaf, a measured amount of Cyprian Latakia, and a pinch of Perique. The processing is worth noting: the leaf is blended in layers, briefly pressed to integrate the components, then sliced and tumbled into short ribbons that fall between a broken flake and a ribbon cut in texture. The result is easy to pack and easy to smoke. The Latakia is present but restrained, providing depth and a gentle smokiness without asserting itself over the Virginias and Orientals that carry most of the flavor. The Perique plays a supporting role throughout. It is one of the more accessible entries in the G.L. Pease lineup for smokers transitioning from Virginia blends into English territory. Medium strength.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Red Virginia",
+      "Bright Virginia",
+      "Cyprian Latakia",
+      "Orientals",
+      "Perique"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773436118042-image-MlGOCRas6CDCyxAEkun2ls4Sh6KG0G.jpeg",
+    "slug": "chelsea-morning"
+  },
+  {
+    "Tobacco Name": "Horizons",
+    "Tobacco Brand": "G.L. Pease",
+    "Family": "English",
+    "description": "Horizons is the third entry in the G.L. Pease Zeitgeist Collection, the series built around avant garde and modernist themes. Where Ellipsis drew on surrealism, Horizons takes its inspiration from jet age retrofuturism, the mid century optimism of the late 1940s and 1950s that imagined the future as a place of clean lines, gleaming machines, and forward momentum. The tin art reflects it directly.\nThe blend is a straightforward English construction: matured red Virginias and flue cured Virginias pressed together with Turkish Latakia and Oriental leaf, then sliced into flakes. The Turkish Latakia is worth noting as a distinction from most G.L. Pease English blends, which more typically employ Cyprian Latakia. Turkish Latakia carries a somewhat different character, somewhat lighter and spicier than the more heavily smoked Cyprian variety. The overall profile is medium bodied and balanced, the smokiness present but not dominant over the Virginia sweetness underneath. Pressed flake, medium strength. Ages well.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Virginia",
+      "Latakia",
+      "Oriental"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773436250859-horizons-kjtZuVQCCFRrldSNQASEihjIBFgnUC.jpeg",
+    "slug": "horizons"
+  },
+  {
+    "Tobacco Name": "Quiet Nights",
+    "Tobacco Brand": "G.L. Pease",
+    "Family": "English",
+    "description": "Quiet Nights is the best selling blend in the G.L. Pease catalog and is widely considered Gregory Pease's defining work. Part of the Old London Series, it is built on ripe red Virginias, fine Oriental leaf, Cyprian Latakia, and a pinch of Acadian Perique. The whole mixture is pressed and matured in cakes before being sliced into flakes, a process that allows the components to marry over time and develop a cohesion that blending alone does not produce. The Cyprian Latakia is the structural backbone of the blend, present and unmistakable without crowding out the Virginia sweetness or the Oriental complexity underneath it. The Perique is genuinely subtle here, contributing depth at the edges rather than asserting itself as a distinct element. It is a full flavored, medium strength smoke that rewards patience and ages exceptionally well. Pressed flake. The kind of blend people set aside in quantity.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Virginia",
+      "Latakia",
+      "Oriental",
+      "Perique"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773436438101-image-pi1e4IX4pNJWA9DuZgCVavXiHtOJCK.jpeg",
+    "slug": "quiet-nights"
   }
 ]
