@@ -8774,21 +8774,29 @@
     "slug": "rocky-patel-10-year-sumatran"
   },
   {
-    "Cigar Brand": "Rocky Patel",
     "Cigar Name": "12 Year Broadleaf",
+    "Cigar Brand": "Rocky Patel",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Nicaraguan",
     "Filler": "Dominican, Nicaraguan",
     "Flavor_Profile": "",
     "Strength_Profile": "",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "846261000119",
         "In_Stock": true,
-        "Price": "11.50"
+        "Price": "12.00"
       }
     ],
+    "image": null,
     "slug": "rocky-patel-12-year-broadleaf"
   },
   {
