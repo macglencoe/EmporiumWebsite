@@ -2557,21 +2557,29 @@
     "slug": "ashton-vsg-pegasus"
   },
   {
-    "Cigar Brand": "Ashton",
     "Cigar Name": "VSG Wizard",
+    "Cigar Brand": "Ashton",
     "Wrapper": "Sumatran Sungrown",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Dark chocolate, Black cherry, Ground pepper",
     "Strength_Profile": "Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "819577012657",
         "In_Stock": true,
-        "Price": "19.85"
+        "Price": "20.25"
       }
     ],
+    "image": null,
     "slug": "ashton-vsg-wizard"
   },
   {
