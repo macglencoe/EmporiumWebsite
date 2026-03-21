@@ -1615,13 +1615,20 @@
     "description": "Handmade in the Dominican Republic, the Arturo Fuente Especiales line offers a medium-bodied profile with notes of cedar, oak, and subtle spice. Wrapped in an Ecuadorian Habano leaf over Dominican binder and filler, these cigars provide a consistent and approachable experience. Available in various sizes, including the Cazadores (6 x 50), Emperador (7 x 52), and Conquistadores (5.5 x 56), the Especiales line delivers quality craftsmanship at an accessible price point."
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Eye of The Bull",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Cedar, Cinnamon, Baking spice",
     "Strength_Profile": "Medium",
+    "description": "The Don Carlos Eye of the Bull had an unusual introduction. When Arturo Fuente debuted it at the 2022 PCA Convention, Carlos Fuente Jr. personally asked those who saw it not to discuss it publicly. The cigar was on display but unfinished, and the request for silence only heightened the anticipation. It returned the following year as the centerpiece of the Fuente booth at the 2023 PCA, available exclusively to retailers who placed orders on site. That kind of controlled release is characteristic of how the Fuente family manages their most significant work.\nThe cigar is a personal project of Ciro Cascella, executive president of Arturo Fuente International, who spent several years developing it. It uses the established Don Carlos blend, an aged Dominican binder and filler under an African Cameroon wrapper, but applies it to a 3.5 x 55 short robusto format. The most visually distinctive feature is the dark tobacco accent applied to the cap, which creates the literal bull's eye the name references. The compact size concentrates the blend and delivers more body than typical Don Carlos vitolas. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Petite Gordo",
@@ -1630,8 +1637,8 @@
         "Price": "13.75"
       }
     ],
-    "slug": "arturo-fuente-eye-of-the-bull",
-    "hidden": true
+    "image": null,
+    "slug": "arturo-fuente-eye-of-the-bull"
   },
   {
     "Cigar Brand": "Arturo Fuente",
@@ -1708,13 +1715,20 @@
     "slug": "arturo-fuente-gran-reserva"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Gran Reserva Canones",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Dark chocolate, Licorice notes, Almonds, Wood",
-    "Strength_Profile": "Mild-Medium",
+    "Strength_Profile": "Medium",
+    "description": "The Arturo Fuente Gran Reserva is the foundational line of the family brand, built on a recipe of aged Dominican binder and filler tobaccos that has been refined across four generations. Every leaf used in the Gran Reserva is drawn from a private reserve set aside exclusively for the line, aged in Spanish cedar vaults before rolling. The Fuente family oversees every step of production at their factory in Santiago, Dominican Republic.\nThe Canones is the largest vitola in the Gran Reserva lineup at 8.5 x 52, a Presidente format that demands a significant time commitment and rewards patience. The natural version is wrapped in an African Cameroon leaf, a wrapper variety grown in Central Africa from Sumatran seed stock introduced after World War II and cultivated by small farmers on plots averaging around an acre. Cameroon wrapper is known for its fine, slightly oily texture and the mild natural sweetness it contributes to the smoking experience. The Canones builds gradually in body across its considerable length, starting smooth and gaining complexity through the final third. Medium strength. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro Grande",
@@ -1723,16 +1737,24 @@
         "Price": "11.90"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-gran-reserva-canones"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Gran Reserva Cuban Corona Natural",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Dark cocoa, Bit of leather",
     "Strength_Profile": "Mild",
+    "description": "The Arturo Fuente Gran Reserva is the foundational line of the family brand, built on four generations of accumulated knowledge about Dominican tobacco and how to age and roll it. The Cuban Corona is a classic long corona at 5.75 x 44, a proportion with deep roots in Havana tradition and one that reflects the Fuente family's own Cuban heritage. Founder Arturo Fuente emigrated from Cuba to Tampa in the early twentieth century and brought those blending sensibilities with him to the Dominican Republic.\nThe blend is aged Dominican binder and filler under an African Cameroon wrapper, the same construction that runs through the Gran Reserva line. Each cigar is aged in Spanish cedar vaults before release. The longer, narrower proportions of the Cuban Corona allow the Cameroon wrapper to express itself gradually across a cooler, more measured burn than the shorter vitolas in the line. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Corona",
@@ -1741,16 +1763,24 @@
         "Price": "8.10"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-gran-reserva-cuban-corona-natural"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Gran Reserva Natural",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Dark cocoa, Bit of leather",
     "Strength_Profile": "Mild",
+    "description": "The Arturo Fuente Gran Reserva is the foundational line of the family brand, built on four generations of accumulated knowledge about Dominican tobacco and how to age and roll it. The Rothschilde takes its name from the classic petite robusto shape, a short, wide cigar at 4.5 x 50 with origins in nineteenth century European smoking culture. The proportions concentrate the blend and deliver a full expression of the tobacco in a shorter smoke than the longer vitolas in the line.\nThe construction is the same aged Dominican binder and filler under African Cameroon wrapper that defines the Gran Reserva across all its sizes, aged in Spanish cedar vaults before release. The Cameroon wrapper contributes its characteristic mild natural sweetness and fine, toothy texture. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Rothschild",
@@ -1759,16 +1789,24 @@
         "Price": "7.10"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-gran-reserva-natural"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Hemingway Best Seller Maduro",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Connecticut Broadleaf Maduro",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Sweet, Spicy, Walnut notes, Cocoa",
     "Strength_Profile": "Medium",
+    "description": "\nThe Hemingway series has been in continuous production since Carlos Fuente Sr. introduced it in 1983, reviving Cuban perfecto shapes his father Arturo had worked with decades earlier. The Best Seller Maduro carries the same tapered perfecto proportions as the natural at 4.5 inches with a ring gauge running from 43 at the head to 55 at the belly, dressed in a dark Connecticut Broadleaf wrapper in place of the traditional Cameroon. The Broadleaf contributes additional body and a heavier character than the natural version. Released in limited quantities seasonally. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Perfecto",
@@ -1777,16 +1815,24 @@
         "Price": "9.20"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-hemingway-best-seller-maduro"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Hemingway Best Seller Natural",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Spice, Wood, Leather, Cedar",
-    "Strength_Profile": "Medium-Full",
+    "Strength_Profile": "Medium",
+    "description": "The Hemingway series has been in continuous production since Carlos Fuente Sr. introduced it in 1983, reviving Cuban perfecto shapes his father Arturo had worked with decades earlier. The Best Seller is a petite perfecto at 4.5 inches with a ring gauge that tapers from 43 at the head to 55 at the belly, and among the most consistently sought after proportions in the lineup. The name is not marketing language. It earned that designation through decades of sustained demand. The blend is aged Dominican binder and filler under an African Cameroon wrapper, aged at Chateau Fuente before release. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Perfecto",
@@ -1795,16 +1841,24 @@
         "Price": "9.10"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-hemingway-best-seller-natural"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Hemingway Classic Natural",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Spice, Wood, Leather, Cedar",
-    "Strength_Profile": "Medium-Full",
+    "Strength_Profile": "Medium",
+    "description": "The Hemingway Classic is the largest vitola in the standard Hemingway lineup at 7 x 47, a Churchill perfecto that demands a significant time commitment and rewards a patient cadence. The perfecto taper at both ends is one of the most demanding shapes in the roller's repertoire, and production is limited to a small number of torcedores at the Fuente factory in the Dominican Republic who have mastered the technique. The Hemingway series was among the first modern lines to reintroduce this classic Cuban shape to the American market at scale, and the Classic remains its most ambitious expression within the standard line. The blend is aged Dominican binder and filler under an African Cameroon wrapper, aged at Chateau Fuente before release. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Perfecto",
@@ -1813,16 +1867,24 @@
         "Price": "12.35"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-hemingway-classic-natural"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Hemingway Classic Sungrown",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Spice, Wood, Leather, Cedar",
     "Strength_Profile": "Medium-Full",
+    "description": "The Hemingway Sungrown swaps the traditional Cameroon wrapper for an Ecuadorian sun grown leaf grown from habano seed, sourced through Oliva Tobacco Company. Sun grown tobacco develops thicker, darker leaves than shade grown varieties due to direct sun exposure, and the Ecuadorian growing conditions produce a wrapper with a notably darker color and fuller character than the Cameroon it replaces. The aged Dominican binder and filler underneath remain the same as the rest of the Hemingway line.\nThe Classic is a Churchill perfecto at 7 x 46, the largest vitola in the standard Hemingway lineup. The Sungrown is released in limited quantities annually and runs somewhat fuller in character than the natural Cameroon version. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Perfecto",
@@ -1831,16 +1893,24 @@
         "Price": "11.70"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-hemingway-classic-sungrown"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Hemingway Short Story Natural",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Sweet, Spicy, Walnut notes, Cocoa",
-    "Strength_Profile": "Medium-Full",
+    "Strength_Profile": "Medium",
+    "description": "The Hemingway series was introduced in 1983 by Carlos Fuente Sr. as a tribute to the classic Cuban perfecto shapes his father Arturo had worked with decades earlier. The Short Story is the smallest vitola in the standard lineup at 4 x 49, and in many ways the most democratic entry point into the series. At under an hour it fits the pace of a workday break or a quick afternoon smoke without asking much of the clock. The petite proportions concentrate the aged Dominican binder and filler under an African Cameroon wrapper into a compact, front loaded smoke that delivers the full character of the Hemingway blend in a fraction of the time. Its approachability has made it one of the most consistently sought after cigars in the entire Fuente portfolio and one of the harder sizes to keep in stock. Handmade in the Dominican Republic.\n",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Perfecto",
@@ -1849,16 +1919,24 @@
         "Price": "8.20"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-hemingway-short-story-natural"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Hemingway Signature Maduro",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Connecticut Broadleaf Maduro",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Sweet, Spicy, Walnut notes, Cocoa",
     "Strength_Profile": "Medium",
+    "description": "The Hemingway series has been in continuous production since Carlos Fuente Sr. introduced it in 1983, built around the Cuban perfecto shapes his father Arturo worked with in the early days of the family business. The Signature is a Grand Corona perfecto at 6 x 46, one of the most balanced proportions in the lineup, wide enough to develop a full expression of the blend across a comfortable hour or more without demanding the time commitment of the Classic. The Maduro variant dresses the aged Dominican binder and filler in a dark Connecticut Broadleaf wrapper in place of the traditional Cameroon, contributing additional body and depth. Released in limited quantities seasonally alongside the other Hemingway Maduro sizes. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Perfecto",
@@ -1867,16 +1945,24 @@
         "Price": "11.25"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-hemingway-signature-maduro"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Hemingway Signature Natural",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Spice, Wood, Leather, Cedar",
-    "Strength_Profile": "Medium-Full",
+    "Strength_Profile": "Medium",
+    "description": "The Hemingway series draws its name and its spirit from Ernest Hemingway, whose economy of expression and preference for the essential over the ornamental has a natural parallel in a cigar built around a single well executed idea. The Signature is a Grand Corona perfecto at 6 x 46, sitting between the Short Story and the Classic in the standard lineup and representing the most balanced proportion in the series. Wide enough to develop fully across its length, compact enough to finish in a comfortable sitting. The blend is aged Dominican binder and filler under an African Cameroon wrapper, aged at Chateau Fuente before release. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Perfecto",
@@ -1885,33 +1971,50 @@
         "Price": "11.30"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-hemingway-signature-natural"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Hemingway Signature Sungrown",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Spice, Wood, Leather, Cedar",
     "Strength_Profile": "Medium-Full",
+    "description": "The Hemingway series has been produced at Tabacalera A. Fuente y Cia in Santiago since 1983, when Carlos Fuente Sr. revived the Cuban perfecto shapes his father Arturo had worked with in the early twentieth century. The Signature Sungrown applies the Hemingway blend to the Grand Corona perfecto at 6 x 46, the middle proportion in the standard lineup, dressed in an Ecuadorian sun grown habano seed wrapper sourced through Oliva Tobacco Company. The sun grown leaf develops darker and fuller than the traditional Cameroon wrapper, contributing additional depth to the same aged Dominican binder and filler that runs through the entire line. Released in limited quantities annually. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Perfecto",
+        "Barcode": null,
         "In_Stock": false,
         "Price": "10.00"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-hemingway-signature-sungrown"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Hemingway Sungrown Reserva Especial",
+    "Cigar Brand": "Arturo Fuente.",
     "Wrapper": "Ecuadorian Sungrown",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Spice, Sweetness, Leather, Wood",
     "Strength_Profile": "",
+    "description": null,
+    "Date Added": null,
+    "hidden": true,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -1920,16 +2023,24 @@
         "Price": "11.75"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-hemingway-sungrown-reserva-especial"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Hemingway Work of Art Natural",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Spice, Wood, Leather, Cedar",
-    "Strength_Profile": "Medium-Full",
+    "Strength_Profile": "Medium",
+    "description": "The Hemingway series has been in continuous production since Carlos Fuente Sr. introduced it in 1983, reviving Cuban perfecto shapes his father Arturo had worked with decades earlier. The Work of Art is one of the more visually striking vitolas in the standard lineup, a short wide perfecto at 4.875 x 60 that tapers dramatically from a 60 ring gauge at the belly down to a narrow closed nipple at the foot and a tapered head. It carries the largest ring gauge in the standard Hemingway lineup in one of its shorter lengths, a proportion that concentrates the blend and makes for a deceptively full smoke in a relatively compact cigar. The blend is aged Dominican binder and filler under an African Cameroon wrapper, aged at Chateau Fuente before release. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Perfecto",
@@ -1938,16 +2049,24 @@
         "Price": "12.00"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-hemingway-work-of-art-natural"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Petite Corona",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "",
-    "Strength_Profile": "",
+    "Strength_Profile": "Mild-Medium",
+    "description": "The Arturo Fuente Gran Reserva is the flagship line of the family brand, built on four generations of accumulated knowledge about Dominican tobacco and how to age and roll it. The Petit Corona is one of the slenderest proportions in the lineup at 5 x 38, a traditional small corona that delivers a quicker, more concentrated smoke than the larger vitolas. The narrow ring gauge keeps the burn focused and the experience compact, typically under thirty minutes. The blend is aged Dominican binder and filler under an African Cameroon wrapper, aged in Spanish cedar vaults before release. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Corona",
@@ -1956,16 +2075,24 @@
         "Price": "6.45"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-petite-corona"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Queen B Sungrown",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Ecuadorian Sungrown",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Light cedar, Fruity finish",
-    "Strength_Profile": "Mild-Medium",
+    "Strength_Profile": "Medium",
+    "description": "The Arturo Fuente Chateau Fuente series takes its name from Chateau de la Fuente, the family's private estate deep in the Dominican Republic where the tobacco is grown and aged before release. Every cigar in the Chateau line is wrapped in the signature cedar sleeve that has become one of the more recognizable presentation elements in premium Dominican cigar making.\nThe Queen B is a Belicoso at 5.5 x 52, with straight sides and a tapered pointed head that concentrates the draw and sharpens the character of the blend through the opening of the smoke. The wrapper is an Ecuadorian sun grown leaf over aged Dominican binder and filler from the Fuente family's private reserve. The Queen B is available exclusively in the sun grown wrapper, making it one of the more focused expressions in the Chateau lineup. Small batch production. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Torpedo",
@@ -1974,16 +2101,24 @@
         "Price": "10.10"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-queen-b-sungrown"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Rosado Sungrown Vitola 44",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Ecuadorian Sungrown Rosado",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Sweet cedar, Light leather, Light mineral",
-    "Strength_Profile": "Medium-Full",
+    "Strength_Profile": "Medium",
+    "description": "The Arturo Fuente Rosado Sungrown Magnum R line was introduced in 2009 as a deliberate departure from the direction the premium cigar market was moving. While most manufacturers at the time were competing to produce the strongest, fullest cigars possible, Carlos Fuente Jr. went the other direction, building something medium in strength but full in flavor. The wrapper is the key to that balance. The Rosado Sungrown is an Ecuadorian habano leaf drawn from the lower primings of the tobacco plant, the leaves that grow closer to the ground and receive less direct sun than those at the top of the stalk. Those lower leaves develop a distinctive reddish character and a more nuanced profile, and Fuente ages them for nearly a decade before they reach a cigar.\nThe Vitola 44 name causes some confusion. It does not refer to the ring gauge of the cigar, which is actually 47. The 44 denotes the number of cigars in the box, an unusual count that reflects the Fuente family's willingness to package cigars on their own terms. The cigar itself is a Corona Extra at 4.875 x 47, the slenderest proportion in the Magnum R lineup and the one that earned a 94 rating from Cigar Aficionado and top 25 honors in both 2012 and 2016. Aged Dominican binder and filler. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": "https://open.spotify.com/episode/7jxfCLMmM8GufNfU7OeUYC?si=NSyYAptgRz-7Dwz4XIrGBQ",
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -1992,17 +2127,24 @@
         "Price": "9.95"
       }
     ],
-    "slug": "arturo-fuente-rosado-sungrown-vitola-44",
-    "Podcast_Link": "https://open.spotify.com/episode/7jxfCLMmM8GufNfU7OeUYC?si=NSyYAptgRz-7Dwz4XIrGBQ"
+    "image": null,
+    "slug": "arturo-fuente-rosado-sungrown-vitola-44"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Rosado Sungrown Vitola 52",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Ecuadorian Sungrown Rosado",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Sweet cedar, Light leather, Light mineral",
-    "Strength_Profile": "Medium-Full",
+    "Strength_Profile": "Medium",
+    "description": "The Rosado Sungrown Magnum R line was introduced in 2009 using Ecuadorian Sumatra wrapper leaf drawn from the lower primings of the plant and aged for nearly a decade, a wrapper Carlos Fuente Jr. had been holding in reserve from earlier production. The Vitola 52 is a Robusto at 5 x 52, and unlike the Vitola 44, the number here does refer to the ring gauge. It is the original size of the line, one of four proportions released at launch and the one that established the Magnum R's reputation for delivering full flavor from a medium strength smoke. Aged Dominican binder and filler. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -2011,16 +2153,24 @@
         "Price": "9.25"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-rosado-sungrown-vitola-52"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Rosado Sungrown Vitola 54",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Ecuadorian Sungrown Rosado",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Sweet cedar, Light leather, Light mineral",
-    "Strength_Profile": "Medium-Full",
+    "Strength_Profile": "Medium",
+    "description": "The Rosado Sungrown Magnum R was built around Ecuadorian Sumatra wrapper leaf drawn from the lower primings of the plant and aged for nearly a decade, producing a reddish, nuanced leaf that delivers full flavor without the strength of Fuente's more aggressive lines. The Vitola 54 is a Toro at 6.5 x 54, the largest proportion in the original lineup and the one that gives the aged wrapper the most room to develop across its length. The extra length and ring gauge allow the blend to build gradually in a way the smaller vitolas cannot, making it the most expansive expression of the Magnum R character. Aged Dominican binder and filler. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -2029,16 +2179,24 @@
         "Price": "11.00"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-rosado-sungrown-vitola-54"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Rosado Sungrown Vitola 56",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Ecuadorian Sungrown Rosado",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Sweet cedar, Light leather, Light mineral",
-    "Strength_Profile": "Medium-Full",
+    "Strength_Profile": "Medium",
+    "description": "The Rosado Sungrown Magnum R was built around aged Ecuadorian Sumatra wrapper leaf drawn from the lower primings of the plant, producing a reddish, nuanced leaf that delivers full flavor at medium strength. The Vitola 56 measures 5.58 x 56, the widest ring gauge in the original lineup and one of the more substantial proportions in the series. The extra girth slows the burn and deepens the body relative to the slimmer vitolas, giving the aged wrapper and Dominican tobaccos more surface area to express themselves across a longer, more deliberate smoke. Aged Dominican binder and filler. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -2047,16 +2205,24 @@
         "Price": "11.65"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-rosado-sungrown-vitola-56"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Royal salute natural",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Connecticut Shade",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Light cedar, Fruity finish",
     "Strength_Profile": "Mild-Medium",
+    "description": "The Arturo Fuente Chateau Fuente series takes its name from Chateau de la Fuente, the family's private estate in the Dominican Republic where the tobacco is grown and every cigar is aged before being wrapped in the signature cedar sleeve. The Royal Salute is the largest vitola in the Chateau lineup at 7.625 x 54, a Double Corona that demands a patient afternoon and rewards it in full. The natural version is dressed in a Connecticut Shade wrapper, the same thin, silky leaf grown under cloth tents in the Connecticut River Valley that has defined mild premium Dominican cigars for decades. The Shade wrapper contributes a lighter, creamier character than the Sungrown or Maduro variants in the same vitola. Aged Dominican binder and filler. Boxes of ten. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Churchill",
@@ -2065,16 +2231,24 @@
         "Price": "11.60"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-royal-salute-natural"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Royal Salute Sungrown",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Ecuadorian Sungrown",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Light cedar, Fruity finish",
     "Strength_Profile": "Mild-Medium",
+    "description": "The Arturo Fuente Chateau Fuente series takes its name from Chateau de la Fuente, the family's private estate in the Dominican Republic where the tobacco is grown and every cigar is aged before being wrapped in the signature cedar sleeve. The Royal Salute Sungrown is the same Double Corona at 7.625 x 54 as the natural, dressed instead in an Ecuadorian sun grown wrapper that contributes a darker, fuller character than the Connecticut Shade of the natural version. Grown under direct sun rather than shade cloth, the Ecuadorian leaf develops thicker, more complex leaf with a deeper color and additional body. Aged Dominican binder and filler. Boxes of ten. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Churchill",
@@ -2083,16 +2257,24 @@
         "Price": "12.35"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-royal-salute-sungrown"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Sellecion Dor",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Natural Shade Grown",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Light Earth, Cream",
-    "Strength_Profile": "Medium",
+    "Strength_Profile": "Mild-Medium",
+    "description": "The Arturo Fuente Gran Reserva is the foundational line of the family brand, built on four generations of accumulated knowledge about Dominican tobacco and how to age and roll it. The Churchill Seleccion d'Oro is a 7.25 x 48, one of the more stately proportions in the Gran Reserva lineup and a size that gives the blend considerable room to develop across its length. The d'Oro designation refers to the golden Connecticut Shade wrapper, a thin, silky leaf grown under cloth tents in the Connecticut River Valley that produces a mild, creamy character notably lighter than the Cameroon wrapped versions in the same line. Aged Dominican binder and filler, aged in Spanish cedar vaults before release. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Churchill",
@@ -2101,16 +2283,24 @@
         "Price": "9.70"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-sellecion-dor"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Short Story Maduro",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Chocolate, Earth, Coffee, Spice",
     "Strength_Profile": "Medium",
+    "description": "The Hemingway series has been in continuous production since Carlos Fuente Sr. introduced it in 1983, reviving Cuban perfecto shapes his father Arturo had worked with decades earlier. The Short Story Maduro carries the same compact petite perfecto proportions as the natural, with a ring gauge tapering from 42 at the head to 49 at the belly, dressed in a dark Connecticut Broadleaf wrapper in place of the traditional Cameroon. The Broadleaf contributes additional body and a heavier character than the natural version in the same approachable proportion. Released in limited quantities seasonally. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Perfecto",
@@ -2119,16 +2309,24 @@
         "Price": "7.90"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-short-story-maduro"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Signature Maduro",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Chocolate, Earth, Coffee, Spice",
     "Strength_Profile": "Medium",
+    "description": "The Hemingway series has been in continuous production since Carlos Fuente Sr. introduced it in 1983, reviving Cuban perfecto shapes his father Arturo had worked with decades earlier. The Signature Maduro is a Grand Corona perfecto at 6 x 46, the middle proportion in the standard lineup, dressed in a dark Connecticut Broadleaf wrapper in place of the traditional Cameroon. The Broadleaf contributes additional body and a heavier character than the natural version in the same proportion, making it the fuller of the two Signature options. Released in limited quantities seasonally. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Perfecto",
@@ -2137,16 +2335,24 @@
         "Price": "10.45"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-signature-maduro"
   },
   {
-    "Cigar Brand": "Arturo Fuente.",
     "Cigar Name": "Untold Story Maduro",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Chocolate, Earth, Coffee, Spice",
     "Strength_Profile": "Medium",
+    "description": "The Hemingway series has been in continuous production since Carlos Fuente Sr. introduced it in 1983, reviving Cuban perfecto shapes his father Arturo had worked with decades earlier. The Untold Story occupies a unique position in the lineup. At 7.5 x 54 it sits between the Classic and the Masterpiece in length while carrying a larger ring gauge than either, and unlike every other standard Hemingway vitola it has never been released with a Cameroon wrapper. The Maduro is the only version that exists. The Connecticut Broadleaf wrapper over aged Dominican binder and filler gives this particular perfecto a heavier, richer character than the Cameroon wrapped siblings, and the size demands a serious time commitment. Released in limited quantities seasonally. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Perfecto",
@@ -2155,6 +2361,7 @@
         "Price": "20.25"
       }
     ],
+    "image": null,
     "slug": "arturo-fuente-untold-story-maduro"
   },
   {
@@ -2220,13 +2427,20 @@
     "description": "Ashton Classic has been a benchmark in premium cigars since the early 1980s, created by Philadelphia tobacconist Robert Levin and produced by the Fuente family in the Dominican Republic. The blend was designed to set a standard for consistency and elegance at a time when the premium cigar market was still taking shape, and it quickly became one of the most recognized names in the industry.\nFor decades, Ashton Classic has held its place as a dependable choice for new and seasoned smokers alike, known for its careful construction and long running partnership between Levin and the Fuentes. It remains one of the flagship lines that helped define modern Dominican cigar making and continues to represent the traditional side of premium cigars."
   },
   {
-    "Cigar Brand": "Ashton",
     "Cigar Name": "Ashton Maduro No. 10",
+    "Cigar Brand": "Ashton",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Leather, Cedar, Semi-sweet chocolate",
     "Strength_Profile": "Mild-Medium",
+    "description": "Ashton was founded in 1985 by Robert Levin, a Philadelphia tobacconist who partnered with the Arturo Fuente family to produce his cigars at their factory in the Dominican Republic. That partnership has defined the brand since its founding and gives Ashton direct access to the Fuente family's tobacco reserves and production standards. The Aged Maduro is widely considered the most rewarding blend in the standard Ashton lineup, rated 92 by Cigar Aficionado.\nThe wrapper is a Connecticut Broadleaf Maduro that undergoes up to three years of natural fermentation before rolling, an unhurried process that produces a dark, oily leaf without the bitterness that rushes fermentation can introduce. The binder and filler are aged Dominican tobaccos. Despite the depth and darkness of the wrapper the overall profile runs noticeably mild, making it one of the more approachable maduro cigars available at its quality level. Handmade at the Fuente factory in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -2235,16 +2449,24 @@
         "Price": "13.80"
       }
     ],
+    "image": null,
     "slug": "ashton-ashton-maduro-no-10"
   },
   {
-    "Cigar Brand": "Ashton",
     "Cigar Name": "Cabinet",
+    "Cigar Brand": "Ashton",
     "Wrapper": "Connecticut Shade",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Smooth and creamy",
     "Strength_Profile": "Mild-Medium",
+    "description": "The Ashton brand was founded in 1985 by Philadelphia tobacconist Robert Levin in partnership with the Arturo Fuente family, who produce all Ashton cigars at their factory in the Dominican Republic. The Cabinet Selection was Ashton's first line extension beyond the Classic, and the distinction between the two lines comes down primarily to time. Where the Classic uses quality Dominican tobaccos, the Cabinet Selection uses Dominican long filler tobaccos aged for five to seven years, and the Connecticut Shade wrapper is aged for an additional year beyond what the Classic receives. Six or more different Dominican leaf varieties go into the filler blend, giving the Cabinet more complexity than the simpler construction of the Classic.\nThe Connecticut Shade wrapper produces the pale, chestnut hued color the Cabinet is known for, a thin and silky leaf grown under cloth tents in the Connecticut River Valley. The overall profile runs mild to medium with a clean, smooth character that has made this one of the benchmark cigars in the accessible premium category for decades. Rated 90 and above by Cigar Aficionado across multiple vitolas. Handmade in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -2253,6 +2475,7 @@
         "Price": "18.35"
       }
     ],
+    "image": null,
     "slug": "ashton-cabinet"
   },
   {
@@ -9238,13 +9461,20 @@
     "Date Added": "2025-04-17"
   },
   {
-    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Hemingway Classic Maduro",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Earth, baking spice, Cocoa",
     "Strength_Profile": "Medium",
+    "description": "The Arturo Fuente Hemingway series was among the first modern lines to reintroduce the classic Cuban perfecto shape to the American market at scale. Perfectos require considerably more skill to roll than straight vitolas and were largely absent from Dominican production until the Fuente family made them the foundation of this line. The series is named after Ernest Hemingway, whose spare, deliberate style the cigars are meant to evoke.\nThe Maduro variant swaps the signature African Cameroon wrapper of the standard Hemingway for a Connecticut Broadleaf Maduro, while keeping the same aged Dominican binder and filler underneath. The Broadleaf is a thick, naturally sweet leaf that ferments to a deep brown and contributes a heavier body and additional complexity compared to the Cameroon. The Maduro is released in limited quantities seasonally, generally around Father's Day and the holidays, making it considerably harder to find than the standard line. Handmade in the Dominican Republic. Medium strength.",
+    "Date Added": "2025-04-17",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -9253,8 +9483,8 @@
         "Price": "12.25"
       }
     ],
-    "slug": "arturo-fuente-hemingway-classic-maduro",
-    "Date Added": "2025-04-17"
+    "image": null,
+    "slug": "arturo-fuente-hemingway-classic-maduro"
   },
   {
     "Cigar Brand": "Perla Del Mar",
