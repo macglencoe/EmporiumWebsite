@@ -638,13 +638,20 @@
     "slug": "aj-fernandez-new-world-dorado"
   },
   {
-    "Cigar Brand": "AJ Fernandez",
     "Cigar Name": "New World Oscuro",
+    "Cigar Brand": "AJ Fernandez",
     "Wrapper": "Nicaraguan Oscuro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Earth, Espresso, Dense array of sweet and spicy notes",
     "Strength_Profile": "Medium-Full",
+    "description": "AJ Fernandez New World Oscuro is one of the blends that put AJ on the map as a modern powerhouse in cigar making. Developed with his father, Ismael Fernandez, this cigar was created to honor the history of tobacco in the Americas and became an instant hit when it launched. The red box has become a familiar sight in humidors, known for offering serious value without cutting corners on craftsmanship.\nThe blend is built around all Nicaraguan tobaccos, including a dark oscuro wrapper that gives the cigar its signature richness and depth. New World Oscuro is known for dependable construction and a bold profile that helped solidify AJ’s reputation for producing high quality Nicaraguan cigars at accessible prices. It remains one of the core lines that introduced many smokers to his style of blending.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -656,7 +663,7 @@
         "Size": "Toro",
         "Barcode": "810194080074",
         "In_Stock": true,
-        "Price": "9.25"
+        "Price": "9.45"
       },
       {
         "Size": "Toro",
@@ -671,8 +678,8 @@
         "Price": "9.30"
       }
     ],
-    "slug": "aj-fernandez-new-world-oscuro",
-    "description": "AJ Fernandez New World Oscuro is one of the blends that put AJ on the map as a modern powerhouse in cigar making. Developed with his father, Ismael Fernandez, this cigar was created to honor the history of tobacco in the Americas and became an instant hit when it launched. The red box has become a familiar sight in humidors, known for offering serious value without cutting corners on craftsmanship.\nThe blend is built around all Nicaraguan tobaccos, including a dark oscuro wrapper that gives the cigar its signature richness and depth. New World Oscuro is known for dependable construction and a bold profile that helped solidify AJ’s reputation for producing high quality Nicaraguan cigars at accessible prices. It remains one of the core lines that introduced many smokers to his style of blending."
+    "image": null,
+    "slug": "aj-fernandez-new-world-oscuro"
   },
   {
     "Cigar Brand": "AJ Fernandez",
@@ -11274,24 +11281,36 @@
     "Date Added": "2025-12-04"
   },
   {
-    "Cigar Brand": "La Aroma De Cuba",
     "Cigar Name": "Mi Amor",
+    "Cigar Brand": "La Aroma De Cuba",
     "Wrapper": "Mexican San Andres",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Earth, Cocoa, Espresso, Spice",
     "Strength_Profile": "Medium-Full",
+    "description": "La Aroma de Cuba Mi Amor is one of the cornerstone collaborations between José “Pepin” Garcia and Ashton, created to give the La Aroma line a bolder, more modern identity. Produced at the My Father factory in Estelí, Nicaragua, it marked the moment when the brand shifted from its Cuban heritage revival toward being recognized for serious Nicaraguan craftsmanship. The name Mi Amor, meaning “my love,” reflects both the personal pride behind the project and the passion that defines Garcia’s blending style.\nThe cigar uses a dark Mexican San Andrés wrapper over Nicaraguan binder and filler, creating a rich yet balanced profile that helped make it one of the most awarded cigars in the La Aroma portfolio. Mi Amor remains a defining example of how the partnership between Ashton and the Garcias successfully combined heritage branding with the power and depth of Nicaraguan tobacco. It continues to stand as one of the most respected lines in modern premium cigar making.",
+    "Date Added": "2025-12-04",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Magnifico",
         "Barcode": "819577010202",
         "In_Stock": true,
         "Price": "10.95"
+      },
+      {
+        "Size": "Robusto",
+        "Barcode": "819577010226",
+        "In_Stock": true,
+        "Price": "10.50"
       }
     ],
-    "description": "La Aroma de Cuba Mi Amor is one of the cornerstone collaborations between José “Pepin” Garcia and Ashton, created to give the La Aroma line a bolder, more modern identity. Produced at the My Father factory in Estelí, Nicaragua, it marked the moment when the brand shifted from its Cuban heritage revival toward being recognized for serious Nicaraguan craftsmanship. The name Mi Amor, meaning “my love,” reflects both the personal pride behind the project and the passion that defines Garcia’s blending style.\nThe cigar uses a dark Mexican San Andrés wrapper over Nicaraguan binder and filler, creating a rich yet balanced profile that helped make it one of the most awarded cigars in the La Aroma portfolio. Mi Amor remains a defining example of how the partnership between Ashton and the Garcias successfully combined heritage branding with the power and depth of Nicaraguan tobacco. It continues to stand as one of the most respected lines in modern premium cigar making.",
-    "slug": "la-aroma-de-cuba-mi-amor",
-    "Date Added": "2025-12-04"
+    "image": null,
+    "slug": "la-aroma-de-cuba-mi-amor"
   },
   {
     "Cigar Name": "25th Anniversary",
@@ -11486,5 +11505,121 @@
     ],
     "image": null,
     "slug": "partagas-black-label"
+  },
+  {
+    "Cigar Name": "Nicaragua",
+    "Cigar Brand": "El Titan De Bronze",
+    "Wrapper": "Broadleaf",
+    "Binder": "Mexican",
+    "Filler": "Nicaragua",
+    "Flavor_Profile": "Dark Chocolate, Espresso, Spice",
+    "Strength_Profile": "Medium-Full",
+    "description": "El Titan de Bronze has operated out of Little Havana in Miami since 1995, hand rolling every cigar at their factory on Calle Ocho using Cuban-trained level 9 rollers and traditional entubado construction. The Nicaragua line, which began shipping in March 2026, is the first cigar in the company's thirty-year history to be produced outside the United States, a deliberate step toward broader distribution without dismantling the boutique identity the Miami factory is built on.\nThe blend uses a Connecticut Broadleaf wrapper over a Mexican binder and all-Nicaraguan filler, produced at the NACSA factory in Estelí. Four sizes, 20-count boxes. Medium to full in body. Made at Nicaraguan American Cigars S.A. in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674160618",
+        "In_Stock": true,
+        "Price": "9.30"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "689674160588",
+        "In_Stock": true,
+        "Price": "9.85"
+      }
+    ],
+    "image": null,
+    "slug": "el-titan-de-bronze-nicaragua"
+  },
+  {
+    "Cigar Name": "Reserva",
+    "Cigar Brand": "La Aroma de Cuba",
+    "Wrapper": "San Andres",
+    "Binder": "Nicaragua",
+    "Filler": "Nicaragua",
+    "Flavor_Profile": "Earth, Cocoa, Coffee",
+    "Strength_Profile": "Full",
+    "description": "La Aroma de Cuba is a brand built around José Pepin Garcia's work with the San Andrés wrapper, which he was among the first to establish as a serious premium varietal. The original Mi Amor earned a 95 from Cigar Aficionado and the number two Cigar of the Year in 2011. The Reserva followed as a deliberate step up in intensity from that baseline, using a top-priming San Andrés Oscuro leaf that receives more sunlight on the plant and undergoes an extended fermentation before rolling.\nThe wrapper is Mexican San Andrés Oscuro over aged Nicaraguan binder and filler from Garcia family farms. Rated 94 by Cigar Aficionado. Six sizes. Medium to full in body. Made at My Father Cigars factory in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Divino (Toro)",
+        "Barcode": "819577010288",
+        "In_Stock": true,
+        "Price": "14.60"
+      },
+      {
+        "Size": "Maximo (Robusto)",
+        "Barcode": "819577010301",
+        "In_Stock": true,
+        "Price": "13.25"
+      }
+    ],
+    "image": null,
+    "slug": "la-aroma-de-cuba-reserva"
+  },
+  {
+    "Cigar Name": "Rare Corojo 25th Anniversary",
+    "Cigar Brand": "Punch",
+    "Wrapper": "Corojo",
+    "Binder": "Corojo",
+    "Filler": "Habano, Corojo",
+    "Flavor_Profile": "Spice, Cedar, Earth",
+    "Strength_Profile": "Medium-Full",
+    "description": "The Punch Rare Corojo line turns 25 this year, and the anniversary release marks the first time the brand has been built entirely around the tobacco its name has always promised. The original Rare Corojo uses an Ecuadorian Sumatra wrapper and has never contained Corojo leaf. The 25th Anniversary corrects that, delivering a Honduran puro sourced entirely from Eiroa family farms in the Jamastran Valley: Corojo wrapper, Corojo binder, and filler combining Corojo and Habano. A single size, 6x54 toro, in 10-count boxes. Regular production. Medium to full in body. Made at Fabrica de Puros Aladino S.A. in the Jamastran Valley, Honduras.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674169659",
+        "In_Stock": true,
+        "Price": "11.95"
+      }
+    ],
+    "image": null,
+    "slug": "punch-rare-corojo-25th-anniversary"
+  },
+  {
+    "Cigar Name": "King of the World VSOP",
+    "Cigar Brand": "El Rey Del Mundo",
+    "Wrapper": "Ecuadorian Sumatran",
+    "Binder": "Nicaraguan Habano",
+    "Filler": "Nicaragua, Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Medium",
+    "description": "VSOP stands for Very Old Superior Pale, a term borrowed from the cognac world used to indicate aged product, and that framing is deliberate here. The cigars were rolled in 2021 and spent over four years resting in STG's aging room before release, a follow-up to the 2024 King of the World, which was a Honduran puro made at the Aladino factory. The VSOP takes a different direction, moving production to STG Estelí and changing the blend entirely.\nThe wrapper is Ecuadorian Sumatra over a Nicaraguan Habano binder, with filler from Nicaragua and the Dominican Republic. Single size, 6x52 toro, in 16-count boxes. Limited to 2,000 boxes. Medium to full in body. Made at STG Estelí in Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674171447",
+        "In_Stock": true,
+        "Price": "11.85"
+      }
+    ],
+    "image": null,
+    "slug": "el-rey-del-mundo-king-of-the-world-vsop"
   }
 ]
