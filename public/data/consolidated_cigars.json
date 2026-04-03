@@ -590,19 +590,26 @@
     "slug": "aj-fernandez-new-world-cameroon"
   },
   {
-    "Cigar Brand": "AJ Fernandez",
     "Cigar Name": "New World Connecticut",
+    "Cigar Brand": "AJ Fernandez",
     "Wrapper": "Connecticut Shade",
     "Binder": "Mexican, San Andres",
     "Filler": "Brazilian, Nicaraguan",
     "Flavor_Profile": "Cream, Light Spice, Cedar",
     "Strength_Profile": "Mild-Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
         "Barcode": "851350001991",
         "In_Stock": true,
-        "Price": "9.00"
+        "Price": "10.00"
       },
       {
         "Size": "Toro",
@@ -617,6 +624,7 @@
         "Price": "8.80"
       }
     ],
+    "image": null,
     "slug": "aj-fernandez-new-world-connecticut"
   },
   {
@@ -682,29 +690,36 @@
     "slug": "aj-fernandez-new-world-oscuro"
   },
   {
-    "Cigar Brand": "AJ Fernandez",
     "Cigar Name": "Puro Especial",
+    "Cigar Brand": "AJ Fernandez",
     "Wrapper": "Nicaraguan Habano",
     "Binder": "Habano, Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Nuts, Sweet",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/0WBuwDKz5N5H4NhmImJJNR?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": "7429457091073",
+        "Barcode": "810194081132",
         "In_Stock": true,
         "Price": "10.00"
       },
       {
         "Size": "Toro",
-        "Barcode": "7429457091080",
+        "Barcode": "810194081118",
         "In_Stock": true,
         "Price": "10.60"
       },
       {
         "Size": "Gordo",
-        "Barcode": "7429457291299",
+        "Barcode": "810194081057",
         "In_Stock": true,
         "Price": "11.15"
       },
@@ -715,8 +730,8 @@
         "Price": "9.45"
       }
     ],
-    "slug": "aj-fernandez-puro-especial",
-    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/0WBuwDKz5N5H4NhmImJJNR?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+    "image": null,
+    "slug": "aj-fernandez-puro-especial"
   },
   {
     "Cigar Brand": "AJ Fernandez",
@@ -7319,21 +7334,29 @@
     "Podcast_Link": "https://open.spotify.com/episode/1qqfx0OPG3qQr0zPPE7xVb?si=rvtcGJTDQFK1nLReZuvz1A"
   },
   {
-    "Cigar Brand": "La Flor Dominicana",
     "Cigar Name": "DL 700 Maduro",
+    "Cigar Brand": "La Flor Dominicana",
     "Wrapper": "Habano Maduro",
     "Binder": "Dominican Ligero",
     "Filler": "Dominican Ligero",
     "Flavor_Profile": "Pepper, Earth, Leather, Complex, and Full Bodied",
     "Strength_Profile": "Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Gordo",
         "Barcode": "7460644702396",
         "In_Stock": true,
-        "Price": "11.90"
+        "Price": "12.50"
       }
     ],
+    "image": null,
     "slug": "la-flor-dominicana-dl-700-maduro"
   },
   {
