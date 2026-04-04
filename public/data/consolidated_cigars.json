@@ -824,17 +824,24 @@
     "slug": "aj-fernandez-san-lotano-requim-connecticut"
   },
   {
-    "Cigar Brand": "AJ Fernandez",
     "Cigar Name": "San Lotano Requim Maduro",
+    "Cigar Brand": "AJ Fernandez",
     "Wrapper": "San Andres Maduro",
     "Binder": "Honduran Broadleaf",
     "Filler": "Honduran, Nicaraguan",
     "Flavor_Profile": "Chocolate, Slightly sweet, Creamy",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
-        "Barcode": "851350003988",
+        "Barcode": "810194080791",
         "In_Stock": true,
         "Price": "9.50"
       },
@@ -845,6 +852,7 @@
         "Price": "10.00"
       }
     ],
+    "image": null,
     "slug": "aj-fernandez-san-lotano-requim-maduro"
   },
   {
@@ -10034,23 +10042,36 @@
     "Date Added": "2025-04-17"
   },
   {
-    "Cigar Brand": "E.P. Carrillo",
     "Cigar Name": "Essence Maduro",
+    "Cigar Brand": "E.P. Carrillo",
     "Wrapper": "Mexican San Andres",
     "Binder": "Honduran",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Spice, Cocoa, Sweetness",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": "2025-04-17",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
         "Barcode": "811167022831",
         "In_Stock": true,
         "Price": "9.80"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "811167022848",
+        "In_Stock": true,
+        "Price": "11.15"
       }
     ],
-    "slug": "ep-carrillo-essence-maduro",
-    "Date Added": "2025-04-17"
+    "image": null,
+    "slug": "ep-carrillo-essence-maduro"
   },
   {
     "Cigar Brand": "Montecristo",
