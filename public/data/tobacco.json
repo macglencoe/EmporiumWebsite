@@ -697,5 +697,84 @@
     ],
     "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1773436438101-image-pi1e4IX4pNJWA9DuZgCVavXiHtOJCK.jpeg",
     "slug": "quiet-nights"
+  },
+  {
+    "Tobacco Name": "Lone Sentinel",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Virginia",
+    "description": "Lone Sentinel is part of the Summit Series, four regular production plug tobaccos Cornell and Diehl released in January 2026, each inspired by the landscape of the American West. The series was designed around plug tobacco specifically, with head blender Jeremy Reeves pressing whole-leaf tobacco under pressure to marry the components and deepen the flavors before it ever reaches the smoker. Of the four blends in the series, Lone Sentinel is the most traditional, a straightforward Virginia and Perique pairing without the Oriental component that distinguishes the companion Hoodoo Ridge blend.\nThe components are whole-leaf red and orange Virginias with pure St. James Perique from C&D's proprietary source at 31 Farms in St. James Parish, Louisiana. The pressing integrates the two and draws out the natural complexity of the leaf. Plug cut, slice to preference. Regular production.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Virginia",
+      "Perique"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1775765540423-image-W0vs12LdJzjj6ZC6OhVTXjjlgYEta3.jpeg",
+    "slug": "lone-sentinel"
+  },
+  {
+    "Tobacco Name": "Commonwealth",
+    "Tobacco Brand": "Samuel Gawith",
+    "Family": "English",
+    "description": "What makes Commonwealth stand out in the Samuel Gawith catalog is its deliberate simplicity. Most English blends use Orientals alongside the Latakia to add complexity and spice, but Commonwealth skips them entirely, keeping the formula to just two components: heavily steamed Virginias and Cyprus Latakia in roughly equal measure. The result is one of the oldest blends in the Samuel Gawith lineup and one of the most unambiguous expressions of the Latakia and Virginia pairing available. The Latakia leads with smoke, leather, and earth, while the Virginias provide sweetness and depth underneath. Ribbon cut. Medium in strength, full in flavor. Produced at the shared Samuel Gawith and Gawith Hoggarth facility in Kendal, England.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Virginia",
+      "Latakia"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1775765874149-image-eSlUvZDM1xiyNjnm3ag1l0hi0EW1Yg.jpeg",
+    "slug": "commonwealth"
+  },
+  {
+    "Tobacco Name": "Old Joe Krantz",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Burley",
+    "description": "Old Joe Krantz was created by the late Bob Runowski and named for the man who taught him to smoke a pipe: his grandfather. The blend is a straightforward American Burley mixture with no flavoring, no casing, and no apology. Dark and cube-cut Burley form the core, driving the earthy, nutty, and slightly woody character that defines the blend, while red Virginia adds sweetness and body to keep the Burley from becoming austere. Perique seasons the background with its characteristic peppery spice and dark fruit depth. It is the kind of tobacco that asks nothing of you except that you slow down and pay attention. Coarse ribbon cut. Medium in body, notably generous in nicotine.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Burley",
+      "Virginia",
+      "Perique"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1775768635789-image-answN5MHbKr5WVDH6FlTQ6n8YnZbHF.jpeg",
+    "slug": "old-joe-krantz"
+  },
+  {
+    "Tobacco Name": "Full Virginia mixture",
+    "Tobacco Brand": "Samuel Gawith",
+    "Family": "Virginia",
+    "description": "The Full Virginia Mixture uses the same 100% Bright Virginia leaf as the Flake family but takes a different path to get there: cold pressed for three weeks before being stoved, then presented as a ribbon cut rather than a flake. The cold pressing and stoving process develops the leaf differently than the hot pressing used on the Full Virginia Flake, producing a somewhat lighter character while retaining the natural sweetness and depth of pure Virginia tobacco. The ribbon cut also makes it more immediately accessible than the flake, requiring less preparation before packing. No flavorings, no additives. Ribbon cut. Medium in strength. Produced at the shared Samuel Gawith and Gawith Hoggarth facility in Kendal, England.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Virginia"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1775768872328-image-dLMBulF6bV5aCUoZrfZU8lEHHzLwaq.jpeg",
+    "slug": "full-virginia-mixture"
+  },
+  {
+    "Tobacco Name": "Navigator",
+    "Tobacco Brand": "G.L. Pease",
+    "Family": "Virginia",
+    "description": "Navigator sits in Pease's Old London Series and takes its cues from the Navy flake tradition, a style with roots in the maritime tobacco culture that sustained long voyages with pressed Virginia leaf and rum. The blend is red and bright Virginias pressed and aged with a touch of dark rum, joined by a supporting measure of dark-fired Kentucky leaf. Pease is deliberate in flagging that this is not an aromatic: the rum enhances the natural fruitiness of the Virginias and softens the Kentucky's edges rather than adding a flavoring note on top. The Kentucky builds slowly through the bowl, starting as a background presence before pushing forward with woody smokiness as the bowl develops. Broken flake. Medium to full in strength.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Virginia",
+      "Dark Fired Kentucky"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1775769247031-image-Ui4udfvwj6j16mz9QI6xpnIzpciwMM.jpeg",
+    "slug": "navigator"
+  },
+  {
+    "Tobacco Name": "Triple Play",
+    "Tobacco Brand": "G.L. Pease",
+    "Family": "Virginia",
+    "description": "Triple Play is the second entry in Pease's New World Series, introduced in 2011 as a direct follow-up to JackKnife Plug. The starting point was JackKnife's Virginia and dark-fired Kentucky foundation, and the question was whether Perique could be added to that blend without throwing off the balance. The answer, after some reworking of the Virginia ratios and a reduction of the Kentucky component, was yes. The three condiments in the name are the three components that make it work together: red and bright flue-cured Virginias providing the sweet foundation, dark-fired Kentucky adding smoke and earth, and Acadian Perique bringing spice and savory depth. The whole blend is pressed and matured in cakes before being cut into bars, which integrates the components and deepens the flavors before it reaches the smoker. Bold but balanced. Plug cut.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Virginia",
+      "Perique",
+      "Dark Fired Kentucky"
+    ],
+    "image": null,
+    "slug": "triple-play"
   }
 ]
