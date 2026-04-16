@@ -11665,5 +11665,57 @@
     ],
     "image": null,
     "slug": "el-rey-del-mundo-king-of-the-world-vsop"
+  },
+  {
+    "Cigar Name": "Cabinet Oscuro Torpedito",
+    "Cigar Brand": "La Flor Dominicana",
+    "Wrapper": "Ecuador Sumatra Oscuro",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Pepper, Leather, Earth",
+    "Strength_Profile": "Medium-Full",
+    "description": "La Flor Dominicana was founded in 1996 in Santiago and made a decision the following year that defined the brand's identity: they purchased their own farm in La Canela in the Dominican Republic and began growing, aging, and processing their own tobacco. That vertical integration is what makes the Ligero Cabinet Oscuro line meaningful. The binder and filler are estate-grown Dominican ligero leaf from La Canela, harvested from the top primings of the plant where the leaf receives the most sunlight and develops the most intensity. The wrapper is an Ecuadorian Sumatra that has been treated to naturally darken and sweeten it, resulting in the Oscuro designation. The Torpedito measures 4.75x50, making it the smallest and quickest expression in the Cabinet Oscuro lineup. Full in body. Made at La Flor Dominicana's factory in Santiago, Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "4.75x50",
+        "Barcode": "7460644702860",
+        "In_Stock": true,
+        "Price": "10.20"
+      }
+    ],
+    "image": null,
+    "slug": "la-flor-dominicana-cabinet-oscuro-torpedito"
+  },
+  {
+    "Cigar Name": "Airbender Maduro",
+    "Cigar Brand": "La Flor Dominicana",
+    "Wrapper": "Ecuador Habano Maduro",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Wood, Earth, Pepper, Cocoa",
+    "Strength_Profile": "Medium-Full",
+    "description": "The Air Bender was named by founder Litto Gomez after his love of kung fu films, and the blend lives up to the reference. The core blend is estate-grown Dominican binder and filler from LFD's La Canela farm, with the filler incorporating Piloto Cubano, Sumatra seed, and Corojo leaf. The Maduro version uses an Ecuadorian Habano Oscuro wrapper rather than the natural Ecuadorian Habano of the original, which is darker, oilier, and adds an additional layer of depth to an already full-bodied blend. Rated 91 by Cigar Aficionado. Full in body. Made at La Flor Dominicana's factory in Santiago, Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "7460644705199",
+        "In_Stock": true,
+        "Price": "13.80"
+      }
+    ],
+    "image": null,
+    "slug": "la-flor-dominicana-airbender-maduro"
   }
 ]
