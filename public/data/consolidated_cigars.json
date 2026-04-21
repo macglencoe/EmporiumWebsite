@@ -5136,21 +5136,29 @@
     "slug": "esteban-carrera-esteban-carrera-unforsaken"
   },
   {
-    "Cigar Brand": "Esteban Carrera",
     "Cigar Name": "Esteban Carrera Chupacabra",
+    "Cigar Brand": "Esteban Carrera",
     "Wrapper": "Mexican San Andres",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Bittersweet chocolate, Hazelnut, Earth, Hints of black pepper",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Gordo",
         "Barcode": "856713004077",
         "In_Stock": true,
-        "Price": "10.60"
+        "Price": "13.25"
       }
     ],
+    "image": null,
     "slug": "esteban-carrera-esteban-carrera-chupacabra"
   },
   {
