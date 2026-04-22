@@ -776,5 +776,79 @@
     ],
     "image": null,
     "slug": "triple-play"
+  },
+  {
+    "Tobacco Name": "Oriental Silk",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Virginia",
+    "description": "Oriental Silk takes an approach that sets it apart from most Oriental-forward blends: there is no Latakia anywhere in the blend, which means the Turkish leaf has to carry the exotic character on its own without the smoky backdrop that Latakia typically provides in English-style mixtures. The result is brighter and more floral than a standard English blend, with the Turkish doing its work through spice, incense, and a distinctive mouth tingle rather than smoke and leather. Bright Virginia flake and bright Virginia ribbon provide sweetness and body, and Perique adds its characteristic peppery depth and dark fruit in the background. No flavorings, no casings. Ribbon cut. Medium in strength.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Virginia",
+      "Perique",
+      "Oriental"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1776890002546-image-roKJOT0xdY0NVnBZ3stju3qH6Oc1Qn.jpeg",
+    "slug": "oriental-silk"
+  },
+  {
+    "Tobacco Name": "Tuggle Hall",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "English",
+    "description": "Tuggle Hall has been in production since 1996 and draws frequent comparisons to Dunhill 965, though the construction is genuinely different. What makes it unusual as an English-style blend is the absence of Virginia entirely. Most English mixtures use Virginia as the foundation and sweeten the Latakia with it, but Tuggle Hall replaces Virginia with white Burley, which gives the blend a drier, nuttier character and a cooler smoke. Cyprian Latakia provides the smoke and leather, the Burley provides body and a mild nuttiness, and a restrained measure of Perique adds spice without taking over. The result reads as English in spirit but distinctly American in construction. Ribbon cut. Medium to full in body, medium to strong in strength.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Latakia",
+      "Perique",
+      "White Burley"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1776890176634-image-zj25Fpk47HO5lXv74r8HSQHilkAkyw.jpeg",
+    "slug": "tuggle-hall"
+  },
+  {
+    "Tobacco Name": "Star of the East",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "English",
+    "description": "Star of the East is one of Cornell and Diehl's best selling English blends and one of the more committed Latakia expressions in their catalog. The blend starts with a 50% Latakia base, which is a generous proportion that puts it firmly in the Latakia-forward category without tipping into outright Latakia bomb territory. Turkish leaf adds the exotic floral and spice character that gives the blend its name and its complexity, and stoved red Virginia provides sweetness and body to round out the profile and keep the blend from becoming austere. No flavorings, no condiments. Ribbon cut. Full in body. Medium in strength.",
+    "Sale Form": "Bulk",
+    "Components": [
+      "Virginia",
+      "Latakia",
+      "Oriental"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1776890410160-image-OhkwWdyCOr6xZObGj5TqTGSlDmfLim.jpeg",
+    "slug": "star-of-the-east"
+  },
+  {
+    "Tobacco Name": "Star of the East Gold",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "English",
+    "description": "Star of the East Gold takes the name and Oriental character of the original in a significantly different direction. Where the standard blend leads with Latakia at 50% of the mix, the Gold pulls back considerably on the Latakia and pushes the Virginia and Turkish leaf forward instead, making it a Virginia and Oriental blend with Latakia playing a supporting and aromatic role rather than defining the profile. The result is lighter, sweeter, and more approachable than the original, with the Turkish leaf getting room to express its floral and nutty character without competition from heavy smoke. No flavorings. Ribbon cut. Medium in body and strength.",
+    "Sale Form": "Tin",
+    "Components": [
+      "Viriginia",
+      "Latakia",
+      "Oriental"
+    ],
+    "image": null,
+    "slug": "star-of-the-east-gold"
+  },
+  {
+    "Tobacco Name": "Firebird Flake 2026",
+    "Tobacco Brand": "Cornell & Diehl",
+    "Family": "Small Batch",
+    "description": "Firebird Flake is a Cornell and Diehl Small Batch release, first offered in January 2025 and re-released in January 2026 in limited quantities. Head blender Jeremy Reeves built the blend around a concept that is deceptively simple to describe but genuinely difficult to execute: making dark-fired Kentucky and heirloom Oriental tobacco equal partners rather than relegating either one to a supporting role. Dark-fired is bold and overt and wants to dominate; Oriental can disappear behind stronger components. The challenge was giving each the same presence in the bowl.\nWhat makes the construction more complex than it sounds is the depth of sourcing behind it. Three grades of Red Virginia from different crop years provide the foundation. Three Oriental varietals from Thailand, Macedonia, and Turkey contribute different facets of that sun-cured character. Two grades of dark-fired Kentucky, one fully fire-cured and one semi fire-cured, bring the smoky counterweight. Tobaccos from crop years spanning 2005 to 2021 are represented in the blend. Pressed into flakes. Limited Small Batch production.",
+    "Sale Form": "Tin",
+    "Components": [
+      "2005 Izmir",
+      "2005 Samsun",
+      "2019 Us Semi Fire-Cured Kentucky",
+      "2015 Dark Fired Kentucky",
+      "2013 Red Virginia (TH-13)",
+      "2021 Red Virginia (BF3-21)",
+      "2021 Red Virginia (BLF2-21)"
+    ],
+    "image": "https://6knylqljpdj8syqk.public.blob.vercel-storage.com/images/1776891016603-image-NRXJ9Ov13Mz4wLd5c0Mq5HVE4oe9lY.jpeg",
+    "slug": "firebird-flake-2026"
   }
 ]
