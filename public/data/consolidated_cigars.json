@@ -613,9 +613,9 @@
       },
       {
         "Size": "Toro",
-        "Barcode": "851350001960",
+        "Barcode": "810194081736",
         "In_Stock": true,
-        "Price": "9.10"
+        "Price": "9.70"
       },
       {
         "Size": "Perfecto",
@@ -6552,22 +6552,30 @@
     "slug": "j-c-newman-julius-caesar"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "La Unica #600 Connecticut",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Connecticut Shade",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Nuts, Cream, Fruit",
     "Strength_Profile": "Mild",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "76622160378",
         "In_Stock": true,
-        "Price": "9.60"
+        "Price": "9.95"
       }
     ],
-    "slug": "j-c-newman-la-unica-600-connecticut"
+    "image": null,
+    "slug": "jc-newman-la-unica-600-connecticut"
   },
   {
     "Cigar Brand": "J.C. Newman",
