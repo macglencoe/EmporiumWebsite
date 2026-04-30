@@ -6152,22 +6152,30 @@
     "slug": "j-c-newman-diamond-crown-3"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Diamond Crown #4",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Connecticut Shade",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Earth, Nutmeg, Burnt spices",
     "Strength_Profile": "Mild-Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
         "Barcode": "76622097414",
         "In_Stock": true,
-        "Price": "16.55"
+        "Price": "17.86"
       }
     ],
-    "slug": "j-c-newman-diamond-crown-4"
+    "image": null,
+    "slug": "jc-newman-diamond-crown-4"
   },
   {
     "Cigar Brand": "J.C. Newman",
