@@ -11733,5 +11733,113 @@
     ],
     "image": null,
     "slug": "la-flor-dominicana-airbender-maduro"
+  },
+  {
+    "Cigar Name": "Appointment Brazil",
+    "Cigar Brand": "El Rey Del Mundo",
+    "Wrapper": "Brazilian Arapiraca",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Earth, Cocoa, Spice",
+    "Strength_Profile": "Medium-Full",
+    "description": "The Appointment Brazil arrived at PCA 2026 as the second entry in the Appointment line, a follow-up to the original that debuted in April 2025. The original used a Honduran Cameroon-seed wrapper grown by the Eiroa family in the Jamastran Valley. The Brazil swaps that out for a Brazilian Arapiraca wrapper from the Alagoas region, which is a darker, oilier leaf that moves the blend in a bolder direction while keeping the price under ten dollars.\nThe wrapper is Brazilian Arapiraca over Nicaraguan binder and filler throughout. Three sizes, 20-count boxes. Medium to full in body. Made at HATSA in Danlí, Honduras.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674171522",
+        "In_Stock": true,
+        "Price": "10.00"
+      },
+      {
+        "Size": "Robusto",
+        "Barcode": "689674171492",
+        "In_Stock": true,
+        "Price": "9.55"
+      },
+      {
+        "Size": "Gordo",
+        "Barcode": "689674171553",
+        "In_Stock": true,
+        "Price": "10.30"
+      }
+    ],
+    "image": null,
+    "slug": "el-rey-del-mundo-appointment-brazil"
+  },
+  {
+    "Cigar Name": "30 years",
+    "Cigar Brand": "Alec Bradley",
+    "Wrapper": "Honduran Trojes",
+    "Binder": "Honduran, Nicaraguan",
+    "Filler": "Honduran, Nicaraguan",
+    "Flavor_Profile": "Pepper, Leather, Cinnamon",
+    "Strength_Profile": "Medium-Full",
+    "description": "Alan Rubin founded Alec Bradley in 1996 after leaving the family fastener business, naming the company after his two sons. In 2023 he sold to STG for north of seventy million dollars and stepped back. When it came time to select the blend for the 30th anniversary cigar, he stepped back in. Bradley and Alec put the blend together over several months of iterations. Alan sampled his way through the process alongside them. All three landed on the same blend at the final selection, which is the kind of outcome that makes an anniversary cigar feel like something more than a marketing exercise.\nThe wrapper is a Honduran Trojes leaf, a tobacco that has appeared in several Alec Bradley releases over the years and one that the family clearly trusts. Beneath it is a double binder, one leaf from Honduran Jamastran and one from Nicaraguan Jalapa, over filler from both countries. Three regular production sizes in 16-count boxes, plus a retail-exclusive Perfecto limited to 2,026 boxes of ten for 2026 only. Ships in May 2026. Medium to full in body. Made at Raíces Cubanas in Honduras.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674171621",
+        "In_Stock": true,
+        "Price": "10.85"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "689674171652",
+        "In_Stock": true,
+        "Price": "11.95"
+      }
+    ],
+    "image": null,
+    "slug": "alec-bradley-30-years"
+  },
+  {
+    "Cigar Name": "Intencion",
+    "Cigar Brand": "La Gloria Cubana",
+    "Wrapper": "Mexican San Andres",
+    "Binder": "Indonesian",
+    "Filler": "Nicaraguan, Honduran",
+    "Flavor_Profile": "Chocolate, Leather, Spice",
+    "Strength_Profile": "Medium-Full",
+    "description": "The name is a statement of intent. Brand manager John Hakim described the Intención as a deliberate return to what La Gloria Cubana was founded on, specifically the proposition that fuller-bodied cigars should be available at prices that don't require a second thought. The reference point is the La Gloria Cubana Wavell, the cigar credited with helping ignite the first cigar boom, which sold for $2.90. The Intención follows that logic in a different era, priced between six and eight dollars across three sizes.\nThe wrapper is Mexican San Andrés over an Indonesian binder, with filler drawing from four growing regions: Nicaraguan Estelí ligero and viso, Honduran Jamastran viso, and Honduran La Entrada ligero. Three sizes, 20-count boxes. Medium to full in body. Made at STG Estelí in Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674169475",
+        "In_Stock": true,
+        "Price": "6.50"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "689674169505",
+        "In_Stock": true,
+        "Price": "7.60"
+      },
+      {
+        "Size": "Gigante",
+        "Barcode": "689674169536",
+        "In_Stock": true,
+        "Price": "8.70"
+      }
+    ],
+    "image": null,
+    "slug": "la-gloria-cubana-intencion"
   }
 ]
