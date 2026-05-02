@@ -847,7 +847,7 @@
       },
       {
         "Size": "Toro",
-        "Barcode": "851350003964",
+        "Barcode": "810194080814",
         "In_Stock": true,
         "Price": "10.00"
       }
@@ -9157,13 +9157,20 @@
     "slug": "quorum-quorum-maduro"
   },
   {
-    "Cigar Brand": "Quorum",
     "Cigar Name": "Quorum Natural",
+    "Cigar Brand": "Quorum",
     "Wrapper": "Connecticut",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "",
     "Strength_Profile": "Mild-Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -9175,9 +9182,10 @@
         "Size": "Toro",
         "Barcode": "76622771307",
         "In_Stock": true,
-        "Price": "2.50"
+        "Price": "2.75"
       }
     ],
+    "image": null,
     "slug": "quorum-quorum-natural"
   },
   {
