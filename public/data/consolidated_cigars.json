@@ -11857,5 +11857,101 @@
     ],
     "image": null,
     "slug": "la-gloria-cubana-intencion"
+  },
+  {
+    "Cigar Name": "Ecuadorian Shade",
+    "Cigar Brand": "Macanudo",
+    "Wrapper": "Ecuadorian Shade",
+    "Binder": "US Broadleaf",
+    "Filler": "Dominican, Nicaraguan",
+    "Flavor_Profile": "Nuts, Vanilla, Spice",
+    "Strength_Profile": "Mild-Medium",
+    "description": "General Cigar debuted this line at PCA 2026 as part of a broader effort to reestablish Macanudo as a serious everyday brand rather than a legacy name coasting on its reputation. The blend is built around a U.S. Broadleaf binder over Dominican and Nicaraguan filler, with the Ecuadorian shade wrapper providing a lighter, smoother character that keeps the cigar approachable without sacrificing complexity. Box pressed across all three sizes, 20-count boxes. Mild to medium in body. Made at STG Estelí in Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674174103",
+        "In_Stock": true,
+        "Price": "7.60"
+      },
+      {
+        "Size": "Gigante",
+        "Barcode": "689674174189",
+        "In_Stock": true,
+        "Price": "9.75"
+      }
+    ],
+    "image": null,
+    "slug": "macanudo-ecuadorian-shade"
+  },
+  {
+    "Cigar Name": "Sumatra",
+    "Cigar Brand": "Macanudo",
+    "Wrapper": "Ecuadorian Sumatran",
+    "Binder": "US Broadleaf",
+    "Filler": "Dominican, Nicaraguan",
+    "Flavor_Profile": "Cocoa, Coffee, Oak, Spice",
+    "Strength_Profile": "Medium-Full",
+    "description": "General Cigar debuted this line at PCA 2026 as part of a broader effort to reestablish Macanudo as a serious everyday brand rather than a legacy name coasting on its reputation. The blend is built around a U.S. Broadleaf binder over Dominican and Nicaraguan filler, with the Ecuadorian Sumatra wrapper adding a richer, more robust character than the shade version while keeping the blend firmly in approachable territory. Box pressed across all three sizes, 20-count boxes. Medium in body. Made at STG Estelí in Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674173991",
+        "In_Stock": true,
+        "Price": "7.60"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "689674174042",
+        "In_Stock": true,
+        "Price": "8.75"
+      },
+      {
+        "Size": "Gigante",
+        "Barcode": "689674174073",
+        "In_Stock": false,
+        "Price": "9.75"
+      }
+    ],
+    "image": null,
+    "slug": "macanudo-sumatra"
+  },
+  {
+    "Cigar Name": "Amar",
+    "Cigar Brand": "AJ Fernandez",
+    "Wrapper": "Nicaraguan Habano",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Cinnamon, Cocoa, Pepper",
+    "Strength_Profile": "Medium-Full",
+    "description": "In March 2025 a fire broke out at Tabacalera A.J. Fernandez Cigars de Nicaragua in Estelí, the factory where Fernandez built his reputation and produces much of his portfolio. The response from the industry was immediate. Amar is his acknowledgment of that. The name carries two meanings at once: the Spanish word for love and the Arabic word for moon, a reference to Abdel Fernandez's dual Cuban and Lebanese heritage that makes the gratitude feel personal rather than ceremonial.\nThe cigar is a Nicaraguan puro, Habano wrapper over Nicaraguan binder and filler from Fernandez's own estate farms, and is produced at his San Lotano factory in Ocotal rather than the Estelí facility. Four sizes: Robusto, Toro, Gordo, and a 6.5x50 Torito. Medium to full in body. Made at the San Lotano factory in Ocotal, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "810194082597",
+        "In_Stock": true,
+        "Price": "11.95"
+      }
+    ],
+    "image": null,
+    "slug": "aj-fernandez-amar"
   }
 ]
