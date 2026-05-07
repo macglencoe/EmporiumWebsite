@@ -4845,22 +4845,30 @@
     "slug": "e-p-carrillo-new-wave-connecticut-divino"
   },
   {
-    "Cigar Brand": "E.P. Carrillo",
     "Cigar Name": "New Wave Connecticut Stella",
+    "Cigar Brand": "E.P. Carrillo",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Nicaraguan",
     "Filler": "Dominican",
     "Flavor_Profile": "Leather, Sweet tobacco",
     "Strength_Profile": "Mild-Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Corona",
         "Barcode": "811167020172",
         "In_Stock": true,
-        "Price": "6.90"
+        "Price": "7.60"
       }
     ],
-    "slug": "e-p-carrillo-new-wave-connecticut-stella"
+    "image": null,
+    "slug": "ep-carrillo-new-wave-connecticut-stella"
   },
   {
     "Cigar Brand": "E.P. Carrillo",
@@ -10201,23 +10209,30 @@
     "Date Added": "2025-04-17"
   },
   {
-    "Cigar Brand": "Macanudo",
     "Cigar Name": "M Irish Cream",
+    "Cigar Brand": "Macanudo",
     "Wrapper": "Cameroon",
     "Binder": "Honduran OSA",
     "Filler": "Piloto Cubano, Dominican Olor",
     "Flavor_Profile": "Cream, Chocolate, Caramel",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": "2025-04-17",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
         "Barcode": "689674161530",
         "In_Stock": true,
-        "Price": "10.50"
+        "Price": "10.75"
       }
     ],
-    "slug": "macanudo-m-irish-cream",
-    "Date Added": "2025-04-17"
+    "image": null,
+    "slug": "macanudo-m-irish-cream"
   },
   {
     "Cigar Brand": "E.P. Carrillo",
