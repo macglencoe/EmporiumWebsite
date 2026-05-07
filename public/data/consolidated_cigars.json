@@ -8681,21 +8681,35 @@
     "slug": "partagas-valle-verde"
   },
   {
-    "Cigar Brand": "Perla Del Mar",
     "Cigar Name": "Corojo",
+    "Cigar Brand": "Perla Del Mar",
     "Wrapper": "Corojo",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Spice, Earth, Wood",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "76622072305",
         "In_Stock": true,
         "Price": "9.95"
+      },
+      {
+        "Size": "Robusto",
+        "Barcode": "076622072206",
+        "In_Stock": true,
+        "Price": "9.50"
       }
     ],
+    "image": null,
     "slug": "perla-del-mar-corojo"
   },
   {
