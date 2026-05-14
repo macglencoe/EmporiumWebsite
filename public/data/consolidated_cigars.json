@@ -4552,7 +4552,7 @@
         "Size": "Toro",
         "Barcode": "876742000758",
         "In_Stock": true,
-        "Price": "10.50"
+        "Price": "13.00"
       },
       {
         "Size": "Corona",
@@ -4577,27 +4577,35 @@
     "slug": "drew-estate-tabak-dulce"
   },
   {
-    "Cigar Brand": "Drew Estate",
     "Cigar Name": "Tabak Negra",
+    "Cigar Brand": "Drew Estate",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Rich tobacco core, espresso, hint of chocolate",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
         "Barcode": "876742000611",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "12.00"
       },
       {
         "Size": "Toro",
         "Barcode": "876742000628",
         "In_Stock": true,
-        "Price": "10.50"
+        "Price": "13.00"
       }
     ],
+    "image": null,
     "slug": "drew-estate-tabak-negra"
   },
   {
