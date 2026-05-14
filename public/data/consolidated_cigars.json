@@ -7725,21 +7725,29 @@
     "slug": "macanudo-cafe"
   },
   {
-    "Cigar Brand": "Macanudo",
     "Cigar Name": "Espresso and Cream",
+    "Cigar Brand": "Macanudo",
     "Wrapper": "Indonesian",
     "Binder": "Philippine",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Cedar, Earth, Spice",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "689674127727",
         "In_Stock": true,
-        "Price": "10.50"
+        "Price": "10.85"
       }
     ],
+    "image": null,
     "slug": "macanudo-espresso-and-cream"
   },
   {
