@@ -12054,5 +12054,43 @@
     ],
     "image": null,
     "slug": "aj-fernandez-amar"
+  },
+  {
+    "Cigar Name": "Y Nada Mas Cibao",
+    "Cigar Brand": "Partagas",
+    "Wrapper": "Ecuadorian Corojo",
+    "Binder": "Sumatra",
+    "Filler": "Habano Vuelta Abajo, Criollo, Pennsylvania Broadleaf",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Medium-Full",
+    "description": "The Cibao Valley sits at the center of the Dominican Republic's tobacco identity, and this cigar makes that geography the point. The Y Nada Más series launched with the Santiago in 2025 as a celebration of the brand's Dominican history, and the Cibao follows it as a second chapter with a bolder blend built around leaf from that same valley. The filler combines Dominican Habano Vuelta Abajo and Criollo from the Cibao region with Pennsylvania Broadleaf, over a Sumatra binder and an Ecuadorian Corojo wrapper. Three sizes, 20-count boxes. Medium to full in body. Made at Tabacalera La iSLA in Santiago, Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "689674167143",
+        "In_Stock": true,
+        "Price": "9.20"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "689674167174",
+        "In_Stock": true,
+        "Price": "10.25"
+      },
+      {
+        "Size": "Gordo",
+        "Barcode": "689674167204",
+        "In_Stock": true,
+        "Price": "11.45"
+      }
+    ],
+    "image": null,
+    "slug": "partagas-y-nada-mas-cibao"
   }
 ]
