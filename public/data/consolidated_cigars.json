@@ -1,20 +1,28 @@
 [
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "Anniversario Corojo",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Corojo",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Complex and Rich",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "7427025678329",
         "In_Stock": true,
-        "Price": "17.50"
+        "Price": "18.00"
       }
     ],
+    "image": null,
     "slug": "aganorsa-anniversario-corojo"
   },
   {
@@ -246,39 +254,55 @@
     "slug": "aganorsa-new-cuba-superior"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "Valadacion Corojo",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Corojo",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Leather, Wood, Spice",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "7427025678565",
         "In_Stock": true,
-        "Price": "11.00"
+        "Price": "11.45"
       }
     ],
+    "image": null,
     "slug": "aganorsa-valadacion-corojo"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "Valadacion Maduro",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Oily, Spice, Pepper",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "7427025678541",
         "In_Stock": true,
-        "Price": "12.20"
+        "Price": "12.50"
       }
     ],
+    "image": null,
     "slug": "aganorsa-valadacion-maduro"
   },
   {
@@ -301,21 +325,29 @@
     "Podcast_Link": "https://open.spotify.com/episode/7ceEF3mxMYiW0JtVkHmKAt?si=qD-ZynerSe-KiC3QEpx02g"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "Validacion Habano",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Ecuador Habano",
     "Binder": "Nicaraguan",
     "Filler": "Corojo,  Criollo",
     "Flavor_Profile": "Nutty, Pepper, Spicy, Creamy",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "7427025678497",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "11.15"
       }
     ],
+    "image": null,
     "slug": "aganorsa-validacion-habano"
   },
   {
