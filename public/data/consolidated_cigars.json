@@ -906,19 +906,26 @@
     "slug": "aj-fernandez-viva-la-vida"
   },
   {
-    "Cigar Brand": "Alec Bradley",
     "Cigar Name": "Double Broadleaf",
+    "Cigar Brand": "Alec Bradley",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Connecticut Broadleaf, Nicaraguan",
     "Filler": "Honduran, Nicaraguan",
     "Flavor_Profile": "Earth, Wood, Pepper",
     "Strength_Profile": "Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "815337018457",
         "In_Stock": true,
-        "Price": "13.00"
+        "Price": "13.45"
       },
       {
         "Size": "Robusto",
@@ -927,6 +934,7 @@
         "Price": "10.60"
       }
     ],
+    "image": null,
     "slug": "alec-bradley-double-broadleaf"
   },
   {
