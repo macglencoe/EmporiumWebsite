@@ -1,8 +1,13 @@
 [
   {
-    "Tobacco Name": "Virginia Ribbon",
+    "Tobacco Name": "John Mar",
     "Tobacco Brand": "Cornell & Diehl",
-    "slug": "virginia-ribbon"
+    "Family": null,
+    "description": null,
+    "Sale Form": "Bulk",
+    "Components": [],
+    "image": null,
+    "slug": "john-mar"
   },
   {
     "Tobacco Name": "Greg's Mix",
