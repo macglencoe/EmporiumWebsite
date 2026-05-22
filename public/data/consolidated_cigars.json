@@ -9424,21 +9424,29 @@
     "slug": "rocky-patel-corojo-edge"
   },
   {
-    "Cigar Brand": "Rocky Patel",
     "Cigar Name": "Java Red",
+    "Cigar Brand": "Rocky Patel",
     "Wrapper": "Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Cherry, Coffee, Cocoa",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Corona",
         "Barcode": "846261014130",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "10.00"
       }
     ],
+    "image": null,
     "slug": "rocky-patel-java-red"
   },
   {
