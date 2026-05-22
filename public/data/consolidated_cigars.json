@@ -306,23 +306,30 @@
     "slug": "aganorsa-valadacion-maduro"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "Validacaion Connecticut",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Ecuadorian Connecticut Shade",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Hickory, Notes of almond, Dried fruit",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": "https://open.spotify.com/episode/7ceEF3mxMYiW0JtVkHmKAt?si=qD-ZynerSe-KiC3QEpx02g",
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "7427025678480",
         "In_Stock": true,
-        "Price": "9.50"
+        "Price": "11.45"
       }
     ],
-    "slug": "aganorsa-validacaion-connecticut",
-    "Podcast_Link": "https://open.spotify.com/episode/7ceEF3mxMYiW0JtVkHmKAt?si=qD-ZynerSe-KiC3QEpx02g"
+    "image": null,
+    "slug": "aganorsa-validacaion-connecticut"
   },
   {
     "Cigar Name": "Validacion Habano",
