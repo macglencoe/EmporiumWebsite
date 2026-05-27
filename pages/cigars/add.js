@@ -22,6 +22,22 @@ const AddCigarPage = (props) => {
   const router = useRouter();
   const { defaults } = useMemo(() => buildSchemaArtifacts(uiSchema), []);
 
+  // Set "Date Added" to current date for new items, but allow it to be overridden by defaults if provided
+  const today = useMemo(() => {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const day = String(now.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  }, []);
+  const defaultsWithToday = useMemo(
+    () => ({
+      ...defaults,
+      "Date Added": defaults["Date Added"] ?? today,
+    }),
+    [defaults, today]
+  );
+
   const {
     draft,
     setDraft,
@@ -30,8 +46,8 @@ const AddCigarPage = (props) => {
     generateSlug,
   } = useDraftItem({
     slug: "", // new item
-    defaults,
-    initialItem: defaults,
+    defaults: defaultsWithToday,
+    initialItem: defaultsWithToday,
     allItems: props.data || [],
   });
 
@@ -63,7 +79,7 @@ const AddCigarPage = (props) => {
           fallbackSlug=""
           baseRoute="www.kingstreetemporium.com/cigars"
         />
-        <FormButtons onClickRevert={() => setDraft(defaults)} />
+        <FormButtons onClickRevert={() => setDraft(defaultsWithToday)} />
       </SchemaForm>
     </Layout>
   );
