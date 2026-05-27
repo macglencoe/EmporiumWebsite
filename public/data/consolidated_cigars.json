@@ -10567,5 +10567,24 @@
     "description": "Eiroa The First 20 Years Maduro marks a milestone in Christian Eiroa’s career, celebrating two decades of his work in premium cigar making. The line honors both his family’s long history in Honduras and his personal evolution as a blender. Built entirely from Honduran tobaccos grown on the Eiroa family’s farms, it reflects the pride of a brand that continues to champion authentic Corojo cultivation and the craftsmanship that has defined the Eiroa name for generations.\nThe Maduro version uses a dark, well-fermented Honduran wrapper that deepens the blend’s natural sweetness and adds a layer of richness without overwhelming the palate. Construction is tight, the draw is deliberate, and the flavor progression showcases the complexity of properly aged Corojo leaf. Eiroa The First 20 Years Maduro stands as both a personal statement from its creator and a benchmark for what modern Honduran cigars can achieve when tradition and precision meet.",
     "slug": "eiroa-the-first-20-years",
     "Date Added": "2025-12-04"
+  },
+  {
+    "Cigar Name": "Test Cigar",
+    "Cigar Brand": "Test Brand",
+    "Wrapper": "Connecticut Shade",
+    "Binder": "",
+    "Filler": "",
+    "Flavor_Profile": "",
+    "Strength_Profile": "",
+    "description": null,
+    "Date Added": "2026-05-27",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [],
+    "image": null,
+    "slug": "test-brand-test-cigar"
   }
 ]
