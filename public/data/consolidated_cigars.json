@@ -6709,13 +6709,20 @@
     "slug": "j-c-newman-la-unica-connecticut"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "The American",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Florida Sungrown",
     "Binder": "Connecticut Broadleaf",
     "Filler": "Pennsylvania Type 41, Pennsylvania havana",
     "Flavor_Profile": "Unique American Puro",
     "Strength_Profile": "Medium",
+    "description": "JC Newman The American is one of the most meaningful projects in modern cigar making, built as a tribute to the history of the Newman family and the early days of the US cigar industry. Produced entirely in the historic El Reloj factory in Tampa, the cigar was created to revive the tradition of a fully American made premium cigar at a time when that idea had almost disappeared. Every component comes from the United States, from the tobaccos to the boxes to the bands, making it a direct link to the era when Tampa was the heart of American cigar production.\nThe blend features a Florida Sun Grown wrapper, a Connecticut Broadleaf binder, and filler grown in Connecticut and Pennsylvania. This structure showcases the range and character of American tobaccos while honoring the craftsmanship that kept the Newman company alive for more than a century. The American has earned a place as a flagship product not because of strength or trend chasing, but because it preserves a piece of cigar history that few companies have the ability or the will to recreate today.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -6732,8 +6739,8 @@
       {
         "Size": "Double Robusto",
         "Barcode": "76622013254",
-        "In_Stock": false,
-        "Price": "20.95"
+        "In_Stock": true,
+        "Price": "22.30"
       },
       {
         "Size": "Torpedo",
@@ -6742,8 +6749,8 @@
         "Price": "21.50"
       }
     ],
-    "slug": "j-c-newman-the-american",
-    "description": "JC Newman The American is one of the most meaningful projects in modern cigar making, built as a tribute to the history of the Newman family and the early days of the US cigar industry. Produced entirely in the historic El Reloj factory in Tampa, the cigar was created to revive the tradition of a fully American made premium cigar at a time when that idea had almost disappeared. Every component comes from the United States, from the tobaccos to the boxes to the bands, making it a direct link to the era when Tampa was the heart of American cigar production.\nThe blend features a Florida Sun Grown wrapper, a Connecticut Broadleaf binder, and filler grown in Connecticut and Pennsylvania. This structure showcases the range and character of American tobaccos while honoring the craftsmanship that kept the Newman company alive for more than a century. The American has earned a place as a flagship product not because of strength or trend chasing, but because it preserves a piece of cigar history that few companies have the ability or the will to recreate today."
+    "image": null,
+    "slug": "jc-newman-the-american"
   },
   {
     "Cigar Brand": "J.C. Newman",
