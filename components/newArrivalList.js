@@ -19,12 +19,21 @@ export const NewArrivalList = ({ cigars }) => {
             <div className='new-arrivals'>
                 <h2>New Arrivals</h2>
                 <ul>
-                    {newCigars.map(cigar => (
-                        <li key={cigar.slug}>
-                            <p className='date'>
-                                {new Date(cigar['Date Added']).toLocaleString('default', { month: 'long' })}{' '}
-                                {new Date(cigar['Date Added']).getDate()}{', '}
-                                {new Date(cigar['Date Added']).getFullYear()}
+                    {newCigars.map(cigar => {
+                        const attributes = [
+                            cigar['Strength_Profile'],
+                            cigar['Wrapper'],
+                            // Only show size info if there are sizes available, and if so show either the number of sizes or the specific size if there's only one
+                            cigar['Sizes'] && cigar['Sizes'].length > 0
+                                ? (cigar['Sizes'].length > 1 ? cigar['Sizes'].length + ' Sizes' : cigar['Sizes'][0].Size)
+                                : null
+                        ].filter(Boolean);
+                        return (
+                            <li key={cigar.slug}>
+                                <p className='date'>
+                                    {new Date(cigar['Date Added']).toLocaleString('default', { month: 'long' })}{' '}
+                                    {new Date(cigar['Date Added']).getDate()}{', '}
+                                    {new Date(cigar['Date Added']).getFullYear()}
                             </p>
                             <Link href={`/cigars/${cigar.slug}`}>
                                 <a>
@@ -34,20 +43,15 @@ export const NewArrivalList = ({ cigars }) => {
                                 </a>
                             </Link>
                             <div className='attributes'>
-                                {[
-                                    cigar['Strength_Profile'],
-                                    '•',
-                                    cigar['Wrapper'],
-                                    '•',
-                                    cigar['Sizes'].length > 1 ? cigar['Sizes'].length + ' Sizes' : cigar['Sizes'][0].Size
-                                ].filter(Boolean).map((item, index) => (
-                                    <span key={index}>{item}</span>
+                                {attributes.flatMap((attr, index) => index < attributes.length - 1 ? [attr, '•'] : [attr])
+                                    .filter(Boolean).map((item, index) => (
+                                        <span key={index}>{item}</span>
                                 ))}
-                            </div>
+                            </div>  
 
 
                         </li>
-                    ))}
+                        )})}
                 </ul>
             </div>
             <style jsx>
