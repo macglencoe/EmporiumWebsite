@@ -6954,22 +6954,30 @@
     "slug": "la-aroma-de-cuba-edition-especial-no-2"
   },
   {
-    "Cigar Brand": "La Aroma de Cuba",
     "Cigar Name": "Edition Especial No.3",
+    "Cigar Brand": "La Aroma de Cuba",
     "Wrapper": "Ecuadorian Habano",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Cedar, Leather, White pepper",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "819577010066",
         "In_Stock": true,
-        "Price": "10.70"
+        "Price": "11.50"
       }
     ],
-    "slug": "la-aroma-de-cuba-edition-especial-no-3"
+    "image": null,
+    "slug": "la-aroma-de-cuba-edition-especial-no3"
   },
   {
     "Cigar Brand": "La Aroma de Cuba",
