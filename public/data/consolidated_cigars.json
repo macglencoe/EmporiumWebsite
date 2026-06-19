@@ -5469,13 +5469,20 @@
     "slug": "forged-chillin-moose"
   },
   {
-    "Cigar Brand": "Room 101",
     "Cigar Name": "Johnny Tobacconaut",
+    "Cigar Brand": "Room 101",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Mexican",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Butter, Cinnamon, pepper",
     "Strength_Profile": "Medium",
+    "description": "Matt Booth's Johnny Tobacconaut first launched at the 2015 trade show as an all-Nicaraguan limited release, a cosmic, irreverent project that became a cult favorite despite producing only 3,500 boxes. When the brand returned in 2023 under A.J. Fernandez's hand, the blend changed direction entirely: an Ecuadorian Connecticut Shade wrapper replaced the original Nicaraguan leaf, paired with a Mexican binder and Nicaraguan filler, a three-country combination that gives the cigar more complexity than a typical Connecticut blend usually delivers. Multiple sizes including the distinctive figurado shapes the line is known for. Medium in body. Made at Tabacalera A.J. Fernandez Cigars de Nicaragua S.A. in Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/443R2O6H9UhWDIbjDxGXJv?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -5490,8 +5497,8 @@
         "Price": "10.25"
       }
     ],
-    "slug": "forged-johnny-tobacconaut",
-    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/443R2O6H9UhWDIbjDxGXJv?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+    "image": null,
+    "slug": "room-101-johnny-tobacconaut"
   },
   {
     "Cigar Brand": "Forged",
@@ -7187,20 +7194,35 @@
     "slug": "la-flor-dominicana-cabinet-oscuro-l-400"
   },
   {
-    "Cigar Brand": "La Flor Dominicana",
     "Cigar Name": "Cameroon Cabinet #5",
+    "Cigar Brand": "La Flor Dominicana",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican, Nicaraguan",
     "Flavor_Profile": "Complex, Smooth, Nutty and Spicy",
     "Strength_Profile": "Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
+        "Barcode": null,
         "In_Stock": true,
         "Price": "11.40"
+      },
+      {
+        "Size": "Chisel",
+        "Barcode": "7460644702532",
+        "In_Stock": true,
+        "Price": "13.15"
       }
     ],
+    "image": null,
     "slug": "la-flor-dominicana-cameroon-cabinet-5"
   },
   {
@@ -7326,22 +7348,30 @@
     "slug": "la-flor-dominicana-dl-600-natural"
   },
   {
-    "Cigar Brand": "La Flor Dominicana",
     "Cigar Name": "Double Ligero DL-654",
+    "Cigar Brand": "La Flor Dominicana",
     "Wrapper": "Ecuadorian Sumatran",
     "Binder": "Dominican Ligero",
     "Filler": "Dominican Ligero",
     "Flavor_Profile": "Pepper, Spice, Leather",
     "Strength_Profile": "Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
         "Barcode": "7460644702464",
         "In_Stock": true,
-        "Price": "10.80"
+        "Price": "12.70"
       }
     ],
-    "slug": "la-flor-dominicana-double-ligero-dl-654"
+    "image": null,
+    "slug": "la-flor-dominicana-double-ligero-dl654"
   },
   {
     "Cigar Brand": "La Flor Dominicana",
@@ -12136,5 +12166,89 @@
     ],
     "image": null,
     "slug": "partagas-y-nada-mas-cibao"
+  },
+  {
+    "Cigar Name": "El Carajon Oscuro",
+    "Cigar Brand": "La Flor Dominicana",
+    "Wrapper": "Dominican Oscuro",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "",
+    "Strength_Profile": "Medium-Full",
+    "description": "The name has a bit of mischief behind it. Originally sold as El Carajo, a mildly vulgar Spanish exclamation along the lines of \"damn, that's good,\" La Flor Dominicana eventually fused it with cajón, meaning cabinet, to get Carajon, a nod to the oversized 100-count cabinet boxes the cigar ships in. At 4x34 it is one of the smallest cigars La Flor Dominicana makes, built for a quick half hour rather than a long sit, but the blend punches well above its size.\nThe wrapper is Ecuadorian Habano over Dominican binder and filler, sourced from La Flor Dominicana's own farm. Medium to full in body despite the small ring gauge. Made at Tabacalera La Flor in the Dominican Republic.",
+    "Date Added": "2026-06-19",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Cigarillo",
+        "Barcode": null,
+        "In_Stock": true,
+        "Price": "4.75"
+      }
+    ],
+    "image": null,
+    "slug": "la-flor-dominicana-el-carajon-oscuro"
+  },
+  {
+    "Cigar Name": "L-300 Natural",
+    "Cigar Brand": "La Flor Dominicana",
+    "Wrapper": "Ecuadorian Sumatran",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Pepper, Leather, Earth",
+    "Strength_Profile": "Medium-Full",
+    "description": "The L300 was La Flor Dominicana's first venture into full bodied territory, built after years spent aging their own estate-grown ligero. Ligero is not a tobacco variety but the top priming of the plant, the leaves that receive the most direct sunlight and develop the most strength and concentration of flavor, and the L300 was Litto Gomez's statement that he had aged enough of it to build a cigar around it properly.\nThe wrapper is Ecuadorian Sumatra over Dominican binder and filler, all grown on La Flor Dominicana's own La Canela farm. Full in body. Made at Tabacalera La Flor in the Dominican Republic.",
+    "Date Added": "2026-06-19",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "7460644702709",
+        "In_Stock": true,
+        "Price": "10.40"
+      }
+    ],
+    "image": null,
+    "slug": "la-flor-dominicana-l300-natural"
+  },
+  {
+    "Cigar Name": "Johnny Tobacconaut Maduro",
+    "Cigar Brand": "Room 101",
+    "Wrapper": "Nicaraguan",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Espresso, Cocoa",
+    "Strength_Profile": "Medium-Full",
+    "description": "Matt Booth's Johnny Tobacconaut first showed up in 2015 as a limited Unobtanium release with the kind of whimsical sci-fi branding Room101 is known for, an all-Nicaraguan blend rolled at the Camacho factory in Honduras. When the brand moved to Forged Cigars, the blend shifted to mostly Nicaraguan tobacco under an Ecuadorian Connecticut wrapper, produced by A.J. Fernandez in Nicaragua, where it has stayed ever since. The Maduro arrived at PCA 2026 as the next chapter, trading the lighter Connecticut wrapper for a dark, oily Nicaraguan leaf and pushing the entire blend toward full body.\nThe result is a Nicaraguan puro from wrapper to filler, produced once again by A.J. Fernandez. Three sizes, Robusto, Toro, and Gordo, in 20-count boxes. Full in body. Made at Tabacalera A.J. Fernandez in Nicaragua.",
+    "Date Added": "2026-06-19",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674174295",
+        "In_Stock": true,
+        "Price": "11.70"
+      },
+      {
+        "Size": "Gordo",
+        "Barcode": "689674174325",
+        "In_Stock": true,
+        "Price": "12.80"
+      }
+    ],
+    "image": null,
+    "slug": "room-101-johnny-tobacconaut-maduro"
   }
 ]
