@@ -7673,99 +7673,131 @@
     "slug": "la-gloria-cubana-serie-s"
   },
   {
-    "Cigar Brand": "La Palina",
     "Cigar Name": "Connecticut",
+    "Cigar Brand": "La Palina",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Dominican",
     "Filler": "Dominican, Nicaraguan",
     "Flavor_Profile": "Cedar, Leather, Caramel",
     "Strength_Profile": "Mild-Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Gordo",
         "Barcode": "817094024191",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "8.50"
       },
       {
         "Size": "Robusto",
         "Barcode": "817094021879",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "7.50"
       },
       {
         "Size": "Toro",
         "Barcode": "817094021886",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "8.00"
       }
     ],
+    "image": null,
     "slug": "la-palina-connecticut"
   },
   {
-    "Cigar Brand": "La Palina",
     "Cigar Name": "Maduro",
+    "Cigar Brand": "La Palina",
     "Wrapper": "Honduran Maduro",
     "Binder": "Honduran",
     "Filler": "Dominican, Honduran, Nicaraguan",
     "Flavor_Profile": "Coffee, Black pepper, Earth",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Gordo",
         "Barcode": "817094021848",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "9.50"
       },
       {
         "Size": "Robusto",
         "Barcode": "817094021794",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "7.50"
       },
       {
         "Size": "Toro",
         "Barcode": "817094021800",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "8.00"
       }
     ],
+    "image": null,
     "slug": "la-palina-maduro"
   },
   {
-    "Cigar Brand": "La Palina",
     "Cigar Name": "Nicaraguan Connecticut",
+    "Cigar Brand": "La Palina",
     "Wrapper": "Ecuadorian Oscuro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Dark Chocolate, Leather, Oak",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "817094020414",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "9.50"
       }
     ],
+    "image": null,
     "slug": "la-palina-nicaraguan-connecticut"
   },
   {
-    "Cigar Brand": "La Palina",
     "Cigar Name": "Nicaraguan Oscuro",
+    "Cigar Brand": "La Palina",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "",
     "Strength_Profile": "Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Gordo",
         "Barcode": "852527003770",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "10.00"
       }
     ],
+    "image": null,
     "slug": "la-palina-nicaraguan-oscuro"
   },
   {
