@@ -1541,23 +1541,30 @@
     "description": "Created by Carlos Fuente Sr. as a personal blend, this cigar represents one of the most respected names in the Fuente family legacy. Featuring a toothy Cameroon wrapper over aged Dominican filler and binder, it offers a medium bodied profile with notes of cedar, cocoa, and sweet spice. The Don Carlos line is a tribute to tradition. Refined, patient, and built with decades of experience behind every leaf."
   },
   {
-    "Cigar Brand": "Arturo Fuente",
     "Cigar Name": "Don Carlos Eye of the Bull",
+    "Cigar Brand": "Arturo Fuente",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Spice, Vanilla, White Pepper, Coffee",
     "Strength_Profile": "Medium",
+    "description": "This compact 3½ x 55 cigar delivers a medium to full-bodied profile with notes of Spice, Cedar, White Pepper, and Coffee. The Cameroon wrapper, combined with Dominican binder and filler, offers a rich and balanced experience. A distinctive feature is the dark tobacco circle on the cap, resembling a bull's eye, adding a unique touch to this limited release.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Gordito",
         "Barcode": "843182122111",
         "In_Stock": true,
-        "Price": "14.15"
+        "Price": "14.50"
       }
     ],
-    "slug": "arturo-fuente-don-carlos-eye-of-the-bull",
-    "description": "This compact 3½ x 55 cigar delivers a medium to full-bodied profile with notes of Spice, Cedar, White Pepper, and Coffee. The Cameroon wrapper, combined with Dominican binder and filler, offers a rich and balanced experience. A distinctive feature is the dark tobacco circle on the cap, resembling a bull's eye, adding a unique touch to this limited release."
+    "image": null,
+    "slug": "arturo-fuente-don-carlos-eye-of-the-bull"
   },
   {
     "Cigar Brand": "Arturo Fuente",
@@ -6836,21 +6843,29 @@
     "slug": "joya-de-nicaragua-robusta"
   },
   {
-    "Cigar Brand": "La Aroma de Cuba",
     "Cigar Name": "Connecticut",
+    "Cigar Brand": "La Aroma de Cuba",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Cedar, Almond",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Rothschild",
         "Barcode": "819577015092",
         "In_Stock": true,
-        "Price": "7.45"
+        "Price": "9.10"
       }
     ],
+    "image": null,
     "slug": "la-aroma-de-cuba-connecticut"
   },
   {
@@ -6907,21 +6922,29 @@
     "slug": "la-aroma-de-cuba-connecticut-immensa"
   },
   {
-    "Cigar Brand": "La Aroma de Cuba",
     "Cigar Name": "Connecticut Monarch",
+    "Cigar Brand": "La Aroma de Cuba",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Cedar, Almond",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "819577014873",
         "In_Stock": true,
-        "Price": "8.90"
+        "Price": "9.85"
       }
     ],
+    "image": null,
     "slug": "la-aroma-de-cuba-connecticut-monarch"
   },
   {
