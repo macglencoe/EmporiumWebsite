@@ -12313,5 +12313,57 @@
     ],
     "image": null,
     "slug": "room-101-johnny-tobacconaut-maduro"
+  },
+  {
+    "Cigar Name": "Pledge of Allegiance 2026",
+    "Cigar Brand": "Perez Carillo",
+    "Wrapper": "Connecticut Broadleaf",
+    "Binder": "Ecuadorian Connecticut",
+    "Filler": "Dominican, Nicaraguan, USA",
+    "Flavor_Profile": "Earth, Cream, Dark Chocolate",
+    "Strength_Profile": "Medium-Full",
+    "description": "Casa Carrillo launched the Pledge of Allegiance series in 2023 as an annual tribute to the American Dream, and the 2026 release carries extra weight as it lands alongside the country's 250th anniversary. EPC Chief Operating Officer Selim Hanono coined the name as a mashup of two earlier Carrillo lines, Pledge and Allegiance, though the blend shares nothing with either one and leans instead on American grown tobacco. Ernesto Perez Carrillo, whose family arrived from Cuba and built one of the most decorated names in the modern cigar industry, ties the release directly to his own journey in the announcement.\nThe blend uses a dark Connecticut Habano wrapper over an Ecuadorian Connecticut binder, with Nicaraguan filler drawn from Condega, Jalapa, and Estelí. Single Toro size, 6x54, in boxes of ten. Limited to 1,776 numbered boxes, a reference to the year of American independence. Medium to full in body. Made at Tabacalera La Alianza in the Dominican Republic.",
+    "Date Added": "2026-06-25",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "811167023517",
+        "In_Stock": true,
+        "Price": "23.35"
+      }
+    ],
+    "image": null,
+    "slug": "perez-carillo-pledge-of-allegiance-2026"
+  },
+  {
+    "Cigar Name": "Pledge Purple",
+    "Cigar Brand": "Perez Carillo",
+    "Wrapper": "Havana Seed Connecticut",
+    "Binder": "Mexico",
+    "Filler": "Nicaragua",
+    "Flavor_Profile": "Dark Cocoa, Espresso, Black Pepper, Cedar",
+    "Strength_Profile": "Full",
+    "description": "When the original Pledge Prequel claimed Cigar Aficionado's Cigar of the Year in 2020 with a near perfect 98 rating, Ernesto Perez Carrillo had the foresight to set aside a portion of that crop's wrapper leaves rather than use them all. The Connecticut Havana seed leaf, grown in the Connecticut River Valley and aged with Carrillo's partners Dunn and Foster, has now spent nearly a decade maturing. The Pledge Purple is the result, built around that same wrapper from the same harvest, with an entirely new interior blend underneath it.\nThe wrapper is the decade aged Connecticut Havana seed leaf, over a Mexican binder, with Nicaraguan filler from Estelí, Condega, and Ometepe. Single Toro size, 6x54, limited to 3,500 boxes of ten. Full in body. Made at Casa Carrillo's factory in the Dominican Republic.",
+    "Date Added": "2026-06-25",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "811167023340",
+        "In_Stock": true,
+        "Price": "19.10"
+      }
+    ],
+    "image": null,
+    "slug": "perez-carillo-pledge-purple"
   }
 ]
