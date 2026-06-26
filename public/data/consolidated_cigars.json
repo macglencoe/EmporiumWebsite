@@ -945,21 +945,35 @@
     "slug": "alec-bradley-double-broadleaf"
   },
   {
-    "Cigar Brand": "Alec Bradley",
     "Cigar Name": "Magic Toast",
+    "Cigar Brand": "Alec Bradley",
     "Wrapper": "Honduran Maduro",
     "Binder": "Honduran, Nicaraguan",
     "Filler": "Honduran, Nicaraguan",
     "Flavor_Profile": "Chocolate, Cedar",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
-        "Barcode": "815337015326",
+        "Barcode": "815337015333",
         "In_Stock": true,
-        "Price": "9.75"
+        "Price": "12.80"
+      },
+      {
+        "Size": "Gordo",
+        "Barcode": "815337015340",
+        "In_Stock": true,
+        "Price": "13.55"
       }
     ],
+    "image": null,
     "slug": "alec-bradley-magic-toast"
   },
   {
