@@ -12055,6 +12055,12 @@
         "Barcode": "689674171652",
         "In_Stock": true,
         "Price": "11.95"
+      },
+      {
+        "Size": "Perfecto",
+        "Barcode": "689674171713",
+        "In_Stock": true,
+        "Price": "14.85"
       }
     ],
     "image": null,
