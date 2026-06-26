@@ -6148,22 +6148,30 @@
     "slug": "j-c-newman-brickhouse-sungrown-corona-larga"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Brickhouse Sungrown Churchill",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Ecuadorian  Havana",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Earth, Cedar, Pepper, Coffee",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Churchill",
         "Barcode": "076622025004",
         "In_Stock": true,
-        "Price": "10.55"
+        "Price": "11.00"
       }
     ],
-    "slug": "j-c-newman-brickhouse-sungrown-mighty-mighty"
+    "image": null,
+    "slug": "jc-newman-brickhouse-sungrown-churchill"
   },
   {
     "Cigar Brand": "J.C. Newman",
