@@ -12399,5 +12399,31 @@
     ],
     "image": null,
     "slug": "perez-carillo-pledge-purple"
+  },
+  {
+    "Cigar Name": "30th Anniversary by Eiroa",
+    "Cigar Brand": "St. Louis Rey",
+    "Wrapper": "Columbian Pinareno",
+    "Binder": "Honduran Corojo",
+    "Filler": "Corojo Pinareno",
+    "Flavor_Profile": "Cedar, Earth, Pepper, Leather",
+    "Strength_Profile": "Medium-Full",
+    "description": "In 1996 a young Christian Eiroa, still working alongside his father Julio, blended the first Honduran-made Saint Luis Rey for Max Rohr Imports. The brand changed hands twice in the years that followed, ending up with Altadis, and Eiroa went on to build CLE, Asylum, and the Eiroa line out of his El Aladino factory in Danlí. Thirty years later Altadis came back to him, and the result is a cigar that reaches back toward the original blend while using tobaccos Eiroa has spent the past decade developing on his Colombian farm.\nThe wrapper is Colombian Pinareño, a Cuban seed variety Eiroa has been growing in Colombia alongside his Honduran operations. The binder is Honduran Corojo from the Jamastran Valley, and the filler combines Corojo and Pinareño leaf. Four sizes, all in 25-count cabinet boxes, distributed exclusively through brick and mortar retailers. Medium to full in body. Made at Fabrica de Puros Aladino S.A. in Danlí, Honduras.",
+    "Date Added": "2026-07-03",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Torpedo 52x6",
+        "Barcode": "196043027941",
+        "In_Stock": true,
+        "Price": "13.70"
+      }
+    ],
+    "image": null,
+    "slug": "st-louis-rey-30th-anniversary-by-eiroa"
   }
 ]
