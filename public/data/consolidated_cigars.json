@@ -593,13 +593,20 @@
     "slug": "aj-fernandez-last-call-maduro"
   },
   {
-    "Cigar Brand": "AJ Fernandez",
     "Cigar Name": "New World Cameroon",
+    "Cigar Brand": "AJ Fernandez",
     "Wrapper": "Cameroon",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Sweet, Spicy",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Churchill",
@@ -609,15 +616,9 @@
       },
       {
         "Size": "Toro",
-        "Barcode": "7429457491477",
+        "Barcode": "810194081590",
         "In_Stock": true,
         "Price": "8.25"
-      },
-      {
-        "Size": "Toro",
-        "Barcode": "7429457491484",
-        "In_Stock": true,
-        "Price": "7.95"
       },
       {
         "Size": "Corona",
@@ -626,6 +627,7 @@
         "Price": "7.20"
       }
     ],
+    "image": null,
     "slug": "aj-fernandez-new-world-cameroon"
   },
   {
