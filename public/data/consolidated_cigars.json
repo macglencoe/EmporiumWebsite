@@ -12153,6 +12153,12 @@
         "Barcode": "689674174189",
         "In_Stock": true,
         "Price": "9.75"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "689674174158",
+        "In_Stock": true,
+        "Price": "8.75"
       }
     ],
     "image": null,
