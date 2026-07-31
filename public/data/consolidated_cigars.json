@@ -104,21 +104,29 @@
     "slug": "aganorsa-jfr-connecticut-jr"
   },
   {
-    "Cigar Brand": "Aganorsa",
     "Cigar Name": "JFR Corojo",
+    "Cigar Brand": "Aganorsa",
     "Wrapper": "Nicaraguan Corojo",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Cream, Leather, White pepper, Cedar, Earth",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Super Toro",
         "Barcode": "7426824777318",
         "In_Stock": true,
-        "Price": "9.00"
+        "Price": "9.25"
       }
     ],
+    "image": null,
     "slug": "aganorsa-jfr-corojo"
   },
   {
