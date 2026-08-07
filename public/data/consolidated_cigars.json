@@ -683,21 +683,35 @@
     "slug": "aj-fernandez-new-world-connecticut"
   },
   {
-    "Cigar Brand": "AJ Fernandez",
     "Cigar Name": "New World Dorado",
+    "Cigar Brand": "AJ Fernandez",
     "Wrapper": "Habano Sungrown",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Earth, Pepper, Leather",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Corona",
         "Barcode": "7426824785870",
         "In_Stock": true,
         "Price": "11.15"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "810194081835",
+        "In_Stock": true,
+        "Price": "13.70"
       }
     ],
+    "image": null,
     "slug": "aj-fernandez-new-world-dorado"
   },
   {
