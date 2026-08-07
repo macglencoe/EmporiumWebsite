@@ -993,14 +993,26 @@
       {
         "Size": "Toro",
         "Barcode": "815337015333",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "12.80"
       },
       {
         "Size": "Gordo",
         "Barcode": "815337015340",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "13.55"
+      },
+      {
+        "Size": "Robusto",
+        "Barcode": "815337015326",
+        "In_Stock": true,
+        "Price": "11.00"
+      },
+      {
+        "Size": "Chunk",
+        "Barcode": "815337015777",
+        "In_Stock": true,
+        "Price": "12.00"
       }
     ],
     "image": null,
@@ -3865,6 +3877,12 @@
         "Barcode": "6896741562846",
         "In_Stock": true,
         "Price": "15.90"
+      },
+      {
+        "Size": "Toro (Tubo)",
+        "Barcode": "689674161912",
+        "In_Stock": true,
+        "Price": "27.25"
       }
     ],
     "image": null,
@@ -12471,6 +12489,24 @@
         "Barcode": "196043027941",
         "In_Stock": true,
         "Price": "13.70"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "196043028115",
+        "In_Stock": true,
+        "Price": "14.25"
+      },
+      {
+        "Size": "Rothschilde",
+        "Barcode": "196043027736",
+        "In_Stock": true,
+        "Price": "13.15"
+      },
+      {
+        "Size": "Titan",
+        "Barcode": "196043028320",
+        "In_Stock": true,
+        "Price": "14.30"
       }
     ],
     "image": null,
@@ -12501,5 +12537,37 @@
     ],
     "image": null,
     "slug": "room-101-17th-anniversary"
+  },
+  {
+    "Cigar Name": "Mr. Punch",
+    "Cigar Brand": "Punch",
+    "Wrapper": "Ecuadorian Sumatran",
+    "Binder": "Seco Nicaraguan Jalapa",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Wood, Cream, Spice",
+    "Strength_Profile": "Medium",
+    "description": "The Punch brand has used Mr. Punch as its mascot since 1840, when a German tobacco trader named Don Jaime Partagas Ravelo launched the brand in Cuba and borrowed the image from the Punch and Judy puppet shows then popular across Europe. The character himself dates to Renaissance Italy. It took until 2026 for the brand to give him his own cigar.\nMost Punch cigars are made in Honduras, which makes Mr. Punch by Punch a notable departure: the blend is fully Nicaraguan in construction and production. An Ecuadorian Sumatra wrapper over a Jalapa Seco binder, with Nicaraguan filler throughout. Three sizes, including The Big Slapper at 7x70, the largest cigar Punch has ever released. All sizes in 20-count boxes. Medium in body. Made at STG Estelí in Nicaragua.",
+    "Date Added": "2026-08-07",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674169307",
+        "In_Stock": true,
+        "Price": "8.70"
+      },
+      {
+        "Size": "Gordo",
+        "Barcode": "689674169338",
+        "In_Stock": true,
+        "Price": "9.80"
+      }
+    ],
+    "image": null,
+    "slug": "punch-mr-punch"
   }
 ]
