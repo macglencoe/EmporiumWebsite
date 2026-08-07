@@ -12595,5 +12595,31 @@
     ],
     "image": null,
     "slug": "my-father-le-bijou-1922"
+  },
+  {
+    "Cigar Name": "Diablo",
+    "Cigar Brand": "Punch",
+    "Wrapper": "Ecuador Sumatra Oscuro",
+    "Binder": "Connecticut Broadleaf",
+    "Filler": "Dominican, Honduran, Nicaraguan",
+    "Flavor_Profile": "Leather, Earth, Wood",
+    "Strength_Profile": "Full",
+    "description": "When General Cigar brought A.J. Fernandez in to build the Diablo, the brief was simple: make the fullest-bodied Punch ever released. The result was also the first General Cigar product ever rolled outside of Honduras, produced at Fernandez's factory in Nicaragua where the blend could be built around the aggressive Nicaraguan and Honduran ligero leaf it required.\nThe wrapper is an Ecuadorian Sumatra aged four years to achieve its oscuro designation, over a Connecticut Broadleaf binder, with Cuban-seed Habano ligero filler from Jamastran in Honduras and Estelí and Ometepe in Nicaragua. Three sizes, each named to match the cigar's character: Scamp, Diabolus, and Brute. Medium to full in body. Made at Tabacalera A.J. Fernandez in Estelí, Nicaragua.",
+    "Date Added": "2026-08-07",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Diabolus 5.25 x 54",
+        "Barcode": "689674448266",
+        "In_Stock": true,
+        "Price": "11.75"
+      }
+    ],
+    "image": null,
+    "slug": "punch-diablo"
   }
 ]
