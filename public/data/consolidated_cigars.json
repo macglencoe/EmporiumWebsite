@@ -12569,5 +12569,31 @@
     ],
     "image": null,
     "slug": "punch-mr-punch"
+  },
+  {
+    "Cigar Name": "Le Bijou 1922",
+    "Cigar Brand": "My Father",
+    "Wrapper": "Habano Oscuro",
+    "Binder": "Nicaraguan",
+    "Filler": "Nicaraguan",
+    "Flavor_Profile": "Chocolate, Leather, Sweet & Salty",
+    "Strength_Profile": "Full",
+    "description": "José Pepin Garcia created the My Father brand as a tribute to his son Jaime, who blended the original line. Pepin then went a generation further back, honoring his own father with Le Bijou 1922, the year his father was born. Bijou is French for jewel, and the name carries the weight of that sentiment through a cigar that Cigar Aficionado named the number one cigar in the world in 2015, rating it 97 points.\nThe blend is a Nicaraguan puro from wrapper to filler, all grown on Garcia family farms in Estelí. The wrapper is a dark, naturally oily Nicaraguan Habano Oscuro leaf, over Nicaraguan binder and long-leaf filler. Five sizes, each box pressed. Full in body. Made at My Father Cigars factory in Estelí, Nicaragua.",
+    "Date Added": "2026-08-07",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "817673010676",
+        "In_Stock": true,
+        "Price": "16.10"
+      }
+    ],
+    "image": null,
+    "slug": "my-father-le-bijou-1922"
   }
 ]
