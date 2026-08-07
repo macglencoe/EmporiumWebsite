@@ -3602,7 +3602,7 @@
         "Size": "Toro",
         "Barcode": "652125011012",
         "In_Stock": true,
-        "Price": "11.50"
+        "Price": "12.60"
       }
     ],
     "image": null,
@@ -5984,13 +5984,13 @@
         "Size": "Rothschild",
         "Barcode": "689674155294",
         "In_Stock": true,
-        "Price": "6.50"
+        "Price": "7.10"
       },
       {
         "Size": "Toro",
         "Barcode": "689674155324",
         "In_Stock": true,
-        "Price": "8.50"
+        "Price": "8.70"
       }
     ],
     "image": null,
@@ -8040,13 +8040,20 @@
     "slug": "macanudo-inspirado-red"
   },
   {
-    "Cigar Brand": "Macanudo",
     "Cigar Name": "Inspirado White",
+    "Cigar Brand": "Macanudo",
     "Wrapper": "Ecuadorian Shade",
     "Binder": "Indonesian",
     "Filler": "Mexican, Nicaraguan",
     "Flavor_Profile": "Earth, Slight spice, Soft creamy notes",
     "Strength_Profile": "Mild-Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -8058,7 +8065,7 @@
         "Size": "Toro",
         "Barcode": "689674093541",
         "In_Stock": true,
-        "Price": "10.00"
+        "Price": "11.20"
       },
       {
         "Size": "Gordo",
@@ -8067,6 +8074,7 @@
         "Price": "9.50"
       }
     ],
+    "image": null,
     "slug": "macanudo-inspirado-white"
   },
   {
@@ -10724,13 +10732,20 @@
     "slug": "deadwood-dominicana"
   },
   {
-    "Cigar Brand": "Hoyo De Monterrey",
     "Cigar Name": "Hoyo Shade",
+    "Cigar Brand": "Hoyo De Monterrey",
     "Wrapper": "Honduran Shade",
     "Binder": "Honduran",
     "Filler": "Honduran",
     "Flavor_Profile": "Vanilla, Cream, Wood, Must",
     "Strength_Profile": "Mild-Medium",
+    "description": "The latest addition to Hoyo's core lineup, the Shade, is a Honduran puro crafted entirely from Honduran tobaccos. It features a shade grown wrapper cultivated in Honduras, paired with Honduran binder and filler, delivering a mellow to medium-bodied profile. ",
+    "Date Added": "2025-06-05",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Rothschild",
@@ -10742,12 +10757,11 @@
         "Size": "Toro",
         "Barcode": "689674160427",
         "In_Stock": true,
-        "Price": "8.50"
+        "Price": "8.70"
       }
     ],
-    "description": "The latest addition to Hoyo's core lineup, the Shade, is a Honduran puro crafted entirely from Honduran tobaccos. It features a shade grown wrapper cultivated in Honduras, paired with Honduran binder and filler, delivering a mellow to medium-bodied profile. ",
-    "slug": "hoyo-de-monterrey-hoyo-shade",
-    "Date Added": "2025-06-05"
+    "image": null,
+    "slug": "hoyo-de-monterrey-hoyo-shade"
   },
   {
     "Cigar Brand": "La Flor Dominicana",
@@ -12461,5 +12475,31 @@
     ],
     "image": null,
     "slug": "st-louis-rey-30th-anniversary-by-eiroa"
+  },
+  {
+    "Cigar Name": "17th Anniversary",
+    "Cigar Brand": "Room 101",
+    "Wrapper": "Nicaragua",
+    "Binder": "Nicaragua",
+    "Filler": "Nicaragua",
+    "Flavor_Profile": "Cedar, Pepper, Earth",
+    "Strength_Profile": "Medium-Full",
+    "description": "Matt Booth founded Room101 in 2009 after leaving the Marine Corps, building it simultaneously as a heavy silver jewelry brand in Los Angeles and a cigar company, an unusual combination that turned out to be a coherent identity statement. The Anniversary series started at the 10th year and has run nearly every year since, with each release carrying a new blend rather than revisiting the same one. The logic is deliberate: each cigar is meant to reflect where the brand is at that specific moment rather than where it has been.\nThe 17th Anniversary skips the 16th, which was marked instead by a limited humidor rather than a new blend, making this the first new Anniversary cigar since 2024. A Nicaraguan puro blended once again by A.J. Fernandez. Single size, 6x52 Toro, in 20-count boxes. Limited production. Medium to full in body. Made at Tabacalera A.J. Fernandez in Estelí, Nicaragua.",
+    "Date Added": "2026-08-07",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Toro",
+        "Barcode": "689674162001",
+        "In_Stock": true,
+        "Price": "17.25"
+      }
+    ],
+    "image": null,
+    "slug": "room-101-17th-anniversary"
   }
 ]
