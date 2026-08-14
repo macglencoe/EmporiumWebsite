@@ -4449,13 +4449,20 @@
     "slug": "drew-estate-deadwood-sweet-jane"
   },
   {
-    "Cigar Brand": "Drew Estate",
     "Cigar Name": "Factory Smoke",
+    "Cigar Brand": "Drew Estate",
     "Wrapper": "Connecticut Shade",
     "Binder": "Indonesian",
     "Filler": "Indonesian",
     "Flavor_Profile": "Slight cedar, black pepper, creamy tobacco",
-    "Strength_Profile": "Medium",
+    "Strength_Profile": "Mild",
+    "description": "Jonathan Drew spent years resisting the bundle category before launching Factory Smokes at the 2018 trade show, and his stated reason for finally doing it was that he wanted to do it right or not at all. The Factory Smokes line is not a factory second operation. The cigars are rolled at La Gran Fabrica Drew Estate alongside the Liga Privada and Undercrown premiums, using a Cuban sandwich construction that combines long and short filler from the same factory floor. The bundle packaging and mixed filler construction are what keep the price where it is.\nThe Shade is the mildest expression in the Factory Smokes lineup, using a Connecticut shade wrapper over Indonesian binder and Central American mixed filler. Bundles of 25, multiple sizes. Mild in body. Made at La Gran Fabrica Drew Estate in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -4470,16 +4477,24 @@
         "Price": "3.25"
       }
     ],
+    "image": null,
     "slug": "drew-estate-factory-smoke"
   },
   {
-    "Cigar Brand": "Drew Estate",
     "Cigar Name": "Factory Smoke Maduro",
+    "Cigar Brand": "Drew Estate",
     "Wrapper": "Maduro",
     "Binder": "Indonesian",
     "Filler": "Indonesian",
     "Flavor_Profile": "Espresso, dark espresso,  black pepper",
     "Strength_Profile": "Medium",
+    "description": "onathan Drew spent years resisting the bundle category before launching Factory Smokes at the 2018 trade show, and his stated reason for finally doing it was that he wanted to do it right or not at all. The Factory Smokes line is not a factory second operation. The cigars are rolled at La Gran Fabrica Drew Estate alongside the Liga Privada and Undercrown premiums, using a Cuban sandwich construction that combines long and short filler from the same factory floor. The bundle packaging and mixed filler construction are what keep the price where it is.\nThe Maduro is the boldest expression in the Factory Smokes lineup, using a dark Connecticut Broadleaf Maduro wrapper over Indonesian binder and Central American mixed filler. The Broadleaf adds a natural sweetness and depth that the lighter wrappers in the line don't deliver. Bundles of 25, multiple sizes. Medium in body. Made at La Gran Fabrica Drew Estate in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -4488,16 +4503,24 @@
         "Price": "3.60"
       }
     ],
+    "image": null,
     "slug": "drew-estate-factory-smoke-maduro"
   },
   {
-    "Cigar Brand": "Drew Estate",
     "Cigar Name": "Isla Del Sol",
+    "Cigar Brand": "Drew Estate",
     "Wrapper": "Sumatra",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Cream, Mocha",
-    "Strength_Profile": "Mild-Medium",
+    "Strength_Profile": "Mild",
+    "description": "Drew Estate's relationship with coffee goes back to 2002, when they began experimenting with Kahlua-inspired infusion concepts that eventually led to the Java and Tabak Especial lines. Isla del Sol is the most accessible entry in that coffee-infused lineage, priced for everyday smoking rather than occasional indulgence. The infusion uses Sumatran Mandheling bean coffee, a low-acid, full-bodied variety grown in the highlands of Sumatra, worked into the Nicaraguan filler leaf using the same infusion process that defines the rest of the Drew Estate aromatic portfolio.\nThe wrapper is an Ecuadorian Sumatra over Nicaraguan binder and filler, with a sweetened cap. The coffee character reads as mocha and cream rather than sharp espresso, making it approachable for smokers new to infused cigars and satisfying enough for those who already know the line. Mild in body. Made at La Gran Fabrica Drew Estate in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -4506,6 +4529,7 @@
         "Price": "6.30"
       }
     ],
+    "image": null,
     "slug": "drew-estate-isla-del-sol"
   },
   {
@@ -4624,7 +4648,7 @@
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Spice, Coffee",
     "Strength_Profile": "Medium-Full",
-    "description": null,
+    "description": "Drew Estate opened their Estelí factory in 1998 and the Nica Rustica is their most direct tribute to the city that adopted them. The band carries the image of El Brujito, a figure drawn from the local culture of Estelí where tobacco has been used in ceremonial and medicinal tradition for centuries. The cigar is rolled in the old Cuban style with a pigtail cap and a covered foot, both deliberate choices that reflect the rustic character the name promises.\nThe wrapper is Connecticut Broadleaf grown in the open sun of the Connecticut River Valley, paired with a Mexican San Andrés Negro binder and long-leaf filler from Estelí and Jalapa. Medium to full in body. Made at La Gran Fabrica Drew Estate in Estelí, Nicaragua.",
     "Date Added": null,
     "hidden": false,
     "Podcast_Link": null,
@@ -4652,11 +4676,11 @@
     "Cigar Name": "Tabak Dulce",
     "Cigar Brand": "Drew Estate",
     "Wrapper": "Shade Grown Connecticut",
-    "Binder": "Nicaraguan",
+    "Binder": "Sumatran",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Rich tobacco core, coffee, latte, hint of chocolate",
-    "Strength_Profile": "Medium",
-    "description": null,
+    "Strength_Profile": "Mild-Medium",
+    "description": "Tabak Especial began in 2003 as a collaboration with Kahlúa, one of the earliest experiments in coffee-infused premium cigars. By 2007 the line had evolved into its own identity under the Tabak Especial name, and the Dulce wrapper option was established as the lighter expression alongside the darker Negra. The blend took over five years to develop before launch, with the coffee infusion sourced from the volcanic mountains of Jinotega and Matagalpa in northern Nicaragua, the same region where Drew Estate has operated since 1998.\nThe Dulce uses an Ecuadorian Connecticut shade wrapper over a Sumatran binder and Nicaraguan long-leaf Criollo filler, all slowly infused with fair trade Nicaraguan estate coffee. The coffee character reads as café con leche rather than espresso, lighter and creamier than the Negra version. Each size features an open shaggy foot. Mild to medium in body. Made at La Gran Fabrica Drew Estate in Estelí, Nicaragua.",
     "Date Added": null,
     "hidden": false,
     "Podcast_Link": null,
@@ -4696,11 +4720,11 @@
     "Cigar Name": "Tabak Negra",
     "Cigar Brand": "Drew Estate",
     "Wrapper": "Ecuadorian Connecticut",
-    "Binder": "Nicaraguan",
+    "Binder": "Sumatra",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Rich tobacco core, espresso, hint of chocolate",
     "Strength_Profile": "Medium-Full",
-    "description": null,
+    "description": "The Negra is the bolder half of the Tabak Especial line, added when the brand broke away from its Kahlúa origins in 2007 to give smokers a darker, more intense expression alongside the original Connecticut-wrapped Dulce. Where the Dulce reads as café con leche, the Negra leans toward dark-roasted espresso, with the Mexican San Andrés Maduro wrapper aged two years before rolling adding depth and earthiness that the shade wrapper does not deliver.\nThe wrapper is a two-year-aged Mexican San Andrés Maduro over a Sumatran binder and Nicaraguan long-leaf Criollo filler, infused with fair trade Nicaraguan estate coffee from Jinotega and Matagalpa. Each size features an open shaggy foot. Medium in body. Made at La Gran Fabrica Drew Estate in Estelí, Nicaragua.",
     "Date Added": null,
     "hidden": false,
     "Podcast_Link": null,
@@ -4743,13 +4767,20 @@
     "slug": "drew-estate-undercrown-all-dekk-d-out"
   },
   {
-    "Cigar Brand": "Drew Estate",
     "Cigar Name": "Undercrown Maduro",
+    "Cigar Brand": "Drew Estate",
     "Wrapper": "San Andres Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Oak, Leather, Hints of vanilla",
     "Strength_Profile": "Medium",
+    "description": "In 2009 the rollers at La Gran Fabrica Drew Estate were told to stop smoking the Liga Privada No. 9 off the production line. Demand had outpaced supply and the cigars needed to reach the people who had paid for them. The torcedores responded by building their own blend, using the same tobaccos that went into the Liga Privada binder and filler but from different vintages and primings, then covering the whole thing in a dark Mexican San Andrés wrapper rather than the rare Connecticut wrapper the Liga required. Drew Estate called it born on the factory floor. The name Undercrown acknowledged that the blend lived in the shadow of the Liga while standing entirely on its own merit.\nThe wrapper is Mexican San Andrés Maduro over a Connecticut River Valley T52 stalk-cut and stalk-cured Habano binder, with filler from Brazil Mata Fina and Nicaraguan Cuban seed leaf. Rated 91 by Cigar Aficionado, Top 25 of 2017. Multiple sizes. Medium to full in body. Made at La Gran Fabrica Drew Estate in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -4758,6 +4789,7 @@
         "Price": "10.80"
       }
     ],
+    "image": null,
     "slug": "drew-estate-undercrown-maduro"
   },
   {
@@ -4839,31 +4871,46 @@
     "slug": "e-p-carrillo-allegiance-toro"
   },
   {
-    "Cigar Brand": "E.P. Carrillo",
     "Cigar Name": "Dusk",
+    "Cigar Brand": "E.P. Carrillo",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Ecuador",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Dark coffee, Cedar, Nut, Raisin",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "811167021438",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "9.50"
       }
     ],
-    "slug": "e-p-carrillo-dusk"
+    "image": null,
+    "slug": "ep-carrillo-dusk"
   },
   {
-    "Cigar Brand": "E.P. Carrillo",
     "Cigar Name": "Encore",
+    "Cigar Brand": "E.P. Carrillo",
     "Wrapper": "Nicaraguan",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Cedar, Baking spices",
     "Strength_Profile": "Medium-Full",
+    "description": "The Encore is the second release in Ernesto Perez Carrillo's personal series, following La Historia, and it earned Cigar Aficionado's number one cigar of 2018 with a 96 rating on the Majestic size. Where La Historia draws on Dominican and Nicaraguan leaf, the Encore is the first E.P. Carrillo blend built entirely from Nicaraguan tobacco, a deliberate statement about what the volcanic soils of Estelí, Condega, and Jalapa can do without blending in leaf from elsewhere.\nThe filler tobaccos are aged in tercios before rolling, a traditional method where leaves are wrapped tightly in palm tree bark to create a natural two-way humidification during the aging process. The wrapper, binder, and filler are all Nicaraguan, with the specific regional sources across Estelí, Condega, and Jalapa kept undisclosed by Carrillo. All sizes are box pressed. Five sizes, 10-count boxes. Medium to full in body. Made at Tabacalera La Alianza in Santiago, Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro Grande",
@@ -4872,16 +4919,24 @@
         "Price": "13.50"
       }
     ],
-    "slug": "e-p-carrillo-encore"
+    "image": null,
+    "slug": "ep-carrillo-encore"
   },
   {
-    "Cigar Brand": "E.P. Carrillo",
     "Cigar Name": "Essence Honduras",
+    "Cigar Brand": "E.P. Carrillo",
     "Wrapper": "Honduran",
     "Binder": "Honduran",
     "Filler": "Honduran , Nicaraguan",
     "Flavor_Profile": "Dark Chocolate, Espresso, oak, Earth",
     "Strength_Profile": "Medium",
+    "description": "The Essence Series is Ernesto Perez Carrillo's ongoing project of showcasing single-region or single-country tobacco, with each release built to highlight the character of a specific growing area rather than blending it into the background. The Honduras entry is the first E.P. Carrillo cigar rolled at Plasencia's Tabacos de Oriente factory in Honduras, and the second Carrillo cigar ever made in Honduras overall.\nThe wrapper is the Olancho San Agustín leaf, grown in the OSA Valley of Honduras at elevations that impart a distinct mineral richness to the tobacco. Honduran binder accompanies it, with filler drawing from both Honduras and Nicaragua. Medium in body. Made at Tabacos de Oriente in Honduras.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -4896,32 +4951,40 @@
         "Price": "10.60"
       }
     ],
-    "slug": "e-p-carrillo-honduras"
+    "image": null,
+    "slug": "ep-carrillo-essence-honduras"
   },
   {
-    "Cigar Brand": "E.P. Carrillo",
     "Cigar Name": "La Historia",
+    "Cigar Brand": "E.P. Carrillo",
     "Wrapper": "Mexican San Andres",
     "Binder": "Ecuadorian Sumatra",
     "Filler": "Dominican, Nicaraguan",
     "Flavor_Profile": "Roasted nuts, Espresso, Black pepper, Dark chocolate",
     "Strength_Profile": "Medium-Full",
+    "description": "La Historia was the first box-pressed cigar Ernesto Perez Carrillo ever released and the first entry in what he calls the Perez-Carrillo Series, a group of blends built from generations of family knowledge that are the only cigars allowed to carry the Perez-Carrillo name. Each size in the line is named for a member of the family, a deliberate choice that makes the tribute specific rather than ceremonial. The E-III earned Cigar Aficionado's number two Cigar of the Year in 2014 with a 95 rating, and the blend has continued to appear on top annual lists in the years since.\nThe wrapper is a dark Mexican San Andrés over an Ecuadorian Sumatra binder, with long-leaf filler from Nicaragua and the Dominican Republic. All sizes box pressed. Medium to full in body. Made at Casa Carrillo in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/3ALwOnXr1Pyx4qWc9ybN7D?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "811167020820",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "10.60"
       },
       {
         "Size": "Robusto",
         "Barcode": "811167020806",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "10.40"
       }
     ],
-    "slug": "e-p-carrillo-la-historia",
-    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/3ALwOnXr1Pyx4qWc9ybN7D?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+    "image": null,
+    "slug": "ep-carrillo-la-historia"
   },
   {
     "Cigar Brand": "E.P. Carrillo",
@@ -5004,13 +5067,20 @@
     "slug": "ep-carrillo-new-wave-connecticut-stella"
   },
   {
-    "Cigar Brand": "E.P. Carrillo",
     "Cigar Name": "Pledge",
+    "Cigar Brand": "E.P. Carrillo",
     "Wrapper": "Habano Connecticut",
     "Binder": "Ecuadorian Sumatra",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Spicy Oak, Licorice, Black cherry, Black pepper",
     "Strength_Profile": "Medium-Full",
+    "description": "The Pledge is the third entry in the Perez-Carrillo Series, the group of blends that Ernesto Perez Carrillo reserves for his most personal work. La Historia earned number two Cigar of the Year in 2014. The Encore earned number one in 2018. The Pledge Prequel earned number one in 2020 with a 98 rating, the highest score Cigar Aficionado has ever given a Carrillo cigar. Three releases in the series, three appearances in the top two spots on the most recognized list in the industry.\nThe Pledge is Carrillo's stated promise to cigar smokers, his commitment to continue working with the best tobaccos and delivering new blends for as long as he is able. Each size in the line marks a different milestone in his career. The wrapper is a Connecticut Havana seed leaf grown in the United States, over an Ecuadorian binder and Nicaraguan long-leaf filler. All sizes box pressed. 10-count boxes. Medium to full in body. Made at Tabacalera La Alianza in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -5025,7 +5095,8 @@
         "Price": "12.70"
       }
     ],
-    "slug": "e-p-carrillo-pledge"
+    "image": null,
+    "slug": "ep-carrillo-pledge"
   },
   {
     "Cigar Brand": "Eiroa",
@@ -5102,7 +5173,7 @@
     "Filler": "Honduran",
     "Flavor_Profile": "Rich spicy flavor",
     "Strength_Profile": "Medium",
-    "description": null,
+    "description": "El Rey del Mundo traces its Cuban roots back to 1848, making it one of the oldest cigar brand names still in production. The non-Cuban version has been made in Honduras since the brand was revitalized in the 1990s under Frank Llaneza's direction, and when STG moved it into the Forged Cigar Company portfolio in 2021 the Honduran identity stayed intact. The Oscuro is the bolder of the two core blends, built as a Honduran puro with the Connecticut Broadleaf wrapper adding the darkest expression the line offers.\nThe wrapper is Connecticut Broadleaf over an all-Honduran binder and long-leaf filler. Five sizes, 20-count boxes except the Café Noir cigarillo which comes in 24-count boxes. Medium in body. Made at the HATSA factory in Danlí, Honduras.",
     "Date Added": null,
     "hidden": false,
     "Podcast_Link": null,
@@ -5448,93 +5519,133 @@
     "slug": "flvr-fist-bump"
   },
   {
-    "Cigar Brand": "FLVR",
     "Cigar Name": "Ski Chalet",
+    "Cigar Brand": "FLVR",
     "Wrapper": "Maduro",
     "Binder": "",
     "Filler": "",
     "Flavor_Profile": "Cinnamon, Molasses, Raisin",
     "Strength_Profile": "Mild",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Corona",
         "Barcode": "689674139072",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "6.00"
       }
     ],
+    "image": null,
     "slug": "flvr-ski-chalet"
   },
   {
-    "Cigar Brand": "FLVR",
     "Cigar Name": "Space Ranger",
+    "Cigar Brand": "FLVR",
     "Wrapper": "Maduro",
     "Binder": "",
     "Filler": "",
     "Flavor_Profile": "Rich chocolate, Mint, Hints of cherry",
     "Strength_Profile": "Mild",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Corona",
         "Barcode": "689674139010",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "6.00"
       }
     ],
+    "image": null,
     "slug": "flvr-space-ranger"
   },
   {
-    "Cigar Brand": "FLVR",
     "Cigar Name": "Unicorn Tears",
+    "Cigar Brand": "FLVR",
     "Wrapper": "Maduro",
     "Binder": "",
     "Filler": "",
     "Flavor_Profile": "Hints of brown sugar, Butter, Chocolate",
     "Strength_Profile": "Mild",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Corona",
         "Barcode": "689674139133",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "4.80"
       }
     ],
+    "image": null,
     "slug": "flvr-unicorn-tears"
   },
   {
-    "Cigar Brand": "FLVR",
     "Cigar Name": "Yacht Rock",
+    "Cigar Brand": "FLVR",
     "Wrapper": "Maduro",
     "Binder": "",
     "Filler": "",
     "Flavor_Profile": "Notes of rum, Simple syrup, Splash of cola",
     "Strength_Profile": "Mild",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Corona",
         "Barcode": "689674139102",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "6.00"
       }
     ],
+    "image": null,
     "slug": "flvr-yacht-rock"
   },
   {
-    "Cigar Brand": "Forged",
     "Cigar Name": "Chillin Moose",
+    "Cigar Brand": "Forged",
     "Wrapper": "Habano rosado",
     "Binder": "Ecuadorian Sumatran",
     "Filler": "Dominican, Nicaraguan, Us Broadleaf, Mexican San Andres",
     "Flavor_Profile": "Almond, Cedar, Spice, Earth",
     "Strength_Profile": "Mild-Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "689674153979",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "5.75"
       }
     ],
+    "image": null,
     "slug": "forged-chillin-moose"
   },
   {
@@ -5570,21 +5681,29 @@
     "slug": "room-101-johnny-tobacconaut"
   },
   {
-    "Cigar Brand": "Forged",
     "Cigar Name": "Los Statos Deluxe",
+    "Cigar Brand": "Forged",
     "Wrapper": "Ecuadorian Sumatran",
     "Binder": "Nicaraguan",
     "Filler": "Dominican, Nicaraguan",
     "Flavor_Profile": "Coffee,Chocolate, Black Pepper",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "689674137993",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "10.00"
       }
     ],
+    "image": null,
     "slug": "forged-los-statos-deluxe"
   },
   {
@@ -5606,73 +5725,107 @@
     "slug": "forged-los-statos-deluxe-connecticut"
   },
   {
-    "Cigar Brand": "Forged",
     "Cigar Name": "Los Statos Deluxe Maduro",
+    "Cigar Brand": "Forged",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Honduran",
     "Filler": "Honduran, Dominican",
     "Flavor_Profile": "Coffee, Chocolate, Cocoa, Toasty",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "689674152408",
-        "In_Stock": true,
+        "In_Stock": false,
         "Price": "10.00"
       }
     ],
+    "image": null,
     "slug": "forged-los-statos-deluxe-maduro"
   },
   {
-    "Cigar Brand": "Foundation",
     "Cigar Name": "Charter Oak",
+    "Cigar Brand": "Foundation",
     "Wrapper": "Ecuador Connecticut",
     "Binder": "Sumatran",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Creamy, Chocolate, Roasted Nuts",
     "Strength_Profile": "Mild-Medium",
+    "description": "Nicholas Melillo grew up in the Connecticut River Valley, spent years as a blender at Drew Estate, and when he launched Foundation Cigar Company in 2015 the Charter Oak was his homecoming. The name comes from a massive white oak that stood for centuries in Hartford, a tree under whose branches Native Americans gathered in council and cultivated tobacco long before European settlers arrived. Melillo's grandfather, a World War II veteran, smoked Connecticut tobacco for most of his adult life. The blend is both a tribute to the tree and to him.\nThe wrapper is Connecticut shade grown in the River Valley, over a Sumatran binder and long-leaf filler from Estelí and Jalapa in Nicaragua. Rated 93 by Cigar Aficionado. Multiple sizes, 20-count boxes. Mild to medium in body. Made at Tabacalera A.J. Fernandez in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": "2025-05-08",
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
+        "Barcode": null,
         "In_Stock": true,
         "Price": "7.50"
       }
     ],
-    "slug": "foundation-charter-oak",
-    "featured_Eds_Pick": "2025-05-08"
+    "image": null,
+    "slug": "foundation-charter-oak"
   },
   {
-    "Cigar Brand": "Foundation",
     "Cigar Name": "Charter Oak Maduro",
+    "Cigar Brand": "Foundation",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Sumatran",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Oak, Vanilla, Nuts",
     "Strength_Profile": "Medium",
+    "description": "The Maduro is the bolder half of the Charter Oak line, built on the same tribute to Nicholas Melillo's Connecticut roots and his grandfather's love of Connecticut tobacco, but dressed in a dark Connecticut Broadleaf wrapper rather than the shade leaf. Where the Shade leans creamy and mild, the Broadleaf brings more depth and spice while keeping the same everyday accessibility that defines the line.\nThe wrapper is Connecticut Broadleaf over a Nicaraguan Habano binder, with long-leaf filler from Estelí and Jalapa in Nicaragua. Multiple sizes, 20-count boxes. Medium in body. Made at Tabacalera A.J. Fernandez in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Gordo",
+        "Barcode": null,
         "In_Stock": true,
         "Price": "7.60"
       }
     ],
+    "image": null,
     "slug": "foundation-charter-oak-maduro"
   },
   {
-    "Cigar Brand": "Foundation",
     "Cigar Name": "Charter Oak Rothschild",
+    "Cigar Brand": "Foundation",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Sumatran",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Creamy, Chocolate, Roasted Nuts",
     "Strength_Profile": "Mild-Medium",
+    "description": "Nicholas Melillo grew up in the Connecticut River Valley, spent years as a blender at Drew Estate, and when he launched Foundation Cigar Company in 2015 the Charter Oak was his homecoming. The name comes from a massive white oak that stood for centuries in Hartford, a tree under whose branches Native Americans gathered in council and cultivated tobacco long before European settlers arrived. Melillo's grandfather, a World War II veteran, smoked Connecticut tobacco for most of his adult life. The blend is both a tribute to the tree and to him.\nThe wrapper is Connecticut shade grown in the River Valley, over a Sumatran binder and long-leaf filler from Estelí and Jalapa in Nicaragua. Rated 93 by Cigar Aficionado. Multiple sizes, 20-count boxes. Mild to medium in body. Made at Tabacalera A.J. Fernandez in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
+        "Barcode": null,
         "In_Stock": true,
         "Price": "6.50"
       }
     ],
+    "image": null,
     "slug": "foundation-charter-oak-rothschild"
   },
   {
@@ -5761,13 +5914,20 @@
     "slug": "foundation-small-axe"
   },
   {
-    "Cigar Brand": "Gran Habano",
     "Cigar Name": "Blue in Green",
+    "Cigar Brand": "Gran Habano",
     "Wrapper": "Connecticut Shade",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Chocolatey profile, Notes of pepper, Notes of cream",
     "Strength_Profile": "Medium",
+    "description": "George Rico named this one for the Miles Davis composition off Kind of Blue, calling the project his personal statement that a mild to medium cigar doesn't have to be bland. It was a deliberate departure for Gran Habano too, a brand built on Honduran tradition, built instead around a core of vintage Nicaraguan tobacco under a blonde U.S. Connecticut Shade wrapper.\nThe wrapper is Connecticut Shade grown in the United States, over Nicaraguan binder and filler. Three sizes, 20-count boxes, each tucked in a cedar sleeve. Medium in body. Made at G.R. Tabacaleras Unidas in Honduras.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -5788,16 +5948,24 @@
         "Price": "11.50"
       }
     ],
+    "image": null,
     "slug": "gran-habano-blue-in-green"
   },
   {
-    "Cigar Brand": "Gran Habano",
     "Cigar Name": "Connecticut #1",
+    "Cigar Brand": "Gran Habano",
     "Wrapper": "Ecuadorian Shade",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Notes of cream, Hints of nuts, Hints of coffee",
     "Strength_Profile": "Medium",
+    "description": "The Connecticut Number One has been part of the Gran Habano catalog since the early 2000s, one of the longest running blends in a brand better known for bold Honduran-forward smokes. It was built as a direct answer to Macanudo and Ashton, a statement that a mild Connecticut cigar didn't have to be flavorless to be approachable, and the blend has held that reputation across an unusually wide range of sizes, from a 40 ring gauge lancero up to a 70 ring gauge gordo.\nThe wrapper is Ecuadorian Connecticut Shade over Nicaraguan binder and long-leaf filler. Rated 90 by Cigar Aficionado. Eleven sizes. Mild to medium in body. Made at Gran Habano's factory in Danlí, Honduras.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -5812,16 +5980,24 @@
         "Price": "9.45"
       }
     ],
+    "image": null,
     "slug": "gran-habano-connecticut-1"
   },
   {
-    "Cigar Brand": "Gran Habano",
     "Cigar Name": "Corojo #5",
+    "Cigar Brand": "Gran Habano",
     "Wrapper": "Corojo",
     "Binder": "Mexican",
     "Filler": "Nicaraguan, Costa Rican",
     "Flavor_Profile": "Complex spicy profile",
     "Strength_Profile": "Full",
+    "description": "The Corojo Number Five is the strongest blend in Gran Habano's core lineup, built by George Rico around a Nicaraguan Corojo wrapper prized for its oily reddish leaf and peppery character, backed by a Nicaraguan binder and long-leaf filler from Nicaragua and Costa Rica.\nThe wrapper is Nicaraguan Corojo over a Nicaraguan Habano binder, with filler from Nicaragua and Costa Rica. Multiple sizes. Rated 90 and 91 by Cigar Aficionado. Full in body. Made at Gran Habano's factory near Danlí, Honduras.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -5830,6 +6006,7 @@
         "Price": "8.20"
       }
     ],
+    "image": null,
     "slug": "gran-habano-corojo-5"
   },
   {
@@ -5851,13 +6028,20 @@
     "slug": "gran-habano-corojo-maduro"
   },
   {
-    "Cigar Brand": "Gran Habano",
     "Cigar Name": "G.A.R American Standard",
+    "Cigar Brand": "Gran Habano",
     "Wrapper": "Nicaraguan",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Dark Chocolate, Black Pepper",
     "Strength_Profile": "Medium-Full",
+    "description": "The G.A.R. American Standard launched at the 2023 trade show as Gran Habano's answer to a simple question: could the company build an affordable everyday cigar without cutting the quality that defines the rest of the portfolio. The result is a Nicaraguan puro, produced at a scale of roughly 750,000 cigars a year, making it one of the larger regular production runs in the Gran Habano lineup.\nThe wrapper, binder, and filler are all Nicaraguan. Five sizes, 50-count boxes. Medium to full in body. Made at G.R. Tabacaleras Unidas S.A. in Danlí, Honduras.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -5866,33 +6050,50 @@
         "Price": "7.40"
       }
     ],
-    "slug": "gran-habano-g-a-r-american-standard"
+    "image": null,
+    "slug": "gran-habano-gar-american-standard"
   },
   {
-    "Cigar Brand": "Gran Habano",
     "Cigar Name": "Persian King",
+    "Cigar Brand": "Gran Habano",
     "Wrapper": "Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Cream, Spice",
     "Strength_Profile": "Full",
+    "description": "Gran Habano's Persian King line stands apart from the rest of the brand's numbered Connecticut, Habano, and Corojo blends: it ships unbanded, packaged in classic 50-count cedar boxes, and built around a distinctive closed foot that changes the way each cigar opens. The Maduro version begins with a burst of raw Connecticut tobacco flavor from that foot accent before transitioning into the dark, oily Nicaraguan Maduro wrapper underneath, a small piece of theater built into the construction itself.\nThe wrapper is Nicaraguan Maduro over Nicaraguan binder and filler, a full Nicaraguan puro apart from the Connecticut closed foot. Medium to full in body. Made at G.R. Tabacaleras Unidas S.A. in Honduras.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
+        "Barcode": null,
         "In_Stock": true,
         "Price": "8.00"
       }
     ],
+    "image": null,
     "slug": "gran-habano-persian-king"
   },
   {
-    "Cigar Brand": "Gran Habano",
     "Cigar Name": "Corojo #7",
+    "Cigar Brand": "Gran Habano",
     "Wrapper": "Corojo Jalapa",
     "Binder": "Corojo",
     "Filler": "Corojo,  Criollo",
     "Flavor_Profile": "Dark Cocoa, Honey",
     "Strength_Profile": "Full",
+    "description": "The Corojo Number Seven spent years in development before its 2024 release, built as a deliberate step up in strength from the brand's flagship Corojo blend. It is a Nicaraguan puro from wrapper to filler, using corojo-seed tobacco throughout, with the wrapper grown specifically in the Jalapa region. George Rico limited early production to about 16,000 cigars a year due to the scarcity of leaf suited to the blend.\nThe wrapper is Jalapa-grown Corojo, over Nicaraguan Corojo binder and filler. Full in body. Made at G.R. Tabacaleras Unidas S.A. in Danlí, Honduras.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/6VL46MFWPc83NznP7CMqvb?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -5901,8 +6102,8 @@
         "Price": "15.70"
       }
     ],
-    "slug": "gran-habano-corojo-7",
-    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/6VL46MFWPc83NznP7CMqvb?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+    "image": null,
+    "slug": "gran-habano-corojo-7"
   },
   {
     "Cigar Brand": "H. Upmann",
@@ -5959,13 +6160,20 @@
     "slug": "hoyo-de-monterrey-governor-sumatran"
   },
   {
-    "Cigar Brand": "Hoyo De Monterrey",
     "Cigar Name": "Hoyo Oscuro",
+    "Cigar Brand": "Hoyo De Monterrey",
     "Wrapper": "Brazilian Matafina",
     "Binder": "Nicaraguan",
     "Filler": "Dominican Nicaraguan, Honduran",
     "Flavor_Profile": "Cherry, Cayenne, Rye",
     "Strength_Profile": "Medium-Full",
+    "description": "Hoyo de Monterrey has been rooted in Honduran cigar making for nearly sixty years, one of the first Cuban expatriate brands to establish itself there, and the Oscuro released in 2024 as a deliberate look forward while paying tribute to that foundation. It marked the first time in the brand's history that a Hoyo cigar used a Brazilian Mata Fina wrapper, a departure that General Cigar framed as balancing tradition against where the category is headed.\nThe wrapper is Brazilian Mata Fina Oscuro over an Ecuadorian Sumatra binder, with long-leaf filler from the Dominican Republic, Honduras, and Nicaragua. Three sizes, 10-count boxes. Medium plus in body. Made at the HATSA factory in Danlí, Honduras.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Rothschild",
@@ -5980,6 +6188,7 @@
         "Price": "8.50"
       }
     ],
+    "image": null,
     "slug": "hoyo-de-monterrey-hoyo-oscuro"
   },
   {
@@ -5990,7 +6199,7 @@
     "Filler": "Dominican Nicaraguan, Honduran",
     "Flavor_Profile": "Cinnamon, Marshmallow, Seared Meat",
     "Strength_Profile": "Medium",
-    "description": null,
+    "description": "Rojo was released alongside the Oscuro in 2024, the two forming a pair meant to honor Hoyo de Monterrey's nearly sixty year history in Honduras while pointing the brand forward. Where the Oscuro broke tradition with a Brazilian wrapper, the Rojo stays closer to home, built around a wrapper from the Jamastran Valley, the region most closely associated with Hoyo's Honduran identity.\nThe wrapper is Honduran Jamastran over a Nicaraguan binder, with long-leaf filler from Honduras, Nicaragua, and the Dominican Republic. Three sizes, 10-count boxes. Medium in body. Made at the HATSA factory in Danlí, Honduras.",
     "Date Added": null,
     "hidden": false,
     "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/2d3KZS9UH6aB5faJbYH5Ww?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
@@ -10163,24 +10372,30 @@
     "description": "This cigar is more than just a solid smoke, it marks the return of Ernesto Pérez-Carrillo to the brand he helped build. Los Gloriosos brings his signature touch back into the fold with an Ecuadorian Habano wrapper and a Nicaraguan/ Dominican blend underneath. Medium to full-bodied with a steady mix of earth, espresso, and a little pepper, it’s balanced and bold.  A welcome return, and one that earns its place in any humidor."
   },
   {
-    "Cigar Brand": "El Rey Del Mundo",
     "Cigar Name": "Appointment",
+    "Cigar Brand": "El Rey Del Mundo",
     "Wrapper": "Honduran Cameroon Seed",
     "Binder": "Connecticut Broadleaf",
     "Filler": "Ecuadorian, Nicaraguan",
     "Flavor_Profile": "Pepper, Cream, Sweet Herbs",
     "Strength_Profile": "Medium",
+    "description": "El Rey del Mundo has Honduran roots in the non-Cuban version, and the Appointment leans into that history by sourcing its wrapper from the Eiroa family farms in the Jamastran Valley, the same family behind the limited King of the World release the year prior. The Cameroon seed wrapper is grown in Honduras rather than West Africa, which gives it a character shaped by Honduran volcanic soil while retaining the familiar toothy texture and natural sweetness the varietal is known for.\nThe wrapper is Eiroa-grown Honduran Cameroon seed over a Connecticut Broadleaf binder, with filler from Ecuador and Nicaragua. Three sizes, 20-count boxes. Medium in body. Made at the HATSA factory in Danlí, Honduras.",
+    "Date Added": "2025-04-17",
+    "hidden": false,
+    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/4EAp2iq53hOdjWHbTb6Dnm?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "689674162209",
-        "Price": "10.00",
-        "In_Stock": true
+        "In_Stock": true,
+        "Price": "10.00"
       }
     ],
-    "slug": "el-rey-del-mundo-appointment",
-    "Date Added": "2025-04-17",
-    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/4EAp2iq53hOdjWHbTb6Dnm?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+    "image": null,
+    "slug": "el-rey-del-mundo-appointment"
   },
   {
     "Cigar Brand": "Casa Cuba",
@@ -10352,13 +10567,20 @@
     "Date Added": "2025-04-17"
   },
   {
-    "Cigar Brand": "E.P. Carrillo",
     "Cigar Name": "Essence Sumatra",
+    "Cigar Brand": "E.P. Carrillo",
     "Wrapper": "Ecuador Sumatra",
     "Binder": "Nicaragua, Honduras",
     "Filler": "Dominican, Nicaraguan",
     "Flavor_Profile": "Almond, White Pepper, Coffee, Sweetness",
     "Strength_Profile": "Medium",
+    "description": "The Sumatra was released alongside the Maduro as one of the first two entries in the Essence Series, and it showcases a wrapper that has been a signature component in Carrillo blends throughout his career. Where the Maduro uses a single binder leaf, the Sumatra is the only entry in the series to use a dual binder construction, one leaf from Nicaragua and one from Honduras, which adds a layer of complexity beneath the wrapper.\nThe wrapper is an Ecuadorian Sumatra over the dual Nicaraguan and Honduran binder, with long-leaf filler from Nicaragua and the Dominican Republic. Three sizes, 24-count cedar boxes. Medium in body. Made at Casa Carrillo in the Dominican Republic.",
+    "Date Added": "2025-04-17",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -10373,8 +10595,8 @@
         "Price": "10.60"
       }
     ],
-    "slug": "ep-carrillo-essence-sumatra",
-    "Date Added": "2025-04-17"
+    "image": null,
+    "slug": "ep-carrillo-essence-sumatra"
   },
   {
     "Cigar Name": "Essence Maduro",
@@ -10384,7 +10606,7 @@
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Spice, Cocoa, Sweetness",
     "Strength_Profile": "Medium",
-    "description": null,
+    "description": "The Essence Series is Ernesto Perez Carrillo's everyday production line, built around a simple premise: each release in the series spotlights a different wrapper at a price point that makes the cigars accessible without cutting corners on construction. The Maduro was one of the first two releases in the series alongside the Sumatra, and Ernesto has said it is unlike anything he has done before in a Maduro.\nThe wrapper is a dark Mexican San Andrés over a Honduran binder and Nicaraguan long-leaf filler. Two sizes, 24-count cedar boxes. Medium in body. Made at Casa Carrillo in the Dominican Republic.\n",
     "Date Added": "2025-04-17",
     "hidden": false,
     "Podcast_Link": null,
@@ -10549,22 +10771,30 @@
     "Date Added": "2025-04-17"
   },
   {
-    "Cigar Brand": "Foundation",
     "Cigar Name": "Highclere Castle Victorian",
+    "Cigar Brand": "Foundation",
     "Wrapper": "Habana Ecuador",
     "Binder": "Brazilian Mata Fina",
     "Filler": "Nicaraguan ",
     "Flavor_Profile": "",
     "Strength_Profile": "Medium-Full",
+    "description": "Highclere Castle takes its name from the English estate made famous by Downton Abbey, and the Victorian follows the original Edwardian blend as a tribute to a different era at the castle: the reign of Queen Victoria, when the estate underwent significant expansion and smoking rooms became fashionable in grand country homes across England. Foundation partnered with A.J. Fernandez on the blend, and while it shares the Brazilian Mata Fina binder and all-Nicaraguan filler with the Edwardian, the wrapper is a higher priming Ecuadorian Habano rather than the milder Connecticut Shade, giving the Victorian a darker appearance and a noticeably bolder profile.\nThe wrapper is Ecuadorian Habano-seed, over a Brazilian Mata Fina binder, with filler drawn entirely from Nicaragua. 20-count dress boxes with Victorian era artwork. Full in body. Made at Tabacalera A.J. Fernandez in Estelí, Nicaragua.",
+    "Date Added": "2025-04-28",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
+        "Barcode": null,
         "In_Stock": true,
         "Price": "17.90"
       }
     ],
-    "slug": "foundation-highclere-castle-victorian",
-    "Date Added": "2025-04-28"
+    "image": null,
+    "slug": "foundation-highclere-castle-victorian"
   },
   {
     "Cigar Brand": "Arturo Fuente",
