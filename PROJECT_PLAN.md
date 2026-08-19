@@ -20,6 +20,8 @@ The current production site must remain available throughout development. Produc
 - See [`docs/phase-2-monorepo.md`](docs/phase-2-monorepo.md) for the resulting workspace layout, commands, verification, and inherited warnings.
 - Phase 3 was completed on 2026-08-19.
 - See [`docs/phase-3-domain-model.md`](docs/phase-3-domain-model.md) for the canonical contracts and [`docs/phase-3-validation-report.md`](docs/phase-3-validation-report.md) for the legacy-data results.
+- Phase 4 was completed on 2026-08-19.
+- See [`docs/phase-4-neon-database.md`](docs/phase-4-neon-database.md) for the schema, migrations, access model, commands, and preview-branch workflow.
 
 ## Terminology
 
