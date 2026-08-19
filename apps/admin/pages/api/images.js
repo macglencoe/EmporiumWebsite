@@ -3,6 +3,7 @@
 import fs from 'fs';
 import { IncomingForm } from 'formidable';
 import { put, del } from '@vercel/blob';
+import { withAuth } from '../../lib/auth/server.mjs';
 
 export const config = {
   api: {
@@ -11,7 +12,7 @@ export const config = {
   }
 };
 
-export default async function handler(req, res) {
+async function handler(req, res) {
   const token = process.env.BLOB_READ_WRITE_TOKEN;
 
   switch (req.method) {
@@ -74,3 +75,4 @@ export default async function handler(req, res) {
       return res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }
+export default withAuth(handler);

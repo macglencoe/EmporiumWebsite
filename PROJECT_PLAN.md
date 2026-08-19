@@ -22,6 +22,10 @@ The current production site must remain available throughout development. Produc
 - See [`docs/phase-3-domain-model.md`](docs/phase-3-domain-model.md) for the canonical contracts and [`docs/phase-3-validation-report.md`](docs/phase-3-validation-report.md) for the legacy-data results.
 - Phase 4 was completed on 2026-08-19.
 - See [`docs/phase-4-neon-database.md`](docs/phase-4-neon-database.md) for the schema, migrations, access model, commands, and preview-branch workflow.
+- Phase 5 was completed on 2026-08-19.
+- See [`docs/phase-5-import-report.md`](docs/phase-5-import-report.md) for the importer, verification, recovery-export workflow, and migration baseline.
+- Phase 6 was completed on 2026-08-19.
+- See [`docs/phase-6-admin-authentication.md`](docs/phase-6-admin-authentication.md) for the password, session, lockout, deployment, and recovery procedures.
 
 ## Terminology
 

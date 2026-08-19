@@ -19,6 +19,7 @@
     "db:branch:create": "node scripts/create-preview-branch.js"
   },
   "dependencies": {
+    "@emporium/domain": "*",
     "@neondatabase/serverless": "1.1.0",
     "drizzle-orm": "0.45.2"
   },

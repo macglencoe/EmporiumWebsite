@@ -1,15 +1,12 @@
 import "./style.css";
-import { useState, useEffect } from "react";
-import App from "next/app";
-
 import React from "react";
-import DataUpdate from "../components/dataUpdate";
+import AuthControls from "../components/authControls";
 
 export default function MyApp({ Component, pageProps, commitSha, commitMessage }) {
   return (
     <>
+    <AuthControls />
     <Component {...pageProps} />
     </>
   );
 }
-

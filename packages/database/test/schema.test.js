@@ -4,6 +4,9 @@ import test from 'node:test';
 import { getTableName } from 'drizzle-orm';
 
 import {
+  adminAuthEvents,
+  adminCredentials,
+  adminSessions,
   auditEvents,
   caffeineDetails,
   changeSetItems,
@@ -17,8 +20,11 @@ import {
   tobaccoDetails,
 } from '../src/schema/index.js';
 
-test('exports the complete Phase 4 relational schema', () => {
+test('exports the complete relational schema', () => {
   const tables = [
+    adminAuthEvents,
+    adminCredentials,
+    adminSessions,
     products,
     productImages,
     cigarDetails,
@@ -33,6 +39,9 @@ test('exports the complete Phase 4 relational schema', () => {
   ].map(getTableName);
 
   assert.deepEqual(tables, [
+    'admin_auth_events',
+    'admin_credentials',
+    'admin_sessions',
     'products',
     'product_images',
     'cigar_details',

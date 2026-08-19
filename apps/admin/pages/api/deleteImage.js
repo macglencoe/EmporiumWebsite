@@ -1,7 +1,8 @@
 import { del } from "@vercel/blob";
+import { withAuth } from '../../lib/auth/server.mjs';
 
 
-export default async function handler(req, res) {
+async function handler(req, res) {
     if (req.method == 'DELETE') {
         try {
             const urlToDelete = req.body;
@@ -18,4 +19,4 @@ export default async function handler(req, res) {
         res.status(405).json({ message: `${req.method} requests are not allowed.` });
     }
 }
-
+export default withAuth(handler);

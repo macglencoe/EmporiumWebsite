@@ -15,6 +15,13 @@
       "when": 1787150932555,
       "tag": "0001_public_catalog_views",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1787173869874,
+      "tag": "0002_youthful_retro_girl",
+      "breakpoints": true
     }
   ]
 }

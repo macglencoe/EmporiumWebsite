@@ -1,10 +1,9 @@
 
 
-import { useEffect } from 'react';
-import { useState } from 'react';
 import Data from '../../public/data/consolidated_cigars.json'
+import { withAuth } from '../../lib/auth/server.mjs';
 
-export default async function handler(req, res) {
+async function handler(req, res) {
     const cigars = await Data;
     const newCigar = req.body;
     
@@ -13,3 +12,4 @@ export default async function handler(req, res) {
     return res.status(200).json({newCigar});
 
 }
+export default withAuth(handler);

@@ -1,4 +1,6 @@
-export default async function handler(req, res) {
+import { withAuth } from '../../lib/auth/server.mjs';
+
+async function handler(req, res) {
     if (req.method !== 'GET') {
         return res.status(405).json({ message: "Only GET requests are allowed." });
     }
@@ -29,3 +31,4 @@ export default async function handler(req, res) {
 
 
 }
+export default withAuth(handler);

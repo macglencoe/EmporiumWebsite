@@ -1,6 +1,7 @@
 import { put } from "@vercel/blob";
 import fs from 'fs';
 import { IncomingForm } from 'formidable';
+import { withAuth } from '../../lib/auth/server.mjs';
 
 export const config = {
     api: {
@@ -10,7 +11,7 @@ export const config = {
 
 
 
-export default async function handler(req, res) {
+async function handler(req, res) {
 
     if (req.method == 'POST') {
 
@@ -48,3 +49,4 @@ export default async function handler(req, res) {
         res.status(405).json({ message: req.method + " requests are not allowed." });
     }
 }
+export default withAuth(handler);

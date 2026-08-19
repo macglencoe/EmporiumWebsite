@@ -5,6 +5,9 @@ import { requireDatabaseUrl } from './environment.js';
 const sql = neon(requireDatabaseUrl());
 
 const expectedTables = [
+  'admin_auth_events',
+  'admin_credentials',
+  'admin_sessions',
   'audit_events',
   'caffeine_details',
   'change_set_items',

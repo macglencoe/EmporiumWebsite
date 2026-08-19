@@ -1,11 +1,13 @@
 // pages/api/files/[...path].js
 
+import { withAuth } from '../../../lib/auth/server.mjs';
+
 const OWNER = 'macglencoe';
 const REPO  = 'EmporiumWebsite';
 const TOKEN = process.env.GITHUB_TOKEN;
 const BASE  = `https://api.github.com/repos/${OWNER}/${REPO}/contents`;
 
-export default async function handler(req, res) {
+async function handler(req, res) {
   // Only allow GET and PUT
   if (req.method !== 'GET' && req.method !== 'PUT') {
     res.setHeader('Allow', ['GET', 'PUT']);
@@ -105,3 +107,4 @@ export default async function handler(req, res) {
     }
   }
 }
+export default withAuth(handler);

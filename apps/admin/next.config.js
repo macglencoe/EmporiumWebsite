@@ -1,5 +1,13 @@
 const path = require('path')
 
+// Next resolves .env files from the application directory. Local development
+// keeps shared secrets at the monorepo root, so load that file explicitly.
+// dotenv does not overwrite variables injected by Vercel or the shell.
+require('dotenv').config({
+  path: path.join(__dirname, '../../.env.local'),
+  quiet: true,
+})
+
 module.exports = {
   experimental: {
     externalDir: true,
