@@ -8,6 +8,7 @@ This repository contains the public King Street Emporium website and its adminis
 - `apps/admin` — the staff administrative interface extracted from the former `cms` branch
 - `packages/ui` — shared UI components as they are extracted
 - `packages/config` — shared application configuration
+- `packages/domain` — canonical catalog schemas, types, slugs, UUIDs, and legacy mappings
 - `docs` — migration findings and implementation notes
 - `PROJECT_PLAN.md` — the persistent migration plan
 
@@ -40,6 +41,7 @@ npm run build:public
 npm run build:admin
 npm run lint
 npm test
+npm run validate:legacy
 ```
 
 The current applications have inherited lint and build warnings documented in [`docs/phase-2-monorepo.md`](docs/phase-2-monorepo.md). They do not prevent either application from building.

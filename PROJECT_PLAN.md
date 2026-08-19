@@ -18,6 +18,8 @@ The current production site must remain available throughout development. Produc
 - See [`docs/phase-1-file-disposition.csv`](docs/phase-1-file-disposition.csv) for the classification of all 142 paths changed between `main` and `cms`.
 - Phase 2 was completed on 2026-08-19.
 - See [`docs/phase-2-monorepo.md`](docs/phase-2-monorepo.md) for the resulting workspace layout, commands, verification, and inherited warnings.
+- Phase 3 was completed on 2026-08-19.
+- See [`docs/phase-3-domain-model.md`](docs/phase-3-domain-model.md) for the canonical contracts and [`docs/phase-3-validation-report.md`](docs/phase-3-validation-report.md) for the legacy-data results.
 
 ## Terminology
 

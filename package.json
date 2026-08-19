@@ -18,7 +18,8 @@
     "lint:admin": "turbo lint --filter=@emporium/admin",
     "test": "turbo test",
     "test:public": "turbo test --filter=@emporium/public",
-    "test:admin": "turbo test --filter=@emporium/admin"
+    "test:admin": "turbo test --filter=@emporium/admin",
+    "validate:legacy": "npm run validate:legacy --workspace=@emporium/domain"
   },
   "engines": {
     "node": ">=18.x"
