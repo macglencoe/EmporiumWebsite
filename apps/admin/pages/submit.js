@@ -1,0 +1,865 @@
+import { use, useEffect, useRef, useState } from 'react';
+import Layout from '../components/layout'
+import PageTitle1 from '../components/pagetitle1';
+import { diffJson } from 'diff';
+import mergeData from '../utils/mergeData'
+import { PiSpinnerBold } from 'react-icons/pi';
+import Link from 'next/link';
+
+
+
+
+
+export const getStaticProps = async () => {
+    const data = await import('../public/data/consolidated_cigars.json');
+    return {
+        props: {
+            data: data.default
+        },
+    };
+};
+
+export const Diff = ({ diff, titleKey, title }) => {
+    if (Array.isArray(diff) && diff.length > 0)
+        return (
+            <div className='bg-amber-100 rounded-md w-full overflow-hidden'>
+                <h2 className='text-2xl p-2 bg-amber-200'>{title}</h2>
+                {diff.map((diffObjectLines, objectIndex) => {
+                    const escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+                    const line = diffObjectLines.find((diffLine) => diffLine.value.includes(titleKey));
+                    const regex = new RegExp(`"${escapeRegExp(titleKey)}"\\s*:\\s*"([^"]+)"`);
+                    const match = line?.value.match(regex);
+                    const title = match?.[1];
+                    return (
+                        <div className='p-2 border-t-2 border-dotted border-amber-300 first:border-none'>
+                            <h3 className='text-xl mb-3'>{title}</h3>
+
+                            {diffObjectLines.map((diffLine, i) => {
+                                if (diffLine.removed || diffLine.added) {
+                                    if (diffLine.value !== 'null') { // guard against "null" in new or deleted cigars
+                                        return (
+                                            <pre className={diffLine.added ? 'bg-green-400/50' : diffLine.removed ? 'bg-red-400/50' : ''}>{diffLine.value}</pre>
+                                        )
+                                    }
+                                }
+                            })}
+                        </div>
+                    )
+                })}
+            </div>
+        )
+    else return null;
+}
+
+
+
+
+export const SubmitPage = (props) => {
+    const audioRef = useRef();
+    const [cigarDiff, setCigarDiff] = useState([]);
+    const [tobaccoDiff, setTobaccoDiff] = useState([]);
+    const [responseConsole, setResponseConsole] = useState([]);
+    const [currentCommitSha, setCurrentCommitSha] = useState('');
+    const [currentCommitMessage, setCurrentCommitMessage] = useState('');
+    // all commits
+    const [allCommits, setAllCommits] = useState([]);
+    const [recentAllCommitSha, setRecentAllCommitSha] = useState('');
+    // only commits touching data file(s)
+    const [dataCommits, setDataCommits] = useState([]);
+    const [recentDataCommitSha, setRecentDataCommitSha] = useState('');
+
+    const play = () => {
+        if (audioRef.current) {
+            audioRef.current.play();
+        }
+    }
+    const [mergedCigarData, setMergedCigarData] = useState([]);
+
+    const [mergedTobaccoData, setMergedTobaccoData] = useState([]);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            // pull and build merged data
+            setMergedCigarData(
+                mergeFromLocal('tempData_cigars', 'originData_cigars', props.data)
+            )
+            setMergedTobaccoData(
+                mergeFromLocal('tempData_tobacco', 'originData_tobacco', [] /*TODO*/)
+            )
+            // sync commit metadata from remote and local
+            syncCommits();
+        }
+    }, []);
+
+    useEffect(() => {
+        // generate diff from merged data
+        setCigarDiff(generateDiff(mergedCigarData))
+        setTobaccoDiff(generateDiff(mergedTobaccoData))
+    }, [mergedCigarData, mergedTobaccoData]);
+
+    useEffect(() => {
+        // sync commit metadata every 60s
+        const interval = setInterval(() => syncCommits(), 60000);
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        // when allCommits changes, update sha tracking
+        if (allCommits.length > 0) {
+            setRecentAllCommitSha(allCommits[0].sha);
+        }
+    }, [allCommits])
+
+    useEffect(() => {
+        // when dataCommits changes, update sha tracking
+        if (dataCommits.length > 0) {
+            setRecentDataCommitSha(dataCommits[0].sha);
+        }
+    }, [dataCommits])
+
+    const [defaultCommitMessage, setDefaultCommitMessage] = useState('');
+    useEffect(() => {
+        const prefix = process.env.NEXT_PUBLIC_COMMIT_MESSAGE_PREFIX || 'CMS Commit';
+        // update default commit message every second
+        const interval = setInterval(() => {
+            setDefaultCommitMessage(`${prefix} - ${new Date().toLocaleString()}`);
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
+
+    // commit message from user input
+    const [customCommitMessage, setCustomCommitMessage] = useState('');
+
+    const [syncStatus, setSyncStatus] = useState('');
+
+    useEffect(() => 
+        // update sync status when relevant metadata changes
+        setSyncStatus(evaluateSyncState()),
+        [recentDataCommitSha, currentCommitSha, recentAllCommitSha])
+
+
+
+    /**
+     * Pull temp and origin from localStorage, then merge
+     * @param {string} tempKey
+     * @param {string} originKey
+     * @param {Object[]} defaultData
+     * @returns {any} Merged data
+     */
+    const mergeFromLocal = (tempKey, originKey, defaultData) => {
+        const tempData = coerceSlugs(pullLocalJSON(tempKey, defaultData));
+        const originData = coerceSlugs(pullLocalJSON(originKey, defaultData));
+        return mergeData(tempData, originData);
+    }
+
+    /**
+     * Pull key from localStorage, and initialize if necessary with default data
+     * @param {string} key
+     * @param {Object[]} defaultData
+     * @returns {any} 
+     */
+    const pullLocalJSON = (key, defaultData) => {
+        let data = JSON.parse(localStorage.getItem(key));
+        if (!data) {
+            data = defaultData;
+            localStorage.setItem(key, JSON.stringify(defaultData));
+        }
+        return data;
+    }
+
+    const syncCommits = () => {
+        // fetch all commits
+        fetch(`/api/commits?branch=${process.env.NEXT_PUBLIC_BASE_BRANCH || 'cms'}`).then(response =>
+            response.json()
+        ).then(data => 
+            setAllCommits(data)
+        )
+        
+        // fetch only commits touching data files
+        fetch(`/api/commits?path=${encodeURIComponent('public/data')}&branch=${process.env.NEXT_PUBLIC_BASE_BRANCH || 'cms'}`).then(response =>
+            response.json()
+        ).then(data =>
+            setDataCommits(data)
+        )
+
+        // get currently loaded commit metadata
+        setCurrentCommitSha(localStorage.getItem('tempData_sha') ?? 'No Sha Found');
+        setCurrentCommitMessage(localStorage.getItem('tempData_message') ?? 'No Message Found')
+    }
+
+    /* -- Data manipulation helpers -- */
+
+    const coerceSlug = (entry) => {
+        const temp = { ...entry };
+        
+        // replace slug with new-slug, then remove new-slug
+        if (temp['new-slug']) {
+            temp.slug = temp['new-slug'];
+            delete temp['new-slug'];
+        }
+
+        return temp;
+    }
+
+    const coerceSlugs = (data) => {
+        return data.map(entry => coerceSlug(entry));
+    }
+
+    const stripId = (entry) => {
+        const temp = {...entry};
+        delete temp['_clientId'];
+        return temp;
+    }
+
+    const stripIds = (data) => data.map(entry => stripId(entry))
+
+    const coerceAndStrip = (data) => data.map(entry => stripId(coerceSlug(entry)))
+
+    /* -- -- */
+
+
+
+    const commitToGit = async (commitData, branch, message, filePath) => {
+        try {
+            // strip out the CMS-only IDs
+            const editedData = stripIds(commitData)
+
+            // build URL
+            const filePathEncoded = encodeURIComponent(filePath);
+            const url = `/api/files/${filePathEncoded}`;
+
+            // enqueue “standby”
+            pushResponseConsole(
+                'standby',
+                "Waiting...",
+                true
+            );
+
+            // fire PUT
+            const response = await fetch(url, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    branch,
+                    message,
+                    content: JSON.stringify(editedData, null, 2)  // <— must be "content"
+                })
+            });
+
+            // parse payload
+            const payload = await response.json();
+
+            // remove standby entry
+            setResponseConsole(c => c.slice(0, -1));
+
+            // log what actually came back
+            console.log(payload);
+
+            // update console with result or error
+            pushResponseConsole(
+                response.status,
+                response.statusText,
+                response.ok,
+                response.ok ? payload.message : payload.error,
+                { payload }
+            );
+        }
+        catch (err) {
+            console.error(err);
+            pushResponseConsole(
+                500,
+                'error',
+                false,
+                err.message
+            )
+        }
+    };
+
+    
+    const handleCommit = (e) => {
+
+        if (e.currentTarget.textContent == "Commit") {
+            // Confirmation
+            e.currentTarget.textContent = "Are you sure?";
+            e.currentTarget.style.backgroundColor = "var(--negative)";
+        } else {
+            // reset text and color after confirmation
+            e.currentTarget.textContent = "Commit";
+            e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
+
+            const branchesString = process.env.NEXT_PUBLIC_COMMIT_TO
+            const branches = branchesString ? branchesString.split(',').map(item => item.trim()) : null;
+            if (!branches || branches.length === 0) {
+                pushResponseConsole(
+                    500,
+                    "Internal Server Error",
+                    false,
+                    "Missing environment configuration. Please contact the developer"
+                );
+                return
+            }
+
+
+            if (syncStatus == 'server-ahead') {
+                pushResponseConsole(
+                    400,
+                    "Bad Request",
+                    false,
+                    "Cannot commit when local base is not up-to-date"
+                );
+                return
+            }
+            if (syncStatus == 'building') {
+                pushResponseConsole(
+                    503,
+                    "Service Unavailable",
+                    false,
+                    "Cannot commit while still in the process of deploying changes"
+                );
+                return
+            }
+            if (cigarDiff.length === 0 && tobaccoDiff.length === 0) {
+                pushResponseConsole(
+                    400,
+                    "Bad Request",
+                    false,
+                    "No changes detected"
+                );
+                return
+            }
+            
+            for (const branch of branches) {
+                if (cigarDiff.length > 0) {
+                    const localCigarData = JSON.parse(localStorage.getItem('tempData_cigars'));
+
+                    const edited = coerceAndStrip(localCigarData);
+                    
+                    commitToGit(edited, branch, customCommitMessage === "" ? defaultCommitMessage : customCommitMessage, 'public/data/consolidated_cigars.json')
+                }
+                if (tobaccoDiff.length > 0) {
+                    const localTobaccoData = JSON.parse(localStorage.getItem('tempData_tobacco'));
+
+                    const edited = coerceAndStrip(localTobaccoData);
+
+                    commitToGit(edited, branch, customCommitMessage === "" ? defaultCommitMessage : customCommitMessage, 'public/data/tobacco.json')
+                }
+            }
+
+
+        }
+    }
+
+
+    
+    const generateDiff = ( mergedData ) => {
+        const tempDiff = [];
+        mergedData.map((item, index) => {
+            if(!item.origin || JSON.stringify(item.origin) !== JSON.stringify(item.temp)) {
+                // assume here that "new-slug" has already been coerced into "slug"
+                const origin = item.origin ? stripId(item.origin): null;
+                const temp = item.temp ? stripId(item.temp) : null
+                const diff = diffJson(origin, temp)
+                tempDiff.push([...diff]);
+            }
+        })
+        return tempDiff;
+    }
+    const evaluateSyncState = () => {
+        switch (recentDataCommitSha) {
+            case currentCommitSha:
+                /* Case 1: Local commit is the same as recent data commit */
+                return "same";
+            case process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA:
+                /* Case 2: Server commit is ahead of local commit */
+                return "server-ahead";
+            default:
+                if (currentCommitSha !== recentAllCommitSha)
+                    /* Case 3: Loading state - local, build, and fetched commits are out-of-sync */
+                    return "building"
+                else 
+                    /* Case 4: Current commit is ahead of the last data commit */
+                    return (
+                    "local-ahead"
+                )
+        }
+    }
+
+    const pushResponseConsole = (status, statusText, ok, message, extra = {}) => {
+        if (!status || !statusText) {
+            throw new Error("Status and statusText are required for console entries");
+        }
+        setResponseConsole((current) => [...current, {
+            time: new Date().toLocaleString(),
+            status,
+            statusText,
+            ok,
+            message,
+            ...extra
+        }]);
+        return;
+    }
+
+    return (
+        <>
+            <Layout>
+                <PageTitle1>Manage Changes</PageTitle1>
+
+
+
+                <table className='commit'>
+                    <thead>
+                        <tr>
+                            <th>Most Recent Data Commit</th>
+                            <th className='equivalence'></th>
+                            <th>Local Commit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {/* Display information for the most recent data commit */}
+                            {dataCommits.length > 0 ? (
+                                <td>
+                                    <p>{dataCommits[0].commit.message ?? "No commit message found"}</p>
+                                    <p className='date'>{dataCommits[0].commit.author.date ?? "No date found"}</p>
+                                    <p><b>{recentDataCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
+                                </td>
+                            ) : (
+                                <td><p>Loading ...</p></td>
+                            )}
+                            <td className='equivalence'>
+                                <div>
+                                    
+                                    {syncStatus == 'same' && <p>=</p>}
+
+                                    
+                                    {syncStatus == 'building' && (
+                                            <svg className='loading' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                                                <path d="M320-160h320v-120q0-66-47-113t-113-47q-66 0-113 47t-47 113v120Zm160-360q66 0 113-47t47-113v-120H320v120q0 66 47 113t113 47ZM160-80v-80h80v-120q0-61 28.5-114.5T348-480q-51-32-79.5-85.5T240-680v-120h-80v-80h640v80h-80v120q0 61-28.5 114.5T612-480q51 32 79.5 85.5T720-280v120h80v80H160Z" />
+                                            </svg>
+                                        )
+                                    }
+
+                                    {syncStatus == 'local-ahead' && <p>&lt;</p>}
+
+                                    {syncStatus == 'server-ahead' && (
+                                            <a href='.'>
+                                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z" />
+                                                </svg>
+                                            </a>
+                                        )
+                                    }
+                                </div>
+                            </td>
+                            {/* Display information for the current commit in local storage */}
+                            <td>
+                                <p>{currentCommitMessage ?? "No commit message found"}</p>
+                                <p><b>{currentCommitSha?.slice(0, 7) ?? "No SHA Found"}</b></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colSpan={3}>
+                                {syncStatus == 'building' &&
+                                    <>
+                                        <p>This most likely means your changes are still being fetched. Wait a few seconds, and if you still see this message, please <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>check the build status</a>.</p>
+                                    </>
+                                }
+                                {syncStatus == 'same' &&
+                                    <>
+                                        <p>Commit is up to date, and <b>you are able to submit changes</b></p>
+                                    </>
+                                }
+                                {syncStatus == 'local-ahead' &&
+                                    <>
+                                        <p>Commit is ahead of the last data commit, and <b>you are able to submit changes</b></p>
+                                    </>
+                                }
+                                {syncStatus == 'server-ahead' &&
+                                    <>
+                                        <p>Server commit is ahead of local commit. <br></br>This means the site hasn't had the chance to update the local data yet. Try <a href='.'>refreshing the page</a></p>
+                                        <p>In the meantime, <b>you won't be able to submit changes</b></p>
+                                    </>
+
+                                }
+                                {
+                                    syncStatus == '' &&
+                                    <>
+                                        <p>Unable to determine if commits are up to date.</p>
+                                        <p>This most likely means you are running a local instance</p>
+                                        <b>You are not able to submit changes</b>
+                                    </>
+                                }
+
+                                <table className='text-xs mt-2' style={{
+                                    fontFamily: "monospace"
+                                }}>
+                                    <tr>
+                                        <th>Syncing data from:</th>
+                                        <td>{process.env.NEXT_PUBLIC_BASE_BRANCH}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pushing changes to:</th>
+                                        <td>{process.env.NEXT_PUBLIC_COMMIT_TO}</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div className='submit-container'>
+                    <p><b>Please inspect your changes carefully.</b></p>
+                    {cigarDiff.length === 0 && tobaccoDiff.length === 0 &&
+                        <div className='diff-container'>
+                            <div className='diff-split'>
+                                <h3>No changes detected</h3>
+                                <p>To make changes, select a product in the <Link href="/cigars"><a>cigar</a></Link> or <Link href="/tobacco"><a>tobacco</a></Link> catalogs and click "Edit", or click "Add New" within the catalog to create a new product.</p>
+                            </div>
+                        </div>
+                    }
+                    <Diff diff={cigarDiff} titleKey={"Cigar Name"} title="Cigars"/>
+                    <Diff diff={tobaccoDiff} titleKey={"Tobacco Name"} title="Pipe Tobacco"/>
+                </div>
+
+                <div className='section-header'>
+                    <h1>Commit Changes</h1>
+                    <p>Send your changes to the repository, and optionally enter a custom message</p>
+                </div>
+
+                <div>
+                    <div className='commit-dialog'>
+                        <button /* disabled */ className='commit-button' onClick={handleCommit}
+                            onBlur={(e) => {
+                                if (e.currentTarget.textContent == "Are you sure?") {
+                                    e.currentTarget.textContent = "Commit";
+                                    e.currentTarget.style.backgroundColor = "var(--dl-color-theme-secondary2)";
+                                }
+                            }}
+
+                        >Commit</button>
+                        <div className='message-container'>
+                            <label htmlFor="message">Message</label>
+                            <input id='message' className='commit-message' type="text" placeholder={defaultCommitMessage} onChange={(e) => {
+                                setCustomCommitMessage(e.target.value);
+                            }}></input>
+                        </div>
+                    </div>
+                    {responseConsole.length > 0 &&
+                        <div className='response-container'>
+                            <ul>
+                                {responseConsole.map((response, index) => {
+                                    return (
+                                        <li className={response.ok ? 'response-ok' : 'response-error'}>
+                                            <div className='response-header'>
+                                                <h1>
+                                                    {response.status ? response.status + ": " : ""} {response.statusText ?? "Unknown"}
+                                                </h1>
+                                                <p>{response.time ?? "Unknown"}</p>
+                                            </div>
+
+                                            <pre className='message-display'>{response.message ?? "No message"}</pre>
+                                            {response.status === 200 &&
+                                                <div className='vercel-deployments'>
+                                                    <b>Go to the Vercel Dashboard to see the deployment status: </b>
+                                                    <a href='https://vercel.com/king-street-emporium/emporium-website/deployments' target='_blank'>Vercel Deployments</a>
+                                                    <p><b>Public Site:</b> Changes will be visible in 1-2 minutes</p>
+                                                    <p><b>Admin Site:</b> Changes should be visible instantly, after the next page is loaded</p>
+                                                </div>
+                                            }
+                                            <details>
+                                                <summary>See full response</summary>
+                                                <pre>{JSON.stringify(response, null, 2)}</pre>
+                                            </details>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                    }
+                    <audio ref={audioRef} src="/areyousure.mp3"></audio>
+                </div>
+            </Layout>
+            <style jsx>
+                {`
+.section-header {
+    padding: 0.25em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.section-header h1 {
+    border-bottom: 9px double var(--dl-color-theme-secondary2);
+    padding: 0.25em;
+
+}
+
+
+.commit .date {
+    font-size: 0.7em;
+}
+table.commit thead, table.commit tbody {
+    border-bottom: 2px solid var(--dl-color-theme-primary1);
+}
+table.commit {
+    border-collapse: collapse;
+    background-color: var(--dl-color-theme-primary2);
+    margin: 10px;
+    border-radius: 5px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+table.commit tr {
+    border-bottom: 2px solid var(--dl-color-theme-primary1);
+}
+table.commit tr:last-child {
+    border-bottom: none;
+}
+table.commit tr > * {
+    padding: 0.5em;
+}
+table.commit tbody tr > * {
+    text-align: center;
+}
+table.commit tr > *:last-child {
+    border-right: none;
+}
+table.commit td, table.commit th {
+}
+table.commit .equivalence {
+    width: 3em;
+}
+table.commit .equivalence svg.loading {
+    animation: spin 2s ease infinite;
+}
+table.commit .equivalence svg.clickable {
+    cursor: pointer;
+}
+table.commit .equivalence svg.clickable:hover {
+    scale: 1.2;
+}
+table.commit .equivalence svg {
+    height: 2em;
+    width: 2em;
+    fill: var(--dl-color-theme-primary1);
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    5% {
+        transform: rotate(0deg);
+    }
+    45% {
+        transform: rotate(180deg);
+    }
+    55% {
+        transform: rotate(180deg);
+    }
+    90% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+table.commit .equivalence div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table.commit .equivalence p {
+    font-size: 2em;
+}
+.diff-button-container button {
+    background-color: transparent;
+    color: var(--dl-color-theme-primary1);
+    padding: 0px;
+    font-weight: 500;
+    font-style: italic;
+    margin: 0.5em 1em;
+}
+.diff-button-container button:hover {
+    text-decoration: underline;
+}
+a {
+    color: var(--dl-color-theme-primary1);
+    font-style: italic;
+    font-weight: 500;
+}
+a:hover {
+    text-decoration: underline;
+}
+.response-container {
+    background-color: var(--dl-color-theme-primary2);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.response-container > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.response-container li {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--dl-color-theme-primary1);
+}
+.response-container li.response-ok {
+    border-left: 10px solid var(--positive);
+}
+.response-container li.response-error {
+    border-left: 10px solid var(--negative);
+}
+.response-container li > div.response-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.response-container li > div.vercel-deployments {
+    display: flex;
+    flex-direction: column;
+}
+.response-container li b {
+    font-family: Inter;
+}
+.response-container li a {
+    font-family: Inter;
+    text-decoration: underline;
+    text-decoration-color: var(--dl-color-theme-primary1);
+    font-size: 1.3em;
+}
+.response-container .message-display {
+    font-family: Inter;
+    padding-left: 0.5em;
+    border-left: 2px solid var(--dl-color-theme-primary1);
+}
+
+.response-container pre {
+    white-space: pre-wrap;
+}
+.response-container summary {
+    font-family: Inter;
+    cursor: pointer;
+}
+.response-container h1 {
+    text-transform: uppercase;
+    font-family: Inter;
+    font-size: 1.2em;
+}
+.submit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+}
+.diff-split {
+    padding: 8px;
+    border-top: 3px dotted var(--dl-color-theme-primary1);
+}
+.diff-split:first-child {
+    border-top: none;
+}
+.diff-split h3 {
+    margin: 0.3em 0.3em 0.5em 0.3em;
+    font-family: Inter;
+}
+.diff-container {
+    background-color: var(--dl-color-theme-primary2);
+    border-radius: 5px;
+    width: 100%;
+}
+.diff-container pre {
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+.commit-dialog {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+.commit-dialog .message-container {
+    flex: 1;
+    position: relative;
+}
+.commit-dialog .message-container label {
+    position: absolute;
+    top: 0.4em;
+    left: 0.5em;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--dl-color-theme-secondary2);
+}
+.commit-dialog input {
+    width: 100%;
+    background-color: var(--dl-color-theme-primary2);
+    color: var(--dl-color-theme-secondary1);
+    padding: 0.5em 1em;
+    padding-top: 1.2em;
+    outline: none;
+    font-family: Inter;
+}
+.commit-button {
+    background-color: var(--dl-color-theme-secondary2);
+    color: var(--dl-color-theme-primary1);
+    padding: 0.5em 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.commit-button:enabled:hover {
+    color: var(--dl-color-theme-primary2);
+}
+.commit-button:disabled {
+    filter: opacity(75%);
+    cursor: not-allowed;
+}
+.line-new {
+    background-color: rgba(0, 255, 0, 0.3);
+}
+
+.line-old {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+.pre-line {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pre-container {
+    background-color: var(--dl-color-theme-primary2);
+    color: var(--dl-color-theme-secondary1);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+
+
+
+
+
+            `}
+            </style>
+        </>
+    )
+}
+
+export default SubmitPage

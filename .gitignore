@@ -1,7 +1,11 @@
-out/
+node_modules/
 .next/
-public/sitemap-0.xml
+out/
+.turbo/
+.vercel/
 
-.vercel
-.env.local
-node_modules
+.env
+.env.*
+!.env.example
+
+**/public/sitemap-0.xml

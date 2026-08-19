@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://kingstreetemporium.com
+
+# Sitemaps
+Sitemap: https://kingstreetemporium.com/sitemap.xml

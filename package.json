@@ -1,41 +1,32 @@
 {
-  "name": "ordinary-rotating-gnu",
+  "name": "emporium-website",
   "version": "1.0.0",
-  "description": "A next project generated based on a UIDL document",
-  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "postbuild": "next-sitemap",
-    "start": "next start --port 25565",
-    "export": "next export"
-  },
-  "author": "TeleportHQ",
-  "license": "MIT",
-  "dependencies": {
-    "@babel/parser": "^7.26.7",
-    "@vercel/analytics": "^1.1.1",
-    "cheerio": "^1.0.0",
-    "clsx": "^2.1.1",
-    "jquery": "^3.7.1",
-    "jsbarcode": "^3.11.6",
-    "next": "^12.3.4",
-    "next-sitemap": "^4.2.3",
-    "prop-types": "15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^5.5.0",
-    "react-scripts": "^5.0.1",
-    "styled-jsx": "^5.1.6",
-    "vercel": "^41.3.0"
+    "dev": "turbo dev --filter=@emporium/public",
+    "dev:public": "turbo dev --filter=@emporium/public",
+    "dev:admin": "turbo dev --filter=@emporium/admin",
+    "build": "turbo build",
+    "build:public": "turbo build --filter=@emporium/public",
+    "build:admin": "turbo build --filter=@emporium/admin",
+    "lint": "turbo lint",
+    "lint:public": "turbo lint --filter=@emporium/public",
+    "lint:admin": "turbo lint --filter=@emporium/admin",
+    "test": "turbo test",
+    "test:public": "turbo test --filter=@emporium/public",
+    "test:admin": "turbo test --filter=@emporium/admin"
   },
   "engines": {
     "node": ">=18.x"
   },
+  "packageManager": "npm@10.9.2",
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.8",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.4",
-    "tailwindcss": "^4.1.8"
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^12.3.4",
+    "turbo": "^2.5.6"
   }
 }

@@ -1,0 +1,280 @@
+{
+    "entityLabel": "Cigar",
+    "slugBasePath": "/cigars",
+    "type": "object",
+    "properties": {
+        "Cigar Name": {
+            "type": "string",
+            "default": "",
+            "validation": {
+                "required": true,
+                "minLength": 2
+            },
+            "ui": {
+                "label": "Name",
+                "autosuggest": false,
+                "placeholder": "Enter cigar name",
+                "input": "text",
+                "description": "e.g., Cazadores",
+                "section": "metadata",
+                "showInCatalog": true
+            }
+        },
+        "Cigar Brand": {
+            "type": "string",
+            "default": "",
+            "validation": {
+                "required": true,
+                "minLength": 2
+            },
+            "ui": {
+                "label": "Brand",
+                "autosuggest": true,
+                "placeholder": "Enter cigar brand",
+                "input": "text",
+                "description": "e.g., J.C. Newman.",
+                "section": "metadata",
+                "showInCatalog": true
+            }
+        },
+        "Wrapper": {
+            "type": ["string", "null"],
+            "default": "",
+            "ui": {
+                "label": "Wrapper",
+                "autosuggest": true,
+                "placeholder": "Enter wrapper",
+                "input": "text",
+                "description": "e.g., Connecticut Shade",
+                "section": "metadata",
+                "showInCatalog": true
+            }
+        },
+        "Binder": {
+            "type": ["string", "null"],
+            "default": "",
+            "ui": {
+                "label": "Binder",
+                "autosuggest": true,
+                "placeholder": "Enter binder",
+                "input": "text",
+                "description": "e.g., Dominican",
+                "section": "metadata"
+            }
+        },
+        "Filler": {
+            "type": ["string", "null"],
+            "default": "",
+            "ui": {
+                "label": "Filler",
+                "autosuggest": true,
+                "placeholder": "Enter filler",
+                "input": "text",
+                "description": "e.g., Dominican",
+                "section": "metadata"
+            }
+        },
+        "Flavor_Profile": {
+            "type": ["string", "null"],
+            "default": "",
+            "ui": {
+                "label": "Flavor Profile",
+                "autosuggest": false,
+                "placeholder": "Enter flavor profile",
+                "input": "text",
+                "description": "Comma separated, e.g., Cedar, Cream, Sweetness",
+                "section": "metadata"
+            }
+        },
+        "Strength_Profile": {
+            "type": "string",
+            "enum": [
+                "",
+                "Mild",
+                "Mild-Medium",
+                "Medium",
+                "Medium-Full",
+                "Full"
+            ],
+            "default": "",
+            "ui": {
+                "label": "Strength",
+                "input": "mapped-range",
+                "options": [
+                    { "pos": 0, "value": "", "label": "N/A"},
+                    { "pos": 1, "value": "Mild", "label": "Mild"},
+                { "pos": 2, "value": "Mild-Medium", "label": "Mild-Medium"},
+                { "pos": 3, "value": "Medium", "label": "Medium"},
+                { "pos": 4, "value": "Medium-Full", "label": "Medium-Full"},
+                { "pos": 5, "value": "Full", "label": "Full"}
+            ],
+                "range": { "min": 0, "max": 5, "step": 1},
+                "section": "metadata"
+            },
+            "validation": {
+                "required": false
+            }
+        },
+        "description": {
+            "type": ["string", "null"],
+            "default": null,
+            "validation": {
+                "required": false,
+                "maxLength": 2000
+            },
+            "ui": {
+                "label": "Description",
+                "input": "textarea",
+                "rows": 4,
+                "description": "This will be displayed at the top of the product page.",
+                "section": "metadata"
+            }
+        },
+        "Date Added": {
+            "type": ["string", "null"],
+            "format": "date",
+            "default": null,
+            "ui": {
+                "label": "Date Added",
+                "input": "date",
+                "description": "YYYY-MM-DD format",
+                "section": "metadata"
+            }
+        },
+        "hidden": {
+            "type": "boolean",
+            "default": false,
+            "ui": {
+                "label": "Hidden",
+                "input": "checkbox",
+                "description": "Check box if this cigar should be hidden on the public site",
+                "section": "metadata"
+            }
+        },
+        "Podcast_Link": {
+            "type": ["string", "null"],
+            "default": null,
+            "ui": {
+                "label": "Podcast Link",
+                "input": "textarea",
+                "rows": 4,
+                "description": "Paste the link or embed code of the podcast episode this cigar was featured on.",
+                "section": "metadata"
+            }
+        },
+        "featured_Eds_Pick": {
+            "type": ["string", "null"],
+            "format": "date",
+            "default": null,
+            "ui": {
+                "label": "Ed's Pick",
+                "input": "date",
+                "description": "The date this cigar was chosen as Ed's Pick (Leave blank if not chosen). YYYY-MM-DD format",
+                "section": "metadata"
+            }
+        },
+        "featured_Teds_Pick": {
+            "type": ["string", "null"],
+            "format": "date",
+            "default": null,
+            "ui": {
+                "label": "Ted's Pick",
+                "input": "date",
+                "description": "The date this cigar was chosen as Ted's Pick (Leave blank if not chosen). YYYY-MM-DD format",
+                "section": "metadata"
+            }
+        },
+        "featured_StickFigures": {
+            "type": ["string", "null"],
+            "format": "date",
+            "default": null,
+            "ui": {
+                "label": "StickFigures",
+                "input": "date",
+                "description": "The date this cigar was featured on The Stick Figures (Leave blank if not featured). YYYY-MM-DD format",
+                "section": "metadata"
+            }
+        },
+        "Sizes": {
+            "type": "array",
+            "default": [],
+            "items": {
+                "type": "object",
+                "properties": {
+                    "Size": {
+                        "type": "string",
+                        "default": "",
+                        "validation": {
+                            "required": true,
+                            "minLength": 2
+                        },
+                        "ui": {
+                            "label": "Size",
+                            "input": "text",
+                            "autosuggest": true,
+                            "description": "e.g., Robusto",
+                            "section": "sizes"
+                        }
+                    },
+                    "Barcode": {
+                        "type": ["string", "null"],
+                        "default": null,
+                        "validation": {
+                            "required": false,
+                            "pattern": "^\\d+$"
+                        },
+                        "ui": {
+                            "label": "Barcode",
+                            "input": "text",
+                            "autosuggest": false,
+                            "description": "Must be all digits, e.g., 123456789",
+                            "section": "sizes"
+                        }
+                    },
+                    "In_Stock": {
+                        "type": "boolean",
+                        "default": false,
+                        "validation": {
+                            "required": false
+                        },
+                        "ui": {
+                            "label": "In Stock",
+                            "input": "checkbox",
+                            "description": "Check box if this size is in stock",
+                            "section": "sizes"
+                        }
+                    },
+                    "Price": {
+                        "type": ["string", "null"],
+                        "default": null,
+                        "validation": {
+                            "required": false,
+                            "pattern": "^[0-9]+(\\.[0-9]{2})?$"
+                        },
+                        "ui": {
+                            "label": "Price",
+                            "input": "price",
+                            "description": "USD, 0.00 format",
+                            "section": "sizes"
+                        }
+                    }
+                }
+            },
+            "ui": { 
+                "section": "sizes",
+                "label": "Sizes / Prices",
+                "showInCatalog": true
+            }
+        },
+        "image": {
+            "type": ["string", "null"],
+            "default": null,
+            "ui": {
+                "label": "Image",
+                "input": "image",
+                "description": "Upload a product image for this cigar.",
+                "section": "image"
+            }
+        }
+    }
+}

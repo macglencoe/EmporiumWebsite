@@ -1,0 +1,130 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "Cigar Brand": {
+        "type": "string",
+        "inputType": "basic",
+        "autosuggest": true,
+        "missingMessage": "All cigars must have a brand",
+        "description": "e.g., J.C. Newman."
+      },
+      "Cigar Name": {
+        "type": "string",
+        "inputType": "basic",
+        "autosuggest": false,
+        "missingMessage": "All cigars must have a name",
+        "description": "e.g., Cazadores."
+      },
+      "Wrapper": {
+        "type": "string",
+        "inputType": "basic",
+        "autosuggest": true,
+        "description": "e.g., Connecticut Shade"
+      },
+      "Binder": {
+        "type": "string",
+        "inputType": "basic",
+        "autosuggest": true,
+        "description": "e.g., Dominican"
+      },
+      "Filler": {
+        "type": "string",
+        "inputType": "basic",
+        "autosuggest": true,
+        "description": "e.g., Nicaraguan"
+      },
+      "Flavor_Profile": {
+        "type": "string",
+        "inputType": "basic",
+        "autosuggest": false,
+        "description": "Comma separated, e.g., Coffee, Cedar, Almond"
+      },
+      "Strength_Profile": {
+        "type": "string",
+        "inputType": "mapped range",
+        "enum": ["", "Mild", "Mild-Medium", "Medium", "Medium-Full", "Full"],
+        "zero": true,
+        "description": "Slide to select the strength, from N/A to Mild to Full."
+      },
+      "description": {
+        "type": "string",
+        "inputType": "basic",
+        "autosuggest": false,
+        "long": true,
+        "description": "This will be displayed at the bottom of the product page."
+      },
+      "Date Added": {
+        "type": "string",
+        "inputType": "basic",
+        "autosuggest": false,
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+        "description": "YYYY-MM-DD format"
+      },
+      "hidden": {
+        "type": "boolean",
+        "inputType": "checkbox",
+        "autosuggest": false,
+        "description": "Check box if this cigar should be hidden on the public site"
+      },
+      "Podcast_Link": {
+        "type": "string",
+        "inputType": "basic",
+        "autosuggest": false,
+        "description": "Paste the link or embed code of the podcast episode this cigar was featured on."
+      },
+      "featured_Eds_Pick": {
+        "type": "string",
+        "inputType": "date",
+        "autosuggest": false,
+        "description": "Ed's Pick"
+      },
+      "featured_Teds_Pick": {
+        "type": "string",
+        "inputType": "date",
+        "autosuggest": false,
+        "description": "Ted's Pick"
+      },
+      "featured_StickFigures": {
+        "type": "string",
+        "inputType": "date",
+        "autosuggest": false,
+        "description": "Stick Figures"
+      },
+      "Sizes": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "Size": {
+              "type": "string",
+              "inputType": "basic",
+              "autosuggest": true,
+              "description": "e.g., Robusto"
+            },
+            "Barcode": {
+              "type": "string",
+              "inputType": "basic",
+              "autosuggest": false,
+              "pattern": "^\\d+$",
+              "description": "Must be all digits"
+            },
+            "In_Stock": {
+              "type": "boolean",
+              "inputType": "checkbox",
+              "description": "Check box if this size is in stock"
+            },
+            "Price": {
+              "type": "string",
+              "inputType": "price",
+              "pattern": "^[0-9]+(\\.[0-9]{2})?$",
+              "description": "USD, 0.00 format"
+            }
+          },
+          "required": ["Size"]
+        }
+      }
+    },
+    "required": ["Cigar Brand", "Cigar Name"]
+  }
+  

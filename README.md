@@ -1,53 +1,54 @@
 # King Street Emporium Website
 
-This project powers the official site for [The King Street Emporium](https://maps.app.goo.gl/qeLvCgUimEyXBjwy9), a cigar lounge and specialty shop based in **Martinsburg, WV**.
+This repository contains the public King Street Emporium website and its administrative interface. It is being migrated from two branch-based applications to a single npm-workspace monorepo.
 
-The site serves as both a digital catalog and a place for store updates, giving customers easy access to product details, announcements, and store info.
+## Repository layout
 
----
+- `apps/public` — the production public catalog and storefront
+- `apps/admin` — the staff administrative interface extracted from the former `cms` branch
+- `packages/ui` — shared UI components as they are extracted
+- `packages/config` — shared application configuration
+- `docs` — migration findings and implementation notes
+- `PROJECT_PLAN.md` — the persistent migration plan
 
-# Features
+The admin application still uses its existing GitHub, static JSON, Vercel Blob, and browser `localStorage` workflow. Neon will be introduced in later phases; the actively used CMS deployment can remain online until the new system is ready for cutover.
 
-## Product Catalog  
-Browse an organized collection of cigars, pipes, pipe tobacco, coffee, and tea. Each listing includes images, brand details, flavor notes, and strength profiles.
+## Local development
 
-## Content Management System (CMS)  
-A custom CMS gives staff full control over the site’s content:
+Install all workspace dependencies from the repository root:
 
-- Add, update, or remove products  
-- Upload product images  
-- Preview and validate changes before they go live  
-- All edits are version-controlled via GitHub and automatically deployed through Vercel—no developer needed.
+```powershell
+npm install
+```
 
-## Store Info & Updates  
-Store hours, location, and contact details are easy to find. The homepage also pulls live updates from Facebook, so customers can stay in the loop about events and new arrivals.
+Run the public site at `http://localhost:3000`:
 
-## Accessibility & Simplicity  
-Built with ease-of-use in mind. Clear fonts, simple layouts, and intuitive navigation ensure that anyone can find what they need.
+```powershell
+npm run dev:public
+```
 
----
+Run the admin interface at `http://localhost:3001`:
 
-# Hosting  
-Hosted at [www.kingstreetemporium.com](https://www.kingstreetemporium.com), deployed through [Vercel](https://www.vercel.com).
+```powershell
+npm run dev:admin
+```
 
----
+## Verification
 
-# Tech Stack
+```powershell
+npm run build:public
+npm run build:admin
+npm run lint
+npm test
+```
 
-- **Frontend**: [Next.js](https://nextjs.org) (React-based, statically generated)
-- **CMS Backend**: GitHub version control
-- **Deployment**: Vercel with automatic redeploys on commit
-- **Image Handling**: Vercel Blob Storage
+The current applications have inherited lint and build warnings documented in [`docs/phase-2-monorepo.md`](docs/phase-2-monorepo.md). They do not prevent either application from building.
 
----
+## Deployment
 
-# Wiki Reference  
-Want a deeper dive into how the CMS works? Check out the [project wiki](../../wiki).
+The public and admin Vercel projects should use `apps/public` and `apps/admin` respectively as their project root directories after the monorepo is deployed. Until cutover, the existing production projects and the store's current admin workflow remain unchanged.
 
-*Built for stability and ease of use: versioned JSON data, GitHub-based publishing, and reliable image handling.*
+## License
 
----
-
-# License  
 © 2025 Liam McDonald  
-Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).

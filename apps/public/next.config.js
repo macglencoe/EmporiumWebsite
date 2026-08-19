@@ -1,4 +1,11 @@
+const path = require('path')
+
 module.exports = {
+
+    experimental: {
+        externalDir: true,
+        outputFileTracingRoot: path.join(__dirname, '../../'),
+    },
 
     headers: async () => [
         {
@@ -22,7 +29,6 @@ module.exports = {
         }
     ],
     trailingSlash: true,
-    getStaticProps: true,
     images: {
         domains: ['images.unsplash.com'],
     }

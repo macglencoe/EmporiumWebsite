@@ -1,0 +1,533 @@
+[
+    {
+      "Cigar Brand": "",
+      "Cigar Name": "Connecticut",
+      "Wrapper": null,
+      "Binder": "Dominican",
+      "Filler": "Nicaragua",
+      "Strength_Profile": "Medium",
+      "Flavor_Profile": "Sweet",
+      "slug": "",
+      "Sizes": []
+    },
+    {
+      "Cigar Brand": "Rocky Patel",
+      "Cigar Name": "",
+      "Wrapper": "Connecticut",
+      "Binder": "Nicaragua",
+      "Filler": "Honduras",
+      "Strength_Profile": "Mild",
+      "Flavor_Profile": "Sweet",
+      "slug": "rocky patel-maduro-1",
+      "Sizes": []
+    },
+    {
+      "Cigar Brand": "",
+      "Cigar Name": "Maduro",
+      "Wrapper": "Cameroon",
+      "Binder": "Dominican",
+      "Filler": null,
+      "Strength_Profile": "Full",
+      "Flavor_Profile": null,
+      "slug": "drew estate-maduro-2",
+      "Sizes": [
+        {
+          "Size": "Corona",
+          "Price": "",
+          "Barcode": "864711555094",
+          "In_Stock": "TRUE"
+        },
+        {
+          "Size": "Corona",
+          "Price": "",
+          "Barcode": "",
+          "In_Stock": "TRUE"
+        },
+        {
+          "Size": "Toro",
+          "Price": "5.93",
+          "Barcode": "",
+          "In_Stock": "TRUE"
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Arturo Fuente",
+      "Cigar Name": "Maduro",
+      "Wrapper": "Connecticut",
+      "Binder": null,
+      "Filler": null,
+      "Strength_Profile": "Full",
+      "Flavor_Profile": "Pepper",
+      "slug": "arturo fuente-maduro-3",
+      "Sizes": [
+        {
+          "Size": "Toro",
+          "Price": "8.33",
+          "Barcode": "114336152407",
+          "In_Stock": "FALSE"
+        },
+        {
+          "Size": "Corona",
+          "Price": "9.38",
+          "Barcode": "",
+          "In_Stock": true
+        },
+        {
+          "Size": "Corona",
+          "Price": "4.69",
+          "Barcode": "",
+          "In_Stock": false
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Rocky Patel",
+      "Cigar Name": "Special",
+      "Wrapper": "Cameroon",
+      "Binder": "Dominican",
+      "Filler": null,
+      "Strength_Profile": "Medium",
+      "Flavor_Profile": "Sweet",
+      "slug": "rocky patel-special-4",
+      "Sizes": [
+        {
+          "Size": "Toro",
+          "Price": "8.98",
+          "Barcode": "418841550897",
+          "In_Stock": "FALSE"
+        },
+        {
+          "Size": "Corona",
+          "Price": "6.67",
+          "Barcode": "",
+          "In_Stock": "FALSE"
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Drew Estate",
+      "Cigar Name": "Vintage",
+      "Wrapper": null,
+      "Binder": "Dominican",
+      "Filler": "Nicaragua",
+      "Strength_Profile": "Medium",
+      "Flavor_Profile": "Pepper",
+      "slug": "drew estate-vintage-5",
+      "Sizes": [
+        {
+          "Size": "Corona",
+          "Price": "",
+          "Barcode": "",
+          "In_Stock": true
+        },
+        {
+          "Size": "Robusto",
+          "Price": "8.82",
+          "Barcode": "315608730305",
+          "In_Stock": true
+        },
+        {
+          "Size": "Churchill",
+          "Price": "9.56",
+          "Barcode": "",
+          "In_Stock": true
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Drew Estate",
+      "Cigar Name": "Limited",
+      "Wrapper": null,
+      "Binder": "Nicaragua",
+      "Filler": "Nicaragua",
+      "Strength_Profile": "Full",
+      "Flavor_Profile": "Sweet",
+      "slug": "drew estate-limited-6",
+      "Sizes": [
+        {
+          "Size": "Robusto",
+          "Price": "",
+          "Barcode": "",
+          "In_Stock": false
+        },
+        {
+          "Size": "Robusto",
+          "Price": "4.08",
+          "Barcode": "955065624355",
+          "In_Stock": false
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Oliva",
+      "Cigar Name": "Maduro",
+      "Wrapper": null,
+      "Binder": "Nicaragua",
+      "Filler": "Honduras",
+      "Strength_Profile": "Medium",
+      "Flavor_Profile": "Pepper",
+      "slug": "oliva-maduro-7",
+      "Sizes": []
+    },
+    {
+      "Cigar Brand": "Rocky Patel",
+      "Cigar Name": "",
+      "Wrapper": "Cameroon",
+      "Binder": "Nicaragua",
+      "Filler": null,
+      "Strength_Profile": "Medium",
+      "Flavor_Profile": "Sweet",
+      "slug": "rocky patel-special-8",
+      "Sizes": [
+        {
+          "Size": "Corona",
+          "Price": "8.51",
+          "Barcode": "422064431475",
+          "In_Stock": false
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Rocky Patel",
+      "Cigar Name": "Limited",
+      "Wrapper": "Connecticut",
+      "Binder": null,
+      "Filler": "Honduras",
+      "Strength_Profile": "Medium",
+      "Flavor_Profile": null,
+      "slug": "rocky patel-limited-9",
+      "Sizes": [
+        {
+          "Size": "Toro",
+          "Price": "",
+          "Barcode": "",
+          "In_Stock": "TRUE"
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Oliva",
+      "Cigar Name": "Special",
+      "Wrapper": "Habano",
+      "Binder": null,
+      "Filler": "Nicaragua",
+      "Strength_Profile": "Mild",
+      "Flavor_Profile": "Sweet",
+      "slug": "oliva-special-10",
+      "Sizes": []
+    },
+    {
+      "Cigar Brand": "Oliva",
+      "Cigar Name": "Maduro",
+      "Wrapper": "Habano",
+      "Binder": "Dominican",
+      "Filler": "Nicaragua",
+      "Strength_Profile": "Medium",
+      "Flavor_Profile": null,
+      "slug": "oliva-maduro-11",
+      "Sizes": [
+        {
+          "Size": "Toro",
+          "Price": "7.61",
+          "Barcode": "",
+          "In_Stock": "TRUE"
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Oliva",
+      "Cigar Name": "Maduro",
+      "Wrapper": null,
+      "Binder": "Dominican",
+      "Filler": "Honduras",
+      "Strength_Profile": "Mild",
+      "Flavor_Profile": null,
+      "slug": "oliva-maduro-12",
+      "Sizes": [
+        {
+          "Size": "Churchill",
+          "Price": "",
+          "Barcode": "747734368396",
+          "In_Stock": false
+        },
+        {
+          "Size": "Toro",
+          "Price": "",
+          "Barcode": "747040257322",
+          "In_Stock": "TRUE"
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Rocky Patel",
+      "Cigar Name": "Vintage",
+      "Wrapper": null,
+      "Binder": "Dominican",
+      "Filler": "Honduras",
+      "Strength_Profile": "Full",
+      "Flavor_Profile": "Pepper",
+      "slug": "rocky patel-vintage-13",
+      "Sizes": [
+        {
+          "Size": "Toro",
+          "Price": "9.16",
+          "Barcode": "",
+          "In_Stock": false
+        },
+        {
+          "Size": "Toro",
+          "Price": "5.19",
+          "Barcode": "491972676654",
+          "In_Stock": "TRUE"
+        },
+        {
+          "Size": "Corona",
+          "Price": "",
+          "Barcode": "",
+          "In_Stock": "TRUE"
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Oliva",
+      "Cigar Name": "Vintage",
+      "Wrapper": "Connecticut",
+      "Binder": "Dominican",
+      "Filler": "Nicaragua",
+      "Strength_Profile": "Mild",
+      "Flavor_Profile": "Sweet",
+      "slug": "",
+      "Sizes": [
+        {
+          "Size": "Churchill",
+          "Price": "4.24",
+          "Barcode": "",
+          "In_Stock": "FALSE"
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Drew Estate",
+      "Cigar Name": "Connecticut",
+      "Wrapper": "Cameroon",
+      "Binder": "Dominican",
+      "Filler": null,
+      "Strength_Profile": null,
+      "Flavor_Profile": "Sweet",
+      "slug": "drew estate-connecticut-15",
+      "Sizes": [
+        {
+          "Size": "Corona",
+          "Price": "4.07",
+          "Barcode": "",
+          "In_Stock": false
+        },
+        {
+          "Size": "Toro",
+          "Price": "",
+          "Barcode": "467210440277",
+          "In_Stock": true
+        },
+        {
+          "Size": "Corona",
+          "Price": "",
+          "Barcode": "467210440277",
+          "In_Stock": "FALSE"
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Padron",
+      "Cigar Name": "Special",
+      "Wrapper": "Habano",
+      "Binder": null,
+      "Filler": "Nicaragua",
+      "Strength_Profile": "Full",
+      "Flavor_Profile": "Sweet",
+      "slug": "padron-special-16",
+      "Sizes": [
+        {
+          "Size": "Toro",
+          "Price": "4.6",
+          "Barcode": "",
+          "In_Stock": false
+        },
+        {
+          "Size": "Toro",
+          "Price": "",
+          "Barcode": "100407701829",
+          "In_Stock": false
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Oliva",
+      "Cigar Name": "Maduro",
+      "Wrapper": "Habano",
+      "Binder": "Nicaragua",
+      "Filler": null,
+      "Strength_Profile": "Mild",
+      "Flavor_Profile": null,
+      "slug": "oliva-maduro-17",
+      "Sizes": [
+        {
+          "Size": "Toro",
+          "Price": "6.73",
+          "Barcode": "467210440277",
+          "In_Stock": "TRUE"
+        },
+        {
+          "Size": "Corona",
+          "Price": "",
+          "Barcode": "722689191830",
+          "In_Stock": false
+        },
+        {
+          "Size": "Toro",
+          "Price": "",
+          "Barcode": "",
+          "In_Stock": true
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Arturo Fuente",
+      "Cigar Name": "Special",
+      "Wrapper": null,
+      "Binder": "Dominican",
+      "Filler": null,
+      "Strength_Profile": "Mild",
+      "Flavor_Profile": "Chocolate",
+      "slug": "arturo fuente-special-18",
+      "Sizes": [
+        {
+          "Size": "Toro",
+          "Price": "",
+          "Barcode": "",
+          "In_Stock": 0
+        },
+        {
+          "Size": "Churchill",
+          "Price": "6.94",
+          "Barcode": "467210440277",
+          "In_Stock": true
+        },
+        {
+          "Size": "Churchill",
+          "Price": "",
+          "Barcode": "180205858913",
+          "In_Stock": null
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Padron",
+      "Cigar Name": "Vintage",
+      "Wrapper": "Habano",
+      "Binder": "Nicaragua",
+      "Filler": null,
+      "Strength_Profile": "Medium",
+      "Flavor_Profile": "Pepper",
+      "slug": "padron-vintage-19",
+      "Sizes": []
+    },
+    {
+      "Cigar Brand": "Drew Estate",
+      "Cigar Name": "Special",
+      "Wrapper": null,
+      "Binder": "Dominican",
+      "Filler": "Nicaragua",
+      "Strength_Profile": "Full",
+      "Flavor_Profile": "Pepper",
+      "slug": "arturo fuente-special-21",
+      "Sizes": [
+        {
+          "Size": "Toro",
+          "Price": "",
+          "Barcode": "",
+          "In_Stock": false
+        },
+        {
+          "Size": "Corona",
+          "Price": "",
+          "Barcode": ""
+        },
+        {
+          "Size": "Toro",
+          "Price": "",
+          "Barcode": "833112953612",
+          "In_Stock": false
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "",
+      "Cigar Name": "Special",
+      "Wrapper": null,
+      "Binder": null,
+      "Filler": null,
+      "Strength_Profile": null,
+      "Flavor_Profile": "Sweet",
+      "slug": "arturo fuente-special-21",
+      "Sizes": [
+        {
+          "Size": "Toro",
+          "Price": "7.79",
+          "Barcode": "195852003062",
+          "In_Stock": "TRUE"
+        },
+        {
+          "Size": "Robusto",
+          "Price": "4.09",
+          "Barcode": "",
+          "In_Stock": "FALSE"
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Padron",
+      "Cigar Name": "Special",
+      "Wrapper": "Connecticut",
+      "Binder": "Nicaragua",
+      "Filler": null,
+      "Strength_Profile": "Mild",
+      "Flavor_Profile": "Sweet",
+      "slug": "padron-special-22"
+    },
+    {
+      "Cigar Brand": "Drew Estate",
+      "Cigar Name": "Limited",
+      "Wrapper": null,
+      "Binder": "Dominican",
+      "Filler": "Honduras",
+      "Strength_Profile": "Mild",
+      "Flavor_Profile": null,
+      "slug": "",
+      "Sizes": [
+        {
+          "Size": "Toro",
+          "Price": "",
+          "Barcode": "",
+          "In_Stock": true
+        },
+        {
+          "Size": "Toro",
+          "Price": "",
+          "Barcode": "",
+          "In_Stock": false
+        }
+      ]
+    },
+    {
+      "Cigar Brand": "Drew Estate",
+      "Cigar Name": "Connecticut",
+      "Wrapper": null,
+      "Binder": null,
+      "Filler": null,
+      "Strength_Profile": "Mild",
+      "Flavor_Profile": "Sweet",
+      "slug": "",
+      "Sizes": []
+    }
+  ]

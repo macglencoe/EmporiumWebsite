@@ -1,0 +1,143 @@
+[
+    {
+      "Product Name": "Ethiopian Yirgacheffe Coffee",
+      "Roast": "Medium",
+      "Origin": "Ethiopia",
+      "slug": "ethiopian-yirgacheffe-coffee",
+      "Description": "A bright and floral coffee with notes of citrus and honey, sourced from the highlands of Ethiopia."
+    },
+    {
+      "Product Name": "Sumatra Mandheling Coffee",
+      "Roast": "Dark",
+      "Origin": "Indonesia",
+      "slug": "sumatra-mandheling-coffee",
+      "Description": "Rich and full-bodied with earthy undertones and a smooth, chocolatey finish."
+    },
+    {
+      "Product Name": "Colombian Supremo Coffee",
+      "Roast": "Medium-Dark",
+      "Origin": "Colombia",
+      "slug": "colombian-supremo-coffee",
+      "Description": "A well-balanced coffee with a nutty aroma, bright acidity, and hints of caramel."
+    },
+    {
+      "Product Name": "Kenyan AA Coffee",
+      "Roast": "Light",
+      "Origin": "Kenya",
+      "slug": "kenyan-aa-coffee",
+      "Description": "Vibrant and bold, featuring citrusy flavors and a wine-like finish."
+    },
+    {
+      "Product Name": "Guatemalan Antigua Coffee",
+      "Roast": "Medium",
+      "Origin": "Guatemala",
+      "slug": "guatemalan-antigua-coffee",
+      "Description": "Smooth and complex with notes of chocolate, toffee, and a hint of spice."
+    },
+    {
+      "Product Name": "Jamaican Blue Mountain Coffee",
+      "Roast": "Light-Medium",
+      "Origin": "Jamaica",
+      "slug": "jamaican-blue-mountain-coffee",
+      "Description": "Exceptionally smooth and mild with a creamy body and subtle sweet flavors."
+    },
+    {
+      "Product Name": "Darjeeling Black Tea",
+      "Roast": null,
+      "Origin": "India",
+      "slug": "darjeeling-black-tea",
+      "Description": "A delicate and aromatic black tea with floral notes and a musky spiciness."
+    },
+    {
+      "Product Name": "Matcha Green Tea",
+      "Roast": null,
+      "Origin": "Japan",
+      "slug": "matcha-green-tea",
+      "Description": "A finely ground green tea powder with a vibrant color and a rich, umami flavor."
+    },
+    {
+      "Product Name": "Earl Grey Tea",
+      "Roast": null,
+      "Origin": "Sri Lanka",
+      "slug": "earl-grey-tea",
+      "Description": "A classic black tea infused with the distinctive aroma of bergamot citrus."
+    },
+    {
+      "Product Name": "Assam Black Tea",
+      "Roast": null,
+      "Origin": "India",
+      "slug": "assam-black-tea",
+      "Description": "A bold and malty tea with a robust flavor, perfect for breakfast blends."
+    },
+    {
+      "Product Name": "Oolong Tea",
+      "Roast": null,
+      "Origin": "China",
+      "slug": "oolong-tea",
+      "Description": "A semi-oxidized tea with a complex flavor profile, ranging from floral to toasty."
+    },
+    {
+      "Product Name": "Sencha Green Tea",
+      "Roast": null,
+      "Origin": "Japan",
+      "slug": "sencha-green-tea",
+      "Description": "A traditional Japanese green tea with a fresh, grassy aroma and a light, sweet taste."
+    },
+    {
+      "Product Name": "Pu-erh Tea",
+      "Roast": null,
+      "Origin": "China",
+      "slug": "pu-erh-tea",
+      "Description": "An aged and fermented tea with a rich, earthy flavor and a smooth finish."
+    },
+    {
+      "Product Name": "Hawaiian Kona Coffee",
+      "Roast": "Medium",
+      "Origin": "Hawaii, USA",
+      "slug": "hawaiian-kona-coffee",
+      "Description": "A smooth and mild coffee with a hint of sweetness and a nutty aftertaste."
+    },
+    {
+      "Product Name": "Vietnamese Robusta Coffee",
+      "Roast": "Dark",
+      "Origin": "Vietnam",
+      "slug": "vietnamese-robusta-coffee",
+      "Description": "A strong and bold coffee with a robust flavor and a distinctive cocoa-like bitterness."
+    },
+    {
+      "Product Name": "Chai Spiced Tea",
+      "Roast": null,
+      "Origin": "India",
+      "slug": "chai-spiced-tea",
+      "Description": "A warming tea blend infused with spices like cinnamon, cardamom, and ginger."
+    },
+    {
+      "Product Name": "Turkish Coffee",
+      "Roast": "Dark",
+      "Origin": "Turkey",
+      "slug": "turkish-coffee",
+      "Description": "A rich and intense coffee, finely ground and brewed for a thick, flavorful cup."
+    },
+    {
+      "Product Name": "Rooibos Herbal Tea",
+      "Roast": null,
+      "Origin": "South Africa",
+      "slug": "rooibos-herbal-tea",
+      "Description": "A naturally caffeine-free herbal tea with a sweet, nutty flavor and a reddish hue."
+    },
+    {
+      "Product Name": "Honduran Honey Coffee",
+      "Roast": "Light",
+      "Origin": "Honduras",
+      "slug": "honduran-honey-coffee",
+      "Description": "A sweet and fruity coffee with a creamy body and notes of honey and berries."
+    },
+    {
+      "Product Name": "White Peony Tea",
+      "Roast": null,
+      "Origin": "China",
+      "slug": "white-peony-tea",
+      "Description": "A delicate white tea with floral and fruity undertones, perfect for a light brew."
+    }
+  ]
+  
