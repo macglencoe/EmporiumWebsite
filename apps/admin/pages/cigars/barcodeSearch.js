@@ -6,13 +6,10 @@ import { useRouter } from "next/router"
 import { Barcodeless } from "../../components/barcodeless"
 
 
-export const getStaticProps = async () => {
-    const data = await import('../../public/data/consolidated_cigars.json');
-    return {
-        props: {
-            data: data.default
-        },
-    };
+export const getServerSideProps = async () => {
+    const { readCatalog, legacyEnvelope } = await import('../../lib/catalog/server.mjs');
+    const records = (await readCatalog(['cigar'])).map(legacyEnvelope);
+    return { props: { data: records.map((item) => item.legacy) } };
 }
 
 export const BarcodeSearch = (props) => {
@@ -43,11 +40,6 @@ export const BarcodeSearch = (props) => {
         }
     }, [router.query.search]);
 
-    useEffect(() => {
-        if (localStorage.getItem('tempData_cigars')) {
-            setData(JSON.parse(localStorage.getItem('tempData_cigars')));   
-        }
-    }, []);
 
     /* const result =
     {

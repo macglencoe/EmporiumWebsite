@@ -3,12 +3,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import { useEffect, useState } from "react";
 import { PiPlusBold, PiPlusCircleBold } from "react-icons/pi";
-import mergeData from "../utils/mergeData";
-
-
 const SchemaCatalog = ({
-    tempData = [],
-    originData = [],
     mergedData = [],
     uiSchema,
 }) => {

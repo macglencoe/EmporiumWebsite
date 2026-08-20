@@ -1,26 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Layout from "../components/layout";
 import PageTitle1 from "../components/pagetitle1";
 
-export const getStaticProps = async () => {
-  const cigarData = await import("../public/data/consolidated_cigars.json");
-  const tobaccoData = await import("../public/data/tobacco.json");
-
-  return {
-    props: {
-      fallbackCigars: cigarData.default || [],
-      fallbackTobacco: tobaccoData.default || [],
-    },
-  };
-};
-
-const safeParse = (value) => {
-  if (!value) return null;
-  try {
-    return JSON.parse(value);
-  } catch (error) {
-    return null;
-  }
+export const getServerSideProps = async () => {
+  const { readCatalog, legacyEnvelope } = await import("../lib/catalog/server.mjs");
+  const records = (await readCatalog(['cigar','tobacco'])).map(legacyEnvelope);
+  return { props: { fallbackCigars: records.filter((item)=>item.type==='cigar').map((item)=>item.legacy), fallbackTobacco: records.filter((item)=>item.type==='tobacco').map((item)=>item.legacy) } };
 };
 
 const flattenCigarsBySize = (cigars = []) => {
@@ -95,39 +80,7 @@ const buildFilename = (prefix) => {
 
 const ExportPage = ({ fallbackCigars, fallbackTobacco }) => {
   const [selection, setSelection] = useState("cigars");
-  const [originCigars, setOriginCigars] = useState(null);
-  const [originTobacco, setOriginTobacco] = useState(null);
-  const [originMeta, setOriginMeta] = useState({ sha: "", message: "" });
-
-  const loadOriginData = () => {
-    if (typeof window === "undefined") return;
-
-    const cigars = safeParse(localStorage.getItem("originData_cigars"));
-    const tobacco = safeParse(localStorage.getItem("originData_tobacco"));
-
-    setOriginCigars(Array.isArray(cigars) ? cigars : null);
-    setOriginTobacco(Array.isArray(tobacco) ? tobacco : null);
-
-    setOriginMeta({
-      sha: localStorage.getItem("originData_sha") || "",
-      message: localStorage.getItem("originData_message") || "",
-    });
-  };
-
-  useEffect(() => {
-    loadOriginData();
-  }, []);
-
-  const activeSource = selection === "cigars"
-    ? (Array.isArray(originCigars) ? originCigars : fallbackCigars)
-    : (Array.isArray(originTobacco) ? originTobacco : fallbackTobacco);
-
-  const sourceLabel = selection === "cigars"
-    ? (Array.isArray(originCigars) ? "originData_cigars" : "fallback (public/data)")
-    : (Array.isArray(originTobacco) ? "originData_tobacco" : "fallback (public/data)");
-  const usingFallback = selection === "cigars"
-    ? !Array.isArray(originCigars)
-    : !Array.isArray(originTobacco);
+  const activeSource = selection === "cigars" ? fallbackCigars : fallbackTobacco;
 
   const rows = useMemo(() => {
     return selection === "cigars"
@@ -192,16 +145,7 @@ const ExportPage = ({ fallbackCigars, fallbackTobacco }) => {
           </div>
 
           <div className="meta">
-            <div><strong>Source:</strong> {sourceLabel}</div>
-            {originMeta.message && (
-              <div><strong>Origin version:</strong> {originMeta.message}</div>
-            )}
-            {originMeta.sha && (
-              <div><strong>Origin SHA:</strong> {originMeta.sha}</div>
-            )}
-            {usingFallback && (
-              <div className="hint">Origin data not found in localStorage. Use Reload Origin Data after syncing.</div>
-            )}
+            <div><strong>Source:</strong> Neon catalog</div>
           </div>
 
           <div className="stats">
@@ -212,9 +156,6 @@ const ExportPage = ({ fallbackCigars, fallbackTobacco }) => {
           <div className="actions">
             <button onClick={handleDownload} disabled={!csv}>
               Download CSV
-            </button>
-            <button type="button" className="ghost" onClick={loadOriginData}>
-              Reload Origin Data
             </button>
           </div>
         </section>

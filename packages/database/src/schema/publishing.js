@@ -8,6 +8,8 @@ import {
   text,
   timestamp,
   uuid,
+  unique,
+  uniqueIndex,
 } from 'drizzle-orm/pg-core';
 
 import { products } from './catalog.js';
@@ -30,6 +32,7 @@ export const changeSets = pgTable(
   (table) => [
     check('change_sets_message_not_blank', sql`${table.message} is null or length(trim(${table.message})) > 0`),
     index('change_sets_status_updated_idx').on(table.status, table.updatedAt),
+    uniqueIndex('change_sets_one_active_draft').on(table.status).where(sql`${table.status} = 'draft'`),
   ],
 );
 
@@ -40,9 +43,10 @@ export const changeSetItems = pgTable(
     changeSetId: uuid('change_set_id')
       .notNull()
       .references(() => changeSets.id, { onDelete: 'cascade' }),
-    productId: uuid('product_id').references(() => products.id, {
-      onDelete: 'restrict',
-    }),
+    draftKey: uuid('draft_key').notNull(),
+    // Deliberately not a foreign key: published delete items must retain the
+    // deleted product identity for history and audit display.
+    productId: uuid('product_id'),
     operation: changeOperation('operation').notNull(),
     baseVersion: integer('base_version'),
     payload: jsonb('payload'),
@@ -50,6 +54,7 @@ export const changeSetItems = pgTable(
     updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow().notNull(),
   },
   (table) => [
+    unique('change_set_items_draft_key_unique').on(table.changeSetId, table.draftKey),
     check(
       'change_set_items_shape',
       sql`(

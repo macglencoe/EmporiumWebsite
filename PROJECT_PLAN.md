@@ -26,6 +26,8 @@ The current production site must remain available throughout development. Produc
 - See [`docs/phase-5-import-report.md`](docs/phase-5-import-report.md) for the importer, verification, recovery-export workflow, and migration baseline.
 - Phase 6 was completed on 2026-08-19.
 - See [`docs/phase-6-admin-authentication.md`](docs/phase-6-admin-authentication.md) for the password, session, lockout, deployment, and recovery procedures.
+- Phase 7 was completed on 2026-08-19.
+- See [`docs/phase-7-admin-publishing.md`](docs/phase-7-admin-publishing.md) for the database-backed draft, publishing, conflict, and verification workflow.
 
 ## Terminology
 

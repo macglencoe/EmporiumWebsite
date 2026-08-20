@@ -11,8 +11,6 @@ import Ksman from '../components/ksman'
 import { Router, useRouter } from 'next/router'
 import { Analytics } from '@vercel/analytics/react'
 import Toolbar from './toolbar'
-import setLocalData from '../utils/setLocalData'
-import DataUpdate from './dataUpdate'
 import { Footer } from './footer'
 import { PiBarcodeBold, PiExportBold, PiGitCommitBold, PiPlusCircleBold, PiTableBold } from 'react-icons/pi'
 
@@ -72,7 +70,6 @@ const Layout = (props) => {
           <div className={`catalog-container73 sidebar${isActive ? ' collapsed' : ''}`}>
 
             <Fragment>
-              <DataUpdate></DataUpdate>
               <Toolbar
                 type='sidebar'
                 links={[

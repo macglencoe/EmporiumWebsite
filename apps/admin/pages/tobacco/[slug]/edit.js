@@ -7,31 +7,16 @@ import Layout from "../../../components/layout";
 import { buildTobaccoSuggestions } from "../../../utils/suggestions";
 import SchemaForm, { FormButtons, SlugPreview } from "../../../components/schemaForm";
 
-export const getStaticPaths = async () => {
-    const tobaccos = await import("../../../public/data/tobacco.json");
-    const data = await tobaccos.default;
-    const paths = data.map((tobacco) => ({
-        params: { slug: tobacco.slug },
-    }));
-    return { paths, fallback: false }
+export const getServerSideProps = async ({ params }) => {
+    const { readCatalog, legacyEnvelope } = await import("../../../lib/catalog/server.mjs");
+    const records = (await readCatalog(['tobacco'])).map(legacyEnvelope);
+    const record = records.find((item) => item.slug === params.slug);
+    if (!record) return { notFound: true };
+    return { props: { tobacco: record.legacy, productId: record.id, allTobacco: records.map((item) => item.legacy) } };
 }
 
-export const getStaticProps = async ({ params }) => {
-    const tobaccosData = await import("../../../public/data/tobacco.json");
-    const data = await tobaccosData.default;
-    const tobaccoIndex = data.findIndex((tobacco) => tobacco.slug === params.slug);
-    const tobacco = data[tobaccoIndex];
-    const prevTobacco = tobaccoIndex > 0 ? data[tobaccoIndex - 1] : null;
-    const nextTobacco = tobaccoIndex + 1 < data.length ? data[tobaccoIndex + 1] : null;
-    return { props: {tobacco, next: nextTobacco, prev: prevTobacco, allTobacco: data } };
-}
-
-const EditTobaccoPage = ({ tobacco, allTobacco }) => {
+const EditTobaccoPage = ({ tobacco, productId, allTobacco }) => {
     const router = useRouter();
-    if (!tobacco) {
-        return <div>Tobacco Not Found</div>
-    }
-    
     const { defaults } = useMemo(() => buildSchemaArtifacts(uiSchema), [])
     const {
         draft,
@@ -44,9 +29,9 @@ const EditTobaccoPage = ({ tobacco, allTobacco }) => {
         defaults,
         initialItem: tobacco,
         allItems: allTobacco || [],
-        storageKey: "tempData_tobacco",
-        originKey: "originData_tobacco",
-        slugFields: ["Tobacco Name"]
+        slugFields: ["Tobacco Name"],
+        productId,
+        type: 'tobacco'
     });
 
     const suggestions = useMemo(
@@ -54,14 +39,14 @@ const EditTobaccoPage = ({ tobacco, allTobacco }) => {
         [allTobacco]
     )
 
-    const handleSubmit = (values) => {
-        const result = saveDraft(values);
+    const handleSubmit = async (values) => {
+        const result = await saveDraft(values);
         if(result?.error === 'slug-conflict') {
             alert("Slug already exists. Please choose a different name.");
             return;
         }
-        const targetSlug = values.slug || tobacco.slug;
-        router.push(uiSchema.slugBasePath + '/' + targetSlug)
+        if (result?.error) { alert(result.message || "Unable to save draft."); return; }
+        router.push('/submit')
     }
 
     return (

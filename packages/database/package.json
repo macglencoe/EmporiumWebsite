@@ -21,7 +21,8 @@
   "dependencies": {
     "@emporium/domain": "*",
     "@neondatabase/serverless": "1.1.0",
-    "drizzle-orm": "0.45.2"
+    "drizzle-orm": "0.45.2",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
     "dotenv": "17.4.2",

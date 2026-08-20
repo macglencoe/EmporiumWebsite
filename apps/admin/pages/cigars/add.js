@@ -9,13 +9,10 @@ import { buildCigarSuggestions } from "../../utils/suggestions";
 import { useDraftItem } from "../../hooks/useDraftItem";
 import { useSlugPreview } from "../../hooks/useSlugPreview";
 
-export const getStaticProps = async () => {
-  const data = await import("../../public/data/consolidated_cigars.json");
-  return {
-    props: {
-      data: data.default,
-    },
-  };
+export const getServerSideProps = async () => {
+  const { readCatalog, legacyEnvelope } = await import("../../lib/catalog/server.mjs");
+  const records = (await readCatalog(['cigar'])).map(legacyEnvelope);
+  return { props: { data: records.map((item) => item.legacy) } };
 };
 
 const AddCigarPage = (props) => {
@@ -49,6 +46,7 @@ const AddCigarPage = (props) => {
     defaults: defaultsWithToday,
     initialItem: defaultsWithToday,
     allItems: props.data || [],
+    type: 'cigar',
   });
 
   const suggestions = useMemo(
@@ -56,13 +54,14 @@ const AddCigarPage = (props) => {
     [props.data]
   );
 
-  const handleSubmit = (values) => {
-    const result = saveDraft(values);
+  const handleSubmit = async (values) => {
+    const result = await saveDraft(values);
     if (result?.error === "slug-conflict") {
       alert("Slug already exists. Please choose a different name.");
       return;
     }
-    router.push("/cigars");
+    if (result?.error) { alert(result.message || "Unable to save draft."); return; }
+    router.push("/submit");
   };
 
   return (

@@ -8,31 +8,16 @@ import { buildSchemaArtifacts } from "../../../utils/schemaMapper";
 import { buildCigarSuggestions } from "../../../utils/suggestions";
 import { useDraftItem } from "../../../hooks/useDraftItem";
 
-export const getStaticPaths = async () => {
-  const cigars = await import("../../../public/data/consolidated_cigars.json");
-  const data = await cigars.default;
-  const paths = data.map((cigar) => ({
-    params: { slug: cigar.slug },
-  }));
-  return { paths, fallback: false };
+export const getServerSideProps = async ({ params }) => {
+  const { readCatalog, legacyEnvelope } = await import("../../../lib/catalog/server.mjs");
+  const records = (await readCatalog(['cigar'])).map(legacyEnvelope);
+  const record = records.find((item) => item.slug === params.slug);
+  if (!record) return { notFound: true };
+  return { props: { cigar: record.legacy, productId: record.id, allCigars: records.map((item) => item.legacy) } };
 };
 
-export const getStaticProps = async ({ params }) => {
-  const cigarsData = await import("../../../public/data/consolidated_cigars.json");
-  const data = await cigarsData.default;
-  const cigarIndex = data.findIndex((cigar) => cigar.slug === params.slug);
-  const cigar = data[cigarIndex];
-  const prevCigar = cigarIndex > 0 ? data[cigarIndex - 1] : null;
-  const nextCigar = cigarIndex + 1 < data.length ? data[cigarIndex + 1] : null;
-  return { props: { cigar, next: nextCigar, prev: prevCigar, allCigars: data } };
-};
-
-const EditCigarPage = ({ cigar, allCigars }) => {
+const EditCigarPage = ({ cigar, productId, allCigars }) => {
   const router = useRouter();
-  if (!cigar) {
-    return <div>Cigar not found</div>;
-  }
-
   const { defaults } = useMemo(() => buildSchemaArtifacts(uiSchema), []);
   const {
     draft,
@@ -45,6 +30,8 @@ const EditCigarPage = ({ cigar, allCigars }) => {
     defaults,
     initialItem: cigar,
     allItems: allCigars || [],
+    productId,
+    type: 'cigar',
   });
 
   const suggestions = useMemo(
@@ -52,14 +39,14 @@ const EditCigarPage = ({ cigar, allCigars }) => {
     [allCigars]
   );
 
-  const handleSubmit = (values) => {
-    const result = saveDraft(values);
+  const handleSubmit = async (values) => {
+    const result = await saveDraft(values);
     if (result?.error === "slug-conflict") {
       alert("Slug already exists. Please choose a different name.");
       return;
     }
-    const targetSlug = values.slug || cigar.slug;
-    router.push("/cigars/" + targetSlug);
+    if (result?.error) { alert(result.message || "Unable to save draft."); return; }
+    router.push("/submit");
   };
 
   return (

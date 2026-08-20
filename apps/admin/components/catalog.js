@@ -53,7 +53,13 @@ const Catalog = (props) => {
     const [filtersOpen, setFiltersOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
-    const mergedData = props.mergedData || [];
+    // The legacy editor supplied `{ origin, temp }` pairs after merging its
+    // localStorage draft with Git JSON. Database-backed pages now supply plain
+    // records, so normalize them at this compatibility boundary.
+    const mergedData = props.mergedData ?? (props.data || []).map((origin) => ({
+        origin,
+        temp: origin,
+    }));
 
     // Set filters based on query parameters
     const router = useRouter();
@@ -371,8 +377,6 @@ const Catalog = (props) => {
                         }
 
                         <SchemaCatalog
-                            tempData={props.tempData} // may need removed
-                            originData={props.originData} // this too
                             mergedData={sortedItems}
                             uiSchema={props.uiSchema}
                         />

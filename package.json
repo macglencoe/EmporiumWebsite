@@ -22,6 +22,7 @@
     "validate:legacy": "npm run validate:legacy --workspace=@emporium/domain",
     "import:legacy": "node scripts/import-json.mjs",
     "verify:import": "node scripts/verify-import.mjs",
+    "verify:phase7": "node scripts/verify-phase-7.mjs",
     "export:database": "node scripts/export-database.mjs",
     "auth:password": "npm run auth:password --workspace=@emporium/admin",
     "auth:revoke": "npm run auth:revoke --workspace=@emporium/admin",
