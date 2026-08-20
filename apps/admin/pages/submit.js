@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 import Layout from '../components/layout';
 import PageTitle1 from '../components/pagetitle1';
 
@@ -35,7 +36,7 @@ function ChangeCard({ item, busy, onRemove }) {
   const allChanges=changesOf(item);
   const changes=item.operation==='create'?allChanges.filter(({after})=>after!==null&&after!==''&&(!Array.isArray(after)||after.length)):allChanges;
   return <article className={`change-card ${tone}`}>
-    <header><div><div className="eyebrow"><span>{operation}</span> {typeOf(item)}</div><h2>{nameOf(item)}</h2><p>{item.operation==='delete'?'This product and its catalog page will be permanently removed.':`${changes.length} field${changes.length===1?'':'s'} ${item.operation==='create'?'will be set':'changed'}.`}</p></div><button disabled={busy} onClick={()=>onRemove(item.id)}>Remove from draft</button></header>
+    <header><div><div className="eyebrow"><span>{operation}</span> {typeOf(item)}</div><h2>{nameOf(item)}</h2><p>{item.operation==='delete'?'This product and its catalog page will be permanently removed.':`${changes.length} field${changes.length===1?'':'s'} ${item.operation==='create'?'will be set':'changed'}.`}</p></div><div className="card-actions">{item.operation==='create'&&<Link href={`/${item.payload.type==='cigar'?'cigars':'tobacco'}/draft/${item.id}`}><a className="edit-link">Edit staged product</a></Link>}<button disabled={busy} onClick={()=>onRemove(item.id)}>Remove from draft</button></div></header>
     {item.operation==='delete'?<div className="delete-warning"><strong>Will be deleted:</strong> {item.beforeLegacy?.slug||item.draftKey}</div>:<>{item.operation==='update'&&<div className="change-columns" aria-hidden="true"><span/><span>Before</span><span>After</span></div>}<dl>{changes.map((change)=><FieldChange key={change.key} change={change} operation={item.operation}/>)}</dl></>}
     <details><summary>Technical details</summary><div className="meta"><span>Operation: {item.operation}</span><span>Product ID: {item.productId||item.draftKey}</span><span>Base version: {item.baseVersion??'New product'}</span></div><div className="json-grid"><section><h3>Before JSON</h3><pre>{JSON.stringify(item.beforeLegacy,null,2)}</pre></section><section><h3>After JSON</h3><pre>{JSON.stringify(item.afterLegacy,null,2)}</pre></section></div></details>
   </article>;
@@ -112,6 +113,17 @@ export default function SubmitPage(){
         font-size: .82rem;
         font-weight: 600;
       }
+      .card-actions { display: flex; align-items: center; align-self: flex-start; gap: .5rem; }
+      .edit-link {
+        border: 1px solid #c8c4be;
+        border-radius: 4px;
+        padding: .45rem .7rem;
+        color: #494540;
+        font-size: .82rem;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .edit-link:hover { background: #f1efec; }
       .change-card button:hover, .actions button:hover { background: #f1efec; }
       .field-row { border-top-color: #e7e4df; }
       .field-row dt, .field-row dd { padding: .7rem 1rem; }
@@ -159,6 +171,7 @@ export default function SubmitPage(){
       @media(max-width:760px) {
         .change-columns { grid-template-columns: 1fr 1fr; padding-left: 1rem; }
         .change-columns span:first-child { display: none; }
+        .card-actions { align-self: stretch; flex-wrap: wrap; }
       }
     `}</style></div>
   </Layout>;

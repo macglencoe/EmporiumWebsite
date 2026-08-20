@@ -22,8 +22,9 @@ async function handler(req, res) {
   const result = await buildDraftPayload(req.body);
   if (result.errors) return res.status(400).json({ message: 'Product validation failed.', errors: result.errors });
   if (result.notFound) return res.status(404).json({ message: 'Product not found.' });
+  if (result.draftNotFound) return res.status(404).json({ message: 'Staged product not found.' });
   if (result.slugConflict) return res.status(409).json({ message: 'That slug is already used by another product.' });
-  const item = await stageDraftItem(database, { operation: result.existing ? 'update' : 'create', draftKey: result.payload.id, productId: result.existing?.id ?? null, baseVersion: result.existing?.version ?? null, payload: result.payload });
+  const item = await stageDraftItem(database, { operation: result.existing ? 'update' : 'create', draftKey: result.draftItem?.draftKey || result.payload.id, productId: result.existing?.id ?? null, baseVersion: result.existing?.version ?? null, payload: result.payload });
   return res.status(200).json({ item, warnings: result.warnings });
 }
 export default withAuth(handler);

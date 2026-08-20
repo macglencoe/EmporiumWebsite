@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 
-export const useDraftItem = ({ slug, defaults = {}, initialItem = {}, allItems = [], productId = null, type, slugFields = ["Cigar Brand", "Cigar Name"], slugFormatter }) => {
+export const useDraftItem = ({ slug, defaults = {}, initialItem = {}, allItems = [], productId = null, draftItemId = null, type, slugFields = ["Cigar Brand", "Cigar Name"], slugFormatter }) => {
   const [draft, setDraft] = useState(initialItem);
   useEffect(() => setDraft(initialItem), [initialItem]);
   const generateSlug = useCallback((item) => {
@@ -15,11 +15,11 @@ export const useDraftItem = ({ slug, defaults = {}, initialItem = {}, allItems =
   const saveDraft = useCallback(async (item) => {
     if (!isSlugUnique(item)) return { error: "slug-conflict" };
     const legacy = { ...item, slug: generateSlug(item) || item.slug || slug };
-    const response = await fetch('/api/catalog/draft', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ type, legacy, productId }) });
+    const response = await fetch('/api/catalog/draft', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ type, legacy, productId, draftItemId }) });
     const result = await response.json();
     if (response.status === 409) return { error: "slug-conflict" };
     if (!response.ok) return { error: "save-failed", message: result.message, details: result.errors };
     setDraft(legacy); return { currentSlug: slug, newSlug: legacy.slug, item: result.item };
-  }, [generateSlug, isSlugUnique, productId, type, slug]);
+  }, [draftItemId, generateSlug, isSlugUnique, productId, type, slug]);
   return { draft, setDraft, allDrafts: allItems, saveDraft, generateSlug, isSlugUnique, revertDraft: () => setDraft({ ...defaults, ...initialItem }), originData: useMemo(() => initialItem, [initialItem]) };
 };
