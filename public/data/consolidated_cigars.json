@@ -6106,13 +6106,20 @@
     "slug": "gran-habano-corojo-7"
   },
   {
-    "Cigar Brand": "H. Upmann",
     "Cigar Name": "1844 Vintage Cameroon",
+    "Cigar Brand": "H. Upmann",
     "Wrapper": "Cameroon",
     "Binder": "Dominican",
     "Filler": "Dominican, Nicaraguan, Peruvian",
     "Flavor_Profile": "Chestnuts, Cashews, Coffee Beans, Sweet Spices",
     "Strength_Profile": "Medium",
+    "description": "By 1995, at the height of the cigar boom, genuine African Cameroon wrapper had become nearly impossible to source, and the H. Upmann brand was reblended with Indonesian leaf out of necessity. Master blender Jose Seijas set out to correct that in 2003, sourcing high grade African Cameroon wrapper that Altadis had been storing and aging for years, and building the Vintage Cameroon around it as a return to the original taste that defined H. Upmann in the 1970s.\nThe wrapper is aged African Cameroon over a Nicaraguan binder, with long filler from the Dominican Republic, Nicaragua, and Peru. Rated 92 by Cigar Aficionado. Multiple sizes, each sheathed in a cedar sleeve that doubles as a spill for lighting. Medium in body. Made at Tabacalera de Garcia in La Romana, Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -6121,16 +6128,24 @@
         "Price": "10.00"
       }
     ],
+    "image": null,
     "slug": "h-upmann-1844-vintage-cameroon"
   },
   {
-    "Cigar Brand": "Hoyo De Monterrey",
     "Cigar Name": "Excalibur Claro No. 1",
+    "Cigar Brand": "Hoyo De Monterrey",
     "Wrapper": "Connecticut Shade",
     "Binder": "Connecticut Broadleaf",
     "Filler": "Dominican, Nicaraguan, Honduran",
     "Flavor_Profile": "Fresh toast, Mild coffee, Oak, Creamy head",
     "Strength_Profile": "Medium",
+    "description": "King Arthur's magical sword lends its name to a Hoyo de Monterrey line that has earned Cigar Aficionado's Top 25 recognition and a reputation as one of the finest Hondurans available. The English Claro No. 1, the flagship shape at 7.25x54, uses only the top ten percent of the factory's tobacco harvest each year, a selection standard that shows in the consistency across the line.\nThe wrapper and binder are both Connecticut Shade, with long-leaf filler from the Dominican Republic, Honduras, and Nicaragua. Mellow to medium in body. Made in Cofradia, Honduras.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Churchill",
@@ -6139,6 +6154,7 @@
         "Price": "9.30"
       }
     ],
+    "image": null,
     "slug": "hoyo-de-monterrey-excalibur-claro-no-1"
   },
   {
@@ -6255,13 +6271,20 @@
     "description": "Once reserved for royalty, now revived for the modern palate. Notes of cedar, cream, and subtle spice glide through a velvety draw, wrapped in quiet elegance. A legacy blend that smokes like a well kept secret."
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Black Diamond",
-    "Wrapper": "",
-    "Binder": "",
-    "Filler": "",
-    "Flavor_Profile": "",
-    "Strength_Profile": "",
+    "Cigar Brand": "J.C. Newman",
+    "Wrapper": "Connecticut Havana Seed",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Dark chocolate, cedar, earth, nuts, and subtle pepper",
+    "Strength_Profile": "Medium-Full",
+    "description": "Black Diamond is the fourth installment in J.C. Newman's Diamond Crown line, developed over three years by Eric and Bobby Newman working directly with Carlos Fuente Sr. and Carlos Fuente Jr. What sets it apart from its siblings is the source of its tobacco: filler and binder leaves grown exclusively for this blend on the Fuente family's Chateau de la Fuente farm, the same estate that produces tobacco for Fuente Fuente OpusX. The wrapper is a Connecticut Havana seed leaf, sun grown and aged, with an added double fermentation that deepens the color and smooths out any rawness in the leaf.\nThe wrapper is aged Connecticut Havana seed, over Dominican binder and filler grown on the Chateau de la Fuente estate. Three sizes, 20-count boxes. Full in body. Made at Tabacalera A. Fuente y Cia in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -6276,16 +6299,24 @@
         "Price": "23.10"
       }
     ],
-    "slug": "j-c-newman-black-diamond"
+    "image": null,
+    "slug": "jc-newman-black-diamond"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Brickhouse Double Connecticut",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Connecticut Shade",
     "Binder": "Connecticut Broadleaf",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Spicy, Peppery rich flavor",
     "Strength_Profile": "Medium",
+    "description": "Most manufacturers who advertise a Connecticut wrapper have moved production to Ecuador or Honduras, chasing the lower cost of growing the same seed elsewhere. J.C. Newman built Double Connecticut around a different idea: use the genuine article in both the wrapper and the binder, sourced from two families who have grown tobacco in the Connecticut River Valley for generations. It is an unusual combination, since Broadleaf typically appears as a wrapper leaf in its own right rather than a binder, and the pairing gives the cigar a spicier, peppery character that sets it apart from other Connecticut-forward blends.\nThe wrapper is Connecticut Shade over a Connecticut Broadleaf binder, with filler drawn from three growing valleys in northern Nicaragua. Multiple sizes. Mellow to medium in body. Made at J.C. Newman's PENSA factory in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -6300,7 +6331,8 @@
         "Price": "9.25"
       }
     ],
-    "slug": "j-c-newman-brickhouse-double-connecticut"
+    "image": null,
+    "slug": "jc-newman-brickhouse-double-connecticut"
   },
   {
     "Cigar Brand": "J.C. Newman",
@@ -6321,13 +6353,20 @@
     "slug": "j-c-newman-brick-house-conn-mighty-mighty"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Brickhouse Maduro",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Brazilian Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Spicy, Rich hints of sweetness",
-    "Strength_Profile": "Full",
+    "Strength_Profile": "Medium-Full",
+    "description": "Julius Caeser Newman immigrated from Hungary in 1888 chasing the American Dream, and the Brick House brand pays tribute to the house his family lived in back in that Hungarian village. Eric and Bobby Newman, the third generation to run the company, revived it with an all-Nicaraguan blend that earned Cigar Aficionado's Top 25 recognition four separate times, including a number ten ranking in 2024. The Maduro takes the same acclaimed filler blend and dresses it in a darker, spicier wrapper.\nThe wrapper is Brazilian Arapiraca Maduro over a Nicaraguan binder, with Nicaraguan long-leaf filler. Multiple sizes. Medium to full in body. Made at J.C. Newman's PENSA factory in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -6342,7 +6381,8 @@
         "Price": "9.25"
       }
     ],
-    "slug": "j-c-newman-brickhouse-maduro"
+    "image": null,
+    "slug": "jc-newman-brickhouse-maduro"
   },
   {
     "Cigar Name": "Brickhouse Maduro Mighty Mighty",
@@ -6351,8 +6391,8 @@
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Spicy, Rich hints of sweetness",
-    "Strength_Profile": "Full",
-    "description": null,
+    "Strength_Profile": "Medium-Full",
+    "description": "Julius Caeser Newman immigrated from Hungary in 1888 chasing the American Dream, and the Brick House brand pays tribute to the house his family lived in back in that Hungarian village. Eric and Bobby Newman, the third generation to run the company, revived it with an all-Nicaraguan blend that earned Cigar Aficionado's Top 25 recognition four separate times, including a number ten ranking in 2024. The Maduro takes the same acclaimed filler blend and dresses it in a darker, spicier wrapper.\nThe wrapper is Brazilian Arapiraca Maduro over a Nicaraguan binder, with Nicaraguan long-leaf filler. Multiple sizes. Medium to full in body. Made at J.C. Newman's PENSA factory in Estelí, Nicaragua.",
     "Date Added": null,
     "hidden": false,
     "Podcast_Link": null,
@@ -6371,13 +6411,20 @@
     "slug": "jc-newman-brickhouse-maduro-mighty-mighty"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Brickhouse Sungrown",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Ecuadorian  Havana",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Earth, Cedar, Pepper, Coffee",
-    "Strength_Profile": "Medium-Full",
+    "Strength_Profile": "Medium",
+    "description": "Julius Caeser Newman launched the original Brick House in 1937, naming it after the only brick house in his family's small Hungarian village, a childhood home where his family ran a tavern on the ground floor. It was a Cuban puro brought to market deliberately as a value-priced cigar during the tough financial stretch of the Great Depression. The brand eventually went dormant and stayed that way for decades until his grandsons Eric and Bobby Newman revived it in 2009, rebuilding the blend around Nicaraguan tobacco aged in the mountains and topped with the Havana Subido wrapper that defines the line today. It earned the Best Bargain Cigar award and has landed on Cigar Aficionado's Top 25 multiple times, including 2010 and 2016.\nThe wrapper is Ecuadorian Havana Seed, the Havana Subido leaf, over Nicaraguan binder and long-leaf filler. Multiple sizes. Mellow to medium in body. Made at J.C. Newman's PENSA factory in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -6398,16 +6445,24 @@
         "Price": "10.10"
       }
     ],
-    "slug": "j-c-newman-brickhouse-sungrown"
+    "image": null,
+    "slug": "jc-newman-brickhouse-sungrown"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Brickhouse Sungrown Corona Larga",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Ecuadorian  Havana",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Earth, Cedar, Pepper, Coffee",
-    "Strength_Profile": "Medium-Full",
+    "Strength_Profile": "Medium",
+    "description": "Julius Caeser Newman launched the original Brick House in 1937, naming it after the only brick house in his family's small Hungarian village, a childhood home where his family ran a tavern on the ground floor. It was a Cuban puro brought to market deliberately as a value-priced cigar during the tough financial stretch of the Great Depression. The brand eventually went dormant and stayed that way for decades until his grandsons Eric and Bobby Newman revived it in 2009, rebuilding the blend around Nicaraguan tobacco aged in the mountains and topped with the Havana Subido wrapper that defines the line today. It earned the Best Bargain Cigar award and has landed on Cigar Aficionado's Top 25 multiple times, including 2010 and 2016.\nThe wrapper is Ecuadorian Havana Seed, the Havana Subido leaf, over Nicaraguan binder and long-leaf filler. Multiple sizes. Mellow to medium in body. Made at J.C. Newman's PENSA factory in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -6416,7 +6471,8 @@
         "Price": "7.10"
       }
     ],
-    "slug": "j-c-newman-brickhouse-sungrown-corona-larga"
+    "image": null,
+    "slug": "jc-newman-brickhouse-sungrown-corona-larga"
   },
   {
     "Cigar Name": "Brickhouse Sungrown Churchill",
@@ -6425,8 +6481,8 @@
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Earth, Cedar, Pepper, Coffee",
-    "Strength_Profile": "Medium-Full",
-    "description": null,
+    "Strength_Profile": "Medium",
+    "description": "Julius Caeser Newman launched the original Brick House in 1937, naming it after the only brick house in his family's small Hungarian village, a childhood home where his family ran a tavern on the ground floor. It was a Cuban puro brought to market deliberately as a value-priced cigar during the tough financial stretch of the Great Depression. The brand eventually went dormant and stayed that way for decades until his grandsons Eric and Bobby Newman revived it in 2009, rebuilding the blend around Nicaraguan tobacco aged in the mountains and topped with the Havana Subido wrapper that defines the line today. It earned the Best Bargain Cigar award and has landed on Cigar Aficionado's Top 25 multiple times, including 2010 and 2016.\nThe wrapper is Ecuadorian Havana Seed, the Havana Subido leaf, over Nicaraguan binder and long-leaf filler. Multiple sizes. Mellow to medium in body. Made at J.C. Newman's PENSA factory in Estelí, Nicaragua.",
     "Date Added": null,
     "hidden": false,
     "Podcast_Link": null,
@@ -6445,13 +6501,20 @@
     "slug": "jc-newman-brickhouse-sungrown-churchill"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Cuesta Rey No.60",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Connecticut Shade",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Robust and satisfying flavors,  Smooth from start to finish.",
     "Strength_Profile": "Mild-Medium",
+    "description": "J.C. Newman introduced the Cuesta Rey Cabinet Selection in 1958, and the No. 95 that launched it made history twice over: the first numbered cigar on the market, and the first to use a genuine African Cameroon wrapper. The Centenario collection carries that legacy forward, named for the brand's century-plus history, which traces back to its origins in Cuba before production moved to the Dominican Republic.\nEach cigar is filled with Cuban seed Dominican long filler tobacco aged up to five years in a specially designed cedar holding room, then bunched with a Dominican binder before rolling. The Natural wraps that bunch in a Connecticut Shade leaf, giving the finished cigar a smooth, creamy character. Mild to medium in body. Made at Tabacalera A. Fuente in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -6460,16 +6523,24 @@
         "Price": "10.30"
       }
     ],
-    "slug": "j-c-newman-cuesta-rey-no-60"
+    "image": null,
+    "slug": "jc-newman-cuesta-rey-no60"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Cuesta Rey No.7",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Connecticut Shade",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Coffee, Nuts, Earth",
     "Strength_Profile": "Mild-Medium",
+    "description": "J.C. Newman introduced the Cuesta Rey Cabinet Selection in 1958, and the No. 95 that launched it made history twice over: the first numbered cigar on the market, and the first to use a genuine African Cameroon wrapper. The Centenario collection carries that legacy forward, named for the brand's century-plus history, which traces back to its origins in Cuba before production moved to the Dominican Republic.\nEach cigar is filled with Cuban seed Dominican long filler tobacco aged up to five years in a specially designed cedar holding room, then bunched with a Dominican binder before rolling. The Natural wraps that bunch in a Connecticut Shade leaf, giving the finished cigar a smooth, creamy character. Mild to medium in body. Made at Tabacalera A. Fuente in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -6478,16 +6549,24 @@
         "Price": "9.40"
       }
     ],
-    "slug": "j-c-newman-cuesta-rey-no-7"
+    "image": null,
+    "slug": "jc-newman-cuesta-rey-no7"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Cuesta Rey sungrown",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Ecuador  sungrown",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Rich and bold",
-    "Strength_Profile": "Medium-Full",
+    "Strength_Profile": "Medium",
+    "description": "The Sun Grown shares the same aged Dominican long filler and binder foundation as the Natural, five years in the cedar holding room before rolling, but trades the Connecticut Shade wrapper for a dark Connecticut Broadleaf leaf grown in full sun rather than under shade cloth. The result carries more weight and depth than the Natural while staying within the same mellow to medium range that defines the Centenario collection.\nThe wrapper is Connecticut Broadleaf Sun Grown over a Dominican binder, with five year aged Dominican long filler. Mellow to medium in body. Made at Tabacalera A. Fuente in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -6496,7 +6575,8 @@
         "Price": "8.30"
       }
     ],
-    "slug": "j-c-newman-cuesta-rey-sungrown"
+    "image": null,
+    "slug": "jc-newman-cuesta-rey-sungrown"
   },
   {
     "Cigar Brand": "J.C. Newman",
@@ -6515,21 +6595,30 @@
     "slug": "j-c-newman-decision-550"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Diamond Crown #3",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Connecticut Shade",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Earth, Nutmeg, Burnt spices",
     "Strength_Profile": "Mild-Medium",
+    "description": "Stanford Newman built the original Diamond Crown in 1995 to celebrate J.C. Newman's hundredth anniversary, and he set out with a simple mandate: build the best cigar in the world regardless of cost or time. Working with Carlos Fuente Sr., he pushed every vitola in the line to a 54 ring gauge, a genuinely thick cigar for its era when coronas and lonsdales still dominated the market. The logic behind the size was practical: a wider cigar allowed the rollers to blend five distinct filler leaves into the bunch rather than two or three, adding a layer of complexity that thinner cigars couldn't accommodate. The release became a defining moment of the 1990s cigar boom and helped push the entire industry toward larger ring gauges.\nThe wrapper is Connecticut Shade, aged five years and double fermented to deepen its Rosado color and remove any rawness, over a Dominican binder and a blend of five filler tobaccos from the Caribbean and Central America. Rated 92 by Cigar Aficionado. Multiple sizes. Medium in body. Made at Tabacalera A. Fuente in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
+        "Barcode": null,
         "In_Stock": true,
         "Price": "19.10"
       }
     ],
-    "slug": "j-c-newman-diamond-crown-3"
+    "image": null,
+    "slug": "jc-newman-diamond-crown-3"
   },
   {
     "Cigar Name": "Diamond Crown #4",
@@ -6539,7 +6628,7 @@
     "Filler": "Dominican",
     "Flavor_Profile": "Earth, Nutmeg, Burnt spices",
     "Strength_Profile": "Mild-Medium",
-    "description": null,
+    "description": "Stanford Newman built the original Diamond Crown in 1995 to celebrate J.C. Newman's hundredth anniversary, and he set out with a simple mandate: build the best cigar in the world regardless of cost or time. Working with Carlos Fuente Sr., he pushed every vitola in the line to a 54 ring gauge, a genuinely thick cigar for its era when coronas and lonsdales still dominated the market. The logic behind the size was practical: a wider cigar allowed the rollers to blend five distinct filler leaves into the bunch rather than two or three, adding a layer of complexity that thinner cigars couldn't accommodate. The release became a defining moment of the 1990s cigar boom and helped push the entire industry toward larger ring gauges.\nThe wrapper is Connecticut Shade, aged five years and double fermented to deepen its Rosado color and remove any rawness, over a Dominican binder and a blend of five filler tobaccos from the Caribbean and Central America. Rated 92 by Cigar Aficionado. Multiple sizes. Medium in body. Made at Tabacalera A. Fuente in the Dominican Republic.",
     "Date Added": null,
     "hidden": false,
     "Podcast_Link": null,
@@ -6558,13 +6647,20 @@
     "slug": "jc-newman-diamond-crown-4"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Diamond Crown #5",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Connecticut Shade",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Earth, Nutmeg, Burnt spices",
     "Strength_Profile": "Mild-Medium",
+    "description": "Stanford Newman built the original Diamond Crown in 1995 to celebrate J.C. Newman's hundredth anniversary, and he set out with a simple mandate: build the best cigar in the world regardless of cost or time. Working with Carlos Fuente Sr., he pushed every vitola in the line to a 54 ring gauge, a genuinely thick cigar for its era when coronas and lonsdales still dominated the market. The logic behind the size was practical: a wider cigar allowed the rollers to blend five distinct filler leaves into the bunch rather than two or three, adding a layer of complexity that thinner cigars couldn't accommodate. The release became a defining moment of the 1990s cigar boom and helped push the entire industry toward larger ring gauges.\nThe wrapper is Connecticut Shade, aged five years and double fermented to deepen its Rosado color and remove any rawness, over a Dominican binder and a blend of five filler tobaccos from the Caribbean and Central America. Rated 92 by Cigar Aficionado. Multiple sizes. Medium in body. Made at Tabacalera A. Fuente in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -6573,16 +6669,24 @@
         "Price": "15.90"
       }
     ],
-    "slug": "j-c-newman-diamond-crown-5"
+    "image": null,
+    "slug": "jc-newman-diamond-crown-5"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Diamond Crown Maduro #5",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Connecticut Broadleaf",
     "Binder": "Dominican",
     "Filler": "Central American",
     "Flavor_Profile": "Meatiness, Cocoa, Caramel",
     "Strength_Profile": "Medium",
+    "description": "The Maduro joined the Diamond Crown Classic line a few years after the original 1995 release, giving smokers who wanted more depth an alternative to the Connecticut Shade wrapper. It shares the same aged Dominican binder and five country filler blend as the standard Classic, with a dark Connecticut Broadleaf wrapper taking the place of the shade leaf. The result carries more weight and a deeper, more robust profile while keeping the same construction standards and double fermentation process that define the rest of the line.\nThe wrapper is Connecticut Broadleaf over a Dominican binder, with a blend of five filler tobaccos from the Caribbean and Central America. Multiple sizes. Medium in body. Made at Tabacalera A. Fuente in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -6591,16 +6695,24 @@
         "Price": "15.90"
       }
     ],
-    "slug": "j-c-newman-diamond-crown-maduro-5"
+    "image": null,
+    "slug": "jc-newman-diamond-crown-maduro-5"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Diamond Crown Maximus #4",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Ecuadorian Sungrown",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Robust and satisfying flavors,  Smooth from start to finish.",
     "Strength_Profile": "Full",
+    "description": "Stanford Newman launched Maximus for J.C. Newman's 110th anniversary, this time with an eye toward a bolder complement to the original Classic. He brought in two families to build it alongside the Fuentes: the Olivas, whose El Bajo farm in Ecuador supplies the wrapper, and the Fuentes themselves, who handle the Dominican binder and filler as they do the rest of the Diamond Crown family. El Bajo sits in a mountain valley where centuries of runoff have left the soil unusually rich, and the wrapper is pulled from the ligero primings at the top of the plant, which carry more strength and intensity than lower leaves. Cigar Aficionado named it the number four cigar of 2009 with a 93 rating.\nThe wrapper is Ecuadorian El Bajo Sun Grown, ligero priming, over a Dominican binder, with a secret blend of Dominican long filler. Seven sizes, 20-count boxes. Full in body. Made at Tabacalera A. Fuente y Cia in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
@@ -6609,16 +6721,24 @@
         "Price": "19.60"
       }
     ],
-    "slug": "j-c-newman-diamond-crown-maximus-4"
+    "image": null,
+    "slug": "jc-newman-diamond-crown-maximus-4"
   },
   {
-    "Cigar Brand": "J.C. Newman",
     "Cigar Name": "Diamond Crown Maximus #5",
+    "Cigar Brand": "J.C. Newman",
     "Wrapper": "Ecuadorian Sungrown",
     "Binder": "Dominican",
     "Filler": "Dominican",
     "Flavor_Profile": "Robust and satisfying flavors,  Smooth from start to finish.",
     "Strength_Profile": "Full",
+    "description": "Stanford Newman launched Maximus for J.C. Newman's 110th anniversary, this time with an eye toward a bolder complement to the original Classic. He brought in two families to build it alongside the Fuentes: the Olivas, whose El Bajo farm in Ecuador supplies the wrapper, and the Fuentes themselves, who handle the Dominican binder and filler as they do the rest of the Diamond Crown family. El Bajo sits in a mountain valley where centuries of runoff have left the soil unusually rich, and the wrapper is pulled from the ligero primings at the top of the plant, which carry more strength and intensity than lower leaves. Cigar Aficionado named it the number four cigar of 2009 with a 93 rating.\nThe wrapper is Ecuadorian El Bajo Sun Grown, ligero priming, over a Dominican binder, with a secret blend of Dominican long filler. Seven sizes, 20-count boxes. Full in body. Made at Tabacalera A. Fuente y Cia in the Dominican Republic.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -6627,7 +6747,8 @@
         "Price": "15.40"
       }
     ],
-    "slug": "j-c-newman-diamond-crown-maximus-5"
+    "image": null,
+    "slug": "jc-newman-diamond-crown-maximus-5"
   },
   {
     "Cigar Brand": "J.C. Newman",
