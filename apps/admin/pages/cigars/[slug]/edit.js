@@ -57,6 +57,9 @@ const EditCigarPage = ({ cigar, productId, allCigars }) => {
         initialValues={draft}
         suggestions={suggestions}
         onSubmit={handleSubmit}
+        mode="edit"
+        title={cigar["Cigar Name"] || "Edit cigar"}
+        backHref="/cigars"
       >
         <SlugPreview
           generateSlug={generateSlug}

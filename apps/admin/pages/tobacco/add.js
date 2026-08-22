@@ -54,6 +54,9 @@ const AddTobaccoPage = (props) => {
                 initialValues={draft}
                 suggestions={suggestions}
                 onSubmit={handleSubmit}
+                mode="add"
+                title="Add tobacco"
+                backHref="/tobacco"
             >
                 <SlugPreview
                     generateSlug={generateSlug}
@@ -61,7 +64,7 @@ const AddTobaccoPage = (props) => {
                     fallbackSlug=""
                     baseRoute="www.kingstreetemporium.com/tobacco"
                 />
-                <FormButtons onClickRevert={() => setDraft(defaults)} />
+                <FormButtons mode="add" onClickRevert={() => setDraft({ ...defaults })} />
             </SchemaForm>
         </Layout>
     )

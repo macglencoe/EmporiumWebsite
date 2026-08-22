@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useMemo } from "react";
-import { buildSchemaArtifacts, normalizeType } from "../../../utils/schemaMapper";
+import { buildSchemaArtifacts } from "../../../utils/schemaMapper";
 import uiSchema from "../../../public/data/tobacco.ui.schema.json"
 import { useDraftItem } from "../../../hooks/useDraftItem";
 import Layout from "../../../components/layout";
@@ -57,23 +57,9 @@ const EditTobaccoPage = ({ tobacco, productId, allTobacco }) => {
                 initialValues={draft}
                 suggestions={suggestions}
                 onSubmit={handleSubmit}
-                tabs={[
-                    {
-                        id: "metadata",
-                        label: "METADATA",
-                        filter: (n, f) => sectionOf(f) === "metadata"
-                    },
-                    {
-                        id: "components",
-                        label: "COMPONENTS",
-                        filter: (n, f) => sectionOf(f) === "components"
-                    },
-                    {
-                        id: "image",
-                        label: "IMAGE",
-                        filter: (n, f) => sectionOf(f) === "image"
-                    }
-                ]}
+                mode="edit"
+                title={tobacco["Tobacco Name"] || "Edit tobacco"}
+                backHref="/tobacco"
             >
                 <SlugPreview
                     generateSlug={generateSlug}
@@ -86,7 +72,5 @@ const EditTobaccoPage = ({ tobacco, productId, allTobacco }) => {
         </Layout>
     )
 }
-
-const sectionOf = (field) => (field?.ui?.section || "")
 
 export default EditTobaccoPage

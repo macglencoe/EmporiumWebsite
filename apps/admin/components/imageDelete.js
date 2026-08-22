@@ -12,29 +12,24 @@ export const ImageDelete = (props) => {
     return (
         <>
         <div>
-            <button type="button" onClick={handleDeleteImage}>Delete Image</button>
+            <button type="button" onClick={handleDeleteImage}>Remove image</button>
             {loading && <Notice type="loading">Deleting image from server...</Notice>}
-            <p><b>Notice:</b> If the image was uploaded in the last 5 minutes, it will still appear as the product's image until you upload a new one</p>
         </div>
         <style jsx>
             {`
 div {
-    border: 3px solid var(--dl-color-theme-secondary2);
-    padding: 0.5em 0.5em;
-    border-radius: 5px;
     display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    align-items: flex-start;
+    align-items: center;
 }
 button {
-    background-color: var(--negative);
+    min-height: 44px;
     padding: 0.5em 1em;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
-    color: var(--dl-color-theme-primary2);
+    color: #b42318;
     cursor: pointer;
 }
+button:hover { background: #fff1f0; }
             `}
         </style>
         </>

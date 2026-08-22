@@ -16,7 +16,7 @@
                 "placeholder": "Enter cigar name",
                 "input": "text",
                 "description": "e.g., Cazadores",
-                "section": "metadata",
+                "section": "details",
                 "showInCatalog": true
             }
         },
@@ -33,7 +33,7 @@
                 "placeholder": "Enter cigar brand",
                 "input": "text",
                 "description": "e.g., J.C. Newman.",
-                "section": "metadata",
+                "section": "details",
                 "showInCatalog": true
             }
         },
@@ -46,7 +46,7 @@
                 "placeholder": "Enter wrapper",
                 "input": "text",
                 "description": "e.g., Connecticut Shade",
-                "section": "metadata",
+                "section": "details",
                 "showInCatalog": true
             }
         },
@@ -59,7 +59,7 @@
                 "placeholder": "Enter binder",
                 "input": "text",
                 "description": "e.g., Dominican",
-                "section": "metadata"
+                "section": "details"
             }
         },
         "Filler": {
@@ -71,7 +71,7 @@
                 "placeholder": "Enter filler",
                 "input": "text",
                 "description": "e.g., Dominican",
-                "section": "metadata"
+                "section": "details"
             }
         },
         "Flavor_Profile": {
@@ -83,7 +83,7 @@
                 "placeholder": "Enter flavor profile",
                 "input": "text",
                 "description": "Comma separated, e.g., Cedar, Cream, Sweetness",
-                "section": "metadata"
+                "section": "details"
             }
         },
         "Strength_Profile": {
@@ -109,7 +109,7 @@
                 { "pos": 5, "value": "Full", "label": "Full"}
             ],
                 "range": { "min": 0, "max": 5, "step": 1},
-                "section": "metadata"
+                "section": "details"
             },
             "validation": {
                 "required": false
@@ -127,7 +127,7 @@
                 "input": "textarea",
                 "rows": 4,
                 "description": "This will be displayed at the top of the product page.",
-                "section": "metadata"
+                "section": "details"
             }
         },
         "Date Added": {
@@ -138,7 +138,7 @@
                 "label": "Date Added",
                 "input": "date",
                 "description": "YYYY-MM-DD format",
-                "section": "metadata"
+                "section": "visibility"
             }
         },
         "hidden": {
@@ -148,7 +148,7 @@
                 "label": "Hidden",
                 "input": "checkbox",
                 "description": "Check box if this cigar should be hidden on the public site",
-                "section": "metadata"
+                "section": "visibility"
             }
         },
         "Podcast_Link": {
@@ -159,7 +159,7 @@
                 "input": "textarea",
                 "rows": 4,
                 "description": "Paste the link or embed code of the podcast episode this cigar was featured on.",
-                "section": "metadata"
+                "section": "visibility"
             }
         },
         "featured_Eds_Pick": {
@@ -170,7 +170,7 @@
                 "label": "Ed's Pick",
                 "input": "date",
                 "description": "The date this cigar was chosen as Ed's Pick (Leave blank if not chosen). YYYY-MM-DD format",
-                "section": "metadata"
+                "section": "visibility"
             }
         },
         "featured_Teds_Pick": {
@@ -181,7 +181,7 @@
                 "label": "Ted's Pick",
                 "input": "date",
                 "description": "The date this cigar was chosen as Ted's Pick (Leave blank if not chosen). YYYY-MM-DD format",
-                "section": "metadata"
+                "section": "visibility"
             }
         },
         "featured_StickFigures": {
@@ -192,7 +192,7 @@
                 "label": "StickFigures",
                 "input": "date",
                 "description": "The date this cigar was featured on The Stick Figures (Leave blank if not featured). YYYY-MM-DD format",
-                "section": "metadata"
+                "section": "visibility"
             }
         },
         "Sizes": {

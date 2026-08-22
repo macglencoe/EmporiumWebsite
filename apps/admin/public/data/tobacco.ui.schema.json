@@ -16,7 +16,7 @@
                 "placeholder": "Enter tobacco name",
                 "input": "text",
                 "description": "e.g., Greg's Mix",
-                "section": "metadata",
+                "section": "details",
                 "isTitle": true,
                 "showInCatalog": true
             }
@@ -34,7 +34,7 @@
                 "placeholder": "Enter tobacco brand",
                 "input": "text",
                 "description": "e.g., Cornell & Diehl",
-                "section": "metadata",
+                "section": "details",
                 "showInCatalog": true
             }
         },
@@ -47,7 +47,7 @@
                 "placeholder": "Enter tobacco family",
                 "input": "text",
                 "description": "e.g., American Aromatic",
-                "section": "metadata",
+                "section": "details",
                 "showInCatalog": true
             }
         },
@@ -63,7 +63,7 @@
                 "input": "textarea",
                 "rows": 4,
                 "description": "This will be displayed at the top of the product's page",
-                "section": "metadata"
+                "section": "details"
             }
         },
         "Sale Form": {
@@ -74,7 +74,7 @@
                 "label": "Sale Form",
                 "input": "select",
                 "description": "How is this tobacco sold?",
-                "section": "metadata",
+                "section": "details",
                 "showInCatalog": true
             }
         },

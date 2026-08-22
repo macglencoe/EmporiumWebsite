@@ -29,6 +29,7 @@ export const ImageUpload = (props) => {
         } catch (error) {
             console.error("Image compression failed:", error);
             setError("Image compression failed. See console for details.");
+            return;
         }
 
         const fileExtension = selectedFile.type.split("/")[1];
@@ -73,8 +74,9 @@ export const ImageUpload = (props) => {
         <>
             <div className="container">
                 {selectedFile && <img src={URL.createObjectURL(selectedFile)} alt="Selected" />}
-                <input type="file" onChange={handleFileChange} />
-                <button type="button" onClick={handleUpload}>Upload</button>
+                <label className="file-label" htmlFor="product-image">Choose an image</label>
+                <input id="product-image" type="file" accept="image/*" onChange={handleFileChange} />
+                <button type="button" onClick={handleUpload} disabled={!selectedFile}>{props.image ? "Replace image" : "Upload image"}</button>
                 {error && <Notice header="Error" type="error">{error}</Notice>}
 
                 {
@@ -127,42 +129,36 @@ div.container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 20px;
+    padding: 1rem;
     gap: 1em;
-    width: fit-content;
+    width: 100%;
+    border: 1px dashed #b8afa5;
+    border-radius: 8px;
+    background: #faf9f7;
 }
-input[type="file"]::file-selector-button {
-    background-color: var(--dl-color-theme-secondary2);
-    border: none;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    cursor: pointer;
-    color: var(--dl-color-theme-primary1);
-    font-weight: bold;
-    margin-right: 1em;
-}
-input[type="file"]::file-selector-button:hover {
-    color: var(--dl-color-theme-primary2);
-}
-input[type="file"] {
-    font-family: Inter;
-}
+input[type="file"] { max-width: 100%; font-family: Inter; font-size: .85rem; }
+.file-label { color: #211a1b; font-size: .9rem; font-weight: 700; }
 
 button {
     padding: 0.5em 1em;
-    background-color: var(--dl-color-theme-secondary2);
-    color: var(--dl-color-theme-primary1);
+    min-height: 44px;
+    background-color: #4d3b2c;
+    color: white;
     border-radius: 5px;
     font-weight: bold;
     border: none;
     cursor: pointer;
 }
 button:hover {
-    color: var(--dl-color-theme-primary2);
+    background: #211a1b;
 }
+button:disabled { cursor: not-allowed; opacity: .5; }
 
 img {
-    max-height: 300px;
+    max-width: 180px;
+    max-height: 180px;
+    border-radius: 6px;
+    object-fit: contain;
 }
 div.error {
     border-radius: 5px;

@@ -7,7 +7,6 @@ import uiSchema from "../../public/data/cigar.ui.schema.json";
 import { buildSchemaArtifacts } from "../../utils/schemaMapper";
 import { buildCigarSuggestions } from "../../utils/suggestions";
 import { useDraftItem } from "../../hooks/useDraftItem";
-import { useSlugPreview } from "../../hooks/useSlugPreview";
 
 export const getServerSideProps = async () => {
   const { readCatalog, legacyEnvelope } = await import("../../lib/catalog/server.mjs");
@@ -71,6 +70,9 @@ const AddCigarPage = (props) => {
         initialValues={draft}
         suggestions={suggestions}
         onSubmit={handleSubmit}
+        mode="add"
+        title="Add cigar"
+        backHref="/cigars"
       >
         <SlugPreview
           generateSlug={generateSlug}
@@ -78,7 +80,7 @@ const AddCigarPage = (props) => {
           fallbackSlug=""
           baseRoute="www.kingstreetemporium.com/cigars"
         />
-        <FormButtons onClickRevert={() => setDraft(defaultsWithToday)} />
+        <FormButtons mode="add" onClickRevert={() => setDraft({ ...defaultsWithToday })} />
       </SchemaForm>
     </Layout>
   );

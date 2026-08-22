@@ -28,7 +28,16 @@ export default function DraftProductEditor({ item, catalog, type, uiSchema, buil
   }
 
   return <Layout>
-    <SchemaForm key={item.id} uiSchema={uiSchema} initialValues={draft} suggestions={suggestions} onSubmit={handleSubmit}>
+    <SchemaForm
+      key={item.id}
+      uiSchema={uiSchema}
+      initialValues={draft}
+      suggestions={suggestions}
+      onSubmit={handleSubmit}
+      mode="edit"
+      title={item.afterLegacy?.[type === "cigar" ? "Cigar Name" : "Tobacco Name"] || "Edit draft"}
+      backHref={`/${type === "cigar" ? "cigars" : "tobacco"}`}
+    >
       <SlugPreview generateSlug={generateSlug} isSlugUnique={isSlugUnique} fallbackSlug={item.afterLegacy.slug} baseRoute={baseRoute}/>
       <FormButtons onClickRevert={() => setDraft(item.afterLegacy)}/>
     </SchemaForm>
