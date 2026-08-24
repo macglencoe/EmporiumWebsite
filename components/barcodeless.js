@@ -1,8 +1,9 @@
 import PageTitle1 from "./pagetitle1";
 import Layout from "./layout";
+import { isBarcodeMissing } from "../utils/barcode.mjs";
 
 export const Barcodeless = (props) => {
-    const noBarcodeBrands = new Set(props.data.filter(cigar => cigar.Sizes.filter(size => size.Barcode === "" || size.Barcode === undefined).length > 0).map(cigar => cigar["Cigar Brand"]));
+    const noBarcodeBrands = new Set(props.data.filter(cigar => cigar.Sizes.some(size => isBarcodeMissing(size.Barcode))).map(cigar => cigar["Cigar Brand"]));
     return (
         <>
                 <PageTitle1>Cigars Without Barcodes</PageTitle1>
@@ -28,7 +29,7 @@ export const Barcodeless = (props) => {
                                                 .filter(cigar => cigar["Cigar Brand"] === brand)
                                                 .flatMap((cigar, ci) =>
                                                     cigar.Sizes
-                                                        .filter(size => size.Barcode === "" || size.Barcode === undefined)
+                                                        .filter(size => isBarcodeMissing(size.Barcode))
                                                         .map((size, si) => (
                                                             <tr key={`${brand}-${ci}-${si}`}>
                                                                 <td>{cigar["Cigar Name"]}</td>

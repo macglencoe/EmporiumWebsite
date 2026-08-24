@@ -4,6 +4,7 @@ import PageTitle1 from "../../components/pagetitle1"
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { Barcodeless } from "../../components/barcodeless"
+import { compareBarcodes } from "../../utils/barcode.mjs"
 
 
 export const getStaticProps = async () => {
@@ -38,7 +39,7 @@ export const BarcodeSearch = (props) => {
     useEffect(() => {
         if (router.query.search) {
             const search = router.query.search;
-            const results = data.filter((cigar) => cigar.Sizes.some((size) => size.Barcode?.toString().includes(search)));
+            const results = data.filter((cigar) => cigar.Sizes.some((size) => compareBarcodes(size.Barcode, search).includes));
             setResults(results);
         }
     }, [router.query.search]);
@@ -112,20 +113,24 @@ export const BarcodeSearch = (props) => {
                                         <a href={`/cigars/${result["slug"]}`}><button>View Product</button></a>
                                     </div>
                                     <div className="cigar-sizes">
-                                        {result["Sizes"] && result["Sizes"].map((size) => (
-                                            <div
-                                                key={size["Size"]}
-                                                className={`
-                                                    size
-                                                    ${size.Barcode.toString() === router.query.search ? "match" : ""}
-                                                    ${size.Barcode.toString().includes(router.query.search) ? "include" : ""}
-                                                `}
-                                            >
-                                                <b>{size["Size"]}</b>
-                                                <span className="price">{size["Price"]}</span>
-                                                <pre>{size["Barcode"]}</pre>
-                                            </div>
-                                        ))}
+                                        {result["Sizes"] && result["Sizes"].map((size) => {
+                                            const barcodeMatch = compareBarcodes(size.Barcode, router.query.search);
+
+                                            return (
+                                                <div
+                                                    key={size["Size"]}
+                                                    className={`
+                                                        size
+                                                        ${barcodeMatch.exact ? "match" : ""}
+                                                        ${barcodeMatch.includes ? "include" : ""}
+                                                    `}
+                                                >
+                                                    <b>{size["Size"]}</b>
+                                                    <span className="price">{size["Price"]}</span>
+                                                    <pre>{size["Barcode"]}</pre>
+                                                </div>
+                                            )
+                                        })}
                                     </div>
                                 </div>
                             )

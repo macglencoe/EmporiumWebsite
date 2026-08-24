@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "test": "node --test utils/barcode.test.mjs",
     "postbuild": "next-sitemap",
     "start": "next start --port 25565",
     "export": "next export"
