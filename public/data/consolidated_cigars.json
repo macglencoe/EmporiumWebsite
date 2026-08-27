@@ -10704,22 +10704,30 @@
     "slug": "cao-fasa-sombra"
   },
   {
-    "Cigar Brand": "La Flor Dominicana",
     "Cigar Name": "Colorado Oscuro No. 4",
+    "Cigar Brand": "La Flor Dominicana",
     "Wrapper": "Ecuadorian Sumatra",
     "Binder": "Dominican Sumatra",
     "Filler": "Dominican, Nicaraguan",
     "Flavor_Profile": "Grass, Leather, Citrus, Spice, Pepper",
     "Strength_Profile": "Full",
+    "description": "Most cigar blends put Sumatra tobacco only on the wrapper. Litto Gomez built the Colorado Oscuro around Sumatra leaf on both the wrapper and the binder, an unusual choice that gives the blend a distinctive floral character most full bodied cigars don't have room for. It is released only a couple times a year in limited batches, using whatever selected tobacco is available at the time.\nThe wrapper is an oily Ecuadorian Sumatra Ligero leaf over a Dominican Sumatra binder, with long-leaf filler from the Dominican Republic and Nicaragua. Full in body. Made at Tabacalera La Flor in Santiago, Dominican Republic.",
+    "Date Added": "2025-04-17",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
+        "Barcode": "7460644702167",
         "In_Stock": true,
-        "Price": "10.60"
+        "Price": "11.80"
       }
     ],
-    "slug": "la-flor-dominicana-colorado-oscuro-no-4",
-    "Date Added": "2025-04-17"
+    "image": null,
+    "slug": "la-flor-dominicana-colorado-oscuro-no-4"
   },
   {
     "Cigar Name": "Hemingway Classic Maduro",
@@ -11585,13 +11593,20 @@
     "Date Added": "2025-08-08"
   },
   {
-    "Cigar Brand": "CAO",
     "Cigar Name": "Surplus Maduro",
+    "Cigar Brand": "CAO",
     "Wrapper": "Mexican San Andres",
     "Binder": "Ecuadorian Sumatra",
     "Filler": "Dominican",
     "Flavor_Profile": "",
     "Strength_Profile": "Medium",
+    "description": "The CAO Surplus Maduro delivers bold flavor at a budget-friendly price, featuring a dark Mexican San Andrés wrapper over an Ecuadorian Sumatra binder and Dominican Olor long-fillers. Medium-bodied with rich cocoa and spice notes, it’s a satisfying everyday cigar that proves big taste doesn’t have to break the bank.",
+    "Date Added": "2025-08-08",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -11604,11 +11619,16 @@
         "Barcode": "689674166511",
         "In_Stock": true,
         "Price": "3.10"
+      },
+      {
+        "Size": "Toro",
+        "Barcode": "689674166481",
+        "In_Stock": true,
+        "Price": "2.55"
       }
     ],
-    "description": "The CAO Surplus Maduro delivers bold flavor at a budget-friendly price, featuring a dark Mexican San Andrés wrapper over an Ecuadorian Sumatra binder and Dominican Olor long-fillers. Medium-bodied with rich cocoa and spice notes, it’s a satisfying everyday cigar that proves big taste doesn’t have to break the bank.",
-    "slug": "cao-surplus-maduro",
-    "Date Added": "2025-08-08"
+    "image": null,
+    "slug": "cao-surplus-maduro"
   },
   {
     "Cigar Brand": "CAO",
