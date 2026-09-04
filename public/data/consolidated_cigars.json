@@ -7345,7 +7345,7 @@
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Cedar, Almond",
     "Strength_Profile": "Medium",
-    "description": null,
+    "description": "Jose \"Pepin\" Garcia and his son Jaime built their reputation on bold, fuller-bodied blends, which makes the Connecticut a genuine outlier in the La Aroma de Cuba catalog. It stands as the brand's mildest release, built around a triple fermentation process on the Nicaraguan binder and filler that softens the profile and adds a creamy, almond-forward sweetness beneath the wrapper.\nThe wrapper is Ecuadorian Connecticut Shade over a Nicaraguan binder, with Nicaraguan long-leaf filler from the Garcia family farms in Condega, Estelí, and Jalapa. Seven sizes. Mellow to medium in body. Made at My Father Cigars in Estelí, Nicaragua.",
     "Date Added": null,
     "hidden": false,
     "Podcast_Link": null,
@@ -7364,13 +7364,20 @@
     "slug": "la-aroma-de-cuba-connecticut"
   },
   {
-    "Cigar Brand": "La Aroma de Cuba",
     "Cigar Name": "Connecticut Corona",
+    "Cigar Brand": "La Aroma de Cuba",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Nicaraguan",
     "Filler": "Nicaragua",
     "Flavor_Profile": "Coffee, Cedar, Almond",
     "Strength_Profile": "Medium",
+    "description": "Jose \"Pepin\" Garcia and his son Jaime built their reputation on bold, fuller-bodied blends, which makes the Connecticut a genuine outlier in the La Aroma de Cuba catalog. It stands as the brand's mildest release, built around a triple fermentation process on the Nicaraguan binder and filler that softens the profile and adds a creamy, almond-forward sweetness beneath the wrapper.\nThe wrapper is Ecuadorian Connecticut Shade over a Nicaraguan binder, with Nicaraguan long-leaf filler from the Garcia family farms in Condega, Estelí, and Jalapa. Seven sizes. Mellow to medium in body. Made at My Father Cigars in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Corona",
@@ -7379,16 +7386,24 @@
         "Price": "8.00"
       }
     ],
+    "image": null,
     "slug": "la-aroma-de-cuba-connecticut-corona"
   },
   {
-    "Cigar Brand": "La Aroma de Cuba",
     "Cigar Name": "Connecticut El Jefe",
+    "Cigar Brand": "La Aroma de Cuba",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Cedar, Almond",
     "Strength_Profile": "Medium",
+    "description": "Jose \"Pepin\" Garcia and his son Jaime built their reputation on bold, fuller-bodied blends, which makes the Connecticut a genuine outlier in the La Aroma de Cuba catalog. It stands as the brand's mildest release, built around a triple fermentation process on the Nicaraguan binder and filler that softens the profile and adds a creamy, almond-forward sweetness beneath the wrapper.\nThe wrapper is Ecuadorian Connecticut Shade over a Nicaraguan binder, with Nicaraguan long-leaf filler from the Garcia family farms in Condega, Estelí, and Jalapa. Seven sizes. Mellow to medium in body. Made at My Father Cigars in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Double Gordo",
@@ -7397,23 +7412,33 @@
         "Price": "10.15"
       }
     ],
+    "image": null,
     "slug": "la-aroma-de-cuba-connecticut-el-jefe"
   },
   {
-    "Cigar Brand": "La Aroma de Cuba",
     "Cigar Name": "Connecticut Immensa",
+    "Cigar Brand": "La Aroma de Cuba",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Cedar, Almond",
     "Strength_Profile": "Medium",
+    "description": "Jose \"Pepin\" Garcia and his son Jaime built their reputation on bold, fuller-bodied blends, which makes the Connecticut a genuine outlier in the La Aroma de Cuba catalog. It stands as the brand's mildest release, built around a triple fermentation process on the Nicaraguan binder and filler that softens the profile and adds a creamy, almond-forward sweetness beneath the wrapper.\nThe wrapper is Ecuadorian Connecticut Shade over a Nicaraguan binder, with Nicaraguan long-leaf filler from the Garcia family farms in Condega, Estelí, and Jalapa. Seven sizes. Mellow to medium in body. Made at My Father Cigars in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Gordo",
+        "Barcode": null,
         "In_Stock": true,
         "Price": "9.35"
       }
     ],
+    "image": null,
     "slug": "la-aroma-de-cuba-connecticut-immensa"
   },
   {
@@ -7424,7 +7449,7 @@
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Cedar, Almond",
     "Strength_Profile": "Medium",
-    "description": null,
+    "description": "Jose \"Pepin\" Garcia and his son Jaime built their reputation on bold, fuller-bodied blends, which makes the Connecticut a genuine outlier in the La Aroma de Cuba catalog. It stands as the brand's mildest release, built around a triple fermentation process on the Nicaraguan binder and filler that softens the profile and adds a creamy, almond-forward sweetness beneath the wrapper.\nThe wrapper is Ecuadorian Connecticut Shade over a Nicaraguan binder, with Nicaraguan long-leaf filler from the Garcia family farms in Condega, Estelí, and Jalapa. Seven sizes. Mellow to medium in body. Made at My Father Cigars in Estelí, Nicaragua.",
     "Date Added": null,
     "hidden": false,
     "Podcast_Link": null,
@@ -7443,13 +7468,20 @@
     "slug": "la-aroma-de-cuba-connecticut-monarch"
   },
   {
-    "Cigar Brand": "La Aroma de Cuba",
     "Cigar Name": "Connecticut robusto",
+    "Cigar Brand": "La Aroma de Cuba",
     "Wrapper": "Ecuadorian Connecticut",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Cedar, Almond",
     "Strength_Profile": "Medium",
+    "description": "Jose \"Pepin\" Garcia and his son Jaime built their reputation on bold, fuller-bodied blends, which makes the Connecticut a genuine outlier in the La Aroma de Cuba catalog. It stands as the brand's mildest release, built around a triple fermentation process on the Nicaraguan binder and filler that softens the profile and adds a creamy, almond-forward sweetness beneath the wrapper.\nThe wrapper is Ecuadorian Connecticut Shade over a Nicaraguan binder, with Nicaraguan long-leaf filler from the Garcia family farms in Condega, Estelí, and Jalapa. Seven sizes. Mellow to medium in body. Made at My Father Cigars in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -7458,16 +7490,24 @@
         "Price": "8.60"
       }
     ],
+    "image": null,
     "slug": "la-aroma-de-cuba-connecticut-robusto"
   },
   {
-    "Cigar Brand": "La Aroma de Cuba",
     "Cigar Name": "Edition Especial No.2",
+    "Cigar Brand": "La Aroma de Cuba",
     "Wrapper": "Ecuadorian Habano",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Cedar, Leather, White pepper",
     "Strength_Profile": "Medium-Full",
+    "description": "Edicion Especial has been rebuilt once since its 2008 debut. The 2020 version kept the same tobaccos on paper, an Ecuadorian Habano wrapper over Nicaraguan binder and filler, but Jose \"Pepin\" Garcia moved to a higher priming leaf on the wrapper and pushed the overall blend toward more strength than the original carried. It earned a 94 rating and a Top 5 Cigar of the Year nod from Cigar Aficionado following its debut.\nThe wrapper is a high priming Ecuadorian Habano leaf, Cuban seed, over a Nicaraguan binder, with long-leaf filler grown on Garcia family estates in Estelí, Jalapa, and Namanji. Six sizes. Medium to full in body. Made at My Father Cigars in Estelí, Nicaragua.",
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
@@ -7476,7 +7516,8 @@
         "Price": "10.50"
       }
     ],
-    "slug": "la-aroma-de-cuba-edition-especial-no-2"
+    "image": null,
+    "slug": "la-aroma-de-cuba-edition-especial-no2"
   },
   {
     "Cigar Name": "Edition Especial No.3",
@@ -7486,7 +7527,7 @@
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Cedar, Leather, White pepper",
     "Strength_Profile": "Medium-Full",
-    "description": null,
+    "description": "Edicion Especial has been rebuilt once since its 2008 debut. The 2020 version kept the same tobaccos on paper, an Ecuadorian Habano wrapper over Nicaraguan binder and filler, but Jose \"Pepin\" Garcia moved to a higher priming leaf on the wrapper and pushed the overall blend toward more strength than the original carried. It earned a 94 rating and a Top 5 Cigar of the Year nod from Cigar Aficionado following its debut.\nThe wrapper is a high priming Ecuadorian Habano leaf, Cuban seed, over a Nicaraguan binder, with long-leaf filler grown on Garcia family estates in Estelí, Jalapa, and Namanji. Six sizes. Medium to full in body. Made at My Father Cigars in Estelí, Nicaragua.",
     "Date Added": null,
     "hidden": false,
     "Podcast_Link": null,
@@ -13095,5 +13136,101 @@
     ],
     "image": null,
     "slug": "punch-diablo"
+  },
+  {
+    "Cigar Name": "Fuente Fuente Opus X",
+    "Cigar Brand": "Arturo Fuente",
+    "Wrapper": "Cuban Seed Corojo",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Wood, Earth, Spice, ",
+    "Strength_Profile": "Full",
+    "description": "A Parisian retailer told Carlos \"Carlito\" Fuente Jr. in the 1980s that he wasn't a real cigar maker, just someone who assembled tobaccos from elsewhere. The comment stuck with him, and he traced the insult to its root: conventional wisdom held that the Dominican Republic couldn't grow quality wrapper leaf, so Fuente had no choice but to source it from other countries like everyone else. He set out to prove that wisdom wrong, planting Cuban seed Corojo tobacco on a plantation in the Bonao region he named Chateau de la Fuente. In 1995 the first Fuente Fuente OpusX cigars went on sale, the first true Dominican puro ever made, and the buzz was immediate enough that Fuente initially limited sales to select retailers east of the Mississippi, with store owners capping purchases at two cigars per customer.\nThe wrapper, binder, and filler are all grown at Chateau de la Fuente, a dark oily Corojo Cuban seed wrapper over Dominican binder and filler that blends four or five different tobaccos, with most of the filler leaves pulled from the top of the plant for power and body. The wrapper leaf is never sold to other companies and any unused tobacco from the farm is destroyed, which keeps the blend entirely exclusive to Fuente's own lines. Full in body. Made at Tabacalera A. Fuente y Cia in the Dominican Republic.",
+    "Date Added": "2026-09-04",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Perfecxion No. 5",
+        "Barcode": "843182112679",
+        "In_Stock": true,
+        "Price": "16.55"
+      },
+      {
+        "Size": "Fuente Fuente",
+        "Barcode": "843182111672",
+        "In_Stock": true,
+        "Price": "19.20"
+      },
+      {
+        "Size": "Perfecxion 77 Shark",
+        "Barcode": "843182112471",
+        "In_Stock": true,
+        "Price": "25.60"
+      },
+      {
+        "Size": "Robusto",
+        "Barcode": "843182113133",
+        "In_Stock": true,
+        "Price": "21.55"
+      }
+    ],
+    "image": null,
+    "slug": "arturo-fuente-fuente-fuente-opus-x"
+  },
+  {
+    "Cigar Name": "Opus X Angels Share",
+    "Cigar Brand": "Arturo Fuente",
+    "Wrapper": "Middle Priming Cuban Seed Corojo",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Cedar, Baking Spice, Leather",
+    "Strength_Profile": "Medium",
+    "description": "In the years leading up to Arturo Fuente's 100th anniversary, a fire tore through one of the family's Dominican Republic warehouses, destroying thousands of bales of tobacco that had been aging for decades, including some of the precious OpusX wrapper leaf. Watching the smoke rise, the family found a phrase from the world of aged spirits fitting the loss: angel's share, the portion of liquor that evaporates from the barrel during aging, given up to nothing in particular. Released in 2013 to mark the start of the company's second century, Angel's Share became Carlos Fuente Jr.'s answer to smokers who wanted the OpusX experience without the strength that has always defined the standard line.\nThe wrapper is still Dominican, still grown at Chateau de la Fuente, but pulled from the middle priming of the plant rather than the top, a leaf that sees less sun and carries noticeably less power. Binder and filler are Dominican as well, keeping the puro construction intact. Full in body, though softer than the standard OpusX. Made at Tabacalera A. Fuente y Cia in the Dominican Republic.",
+    "Date Added": "2026-09-04",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Perfecxion X",
+        "Barcode": "843182110408",
+        "In_Stock": true,
+        "Price": "24.25"
+      }
+    ],
+    "image": null,
+    "slug": "arturo-fuente-opus-x-angels-share"
+  },
+  {
+    "Cigar Name": "Opus X Oro Oscuro",
+    "Cigar Brand": "Arturo Fuente",
+    "Wrapper": "Rosado Oro Oscuro",
+    "Binder": "Dominican",
+    "Filler": "Dominican",
+    "Flavor_Profile": "Cedar, Dark Chocolate, Cocoa, Earth",
+    "Strength_Profile": "Full",
+    "description": "Oro Oscuro takes the standard OpusX formula and pushes it further into the shadows. Carlos Fuente Jr. hand selects a specific Rosado Oro Oscuro wrapper leaf from the Chateau de la Fuente fields, then subjects it to an extended fermentation and resting period well beyond what the standard OpusX wrapper undergoes, deepening the color into a dark chocolate maduro and concentrating the character underneath. It first appeared quietly at Fuente retailers in late 2015 as a small batch release, catching much of the trade by surprise, and has remained one of the most sought-after entries in the OpusX portfolio since.\nThe wrapper, binder, and filler are all Dominican, grown at Chateau de la Fuente, a full puro construction like the rest of the OpusX line. Full in body, more intensely so than the standard release. Made at Tabacalera A. Fuente y Cia in the Dominican Republic.",
+    "Date Added": "2026-09-04",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
+    "Sizes": [
+      {
+        "Size": "Robusto",
+        "Barcode": "843182113799",
+        "In_Stock": true,
+        "Price": "23.30"
+      }
+    ],
+    "image": null,
+    "slug": "arturo-fuente-opus-x-oro-oscuro"
   }
 ]
