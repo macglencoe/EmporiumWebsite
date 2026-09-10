@@ -8730,21 +8730,29 @@
     "slug": "nub-connecticut"
   },
   {
-    "Cigar Brand": "NUB",
     "Cigar Name": "Habano",
+    "Cigar Brand": "NUB",
     "Wrapper": "Ecuadorian Habano",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Milk chocolate, Hints of baked bread, Hints of spice",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "RobustoGrande",
         "Barcode": "814539012034",
         "In_Stock": true,
-        "Price": "9.85"
+        "Price": "11.60"
       }
     ],
+    "image": null,
     "slug": "nub-habano"
   },
   {
@@ -9073,19 +9081,26 @@
     "slug": "oliva-serie-v"
   },
   {
-    "Cigar Brand": "Oliva",
     "Cigar Name": "Serie V Maduro",
+    "Cigar Brand": "Oliva",
     "Wrapper": "San Andres Maduro",
     "Binder": "Nicaraguan",
     "Filler": "Nicaragua",
     "Flavor_Profile": "Cocoa, Espresso, Earth, Dark Tobacco",
     "Strength_Profile": "Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Double Robusto",
         "Barcode": "814539015103",
         "In_Stock": true,
-        "Price": "12.50"
+        "Price": "14.00"
       },
       {
         "Size": "Double Toro",
@@ -9094,6 +9109,7 @@
         "Price": "13.80"
       }
     ],
+    "image": null,
     "slug": "oliva-serie-v-maduro"
   },
   {
@@ -9119,20 +9135,29 @@
     "slug": "oliva-serie-v-melanio-maduro"
   },
   {
-    "Cigar Brand": "Oliva",
     "Cigar Name": "Serie V Melanio: Robusto",
+    "Cigar Brand": "Oliva",
     "Wrapper": "Ecuadorian Sumatra",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Nuances of black pepper, freshly baked bread, unsweetened cocoa",
     "Strength_Profile": "Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
+        "Barcode": null,
         "In_Stock": true,
-        "Price": "14.00"
+        "Price": "16.00"
       }
     ],
+    "image": null,
     "slug": "oliva-serie-v-melanio-robusto"
   },
   {
