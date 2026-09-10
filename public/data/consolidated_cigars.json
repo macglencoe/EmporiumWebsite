@@ -8704,21 +8704,29 @@
     "slug": "montecristo-white-label"
   },
   {
-    "Cigar Brand": "NUB",
     "Cigar Name": "Connecticut",
+    "Cigar Brand": "NUB",
     "Wrapper": "Ecuadorian Shade",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Cedar, Rich milky texture",
     "Strength_Profile": "Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "RobustoGrande",
         "Barcode": "814539011990",
         "In_Stock": true,
-        "Price": "9.85"
+        "Price": "11.60"
       }
     ],
+    "image": null,
     "slug": "nub-connecticut"
   },
   {
@@ -12854,7 +12862,7 @@
         "Size": "Toro",
         "Barcode": "689674167174",
         "In_Stock": true,
-        "Price": "10.25"
+        "Price": "10.45"
       },
       {
         "Size": "Gordo",
