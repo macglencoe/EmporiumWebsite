@@ -994,7 +994,7 @@
         "Size": "Toro",
         "Barcode": "815337015333",
         "In_Stock": false,
-        "Price": "12.80"
+        "Price": "14.15"
       },
       {
         "Size": "Gordo",
@@ -6752,7 +6752,7 @@
         "Size": "Robusto",
         "Barcode": "76622098053",
         "In_Stock": true,
-        "Price": "15.40"
+        "Price": "16.50"
       }
     ],
     "image": null,
@@ -8864,21 +8864,29 @@
     "slug": "odyssey-odyssey-full-flavor"
   },
   {
-    "Cigar Brand": "Odyssey",
     "Cigar Name": "Sweet tip",
+    "Cigar Brand": "Odyssey",
     "Wrapper": "Shade",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Rich, Creamy and sweet",
     "Strength_Profile": "Mild-Medium",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "689674104896",
         "In_Stock": true,
-        "Price": "3.25"
+        "Price": "3.30"
       }
     ],
+    "image": null,
     "slug": "odyssey-sweet-tip"
   },
   {
@@ -10278,21 +10286,29 @@
     "slug": "san-cristobal-elegances-imperial"
   },
   {
-    "Cigar Brand": "San Cristobal",
     "Cigar Name": "Quintessence Epicure",
+    "Cigar Brand": "San Cristobal",
     "Wrapper": "Ecuadorian  Habano",
     "Binder": "Nicaraguan",
     "Filler": "Nicaraguan",
     "Flavor_Profile": "Coffee, Spice",
     "Strength_Profile": "Medium-Full",
+    "description": null,
+    "Date Added": null,
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "819577011407",
         "In_Stock": true,
-        "Price": "12.50"
+        "Price": "12.75"
       }
     ],
+    "image": null,
     "slug": "san-cristobal-quintessence-epicure"
   },
   {
@@ -10656,26 +10672,30 @@
     "slug": "el-septimo-toscana"
   },
   {
-    "Cigar Brand": "La Gloria Cubana",
     "Cigar Name": "Los Gloriosos",
+    "Cigar Brand": "La Gloria Cubana",
     "Wrapper": "Ecuadorian Habana",
     "Binder": "Nicaraguan Jalapa",
     "Filler": "Nicaraguan, Dominican",
     "Flavor_Profile": "Leather, Spice, Espresso, Cocoa",
     "Strength_Profile": "Medium-Full",
+    "description": "This cigar is more than just a solid smoke, it marks the return of Ernesto Pérez-Carrillo to the brand he helped build. Los Gloriosos brings his signature touch back into the fold with an Ecuadorian Habano wrapper and a Nicaraguan/ Dominican blend underneath. Medium to full-bodied with a steady mix of earth, espresso, and a little pepper, it’s balanced and bold.  A welcome return, and one that earns its place in any humidor.",
+    "Date Added": "2025-04-17",
+    "hidden": false,
+    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/4hpaTCg5zkoH74tJGtgp49?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": "2025-05-02",
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "689674161189",
         "In_Stock": true,
-        "Price": "9.80"
+        "Price": "10.40"
       }
     ],
-    "slug": "la-gloria-cubana-los-gloriosos",
-    "Date Added": "2025-04-17",
-    "Podcast_Link": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/episode/4hpaTCg5zkoH74tJGtgp49?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
-    "featured_StickFigures": "2025-05-02",
-    "description": "This cigar is more than just a solid smoke, it marks the return of Ernesto Pérez-Carrillo to the brand he helped build. Los Gloriosos brings his signature touch back into the fold with an Ecuadorian Habano wrapper and a Nicaraguan/ Dominican blend underneath. Medium to full-bodied with a steady mix of earth, espresso, and a little pepper, it’s balanced and bold.  A welcome return, and one that earns its place in any humidor."
+    "image": null,
+    "slug": "la-gloria-cubana-los-gloriosos"
   },
   {
     "Cigar Name": "Appointment",
@@ -11002,23 +11022,30 @@
     "Date Added": "2025-04-17"
   },
   {
-    "Cigar Brand": "Macanudo",
     "Cigar Name": "M Bourbon",
+    "Cigar Brand": "Macanudo",
     "Wrapper": "Ecuadorian Shade",
     "Binder": "Ecuadorian",
     "Filler": "Dominican",
     "Flavor_Profile": "Bourbon, Cherry, Bitters",
     "Strength_Profile": "Mild-Medium",
+    "description": null,
+    "Date Added": "2025-04-17",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Robusto",
         "Barcode": "689674100713",
         "In_Stock": true,
-        "Price": "10.50"
+        "Price": "10.75"
       }
     ],
-    "slug": "macanudo-m-bourbon",
-    "Date Added": "2025-04-17"
+    "image": null,
+    "slug": "macanudo-m-bourbon"
   },
   {
     "Cigar Brand": "Macanudo",
@@ -11324,7 +11351,7 @@
         "Size": "Rothschild",
         "Barcode": "689674160397",
         "In_Stock": true,
-        "Price": "6.50"
+        "Price": "7.10"
       },
       {
         "Size": "Toro",
@@ -11724,24 +11751,30 @@
     "slug": "cao-surplus-maduro"
   },
   {
-    "Cigar Brand": "CAO",
     "Cigar Name": "Surplus Sweet",
+    "Cigar Brand": "CAO",
     "Wrapper": "Ecuadorian Sumatra",
     "Binder": "Ecuadorian Sumatra",
     "Filler": "Dominican",
     "Flavor_Profile": "",
     "Strength_Profile": "Mild-Medium",
+    "description": "The CAO Surplus Sweet combines an Ecuadorian Sumatran wrapper with an Ecuadorian Sumatra binder and Dominican Olor long-fillers, topped with a sweetened cap. Mild to medium-bodied with a smooth, approachable flavor, it’s an easygoing everyday smoke with a hint of sweetness to keep things interesting.",
+    "Date Added": "2025-08-08",
+    "hidden": false,
+    "Podcast_Link": null,
+    "featured_Eds_Pick": null,
+    "featured_Teds_Pick": null,
+    "featured_StickFigures": null,
     "Sizes": [
       {
         "Size": "Toro",
         "Barcode": "689674166665",
         "In_Stock": true,
-        "Price": "2.95"
+        "Price": "3.50"
       }
     ],
-    "description": "The CAO Surplus Sweet combines an Ecuadorian Sumatran wrapper with an Ecuadorian Sumatra binder and Dominican Olor long-fillers, topped with a sweetened cap. Mild to medium-bodied with a smooth, approachable flavor, it’s an easygoing everyday smoke with a hint of sweetness to keep things interesting.",
-    "slug": "cao-surplus-sweet",
-    "Date Added": "2025-08-08"
+    "image": null,
+    "slug": "cao-surplus-sweet"
   },
   {
     "Cigar Name": "Rubicon",
@@ -11769,7 +11802,7 @@
         "Size": "Robusto",
         "Barcode": "689674167037",
         "In_Stock": true,
-        "Price": "9.20"
+        "Price": "9.75"
       }
     ],
     "image": null,
