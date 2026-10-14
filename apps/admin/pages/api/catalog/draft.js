@@ -2,12 +2,21 @@ import { discardActiveDraft, removeDraftItem, stageDraftItem, updateDraftMessage
 
 import { withAuth } from '../../../lib/auth/server.mjs';
 import { adminDatabase, buildDraftPayload, describeDraft, readCatalog } from '../../../lib/catalog/server.mjs';
+import { deleteImageIfUnreferenced } from '../../../lib/images/server.mjs';
+
+async function cleanupDraftImages(database, items) {
+  const urls = [...new Set(items.map((item) => item.payload?.imageUrl).filter(Boolean))];
+  await Promise.allSettled(urls.map((url) => deleteImageIfUnreferenced(database, url)));
+}
 
 async function handler(req, res) {
   const database = adminDatabase();
   if (req.method === 'GET') return res.status(200).json({ draft: await describeDraft() });
   if (req.method === 'DELETE') {
+    const draft = await describeDraft();
+    const removedItems = req.query.item ? (draft?.items ?? []).filter(({ id }) => id === req.query.item) : (draft?.items ?? []);
     if (req.query.item) await removeDraftItem(database, req.query.item); else await discardActiveDraft(database);
+    await cleanupDraftImages(database, removedItems);
     return res.status(204).end();
   }
   if (req.method === 'PATCH') { await updateDraftMessage(database, req.body?.message); return res.status(200).json({ draft: await describeDraft() }); }

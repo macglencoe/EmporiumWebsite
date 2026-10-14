@@ -14,29 +14,26 @@ import ProductPage, {
 
 
 export const getStaticPaths = async () => {
-    const tobacco = await import('../../public/data/tobacco.json');
-    const data = await tobacco.default;
-    const paths = data.map((tobacco) => ({
-        params: { slug: tobacco.slug },
-    }));
-    return { paths, fallback: false };
+    const { publicProductPaths } = await import('../../lib/catalog/server.mjs');
+    return publicProductPaths('tobacco');
 }
 
 export const getStaticProps = async ({ params }) => {
-    const tobaccoData = await import('../../public/data/tobacco.json');
-    const data = await tobaccoData.default;
+    const { readPublicCatalog, PUBLIC_REVALIDATE_SECONDS } = await import('../../lib/catalog/server.mjs');
+    const data = await readPublicCatalog('tobacco');
     const tobaccoIndex = data.findIndex((tobacco) => tobacco.slug === params.slug);
     const tobacco = data[tobaccoIndex];
 
     const prevTobacco = tobaccoIndex > 0 ? data[tobaccoIndex - 1] : null;
     const nextTobacco = tobaccoIndex + 1 < data.length ? data[tobaccoIndex + 1] : null;
     console.warn(tobaccoIndex)
+    if (!tobacco) return { notFound: true, revalidate: PUBLIC_REVALIDATE_SECONDS };
     return {
         props: {
             tobacco,
             prev: prevTobacco,
             next: nextTobacco
-        },
+        }, revalidate: PUBLIC_REVALIDATE_SECONDS,
     };
 }
 

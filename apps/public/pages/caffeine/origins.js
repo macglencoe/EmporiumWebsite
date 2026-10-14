@@ -2,7 +2,6 @@ import React, { Fragment, use, useState, useEffect } from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 import Link from 'next/link'
-import Data from "../../public/data/caffeine.json"
 
 import Contact from '../../components/contact'
 import Directory from '../../components/directory'
@@ -23,7 +22,7 @@ const Origins = (props) => {
                 <SearchBy 
                 title="Search Coffee & Tea by Origin" 
                 field="Origin"
-                data={Data}
+                data={props.data}
                 catalogPath="/caffeine"/>
             </Layout>
         </>
@@ -31,3 +30,4 @@ const Origins = (props) => {
 }
 
 export default Origins
+export async function getStaticProps() { const { publicCatalogProps } = await import('../../lib/catalog/server.mjs'); return publicCatalogProps('caffeine'); }

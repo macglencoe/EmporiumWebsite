@@ -29,6 +29,7 @@ export const ImageUpload = (props) => {
         } catch (error) {
             console.error("Image compression failed:", error);
             setError("Image compression failed. See console for details.");
+            props.onImageUploadError?.();
             return;
         }
 
@@ -39,6 +40,7 @@ export const ImageUpload = (props) => {
 
         const formData = new FormData();
         formData.append('file', fixedFile);
+        if (props.productId) formData.append('productId', props.productId);
 
         const fileSizeInKB = (fixedFile.size / 1024).toFixed(2);
         if (props.onImageUpload) {
@@ -60,6 +62,7 @@ export const ImageUpload = (props) => {
         } else {
             console.error("Upload failed:", data.message);
             setError(data.message);
+            props.onImageUploadError?.();
         }
 
 

@@ -1,7 +1,6 @@
 import React, { Fragment, use, useState, useEffect} from 'react'
 import Layout from '../../components/layout'
 import SearchBy from '../../components/searchby'
-import Data from "../../public/data/consolidated_cigars.json"
 import Head from 'next/head'
 
 const Wrappers = (props) => {
@@ -14,7 +13,7 @@ const Wrappers = (props) => {
         <SearchBy 
         title="Search by Wrapper" 
         field="Wrapper"
-        data={Data}
+        data={props.data}
         catalogPath="/cigars"/>
       </Layout>
     </>
@@ -22,3 +21,4 @@ const Wrappers = (props) => {
 }
 
 export default Wrappers
+export async function getStaticProps() { const { publicCatalogProps } = await import('../../lib/catalog/server.mjs'); return publicCatalogProps('cigar'); }

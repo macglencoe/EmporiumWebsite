@@ -398,10 +398,6 @@ const CrudForm = (props) => {
     }
 
     const onImageUpload = (fileSizeInKb = null) => {
-        if (localData.image) {
-            alert("Former image will now be deleted");
-            handleDeleteImage(localData.image)
-        }
         setLoading(true);
         setFileSize(fileSizeInKb);
     }
@@ -410,20 +406,10 @@ const CrudForm = (props) => {
         setLoadingDelete(true);
         if (!url) {
             alert("No URL to delete found. Please report this")
+            setLoadingDelete(false);
+            return;
         }
-
-        const response = await fetch(`/api/images?url=${encodeURIComponent(url)}`, {
-            method: 'DELETE'
-        })
-
-        const data = await response.json();
-
-        if (response.ok) {
-            console.log('Image Deleted Successfully');
-            onImageDeleteSuccess();
-        } else {
-            console.error("Deletion failed: ", data.message)
-        }
+        onImageDeleteSuccess();
         setLoadingDelete(false);
     }
 

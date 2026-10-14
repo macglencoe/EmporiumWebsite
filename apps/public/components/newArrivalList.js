@@ -5,15 +5,6 @@ import CatalogCard from './catalogCard';
 import { PiCalendar, PiFire, PiLeaf, PiRuler } from 'react-icons/pi';
 import Image from 'next/image';
 
-export const getStaticProps = async () => {
-    const data = await import('../public/data/consolidated_cigars.json');
-    return {
-        props: {
-            data: data.default
-        },
-    };
-};
-
 export const NewArrivalList = ({ cigars }) => {
     const [hoveredCigar, setHoveredCigar] = useState(null);
 

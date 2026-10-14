@@ -17,23 +17,20 @@ import ProductPage, {
 import { PiFactory, PiFactoryBold, PiFire, PiFireBold, PiGrainsBold, PiGrainsDuotone, PiLeaf, PiLeafBold, PiLeafDuotone, PiLeafFill } from 'react-icons/pi';
 
 export const getStaticPaths = async () => {
-  const cigars = await import('../../../public/data/consolidated_cigars.json');
-  const data = await cigars.default;
-  const paths = data.map((cigar) => ({
-    params: { slug: cigar.slug },
-  }));
-  return { paths, fallback: false };
+  const { publicProductPaths } = await import('../../../lib/catalog/server.mjs');
+  return publicProductPaths('cigar');
 }
 
 export const getStaticProps = async ({ params }) => {
-  const cigarsData = await import('../../../public/data/consolidated_cigars.json');
-  const data = await cigarsData.default;
+  const { readPublicCatalog, PUBLIC_REVALIDATE_SECONDS } = await import('../../../lib/catalog/server.mjs');
+  const data = await readPublicCatalog('cigar');
   const cigarIndex = data.findIndex((cigar) => cigar.slug === params.slug);
   const cigar = data[cigarIndex];
 
   const prevCigar = cigarIndex > 0 ? data[cigarIndex - 1] : null;
   const nextCigar = cigarIndex + 1 < data.length ? data[cigarIndex + 1] : null;
-  return { props: { cigar, next: nextCigar, prev: prevCigar } };
+  if (!cigar) return { notFound: true, revalidate: PUBLIC_REVALIDATE_SECONDS };
+  return { props: { cigar, next: nextCigar, prev: prevCigar }, revalidate: PUBLIC_REVALIDATE_SECONDS };
 }
 
 const CigarPage = (props) => {

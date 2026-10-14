@@ -6,6 +6,7 @@
   "sideEffects": false,
   "exports": {
     ".": "./src/index.js",
+    "./catalog": "./src/catalog-transfer.js",
     "./schema": "./src/schema/index.js"
   },
   "scripts": {

@@ -1,9 +1,9 @@
 // pages/api/images/index.js
 
-import fs from 'fs';
 import { IncomingForm } from 'formidable';
-import { put, del } from '@vercel/blob';
 import { withAuth } from '../../lib/auth/server.mjs';
+import { adminDatabase } from '../../lib/catalog/server.mjs';
+import { deleteImageIfUnreferenced, ImageValidationError, MAX_IMAGE_BYTES, uploadImage } from '../../lib/images/server.mjs';
 
 export const config = {
   api: {
@@ -13,12 +13,10 @@ export const config = {
 };
 
 async function handler(req, res) {
-  const token = process.env.BLOB_READ_WRITE_TOKEN;
-
   switch (req.method) {
     // ─────── UPLOAD ───────
     case 'POST': {
-      const form = new IncomingForm({ multiples: false });
+      const form = new IncomingForm({ multiples: false, maxFileSize: MAX_IMAGE_BYTES });
 
       return form.parse(req, async (err, fields, files) => {
         if (err) {
@@ -33,19 +31,10 @@ async function handler(req, res) {
         }
 
         try {
-          const data     = fs.readFileSync(fileObj.filepath);
-          const mimeType = fileObj.mimetype || 'application/octet-stream';
-          // you can customize the blob path however you like:
-          const blobPath = `images/${Date.now()}-${fileObj.originalFilename}`;
-
-          const blob = await put(blobPath, data, {
-            access: 'public',
-            contentType: mimeType,
-            token
-          });
-
-          return res.status(201).json({ url: blob.url });
+          const image = await uploadImage(fileObj, { productId: String(fields.productId?.[0] || fields.productId || '') });
+          return res.status(201).json(image);
         } catch (uploadErr) {
+          if (uploadErr instanceof ImageValidationError) return res.status(400).json({ message: uploadErr.message });
           return res.status(500).json({ message: 'Upload failed: ' + uploadErr.message });
         }
       });
@@ -60,7 +49,9 @@ async function handler(req, res) {
       }
 
       try {
-        await del(url, { token });
+        const result = await deleteImageIfUnreferenced(adminDatabase(), url);
+        if (result.reason === 'referenced') return res.status(409).json({ message: 'Image is still referenced by a product or draft.' });
+        if (result.reason === 'external') return res.status(400).json({ message: 'Only managed Vercel Blob images can be deleted.' });
         return res.status(200).json({ message: 'Image deleted successfully' });
       } catch (delErr) {
         return res

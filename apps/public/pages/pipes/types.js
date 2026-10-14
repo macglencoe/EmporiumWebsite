@@ -2,7 +2,6 @@ import React, { Fragment, use, useState, useEffect } from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 import Link from 'next/link'
-import Data from "../../public/data/pipes.json"
 import Contact from '../../components/contact'
 import Directory from '../../components/directory'
 import Ksman from '../../components/ksman'
@@ -22,7 +21,7 @@ const PipeTypes = (props) => {
                 <SearchBy 
                 title="Search by Type" 
                 field="Type"
-                data={Data}
+                data={props.data}
                 catalogPath="/pipes"
                 />
             </Layout>
@@ -31,3 +30,4 @@ const PipeTypes = (props) => {
 }
 
 export default PipeTypes
+export async function getStaticProps() { const { publicCatalogProps } = await import('../../lib/catalog/server.mjs'); return publicCatalogProps('pipe'); }

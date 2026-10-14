@@ -15,15 +15,6 @@ import { PiCaretDownBold, PiCaretDownFill, PiMagnifyingGlassBold, PiXCircleBold,
 import Image from 'next/image';
 
 
-export const getStaticProps = async () => {
-    const data = await import('../public/data/consolidated_cigars.json');
-    return {
-        props: {
-            data: data.default
-        },
-    };
-};
-
 
 
 /**

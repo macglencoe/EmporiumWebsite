@@ -11,12 +11,8 @@ import TitleCrest from '../../components/titleCrest';
 import BasicSection from '../../components/basicSection';
 
 export const getStaticProps = async () => {
-    const data = await import('../../public/data/pipes.json');
-    return {
-        props: {
-            data: data.default
-        },
-    }
+    const { publicCatalogProps } = await import('../../lib/catalog/server.mjs');
+    return publicCatalogProps('pipe');
 }
 
 const PipeCatalog = (props) => {

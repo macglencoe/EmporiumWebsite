@@ -3,7 +3,8 @@
   "tasks": {
     "dev": {
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "env": ["DATA_SOURCE", "PUBLIC_DATABASE_URL", "PUBLIC_REVALIDATE_SECONDS", "REVALIDATION_SECRET", "PUBLIC_SITE_URL", "SITE_URL"]
     },
     "build": {
       "dependsOn": ["^build"],
@@ -12,7 +13,8 @@
         "out/**",
         "public/sitemap*.xml",
         "public/robots.txt"
-      ]
+      ],
+      "env": ["DATA_SOURCE", "PUBLIC_DATABASE_URL", "PUBLIC_REVALIDATE_SECONDS", "REVALIDATION_SECRET", "PUBLIC_SITE_URL", "SITE_URL"]
     },
     "lint": {
       "outputs": []

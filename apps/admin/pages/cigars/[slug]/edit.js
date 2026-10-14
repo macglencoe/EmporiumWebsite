@@ -60,6 +60,7 @@ const EditCigarPage = ({ cigar, productId, allCigars }) => {
         mode="edit"
         title={cigar["Cigar Name"] || "Edit cigar"}
         backHref="/cigars"
+        productId={productId}
       >
         <SlugPreview
           generateSlug={generateSlug}

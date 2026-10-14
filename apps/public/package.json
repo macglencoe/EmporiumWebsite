@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "postbuild": "next-sitemap",
     "start": "next start --port 25565",
     "export": "next export",
     "lint": "next lint",
@@ -15,6 +14,7 @@
   "author": "TeleportHQ",
   "license": "MIT",
   "dependencies": {
+    "@emporium/database": "*",
     "@emporium/domain": "*",
     "@babel/parser": "^7.26.7",
     "@vercel/analytics": "^1.1.1",

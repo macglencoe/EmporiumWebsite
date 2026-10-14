@@ -2,7 +2,6 @@ import React, { Fragment, use, useState, useEffect } from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 import Link from 'next/link'
-import Data from "../../public/data/consolidated_cigars.json"
 
 import Contact from '../../components/contact'
 import Directory from '../../components/directory'
@@ -23,7 +22,7 @@ const Brands = (props) => {
                 <SearchBy 
                 title="Our Brands" 
                 field="Cigar Brand"
-                data={Data}
+                data={props.data}
                 catalogPath="/cigars"/>
             </Layout>
         </>
@@ -31,3 +30,4 @@ const Brands = (props) => {
 }
 
 export default Brands
+export async function getStaticProps() { const { publicCatalogProps } = await import('../../lib/catalog/server.mjs'); return publicCatalogProps('cigar'); }

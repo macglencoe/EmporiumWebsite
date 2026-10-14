@@ -9,12 +9,8 @@ import { BsKeyFill } from 'react-icons/bs';
 import clsx from 'clsx';
 
 export const getStaticProps = async () => {
-    const data = await import('../../public/data/caffeine.json');
-    return {
-        props: {
-            data: data.default
-        },
-    }
+    const { publicCatalogProps } = await import('../../lib/catalog/server.mjs');
+    return publicCatalogProps('caffeine');
 }
 
 const cardColors = {

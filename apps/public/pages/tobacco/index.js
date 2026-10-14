@@ -4,12 +4,8 @@ import Head from 'next/head';
 import { PiApproximateEquals, PiDiamondsFour, PiDiamondsFourFill, PiFactory, PiFactoryFill, PiPackage, PiTreeStructure, PiTreeStructureFill } from 'react-icons/pi';
 
 export const getStaticProps = async () => {
-    const data = await import('../../public/data/tobacco.json');
-    return {
-        props: {
-            data: data.default
-        },
-    }
+    const { publicCatalogProps } = await import('../../lib/catalog/server.mjs');
+    return publicCatalogProps('tobacco');
 }
 
 const TobaccoCatalog = (props) => {

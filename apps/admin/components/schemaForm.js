@@ -21,6 +21,7 @@ const SchemaForm = ({
   mode = "edit",
   title,
   backHref,
+  productId = null,
 }) => {
   const { zodSchema, defaults } = useMemo(() => buildSchemaArtifacts(uiSchema), [uiSchema]);
 
@@ -101,7 +102,7 @@ const SchemaForm = ({
                   {renderField
                     ? renderField({ control, register, errors, schema: uiSchema, tab: tab.id })
                     : entries.map(([name, field]) => (
-                        <Field key={name} name={name} field={field} control={control} register={register} error={errors[name]} suggestions={suggestions} />
+                        <Field key={name} name={name} field={field} control={control} register={register} error={errors[name]} suggestions={suggestions} productId={productId} />
                       ))}
                   {!entries.length && <p>No fields in this section.</p>}
                 </section>
@@ -145,7 +146,7 @@ const SchemaForm = ({
   );
 };
 
-const Field = ({ name, field, control, register, error, suggestions }) => {
+const Field = ({ name, field, control, register, error, suggestions, productId }) => {
   const rendererKey = pickType(field);
   const Renderer = FIELD_RENDERERS[rendererKey] || TextField;
   return (
@@ -157,6 +158,7 @@ const Field = ({ name, field, control, register, error, suggestions }) => {
         register={register}
         error={error}
         suggestions={suggestions}
+        productId={productId}
       />
       <style jsx>{`
         .editor-field + .editor-field { padding-top: 1.25rem; border-top: 1px solid #ece8e3; }
@@ -300,7 +302,7 @@ function RangeField({ name, field, control, error }) {
   );
 }
 
-function ImageField({ name, field, register, control, error }) {
+function ImageField({ name, field, register, control, error, productId }) {
   const label = field?.ui?.label || name;
   const description = field?.ui?.description;
   const { setValue } = useFormContext();
@@ -341,9 +343,7 @@ function ImageField({ name, field, register, control, error }) {
     setLoading(false);
     setValue(name, url, { shouldValidate: true, shouldTouch: true });
     getFinalFileSize(url);
-    if (formerImage && formerImage !== url) {
-      await handleDeleteImage(formerImage, false);
-    }
+    if (formerImage && formerImage !== url) await requestImageCleanup(formerImage);
   };
 
   const onImageDeleteSuccess = () => {
@@ -351,26 +351,16 @@ function ImageField({ name, field, register, control, error }) {
     setFinalFileSize(0);
   };
 
-  const handleDeleteImage = async (url, clearField = true) => {
+  const requestImageCleanup = async (url) => {
+    if (!url) return;
+    try { await fetch(`/api/images?url=${encodeURIComponent(url)}`, { method: "DELETE" }); }
+    catch (error) { console.error("Image cleanup will be retried after publication:", error); }
+  };
+
+  const handleDeleteImage = async (url) => {
     setLoadingDelete(true);
-    if (!url) {
-      alert("No URL to delete found. Please report this");
-      setLoadingDelete(false);
-      return;
-    }
-
-    const response = await fetch(`/api/images?url=${encodeURIComponent(url)}`, {
-      method: "DELETE",
-    });
-
-    const data = await response.json();
-
-    if (response.ok) {
-      console.log("Image Deleted Successfully");
-      if (clearField) onImageDeleteSuccess();
-    } else {
-      console.error("Deletion failed: ", data.message);
-    }
+    await requestImageCleanup(url);
+    onImageDeleteSuccess();
     setLoadingDelete(false);
   };
 
@@ -387,11 +377,13 @@ function ImageField({ name, field, register, control, error }) {
         <ImageUpload
           image={imageUrl}
           fileName={fileName}
+          productId={productId}
           onImageUpload={onImageUpload}
           onImageUploadSuccess={onImageUploadSuccess}
+          onImageUploadError={() => setLoading(false)}
         />
         {loading && <Notice type="loading">Uploading {fileSize} KB...</Notice>}
-        {loadingDelete && <Notice type="loading">Deleting former image...</Notice>}
+        {loadingDelete && <Notice type="loading">Removing image from draft...</Notice>}
         {imageUrl && (
           <div className="current-image">
             <img src={imageUrl} alt={`${label} preview`} />

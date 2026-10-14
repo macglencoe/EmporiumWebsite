@@ -18,12 +18,8 @@ import { type } from 'jquery'
 
 
 export const getStaticProps = async () => {
-  const data = await import('../../public/data/consolidated_cigars.json');
-  return {
-    props: {
-      data: data.default
-    },
-  };
+  const { publicCatalogProps } = await import('../../lib/catalog/server.mjs');
+  return publicCatalogProps('cigar');
 };
 
 const CigarCatalog = (props) => {

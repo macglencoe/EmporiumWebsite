@@ -28,6 +28,10 @@ The current production site must remain available throughout development. Produc
 - See [`docs/phase-6-admin-authentication.md`](docs/phase-6-admin-authentication.md) for the password, session, lockout, deployment, and recovery procedures.
 - Phase 7 was completed on 2026-08-19.
 - See [`docs/phase-7-admin-publishing.md`](docs/phase-7-admin-publishing.md) for the database-backed draft, publishing, conflict, and verification workflow.
+- Phase 8 was completed on 2026-10-14.
+- See [`docs/phase-8-image-handling.md`](docs/phase-8-image-handling.md) for the consolidated, validated, and failure-safe image lifecycle.
+- Phase 9 was completed on 2026-10-14.
+- See [`docs/phase-9-public-database.md`](docs/phase-9-public-database.md) for the public database source, ISR, visibility, sitemap, and signed revalidation workflow.
 
 ## Terminology
 

@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Script from 'next/script';
 import Link from 'next/link';
 import clsx from 'clsx';
-import Data from '../public/data/consolidated_cigars.json';
 
 import Contact from './contact';
 import Directory from './directory';

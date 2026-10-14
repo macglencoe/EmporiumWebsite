@@ -2,7 +2,6 @@ import React, { Fragment, use, useState, useEffect} from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 import Link from 'next/link'
-import Data from "../../public/data/consolidated_cigars.json"
 import Contact from '../../components/contact'
 import Directory from '../../components/directory'
 import Ksman from '../../components/ksman'
@@ -16,7 +15,7 @@ const Strengths = (props) => {
   const router = useRouter();
 
   // All unique brands, alphabetized
-  const uniqueStrengths = [...new Set(Data.map(item => item['Strength_Profile'].trim()))].sort((a, b) => a.localeCompare(b));
+  const uniqueStrengths = [...new Set(props.data.map(item => item['Strength_Profile'].trim()))].sort((a, b) => a.localeCompare(b));
 
 
 
@@ -30,7 +29,7 @@ const Strengths = (props) => {
         <SearchBy 
         title="Search by Strength"
         field="Strength_Profile"
-        data={Data}
+        data={props.data}
         catalogPath="/cigars"/>
       </Layout>
     </>
@@ -39,3 +38,4 @@ const Strengths = (props) => {
 }
 
 export default Strengths
+export async function getStaticProps() { const { publicCatalogProps } = await import('../../lib/catalog/server.mjs'); return publicCatalogProps('cigar'); }

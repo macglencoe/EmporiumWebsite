@@ -1,4 +1,5 @@
 import { and, asc, inArray, notInArray, sql } from 'drizzle-orm';
+import { neon } from '@neondatabase/serverless';
 
 import {
   caffeineDetails,
@@ -12,6 +13,7 @@ import {
 } from './schema/index.js';
 
 const iso = (value) => value instanceof Date ? value.toISOString() : value ?? null;
+const dateOnly = (value) => value instanceof Date ? value.toISOString().slice(0, 10) : value ?? null;
 
 export function toDatabaseRows(product) {
   const common = {
@@ -116,6 +118,25 @@ export async function exportCatalog(database) {
     database.select().from(pipeDetails),
     database.select().from(caffeineDetails),
   ]);
+  return assembleCatalog(base, images, cigars, variants, tobaccos, components, pipes, caffeine);
+}
+
+const camelize = (row) => Object.fromEntries(Object.entries(row).map(([key, value]) => [key.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase()), value]));
+
+export async function exportPublicCatalog(connectionString) {
+  if (!connectionString) throw new Error('A public Neon connection string is required');
+  const query = neon(connectionString);
+  const tables = ['public_products', 'public_product_images', 'public_cigar_details', 'public_cigar_variants', 'public_tobacco_details', 'public_tobacco_components', 'public_pipe_details', 'public_caffeine_details'];
+  const rows = await Promise.all(tables.map((table) => query.query(`select * from ${table}`)));
+  const [base, images, cigars, variants, tobaccos, components, pipes, caffeine] = rows.map((result) => result.map(camelize));
+  base.sort((a, b) => a.type.localeCompare(b.type) || a.slug.localeCompare(b.slug));
+  images.sort((a, b) => a.productId.localeCompare(b.productId) || a.sortOrder - b.sortOrder);
+  variants.sort((a, b) => a.productId.localeCompare(b.productId) || a.sortOrder - b.sortOrder);
+  components.sort((a, b) => a.productId.localeCompare(b.productId) || a.sortOrder - b.sortOrder);
+  return assembleCatalog(base, images, cigars, variants, tobaccos, components, pipes, caffeine);
+}
+
+function assembleCatalog(base, images, cigars, variants, tobaccos, components, pipes, caffeine) {
   const one = (rows) => new Map(rows.map((row) => [row.productId, row]));
   const many = (rows) => rows.reduce((map, row) => map.set(row.productId, [...(map.get(row.productId) ?? []), row]), new Map());
   const cigarById = one(cigars), tobaccoById = one(tobaccos), pipeById = one(pipes), caffeineById = one(caffeine);
@@ -125,13 +146,13 @@ export async function exportCatalog(database) {
     const common = {
       id: row.id, type: row.type, slug: row.slug, name: row.name, brand: row.brand,
       description: row.description, imageUrl: row.imageUrl, hidden: row.hidden, published: row.published,
-      dateAdded: row.dateAdded, version: row.version, createdAt: iso(row.createdAt), updatedAt: iso(row.updatedAt), publishedAt: iso(row.publishedAt),
+      dateAdded: dateOnly(row.dateAdded), version: row.version, createdAt: iso(row.createdAt), updatedAt: iso(row.updatedAt), publishedAt: iso(row.publishedAt),
     };
     const primary = (imagesById.get(row.id) ?? []).find((image) => image.isPrimary);
     if ((primary?.url ?? null) !== row.imageUrl) throw new Error(`Primary image mismatch for ${row.slug}`);
     if (row.type === 'cigar') {
       const detail = cigarById.get(row.id); if (!detail) throw new Error(`Missing cigar_details row for ${row.slug}`);
-      return { ...common, details: { wrapper: detail.wrapper, binder: detail.binder, filler: detail.filler, flavorProfile: detail.flavorProfile, strength: detail.strength, podcastLink: detail.podcastLink, featured: { edsPick: detail.edsPickAt, tedsPick: detail.tedsPickAt, stickFigures: detail.stickFiguresAt } }, variants: (variantsById.get(row.id) ?? []).map(({ id, size, barcode, inStock, price }) => ({ id, size, barcode, inStock, price: price === null ? null : Number(price).toFixed(2) })) };
+      return { ...common, details: { wrapper: detail.wrapper, binder: detail.binder, filler: detail.filler, flavorProfile: detail.flavorProfile, strength: detail.strength, podcastLink: detail.podcastLink, featured: { edsPick: dateOnly(detail.edsPickAt), tedsPick: dateOnly(detail.tedsPickAt), stickFigures: dateOnly(detail.stickFiguresAt) } }, variants: (variantsById.get(row.id) ?? []).map(({ id, size, barcode, inStock, price }) => ({ id, size, barcode, inStock, price: price === null ? null : Number(price).toFixed(2) })) };
     }
     if (row.type === 'tobacco') { const detail = tobaccoById.get(row.id); if (!detail) throw new Error(`Missing tobacco_details row for ${row.slug}`); return { ...common, details: { family: detail.family, saleForm: detail.saleForm, components: (componentsById.get(row.id) ?? []).map((item) => item.component) } }; }
     if (row.type === 'pipe') { const detail = pipeById.get(row.id); if (!detail) throw new Error(`Missing pipe_details row for ${row.slug}`); return { ...common, details: { material: detail.material, pipeType: detail.pipeType } }; }

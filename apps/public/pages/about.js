@@ -2,7 +2,6 @@ import React, { Fragment, useState, useEffect } from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 import Link from 'next/link'
-import Data from "../public/data/consolidated_cigars.json"
 
 import Contact from '../components/contact'
 import Directory from '../components/directory'

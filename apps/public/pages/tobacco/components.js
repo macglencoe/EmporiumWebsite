@@ -1,5 +1,4 @@
 import React, { Fragment, use, useState, useEffect } from 'react'
-import Data from "../../public/data/tobacco.json"
 import Layout from '../../components/layout'
 import SearchBy from '../../components/searchby'
 import Head from 'next/head'
@@ -16,7 +15,7 @@ const TobaccoComponents = (props) => {
                 title="Search Pipe Tobacco by Component"
                 method="list"
                 field="Components"
-                data={Data}
+                data={props.data}
                 catalogPath="/tobacco"
                 />
             </Layout>
@@ -25,3 +24,4 @@ const TobaccoComponents = (props) => {
 }
 
 export default TobaccoComponents
+export async function getStaticProps() { const { publicCatalogProps } = await import('../../lib/catalog/server.mjs'); return publicCatalogProps('tobacco'); }

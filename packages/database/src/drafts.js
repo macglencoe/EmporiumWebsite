@@ -96,6 +96,8 @@ async function writeProduct(client, product, operation) {
 
 export async function publishDraft(connectionString, changeSetId) {
   const pool = new Pool({ connectionString }); const client = await pool.connect();
+  const imageChanges = [];
+  const publicChanges = [];
   try {
     await client.query('begin');
     const { rows: drafts } = await client.query("select * from change_sets where id=$1 and status='draft' for update", [changeSetId]);
@@ -111,10 +113,17 @@ export async function publishDraft(connectionString, changeSetId) {
       else await writeProduct(client, productSchema.parse(item.payload), item.operation);
       const after = item.operation === 'delete' ? null : await mapProductRow(client, item.payload.id);
       await client.query('insert into audit_events(change_set_id,product_id,actor,action,before,after) values($1,$2,$3,$4,$5,$6)', [changeSetId, item.operation === 'delete' ? null : item.payload.id, 'store-admin', item.operation, before, after]);
+      const oldUrl = before?.imageUrl ?? null; const newUrl = after?.imageUrl ?? null;
+      publicChanges.push({ type: after?.type ?? before?.type, oldSlug: before?.slug ?? null, newSlug: after?.slug ?? null });
+      if (oldUrl !== newUrl) {
+        imageChanges.push({ productId: after?.id ?? before?.id ?? null, oldUrl, newUrl });
+        if (newUrl) await client.query('insert into audit_events(change_set_id,product_id,actor,action,before,after) values($1,$2,$3,$4,$5,$6)', [changeSetId, after.id, 'store-admin', 'image_upload', oldUrl ? { url: oldUrl } : null, { url: newUrl }]);
+        if (oldUrl) await client.query('insert into audit_events(change_set_id,product_id,actor,action,before,after) values($1,$2,$3,$4,$5,$6)', [changeSetId, after?.id ?? null, 'store-admin', 'image_delete', { url: oldUrl }, newUrl ? { url: newUrl } : null]);
+      }
     }
     await client.query("update change_sets set status='published',published_at=now(),updated_at=now() where id=$1", [changeSetId]);
     await client.query("insert into audit_events(change_set_id,actor,action,after) values($1,'store-admin','publish',$2)", [changeSetId, { itemCount: items.length, message: drafts[0].message }]);
-    await client.query('commit'); return { changeSetId, itemCount: items.length };
+    await client.query('commit'); return { changeSetId, itemCount: items.length, imageChanges, publicChanges };
   } catch (error) { await client.query('rollback'); throw error; }
   finally { client.release(); await pool.end(); }
 }
