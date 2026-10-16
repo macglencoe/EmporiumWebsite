@@ -4,7 +4,21 @@
     "dev": {
       "cache": false,
       "persistent": true,
-      "env": ["DATA_SOURCE", "PUBLIC_DATABASE_URL", "PUBLIC_REVALIDATE_SECONDS", "REVALIDATION_SECRET", "PUBLIC_SITE_URL", "SITE_URL"]
+      "env": [
+        "ADMIN_DATABASE_URL",
+        "AUTH_COOKIE_SECRET",
+        "AUTH_SESSION_HOURS",
+        "BLOB_READ_WRITE_TOKEN",
+        "DATABASE_URL",
+        "DATA_SOURCE",
+        "PUBLIC_DATABASE_URL",
+        "PUBLIC_REVALIDATE_SECONDS",
+        "PUBLIC_SITE_URL",
+        "REVALIDATION_SECRET",
+        "SITE_URL",
+        "VERCEL_GIT_COMMIT_MESSAGE",
+        "VERCEL_GIT_COMMIT_SHA"
+      ]
     },
     "build": {
       "dependsOn": ["^build"],
@@ -14,7 +28,21 @@
         "public/sitemap*.xml",
         "public/robots.txt"
       ],
-      "env": ["DATA_SOURCE", "PUBLIC_DATABASE_URL", "PUBLIC_REVALIDATE_SECONDS", "REVALIDATION_SECRET", "PUBLIC_SITE_URL", "SITE_URL"]
+      "env": [
+        "ADMIN_DATABASE_URL",
+        "AUTH_COOKIE_SECRET",
+        "AUTH_SESSION_HOURS",
+        "BLOB_READ_WRITE_TOKEN",
+        "DATABASE_URL",
+        "DATA_SOURCE",
+        "PUBLIC_DATABASE_URL",
+        "PUBLIC_REVALIDATE_SECONDS",
+        "PUBLIC_SITE_URL",
+        "REVALIDATION_SECRET",
+        "SITE_URL",
+        "VERCEL_GIT_COMMIT_MESSAGE",
+        "VERCEL_GIT_COMMIT_SHA"
+      ]
     },
     "lint": {
       "outputs": []
