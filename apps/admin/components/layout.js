@@ -252,7 +252,7 @@ const Layout = (props) => {
     flex: 2;
     width: 100%;
     position: relative;
-    align-self: flex-start;
+    align-self: stretch;
     gap: 5px;
     display: flex;
     flex-direction: column;
