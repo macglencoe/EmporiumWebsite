@@ -1,14 +1,13 @@
 
 
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 
 import { useRouter } from 'next/router'
-import CatalogCard from './catalogCard'
 import PageTitle1 from './pagetitle1';
 import Layout from './layout';
-import Filters from './filters';
 import SchemaCatalog from './schemaCatalog';
+import { CatalogControls } from '@emporium/ui';
 
 
 /**
@@ -36,8 +35,6 @@ import SchemaCatalog from './schemaCatalog';
 const Catalog = (props) => {
 
     const [sortOption, setSortOption] = useState(props.defaultSort);
-    const [filtersOpen, setFiltersOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
 
     // The legacy editor supplied `{ origin, temp }` pairs after merging its
     // localStorage draft with Git JSON. Database-backed pages now supply plain
@@ -50,12 +47,6 @@ const Catalog = (props) => {
     // Set filters based on query parameters
     const router = useRouter();
 
-    const handleOpenFilters = (event) => {
-        setFiltersOpen((prev) => !prev)
-        console.log(filtersOpen);
-    }
-
-
     const handleFilterChange = (event) => {
         router.replace({
             pathname: router.pathname,
@@ -66,10 +57,6 @@ const Catalog = (props) => {
             }
         });
     };
-
-    useEffect(() => {
-        setIsMobile(window.innerWidth < 680);
-    })
 
     useEffect(() => {
         if (router.isReady) {
@@ -85,24 +72,6 @@ const Catalog = (props) => {
     const handleSearchChange = (event) => {
         router.push({ query: { ...router.query, search: event.target.value } }, undefined, { shallow: true });
     };
-
-    const [auxSearchQueries, setAuxSearchQueries] = useState([]);
-
-    const handleAuxSearchChange = (event) => {
-        if (props.auxiliarySearchBars) {
-            const updatedQueries = [...auxSearchQueries];
-            props.auxiliarySearchBars.forEach(searchBar => {
-                const index = updatedQueries.findIndex(query => query.name === searchBar.query);
-                if (index >= 0) {
-                    updatedQueries[index].value = event.target.value;
-                } else {
-                    updatedQueries.push({ name: searchBar.query, value: event.target.value });
-                }
-            });
-            setAuxSearchQueries(updatedQueries);
-        }
-    }
-
 
     const handleSortChange = (event) => {
         setSortOption(event.target.value);
@@ -167,16 +136,7 @@ const Catalog = (props) => {
         }
     });
 
-    const auxSearchedItems = searchedItems.filter((item) => {
-        // deprecated, not using aux searchbars anymore
-        /* if (props.auxiliarySearchBars) {
-            return auxSearchQueries.every(query =>
-                query.value === '' || String(item[query.name]).toLowerCase() === query.value.toLowerCase()
-            );
-        } else return searchedItems */
-        
-        return searchedItems
-    })
+    const auxSearchedItems = searchedItems;
 
     // Testing for unique barcodes
     if (false) {
@@ -212,152 +172,30 @@ const Catalog = (props) => {
 
     return (
         <>
-            <Layout
-                sidebarChildren={
-
-                    <>
-                        <div className="catalog-container39">
-                            <label for="sort" className="catalog-sorty-by">Sort By:</label>
-                            <select id="sort" value={sortOption} onChange={handleSortChange} className="catalog-select">
-
-                                {
-                                    props.sortOptions.map((option) => (
-                                        <option key={option.value} value={option.value}>{option.label}</option>
-                                    ))
-                                }
-                            </select>
-                        </div>
-                        {
-                            props.auxiliarySearchBars && props.auxiliarySearchBars.length > 0 && props.auxiliarySearchBars[0] !== false &&
-                            props.auxiliarySearchBars.map((auxSearch) => (
-                                <input
-                                    type="search"
-                                    name={auxSearch.query}
-                                    value={auxSearchQueries[auxSearch.name]}
-                                    onChange={handleAuxSearchChange}
-                                    placeholder={auxSearch.label + '...'}
-                                    style={{
-                                        margin: '10px',
-                                    }}
-                                />
-                            ))
-                        }
-
-                        <Filters filters={props.filters} />
-                    </>
-
-                }
-
-                headerChildren={
-                    <>
-                        <div className='searchbar-container' id='header-search'>
-                            <form onSubmit={(e) => {
-                                e.preventDefault();
-                                const trimmedValue = searchInput.replace(/^0+(?=\d)/, '');
-                                handleSearchChange({ target: { value: trimmedValue } });
-                                setSearchInput('');
-                            }}
-                                className='searchbar'>
-                                <input
-                                    type="search"
-                                    value={searchInput}
-                                    onChange={(e) => setSearchInput(e.target.value)}
-                                    placeholder="Search..."
-                                />
-                                <button aria-label='Search' type="submit" className='search-button'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960" width="32px" fill="var(--dl-color-theme-secondary1)">
-                                        <path d="M790.67-89.33 525-354.33q-29 21.95-68.14 34.64Q417.72-307 372-307q-116.11 0-196.89-80.83-80.78-80.84-80.78-195.5 0-114.67 80.84-195.5Q256-859.67 371-859.67q115 0 195.5 80.84Q647-698 647-583.23q0 45.23-12.33 83.4-12.34 38.16-35.67 70.16L865.67-164l-75 74.67Zm-419.1-322.34q71.93 0 121.35-50 49.41-50 49.41-121.66 0-71.67-49.51-121.67-49.52-50-121.25-50-72.29 0-122.43 50T199-583.33q0 71.66 50.04 121.66t122.53 50Z" />
-                                    </svg>
-
-                                </button>
-                            </form>
-                        </div>
-                    </>
-                }
-            >
+            <Layout>
                 <PageTitle1 subtitle={props.subtitle}>
                     {props.title ?? "Catalog"}
                 </PageTitle1>
                 {props.notices}
                 <div className="catalog-container31">
-
                     <div className="catalog-container38">
-                        {isMobile && (
-
-
-                            <div className="filter-header-container">
-                                <span onClick={handleOpenFilters}>Filter & Sort</span>
-                                <div onClick={handleOpenFilters}></div>
-                                <button
-                                    name='Toggle Filters'
-                                    aria-label='Toggle Filters'
-                                    onClick={handleOpenFilters}
-                                    style={{
-                                        transform: filtersOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                                        transition: 'transform 0.2s ease-in-out',
-                                    }}
-                                    aria-expanded={filtersOpen}
-                                    aria-controls="filter-sort-container"
-                                    tabIndex={!isMobile ? -1 : 0}
-
-                                >
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-328 225-583h510L480-328Z" /></svg>
-                                </button>
-                            </div>
-                        )}
-                        {isMobile && (
-
-                            <div className="filter-sort-container"
-                                style={{
-                                    width: '100%',
-                                    transform: filtersOpen ? 'scaleY(1)' : 'scaleY(0)',
-                                    transition: 'transform 0.2s ease-in-out',
-                                    height: filtersOpen ? 'auto' : '0',
-                                    transformOrigin: 'top',
-                                    flexDirection: 'column',
-                                }}>
-                                <div className='sort-container'>
-                                    <label for="sort" className="catalog-sorty-by">Sort By:</label>
-                                    <select
-                                        id="sort"
-                                        value={sortOption}
-                                        onChange={handleSortChange}
-                                        className="catalog-select"
-                                        tabIndex={!isMobile ? -1 : 0}
-                                    >
-
-                                        {
-                                            props.sortOptions.map((option) => (
-                                                <option
-                                                    key={option.value}
-                                                    value={option.value}
-                                                >{option.label}</option>
-                                            ))
-                                        }
-                                    </select>
-                                </div>
-                                <Filters filters={props.filters} inactive={window.innerWidth >= 680} />
-                            </div>
-                        )}
-
-                        {Object.keys(router.query).some(key => key !== 'page' && router.query[key] !== '') &&
-                            <div className="filter-bubble-container">
-                                {Object.entries(router.query).map(([filterKey, filterValue]) => (
-                                    filterValue !== '' && filterKey !== 'page' && (
-                                        <div className="filter-bubble" key={filterKey}>
-                                            <span className="filter-bubble-name">{filterKey}: {filterValue}</span>
-                                            <button onClick={() => handleFilterChange({ target: { name: filterKey, value: '' } })}
-                                                className='filter-bubble-button'
-                                                aria-label={'Clear ' + filterValue + 'Filter for ' + filterKey}
-                                            >
-                                                <span className="filter-bubble-x">x</span>
-                                            </button>
-                                        </div>
-                                    )
-                                ))}
-                                <span>Returned <b style={{ color: 'var(--dl-color-theme-primary1)' }}>{sortedItems.length}</b> results</span>
-                            </div>
-                        }
+                        <CatalogControls
+                            idPrefix="admin-catalog-controls"
+                            searchValue={searchInput}
+                            onSearchValueChange={setSearchInput}
+                            onSearchSubmit={() => handleSearchChange({ target: { value: searchInput.replace(/^0+(?=\d)/, '') } })}
+                            sortValue={sortOption}
+                            sortOptions={props.sortOptions}
+                            onSortChange={(value) => handleSortChange({ target: { value } })}
+                            filters={props.filters}
+                            filterValues={router.query}
+                            onFilterChange={(name, value) => handleFilterChange({ target: { name, value } })}
+                            activeFilters={Object.entries(router.query)
+                                .filter(([name, value]) => name !== 'page' && value !== '')
+                                .map(([name, value]) => ({ name, value: String(value) }))}
+                            onClearFilter={(name) => handleFilterChange({ target: { name, value: '' } })}
+                            resultCount={sortedItems.length}
+                        />
 
                         <SchemaCatalog
                             mergedData={sortedItems}

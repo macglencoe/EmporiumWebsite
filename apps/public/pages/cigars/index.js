@@ -12,7 +12,6 @@ import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 import Layout from '../../components/layout'
 import CatalogCard from '../../components/catalogCard'
 import Catalog from '../../components/catalog'
-import Filters from '../../components/filters'
 import { PiCurrencyDollar, PiCurrencyDollarBold, PiCurrencyDollarFill, PiFactory, PiFactoryFill, PiFire, PiFireFill, PiGauge, PiGaugeBold, PiGaugeFill, PiLeaf, PiLeafBold, PiLeafFill, PiRuler, PiRulerFill } from 'react-icons/pi'
 import { type } from 'jquery'
 

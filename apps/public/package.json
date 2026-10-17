@@ -16,6 +16,7 @@
   "dependencies": {
     "@emporium/database": "*",
     "@emporium/domain": "*",
+    "@emporium/ui": "*",
     "@babel/parser": "^7.26.7",
     "@vercel/analytics": "^1.1.1",
     "cheerio": "^1.0.0",
