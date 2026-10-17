@@ -1,26 +1,10 @@
-import React, { Fragment, useState, useEffect } from 'react'
-import Head from 'next/head'
-import Script from 'next/script'
+import React, { Fragment, useState } from 'react'
 import Link from 'next/link'
-import Data from "../public/data/consolidated_cigars.json"
-
-import Footer32 from '../components/footer32'
-import Contact from '../components/contact'
-import Directory from '../components/directory'
 import Ksman from '../components/ksman'
-import { Router, useRouter } from 'next/router'
-import { Analytics } from '@vercel/analytics/react'
 import Toolbar from './toolbar'
-import { Footer } from './footer'
 import { PiBarcodeBold, PiExportBold, PiGitCommitBold, PiPlusCircleBold, PiTableBold } from 'react-icons/pi'
 
 const Layout = (props) => {
-  const router = useRouter();
-
-  const isHome = router.pathname === "/";
-
-
-
   const [isActive, setIsActive] = useState(true);
   const handleButtonClick = () => {
     setIsActive((prev) => !prev)
@@ -61,7 +45,14 @@ const Layout = (props) => {
             <button onClick={handleButtonClick} className={`sidebarToggle ${isActive ? 'open' : 'closed'}`}>
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M368.57-81.87 352.09-209.5q-11.59-4.28-23.04-10.58-11.44-6.29-21.01-13.09l-117.89 49.19L77.98-378.89l102.91-77.94q-.76-5.51-.76-10.57V-480q0-5.04.25-11.09.25-6.04 1.01-14.08L77.98-582.11l112.17-193.43 119.87 49.95q8.57-6.8 18.9-12.73 10.34-5.92 23.17-11.2l16.48-129.61h222.86l16.48 128.11q12.09 4.78 22.29 10.95 10.19 6.18 19.76 14.48l119.89-49.95 112.17 193.43-106.15 78.98q.76 6 .76 10.79V-480q0 7.54-.12 12.76t-1.14 10.91l105.15 77.44-112.41 194.91-118.63-50.19q-8.07 6.3-17.4 11.84-9.34 5.55-24.17 12.83L591.43-81.87H368.57Zm74.35-86h72.21l14.74-106.02q30.24-8 55.84-22.87 25.59-14.87 47.09-37.83l99.27 42 35.63-62.69-86.29-64.52q4.5-14.48 6.74-29.56 2.24-15.08 2.24-30.64 0-15.74-1.99-30.23t-6.99-29.97l86.76-65.52-35.1-62.69-100.53 43q-19.5-21.72-46.59-37.58-27.1-15.86-56.08-23.12l-12.93-107.02h-73.55l-13.02 106.28q-32.72 8.26-57.44 22.37-24.71 14.11-48.45 38.07l-97.78-42-35.87 62.69 84.54 62.79q-5 16.47-7.24 31.33t-2.24 31.07q0 15.27 1.99 30.25t6.99 31.95l-84.04 63.05 35.94 62.69 97.21-41.76q23.74 23.98 49.82 38.84 26.09 14.86 56.57 22.36l12.55 105.28ZM479.01-345q55.77 0 95.27-39.55 39.5-39.55 39.5-95.5t-39.53-95.45Q534.71-615 478.78-615q-56.26 0-95.63 39.55t-39.37 95.5q0 55.95 39.37 95.45t95.86 39.5Zm.49-135.5Z"/></svg>
             </button>
-            <Directory></Directory>
+            <Toolbar
+              type="header"
+              links={[
+                { href: '/', label: 'Dashboard' },
+                { href: '/cigars', label: 'Cigars', icon: <PiTableBold size={22}/> },
+                { href: '/tobacco', label: 'Pipe Tobacco', icon: <PiTableBold size={22}/> }
+              ]}
+            />
           </div>
         </header>
 
@@ -98,22 +89,20 @@ const Layout = (props) => {
               {props.sidebarChildren}
             </Fragment>
 
-            <div className='contact-container'>
-              <Contact></Contact>
-            </div>
-
-
-
-
           </div>
           <main className="catalog-content1" id='content'>
-            <Analytics />
             {props.children}
-
-
-
-            <Footer></Footer>
-        </main>
+            <footer className="admin-footer">
+              <div>
+                <strong>King Street Emporium Admin</strong>
+                <span>Catalog changes remain staged until they are published.</span>
+              </div>
+              <nav aria-label="Footer navigation">
+                <Link href="/"><a>Dashboard</a></Link>
+                <a href="https://kingstreetemporium.com" target="_blank" rel="noreferrer">View public site</a>
+              </nav>
+            </footer>
+          </main>
 
 
         </div>
@@ -251,7 +240,11 @@ const Layout = (props) => {
     
   }
   .catalog-container11 {
-    /* position: absolute; */
+    display: flex;
+    flex: 1 0 auto;
+    width: 100%;
+    position: relative;
+    align-items: stretch;
     background-color: var(--dl-color-theme-primary1);
   }
      
@@ -265,7 +258,44 @@ const Layout = (props) => {
     flex-direction: column;
     padding-left: 5px;
     padding-top: 5px;
+    min-width: 0;
   
+  }
+  .admin-footer {
+    width: calc(100% + 5px);
+    margin-top: auto;
+    margin-left: -5px;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--dl-color-theme-primary2);
+    background-color: var(--dl-color-theme-secondary1);
+    border-top: 6px double var(--dl-color-theme-secondary2);
+  }
+  .admin-footer > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .admin-footer strong {
+    font-family: Playfair, serif;
+    font-size: 1.05rem;
+  }
+  .admin-footer span {
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+  .admin-footer nav {
+    display: flex;
+    gap: 1rem;
+  }
+  .admin-footer a {
+    color: var(--dl-color-theme-primary2);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
   }
   .catalog-title {
     flex: 0 0 auto;
@@ -362,10 +392,11 @@ const Layout = (props) => {
     }
     .sidebar{
         position: absolute;
+        inset: 0 auto 0 0;
         z-index: 998;
         transition: transform .5s;
         background-color: var(--dl-color-theme-secondary1);
-        height: 100vh;
+        height: auto;
     }
     .sidebar.collapsed {
         transform: translateX(-300px);
@@ -388,6 +419,11 @@ const Layout = (props) => {
     .layout-title-container h1 {
     
           font-size: 1.5em;}
+
+    .admin-footer {
+      align-items: flex-start;
+      flex-direction: column;
+    }
             
 
           }

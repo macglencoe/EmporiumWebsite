@@ -1,28 +1,14 @@
 
 
-import React, { Fragment, use, useState, useEffect } from 'react'
-//import Data from "../../public/data/consolidated_cigars.json"
+import React, { Fragment, useState, useEffect } from 'react'
 
 
 import { useRouter } from 'next/router'
 import CatalogCard from './catalogCard'
-import CatalogContent from './catalogContent';
 import PageTitle1 from './pagetitle1';
 import Layout from './layout';
 import Filters from './filters';
-import { track } from '@vercel/analytics';
 import SchemaCatalog from './schemaCatalog';
-
-
-export const getStaticProps = async () => {
-    const data = await import('../public/data/consolidated_cigars.json');
-    return {
-        props: {
-            data: data.default
-        },
-    };
-};
-
 
 
 /**
@@ -79,9 +65,6 @@ const Catalog = (props) => {
                 page: 1
             }
         });
-        track("Used Filters", {
-            filter: event.target.name,
-            value: event.target.value});
     };
 
     useEffect(() => {
