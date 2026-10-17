@@ -1,9 +1,9 @@
-import RenderResult from "next/dist/server/render-result"
 import Layout from "../../components/layout"
 import PageTitle1 from "../../components/pagetitle1"
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { Barcodeless } from "../../components/barcodeless"
+import { barcodeIncludes } from "../../lib/barcodes.mjs"
 
 
 export const getServerSideProps = async () => {
@@ -35,10 +35,10 @@ export const BarcodeSearch = (props) => {
     useEffect(() => {
         if (router.query.search) {
             const search = router.query.search;
-            const results = data.filter((cigar) => cigar.Sizes.some((size) => size.Barcode?.toString().includes(search)));
+            const results = data.filter((cigar) => cigar.Sizes.some((size) => barcodeIncludes(size.Barcode, search)));
             setResults(results);
         }
-    }, [router.query.search]);
+    }, [data, router.query.search]);
 
 
     /* const result =
@@ -97,7 +97,7 @@ export const BarcodeSearch = (props) => {
                         <h1>{results.length} Result{results.length > 1 && "s"}</h1>
                         {results.map((result) => {
                             return (
-                                <div className="result">
+                                <div className="result" key={result.slug}>
                                     <div className="cigar-info">
                                         {result["Cigar Name"] && <h2>{result["Cigar Name"]}</h2>}
                                         {result["Cigar Brand"] && <b>{result["Cigar Brand"]}</b>}
@@ -109,8 +109,8 @@ export const BarcodeSearch = (props) => {
                                                 key={size["Size"]}
                                                 className={`
                                                     size
-                                                    ${size.Barcode.toString() === router.query.search ? "match" : ""}
-                                                    ${size.Barcode.toString().includes(router.query.search) ? "include" : ""}
+                                                    ${String(size.Barcode ?? '') === router.query.search ? "match" : ""}
+                                                    ${barcodeIncludes(size.Barcode, router.query.search) ? "include" : ""}
                                                 `}
                                             >
                                                 <b>{size["Size"]}</b>
