@@ -108,6 +108,8 @@ const ExportPage = ({ fallbackCigars, fallbackTobacco }) => {
     URL.revokeObjectURL(url);
   };
 
+  const jsonType = selection === "cigars" ? "cigar" : "tobacco";
+
   return (
     <Layout>
       <PageTitle1 subtitle="Download origin data as CSV">Export</PageTitle1>
@@ -157,6 +159,9 @@ const ExportPage = ({ fallbackCigars, fallbackTobacco }) => {
             <button onClick={handleDownload} disabled={!csv}>
               Download CSV
             </button>
+            <a className="json-download" href={`/api/catalog/export?type=${jsonType}`}>
+              Download backup JSON
+            </a>
           </div>
         </section>
 
@@ -233,6 +238,12 @@ const ExportPage = ({ fallbackCigars, fallbackTobacco }) => {
           background: transparent;
           border: 1px solid var(--dl-color-theme-secondary2);
           color: var(--dl-color-theme-secondary2);
+        }
+        .json-download {
+          padding: 0.6rem 1rem;
+          border: 1px solid var(--dl-color-theme-secondary2);
+          color: var(--dl-color-theme-secondary2);
+          font-weight: 700;
         }
         .preview pre {
           margin: 0;
