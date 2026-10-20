@@ -101,7 +101,24 @@ export const BarcodeSearch = (props) => {
                                     <div className="cigar-info">
                                         {result["Cigar Name"] && <h2>{result["Cigar Name"]}</h2>}
                                         {result["Cigar Brand"] && <b>{result["Cigar Brand"]}</b>}
-                                        <a href={`/cigars/${result["slug"]}`}><button>View Product</button></a>
+                                        <dl className="cigar-metadata">
+                                            {[
+                                                ["Wrapper", "Wrapper"],
+                                                ["Binder", "Binder"],
+                                                ["Filler", "Filler"],
+                                                ["Strength", "Strength_Profile"],
+                                                ["Flavor profile", "Flavor_Profile"],
+                                            ].map(([label, field]) => {
+                                                const value = result[field]?.trim();
+                                                return (
+                                                    <div key={field} className={field === "Flavor_Profile" ? "flavor-profile" : ""}>
+                                                        <dt>{label}</dt>
+                                                        <dd className={!value ? "missing-value" : undefined}>{value || "Not listed"}</dd>
+                                                    </div>
+                                                );
+                                            })}
+                                        </dl>
+                                        <a className="product-link" href={`/cigars/${result["slug"]}`}>View Product</a>
                                     </div>
                                     <div className="cigar-sizes">
                                         {result["Sizes"] && result["Sizes"].map((size) => (
@@ -201,25 +218,68 @@ export const BarcodeSearch = (props) => {
                     border-bottom: 9px double var(--dl-color-theme-secondary2);
                 }
                 .result {
-                    display: flex;
-                    flex-direction: row;
-                    gap: 12px;
+                    display: grid;
+                    grid-template-columns: minmax(18rem, 24rem) minmax(0, 1fr);
+                    margin-bottom: 12px;
+                    border: 1px solid var(--dl-color-theme-secondary2);
+                    border-radius: 8px;
+                    overflow: hidden;
                 }
                 .cigar-info {
                     display: flex;
                     flex-direction: column;
-                    gap: 8px;
+                    gap: 6px;
+                    min-width: 0;
                     padding: 12px;
-                    border-right: 3px solid var(--dl-color-theme-secondary2);
-                    justify-content: space-between;
+                    border-right: 1px solid var(--dl-color-theme-secondary2);
                 }
-                .cigar-info button {
+                .cigar-info h2 {
+                    margin: 0;
+                    font-size: 1.25rem;
+                    line-height: 1.25;
+                    overflow-wrap: anywhere;
+                }
+                .cigar-metadata {
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    gap: 8px 16px;
+                    margin: 6px 0;
+                    font-size: 0.875rem;
+                    line-height: 1.4;
+                }
+                .cigar-metadata div {
+                    min-width: 0;
+                }
+                .cigar-metadata .flavor-profile {
+                    grid-column: 1 / -1;
+                }
+                .cigar-metadata dt {
+                    font-weight: 700;
+                }
+                .cigar-metadata dd {
+                    margin: 0;
+                    white-space: pre-line;
+                    overflow-wrap: anywhere;
+                }
+                .missing-value {
+                    font-style: italic;
+                }
+                .product-link {
+                    align-self: flex-start;
+                    margin-top: auto;
                     background-color: var(--dl-color-theme-secondary2);
-                    padding: 10px;
+                    padding: 7px 10px;
                     color: var(--dl-color-theme-primary1);
+                    font-size: 0.875rem;
                     font-weight: bold;
-                    cursor: pointer;
                     border-radius: 5px;
+                }
+                .product-link:hover {
+                    text-decoration: underline;
+                }
+                .product-link:focus-visible {
+                    outline: 2px solid currentColor;
+                    outline-offset: -4px;
                 }
                 .cigar-sizes {
                     display: flex;
@@ -227,6 +287,9 @@ export const BarcodeSearch = (props) => {
                     flex-wrap: wrap;
                     gap: 8px;
                     padding: 12px;
+                    align-content: flex-start;
+                    align-items: flex-start;
+                    min-width: 0;
                 }
                 .size {
                     display: flex;
@@ -287,6 +350,7 @@ export const BarcodeSearch = (props) => {
                     fill: var(--dl-color-theme-primary2);
                 }
                 form input {
+                    min-width: 0;
                     background-color: var(--dl-color-theme-primary2);
                     padding: 0.5em;
                     outline: none;
@@ -308,6 +372,18 @@ export const BarcodeSearch = (props) => {
                     width: 1.5em;
                     height: 1.5em;
                     fill: var(--dl-color-theme-secondary2);
+                }
+                @media (max-width: 760px) {
+                    .result {
+                        grid-template-columns: minmax(0, 1fr);
+                    }
+                    .cigar-info {
+                        border-right: 0;
+                        border-bottom: 1px solid var(--dl-color-theme-secondary2);
+                    }
+                    form {
+                        max-width: calc(100% - 1em);
+                    }
                 }
                 `}
             </style>
