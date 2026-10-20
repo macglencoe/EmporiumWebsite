@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 import Link from 'next/link'
 import Ksman from '../components/ksman'
 import Toolbar from './toolbar'
-import { PiBarcodeBold, PiExportBold, PiGitCommitBold, PiPlusCircleBold, PiTableBold } from 'react-icons/pi'
+import { PiBarcodeBold, PiExportBold, PiGitCommitBold, PiPlusCircleBold, PiQuestionBold, PiTableBold } from 'react-icons/pi'
 
 const Layout = (props) => {
   const [isActive, setIsActive] = useState(true);
@@ -80,6 +80,10 @@ const Layout = (props) => {
                     href: '/export', label: 'Export Data',
                     icon: <PiExportBold size={26}/>,
                     newExpiration: new Date("2026-02-21T00:00:00")
+                  },
+                  {
+                    href: '/help', label: 'Help & Documentation',
+                    icon: <PiQuestionBold size={26}/>
                   }
                 ]}
                 style={{ backgroundColor: 'var(--dl-color-theme-secondary1)' }}
@@ -99,6 +103,7 @@ const Layout = (props) => {
               </div>
               <nav aria-label="Footer navigation">
                 <Link href="/"><a>Dashboard</a></Link>
+                <Link href="/help"><a>Help</a></Link>
                 <a href="https://kingstreetemporium.com" target="_blank" rel="noreferrer">View public site</a>
               </nav>
             </footer>
