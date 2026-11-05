@@ -2915,10 +2915,10 @@
         "Price": "8.40"
       },
       {
-        "Size": "Gordo",
+        "Size": "Toro",
         "Barcode": "689674155492",
         "In_Stock": true,
-        "Price": "7.75"
+        "Price": "8.55"
       }
     ],
     "image": null,
@@ -8443,7 +8443,7 @@
         "Size": "Toro",
         "Barcode": "689674127727",
         "In_Stock": true,
-        "Price": "10.85"
+        "Price": "11.85"
       }
     ],
     "image": null,
@@ -8883,7 +8883,7 @@
         "Size": "Toro",
         "Barcode": "689674104896",
         "In_Stock": true,
-        "Price": "3.30"
+        "Price": "3.50"
       }
     ],
     "image": null,
@@ -11744,7 +11744,7 @@
         "Size": "Toro",
         "Barcode": "689674166481",
         "In_Stock": true,
-        "Price": "2.55"
+        "Price": "3.05"
       }
     ],
     "image": null,
