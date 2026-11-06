@@ -34,7 +34,7 @@
     "vercel": "^41.3.0"
   },
   "engines": {
-    "node": ">=18.x"
+    "node": "22.x"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.8",

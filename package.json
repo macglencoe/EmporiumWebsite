@@ -33,7 +33,7 @@
     "db:branch:create": "npm run db:branch:create --workspace=@emporium/database --"
   },
   "engines": {
-    "node": ">=20.x"
+    "node": "22.x"
   },
   "packageManager": "npm@10.9.2",
   "devDependencies": {
