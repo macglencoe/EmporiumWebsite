@@ -1,0 +1,23 @@
+{
+  "name": "@emporium/domain",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "scripts": {
+    "build": "node -e \"import('./src/index.js')\"",
+    "lint": "eslint src scripts test",
+    "test": "node --test",
+    "validate:legacy": "node scripts/validate-legacy-data.js"
+  },
+  "dependencies": {
+    "uuid": "^11.1.0",
+    "zod": "^3.25.76"
+  }
+}

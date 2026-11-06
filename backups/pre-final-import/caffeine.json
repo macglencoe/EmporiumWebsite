@@ -1,0 +1,172 @@
+[
+  {
+    "Product Name": "Apricot",
+    "Type": "Tea",
+    "slug": "apricot"
+  },
+  {
+    "Product Name": "Assam",
+    "Origin": "India",
+    "Type": "Tea",
+    "slug": "assam"
+  },
+  {
+    "Product Name": "Black Currant",
+    "Type": "Tea",
+    "slug": "black-currant"
+  },
+  {
+    "Product Name": "Blue Ridge Blend",
+    "Type": "Coffee",
+    "slug": "blue-ridge-blend"
+  },
+  {
+    "Product Name": "Chinese Restaurant",
+    "Origin": "China",
+    "Type": "Tea",
+    "slug": "chinese-restaurant"
+  },
+  {
+    "Product Name": "Columbian Supremo",
+    "Roast": "Light",
+    "Origin": "Colombia",
+    "Type": "Coffee",
+    "Description": "A rich cup that displays a medium to full body, mid-range acidity, an intense flavor with citrus nuances and a clean, lingering finish.",
+    "slug": "columbian-supremo"
+  },
+  {
+    "Product Name": "Copper Canyon Blend",
+    "Roast": "Extra-Dark",
+    "Origin": "Mexico",
+    "Type": "Coffee",
+    "Description": "Deep, dark and dramatically bold as vast as Mexico's Copper Canyon. An intense journey for the adventurous palate.",
+    "slug": "copper-canyon-blend"
+  },
+  {
+    "Product Name": "Cultivate Decaf",
+    "Type": "Coffee",
+    "slug": "cultivate-decaf"
+  },
+  {
+    "Product Name": "Cultivate Honduras",
+    "Roast": "Medium",
+    "Type": "Coffee",
+    "slug": "cultivate-honduras"
+  },
+  {
+    "Product Name": "Cultivate Sumatra",
+    "Roast": "Dark",
+    "Type": "Coffee",
+    "slug": "cultivate-sumatra"
+  },
+  {
+    "Product Name": "Earl Grey",
+    "Origin": "China",
+    "Type": "Tea",
+    "slug": "earl-grey"
+  },
+  {
+    "Product Name": "Earl Grey Decaf",
+    "Origin": "China",
+    "Type": "Tea",
+    "slug": "earl-grey-decaf"
+  },
+  {
+    "Product Name": "English Breakfast",
+    "Origin": "India",
+    "Type": "Tea",
+    "slug": "english-breakfast"
+  },
+  {
+    "Product Name": "Espresso Roast",
+    "Roast": "Extra-Dark",
+    "Type": "Coffee",
+    "slug": "espresso-roast"
+  },
+  {
+    "Product Name": "Ethiopian Harrar",
+    "Roast": "Light",
+    "Origin": "Ethiopia",
+    "Type": "Coffee",
+    "slug": "ethiopian-harrar"
+  },
+  {
+    "Product Name": "Gun Powder",
+    "Origin": "China",
+    "Type": "Tea",
+    "slug": "gun-powder"
+  },
+  {
+    "Product Name": "Hazelnut",
+    "Type": "Coffee",
+    "slug": "hazelnut"
+  },
+  {
+    "Product Name": "Italian Espresso Roast",
+    "Roast": "Dark",
+    "Origin": "Honduras",
+    "Type": "Coffee",
+    "Description": "These high-grown Central American beans (and some robusta) provide a rich, hearty flavor, analogous to a good burgundy. Pungent acidity and a robust, full body.",
+    "slug": "italian-espresso-roast"
+  },
+  {
+    "Product Name": "Kenya AA",
+    "Roast": "Light",
+    "Origin": "Kenya",
+    "Type": "Coffee",
+    "Description": "The highest grade of coffee grown in Kenya . . . displays a soft aroma, earthy and floral or fruity notes, medium body, a wine-like acidity and a bittersweet finish.",
+    "slug": "kenya-aa"
+  },
+  {
+    "Product Name": "Kona Blend",
+    "Roast": "Medium",
+    "Origin": "Hawaii",
+    "Type": "Coffee",
+    "Description": "A blend of Kona Prime and fine South American beans -- rich tasting and smooth, medium-bodied with well-balanced flavor and acidity.",
+    "slug": "kona-blend"
+  },
+  {
+    "Product Name": "Lapsang Souchong",
+    "Origin": "China",
+    "Type": "Tea",
+    "slug": "lapsang-souchong"
+  },
+  {
+    "Product Name": "Noveau French Roast",
+    "Roast": "Dark",
+    "Origin": "France",
+    "Type": "Coffee",
+    "Description": "A darker French roast, bold with a medium to full body. Slow roasted and smooth with lingering smoky notes",
+    "slug": "noveau-french-roast"
+  },
+  {
+    "Product Name": "Orange Spice",
+    "Type": "Tea",
+    "slug": "orange-spice"
+  },
+  {
+    "Product Name": "Sumatra Mandheling",
+    "Roast": "Medium",
+    "Origin": "Indonesia",
+    "Type": "Coffee",
+    "slug": "sumatra-mandheling"
+  },
+  {
+    "Product Name": "SW. Decaf Creme de Noisette",
+    "Type": "Coffee",
+    "slug": "sw-decaf-creme-de-noisette"
+  },
+  {
+    "Product Name": "Tanzania Kilimanjaro",
+    "Roast": "Light",
+    "Origin": "Tanzania",
+    "Type": "Coffee",
+    "slug": "tanzania-kilimanjaro"
+  },
+  {
+    "Product Name": "The Stick Figures Blend",
+    "Roast": "Medium",
+    "Type": "Coffee",
+    "slug": "the-stick-figures-blend"
+  }
+]

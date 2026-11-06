@@ -1,0 +1,76 @@
+[
+  {
+    "Pipe Name": "Country Gentlemen",
+    "Material": "Corn Cob",
+    "slug": "country-gentlemen"
+  },
+  {
+    "Pipe Name": "Let Freedom Ring",
+    "Material": "Corn Cob",
+    "slug": "let-freedom-ring"
+  },
+  {
+    "Pipe Name": "Various Series",
+    "Pipe Brand": "Peterson",
+    "Material": "Briar",
+    "Type": "Various",
+    "slug": "peterson-various-series"
+  },
+  {
+    "Pipe Name": "Various Series",
+    "Pipe Brand": "Savinelli",
+    "Material": "Briar",
+    "Type": "Various",
+    "slug": "savinelli-various-series"
+  },
+  {
+    "Pipe Name": "The Chesapeaker",
+    "Material": "Corn Cob",
+    "slug": "the-chesapeaker"
+  },
+  {
+    "Pipe Name": "The Dagner Poker",
+    "Material": "Corn Cob",
+    "slug": "the-dagner-poker"
+  },
+  {
+    "Pipe Name": "The Emerald",
+    "Material": "Corn Cob",
+    "slug": "the-emerald"
+  },
+  {
+    "Pipe Name": "The Free Hand",
+    "Material": "Corn Cob",
+    "slug": "the-free-hand"
+  },
+  {
+    "Pipe Name": "The Imperial Blue",
+    "Material": "Hardwood",
+    "slug": "the-imperial-blue"
+  },
+  {
+    "Pipe Name": "The Kingston Judge",
+    "Material": "Corn Cob",
+    "slug": "the-kingston-judge"
+  },
+  {
+    "Pipe Name": "The Shire Cobbit",
+    "Material": "Corn Cob",
+    "slug": "the-shire-cobbit"
+  },
+  {
+    "Pipe Name": "The Stubby",
+    "Material": "Corn Cob",
+    "slug": "the-stubby"
+  },
+  {
+    "Pipe Name": "The Virginia planter",
+    "Material": "Corn Cob",
+    "slug": "the-virginia-planter"
+  },
+  {
+    "Pipe Name": "The Zenon",
+    "Material": "Corn Cob",
+    "slug": "the-zenon"
+  }
+]

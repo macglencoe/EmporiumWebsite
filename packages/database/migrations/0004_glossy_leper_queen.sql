@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX "change_sets_one_active_draft" ON "change_sets" USING btree ("status") WHERE "change_sets"."status" = 'draft';

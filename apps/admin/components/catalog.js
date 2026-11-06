@@ -1,0 +1,468 @@
+
+
+import React, { useState, useEffect } from 'react'
+
+
+import { useRouter } from 'next/router'
+import PageTitle1 from './pagetitle1';
+import Layout from './layout';
+import SchemaCatalog from './schemaCatalog';
+import { CatalogControls } from '@emporium/ui';
+
+
+/**
+ * Catalog component for displaying a catalog of items with sorting, filtering,
+ * and searching functionalities. It utilizes a layout with sidebar options for
+ * filtering and sorting items, as well as a header for searching. The component
+ * manages various states such as sort options, search inputs, and filters to 
+ * dynamically render a list of catalog items based on user input.
+ *
+ * @param {Object} props - The properties passed to the component.
+ * @param {Array} props.data - The data to be displayed in the catalog.
+ * @param {Array} props.filters - The filters available for refining the catalog.
+ * @param {Array} props.sortOptions - The options available for sorting the catalog.
+ * @param {Array} props.auxiliarySearchBars - Auxiliary search bars for additional searches.
+ * @param {Object} props.cardSettings - Settings for rendering catalog cards.
+ * @param {string} props.subtitle - Subtitle for the catalog page.
+ * @param {string} props.title - Title for the catalog page.
+ * @param {Array} props.notices - Notices to be displayed on the catalog page.
+ * @param {string} props.defaultSort - The default sort option.
+ * 
+ * Accessibility: 
+ * - The component uses semantic HTML elements and aria attributes to improve accessibility.
+ */
+
+const Catalog = (props) => {
+
+    const [sortOption, setSortOption] = useState(props.defaultSort);
+
+    // The legacy editor supplied `{ origin, temp }` pairs after merging its
+    // localStorage draft with Git JSON. Database-backed pages now supply plain
+    // records, so normalize them at this compatibility boundary.
+    const mergedData = props.mergedData ?? (props.data || []).map((origin) => ({
+        origin,
+        temp: origin,
+    }));
+
+    // Set filters based on query parameters
+    const router = useRouter();
+
+    const handleFilterChange = (event) => {
+        router.replace({
+            pathname: router.pathname,
+            query: {
+                ...router.query,
+                [event.target.name]: event.target.value,
+                page: 1
+            }
+        });
+    };
+
+    useEffect(() => {
+        if (router.isReady) {
+            props.filters.map(filter => {
+                if (!router.query[filter.name]) {
+                    router.query[filter.name] = '';
+                }
+            });
+        }
+    }, [router.isReady]);
+
+    const [searchInput, setSearchInput] = useState('');
+    const handleSearchChange = (event) => {
+        router.push({ query: { ...router.query, search: event.target.value } }, undefined, { shallow: true });
+    };
+
+    const handleSortChange = (event) => {
+        setSortOption(event.target.value);
+    };
+
+
+
+
+
+
+
+    const filteredItems = [...mergedData].filter((item) => {
+
+        const filterLogic = (filter, v) =>
+            Array.isArray(item[v][filter.name])
+                ? typeof item[v][filter.name][0] === 'string'
+                    ? item[v][filter.name] != null &&
+                    item[v][filter.name].includes(router.query[filter.name])
+                    : item[v][filter.name] != null &&
+                    item[v][filter.name].some(obj =>
+                        Object.values(obj).some(val =>
+                            String(val).toLowerCase().includes(router.query[filter.name].toLowerCase())
+                        )
+                    )
+                : item[v][filter.name] != null &&
+                item[v][filter.name].toLowerCase() === router.query[filter.name].toLowerCase()
+
+
+        if (router.isReady) {
+            props.filters.map(filter => {
+                if (!router.query[filter.name]) {
+                    router.query[filter.name] = '';
+                    // TODO: this is stupid, why do this? 
+                }
+            });
+            return props.filters.every(filter =>
+                router.query[filter.name] == '' ||
+                // if temp is not null, use temp for filtering. otherwise, use origin
+                (item.temp != null ? filterLogic(filter, 'temp') : filterLogic(filter, 'origin'))
+
+            )
+        }
+    })
+
+
+
+    const searchedItems = filteredItems.filter((item) => {
+        const searchLogic = (v) => Object.values(item[v]).some(value =>
+            Array.isArray(value) ?
+                value.some(val =>
+                    typeof val === 'object' ?
+                        Object.values(val).some(v => String(v).toLowerCase().includes(router.query.search ? router.query.search.toLowerCase() : ''))
+                        : String(val).toLowerCase().includes(router.query.search ? router.query.search.toLowerCase() : '')
+                ) :
+                String(value).toLowerCase().includes(router.query.search ? router.query.search.toLowerCase() : '')
+        );
+        if (router.isReady) {
+            if (item.temp !== null)
+                return searchLogic('temp');
+            else 
+                return searchLogic('origin');
+        }
+    });
+
+    const auxSearchedItems = searchedItems;
+
+    // Testing for unique barcodes
+    if (false) {
+        const uniqueBarcodes = auxSearchedItems.filter((item, index, self) => self.findIndex((t) => t.Barcode === item.Barcode) === index);
+        console.log('Unique Barcodes: ', uniqueBarcodes.map(item => item.Barcode));
+    }
+
+
+    const sortedItems = [...auxSearchedItems].sort((a, b) => {
+        const sortOptionProp = props.sortOptions.find(option => option.value === sortOption);
+        const aHasTemp = a.temp != null;
+        const bHasTemp = b.temp != null;
+
+        if (aHasTemp !== bHasTemp) return aHasTemp ? -1 : 1;
+
+        if (aHasTemp && bHasTemp) {
+            const aIsNew = a.origin == null;
+            const bIsNew = b.origin == null;
+            if (aIsNew !== bIsNew) return aIsNew ? -1 : 1;
+        }
+
+        const aSource = aHasTemp ? a.temp : a.origin;
+        const bSource = bHasTemp ? b.temp : b.origin;
+
+        if (sortOptionProp.quantity) {
+            const aLen = Array.isArray(aSource?.[sortOption]) ? aSource[sortOption].length : 0;
+            const bLen = Array.isArray(bSource?.[sortOption]) ? bSource[sortOption].length : 0;
+            return bLen - aLen;
+        }
+        return String(aSource?.[sortOption] ?? '').localeCompare(String(bSource?.[sortOption] ?? ''));
+    })
+
+
+    return (
+        <>
+            <Layout>
+                <PageTitle1 subtitle={props.subtitle}>
+                    {props.title ?? "Catalog"}
+                </PageTitle1>
+                {props.notices}
+                <div className="catalog-container31">
+                    <div className="catalog-container38">
+                        <CatalogControls
+                            idPrefix="admin-catalog-controls"
+                            searchValue={searchInput}
+                            onSearchValueChange={setSearchInput}
+                            onSearchSubmit={() => handleSearchChange({ target: { value: searchInput.replace(/^0+(?=\d)/, '') } })}
+                            sortValue={sortOption}
+                            sortOptions={props.sortOptions}
+                            onSortChange={(value) => handleSortChange({ target: { value } })}
+                            filters={props.filters}
+                            filterValues={router.query}
+                            onFilterChange={(name, value) => handleFilterChange({ target: { name, value } })}
+                            activeFilters={Object.entries(router.query)
+                                .filter(([name, value]) => name !== 'page' && value !== '')
+                                .map(([name, value]) => ({ name, value: String(value) }))}
+                            onClearFilter={(name) => handleFilterChange({ target: { name, value: '' } })}
+                            resultCount={sortedItems.length}
+                        />
+
+                        <SchemaCatalog
+                            mergedData={sortedItems}
+                            uiSchema={props.uiSchema}
+                        />
+                    </div>
+                </div>
+            </Layout>
+            <style jsx>
+                {
+                    `
+
+        .sort-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background-color: var(--dl-color-theme-secondary2);
+        }
+        .filter-header-container {
+            display: none;
+            flex-direction: row;
+            background-color: var(--dl-color-theme-secondary2);
+            width: 100%;
+            padding: 10px;
+            gap: 10px;
+            align-items: center;
+        }
+        .filter-header-container span {
+            color: var(--dl-color-theme-primary1);
+            font-weight: 600;
+        }
+        .filter-header-container div {
+            flex-grow: 1;
+            height: 6px;
+            border-top: 2px solid var(--dl-color-theme-primary2);
+            border-bottom: 2px solid var(--dl-color-theme-primary2);
+        }
+        filter-sort-container {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+            width: 1000px;
+        }
+        .search-button {
+            background-color: var(--dl-color-theme-primary2);
+        }
+        .searchbar {
+            display: flex;
+            align-items: stretch;
+        }
+        .search-button {
+            padding: 0px;
+            border-left: 4px solid var(--dl-color-theme-primary1);
+        }
+        .search-button:hover svg {
+            fill: var(--dl-color-theme-primary2);
+        }
+        .search-button:hover {
+            background-color: var(--dl-color-theme-secondary2);}
+        .result-info-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 1em;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+        .searchbar-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            background-color: var(--dl-color-theme-secondary2);
+            padding: 10px;
+        }
+        .searchbar-container input {
+            width: 18em;
+            height: 2em;
+            border: none;
+            background-color: var(--dl-color-theme-primary2);
+            font-size: 1.2em;
+            padding: 1em;
+            font-weight: 500;
+        }
+        #header-search {
+            background-color: var(--dl-color-theme-secondary1);
+            width: auto;
+            margin-right: 20px
+        }
+        #header-search input {
+            width: 14em;
+            height: 1.5em;
+            font-size: 1em;
+        }
+        .catalog-container31 {
+            gap: var(--dl-space-space-halfunit);
+            flex: 0 0 auto;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+          }
+        .catalog-accordion1 {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+          }
+        .catalog-trigger1 {
+            cursor: pointer;
+            display: none;
+            padding-top: var(--dl-space-space-halfunit);
+            padding-left: var(--dl-space-space-oneandhalfunits);
+            padding-right: var(--dl-space-space-unit);
+            padding-bottom: var(--dl-space-space-halfunit);
+            background-color: #d9d9d9;
+          }
+        .catalog-summary1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        .catalog-icon-container1 {
+            transition: transform 0.3s ease-in-out;
+          }
+        .catalog-container38 {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+        .catalog-container39 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background-color: var(--dl-color-theme-secondary2);
+            gap: 10px;
+            padding: 10px;
+            flex-wrap: wrap;
+            border-bottom: 3 px solid var(--dl-color-theme-primary1);
+          }
+        .catalog-container39 input {
+            font-size: 20px;
+            background-color: var(--dl-color-theme-primary2);
+
+        }
+        
+        .catalog-container39 span {
+            color: var(--dl-color-theme-primary2);
+        }
+       
+        .catalog-sorty-by {
+            fill: var(--dl-color-theme-neutral-light);
+            color: var(--dl-color-theme-neutral-light);
+            font-size: 1em;
+            font-style: normal;
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+        .catalog-select {
+            font-size: 1em;
+            align-self: center;
+            padding-left: var(--dl-space-space-halfunit);
+            padding-right: var(--dl-space-space-halfunit);
+            background-color: var(--dl-color-theme-primary1);
+          }
+        .catalog-container40 {
+            gap: var(--dl-space-space-unit);
+            flex: 1;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          }
+        .filter-bubble-container {
+            flex: 1;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            background-color: var(--dl-color-theme-secondary2);
+            padding: 10px;
+            gap: 5px;
+            flex-wrap: wrap;
+          }
+        .filter-bubble-container > span {
+            color: var(--dl-color-theme-primary2);
+            padding: 10px;
+            font-weight: 700;
+        }
+        .filter-bubble {
+            border-radius: 8px;
+            padding: 5px;
+            background-color: var(--dl-color-theme-primary2);
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+          .filter-bubble-name {
+            font-size: 18px;
+            font-weight: 700;
+          }
+          .filter-bubble-button {
+            background-color: var(--dl-color-theme-secondary2);
+            cursor: pointer;
+          }
+          .filter-bubble-x {
+            font-size: 20px;
+            font-weight: bolder;
+            color: var(--dl-color-theme-primary2);
+
+          }
+        .catalog-container32 {
+            gap: 8px;
+            width: auto;
+            height: auto;
+            display: flex;
+            padding: var(--dl-space-space-halfunit);
+            align-items: flex-start;
+            flex-direction: column;
+            background-color: var(--dl-color-theme-secondary2);
+          }
+        .catalog-accordion2 {
+            width: 170px;
+            display: flex;
+            max-height: 230px;
+            flex-direction: column;
+          }
+        @media (max-width: 1200px) {
+            .catalog-container31 {
+              flex-direction: column;
+            }
+            .catalog-container32 {
+              flex-direction: row;
+              flex-wrap: wrap;
+            }
+              .catalog-accordion1 {
+              width: 100%;
+            }
+            .catalog-container39 {
+                flex-wrap: wrap;
+                height: auto;
+            }
+            .catalog-container39 input {
+                margin: 10px;
+            }
+        }
+        @media (max-width: 680px) {
+            .catalog-container40 {
+                grid-template-columns: 1;
+            }
+            #header-search input {
+                width: 100%;
+            }
+            .filter-header-container {
+                display: flex;
+            }
+            .filter-sort-container {
+                display: flex;
+            }
+        }
+                `
+                }
+            </style>
+        </>
+    );
+}
+
+export default Catalog

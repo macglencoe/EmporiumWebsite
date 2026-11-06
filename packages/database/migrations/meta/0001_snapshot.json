@@ -1,0 +1,1193 @@
+{
+  "id": "686fb6c8-11a3-490c-9d08-361a92dcf314",
+  "prevId": "240e8cf8-7396-4a38-b48f-a8638bf1665d",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.caffeine_details": {
+      "name": "caffeine_details",
+      "schema": "",
+      "columns": {
+        "product_id": {
+          "name": "product_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "roast": {
+          "name": "roast",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "origin": {
+          "name": "origin",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "type": {
+          "name": "type",
+          "type": "caffeine_type",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "caffeine_details_product_id_products_id_fk": {
+          "name": "caffeine_details_product_id_products_id_fk",
+          "tableFrom": "caffeine_details",
+          "columnsFrom": [
+            "product_id"
+          ],
+          "tableTo": "products",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.cigar_details": {
+      "name": "cigar_details",
+      "schema": "",
+      "columns": {
+        "product_id": {
+          "name": "product_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "wrapper": {
+          "name": "wrapper",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "binder": {
+          "name": "binder",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "filler": {
+          "name": "filler",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "flavor_profile": {
+          "name": "flavor_profile",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "strength": {
+          "name": "strength",
+          "type": "cigar_strength",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "podcast_link": {
+          "name": "podcast_link",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "eds_pick_at": {
+          "name": "eds_pick_at",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "teds_pick_at": {
+          "name": "teds_pick_at",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stick_figures_at": {
+          "name": "stick_figures_at",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "cigar_details_product_id_products_id_fk": {
+          "name": "cigar_details_product_id_products_id_fk",
+          "tableFrom": "cigar_details",
+          "columnsFrom": [
+            "product_id"
+          ],
+          "tableTo": "products",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.cigar_variants": {
+      "name": "cigar_variants",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "product_id": {
+          "name": "product_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "size": {
+          "name": "size",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "barcode": {
+          "name": "barcode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "in_stock": {
+          "name": "in_stock",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "price": {
+          "name": "price",
+          "type": "numeric(10, 2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sort_order": {
+          "name": "sort_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        }
+      },
+      "indexes": {
+        "cigar_variants_product_idx": {
+          "name": "cigar_variants_product_idx",
+          "columns": [
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        },
+        "cigar_variants_barcode_idx": {
+          "name": "cigar_variants_barcode_idx",
+          "columns": [
+            {
+              "expression": "barcode",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        }
+      },
+      "foreignKeys": {
+        "cigar_variants_product_id_products_id_fk": {
+          "name": "cigar_variants_product_id_products_id_fk",
+          "tableFrom": "cigar_variants",
+          "columnsFrom": [
+            "product_id"
+          ],
+          "tableTo": "products",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "cigar_variants_size_not_blank": {
+          "name": "cigar_variants_size_not_blank",
+          "value": "\"cigar_variants\".\"size\" is null or length(trim(\"cigar_variants\".\"size\")) > 0"
+        },
+        "cigar_variants_barcode_not_blank": {
+          "name": "cigar_variants_barcode_not_blank",
+          "value": "\"cigar_variants\".\"barcode\" is null or length(trim(\"cigar_variants\".\"barcode\")) > 0"
+        },
+        "cigar_variants_price_nonnegative": {
+          "name": "cigar_variants_price_nonnegative",
+          "value": "\"cigar_variants\".\"price\" is null or \"cigar_variants\".\"price\" >= 0"
+        },
+        "cigar_variants_sort_order_nonnegative": {
+          "name": "cigar_variants_sort_order_nonnegative",
+          "value": "\"cigar_variants\".\"sort_order\" >= 0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.pipe_details": {
+      "name": "pipe_details",
+      "schema": "",
+      "columns": {
+        "product_id": {
+          "name": "product_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "material": {
+          "name": "material",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pipe_type": {
+          "name": "pipe_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "pipe_details_product_id_products_id_fk": {
+          "name": "pipe_details_product_id_products_id_fk",
+          "tableFrom": "pipe_details",
+          "columnsFrom": [
+            "product_id"
+          ],
+          "tableTo": "products",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.product_images": {
+      "name": "product_images",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "product_id": {
+          "name": "product_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "url": {
+          "name": "url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "alt_text": {
+          "name": "alt_text",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sort_order": {
+          "name": "sort_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "is_primary": {
+          "name": "is_primary",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "product_images_one_primary_per_product": {
+          "name": "product_images_one_primary_per_product",
+          "columns": [
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "with": {},
+          "method": "btree",
+          "where": "\"product_images\".\"is_primary\"",
+          "concurrently": false
+        },
+        "product_images_product_idx": {
+          "name": "product_images_product_idx",
+          "columns": [
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        }
+      },
+      "foreignKeys": {
+        "product_images_product_id_products_id_fk": {
+          "name": "product_images_product_id_products_id_fk",
+          "tableFrom": "product_images",
+          "columnsFrom": [
+            "product_id"
+          ],
+          "tableTo": "products",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "product_images_product_url_unique": {
+          "name": "product_images_product_url_unique",
+          "columns": [
+            "product_id",
+            "url"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "product_images_url_not_blank": {
+          "name": "product_images_url_not_blank",
+          "value": "length(trim(\"product_images\".\"url\")) > 0"
+        },
+        "product_images_sort_order_nonnegative": {
+          "name": "product_images_sort_order_nonnegative",
+          "value": "\"product_images\".\"sort_order\" >= 0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.products": {
+      "name": "products",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "type": {
+          "name": "type",
+          "type": "product_type",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "slug": {
+          "name": "slug",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "brand": {
+          "name": "brand",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "image_url": {
+          "name": "image_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hidden": {
+          "name": "hidden",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "published": {
+          "name": "published",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "date_added": {
+          "name": "date_added",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "version": {
+          "name": "version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 1
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "published_at": {
+          "name": "published_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "products_type_idx": {
+          "name": "products_type_idx",
+          "columns": [
+            {
+              "expression": "type",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        },
+        "products_brand_idx": {
+          "name": "products_brand_idx",
+          "columns": [
+            {
+              "expression": "brand",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        },
+        "products_visibility_idx": {
+          "name": "products_visibility_idx",
+          "columns": [
+            {
+              "expression": "type",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "published",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "hidden",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        },
+        "products_date_added_idx": {
+          "name": "products_date_added_idx",
+          "columns": [
+            {
+              "expression": "date_added",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "products_slug_unique": {
+          "name": "products_slug_unique",
+          "columns": [
+            "slug"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "products_slug_not_blank": {
+          "name": "products_slug_not_blank",
+          "value": "length(trim(\"products\".\"slug\")) > 0"
+        },
+        "products_name_not_blank": {
+          "name": "products_name_not_blank",
+          "value": "length(trim(\"products\".\"name\")) > 0"
+        },
+        "products_description_length": {
+          "name": "products_description_length",
+          "value": "\"products\".\"description\" is null or length(\"products\".\"description\") <= 2000"
+        },
+        "products_version_positive": {
+          "name": "products_version_positive",
+          "value": "\"products\".\"version\" > 0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.tobacco_components": {
+      "name": "tobacco_components",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "product_id": {
+          "name": "product_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "component": {
+          "name": "component",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sort_order": {
+          "name": "sort_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        }
+      },
+      "indexes": {
+        "tobacco_components_product_idx": {
+          "name": "tobacco_components_product_idx",
+          "columns": [
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        }
+      },
+      "foreignKeys": {
+        "tobacco_components_product_id_products_id_fk": {
+          "name": "tobacco_components_product_id_products_id_fk",
+          "tableFrom": "tobacco_components",
+          "columnsFrom": [
+            "product_id"
+          ],
+          "tableTo": "products",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "tobacco_components_product_component_unique": {
+          "name": "tobacco_components_product_component_unique",
+          "columns": [
+            "product_id",
+            "component"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "tobacco_components_component_not_blank": {
+          "name": "tobacco_components_component_not_blank",
+          "value": "length(trim(\"tobacco_components\".\"component\")) > 0"
+        },
+        "tobacco_components_sort_order_nonnegative": {
+          "name": "tobacco_components_sort_order_nonnegative",
+          "value": "\"tobacco_components\".\"sort_order\" >= 0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.tobacco_details": {
+      "name": "tobacco_details",
+      "schema": "",
+      "columns": {
+        "product_id": {
+          "name": "product_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "family": {
+          "name": "family",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sale_form": {
+          "name": "sale_form",
+          "type": "tobacco_sale_form",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "tobacco_details_product_id_products_id_fk": {
+          "name": "tobacco_details_product_id_products_id_fk",
+          "tableFrom": "tobacco_details",
+          "columnsFrom": [
+            "product_id"
+          ],
+          "tableTo": "products",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.audit_events": {
+      "name": "audit_events",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "change_set_id": {
+          "name": "change_set_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "product_id": {
+          "name": "product_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "actor": {
+          "name": "actor",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'store-admin'"
+        },
+        "action": {
+          "name": "action",
+          "type": "audit_action",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "before": {
+          "name": "before",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "after": {
+          "name": "after",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "audit_events_change_set_idx": {
+          "name": "audit_events_change_set_idx",
+          "columns": [
+            {
+              "expression": "change_set_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        },
+        "audit_events_product_created_idx": {
+          "name": "audit_events_product_created_idx",
+          "columns": [
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "created_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        }
+      },
+      "foreignKeys": {
+        "audit_events_change_set_id_change_sets_id_fk": {
+          "name": "audit_events_change_set_id_change_sets_id_fk",
+          "tableFrom": "audit_events",
+          "columnsFrom": [
+            "change_set_id"
+          ],
+          "tableTo": "change_sets",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "set null"
+        },
+        "audit_events_product_id_products_id_fk": {
+          "name": "audit_events_product_id_products_id_fk",
+          "tableFrom": "audit_events",
+          "columnsFrom": [
+            "product_id"
+          ],
+          "tableTo": "products",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "set null"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "audit_events_actor_not_blank": {
+          "name": "audit_events_actor_not_blank",
+          "value": "length(trim(\"audit_events\".\"actor\")) > 0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.change_set_items": {
+      "name": "change_set_items",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "change_set_id": {
+          "name": "change_set_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "product_id": {
+          "name": "product_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "operation": {
+          "name": "operation",
+          "type": "change_operation",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "base_version": {
+          "name": "base_version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "payload": {
+          "name": "payload",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "change_set_items_change_set_idx": {
+          "name": "change_set_items_change_set_idx",
+          "columns": [
+            {
+              "expression": "change_set_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        },
+        "change_set_items_product_idx": {
+          "name": "change_set_items_product_idx",
+          "columns": [
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        }
+      },
+      "foreignKeys": {
+        "change_set_items_change_set_id_change_sets_id_fk": {
+          "name": "change_set_items_change_set_id_change_sets_id_fk",
+          "tableFrom": "change_set_items",
+          "columnsFrom": [
+            "change_set_id"
+          ],
+          "tableTo": "change_sets",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "cascade"
+        },
+        "change_set_items_product_id_products_id_fk": {
+          "name": "change_set_items_product_id_products_id_fk",
+          "tableFrom": "change_set_items",
+          "columnsFrom": [
+            "product_id"
+          ],
+          "tableTo": "products",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "restrict"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "change_set_items_shape": {
+          "name": "change_set_items_shape",
+          "value": "(\n        (\"change_set_items\".\"operation\" = 'create' and \"change_set_items\".\"product_id\" is null and \"change_set_items\".\"base_version\" is null and \"change_set_items\".\"payload\" is not null)\n        or (\"change_set_items\".\"operation\" = 'update' and \"change_set_items\".\"product_id\" is not null and \"change_set_items\".\"base_version\" > 0 and \"change_set_items\".\"payload\" is not null)\n        or (\"change_set_items\".\"operation\" = 'delete' and \"change_set_items\".\"product_id\" is not null and \"change_set_items\".\"base_version\" > 0 and \"change_set_items\".\"payload\" is null)\n      )"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.change_sets": {
+      "name": "change_sets",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "status": {
+          "name": "status",
+          "type": "change_set_status",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'draft'"
+        },
+        "message": {
+          "name": "message",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "published_at": {
+          "name": "published_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "change_sets_status_updated_idx": {
+          "name": "change_sets_status_updated_idx",
+          "columns": [
+            {
+              "expression": "status",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "updated_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "change_sets_message_not_blank": {
+          "name": "change_sets_message_not_blank",
+          "value": "\"change_sets\".\"message\" is null or length(trim(\"change_sets\".\"message\")) > 0"
+        }
+      },
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {
+    "public.audit_action": {
+      "name": "audit_action",
+      "schema": "public",
+      "values": [
+        "create",
+        "update",
+        "delete",
+        "publish",
+        "image_upload",
+        "image_delete"
+      ]
+    },
+    "public.caffeine_type": {
+      "name": "caffeine_type",
+      "schema": "public",
+      "values": [
+        "Coffee",
+        "Tea"
+      ]
+    },
+    "public.change_operation": {
+      "name": "change_operation",
+      "schema": "public",
+      "values": [
+        "create",
+        "update",
+        "delete"
+      ]
+    },
+    "public.change_set_status": {
+      "name": "change_set_status",
+      "schema": "public",
+      "values": [
+        "draft",
+        "published",
+        "discarded"
+      ]
+    },
+    "public.cigar_strength": {
+      "name": "cigar_strength",
+      "schema": "public",
+      "values": [
+        "Mild",
+        "Mild-Medium",
+        "Medium",
+        "Medium-Full",
+        "Full"
+      ]
+    },
+    "public.product_type": {
+      "name": "product_type",
+      "schema": "public",
+      "values": [
+        "cigar",
+        "tobacco",
+        "pipe",
+        "caffeine"
+      ]
+    },
+    "public.tobacco_sale_form": {
+      "name": "tobacco_sale_form",
+      "schema": "public",
+      "values": [
+        "Bulk",
+        "Tin"
+      ]
+    }
+  },
+  "schemas": {},
+  "views": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
