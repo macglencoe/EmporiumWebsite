@@ -18,9 +18,9 @@ test('revalidation requires a strong configured bearer secret', async () => {
 test('revalidation accepts unique local paths', async () => {
   const secret = 'test-secret-that-is-at-least-32-characters'; process.env.REVALIDATION_SECRET = secret;
   const res = response();
-  await handler({ method: 'POST', headers: { authorization: `Bearer ${secret}` }, body: { paths: ['/', '/cigars', '/cigars'] } }, res);
+  await handler({ method: 'POST', headers: { authorization: `Bearer ${secret}` }, body: { paths: ['/', '/cigars', '/cigars/'] } }, res);
   assert.equal(res.state.statusCode, 200);
-  assert.deepEqual(res.state.paths, ['/', '/cigars']);
+  assert.deepEqual(res.state.paths, ['/', '/cigars/']);
 });
 
 test('revalidation rejects external and protocol-relative paths', async () => {
@@ -29,4 +29,21 @@ test('revalidation rejects external and protocol-relative paths', async () => {
     const res = response(); await handler({ method: 'POST', headers: { authorization: `Bearer ${secret}` }, body: { paths: [path] } }, res);
     assert.equal(res.state.statusCode, 400);
   }
+});
+
+test('a signed sitemap refresh reports a cache failure without losing page results', async () => {
+  const secret = 'test-secret-that-is-at-least-32-characters';
+  process.env.REVALIDATION_SECRET = secret;
+  const res = response();
+  await handler({
+    method: 'POST',
+    headers: { authorization: `Bearer ${secret}` },
+    body: { paths: ['/tobacco'], sitemapChanged: true },
+  }, res, async () => { throw new Error('Cache unavailable'); });
+  assert.equal(res.state.statusCode, 500);
+  assert.deepEqual(res.state.paths, ['/tobacco/']);
+  assert.deepEqual(res.state.body, {
+    revalidated: 1,
+    failed: [{ path: '/sitemap.xml', message: 'Cache unavailable' }],
+  });
 });

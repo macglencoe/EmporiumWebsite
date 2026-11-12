@@ -123,17 +123,98 @@ export async function exportCatalog(database) {
 
 const camelize = (row) => Object.fromEntries(Object.entries(row).map(([key, value]) => [key.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase()), value]));
 
-export async function exportPublicCatalog(connectionString) {
+const publicRelations = [
+  ['images', 'public_product_images'],
+  ['cigars', 'public_cigar_details', 'cigar'],
+  ['variants', 'public_cigar_variants', 'cigar'],
+  ['tobaccos', 'public_tobacco_details', 'tobacco'],
+  ['components', 'public_tobacco_components', 'tobacco'],
+  ['pipes', 'public_pipe_details', 'pipe'],
+  ['caffeine', 'public_caffeine_details', 'caffeine'],
+];
+const publicSnapshot = { isolationLevel: 'RepeatableRead', readOnly: true };
+
+function publicCatalogQueries(query, type, slug) {
+  const params = type === undefined ? [] : [type];
+  if (slug !== undefined) params.push(slug);
+  const filter = params.length === 0 ? '' : params.length === 1 ? ' where type = $1' : ' where type = $1 and slug = $2';
+  const scope = filter ? ` where product_id in (select id from public_products${filter})` : '';
+  return [
+    ['base', query.query(`select * from public_products${filter}`, params)],
+    ...publicRelations
+      .filter(([, , relationType]) => !type || !relationType || type === relationType)
+      .map(([key, view]) => [key, query.query(`select * from ${view}${scope}`, params)]),
+  ];
+}
+
+function assemblePublicCatalog(queries, results) {
+  const { base, images, cigars = [], variants = [], tobaccos = [], components = [], pipes = [], caffeine = [] } =
+    Object.fromEntries(queries.map(([key], index) => [key, results[index].map(camelize)]));
+  base.sort((a, b) => a.type.localeCompare(b.type) || a.slug.localeCompare(b.slug));
+  for (const rows of [images, variants, components]) {
+    rows.sort((a, b) => a.productId.localeCompare(b.productId) || a.sortOrder - b.sortOrder);
+  }
+  return assembleCatalog(base, images, cigars, variants, tobaccos, components, pipes, caffeine);
+}
+
+export async function exportPublicCatalog(connectionString, type) {
   if (!connectionString) throw new Error('A public Neon connection string is required');
   const query = neon(connectionString);
-  const tables = ['public_products', 'public_product_images', 'public_cigar_details', 'public_cigar_variants', 'public_tobacco_details', 'public_tobacco_components', 'public_pipe_details', 'public_caffeine_details'];
-  const rows = await Promise.all(tables.map((table) => query.query(`select * from ${table}`)));
-  const [base, images, cigars, variants, tobaccos, components, pipes, caffeine] = rows.map((result) => result.map(camelize));
-  base.sort((a, b) => a.type.localeCompare(b.type) || a.slug.localeCompare(b.slug));
-  images.sort((a, b) => a.productId.localeCompare(b.productId) || a.sortOrder - b.sortOrder);
-  variants.sort((a, b) => a.productId.localeCompare(b.productId) || a.sortOrder - b.sortOrder);
-  components.sort((a, b) => a.productId.localeCompare(b.productId) || a.sortOrder - b.sortOrder);
-  return assembleCatalog(base, images, cigars, variants, tobaccos, components, pipes, caffeine);
+  const queries = publicCatalogQueries(query, type);
+  const results = await query.transaction(queries.map(([, statement]) => statement), publicSnapshot);
+  return assemblePublicCatalog(queries, results);
+}
+
+function publicNeighborQuery(query, type, slugs) {
+  // Public slugs use lowercase ASCII letters, digits, and hyphens. C collation
+  // keeps their ordering consistent with the catalog's JavaScript sort.
+  return query`
+    select previous.slug as previous_slug, previous.name as previous_name,
+           following.slug as next_slug, following.name as next_name
+    from unnest(${slugs}::text[]) as anchor(slug)
+    left join lateral (
+      select slug, name from public_products
+      where type = ${type} and slug collate "C" < anchor.slug collate "C"
+      order by slug collate "C" desc limit 1
+    ) as previous on true
+    left join lateral (
+      select slug, name from public_products
+      where type = ${type} and slug collate "C" > anchor.slug collate "C"
+      order by slug collate "C" limit 1
+    ) as following on true
+  `;
+}
+
+export async function findPublicNeighborSlugs(connectionString, type, slugs) {
+  if (!slugs.length) return [];
+  const rows = await publicNeighborQuery(neon(connectionString), type, slugs);
+  return [...new Set(rows.flatMap((row) => [row.previous_slug, row.next_slug]).filter(Boolean))];
+}
+
+export async function findPublicProduct(connectionString, type, slug) {
+  const query = neon(connectionString);
+  const queries = publicCatalogQueries(query, type, slug);
+  const results = await query.transaction([
+    ...queries.map(([, statement]) => statement),
+    publicNeighborQuery(query, type, [slug]),
+  ], publicSnapshot);
+  const [product] = assemblePublicCatalog(queries, results);
+  if (!product) return null;
+  const [{ previous_slug, previous_name, next_slug, next_name }] = results[queries.length];
+  return {
+    product,
+    prev: previous_slug ? { slug: previous_slug, name: previous_name } : null,
+    next: next_slug ? { slug: next_slug, name: next_name } : null,
+  };
+}
+
+export async function listPublicSitemapSlugs(connectionString) {
+  const query = neon(connectionString);
+  return query`
+    select type, slug from public_products
+    where type in ('cigar', 'tobacco')
+    order by type, slug collate "C"
+  `;
 }
 
 function assembleCatalog(base, images, cigars, variants, tobaccos, components, pipes, caffeine) {

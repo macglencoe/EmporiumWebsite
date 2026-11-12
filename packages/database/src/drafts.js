@@ -114,7 +114,13 @@ export async function publishDraft(connectionString, changeSetId) {
       const after = item.operation === 'delete' ? null : await mapProductRow(client, item.payload.id);
       await client.query('insert into audit_events(change_set_id,product_id,actor,action,before,after) values($1,$2,$3,$4,$5,$6)', [changeSetId, item.operation === 'delete' ? null : item.payload.id, 'store-admin', item.operation, before, after]);
       const oldUrl = before?.imageUrl ?? null; const newUrl = after?.imageUrl ?? null;
-      publicChanges.push({ type: after?.type ?? before?.type, oldSlug: before?.slug ?? null, newSlug: after?.slug ?? null });
+      publicChanges.push({
+        type: after?.type ?? before?.type,
+        oldSlug: before?.slug ?? null,
+        newSlug: after?.slug ?? null,
+        wasVisible: Boolean(before?.published && !before.hidden),
+        isVisible: Boolean(after?.published && !after.hidden),
+      });
       if (oldUrl !== newUrl) {
         imageChanges.push({ productId: after?.id ?? before?.id ?? null, oldUrl, newUrl });
         if (newUrl) await client.query('insert into audit_events(change_set_id,product_id,actor,action,before,after) values($1,$2,$3,$4,$5,$6)', [changeSetId, after.id, 'store-admin', 'image_upload', oldUrl ? { url: oldUrl } : null, { url: newUrl }]);

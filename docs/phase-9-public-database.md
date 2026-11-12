@@ -8,10 +8,10 @@ Phase 9 converts every public catalog surface from direct JSON imports to one se
 - `DATA_SOURCE=database` reads through the read-only Neon credential in `PUBLIC_DATABASE_URL`.
 - Database mode queries only the eight security-barrier `public_*` views. Hidden and unpublished products are excluded by the database role boundary.
 - Cigars, pipe tobacco, pipes, coffee and tea, homepage features and arrivals, filter pages, and sitemap routes use the shared adapter.
-- Catalog, homepage, filter, and product pages use five-minute ISR by default. Override with `PUBLIC_REVALIDATE_SECONDS`.
+- Catalog, homepage, filter, and product pages use one-hour ISR by default. Override with `PUBLIC_REVALIDATE_SECONDS`.
 - Cigar and tobacco product routes use `fallback: "blocking"`, allowing newly published routes without a full build. Missing, hidden, and unpublished products return 404.
-- `/sitemap.xml` is generated without caching from currently visible database records and no longer depends on checked-in generated XML.
-- `/api/revalidate` accepts signed, local-only path batches. Admin publication revalidates affected product, catalog, filter, and homepage paths; the uncached sitemap needs no purge.
+- `/sitemap.xml` reads visible cigar and tobacco slugs and is cached for an hour on Vercel.
+- `/api/revalidate` accepts signed, local-only path batches. Admin publication revalidates affected product pages, their navigation neighbors, catalog and filter pages, and the homepage. Changes to visible product URLs invalidate the sitemap cache.
 - Revalidation failures are reported as warnings after publication; they do not roll back committed catalog data.
 
 ## Configuration
@@ -22,18 +22,19 @@ Public deployment:
 DATA_SOURCE=database
 PUBLIC_DATABASE_URL=<read-only login granted emporium_reader>
 REVALIDATION_SECRET=<at least 32 random characters>
-PUBLIC_REVALIDATE_SECONDS=300
-SITE_URL=https://kingstreetemporium.com
+PUBLIC_REVALIDATE_SECONDS=3600
+SITE_URL=https://www.kingstreetemporium.com
 ```
 
 Admin deployment:
 
 ```text
-PUBLIC_SITE_URL=https://kingstreetemporium.com
+PUBLIC_SITE_URL=https://www.kingstreetemporium.com
 REVALIDATION_SECRET=<same secret as public deployment>
 ```
 
 Keep `DATA_SOURCE=json` available through cutover and comparison testing.
+Deploy the public project before the admin project so the publish hook can use the new sitemap invalidation flag.
 
 ## Verification
 
