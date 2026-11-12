@@ -108,7 +108,7 @@ export default function TechnicalReferencePage() {
               <tr><td><code>AUTH_SESSION_HOURS</code></td><td>Admin app</td><td>Session length from 1 through 168 hours; defaults to 12.</td></tr>
               <tr><td><code>BLOB_READ_WRITE_TOKEN</code></td><td>Admin app</td><td>Allows authenticated product-image upload and cleanup.</td></tr>
               <tr><td><code>DATA_SOURCE</code></td><td>Public app</td><td><code>database</code> for Neon or <code>json</code> for the fallback catalog.</td></tr>
-              <tr><td><code>PUBLIC_REVALIDATE_SECONDS</code></td><td>Public app</td><td>Public-page cache interval; defaults to 300 seconds.</td></tr>
+              <tr><td><code>PUBLIC_REVALIDATE_SECONDS</code></td><td>Public app</td><td>Public-page cache interval, defaulting to 3,600 seconds.</td></tr>
               <tr><td><code>REVALIDATION_SECRET</code></td><td>Both apps</td><td>Shared secret used to request safe public-page refreshes after publication.</td></tr>
               <tr><td><code>PUBLIC_SITE_URL</code></td><td>Admin app</td><td>Base URL the admin asks to refresh after publication.</td></tr>
               <tr><td><code>SITE_URL</code></td><td>Public app</td><td>Canonical public website address used for routes and sitemap output.</td></tr>

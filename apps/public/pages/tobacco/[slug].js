@@ -19,22 +19,11 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-    const { readPublicCatalog, PUBLIC_REVALIDATE_SECONDS } = await import('../../lib/catalog/server.mjs');
-    const data = await readPublicCatalog('tobacco');
-    const tobaccoIndex = data.findIndex((tobacco) => tobacco.slug === params.slug);
-    const tobacco = data[tobaccoIndex];
-
-    const prevTobacco = tobaccoIndex > 0 ? data[tobaccoIndex - 1] : null;
-    const nextTobacco = tobaccoIndex + 1 < data.length ? data[tobaccoIndex + 1] : null;
-    console.warn(tobaccoIndex)
-    if (!tobacco) return { notFound: true, revalidate: PUBLIC_REVALIDATE_SECONDS };
-    return {
-        props: {
-            tobacco,
-            prev: prevTobacco,
-            next: nextTobacco
-        }, revalidate: PUBLIC_REVALIDATE_SECONDS,
-    };
+    const { readPublicProductPage, PUBLIC_REVALIDATE_SECONDS } = await import('../../lib/catalog/server.mjs');
+    const result = await readPublicProductPage('tobacco', params.slug);
+    if (!result) return { notFound: true, revalidate: PUBLIC_REVALIDATE_SECONDS };
+    const { product: tobacco, prev, next } = result;
+    return { props: { tobacco, prev, next }, revalidate: PUBLIC_REVALIDATE_SECONDS };
 }
 
 
@@ -94,7 +83,6 @@ const TobaccoPage = (props) => {
                         prev={props.prev}
                         next={props.next}
                         href="/tobacco"
-                        nameField="Tobacco Name"
                     />
                     <Disclaimer />
                 </div>

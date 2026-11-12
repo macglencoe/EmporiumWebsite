@@ -22,15 +22,11 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const { readPublicCatalog, PUBLIC_REVALIDATE_SECONDS } = await import('../../../lib/catalog/server.mjs');
-  const data = await readPublicCatalog('cigar');
-  const cigarIndex = data.findIndex((cigar) => cigar.slug === params.slug);
-  const cigar = data[cigarIndex];
-
-  const prevCigar = cigarIndex > 0 ? data[cigarIndex - 1] : null;
-  const nextCigar = cigarIndex + 1 < data.length ? data[cigarIndex + 1] : null;
-  if (!cigar) return { notFound: true, revalidate: PUBLIC_REVALIDATE_SECONDS };
-  return { props: { cigar, next: nextCigar, prev: prevCigar }, revalidate: PUBLIC_REVALIDATE_SECONDS };
+  const { readPublicProductPage, PUBLIC_REVALIDATE_SECONDS } = await import('../../../lib/catalog/server.mjs');
+  const result = await readPublicProductPage('cigar', params.slug);
+  if (!result) return { notFound: true, revalidate: PUBLIC_REVALIDATE_SECONDS };
+  const { product: cigar, prev, next } = result;
+  return { props: { cigar, prev, next }, revalidate: PUBLIC_REVALIDATE_SECONDS };
 }
 
 const CigarPage = (props) => {
@@ -98,7 +94,6 @@ const CigarPage = (props) => {
             prev={props.prev}
             next={props.next}
             href="/cigars"
-            nameField="Cigar Name"
           />
   
           {cigar['Podcast_Link'] && <PodcastLink url={cigar['Podcast_Link']} />}

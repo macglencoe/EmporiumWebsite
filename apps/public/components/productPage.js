@@ -311,12 +311,12 @@ export const Divider = () => (
   <span className="block w-full h-px bg-gradient-to-r from-transparent via-primary1 to-transparent" />
 );
 
-export const Navigation = ({ prev, next, href, nameField }) => {
+export const Navigation = ({ prev, next, href }) => {
   if (!prev && !next) return null;
 
   return (
     <nav className="p-6 grid gap-3 sm:grid-cols-2 mt-3" aria-label="Product pagination">
-      {prev && prev[nameField] && (
+      {prev?.name && (
         <Link href={`..${href}/${prev.slug}`}>
           <a className="group flex items-center justify-start gap-3 bg-primary1/20 hover:bg-primary1/10 rounded-xl p-3 shadow-sm hover:-translate-y-0.5 transition text-secondary1">
             <span className="text-lg" aria-hidden>
@@ -324,17 +324,17 @@ export const Navigation = ({ prev, next, href, nameField }) => {
             </span>
             <div className="text-left">
               <p className="text-xs uppercase tracking-[0.12em] text-secondary2">Previous</p>
-              <p className="font-bold group-hover:underline">{prev[nameField]}</p>
+              <p className="font-bold group-hover:underline">{prev.name}</p>
             </div>
           </a>
         </Link>
       )}
-      {next && next[nameField] && (
+      {next?.name && (
         <Link href={`..${href}/${next.slug}`}>
           <a className="group flex items-center justify-end gap-3 bg-primary1/20 hover:bg-primary1/10 rounded-xl p-3 shadow-sm hover:-translate-y-0.5 transition text-secondary1">
             <div className="text-right">
               <p className="text-xs uppercase tracking-[0.12em] text-secondary2">Next</p>
-              <p className="font-bold group-hover:underline">{next[nameField]}</p>
+              <p className="font-bold group-hover:underline">{next.name}</p>
             </div>
             <span className="text-lg" aria-hidden><PiArrowRightBold size={16} /></span>
           </a>

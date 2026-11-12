@@ -53,7 +53,7 @@ async function handler(req, res) {
   const published = await publishDraft(adminDatabaseUrl(), draft.id);
   await Promise.allSettled(published.imageChanges.filter(({ oldUrl }) => oldUrl).map(({ oldUrl }) => deleteImageIfUnreferenced(database, oldUrl)));
   let revalidation;
-  try { revalidation = await revalidatePublicSite(published.publicChanges); }
+  try { revalidation = await revalidatePublicSite(published.publicChanges, adminDatabaseUrl()); }
   catch (error) { revalidation = { warning: error.message }; }
   return res.status(200).json({ success: true, destination, counts: result.counts, published, revalidation });
 }
