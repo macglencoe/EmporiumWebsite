@@ -47,3 +47,40 @@ test('a signed sitemap refresh reports a cache failure without losing page resul
     failed: [{ path: '/sitemap.xml', message: 'Cache unavailable' }],
   });
 });
+
+test('a signed sitemap-only refresh leaves page caches untouched', async () => {
+  const secret = 'test-secret-that-is-at-least-32-characters';
+  process.env.REVALIDATION_SECRET = secret;
+  const res = response();
+  let invalidated = false;
+  await handler({
+    method: 'POST',
+    headers: { authorization: `Bearer ${secret}` },
+    body: { paths: [], sitemapChanged: true },
+  }, res, async () => { invalidated = true; });
+  assert.equal(res.state.statusCode, 200);
+  assert.equal(invalidated, true);
+  assert.deepEqual(res.state.paths, []);
+  assert.deepEqual(res.state.body, { revalidated: 0, failed: [] });
+});
+
+test('a signed connection check returns public settings without invalidating caches', async (t) => {
+  const secret = 'test-secret-that-is-at-least-32-characters';
+  process.env.REVALIDATION_SECRET = secret;
+  const previousSource = process.env.DATA_SOURCE;
+  process.env.DATA_SOURCE = 'database';
+  t.after(() => {
+    if (previousSource === undefined) delete process.env.DATA_SOURCE;
+    else process.env.DATA_SOURCE = previousSource;
+  });
+  const res = response();
+  await handler({
+    method: 'POST',
+    headers: { authorization: `Bearer ${secret}` },
+    body: { action: 'check' },
+  }, res, async () => assert.fail('Connection check must not invalidate the sitemap'));
+  assert.equal(res.state.statusCode, 200);
+  assert.equal(res.state.body.dataSource, 'database');
+  assert.ok(Number.isFinite(res.state.body.revalidateSeconds));
+  assert.deepEqual(res.state.paths, []);
+});

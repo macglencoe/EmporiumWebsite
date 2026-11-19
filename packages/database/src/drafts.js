@@ -116,6 +116,19 @@ export async function getPublishedPublicChanges(database, changeSetId) {
   return events.map(({ before, after }) => publicChange(before, after));
 }
 
+export async function listRecentPublications(database) {
+  return database.select({
+    id: changeSets.id,
+    note: changeSets.message,
+    publishedAt: changeSets.publishedAt,
+    audit: auditEvents.after,
+  }).from(changeSets)
+    .innerJoin(auditEvents, and(eq(auditEvents.changeSetId, changeSets.id), eq(auditEvents.action, 'publish')))
+    .where(eq(changeSets.status, 'published'))
+    .orderBy(desc(changeSets.publishedAt), desc(changeSets.id))
+    .limit(10);
+}
+
 export async function publishDraft(connectionString, changeSetId) {
   const pool = new Pool({ connectionString }); const client = await pool.connect();
   const imageChanges = [];

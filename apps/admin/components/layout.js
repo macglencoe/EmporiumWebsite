@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 import Link from 'next/link'
 import Ksman from '../components/ksman'
 import Toolbar from './toolbar'
-import { PiBarcodeBold, PiExportBold, PiGitCommitBold, PiPlusCircleBold, PiQuestionBold, PiTableBold } from 'react-icons/pi'
+import { PiBarcodeBold, PiExportBold, PiGitCommitBold, PiPlusCircleBold, PiQuestionBold, PiTableBold, PiWrenchBold } from 'react-icons/pi'
 
 const Layout = (props) => {
   const [isActive, setIsActive] = useState(true);
@@ -84,6 +84,10 @@ const Layout = (props) => {
                   {
                     href: '/help', label: 'Help & Documentation',
                     icon: <PiQuestionBold size={26}/>
+                  },
+                  {
+                    href: '/tools', label: 'Developer Tools',
+                    icon: <PiWrenchBold size={26}/>
                   }
                 ]}
                 style={{ backgroundColor: 'var(--dl-color-theme-secondary1)' }}
