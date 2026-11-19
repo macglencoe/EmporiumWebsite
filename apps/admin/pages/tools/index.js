@@ -31,8 +31,7 @@ export default function ToolsPage() {
                 <a>Neon Monitoring</a>
               </Link>
               <p>
-                View historical compute consumption,
-                usage trends, and cost estimates.
+                View historical compute consumption and usage trends for the Neon database server.
               </p>
             </li>
           </ul>
