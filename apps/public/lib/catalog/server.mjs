@@ -2,7 +2,7 @@ import { exportLegacyProduct } from '@emporium/domain';
 import { exportPublicCatalog, findPublicProduct, listPublicSitemapSlugs } from '@emporium/database/catalog';
 import fs from 'node:fs/promises';
 
-export const PUBLIC_REVALIDATE_SECONDS = Number(process.env.PUBLIC_REVALIDATE_SECONDS || 3600);
+export const PUBLIC_REVALIDATE_SECONDS = Number(process.env.PUBLIC_REVALIDATE_SECONDS || 86400);
 export const PUBLIC_SITEMAP_CACHE_TAG = 'public-catalog-sitemap';
 const TYPES = ['cigar', 'tobacco', 'pipe', 'caffeine'];
 const PRODUCT_NAME_FIELDS = { cigar: 'Cigar Name', tobacco: 'Tobacco Name' };
