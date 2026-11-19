@@ -31,7 +31,7 @@ The current production site must remain available throughout development. Produc
 - Phase 8 was completed on 2026-10-14.
 - See [`docs/phase-8-image-handling.md`](docs/phase-8-image-handling.md) for the consolidated, validated, and failure-safe image lifecycle.
 - Phase 9 was completed on 2026-10-14.
-- See [`docs/phase-9-public-database.md`](docs/phase-9-public-database.md) for the public database source, ISR, visibility, sitemap, and signed revalidation workflow.
+- See [`docs/phase-9-public-database.md`](docs/phase-9-public-database.md) for the public database source, on-demand revalidation, visibility, sitemap, and signed revalidation workflow.
 
 ## Terminology
 
@@ -367,7 +367,7 @@ Database-backed does not require every public request to be uncached.
 Use:
 
 - server-only Neon queries;
-- ISR for catalogs and product pages;
+- on-demand revalidation for cached catalogs and product pages, with uncached product pages generated on their first request;
 - `fallback: "blocking"` while using the Pages Router;
 - targeted, signed revalidation after publication;
 - server-side pagination and filtering when warranted.

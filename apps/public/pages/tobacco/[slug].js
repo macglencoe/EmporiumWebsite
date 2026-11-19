@@ -19,11 +19,11 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-    const { readPublicProductPage, PUBLIC_REVALIDATE_SECONDS } = await import('../../lib/catalog/server.mjs');
+    const { readPublicProductPage } = await import('../../lib/catalog/server.mjs');
     const result = await readPublicProductPage('tobacco', params.slug);
-    if (!result) return { notFound: true, revalidate: PUBLIC_REVALIDATE_SECONDS };
+    if (!result) return { notFound: true };
     const { product: tobacco, prev, next } = result;
-    return { props: { tobacco, prev, next }, revalidate: PUBLIC_REVALIDATE_SECONDS };
+    return { props: { tobacco, prev, next } };
 }
 
 

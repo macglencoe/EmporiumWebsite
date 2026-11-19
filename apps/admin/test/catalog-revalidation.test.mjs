@@ -77,13 +77,30 @@ test('configuration omits the signing secret and reads storefront settings and p
   t.mock.method(globalThis, 'fetch', async (_, { headers, body }) => {
     assert.equal(headers.Authorization, `Bearer ${process.env.REVALIDATION_SECRET}`);
     const { action } = JSON.parse(body);
-    if (action === 'check') return Response.json({ dataSource: 'json', revalidateSeconds: 3600 });
+    if (action === 'check') return Response.json({ dataSource: 'json', revalidationMode: 'on-demand' });
     assert.equal(action, 'list-products');
     return Response.json({ products: [{ type: 'cigar', slug: 'current' }, { type: 'tobacco', slug: 'current' }] });
   });
-  assert.deepEqual(await checkPublicRefreshConnection(), { dataSource: 'json', revalidateSeconds: 3600 });
+  assert.deepEqual(await checkPublicRefreshConnection(), { dataSource: 'json', revalidationMode: 'on-demand' });
   const paths = await listStorefrontRefreshPaths();
   assert.ok(paths.includes('/'));
   assert.ok(paths.includes('/pipes/materials'));
   assert.deepEqual(paths.slice(-2), ['/cigars/current', '/tobacco/current']);
+});
+
+test('connection checks reject missing or unsupported modes and invalid catalog sources', async (t) => {
+  configureRefresh(t);
+  let settings;
+  t.mock.method(globalThis, 'fetch', async () => Response.json(settings));
+  for (settings of [
+    { dataSource: 'json' },
+    { dataSource: 'json', revalidationMode: 'timed' },
+    { dataSource: 'json', revalidationMode: null },
+    { dataSource: 'unknown', revalidationMode: 'on-demand' },
+    null,
+  ]) {
+    await assert.rejects(checkPublicRefreshConnection(), /valid refresh configuration/);
+  }
+  settings = { dataSource: 'database', revalidationMode: 'on-demand' };
+  assert.deepEqual(await checkPublicRefreshConnection(), settings);
 });

@@ -2,7 +2,6 @@ import { exportLegacyProduct } from '@emporium/domain';
 import { exportPublicCatalog, findPublicProduct, listPublicSitemapSlugs } from '@emporium/database/catalog';
 import fs from 'node:fs/promises';
 
-export const PUBLIC_REVALIDATE_SECONDS = Number(process.env.PUBLIC_REVALIDATE_SECONDS || 86400);
 export const PUBLIC_SITEMAP_CACHE_TAG = 'public-catalog-sitemap';
 const TYPES = ['cigar', 'tobacco', 'pipe', 'caffeine'];
 const PRODUCT_NAME_FIELDS = { cigar: 'Cigar Name', tobacco: 'Tobacco Name' };
@@ -60,7 +59,7 @@ export async function readPublicSitemapSlugs() {
 }
 
 export async function publicCatalogProps(type) {
-  return { props: { data: await readPublicCatalog(type) }, revalidate: PUBLIC_REVALIDATE_SECONDS };
+  return { props: { data: await readPublicCatalog(type) } };
 }
 
 export async function publicProductPaths(type) {

@@ -80,7 +80,6 @@ test('a signed connection check returns public settings without invalidating cac
     body: { action: 'check' },
   }, res, async () => assert.fail('Connection check must not invalidate the sitemap'));
   assert.equal(res.state.statusCode, 200);
-  assert.equal(res.state.body.dataSource, 'database');
-  assert.ok(Number.isFinite(res.state.body.revalidateSeconds));
+  assert.deepEqual(res.state.body, { dataSource: 'database', revalidationMode: 'on-demand' });
   assert.deepEqual(res.state.paths, []);
 });

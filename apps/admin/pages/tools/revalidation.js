@@ -146,7 +146,7 @@ export default function PublicCacheRefreshPage() {
               <dt>Signing secret</dt><dd>{configuration.signingSecret}</dd>
               {connection && <>
                 <dt>Public catalog source</dt><dd>{connection.dataSource}</dd>
-                <dt>Page revalidation interval</dt><dd>{quantity(connection.revalidateSeconds, 'second')}</dd>
+                <dt>Page revalidation mode</dt><dd>{connection.revalidationMode === 'on-demand' ? 'On-demand only' : 'Unknown or unsupported'}</dd>
               </>}
             </dl>
             <button type="button" disabled={busy} onClick={checkConnection}>Check connection</button>

@@ -62,10 +62,10 @@ async function requestPublicRefresh(body) {
 
 export async function checkPublicRefreshConnection() {
   const { result } = await requestPublicRefresh({ action: 'check' });
-  if (!['json', 'database'].includes(result?.dataSource) || !Number.isFinite(result.revalidateSeconds)) {
+  if (!['json', 'database'].includes(result?.dataSource) || result.revalidationMode !== 'on-demand') {
     throw new RefreshRequestError('The public endpoint did not return valid refresh configuration.');
   }
-  return { dataSource: result.dataSource, revalidateSeconds: result.revalidateSeconds };
+  return { dataSource: result.dataSource, revalidationMode: result.revalidationMode };
 }
 
 export async function listStorefrontRefreshPaths() {

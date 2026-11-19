@@ -1,6 +1,6 @@
 import crypto from 'node:crypto';
 import { invalidateByTag } from '@vercel/functions';
-import { dataSource, PUBLIC_REVALIDATE_SECONDS, PUBLIC_SITEMAP_CACHE_TAG, readPublicSitemapSlugs } from '../catalog/server.mjs';
+import { dataSource, PUBLIC_SITEMAP_CACHE_TAG, readPublicSitemapSlugs } from '../catalog/server.mjs';
 
 const equalSecret = (provided, expected) => {
   const left = Buffer.from(provided || ''); const right = Buffer.from(expected || '');
@@ -15,7 +15,7 @@ export default async function revalidationHandler(req, res, invalidate = invalid
   const provided = req.headers.authorization?.replace(/^Bearer\s+/i, '');
   if (!expected || expected.length < 32 || !equalSecret(provided, expected)) return res.status(401).json({ message: 'Invalid revalidation credentials.' });
   if (req.body?.action === 'check') {
-    return res.status(200).json({ dataSource: dataSource(), revalidateSeconds: PUBLIC_REVALIDATE_SECONDS });
+    return res.status(200).json({ dataSource: dataSource(), revalidationMode: 'on-demand' });
   }
   if (req.body?.action === 'list-products') {
     return res.status(200).json({ products: await readPublicSitemapSlugs() });
