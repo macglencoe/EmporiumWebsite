@@ -1,12 +1,12 @@
 import { randomUUID } from 'node:crypto';
 
 import { Pool, neonConfig } from '@neondatabase/serverless';
-import { and, asc, desc, eq } from 'drizzle-orm';
+import { and, asc, desc, eq, inArray } from 'drizzle-orm';
 import ws from 'ws';
 
 import { productSchema } from '@emporium/domain';
 
-import { changeSetItems, changeSets } from './schema/index.js';
+import { auditEvents, changeSetItems, changeSets } from './schema/index.js';
 
 neonConfig.webSocketConstructor ??= ws;
 
@@ -94,6 +94,28 @@ async function writeProduct(client, product, operation) {
   await replaceChildren(client, product);
 }
 
+function publicChange(before, after) {
+  return {
+    type: after?.type ?? before?.type,
+    oldSlug: before?.slug ?? null,
+    newSlug: after?.slug ?? null,
+    wasVisible: Boolean(before?.published && !before.hidden),
+    isVisible: Boolean(after?.published && !after.hidden),
+  };
+}
+
+export async function getPublishedPublicChanges(database, changeSetId) {
+  const events = await database.select({ before: auditEvents.before, after: auditEvents.after })
+    .from(auditEvents)
+    .innerJoin(changeSets, eq(changeSets.id, auditEvents.changeSetId))
+    .where(and(
+      eq(changeSets.id, changeSetId),
+      eq(changeSets.status, 'published'),
+      inArray(auditEvents.action, ['create', 'update', 'delete']),
+    ));
+  return events.map(({ before, after }) => publicChange(before, after));
+}
+
 export async function publishDraft(connectionString, changeSetId) {
   const pool = new Pool({ connectionString }); const client = await pool.connect();
   const imageChanges = [];
@@ -114,13 +136,7 @@ export async function publishDraft(connectionString, changeSetId) {
       const after = item.operation === 'delete' ? null : await mapProductRow(client, item.payload.id);
       await client.query('insert into audit_events(change_set_id,product_id,actor,action,before,after) values($1,$2,$3,$4,$5,$6)', [changeSetId, item.operation === 'delete' ? null : item.payload.id, 'store-admin', item.operation, before, after]);
       const oldUrl = before?.imageUrl ?? null; const newUrl = after?.imageUrl ?? null;
-      publicChanges.push({
-        type: after?.type ?? before?.type,
-        oldSlug: before?.slug ?? null,
-        newSlug: after?.slug ?? null,
-        wasVisible: Boolean(before?.published && !before.hidden),
-        isVisible: Boolean(after?.published && !after.hidden),
-      });
+      publicChanges.push(publicChange(before, after));
       if (oldUrl !== newUrl) {
         imageChanges.push({ productId: after?.id ?? before?.id ?? null, oldUrl, newUrl });
         if (newUrl) await client.query('insert into audit_events(change_set_id,product_id,actor,action,before,after) values($1,$2,$3,$4,$5,$6)', [changeSetId, after.id, 'store-admin', 'image_upload', oldUrl ? { url: oldUrl } : null, { url: newUrl }]);

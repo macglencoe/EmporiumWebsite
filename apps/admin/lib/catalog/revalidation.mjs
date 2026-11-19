@@ -13,7 +13,6 @@ const PATH_BATCH_SIZE = 50;
 export async function revalidatePublicSite(changes, connectionString) {
   const siteUrl = process.env.PUBLIC_SITE_URL;
   const secret = process.env.REVALIDATION_SECRET;
-  if (!siteUrl || !secret) return { skipped: true };
   const paths = new Set();
   const anchorsByType = new Map();
   let sitemapChanged = false;
@@ -34,6 +33,7 @@ export async function revalidatePublicSite(changes, connectionString) {
     anchorsByType.set(change.type, anchors);
   }
   if (!paths.size) return { skipped: true };
+  if (!siteUrl || !secret) return { warning: 'Public cache refresh is not configured.' };
 
   const warnings = [];
   for (const [type, anchors] of anchorsByType) {
@@ -56,8 +56,14 @@ export async function revalidatePublicSite(changes, connectionString) {
         body: JSON.stringify({ paths: batch, sitemapChanged: offset === 0 && sitemapChanged }),
       });
       const result = await response.json();
-      revalidated += result.revalidated ?? 0;
+      const refreshed = result.revalidated;
+      if (!Number.isInteger(refreshed) || refreshed < 0 || refreshed > batch.length) {
+        warnings.push(`Could not verify the page count for public revalidation batch ${offset / PATH_BATCH_SIZE + 1}.`);
+        continue;
+      }
+      revalidated += refreshed;
       if (!response.ok) warnings.push(`Public revalidation batch ${offset / PATH_BATCH_SIZE + 1} returned status ${response.status}.`);
+      else if (refreshed !== batch.length) warnings.push(`Public revalidation batch ${offset / PATH_BATCH_SIZE + 1} did not refresh every page.`);
     } catch {
       warnings.push(`Could not complete public revalidation batch ${offset / PATH_BATCH_SIZE + 1}.`);
     }
