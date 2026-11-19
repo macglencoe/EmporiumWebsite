@@ -26,6 +26,15 @@ export default function ToolsPage() {
               <Link href="/tools/revalidation"><a>Public Cache Refresh</a></Link>
               <p>Refresh storefront pages after a missed or failed cache update.</p>
             </li>
+            <li>
+              <Link href="/tools/neon-monitoring">
+                <a>Neon Monitoring</a>
+              </Link>
+              <p>
+                View historical compute consumption,
+                usage trends, and cost estimates.
+              </p>
+            </li>
           </ul>
         </nav>
       </div>
