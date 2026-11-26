@@ -27,11 +27,11 @@ export default function ToolsPage() {
               <p>Refresh storefront pages after a missed or failed cache update.</p>
             </li>
             <li>
-              <Link href="/tools/neon-monitoring">
-                <a>Neon Monitoring</a>
+              <Link href="/tools/database">
+                <a>Database Dashboard</a>
               </Link>
               <p>
-                View historical compute consumption and usage trends for the Neon database server.
+                Audit catalog quality, duplicates, data integrity, health, and permissions; browse change history and Neon usage.
               </p>
             </li>
           </ul>

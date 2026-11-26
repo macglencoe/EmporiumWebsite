@@ -81,6 +81,7 @@ export default function TechnicalReferencePage() {
 
           <section id="database" className={styles.section}>
             <header><span>Database administration</span><h2>Schema, permissions, and Neon branches</h2></header>
+            <p>Open the <Link href="/tools/database"><a>Database Dashboard</a></Link> for read-only catalog quality, duplicate, integrity, health, and permission checks, publication history, and Neon monitoring. Run checks on demand; summary cards retain only the last result in this browser tab. Findings can be filtered and downloaded as JSON or CSV. Duplicate candidates require review, and image checks validate URL format without fetching remote files. Migration status may remain unverified when the admin role cannot read the migration journal.</p>
             <div className={styles.danger}><PiWarningCircleFill /><p>The database commands use <code>DATABASE_URL</code>, normally an owner or migration credential. Verify the host, database, and Neon branch before making changes.</p></div>
             <CommandRow command="npm run db:generate" purpose="Generate a new checked-in SQL migration after changing the Drizzle schema. Review the generated SQL before applying it." />
             <CommandRow command="npm run db:migrate" purpose="Apply all pending checked-in migrations to DATABASE_URL. Safe to rerun; already-applied migrations are skipped." />
@@ -103,7 +104,7 @@ export default function TechnicalReferencePage() {
             <div className={styles.tableWrap}><table><thead><tr><th>Variable</th><th>Used by</th><th>Purpose</th></tr></thead><tbody>
               <tr><td><code>DATABASE_URL</code></td><td>Database and migration scripts</td><td>Owner/migrator connection for schema, roles, import, verification, and exports.</td></tr>
               <tr><td><code>ADMIN_DATABASE_URL</code></td><td>Admin app and auth scripts</td><td>Writer connection used by the admin application.</td></tr>
-              <tr><td><code>PUBLIC_DATABASE_URL</code></td><td>Public app</td><td>Read-only connection granted access only to public views.</td></tr>
+              <tr><td><code>PUBLIC_DATABASE_URL</code></td><td>Public app; optional in admin</td><td>Read-only connection granted access only to public views. When configured in admin, the Database Dashboard can verify this login’s effective privileges.</td></tr>
               <tr><td><code>AUTH_COOKIE_SECRET</code></td><td>Admin app</td><td>At least 32 characters; signs browser sessions.</td></tr>
               <tr><td><code>AUTH_SESSION_HOURS</code></td><td>Admin app</td><td>Session length from 1 through 168 hours; defaults to 12.</td></tr>
               <tr><td><code>BLOB_READ_WRITE_TOKEN</code></td><td>Admin app</td><td>Allows authenticated product-image upload and cleanup.</td></tr>

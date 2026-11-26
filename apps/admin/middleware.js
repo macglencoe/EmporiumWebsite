@@ -30,7 +30,9 @@ export async function middleware(request) {
   if (await validSignature(value) && await activeSession(value)) {
     const response = NextResponse.next(); response.headers.set('Cache-Control', 'private, no-store, max-age=0'); return response;
   }
-  if (request.nextUrl.pathname.startsWith('/api/')) return NextResponse.json({ message: 'Authentication required.' }, { status: 401, headers: { 'Cache-Control': 'private, no-store, max-age=0' } });
+  // Next 12 middleware rejects response bodies; API handlers supply JSON when
+  // they handle authentication themselves. Keep this early rejection bodyless.
+  if (request.nextUrl.pathname.startsWith('/api/')) return new NextResponse(null, { status: 401, headers: { 'Cache-Control': 'private, no-store, max-age=0' } });
   const login = request.nextUrl.clone(); login.pathname = '/login'; login.search = ''; login.searchParams.set('next', `${request.nextUrl.pathname}${request.nextUrl.search}`);
   return NextResponse.redirect(login);
 }
